@@ -1,0 +1,20 @@
+{
+  "utc": "2026-10-20T21:52:21.510391+00:00",
+  "status": "BUILD_PASS_NOT_GPU",
+  "build": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215058555158Z_device_pair",
+  "device_receipt_sha256": "be79785fb78c7e3593b8d33e10b0589b96a7c973e77117052ce7baeaf3cc1ad7",
+  "elf_sha256": "065ec03cae632946f85fdbbeee75d0725321b3e86ecc8877526a061adebcc5eb",
+  "alu_pc_begin": 536870951,
+  "alu_pc_end": 536871207,
+  "actual_elf_and_disassembly_alu_instructions": 256,
+  "alu_pattern": "8 unique GPRs repeated32, ADDI rd=rs1 imm1, all exact",
+  "legacy_native_word_counts": {
+    "0x404840b": 16,
+    "0x400800b": 128,
+    "0x407818b": 7
+  },
+  "original_four_elf_outputs_unchanged": true,
+  "source_archive_sha256": "92e02b732d5934c6f657500600d1b2dd4eaab0e17f5fb7a33e37aaf13a52e6a8",
+  "source_archive_all_entries_verified": 747,
+  "scope": "Only real compiler/CRT/instruction/source proof; actual runtime ALU/TCU/numerics/eachbank stalls and drain still pending"
+}

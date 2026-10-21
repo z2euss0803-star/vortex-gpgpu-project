@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-20T19:00:13.930256+00:00",
+  "status": "FAIL_GPU_OWNER_OR_MASK",
+  "run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T181726309796Z_candidate_gpu_pair",
+  "completed_utc": "2026-10-20T18:50:41.300206+00:00",
+  "independent_admission": {
+    "schema_version": 1,
+    "stage": "gpu_pair",
+    "variant": "candidate",
+    "run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T181726309796Z_candidate_gpu_pair",
+    "utc": "2026-10-20T18:59:27.971133+00:00",
+    "status": "FAIL",
+    "input_manifest_sha256": "2fd976a3f762afcc4c8637e8b8cb4038013dc736e1ebcf1b3b327697a0522657",
+    "contract_sha256": "3e511c2afda578767461fa8d64a0d3997dcda53b9b221af7bfddf6563b2f1abf",
+    "natural_exit_sha256": "0e0efc526959a2e50d409aa97084674e00e09465e6758ab54c5a0410bb8f5fde",
+    "product_manifest_sha256": "d83d9514bf4688312135d4dfa2423e55cdc5784ca6b4f1ca248efe89f3640d69",
+    "checks": {
+      "native": {
+        "status": "PASS",
+        "reasons": []
+      },
+      "issues": [
+        "Fatal: GPU_OWNER_OR_MASK",
+        "missing semantic completion marker"
+      ],
+      "unknown": []
+    },
+    "boundaries": "one actual four-core paired case tool completion; independent numerical/retirement readback required"
+  },
+  "gpu_verifier_exit": 1,
+  "gpu_verifier_log_sha256": "1aed92f27f074bc48ebc28385b0166afe01665ded36818d371943114dba843ad",
+  "source_archive_sha256": "64b88d348bbf580bac4a61a787eddc4397e0a7e301ecce9436c321e13fc92796",
+  "source_archive_all_entries_verified": 746,
+  "artifacts": {
+    "simulate.log": "8a480630ac2c263c2bc458a2259043bf16bc7bf28bb5ce836f8f2d76d78d946e",
+    "console.log": "f33ca3772d3e29e891cfab0fbc527b74b50fe10fb17439adc7c2861285b5bf34",
+    "natural_exit.json": "0e0efc526959a2e50d409aa97084674e00e09465e6758ab54c5a0410bb8f5fde",
+    "phase_3_exit.json": "cfdbd8b5a0c6780351e27b4226a6bc847122d93f8b2e6b3dcda59130bba44c67",
+    "gpu_bp_tcu_events.txt": "1d28315850c8bfbe6800e3df05ebf6855c45db39d4b5ef53e9bb9b366372d08b",
+    "gpu_bp_query_events.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gpu_bp_bank_events.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gpu_bp_arb_events.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "root_cause": "Original generic native observer requires wid0 outside PAIR_PROTOCOL; new PAIR_BP nonowner READ31 is rejected before response. Last accepted TCU request core0 cycle172108 warp2 fmt15 PC200002cc maskf.",
+  "scope": "Fatal preserved; no full readback, DONE or drain; not a numerical or coverage PASS"
+}

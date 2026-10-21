@@ -1,0 +1,365 @@
+{
+  "utc": "2026-10-20T20:16:41.651440+00:00",
+  "status": "FAIL_REQUIRED_BANK_BACKPRESSURE_COVERAGE",
+  "run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T190401843851Z_candidate_gpu_pair",
+  "completed_utc": "2026-10-20T20:10:08.259129+00:00",
+  "issues": [
+    "core0 bank0 no actual response backpressure",
+    "core0 bank1 no actual response backpressure",
+    "core1 bank0 no actual response backpressure",
+    "core1 bank1 no actual response backpressure",
+    "core2 bank0 no actual response backpressure",
+    "core2 bank1 no actual response backpressure",
+    "core3 bank0 no actual response backpressure",
+    "core3 bank1 no actual response backpressure"
+  ],
+  "observations": {
+    "iterations_per_core_warp": [
+      [
+        0,
+        32,
+        32,
+        32
+      ],
+      [
+        0,
+        32,
+        32,
+        32
+      ],
+      [
+        0,
+        32,
+        32,
+        32
+      ],
+      [
+        0,
+        32,
+        32,
+        32
+      ]
+    ],
+    "fp16_iterations_per_core_warp": [
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ]
+    ],
+    "native_query_count_per_core_warp": [
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ]
+    ],
+    "native_query_packets": 1536,
+    "bank_stall_cycles": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "outer_fp_captures_during_native_stall": 0,
+    "bank_events": 192,
+    "arbitration_events": 192,
+    "tcu_events": 64952,
+    "scope": "actual dualbank stalls, stable full response, exact I8/FP16/query counts/packets/pages and real retirement; not performance"
+  },
+  "source_archive_sha256": "7ab8d81a04548a2b889f75f63bc643205c10f9c4239bf23771c8734315377d22",
+  "source_archive_all_entries_verified": 747,
+  "artifacts": {
+    "independent_admission.json": "8d3bf7d373ac699ff195a106d68f426fa059d322731579f1e872e23f3b503fe9",
+    "gpu_function_admission.json": "4d342e9520e40c7ddea2c79bbf433cf71fcc2f43ced59d28c5e1d59940472030",
+    "natural_exit.json": "7c74afe1796d5a5b7ec131d52b9689142e9103ecd307cbc1f685ab46a0690c2c",
+    "gpu_readback.txt": "c0f081f81be43d66bb7876a4f66a8f952bb74c716b0c9b16526a1bbb0434077e",
+    "gpu_bp_readback.txt": "81bcfb232c82bee7b3d87e37db9d05af600bfd28774475a20fc2b36ff701c0e5",
+    "gpu_bp_tcu_events.txt": "1a0d3a3f4b77b35f5d1467541394975c7cc73174e75b31ef32d40cab4f26fdc5",
+    "gpu_bp_query_events.txt": "900879a030f944fee3c452aa57a06ef35a353d7b61bfd0dabf08a9b4199c5181",
+    "gpu_bp_bank_events.txt": "da152cb65e8e9ec9c77d52b3697bfdf652cc3b5b808e90e24ff4087c1228e83c",
+    "gpu_bp_arb_events.txt": "83628950af00d911ab3804002c553531c14ad8beb784016fac48352943434dc9",
+    "gpu_monitor.txt": "a3c13f2503255eb2554192b63967850c625dad9bd196574577d4c3ba5f6bf6b3"
+  },
+  "page_window_request_summary": [
+    {
+      "core": 0,
+      "page_start": 174771,
+      "page_end": 200727,
+      "request_counts": [
+        {
+          "warp": 2,
+          "fmt": 15,
+          "count": 52
+        },
+        {
+          "warp": 1,
+          "fmt": 15,
+          "count": 51
+        },
+        {
+          "warp": 3,
+          "fmt": 15,
+          "count": 51
+        },
+        {
+          "warp": 0,
+          "fmt": 15,
+          "count": 47
+        },
+        {
+          "warp": 2,
+          "fmt": 9,
+          "count": 256
+        },
+        {
+          "warp": 1,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 3,
+          "fmt": 9,
+          "count": 256
+        },
+        {
+          "warp": 2,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 3,
+          "fmt": 1,
+          "count": 991
+        },
+        {
+          "warp": 1,
+          "fmt": 9,
+          "count": 256
+        }
+      ]
+    },
+    {
+      "core": 1,
+      "page_start": 174765,
+      "page_end": 201076,
+      "request_counts": [
+        {
+          "warp": 2,
+          "fmt": 15,
+          "count": 53
+        },
+        {
+          "warp": 3,
+          "fmt": 15,
+          "count": 52
+        },
+        {
+          "warp": 1,
+          "fmt": 15,
+          "count": 51
+        },
+        {
+          "warp": 0,
+          "fmt": 15,
+          "count": 47
+        },
+        {
+          "warp": 2,
+          "fmt": 9,
+          "count": 256
+        },
+        {
+          "warp": 3,
+          "fmt": 9,
+          "count": 256
+        },
+        {
+          "warp": 1,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 2,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 3,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 1,
+          "fmt": 9,
+          "count": 256
+        }
+      ]
+    },
+    {
+      "core": 2,
+      "page_start": 174766,
+      "page_end": 201073,
+      "request_counts": [
+        {
+          "warp": 2,
+          "fmt": 15,
+          "count": 53
+        },
+        {
+          "warp": 3,
+          "fmt": 15,
+          "count": 52
+        },
+        {
+          "warp": 1,
+          "fmt": 15,
+          "count": 51
+        },
+        {
+          "warp": 0,
+          "fmt": 15,
+          "count": 47
+        },
+        {
+          "warp": 2,
+          "fmt": 9,
+          "count": 256
+        },
+        {
+          "warp": 3,
+          "fmt": 9,
+          "count": 256
+        },
+        {
+          "warp": 1,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 2,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 3,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 1,
+          "fmt": 9,
+          "count": 256
+        }
+      ]
+    },
+    {
+      "core": 3,
+      "page_start": 174767,
+      "page_end": 201086,
+      "request_counts": [
+        {
+          "warp": 2,
+          "fmt": 15,
+          "count": 53
+        },
+        {
+          "warp": 3,
+          "fmt": 15,
+          "count": 52
+        },
+        {
+          "warp": 1,
+          "fmt": 15,
+          "count": 51
+        },
+        {
+          "warp": 0,
+          "fmt": 15,
+          "count": 47
+        },
+        {
+          "warp": 2,
+          "fmt": 9,
+          "count": 256
+        },
+        {
+          "warp": 3,
+          "fmt": 9,
+          "count": 256
+        },
+        {
+          "warp": 1,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 2,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 3,
+          "fmt": 1,
+          "count": 1024
+        },
+        {
+          "warp": 1,
+          "fmt": 9,
+          "count": 256
+        }
+      ]
+    }
+  ],
+  "scope": "All eight banks missing real backpressure; other exact numeric/guards/identity/count/metadata/retirement/DONE/drain checks no issue. No whole G3/performance PASS."
+}

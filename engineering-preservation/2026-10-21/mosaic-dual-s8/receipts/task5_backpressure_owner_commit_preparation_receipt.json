@@ -1,0 +1,12 @@
+{
+  "utc": "2026-10-20T21:50:54.108190+00:00",
+  "status": "PREPARATION_PASS_NOT_GPU",
+  "failure_receipt_sha256": "7904f8d99314cacd0a80c8f78eb47b35a12911925d2079b7bba761edc186b6a8",
+  "controls": 99,
+  "controls_log_sha256": "afd36494122640ad3688bfbaadb8f7a4d8bd548a1e92dcfeaa754fc275f55535",
+  "static_identity_sha256": "e53dc72dbf72632ae19b5b65e5c28618e8d408c3f7b8d3adabeef546378ba1df",
+  "stimulus": "Owner executes 256 real independent-register ADDI instructions before each of 48 page reads. 8 accumulators +32/page, final1536 each; 12288 exact ALU instructions/core, full PC metadata/result/retirement accepted trace required.",
+  "readback": "Original5444 plus BP4160words: prior3136 intact and 2e000000 ALU1024; total9604. Owner frame count12288/eight1536/sevenA5; contenders count/values0 and sameguards.",
+  "trace": "Actual core commit priority P with default LSB-first encoder; ALU0 precedes TCU. Passive perpage commit valid/ready controls; no ready drive/internal injection.",
+  "scope": "Original S8/I8/FP/query numeric, phase, everybank actual stall, fullheldpacket, boundedresponse, identity, retire/reset/DONE/drain contracts unchanged. Fresh compile and fullGPU required."
+}

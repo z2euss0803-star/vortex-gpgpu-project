@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-21T02:19:15.178533+00:00",
+  "files": [
+    {
+      "path": "F:\\petalinux-v2020.1-final-installer.run",
+      "bytes": 1315548907,
+      "sha256": "cd48270f10bf7fd6538aaa50ba99f699516234fae03108626d00f243d4ad17ee",
+      "mtime_ns": 1790167660000000000,
+      "role": "F-A1"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\petalinux_env_setup_20261004\\transfer\\petalinux-v2020.1-final-installer.run",
+      "bytes": 1315548907,
+      "sha256": "cd48270f10bf7fd6538aaa50ba99f699516234fae03108626d00f243d4ad17ee",
+      "mtime_ns": 1790167660000000000,
+      "role": "F-A2"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\50-项目与实验\\IC设计与FPGA\\Vortex-青花瓷-PTG-v0.1-2026-09-16\\project\\.cache\\downloads\\blender-4.5.3-windows-x64.zip",
+      "bytes": 400100678,
+      "sha256": "6b657c8bdd3a7b65b07b9e1ae17eb4be7dd4aa23121da7f3d3354fc2551330a7",
+      "mtime_ns": 1789564815494805600,
+      "role": "F-A3"
+    },
+    {
+      "path": "F:\\share_files\\虚拟机文件\\petalinux-v2020.1-final-installer.run",
+      "bytes": 1315548907,
+      "sha256": "cd48270f10bf7fd6538aaa50ba99f699516234fae03108626d00f243d4ad17ee",
+      "mtime_ns": 1790167660000000000,
+      "role": "RETAIN"
+    }
+  ],
+  "exact_sha_match": true,
+  "status": "VERIFIED_CANDIDATES_NOT_DELETED",
+  "proposed_delete_ids": [
+    "F-A1",
+    "F-A2",
+    "F-A3"
+  ],
+  "logical_reclaim_bytes": 3031198492,
+  "requires": "repository exact-file approval and 30-day quarantine exception for immediate permanent deletion"
+}

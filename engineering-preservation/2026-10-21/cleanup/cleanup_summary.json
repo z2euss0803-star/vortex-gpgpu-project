@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-21T02:27:58.848562+00:00",
+  "host": "RY",
+  "account": "13151",
+  "action": "NTFS_lossless_compression_only",
+  "file_count": 226,
+  "total_file_allocation_saved_bytes": 5735703418,
+  "free_F_bytes": 6470860800,
+  "batches": [
+    {
+      "path": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json",
+      "files": 16,
+      "saved_bytes": 1600119674,
+      "sha256": "745d96de90c14ec6cee43b7dcf639197795117587f09612e6306dddc4ff04fe1"
+    },
+    {
+      "path": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json",
+      "files": 60,
+      "saved_bytes": 968863744,
+      "sha256": "a75ace69cad6e36292fdfed2efdd21dd61701622f37cb7c96dde8c466452cc92"
+    },
+    {
+      "path": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json",
+      "files": 150,
+      "saved_bytes": 3166720000,
+      "sha256": "5dacc5576a02fa751522cd89c8158962b173253e4fe6f3da02e07713e46e12f7"
+    }
+  ],
+  "deleted": 0,
+  "moved": 0,
+  "retained_downloads": [
+    "F-A1",
+    "F-A2",
+    "F-A3"
+  ],
+  "content_sha_length_mtime_unchanged": true,
+  "baseline_policy": "No .bit/.xsa/source/model/weights/frozen baseline/reference/toolchain/VM/WSL file selected. No other process controlled.",
+  "read_errors": 22,
+  "reparse_skipped": 3,
+  "github_repository": "https://github.com/z2euss0803-star/vortex-gpgpu-project",
+  "github_visibility_verified": "private",
+  "github_branch": "codex/f-drive-preservation-20261021",
+  "github_upload_status": "PREPARED_NOT_YET_PUSHED",
+  "scope": "selected engineering preservation, not whole F backup; storage verification is not RTL/numerical/board acceptance"
+}

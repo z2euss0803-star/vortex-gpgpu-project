@@ -1,0 +1,1755 @@
+{
+  "started_utc": "2026-10-21T02:22:40.593062+00:00",
+  "host": "ry",
+  "account": "13151",
+  "action": "NTFS_lossless_compression_no_delete_no_move",
+  "mode": "completed",
+  "disk_free_before": 2348298240,
+  "files": [
+    {
+      "started_utc": "2026-10-21T02:22:40.761310+00:00",
+      "finished_utc": "2026-10-21T02:22:42.323154+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_00.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_00.bin",
+        "logical_bytes": 157286400,
+        "allocated_bytes": 157286400,
+        "sha256": "e9cfe9a9ddd786e91fbc7f944dc6ef0400c4830e0201fa5330f430381c9c8501",
+        "mtime_ns": 1791358662251081100
+      },
+      "after": {
+        "logical_bytes": 157286400,
+        "allocated_bytes": 117248000,
+        "sha256": "e9cfe9a9ddd786e91fbc7f944dc6ef0400c4830e0201fa5330f430381c9c8501",
+        "mtime_ns": 1791358662251081100,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 40038400,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:42.482690+00:00",
+      "finished_utc": "2026-10-21T02:22:44.088249+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_14.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_14.bin",
+        "logical_bytes": 157286400,
+        "allocated_bytes": 157286400,
+        "sha256": "6df9d58073322570a767ab113954fcb5b727592f10ddb503d26a8fc36bb1191d",
+        "mtime_ns": 1791358675539838600
+      },
+      "after": {
+        "logical_bytes": 157286400,
+        "allocated_bytes": 122609664,
+        "sha256": "6df9d58073322570a767ab113954fcb5b727592f10ddb503d26a8fc36bb1191d",
+        "mtime_ns": 1791358675539838600,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 34676736,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:44.247348+00:00",
+      "finished_utc": "2026-10-21T02:22:45.775073+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_00.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_00.bin",
+        "logical_bytes": 157286400,
+        "allocated_bytes": 157286400,
+        "sha256": "2219d05e202d73d0461e46a48945ed69bf5da76f71e9494298d39e44c76fe0d9",
+        "mtime_ns": 1791358648569939400
+      },
+      "after": {
+        "logical_bytes": 157286400,
+        "allocated_bytes": 117256192,
+        "sha256": "2219d05e202d73d0461e46a48945ed69bf5da76f71e9494298d39e44c76fe0d9",
+        "mtime_ns": 1791358648569939400,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 40030208,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:45.940619+00:00",
+      "finished_utc": "2026-10-21T02:22:47.530697+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_14.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_14.bin",
+        "logical_bytes": 157286400,
+        "allocated_bytes": 157286400,
+        "sha256": "f51474b1943331110fc58685cd0e048202565604c8076a8584d9a8332d1b0c4d",
+        "mtime_ns": 1791358660244982900
+      },
+      "after": {
+        "logical_bytes": 157286400,
+        "allocated_bytes": 122617856,
+        "sha256": "f51474b1943331110fc58685cd0e048202565604c8076a8584d9a8332d1b0c4d",
+        "mtime_ns": 1791358660244982900,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 34668544,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:47.680759+00:00",
+      "finished_utc": "2026-10-21T02:22:49.177098+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_00.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_00.bin",
+        "logical_bytes": 157286400,
+        "allocated_bytes": 157286400,
+        "sha256": "4c7c4005f81280736b848799f41b12ef0e63414bc6bbd7ba98781b2087f8abbf",
+        "mtime_ns": 1791293121540617200
+      },
+      "after": {
+        "logical_bytes": 157286400,
+        "allocated_bytes": 117252096,
+        "sha256": "4c7c4005f81280736b848799f41b12ef0e63414bc6bbd7ba98781b2087f8abbf",
+        "mtime_ns": 1791293121540617200,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 40034304,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:49.337109+00:00",
+      "finished_utc": "2026-10-21T02:22:50.931118+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_14.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_14.bin",
+        "logical_bytes": 157286400,
+        "allocated_bytes": 157286400,
+        "sha256": "bf152b55f61318787335385369318bfca8a0c850186717e7f89275a26c037178",
+        "mtime_ns": 1791293137750727100
+      },
+      "after": {
+        "logical_bytes": 157286400,
+        "allocated_bytes": 122601472,
+        "sha256": "bf152b55f61318787335385369318bfca8a0c850186717e7f89275a26c037178",
+        "mtime_ns": 1791293137750727100,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 34684928,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:51.109786+00:00",
+      "finished_utc": "2026-10-21T02:22:52.649895+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_00.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_00.bin",
+        "logical_bytes": 157286400,
+        "allocated_bytes": 157286400,
+        "sha256": "4c7c4005f81280736b848799f41b12ef0e63414bc6bbd7ba98781b2087f8abbf",
+        "mtime_ns": 1791293120447074800
+      },
+      "after": {
+        "logical_bytes": 157286400,
+        "allocated_bytes": 117252096,
+        "sha256": "4c7c4005f81280736b848799f41b12ef0e63414bc6bbd7ba98781b2087f8abbf",
+        "mtime_ns": 1791293120447074800,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 40034304,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:52.838257+00:00",
+      "finished_utc": "2026-10-21T02:22:54.453563+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_14.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_14.bin",
+        "logical_bytes": 157286400,
+        "allocated_bytes": 157286400,
+        "sha256": "1ae4a3b7da6d3ba22a955cfc786623ea5f1005647c410132aeeb4819946f3fc3",
+        "mtime_ns": 1791293136507983500
+      },
+      "after": {
+        "logical_bytes": 157286400,
+        "allocated_bytes": 122609664,
+        "sha256": "1ae4a3b7da6d3ba22a955cfc786623ea5f1005647c410132aeeb4819946f3fc3",
+        "mtime_ns": 1791293136507983500,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 34676736,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:54.552230+00:00",
+      "finished_utc": "2026-10-21T02:22:55.384295+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_01.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_01.bin",
+        "logical_bytes": 78643200,
+        "allocated_bytes": 78643200,
+        "sha256": "db0338d442e05629d5976680ae86a24cf2df0e26ae908a1e095ba8a675018145",
+        "mtime_ns": 1791358663699115400
+      },
+      "after": {
+        "logical_bytes": 78643200,
+        "allocated_bytes": 60702720,
+        "sha256": "db0338d442e05629d5976680ae86a24cf2df0e26ae908a1e095ba8a675018145",
+        "mtime_ns": 1791358663699115400,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 17940480,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:55.478969+00:00",
+      "finished_utc": "2026-10-21T02:22:56.092856+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_13.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_13.bin",
+        "logical_bytes": 78643200,
+        "allocated_bytes": 78643200,
+        "sha256": "3944d6bcbc862ecdc30ba587c2b8983ab08e2374d96a52c18ff9e8109edae1d3",
+        "mtime_ns": 1791358673867315700
+      },
+      "after": {
+        "logical_bytes": 78643200,
+        "allocated_bytes": 38977536,
+        "sha256": "3944d6bcbc862ecdc30ba587c2b8983ab08e2374d96a52c18ff9e8109edae1d3",
+        "mtime_ns": 1791358673867315700,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 39665664,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:56.180202+00:00",
+      "finished_utc": "2026-10-21T02:22:57.033638+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_01.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_01.bin",
+        "logical_bytes": 78643200,
+        "allocated_bytes": 78643200,
+        "sha256": "7537def9f872cecee5467cd5f4b5b647548a7c07cb8dcd1fef7aa4b7f3946fdb",
+        "mtime_ns": 1791358649944221500
+      },
+      "after": {
+        "logical_bytes": 78643200,
+        "allocated_bytes": 60698624,
+        "sha256": "7537def9f872cecee5467cd5f4b5b647548a7c07cb8dcd1fef7aa4b7f3946fdb",
+        "mtime_ns": 1791358649944221500,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 17944576,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:57.115064+00:00",
+      "finished_utc": "2026-10-21T02:22:57.710887+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_13.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_13.bin",
+        "logical_bytes": 78643200,
+        "allocated_bytes": 78643200,
+        "sha256": "9ce15b257b4d36574cc23bd576ab56c305589cd609adcd1d3f31db581dff6961",
+        "mtime_ns": 1791358658680340900
+      },
+      "after": {
+        "logical_bytes": 78643200,
+        "allocated_bytes": 38985728,
+        "sha256": "9ce15b257b4d36574cc23bd576ab56c305589cd609adcd1d3f31db581dff6961",
+        "mtime_ns": 1791358658680340900,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 39657472,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:57.788412+00:00",
+      "finished_utc": "2026-10-21T02:22:58.602833+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_01.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_01.bin",
+        "logical_bytes": 78643200,
+        "allocated_bytes": 78643200,
+        "sha256": "8821a57444277c7c904aaedb7f31bb4e7f2563644e882e01458c9ec945dedf8b",
+        "mtime_ns": 1791293123741980800
+      },
+      "after": {
+        "logical_bytes": 78643200,
+        "allocated_bytes": 60694528,
+        "sha256": "8821a57444277c7c904aaedb7f31bb4e7f2563644e882e01458c9ec945dedf8b",
+        "mtime_ns": 1791293123741980800,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 17948672,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:58.690803+00:00",
+      "finished_utc": "2026-10-21T02:22:59.278117+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_13.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_13.bin",
+        "logical_bytes": 78643200,
+        "allocated_bytes": 78643200,
+        "sha256": "09a3aae3fd4e2c2ee6fcb5bceb9bf42ab4855a34003677b016f83e5699ad622b",
+        "mtime_ns": 1791293134627768600
+      },
+      "after": {
+        "logical_bytes": 78643200,
+        "allocated_bytes": 38973440,
+        "sha256": "09a3aae3fd4e2c2ee6fcb5bceb9bf42ab4855a34003677b016f83e5699ad622b",
+        "mtime_ns": 1791293134627768600,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 39669760,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:22:59.371632+00:00",
+      "finished_utc": "2026-10-21T02:23:00.226083+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_01.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_01.bin",
+        "logical_bytes": 78643200,
+        "allocated_bytes": 78643200,
+        "sha256": "c94f35dd72df4299d189c094fd2c32f98ca7704d9dabf60a931aabf29b2fe35d",
+        "mtime_ns": 1791293122722366100
+      },
+      "after": {
+        "logical_bytes": 78643200,
+        "allocated_bytes": 60702720,
+        "sha256": "c94f35dd72df4299d189c094fd2c32f98ca7704d9dabf60a931aabf29b2fe35d",
+        "mtime_ns": 1791293122722366100,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 17940480,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:00.320404+00:00",
+      "finished_utc": "2026-10-21T02:23:00.921431+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_13.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_13.bin",
+        "logical_bytes": 78643200,
+        "allocated_bytes": 78643200,
+        "sha256": "870062392048410084cbcb947b752fe0e6165f4fa0595f34fd929fc63f1c19ec",
+        "mtime_ns": 1791293133963468000
+      },
+      "after": {
+        "logical_bytes": 78643200,
+        "allocated_bytes": 38981632,
+        "sha256": "870062392048410084cbcb947b752fe0e6165f4fa0595f34fd929fc63f1c19ec",
+        "mtime_ns": 1791293133963468000,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 39661568,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:00.976620+00:00",
+      "finished_utc": "2026-10-21T02:23:01.509440+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_02.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_02.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "1f8e25d4b235c1f04376451e7ad6e5498ae2af9d2859ec8279b48844c11f98dc",
+        "mtime_ns": 1791358664516460200
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 29806592,
+        "sha256": "1f8e25d4b235c1f04376451e7ad6e5498ae2af9d2859ec8279b48844c11f98dc",
+        "mtime_ns": 1791358664516460200,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 9515008,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:01.571953+00:00",
+      "finished_utc": "2026-10-21T02:23:01.930692+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_03.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_03.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "a3b275d861ed3769c8f0a655cdb31f9d06d604c4330f4ba8e76ac2daa2c5c410",
+        "mtime_ns": 1791358665289419900
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 23793664,
+        "sha256": "a3b275d861ed3769c8f0a655cdb31f9d06d604c4330f4ba8e76ac2daa2c5c410",
+        "mtime_ns": 1791358665289419900,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 15527936,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:01.985791+00:00",
+      "finished_utc": "2026-10-21T02:23:02.475173+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_04.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_04.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "612ce5fbf580c73a5cf55b66c29e9934413a7e10fa8ed01525fc538a9e9c876d",
+        "mtime_ns": 1791358666135496400
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "612ce5fbf580c73a5cf55b66c29e9934413a7e10fa8ed01525fc538a9e9c876d",
+        "mtime_ns": 1791358666135496400,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:02.527214+00:00",
+      "finished_utc": "2026-10-21T02:23:02.835534+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_05.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_05.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "aab784daa61149e3195cb02a0e68d23d9e5fef098f52bcce3cf5e423cfe62c01",
+        "mtime_ns": 1791358666919842500
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 18137088,
+        "sha256": "aab784daa61149e3195cb02a0e68d23d9e5fef098f52bcce3cf5e423cfe62c01",
+        "mtime_ns": 1791358666919842500,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 21184512,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:02.898094+00:00",
+      "finished_utc": "2026-10-21T02:23:03.409892+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_06.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_06.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "9e3cfe1174498122feb7ff324b5ee82bca8b6a6afea7e094d273f0487039343a",
+        "mtime_ns": 1791358667676752200
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "9e3cfe1174498122feb7ff324b5ee82bca8b6a6afea7e094d273f0487039343a",
+        "mtime_ns": 1791358667676752200,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:03.461045+00:00",
+      "finished_utc": "2026-10-21T02:23:03.741750+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_07.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_07.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "c161c7cccb970c7042041da827807e832af127dc85d1437ea49f537a3b12f57b",
+        "mtime_ns": 1791358668446854600
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 16666624,
+        "sha256": "c161c7cccb970c7042041da827807e832af127dc85d1437ea49f537a3b12f57b",
+        "mtime_ns": 1791358668446854600,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 22654976,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:03.794279+00:00",
+      "finished_utc": "2026-10-21T02:23:04.249854+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_08.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_08.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "95c030872d739dd4b00d1275f3654b1fa7ec8064cc85384ae64da086123e2919",
+        "mtime_ns": 1791358669354888500
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "95c030872d739dd4b00d1275f3654b1fa7ec8064cc85384ae64da086123e2919",
+        "mtime_ns": 1791358669354888500,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:04.302541+00:00",
+      "finished_utc": "2026-10-21T02:23:04.618406+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_09.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_09.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "c46896c78f585350243889b65acb30ddfb1d762835828db63b63175ce663a3ba",
+        "mtime_ns": 1791358670266799900
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 17948672,
+        "sha256": "c46896c78f585350243889b65acb30ddfb1d762835828db63b63175ce663a3ba",
+        "mtime_ns": 1791358670266799900,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 21372928,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:04.678437+00:00",
+      "finished_utc": "2026-10-21T02:23:05.236911+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_10.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_10.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "442c8b41100a8845f1ae3025495c4c00deb834be6c06b1722725db24abd48e65",
+        "mtime_ns": 1791358671060135100
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "442c8b41100a8845f1ae3025495c4c00deb834be6c06b1722725db24abd48e65",
+        "mtime_ns": 1791358671060135100,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:05.290137+00:00",
+      "finished_utc": "2026-10-21T02:23:05.610602+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_11.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_11.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "50ef43ac0fbf36218d943319eeb5d00d5f8478e6fa27ddd2502c2ead9fe23b73",
+        "mtime_ns": 1791358671824481300
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 19677184,
+        "sha256": "50ef43ac0fbf36218d943319eeb5d00d5f8478e6fa27ddd2502c2ead9fe23b73",
+        "mtime_ns": 1791358671824481300,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 19644416,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:05.660122+00:00",
+      "finished_utc": "2026-10-21T02:23:06.116836+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_12.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_12.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "a765b747f2886ed664ea40728c4b6aed2b8eca7e2b77d361d3ead49253689548",
+        "mtime_ns": 1791358672572367800
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "a765b747f2886ed664ea40728c4b6aed2b8eca7e2b77d361d3ead49253689548",
+        "mtime_ns": 1791358672572367800,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:06.163841+00:00",
+      "finished_utc": "2026-10-21T02:23:06.650787+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_02.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_02.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "ed15c911cbd634c0377ce05afb49f4496c93752dcb7e1f654339336008a8d298",
+        "mtime_ns": 1791358650687543100
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 29802496,
+        "sha256": "ed15c911cbd634c0377ce05afb49f4496c93752dcb7e1f654339336008a8d298",
+        "mtime_ns": 1791358650687543100,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 9519104,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:06.703617+00:00",
+      "finished_utc": "2026-10-21T02:23:07.067602+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_03.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_03.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "0679017b4b8b72bbb7a6f05e9b4ac4d23eeba65f553dfb453d29258b6aa3f73e",
+        "mtime_ns": 1791358651359854200
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 23797760,
+        "sha256": "0679017b4b8b72bbb7a6f05e9b4ac4d23eeba65f553dfb453d29258b6aa3f73e",
+        "mtime_ns": 1791358651359854200,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 15523840,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:07.207962+00:00",
+      "finished_utc": "2026-10-21T02:23:07.656863+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_04.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_04.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "db51ddcec491e96dc346f6b5be69e583029800dd97f2bb4218f0ca703a5f9b06",
+        "mtime_ns": 1791358652130758800
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "db51ddcec491e96dc346f6b5be69e583029800dd97f2bb4218f0ca703a5f9b06",
+        "mtime_ns": 1791358652130758800,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:07.710445+00:00",
+      "finished_utc": "2026-10-21T02:23:08.007847+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_05.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_05.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "769877b72ccc168b502fb4acad5c22ae7d70214d8cfd581840f76fcf5329c476",
+        "mtime_ns": 1791358652798348400
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 18128896,
+        "sha256": "769877b72ccc168b502fb4acad5c22ae7d70214d8cfd581840f76fcf5329c476",
+        "mtime_ns": 1791358652798348400,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 21192704,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:08.060783+00:00",
+      "finished_utc": "2026-10-21T02:23:08.544947+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_06.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_06.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "abd04822e99cd09e4f08bb01685bc47a952b1fd8c341b7e0981a4741d3fdb818",
+        "mtime_ns": 1791358653424724900
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "abd04822e99cd09e4f08bb01685bc47a952b1fd8c341b7e0981a4741d3fdb818",
+        "mtime_ns": 1791358653424724900,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:08.596424+00:00",
+      "finished_utc": "2026-10-21T02:23:08.885488+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_07.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_07.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "6b895656324216d18eda69cce50c79f6a4e5fd7fa86d6580f62be1864088adfe",
+        "mtime_ns": 1791358654105254100
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 16658432,
+        "sha256": "6b895656324216d18eda69cce50c79f6a4e5fd7fa86d6580f62be1864088adfe",
+        "mtime_ns": 1791358654105254100,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 22663168,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:08.934499+00:00",
+      "finished_utc": "2026-10-21T02:23:09.382696+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_08.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_08.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "bde51964b5b7ea095290b151eb1d3ef3475d6970805ff9c847464037383c953e",
+        "mtime_ns": 1791358654747345500
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "bde51964b5b7ea095290b151eb1d3ef3475d6970805ff9c847464037383c953e",
+        "mtime_ns": 1791358654747345500,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:09.428429+00:00",
+      "finished_utc": "2026-10-21T02:23:09.712229+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_09.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_09.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "101af494e28aadfc844b357e4ee434c8d71af48c5df4131c11f925d5a5a04214",
+        "mtime_ns": 1791358655412512400
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 17952768,
+        "sha256": "101af494e28aadfc844b357e4ee434c8d71af48c5df4131c11f925d5a5a04214",
+        "mtime_ns": 1791358655412512400,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 21368832,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:09.761454+00:00",
+      "finished_utc": "2026-10-21T02:23:10.264751+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_10.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_10.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "893f934596ec79b89035b68910f3d7ab73d2cc02adc815b4d03440c816d1b8d8",
+        "mtime_ns": 1791358656052141300
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "893f934596ec79b89035b68910f3d7ab73d2cc02adc815b4d03440c816d1b8d8",
+        "mtime_ns": 1791358656052141300,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:10.324965+00:00",
+      "finished_utc": "2026-10-21T02:23:10.749850+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_11.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_11.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "7c976f1d7f482e18759cc4c53b8f2edca22bc4c05b416ea005b8e33eeb5fe6f7",
+        "mtime_ns": 1791358656889437100
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 19677184,
+        "sha256": "7c976f1d7f482e18759cc4c53b8f2edca22bc4c05b416ea005b8e33eeb5fe6f7",
+        "mtime_ns": 1791358656889437100,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 19644416,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:10.829432+00:00",
+      "finished_utc": "2026-10-21T02:23:11.297986+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_12.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_12.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "2aed040387610e448b93aa4d55a91cc057af6d86ee4e5474a3ca2023bdaeb266",
+        "mtime_ns": 1791358657570613700
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "2aed040387610e448b93aa4d55a91cc057af6d86ee4e5474a3ca2023bdaeb266",
+        "mtime_ns": 1791358657570613700,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:11.352030+00:00",
+      "finished_utc": "2026-10-21T02:23:11.746752+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_02.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_02.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "71e786af951c0baacd3380f141e5a876fca75275a766a18cd67e62d30d3b042f",
+        "mtime_ns": 1791293124961020000
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 29810688,
+        "sha256": "71e786af951c0baacd3380f141e5a876fca75275a766a18cd67e62d30d3b042f",
+        "mtime_ns": 1791293124961020000,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 9510912,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:11.801370+00:00",
+      "finished_utc": "2026-10-21T02:23:12.197478+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_03.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_03.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "dcdc18e5c2d20caf4571e0a2cbe006c34cecbee0bba2cad04b1add8e8c84f88a",
+        "mtime_ns": 1791293125776754100
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 23801856,
+        "sha256": "dcdc18e5c2d20caf4571e0a2cbe006c34cecbee0bba2cad04b1add8e8c84f88a",
+        "mtime_ns": 1791293125776754100,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 15519744,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:12.256482+00:00",
+      "finished_utc": "2026-10-21T02:23:12.726430+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_04.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_04.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "501bfdcda8128d0cd51f8abcbe6cab34dce4fba8ffef19cee28c4c8889e271ec",
+        "mtime_ns": 1791293126630762100
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "501bfdcda8128d0cd51f8abcbe6cab34dce4fba8ffef19cee28c4c8889e271ec",
+        "mtime_ns": 1791293126630762100,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:12.781645+00:00",
+      "finished_utc": "2026-10-21T02:23:13.075601+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_05.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_05.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "516cee32ea8f8fea75c4e8ed7fdfdd4d65e76d6c3c5d4c272c1c72511aa80667",
+        "mtime_ns": 1791293127547873000
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 18124800,
+        "sha256": "516cee32ea8f8fea75c4e8ed7fdfdd4d65e76d6c3c5d4c272c1c72511aa80667",
+        "mtime_ns": 1791293127547873000,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 21196800,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:13.127709+00:00",
+      "finished_utc": "2026-10-21T02:23:13.587823+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_06.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_06.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "3989cc3d9070bf37e16067ac775d8e3fcaa70a4fd4e3e3f6966c48d006ecf4db",
+        "mtime_ns": 1791293128381120200
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "3989cc3d9070bf37e16067ac775d8e3fcaa70a4fd4e3e3f6966c48d006ecf4db",
+        "mtime_ns": 1791293128381120200,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:13.645962+00:00",
+      "finished_utc": "2026-10-21T02:23:13.980507+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_07.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_07.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "8cf0e594a2340105b72c1b0a3e0136a3e73fa2d50f3704502b5c1a80209b647d",
+        "mtime_ns": 1791293129118435800
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 16662528,
+        "sha256": "8cf0e594a2340105b72c1b0a3e0136a3e73fa2d50f3704502b5c1a80209b647d",
+        "mtime_ns": 1791293129118435800,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 22659072,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:14.041355+00:00",
+      "finished_utc": "2026-10-21T02:23:14.517958+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_08.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_08.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "2de7bb914c684336a902483de16894af76bde636877f2c9d9e83cf1ad49c3612",
+        "mtime_ns": 1791293129893342000
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "2de7bb914c684336a902483de16894af76bde636877f2c9d9e83cf1ad49c3612",
+        "mtime_ns": 1791293129893342000,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:14.563958+00:00",
+      "finished_utc": "2026-10-21T02:23:14.847491+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_09.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_09.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "effd2a7b6ef1cc0ab509aa792856ab2cbff97ac3366cc3fd232b410021d99711",
+        "mtime_ns": 1791293130657940500
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 17952768,
+        "sha256": "effd2a7b6ef1cc0ab509aa792856ab2cbff97ac3366cc3fd232b410021d99711",
+        "mtime_ns": 1791293130657940500,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 21368832,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:14.897226+00:00",
+      "finished_utc": "2026-10-21T02:23:15.346076+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_10.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_10.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "5c1baded51a3bac3b89ffc80925371b5d0469f196d03b2f421c6a73e34379b66",
+        "mtime_ns": 1791293131484023400
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "5c1baded51a3bac3b89ffc80925371b5d0469f196d03b2f421c6a73e34379b66",
+        "mtime_ns": 1791293131484023400,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:15.398080+00:00",
+      "finished_utc": "2026-10-21T02:23:15.796839+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_11.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_11.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "fa286dfdead81aa8aa4b85f37384070048a7e78c659686a468450fe682b0dfda",
+        "mtime_ns": 1791293132222079700
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 19681280,
+        "sha256": "fa286dfdead81aa8aa4b85f37384070048a7e78c659686a468450fe682b0dfda",
+        "mtime_ns": 1791293132222079700,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 19640320,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:15.864434+00:00",
+      "finished_utc": "2026-10-21T02:23:16.331797+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_12.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_12.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "f21f01a006886fab61fdcc9d24e14cb596f78bc0da0925c37031f5e873cae237",
+        "mtime_ns": 1791293133066519900
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "f21f01a006886fab61fdcc9d24e14cb596f78bc0da0925c37031f5e873cae237",
+        "mtime_ns": 1791293133066519900,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:16.385395+00:00",
+      "finished_utc": "2026-10-21T02:23:16.775117+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_02.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_02.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "2d47c87890daa1974b7d9d97f6b79a28bf9c25c8b8abdebd1735c0f165c2c34f",
+        "mtime_ns": 1791293124411883200
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 29802496,
+        "sha256": "2d47c87890daa1974b7d9d97f6b79a28bf9c25c8b8abdebd1735c0f165c2c34f",
+        "mtime_ns": 1791293124411883200,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 9519104,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:16.833178+00:00",
+      "finished_utc": "2026-10-21T02:23:17.183607+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_03.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_03.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "cd36bc195ca71e31c49d8758438dc94241b09b67cad0241dd5dc50af2a8681ef",
+        "mtime_ns": 1791293125404404400
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 23801856,
+        "sha256": "cd36bc195ca71e31c49d8758438dc94241b09b67cad0241dd5dc50af2a8681ef",
+        "mtime_ns": 1791293125404404400,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 15519744,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:17.249845+00:00",
+      "finished_utc": "2026-10-21T02:23:17.750695+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_04.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_04.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "046e5beb45baa479740b664e67974955cff766e74dbfc4c44e37a84db446f958",
+        "mtime_ns": 1791293126236083600
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "046e5beb45baa479740b664e67974955cff766e74dbfc4c44e37a84db446f958",
+        "mtime_ns": 1791293126236083600,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:17.808778+00:00",
+      "finished_utc": "2026-10-21T02:23:18.107734+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_05.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_05.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "4c64965b62bcb507f7a591b29c26ab5f33d15983402245f852f572e9e648bbd1",
+        "mtime_ns": 1791293127118232600
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 18132992,
+        "sha256": "4c64965b62bcb507f7a591b29c26ab5f33d15983402245f852f572e9e648bbd1",
+        "mtime_ns": 1791293127118232600,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 21188608,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:18.163297+00:00",
+      "finished_utc": "2026-10-21T02:23:18.611801+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_06.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_06.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "305a01aecd966bf85e2ffd8f7aad8b9cfc24937d757714fecdd882eb01e01ec3",
+        "mtime_ns": 1791293127992225700
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "305a01aecd966bf85e2ffd8f7aad8b9cfc24937d757714fecdd882eb01e01ec3",
+        "mtime_ns": 1791293127992225700,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:18.666200+00:00",
+      "finished_utc": "2026-10-21T02:23:18.950162+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_07.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_07.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "2141abc8760065b24607ffbb940e54c91ffe21fe0ab28586e8d7b21b9da8edb9",
+        "mtime_ns": 1791293128794504000
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 16662528,
+        "sha256": "2141abc8760065b24607ffbb940e54c91ffe21fe0ab28586e8d7b21b9da8edb9",
+        "mtime_ns": 1791293128794504000,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 22659072,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:19.005414+00:00",
+      "finished_utc": "2026-10-21T02:23:19.517714+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_08.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_08.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "3c065239f6a4f5ee3dab201d815afd630e289fa2de46515d265e327018c370b8",
+        "mtime_ns": 1791293129538178400
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "3c065239f6a4f5ee3dab201d815afd630e289fa2de46515d265e327018c370b8",
+        "mtime_ns": 1791293129538178400,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:19.575208+00:00",
+      "finished_utc": "2026-10-21T02:23:19.874165+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_09.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_09.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "d6e07ddf32a38b2237e91ab9a9d11eb8235637a18d317b6132686728c6cf7ded",
+        "mtime_ns": 1791293130326342700
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 17960960,
+        "sha256": "d6e07ddf32a38b2237e91ab9a9d11eb8235637a18d317b6132686728c6cf7ded",
+        "mtime_ns": 1791293130326342700,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 21360640,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:19.925457+00:00",
+      "finished_utc": "2026-10-21T02:23:20.380868+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_10.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_10.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "3cd37e29857596b24024cc353adc2aa89e84a21811557b32cc4db1da832b4b00",
+        "mtime_ns": 1791293131086884000
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "3cd37e29857596b24024cc353adc2aa89e84a21811557b32cc4db1da832b4b00",
+        "mtime_ns": 1791293131086884000,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:20.436268+00:00",
+      "finished_utc": "2026-10-21T02:23:20.763115+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_11.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_11.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "ddf7e4b13382f723a9aeca59305f63bcc682afad97e22d93d3cf138d4f298c28",
+        "mtime_ns": 1791293131901081200
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 19685376,
+        "sha256": "ddf7e4b13382f723a9aeca59305f63bcc682afad97e22d93d3cf138d4f298c28",
+        "mtime_ns": 1791293131901081200,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 19636224,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:23:20.817770+00:00",
+      "finished_utc": "2026-10-21T02:23:21.318670+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_12.bin"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_12.bin",
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "7e279ad806fe66a6c913c4cabf88f5eaf8ba551ad05bebb9d02177f45f01d7ad",
+        "mtime_ns": 1791293132665136300
+      },
+      "after": {
+        "logical_bytes": 39321600,
+        "allocated_bytes": 39321600,
+        "sha256": "7e279ad806fe66a6c913c4cabf88f5eaf8ba551ad05bebb9d02177f45f01d7ad",
+        "mtime_ns": 1791293132665136300,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 0,
+      "status": "PASS"
+    }
+  ],
+  "finished_utc": "2026-10-21T02:23:21.321173+00:00",
+  "status": "LOSSLESS_COMPRESSION_HASH_VERIFIED",
+  "disk_free_after": 3316486144,
+  "total_allocation_saved_bytes": 968863744,
+  "disk_free_observed_delta_bytes": 968187904
+}

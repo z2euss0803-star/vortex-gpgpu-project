@@ -1,0 +1,138 @@
+{
+  "utc": "2026-10-21T02:18:36.706639+00:00",
+  "status": "FAIL_REQUIRED_BANK_BACKPRESSURE_COVERAGE",
+  "run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215251688659Z_candidate_gpu_pair",
+  "completed_utc": "2026-10-21T02:11:14.201231+00:00",
+  "elapsed_seconds": 15296.031000000075,
+  "issues": [
+    "core0 bank0 no actual response backpressure",
+    "core0 bank1 no actual response backpressure",
+    "core1 bank0 no actual response backpressure",
+    "core1 bank1 no actual response backpressure",
+    "core2 bank0 no actual response backpressure",
+    "core2 bank1 no actual response backpressure",
+    "core3 bank0 no actual response backpressure",
+    "core3 bank1 no actual response backpressure"
+  ],
+  "observations": {
+    "owner_alu_events": 98304,
+    "owner_alu_instructions_per_core": 12288,
+    "commit_events": 192,
+    "tcu_commit_stalls_with_alu_valid": 0,
+    "iterations_per_core_warp": [
+      [
+        0,
+        240,
+        240,
+        240
+      ],
+      [
+        0,
+        256,
+        256,
+        256
+      ],
+      [
+        0,
+        256,
+        256,
+        256
+      ],
+      [
+        0,
+        240,
+        240,
+        240
+      ]
+    ],
+    "fp16_iterations_per_core_warp": [
+      [
+        0,
+        960,
+        960,
+        960
+      ],
+      [
+        0,
+        1024,
+        1024,
+        1024
+      ],
+      [
+        0,
+        1024,
+        1024,
+        1024
+      ],
+      [
+        0,
+        960,
+        960,
+        960
+      ]
+    ],
+    "native_query_count_per_core_warp": [
+      [
+        0,
+        960,
+        960,
+        960
+      ],
+      [
+        0,
+        1024,
+        1024,
+        1024
+      ],
+      [
+        0,
+        1024,
+        1024,
+        1024
+      ],
+      [
+        0,
+        960,
+        960,
+        960
+      ]
+    ],
+    "native_query_packets": 11904,
+    "bank_stall_cycles": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "outer_fp_captures_during_native_stall": 0,
+    "bank_events": 192,
+    "arbitration_events": 192,
+    "tcu_events": 500408,
+    "scope": "actual dualbank stalls, stable full response, exact I8/FP16/query counts/packets/pages and real retirement; not performance"
+  },
+  "source_zip_entries": 747,
+  "source_zip_all_sha_reread": true,
+  "independent_admission": "PASS",
+  "gpu_admission": "FAIL",
+  "receipt_hashes": {
+    "gpu_function_admission.json": "8fee202da64457a4c9bc0685b04a30d32015e265585e4f3fc88a089f560d9531",
+    "independent_admission.json": "0326e9ac7c593e11f52ad7569c1084df05735f4e91b5d518219ae331c30f418d",
+    "natural_exit.json": "6513c95cd746880385d1c108cfaade9a1557055aa97ed7eaa27694bbdc6afb45",
+    "phase_3_exit.json": "b6fb1e642dac11013cbef240df76f5068b465f31bff4349cc9a0d1b2ab7766db",
+    "product_manifest.json": "6a468953f12302ca26b6651cd9760e6fdeda7038bf5c327c13188c85d969e32a"
+  },
+  "scope": "attempt8 only; all eight bank waits absent. Other independent checks report no issues. Preserve originals; no G3/performance claim.",
+  "continuation": "F disk cleanup requested; no retry during cleanup. Future attempt only after causal repair, resources and new identity."
+}

@@ -1,0 +1,2262 @@
+[
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\fullsynth_area_medium_v1\\hw\\evidence\\primitive_inventory.txt",
+    "logical_bytes": 173810017,
+    "sha256": "cc6bd74c2ac8a533c38ee1f3000c386e28f7a354fd16de2fa3078c37d0b5e7dc",
+    "mtime_ns": 1791389771978651700,
+    "allocated_before": 173810017,
+    "allocated_after": 32354304,
+    "saved_bytes": 141455713,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\evidence\\fullsynth_area_medium_v1_terminal_scene_v1\\run\\hw\\evidence\\primitive_inventory.txt",
+    "logical_bytes": 173810017,
+    "sha256": "cc6bd74c2ac8a533c38ee1f3000c386e28f7a354fd16de2fa3078c37d0b5e7dc",
+    "mtime_ns": 1791389771978651700,
+    "allocated_before": 173810017,
+    "allocated_after": 32354304,
+    "saved_bytes": 141455713,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\fullsynth_v2\\hw\\evidence\\primitive_inventory.txt",
+    "logical_bytes": 173282585,
+    "sha256": "894806afc64fe833a6947d3dae2f3472e5ae47b4bdb133db8e6d8c983bce03ad",
+    "mtime_ns": 1791380972534332600,
+    "allocated_before": 173282585,
+    "allocated_after": 32268288,
+    "saved_bytes": 141014297,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\evidence\\fullsynth_v2_tracking_failure_scene_v1\\run\\hw\\evidence\\primitive_inventory.txt",
+    "logical_bytes": 173282585,
+    "sha256": "894806afc64fe833a6947d3dae2f3472e5ae47b4bdb133db8e6d8c983bce03ad",
+    "mtime_ns": 1791380972534332600,
+    "allocated_before": 173282585,
+    "allocated_after": 32268288,
+    "saved_bytes": 141014297,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t8\\render128\\trace\\ramulator.log.ch0",
+    "logical_bytes": 139865539,
+    "sha256": "72965500856fc4d474542e22fa48b8a265656e1fb7586100310e7e3dedeefad6",
+    "mtime_ns": 1789290140860540600,
+    "allocated_before": 139865539,
+    "allocated_after": 45797376,
+    "saved_bytes": 94068163,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w8t4\\render128\\trace\\ramulator.log.ch0",
+    "logical_bytes": 124424185,
+    "sha256": "4d1c172ed22150d850cffe7679651c616244f08382a9cdb8e0ebd9781646b8a8",
+    "mtime_ns": 1789290034920139700,
+    "allocated_before": 124424185,
+    "allocated_after": 42176512,
+    "saved_bytes": 82247673,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t4\\render128\\trace\\ramulator.log.ch0",
+    "logical_bytes": 106426296,
+    "sha256": "2f20e61891d26b96c500c5b42478fb34a22d97599a068b917b3c3f1073e176c1",
+    "mtime_ns": 1789289923851678400,
+    "allocated_before": 106426296,
+    "allocated_after": 34574336,
+    "saved_bytes": 71851960,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c2w4t4\\render128\\trace\\ramulator.log.ch0",
+    "logical_bytes": 80222646,
+    "sha256": "dda1a93c10c9b04542e9b8e1b2bd59a56638ff268b26edb8ea7c7525ddcc8b51",
+    "mtime_ns": 1789289830708826000,
+    "allocated_before": 80222646,
+    "allocated_after": 25141248,
+    "saved_bytes": 55081398,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c1w4t4\\render128\\trace\\ramulator.log.ch0",
+    "logical_bytes": 68822215,
+    "sha256": "9e964cab7fac1b03b0cacc9414a9a358d1b87498b7723f2a360f3648ca34dfce",
+    "mtime_ns": 1789289750523881500,
+    "allocated_before": 68822215,
+    "allocated_after": 21512192,
+    "saved_bytes": 47310023,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w8t4\\cnn\\trace\\ramulator.log.ch0",
+    "logical_bytes": 39448908,
+    "sha256": "85b19af819c8ee5c24ddcf6a11a1d9b61405f18e556a3de25124c6734aaf38d0",
+    "mtime_ns": 1789289976569218900,
+    "allocated_before": 39448908,
+    "allocated_after": 10932224,
+    "saved_bytes": 28516684,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t8\\cnn\\trace\\ramulator.log.ch0",
+    "logical_bytes": 38915602,
+    "sha256": "a4cc9e969904f45721b10b674f2f4608ed2a4bcb989ec105dce33310d1279134",
+    "mtime_ns": 1789290082362943000,
+    "allocated_before": 38915602,
+    "allocated_after": 10477568,
+    "saved_bytes": 28438034,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t4\\cnn\\trace\\ramulator.log.ch0",
+    "logical_bytes": 32121349,
+    "sha256": "8c976204143affd1e6fd97cef9c4c7e45fec8f1c6aaf9c6adca39b46c6c81740",
+    "mtime_ns": 1789289874757850300,
+    "allocated_before": 32121349,
+    "allocated_after": 8380416,
+    "saved_bytes": 23740933,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c2w4t4\\cnn\\trace\\ramulator.log.ch0",
+    "logical_bytes": 27408115,
+    "sha256": "89e54306e14ae4d4fb7cca1dc42652aae91c617558996c9604dc3f3f5a200f82",
+    "mtime_ns": 1789289791985683500,
+    "allocated_before": 27408115,
+    "allocated_after": 7020544,
+    "saved_bytes": 20387571,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c1w4t4\\cnn\\trace\\ramulator.log.ch0",
+    "logical_bytes": 27389661,
+    "sha256": "30979d39995ca1b468bba0a5cea5dbad55e0e3fbaec1826f4ff1910d4f43af65",
+    "mtime_ns": 1789289716162841300,
+    "allocated_before": 27389661,
+    "allocated_after": 6979584,
+    "saved_bytes": 20410077,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215251688659Z_candidate_gpu_pair\\phase_3.log",
+    "logical_bytes": 376155586,
+    "sha256": "17402b47f096387ecfba505492f7de00e5b4279e576459f9596906af436338ba",
+    "mtime_ns": 1792548672993883300,
+    "allocated_before": 376155586,
+    "allocated_after": 94040064,
+    "saved_bytes": 282115522,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215251688659Z_candidate_gpu_pair\\simulate.log",
+    "logical_bytes": 374687136,
+    "sha256": "a9d1887c7bdcf8c2cdb85e3f9142d843cd09a134af06a8bb11043a9cc404bf47",
+    "mtime_ns": 1792548672993883300,
+    "allocated_before": 374687136,
+    "allocated_after": 93675520,
+    "saved_bytes": 281011616,
+    "receipt": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "e9cfe9a9ddd786e91fbc7f944dc6ef0400c4830e0201fa5330f430381c9c8501",
+    "mtime_ns": 1791358662251081100,
+    "allocated_before": 157286400,
+    "allocated_after": 117248000,
+    "saved_bytes": 40038400,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "6df9d58073322570a767ab113954fcb5b727592f10ddb503d26a8fc36bb1191d",
+    "mtime_ns": 1791358675539838600,
+    "allocated_before": 157286400,
+    "allocated_after": 122609664,
+    "saved_bytes": 34676736,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "2219d05e202d73d0461e46a48945ed69bf5da76f71e9494298d39e44c76fe0d9",
+    "mtime_ns": 1791358648569939400,
+    "allocated_before": 157286400,
+    "allocated_after": 117256192,
+    "saved_bytes": 40030208,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "f51474b1943331110fc58685cd0e048202565604c8076a8584d9a8332d1b0c4d",
+    "mtime_ns": 1791358660244982900,
+    "allocated_before": 157286400,
+    "allocated_after": 122617856,
+    "saved_bytes": 34668544,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "4c7c4005f81280736b848799f41b12ef0e63414bc6bbd7ba98781b2087f8abbf",
+    "mtime_ns": 1791293121540617200,
+    "allocated_before": 157286400,
+    "allocated_after": 117252096,
+    "saved_bytes": 40034304,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "bf152b55f61318787335385369318bfca8a0c850186717e7f89275a26c037178",
+    "mtime_ns": 1791293137750727100,
+    "allocated_before": 157286400,
+    "allocated_after": 122601472,
+    "saved_bytes": 34684928,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "4c7c4005f81280736b848799f41b12ef0e63414bc6bbd7ba98781b2087f8abbf",
+    "mtime_ns": 1791293120447074800,
+    "allocated_before": 157286400,
+    "allocated_after": 117252096,
+    "saved_bytes": 40034304,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "1ae4a3b7da6d3ba22a955cfc786623ea5f1005647c410132aeeb4819946f3fc3",
+    "mtime_ns": 1791293136507983500,
+    "allocated_before": 157286400,
+    "allocated_after": 122609664,
+    "saved_bytes": 34676736,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "db0338d442e05629d5976680ae86a24cf2df0e26ae908a1e095ba8a675018145",
+    "mtime_ns": 1791358663699115400,
+    "allocated_before": 78643200,
+    "allocated_after": 60702720,
+    "saved_bytes": 17940480,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "3944d6bcbc862ecdc30ba587c2b8983ab08e2374d96a52c18ff9e8109edae1d3",
+    "mtime_ns": 1791358673867315700,
+    "allocated_before": 78643200,
+    "allocated_after": 38977536,
+    "saved_bytes": 39665664,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "7537def9f872cecee5467cd5f4b5b647548a7c07cb8dcd1fef7aa4b7f3946fdb",
+    "mtime_ns": 1791358649944221500,
+    "allocated_before": 78643200,
+    "allocated_after": 60698624,
+    "saved_bytes": 17944576,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "9ce15b257b4d36574cc23bd576ab56c305589cd609adcd1d3f31db581dff6961",
+    "mtime_ns": 1791358658680340900,
+    "allocated_before": 78643200,
+    "allocated_after": 38985728,
+    "saved_bytes": 39657472,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "8821a57444277c7c904aaedb7f31bb4e7f2563644e882e01458c9ec945dedf8b",
+    "mtime_ns": 1791293123741980800,
+    "allocated_before": 78643200,
+    "allocated_after": 60694528,
+    "saved_bytes": 17948672,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "09a3aae3fd4e2c2ee6fcb5bceb9bf42ab4855a34003677b016f83e5699ad622b",
+    "mtime_ns": 1791293134627768600,
+    "allocated_before": 78643200,
+    "allocated_after": 38973440,
+    "saved_bytes": 39669760,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "c94f35dd72df4299d189c094fd2c32f98ca7704d9dabf60a931aabf29b2fe35d",
+    "mtime_ns": 1791293122722366100,
+    "allocated_before": 78643200,
+    "allocated_after": 60702720,
+    "saved_bytes": 17940480,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "870062392048410084cbcb947b752fe0e6165f4fa0595f34fd929fc63f1c19ec",
+    "mtime_ns": 1791293133963468000,
+    "allocated_before": 78643200,
+    "allocated_after": 38981632,
+    "saved_bytes": 39661568,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "1f8e25d4b235c1f04376451e7ad6e5498ae2af9d2859ec8279b48844c11f98dc",
+    "mtime_ns": 1791358664516460200,
+    "allocated_before": 39321600,
+    "allocated_after": 29806592,
+    "saved_bytes": 9515008,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "a3b275d861ed3769c8f0a655cdb31f9d06d604c4330f4ba8e76ac2daa2c5c410",
+    "mtime_ns": 1791358665289419900,
+    "allocated_before": 39321600,
+    "allocated_after": 23793664,
+    "saved_bytes": 15527936,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "612ce5fbf580c73a5cf55b66c29e9934413a7e10fa8ed01525fc538a9e9c876d",
+    "mtime_ns": 1791358666135496400,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "aab784daa61149e3195cb02a0e68d23d9e5fef098f52bcce3cf5e423cfe62c01",
+    "mtime_ns": 1791358666919842500,
+    "allocated_before": 39321600,
+    "allocated_after": 18137088,
+    "saved_bytes": 21184512,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "9e3cfe1174498122feb7ff324b5ee82bca8b6a6afea7e094d273f0487039343a",
+    "mtime_ns": 1791358667676752200,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "c161c7cccb970c7042041da827807e832af127dc85d1437ea49f537a3b12f57b",
+    "mtime_ns": 1791358668446854600,
+    "allocated_before": 39321600,
+    "allocated_after": 16666624,
+    "saved_bytes": 22654976,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "95c030872d739dd4b00d1275f3654b1fa7ec8064cc85384ae64da086123e2919",
+    "mtime_ns": 1791358669354888500,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "c46896c78f585350243889b65acb30ddfb1d762835828db63b63175ce663a3ba",
+    "mtime_ns": 1791358670266799900,
+    "allocated_before": 39321600,
+    "allocated_after": 17948672,
+    "saved_bytes": 21372928,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "442c8b41100a8845f1ae3025495c4c00deb834be6c06b1722725db24abd48e65",
+    "mtime_ns": 1791358671060135100,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "50ef43ac0fbf36218d943319eeb5d00d5f8478e6fa27ddd2502c2ead9fe23b73",
+    "mtime_ns": 1791358671824481300,
+    "allocated_before": 39321600,
+    "allocated_after": 19677184,
+    "saved_bytes": 19644416,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e16\\runs\\numeric_v1\\raw\\1280x960\\layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "a765b747f2886ed664ea40728c4b6aed2b8eca7e2b77d361d3ead49253689548",
+    "mtime_ns": 1791358672572367800,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "ed15c911cbd634c0377ce05afb49f4496c93752dcb7e1f654339336008a8d298",
+    "mtime_ns": 1791358650687543100,
+    "allocated_before": 39321600,
+    "allocated_after": 29802496,
+    "saved_bytes": 9519104,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "0679017b4b8b72bbb7a6f05e9b4ac4d23eeba65f553dfb453d29258b6aa3f73e",
+    "mtime_ns": 1791358651359854200,
+    "allocated_before": 39321600,
+    "allocated_after": 23797760,
+    "saved_bytes": 15523840,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "db51ddcec491e96dc346f6b5be69e583029800dd97f2bb4218f0ca703a5f9b06",
+    "mtime_ns": 1791358652130758800,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "769877b72ccc168b502fb4acad5c22ae7d70214d8cfd581840f76fcf5329c476",
+    "mtime_ns": 1791358652798348400,
+    "allocated_before": 39321600,
+    "allocated_after": 18128896,
+    "saved_bytes": 21192704,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "abd04822e99cd09e4f08bb01685bc47a952b1fd8c341b7e0981a4741d3fdb818",
+    "mtime_ns": 1791358653424724900,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "6b895656324216d18eda69cce50c79f6a4e5fd7fa86d6580f62be1864088adfe",
+    "mtime_ns": 1791358654105254100,
+    "allocated_before": 39321600,
+    "allocated_after": 16658432,
+    "saved_bytes": 22663168,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "bde51964b5b7ea095290b151eb1d3ef3475d6970805ff9c847464037383c953e",
+    "mtime_ns": 1791358654747345500,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "101af494e28aadfc844b357e4ee434c8d71af48c5df4131c11f925d5a5a04214",
+    "mtime_ns": 1791358655412512400,
+    "allocated_before": 39321600,
+    "allocated_after": 17952768,
+    "saved_bytes": 21368832,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "893f934596ec79b89035b68910f3d7ab73d2cc02adc815b4d03440c816d1b8d8",
+    "mtime_ns": 1791358656052141300,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "7c976f1d7f482e18759cc4c53b8f2edca22bc4c05b416ea005b8e33eeb5fe6f7",
+    "mtime_ns": 1791358656889437100,
+    "allocated_before": 39321600,
+    "allocated_after": 19677184,
+    "saved_bytes": 19644416,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\numeric_v1\\raw\\1280x960\\layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "2aed040387610e448b93aa4d55a91cc057af6d86ee4e5474a3ca2023bdaeb266",
+    "mtime_ns": 1791358657570613700,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "71e786af951c0baacd3380f141e5a876fca75275a766a18cd67e62d30d3b042f",
+    "mtime_ns": 1791293124961020000,
+    "allocated_before": 39321600,
+    "allocated_after": 29810688,
+    "saved_bytes": 9510912,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "dcdc18e5c2d20caf4571e0a2cbe006c34cecbee0bba2cad04b1add8e8c84f88a",
+    "mtime_ns": 1791293125776754100,
+    "allocated_before": 39321600,
+    "allocated_after": 23801856,
+    "saved_bytes": 15519744,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "501bfdcda8128d0cd51f8abcbe6cab34dce4fba8ffef19cee28c4c8889e271ec",
+    "mtime_ns": 1791293126630762100,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "516cee32ea8f8fea75c4e8ed7fdfdd4d65e76d6c3c5d4c272c1c72511aa80667",
+    "mtime_ns": 1791293127547873000,
+    "allocated_before": 39321600,
+    "allocated_after": 18124800,
+    "saved_bytes": 21196800,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "3989cc3d9070bf37e16067ac775d8e3fcaa70a4fd4e3e3f6966c48d006ecf4db",
+    "mtime_ns": 1791293128381120200,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "8cf0e594a2340105b72c1b0a3e0136a3e73fa2d50f3704502b5c1a80209b647d",
+    "mtime_ns": 1791293129118435800,
+    "allocated_before": 39321600,
+    "allocated_after": 16662528,
+    "saved_bytes": 22659072,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "2de7bb914c684336a902483de16894af76bde636877f2c9d9e83cf1ad49c3612",
+    "mtime_ns": 1791293129893342000,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "effd2a7b6ef1cc0ab509aa792856ab2cbff97ac3366cc3fd232b410021d99711",
+    "mtime_ns": 1791293130657940500,
+    "allocated_before": 39321600,
+    "allocated_after": 17952768,
+    "saved_bytes": 21368832,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "5c1baded51a3bac3b89ffc80925371b5d0469f196d03b2f421c6a73e34379b66",
+    "mtime_ns": 1791293131484023400,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "fa286dfdead81aa8aa4b85f37384070048a7e78c659686a468450fe682b0dfda",
+    "mtime_ns": 1791293132222079700,
+    "allocated_before": 39321600,
+    "allocated_after": 19681280,
+    "saved_bytes": 19640320,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\actual_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "f21f01a006886fab61fdcc9d24e14cb596f78bc0da0925c37031f5e873cae237",
+    "mtime_ns": 1791293133066519900,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "2d47c87890daa1974b7d9d97f6b79a28bf9c25c8b8abdebd1735c0f165c2c34f",
+    "mtime_ns": 1791293124411883200,
+    "allocated_before": 39321600,
+    "allocated_after": 29802496,
+    "saved_bytes": 9519104,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "cd36bc195ca71e31c49d8758438dc94241b09b67cad0241dd5dc50af2a8681ef",
+    "mtime_ns": 1791293125404404400,
+    "allocated_before": 39321600,
+    "allocated_after": 23801856,
+    "saved_bytes": 15519744,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "046e5beb45baa479740b664e67974955cff766e74dbfc4c44e37a84db446f958",
+    "mtime_ns": 1791293126236083600,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "4c64965b62bcb507f7a591b29c26ab5f33d15983402245f852f572e9e648bbd1",
+    "mtime_ns": 1791293127118232600,
+    "allocated_before": 39321600,
+    "allocated_after": 18132992,
+    "saved_bytes": 21188608,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "305a01aecd966bf85e2ffd8f7aad8b9cfc24937d757714fecdd882eb01e01ec3",
+    "mtime_ns": 1791293127992225700,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "2141abc8760065b24607ffbb940e54c91ffe21fe0ab28586e8d7b21b9da8edb9",
+    "mtime_ns": 1791293128794504000,
+    "allocated_before": 39321600,
+    "allocated_after": 16662528,
+    "saved_bytes": 22659072,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "3c065239f6a4f5ee3dab201d815afd630e289fa2de46515d265e327018c370b8",
+    "mtime_ns": 1791293129538178400,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "d6e07ddf32a38b2237e91ab9a9d11eb8235637a18d317b6132686728c6cf7ded",
+    "mtime_ns": 1791293130326342700,
+    "allocated_before": 39321600,
+    "allocated_after": 17960960,
+    "saved_bytes": 21360640,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "3cd37e29857596b24024cc353adc2aa89e84a21811557b32cc4db1da832b4b00",
+    "mtime_ns": 1791293131086884000,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "ddf7e4b13382f723a9aeca59305f63bcc682afad97e22d93d3cf138d4f298c28",
+    "mtime_ns": 1791293131901081200,
+    "allocated_before": 39321600,
+    "allocated_after": 19685376,
+    "saved_bytes": 19636224,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\f16\\local_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "7e279ad806fe66a6c913c4cabf88f5eaf8ba551ad05bebb9d02177f45f01d7ad",
+    "mtime_ns": 1791293132665136300,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022240592063Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "7ef5893e356c607e5c5c8f64d92e6b63905c9f2fac0a0ad2ed2bde79354f56bd",
+    "mtime_ns": 1791294353962107700,
+    "allocated_before": 157286400,
+    "allocated_after": 65601536,
+    "saved_bytes": 91684864,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "edf0e07374ccc64900a7214f98ce9086d533a6a1d7c43f952489ff05733223e1",
+    "mtime_ns": 1791294377706985200,
+    "allocated_before": 157286400,
+    "allocated_after": 71823360,
+    "saved_bytes": 85463040,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "7ef5893e356c607e5c5c8f64d92e6b63905c9f2fac0a0ad2ed2bde79354f56bd",
+    "mtime_ns": 1791294353822502400,
+    "allocated_before": 157286400,
+    "allocated_after": 65601536,
+    "saved_bytes": 91684864,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "9a0986bff6a9e03d6c5887d38e0ea117f700e1bbe58c5004eb597a1fe425f5fb",
+    "mtime_ns": 1791294377566317200,
+    "allocated_before": 157286400,
+    "allocated_after": 70729728,
+    "saved_bytes": 86556672,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "79ce940baefe613b20536b7ced90bc379451d5c30b30b86122bac8705ea9cf34",
+    "mtime_ns": 1791294443981302900,
+    "allocated_before": 157286400,
+    "allocated_after": 77053952,
+    "saved_bytes": 80232448,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "d21676978c3a8e98b2b00fc09f4c83c2f7d1652705d5706a960723daf1f5bea3",
+    "mtime_ns": 1791294474478566200,
+    "allocated_before": 157286400,
+    "allocated_after": 79241216,
+    "saved_bytes": 78045184,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "79ce940baefe613b20536b7ced90bc379451d5c30b30b86122bac8705ea9cf34",
+    "mtime_ns": 1791294443845530900,
+    "allocated_before": 157286400,
+    "allocated_after": 77053952,
+    "saved_bytes": 80232448,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "6a8ad9ccd1155f9a6941cbe21c4e30b072e48a179b46d9126973ec9597d596a0",
+    "mtime_ns": 1791294474336868900,
+    "allocated_before": 157286400,
+    "allocated_after": 78577664,
+    "saved_bytes": 78708736,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "9b586d4898231f0b85081f603e4bb0da1d52f061afd39b27898ed78fbed49c12",
+    "mtime_ns": 1791294391226803300,
+    "allocated_before": 157286400,
+    "allocated_after": 117112832,
+    "saved_bytes": 40173568,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "1add8bad8ee5aada4d7952e84edd59229b3b714761a8f43d66857270ac9b8686",
+    "mtime_ns": 1791294422143635400,
+    "allocated_before": 157286400,
+    "allocated_after": 121937920,
+    "saved_bytes": 35348480,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "9b586d4898231f0b85081f603e4bb0da1d52f061afd39b27898ed78fbed49c12",
+    "mtime_ns": 1791294391072666800,
+    "allocated_before": 157286400,
+    "allocated_after": 117112832,
+    "saved_bytes": 40173568,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "4798d6c2fc030cee00bdec62beb95723f3953021a1d5fa64ffcd04fff79dc4c2",
+    "mtime_ns": 1791294422008274700,
+    "allocated_before": 157286400,
+    "allocated_after": 121982976,
+    "saved_bytes": 35303424,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "4fcdef220006a7b79a7dbdbebcc85789f09f5d61bc4863788571a8f18d96a3d9",
+    "mtime_ns": 1791293184041416700,
+    "allocated_before": 157286400,
+    "allocated_after": 117227520,
+    "saved_bytes": 40058880,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "1241f8d2561e0a01844bcb705d4ddaa0a2f0022f7ab12b74c9e141f83f3c6592",
+    "mtime_ns": 1791293213029449800,
+    "allocated_before": 157286400,
+    "allocated_after": 122621952,
+    "saved_bytes": 34664448,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "4fcdef220006a7b79a7dbdbebcc85789f09f5d61bc4863788571a8f18d96a3d9",
+    "mtime_ns": 1791293182516221800,
+    "allocated_before": 157286400,
+    "allocated_after": 117227520,
+    "saved_bytes": 40058880,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "455ed6e74bf3b60799a1f89752bc18adf4e7858815811182453f976bea92c05b",
+    "mtime_ns": 1791293209897073700,
+    "allocated_before": 157286400,
+    "allocated_after": 122601472,
+    "saved_bytes": 34684928,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "62f7340c2e627a68470685218b26e1b08636f33d5d7599ab50b34f234684395d",
+    "mtime_ns": 1791293142117702800,
+    "allocated_before": 157286400,
+    "allocated_after": 116682752,
+    "saved_bytes": 40603648,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "df73cfe9b6ecaf7dd829b7533c826548001c2b7f7d7dbfcd82198bd6e8da9d0e",
+    "mtime_ns": 1791293170249202800,
+    "allocated_before": 157286400,
+    "allocated_after": 121364480,
+    "saved_bytes": 35921920,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_00.bin",
+    "logical_bytes": 157286400,
+    "sha256": "62f7340c2e627a68470685218b26e1b08636f33d5d7599ab50b34f234684395d",
+    "mtime_ns": 1791293140672563700,
+    "allocated_before": 157286400,
+    "allocated_after": 116682752,
+    "saved_bytes": 40603648,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_14.bin",
+    "logical_bytes": 157286400,
+    "sha256": "1ae57925dc50f4317ac63bfb3f410330e5950eb3e25cce35b8a81c471ee8677a",
+    "mtime_ns": 1791293167718361800,
+    "allocated_before": 157286400,
+    "allocated_after": 121257984,
+    "saved_bytes": 36028416,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "ecb0569ea93faa48cd56a85c27281700124f587c86457bfd7da9d11122ce027f",
+    "mtime_ns": 1791294357859410200,
+    "allocated_before": 78643200,
+    "allocated_after": 28495872,
+    "saved_bytes": 50147328,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "0dd79924d8fceacac69c3e28f1225dc1fdb9d5fbdd26668f0a30f612cd12cd47",
+    "mtime_ns": 1791294373601842400,
+    "allocated_before": 78643200,
+    "allocated_after": 27344896,
+    "saved_bytes": 51298304,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "c98296a446842a92e7163b30c0eda8fb380a8d8a994b12fed6559d28d3a50d8f",
+    "mtime_ns": 1791294357784487300,
+    "allocated_before": 78643200,
+    "allocated_after": 29265920,
+    "saved_bytes": 49377280,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "02c69755aaf41c140a26d31d65149ba0cf7ed7ce8d4c5af92465d4a876530c48",
+    "mtime_ns": 1791294373537183200,
+    "allocated_before": 78643200,
+    "allocated_after": 26689536,
+    "saved_bytes": 51953664,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "e27def3a9c93805fbb80cb4cc5b85f9a9cbb28ca67ec456cb94a4b6369f01a46",
+    "mtime_ns": 1791294448078689100,
+    "allocated_before": 78643200,
+    "allocated_after": 32628736,
+    "saved_bytes": 46014464,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "f97d8d0ef50867d1d2c6741f43b18f2920c3660025da545cbd82ff340fd1bcdd",
+    "mtime_ns": 1791294467727802200,
+    "allocated_before": 78643200,
+    "allocated_after": 27832320,
+    "saved_bytes": 50810880,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "ba4a3c25f4c417c2a6ffcbabbca5fa2c880539ee578017eec25d42dffe23fc7c",
+    "mtime_ns": 1791294448014041100,
+    "allocated_before": 78643200,
+    "allocated_after": 34230272,
+    "saved_bytes": 44412928,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "dc8ae6c1ffa1e6afdf8132a8eb4b21558091a4764adbec9088e96fab0ac391da",
+    "mtime_ns": 1791294467660803000,
+    "allocated_before": 78643200,
+    "allocated_after": 27455488,
+    "saved_bytes": 51187712,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "909b0c2af49b10af2611f4de2795db43985cfc7f96749156329fd137409d0dac",
+    "mtime_ns": 1791294396066428600,
+    "allocated_before": 78643200,
+    "allocated_after": 59256832,
+    "saved_bytes": 19386368,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "e81698d56ceb51ba980f146e3fa1331eae4972d5b39ca9b5b44f60d4276c856f",
+    "mtime_ns": 1791294416079374600,
+    "allocated_before": 78643200,
+    "allocated_after": 38813696,
+    "saved_bytes": 39829504,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "b7d5c9ca1c5e301503fff61f173ba12bbfdf00c30ea57287adf888c074b27c50",
+    "mtime_ns": 1791294395999941300,
+    "allocated_before": 78643200,
+    "allocated_after": 59207680,
+    "saved_bytes": 19435520,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "ce2a2a79ac680aa410e3e944320580eb92004503c30bf4e4927563b6ec217a98",
+    "mtime_ns": 1791294416014051300,
+    "allocated_before": 78643200,
+    "allocated_after": 38752256,
+    "saved_bytes": 39890944,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "7e1676ccac47798a5f3f10d45c40d118ee42cbbc28fa05bd2271970f7c4c78f6",
+    "mtime_ns": 1791293188431646900,
+    "allocated_before": 78643200,
+    "allocated_after": 60698624,
+    "saved_bytes": 17944576,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "ba1dc9f522d1a21d492d2e93bfbbc1d34883d7a203fc221cb2ac523e6daa10c5",
+    "mtime_ns": 1791293206496096100,
+    "allocated_before": 78643200,
+    "allocated_after": 38981632,
+    "saved_bytes": 39661568,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "bc610992b6263e02b8a332faa2428cdeef4e743749a0ec52bf7af243101e97bc",
+    "mtime_ns": 1791293186614885600,
+    "allocated_before": 78643200,
+    "allocated_after": 60698624,
+    "saved_bytes": 17944576,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "bff9d1f5aefd195f8cee14208cd0b274e30ed2b73209e04bb26388dd2a09e3f8",
+    "mtime_ns": 1791293205246018100,
+    "allocated_before": 78643200,
+    "allocated_after": 38985728,
+    "saved_bytes": 39657472,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "8039d0fec7dc0bcefd5bd487596cbc08718d8179701cf3afb7c7d65add1e0dc2",
+    "mtime_ns": 1791293146244455800,
+    "allocated_before": 78643200,
+    "allocated_after": 57245696,
+    "saved_bytes": 21397504,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "31ea9cd5c29246f35de744a1b27b182dddfed3b12bdf922e58cc2c7b92cf0429",
+    "mtime_ns": 1791293164880990100,
+    "allocated_before": 78643200,
+    "allocated_after": 38780928,
+    "saved_bytes": 39862272,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_01.bin",
+    "logical_bytes": 78643200,
+    "sha256": "c7939820ad12ff61025cc4cebf024be3d4e991078553b069faa7c30006f69684",
+    "mtime_ns": 1791293144422500500,
+    "allocated_before": 78643200,
+    "allocated_after": 57307136,
+    "saved_bytes": 21336064,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_13.bin",
+    "logical_bytes": 78643200,
+    "sha256": "ac5bea3af80a73c551925dd03ea13fb9fdc4089aeac2240fea7bd20d693f4c28",
+    "mtime_ns": 1791293163652915900,
+    "allocated_before": 78643200,
+    "allocated_after": 38744064,
+    "saved_bytes": 39899136,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "357baf1afd1a4bd832af40e9e88b22474d971f6cfd26a256759222fcfb717bfa",
+    "mtime_ns": 1791294359729046300,
+    "allocated_before": 39321600,
+    "allocated_after": 15327232,
+    "saved_bytes": 23994368,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "4bc8e02d895613e8ef4bf0f15a851dad9bb315d9ad8e43fb3d49ced32e144c1d",
+    "mtime_ns": 1791294360899836700,
+    "allocated_before": 39321600,
+    "allocated_after": 13910016,
+    "saved_bytes": 25411584,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "351f1ec222be0fea552668cef0c48c3cbb8c5315061ee3c452b8b2ffa137a037",
+    "mtime_ns": 1791294362067033600,
+    "allocated_before": 39321600,
+    "allocated_after": 31457280,
+    "saved_bytes": 7864320,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "44ac7a57e774ae8dcf9c4678f10089828fb1a06d865e8cf3172df6088970a373",
+    "mtime_ns": 1791294363193601200,
+    "allocated_before": 39321600,
+    "allocated_after": 12439552,
+    "saved_bytes": 26882048,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "fb4a713393b06a5085ecd3863f08b6dc12a2c62ae81244b7c5859cee7821987f",
+    "mtime_ns": 1791294364360139000,
+    "allocated_before": 39321600,
+    "allocated_after": 39014400,
+    "saved_bytes": 307200,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "39b265126407cbfaedbc0f9355b46a369a8f6bf0b31bdad13e8dde799a846040",
+    "mtime_ns": 1791294365500260100,
+    "allocated_before": 39321600,
+    "allocated_after": 11788288,
+    "saved_bytes": 27533312,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "c5dce9ba2886753611238129d73d26db742c41ea365f2f38bfd5e9748b7e4d74",
+    "mtime_ns": 1791294366673106200,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "8760868836a088c2e9141bef963a89de6ab2fdc3f34557f48f9c3a5f01d79c86",
+    "mtime_ns": 1791294367898293800,
+    "allocated_before": 39321600,
+    "allocated_after": 12558336,
+    "saved_bytes": 26763264,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "76f030671bbc04c655518a8369b41e3d2ab9c11aebda48e92e0249971c2daafb",
+    "mtime_ns": 1791294369242563300,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "9b38d190a53cb208e5267228ade05542440205adaa5b9489eb696c915da9dd93",
+    "mtime_ns": 1791294370429157500,
+    "allocated_before": 39321600,
+    "allocated_after": 13488128,
+    "saved_bytes": 25833472,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\actual_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "870faeecbf01500c5c868e3f0e085ecee1bf731c1df5b4157597df374e47dd55",
+    "mtime_ns": 1791294371603247600,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "67b6e91bbb4a1df9363aca222fb7510aa95cf6cae445320cb0ded18309386758",
+    "mtime_ns": 1791294359698538900,
+    "allocated_before": 39321600,
+    "allocated_after": 14749696,
+    "saved_bytes": 24571904,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "9293ebc7de5397f13ed53ff175a5112104d8a9930bb665bc7d6275648bb9a2d5",
+    "mtime_ns": 1791294360871606500,
+    "allocated_before": 39321600,
+    "allocated_after": 14741504,
+    "saved_bytes": 24580096,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "afe412598c7e1eb2c2286582baca90014699e8d27e50c1c52bcb513007129b39",
+    "mtime_ns": 1791294362039240000,
+    "allocated_before": 39321600,
+    "allocated_after": 36028416,
+    "saved_bytes": 3293184,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "63da3fa92bc9662ef9e74043605dbe696f2595e61ce17e91c5ae67c403363104",
+    "mtime_ns": 1791294363164145100,
+    "allocated_before": 39321600,
+    "allocated_after": 12771328,
+    "saved_bytes": 26550272,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "ccf3de88e298eb3599b05108960090e084c33472e7d06a1c824b267934318340",
+    "mtime_ns": 1791294364331690000,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "4459d4d4a342d07c23fe7a23a2e16eac3d4bfe011eeb4171e23ca5b1860d4343",
+    "mtime_ns": 1791294365472004200,
+    "allocated_before": 39321600,
+    "allocated_after": 11763712,
+    "saved_bytes": 27557888,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "6d5f2d5f6728581c2cb66717a83764ad6a3f33e6ef2ad61ba86801b3669cbb24",
+    "mtime_ns": 1791294366641104500,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "142004c4ab69864563825760a91425b5e2d5d3bdb747618351820cbd082e6aa9",
+    "mtime_ns": 1791294367868294100,
+    "allocated_before": 39321600,
+    "allocated_after": 12574720,
+    "saved_bytes": 26746880,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "d443e0e766a503a307fa9ee53621fe3aaec94f02a950b31e55dec861c3c6bd23",
+    "mtime_ns": 1791294369212552000,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "2c5a4d3fb56493641e0bdf79c39a93737c01a65c617a4df79e8339568120c0da",
+    "mtime_ns": 1791294370399829800,
+    "allocated_before": 39321600,
+    "allocated_after": 13369344,
+    "saved_bytes": 25952256,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\i4\\local_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "b3d35d139430a9282b285de983a594202c2dea36eb47b69620592a91398a42f5",
+    "mtime_ns": 1791294371574146700,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "d0dc5424a464b123b95c6eed3ab4977b2380cbbf9ccd79cf537b063d2471d880",
+    "mtime_ns": 1791294450052052500,
+    "allocated_before": 39321600,
+    "allocated_after": 17838080,
+    "saved_bytes": 21483520,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "7557d070d1923dda09459cb43114855c2db3acec8872c63e0cd7eb591013ab46",
+    "mtime_ns": 1791294451470150100,
+    "allocated_before": 39321600,
+    "allocated_after": 15822848,
+    "saved_bytes": 23498752,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "edbf462b08ff8287bb2c0978fa781f5a32683cd888dbe380f7a89dcab1e4d7f6",
+    "mtime_ns": 1791294452926267600,
+    "allocated_before": 39321600,
+    "allocated_after": 37199872,
+    "saved_bytes": 2121728,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "2d7c70739ff2b48e1636ceddd12e5f3b0b9faa010f987fa3fcbe9c7a3de268e9",
+    "mtime_ns": 1791294454360652100,
+    "allocated_before": 39321600,
+    "allocated_after": 13615104,
+    "saved_bytes": 25706496,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "0803f6cbcb259a8e03f8c11b0b998ab9ce1b8c4bf9c4988cd5179b456b74d517",
+    "mtime_ns": 1791294455809683800,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "8a8219ff983b89f243941c1616561faf90a39359cb68f764a2dcf09134784c42",
+    "mtime_ns": 1791294457280093300,
+    "allocated_before": 39321600,
+    "allocated_after": 12271616,
+    "saved_bytes": 27049984,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "0883e9a465685a3619eba3a4886a835ed2231ba643b50607425e28c02884c983",
+    "mtime_ns": 1791294458767556300,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "c0faa72a5081569cf411b8d45764d20d018f1e78f89d5071cec3722365b95354",
+    "mtime_ns": 1791294460214604000,
+    "allocated_before": 39321600,
+    "allocated_after": 12988416,
+    "saved_bytes": 26333184,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "17ee25895ff6e5766291ea0e59c008f70a271ed5fffba1dacacf4c604ebc9d4a",
+    "mtime_ns": 1791294461648312000,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "1dd5e1534aadf53b866e9b50778b785b137d70f98203d624783822cfbf6a2638",
+    "mtime_ns": 1791294463108068500,
+    "allocated_before": 39321600,
+    "allocated_after": 14110720,
+    "saved_bytes": 25210880,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\actual_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "b73eb02eeae971015cb67741ab8d4b0ffaff22cb038d8273e19bee16a04e9742",
+    "mtime_ns": 1791294464567689700,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "e01ce439610329557c09d557af57f3e1af2f44168feb394db3c283986f78bafe",
+    "mtime_ns": 1791294450023133100,
+    "allocated_before": 39321600,
+    "allocated_after": 18173952,
+    "saved_bytes": 21147648,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "8e8f982de18b1755e4a71df2978cd1547f9e067baf96157c6790d5a6c30049b7",
+    "mtime_ns": 1791294451441477600,
+    "allocated_before": 39321600,
+    "allocated_after": 16121856,
+    "saved_bytes": 23199744,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "e76b80a2ce7c2386e86eee8afd1378fe986c73e4e4f5908433debcac266f5243",
+    "mtime_ns": 1791294452897269800,
+    "allocated_before": 39321600,
+    "allocated_after": 37756928,
+    "saved_bytes": 1564672,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "7f6c308c63fa44eff08519e71361e507331378ed08e3a0115e6485bbbc9e8ed1",
+    "mtime_ns": 1791294454331120500,
+    "allocated_before": 39321600,
+    "allocated_after": 13557760,
+    "saved_bytes": 25763840,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "f1a389d2f5bf688a84661e523023e0b88d1f7dc3736085675c8a9b41c6623c9a",
+    "mtime_ns": 1791294455780683300,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "191e3e8e7052cae49015d9b8e1461f0b5d2c04fc0e045c6184b96f58330df3c1",
+    "mtime_ns": 1791294457249094200,
+    "allocated_before": 39321600,
+    "allocated_after": 12124160,
+    "saved_bytes": 27197440,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "14dec39bb4a78a633e3117a68f1f2bd6768fbecbd4cb4bfb459807d2c5708fed",
+    "mtime_ns": 1791294458736759800,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "0a84c2205586c88238406debe1a324b645ff7747789ffa2f1de340f321a4d605",
+    "mtime_ns": 1791294460185656000,
+    "allocated_before": 39321600,
+    "allocated_after": 12832768,
+    "saved_bytes": 26488832,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "493f32b69359ff968734a8fa37bb9ffe4bce451094e4fd385fcd051e31ac70cd",
+    "mtime_ns": 1791294461620369500,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "1be90110ae9d8691d9961905c80fee8e05df8cd9f2f35a9ba53a73d6e3f4f457",
+    "mtime_ns": 1791294463079606100,
+    "allocated_before": 39321600,
+    "allocated_after": 13938688,
+    "saved_bytes": 25382912,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u4\\local_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "3d50a1ba6a6b18d6da67f8458565869fdfa8fc34180649f55963af2285ccbb1e",
+    "mtime_ns": 1791294464539759400,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "4c01830bc688cbd4e794a26f2abee81cba3a32dc0f08fa2fa2dad6a7fa0afe90",
+    "mtime_ns": 1791294398226700500,
+    "allocated_before": 39321600,
+    "allocated_after": 29507584,
+    "saved_bytes": 9814016,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "5a1ea093768f00eaa0d14d9c4e35d2428460dfe319c43703eafda598e70e8f04",
+    "mtime_ns": 1791294399680561100,
+    "allocated_before": 39321600,
+    "allocated_after": 23687168,
+    "saved_bytes": 15634432,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "7ac2e55f9c822e45a2245018081de293eadef6ee960919d5ed2488bca7ea81fc",
+    "mtime_ns": 1791294401268214400,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "2cffe8221657d76464755b4909ff00e75a99a7730baaf547fa61184ca5a87318",
+    "mtime_ns": 1791294402749668000,
+    "allocated_before": 39321600,
+    "allocated_after": 18100224,
+    "saved_bytes": 21221376,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "69426ec07fd03f3e6f8739cc280d91eb0b4190292cf130babe22fdce19c6365f",
+    "mtime_ns": 1791294404256791700,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "8e5a43d7eba24d7fc23f4e814fc153bb4f0efe475ea015ef9c9527ef15d01ac5",
+    "mtime_ns": 1791294405681512300,
+    "allocated_before": 39321600,
+    "allocated_after": 16617472,
+    "saved_bytes": 22704128,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "eac06f009a00d3c36737fd75a7aecc79b04b23a6aebbb41907bccf795bbde0c5",
+    "mtime_ns": 1791294407150317700,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "f582c29e8d4d1da28531f97f40f5bb1c0bef9f310573c49ec4249b6e7e816882",
+    "mtime_ns": 1791294408598728300,
+    "allocated_before": 39321600,
+    "allocated_after": 17899520,
+    "saved_bytes": 21422080,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "85331ece426078ff94ca336999772f5b21df911e271ded95c76af61db8bcb2ed",
+    "mtime_ns": 1791294410080691900,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "8b08a7a6953470aee22bc5ca9ba2c8106d0dcd3ebde0cb17286a5c368467ee48",
+    "mtime_ns": 1791294411571663700,
+    "allocated_before": 39321600,
+    "allocated_after": 19619840,
+    "saved_bytes": 19701760,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\actual_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "8ea9abb39441d975cfeba80ba2c4495ac1ddda622d833025a48b2966b8caf211",
+    "mtime_ns": 1791294413080440800,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "37427313d19c683b2d809066e2b7876ced5ac6c8c8887805b0f50a863afafb08",
+    "mtime_ns": 1791294398194701000,
+    "allocated_before": 39321600,
+    "allocated_after": 29532160,
+    "saved_bytes": 9789440,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "d5527ef5d9b3c4235d5a2d2ad5beb53bead8580d4b4a0e38a91b77a4b8763e77",
+    "mtime_ns": 1791294399647558600,
+    "allocated_before": 39321600,
+    "allocated_after": 23699456,
+    "saved_bytes": 15622144,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "40ed4a73f6896f2f855b6fc65b9a490057133acc7725a5e11a9dfef2e9300685",
+    "mtime_ns": 1791294401237213200,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "cd1c3cc46c8fd5c567f8edb8d1398ffbd1a6353e04d3ad4229f28fbc35a5af2b",
+    "mtime_ns": 1791294402717669800,
+    "allocated_before": 39321600,
+    "allocated_after": 18067456,
+    "saved_bytes": 21254144,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "51e906a4298f85408fef8c54d09fac90b3f763de33776eb69ff58b1eb9ad7f9e",
+    "mtime_ns": 1791294404226770100,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "df701b52cf54d3687c26ecbb9c636d435e45253c65f75e40f400ac7abe01ab3b",
+    "mtime_ns": 1791294405653406800,
+    "allocated_before": 39321600,
+    "allocated_after": 16609280,
+    "saved_bytes": 22712320,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "9f1dae051569c9569d6b77ad90329ca8b4ca32239d3ebb6ace1c6ef6bd7b7609",
+    "mtime_ns": 1791294407121033200,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "6552ff7ae87ac53cfe8898d8d7a103465844c4418ff4186c35375dfccdd345b3",
+    "mtime_ns": 1791294408569340400,
+    "allocated_before": 39321600,
+    "allocated_after": 17899520,
+    "saved_bytes": 21422080,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "2e31d1b23ad76bfd036951b1a7d5b12d9ae2ffd84f15dd009151e1469e53693c",
+    "mtime_ns": 1791294410052603000,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "d1c0ebcb0f26bf37e6ee614a11a8fe43afc6d6a8006883bc61148254c9e86f33",
+    "mtime_ns": 1791294411540663800,
+    "allocated_before": 39321600,
+    "allocated_after": 19603456,
+    "saved_bytes": 19718144,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_formats_20261006_v1\\runs\\20261006_214529\\1280x960\\u8\\local_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "40b9f6878e26c5d904ea7f297fb9754df05b5486cb48d389a82b61fabf28f675",
+    "mtime_ns": 1791294413050432400,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "ce614c443aab597e0f949c57558e225e8dab3fbb6cba69717ec9f185981d1fcd",
+    "mtime_ns": 1791293190273185200,
+    "allocated_before": 39321600,
+    "allocated_after": 29802496,
+    "saved_bytes": 9519104,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "dd01bf38b1caa7897e8c19e24c1092b9650b6d7188dcd0d1eecb373a92305289",
+    "mtime_ns": 1791293191563628700,
+    "allocated_before": 39321600,
+    "allocated_after": 23789568,
+    "saved_bytes": 15532032,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "f291ec351f4df9c2d2656ac6e0912f847bf8c5ced409b8ac934f03a67f0e8f7a",
+    "mtime_ns": 1791293192813729900,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "496f8333175310aea3b95ee78e91b7d91d67b6a552893594dc44dc208a362361",
+    "mtime_ns": 1791293194154976000,
+    "allocated_before": 39321600,
+    "allocated_after": 18128896,
+    "saved_bytes": 21192704,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "4c0b5c7ed29bda168f076cd15aece18647e128d350839733f04cfda2149f6437",
+    "mtime_ns": 1791293195471618100,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "8cac66ccb5ae9d130f9c3634e4f404449e168621cf4b27932b94d1a9a499958e",
+    "mtime_ns": 1791293196686146900,
+    "allocated_before": 39321600,
+    "allocated_after": 16654336,
+    "saved_bytes": 22667264,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "b61fa8d5fbcfb55c907378f370db6680077c9fb4d8b8967416ed8c906497b927",
+    "mtime_ns": 1791293197938975900,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "49160c7d1dd18c6c0afc2336cd592adb88ce6655ccdcac1f80dcc9cd8c99aafa",
+    "mtime_ns": 1791293199220228900,
+    "allocated_before": 39321600,
+    "allocated_after": 17969152,
+    "saved_bytes": 21352448,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "5a14b6c1f3065d7c70155aefe7eab6a5c6db2d5c1cadf4cf622b003cfa13a808",
+    "mtime_ns": 1791293200494376800,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "95b442a822e9b8928ff6e24a1ed4a1b4de585d4d83a93365e6517b9101109987",
+    "mtime_ns": 1791293201942951200,
+    "allocated_before": 39321600,
+    "allocated_after": 19681280,
+    "saved_bytes": 19640320,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\actual_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "d426364919510bd76a81743ee1642ccc703c19d493237203059976ec6224dce5",
+    "mtime_ns": 1791293203635879900,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "aa8d34a3510ce9d0cc18c8461f8fe6071aeab9da51ef66d9af564dc3437b4d22",
+    "mtime_ns": 1791293189532569100,
+    "allocated_before": 39321600,
+    "allocated_after": 29798400,
+    "saved_bytes": 9523200,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "b3d45b27d02ebaeebf217d7a91af2d2b85803a61bad1cb74c239bea02628fc11",
+    "mtime_ns": 1791293191013734800,
+    "allocated_before": 39321600,
+    "allocated_after": 23801856,
+    "saved_bytes": 15519744,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "3910a5d3205f43bf5faf8efe752c45e5e40f6ff52f4e47d193fd2f5d0842868c",
+    "mtime_ns": 1791293192238790500,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "1ff906a1489a097cdfbbbe3125dc9d546d904b31c143143cf3f4db4d6ff6cf4e",
+    "mtime_ns": 1791293193566975900,
+    "allocated_before": 39321600,
+    "allocated_after": 18132992,
+    "saved_bytes": 21188608,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "e108256a73efa8c586558de530f0cb6a2e92e8dd02c6bb68f406fd991a8bca4e",
+    "mtime_ns": 1791293194882740800,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "87ca5eeffe9cdcfd1c813c4e2b6e63089a0b418199acc700957703ab97724e29",
+    "mtime_ns": 1791293196123905100,
+    "allocated_before": 39321600,
+    "allocated_after": 16666624,
+    "saved_bytes": 22654976,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "3f75ce19d4e27005d7d59036de69af56f730874eb9a0e066fe4c2bfc61ad9b7f",
+    "mtime_ns": 1791293197365405500,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "c67c17d87b352a382920ccfdfaeeec98389a14edb59c179d87e8e78888724bd4",
+    "mtime_ns": 1791293198650228300,
+    "allocated_before": 39321600,
+    "allocated_after": 17960960,
+    "saved_bytes": 21360640,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "f15709314e9f9ba4ebef4576334c592ad05263fda0bd81d23f7be6c04ca1048d",
+    "mtime_ns": 1791293199900666400,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "4737d6a065d7547e0da9e670cb1c15ab57ec5eb1a1b4f94314957ef80fadba38",
+    "mtime_ns": 1791293201239907600,
+    "allocated_before": 39321600,
+    "allocated_after": 19677184,
+    "saved_bytes": 19644416,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i16\\local_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "555ba751696cb6977f84c30e8e5475d9514914d69d2b93863770163682c5e8c6",
+    "mtime_ns": 1791293202839388000,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "1bb911687d77d21a2da024f9103904f2c3c7b25cd635b5643f51a34c97dab798",
+    "mtime_ns": 1791293147911037500,
+    "allocated_before": 39321600,
+    "allocated_after": 29155328,
+    "saved_bytes": 10166272,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "525c9a57ce7a3997bab97bbdf36cff0f4d46b62b457896d87ce186e604172a3a",
+    "mtime_ns": 1791293149300233500,
+    "allocated_before": 39321600,
+    "allocated_after": 23457792,
+    "saved_bytes": 15863808,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "977d0ecb7b805e5ec4d49df073427001bbe94f0327150fcad3de679945d94d14",
+    "mtime_ns": 1791293150759198200,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "2f9fd04f981027a2ea6921a31dadbc96f39c6cff48883ace864746a1df16c24c",
+    "mtime_ns": 1791293152178852300,
+    "allocated_before": 39321600,
+    "allocated_after": 18104320,
+    "saved_bytes": 21217280,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "d9dd40a8711a92a70a52e63814d393e2107c1618761cb8f4d071da664a24b110",
+    "mtime_ns": 1791293153752919400,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "1a60e4f1ac4daf84f58172a72c0ff481d9d67e4f2f3f9e1bcf4c5ff9e2a4250f",
+    "mtime_ns": 1791293155205289200,
+    "allocated_before": 39321600,
+    "allocated_after": 16613376,
+    "saved_bytes": 22708224,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "c1ec92642b45fc74434bf10a3b29b7863fa4637133a96c49678951270d639ad9",
+    "mtime_ns": 1791293156567197500,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "2263833a79ca50174c20b1abd3d8fb6f08c52dca7db4656be4a480c9e6dd23e1",
+    "mtime_ns": 1791293157939747000,
+    "allocated_before": 39321600,
+    "allocated_after": 17915904,
+    "saved_bytes": 21405696,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "4b73fca9029ef33ff614ff294116291e153181e87e79e105533be5ec8cdb5976",
+    "mtime_ns": 1791293159292061900,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "1b00fdcb5923dc7da774bcad06659e4bee4bac930e0dcd4397aaa5351c922d22",
+    "mtime_ns": 1791293160744787900,
+    "allocated_before": 39321600,
+    "allocated_after": 19562496,
+    "saved_bytes": 19759104,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\actual_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "5319d77e75e18cdd53420cadbbef8aca3bb58312f6a50aa064e43ab61c19a08f",
+    "mtime_ns": 1791293162248095600,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_02.bin",
+    "logical_bytes": 39321600,
+    "sha256": "79c1cc83929eec5303522863fc9c01b9870ecda87d6262eccd659c47890f3cfc",
+    "mtime_ns": 1791293147172243200,
+    "allocated_before": 39321600,
+    "allocated_after": 29192192,
+    "saved_bytes": 10129408,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_03.bin",
+    "logical_bytes": 39321600,
+    "sha256": "839d80105f71e4eaba08eeea9d6fb4aaeb4f717327417e9c775a441ac9272b43",
+    "mtime_ns": 1791293148691137100,
+    "allocated_before": 39321600,
+    "allocated_after": 23494656,
+    "saved_bytes": 15826944,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_04.bin",
+    "logical_bytes": 39321600,
+    "sha256": "0be34f3b7295511620744b1bda452df230b16e171ca51af4c64e7345f902fd96",
+    "mtime_ns": 1791293150074272500,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_05.bin",
+    "logical_bytes": 39321600,
+    "sha256": "098914fd12c01d83950de527aca008bb87d17807066e00606289fb6e8b824b8d",
+    "mtime_ns": 1791293151481826700,
+    "allocated_before": 39321600,
+    "allocated_after": 18063360,
+    "saved_bytes": 21258240,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_06.bin",
+    "logical_bytes": 39321600,
+    "sha256": "bea937031852cead52f75fbe836d8f84f3c4fe42cbc5d477ca16986d0ca3a187",
+    "mtime_ns": 1791293153019006900,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_07.bin",
+    "logical_bytes": 39321600,
+    "sha256": "a2d0c4ae2eecd55ab955ce708331fe9e8f1640315576fc91b33fa02d54d7d8b0",
+    "mtime_ns": 1791293154549860000,
+    "allocated_before": 39321600,
+    "allocated_after": 16605184,
+    "saved_bytes": 22716416,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_08.bin",
+    "logical_bytes": 39321600,
+    "sha256": "a7dd2a4dbc0e1cc61536ec489cbfb4cc9ded4910926d6ee1571cfd7799d0dee1",
+    "mtime_ns": 1791293155926588500,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_09.bin",
+    "logical_bytes": 39321600,
+    "sha256": "58e0661739502b50e7b49d1e0d92a32edc22c3c9aee2177441fa1fa8728108ba",
+    "mtime_ns": 1791293157317178000,
+    "allocated_before": 39321600,
+    "allocated_after": 17883136,
+    "saved_bytes": 21438464,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_10.bin",
+    "logical_bytes": 39321600,
+    "sha256": "451a07b3d1437819013716031cb6446a757b69e94a1380b65e7c920ae470f97c",
+    "mtime_ns": 1791293158655206500,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_11.bin",
+    "logical_bytes": 39321600,
+    "sha256": "277d59eaeeb077965802491efae4bdc94b387cd98567a9c931637fd57b3aa903",
+    "mtime_ns": 1791293160034645900,
+    "allocated_before": 39321600,
+    "allocated_after": 19574784,
+    "saved_bytes": 19746816,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  },
+  {
+    "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_redesign_20261006_v1\\runs\\20261006_212510_numeric\\1280x960\\i8\\local_layer_12.bin",
+    "logical_bytes": 39321600,
+    "sha256": "a617278ceefc7b27e0442fa2559cbc11f5761d1e457841163d4e3aab717bb79c",
+    "mtime_ns": 1791293161522168300,
+    "allocated_before": 39321600,
+    "allocated_after": 39321600,
+    "saved_bytes": 0,
+    "receipt": "evidence\\20261021T022442259885Z_ntfs_log_compression\\receipt.json"
+  }
+]

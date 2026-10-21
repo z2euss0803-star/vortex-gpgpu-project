@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "utc": "2026-10-21T02:06:27.110444+00:00",
+  "authorized_by": "direct_user_message",
+  "quote": "加快验证的性能可以使用更多的资源目前",
+  "host": "RY",
+  "account": "13151",
+  "scope": [
+    "Task4 device build",
+    "Task5 GPU model and simulation validation"
+  ],
+  "interpretation": "Permit more local validation CPU resources and bounded independent case concurrency; no waiver of numerical/source/identity/natural-exit acceptance.",
+  "selected_execution_policy": {
+    "xelab_subcompilation_jobs": 8,
+    "max_independent_simulations": 2,
+    "max_concurrent_elaborations": 1,
+    "total_elaboration_jobs_cap": 8
+  },
+  "application_status": "AUTHORIZED_PENDING_CURRENT_NATURAL_EXIT_AND_ADMISSION",
+  "current_run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215251688659Z_candidate_gpu_pair",
+  "current_run_policy": "Retain frozen four-thread elaboration and running snapshot; do not restart or alter bound inputs.",
+  "next_actions": [
+    "After current natural exit first pause idle monitor and independently admit_stage plus verify_gpu_pair; preserve original result.",
+    "Apply and test eight-job xelab profile after admission; fresh source and command identities for the next run.",
+    "Evaluate xelab --O3 in a new controlled run preserving debug typical and every observer/assertion, input, cycle and numerical contract; verify local 2020.1 help before use; no speedup claimed before measurement.",
+    "Before two independent simulations, implement explicit per-run active registry and verifier/monitor binding; do not bypass the existing single-active-run guard or change global CWD/shared files; only independent cases after dependencies pass.",
+    "Serialize elaboration; budget memory for both active simulations; record fresh resources and natural exits independently; actual unrelated heavy tasks still block."
+  ],
+  "unchanged": [
+    "current active bound sources and immutable failed runs",
+    "G3 before synthesis/P&R",
+    "synthesis/P&R fresh >=4GiB physical and >=8GiB commit",
+    "existing memory exception only Task4/Task5 with REFUSED plus USER_AUTHORIZED_MEMORY_EXCEPTION",
+    "known RY/13151 identity and no other-task heavy work",
+    "every-bank real stalls, exact numeric/guards/metadata/retirement/reset/DONE/AXI drain",
+    "no B access, board/SD/PL/reset/driver deployment"
+  ],
+  "probe_receipt": "evidence/validation_resource_probe_20261021/receipt.json",
+  "speedup": "NOT_MEASURED",
+  "model_check": {
+    "template": "60-输出/AI模型选择与任务模板.md",
+    "official_catalog": "https://developers.openai.com/api/docs/models",
+    "new_general_model_requiring_template_update": false,
+    "stage": "分析与验证调度",
+    "recommendation": "GPT-6 Astra / 高",
+    "actual_model_switch": "未执行且无法从工具确认"
+  },
+  "local_optimization_flag": "--O3, confirmed by installed 2020.1 xelab -help; future controlled run only",
+  "monitor_prompt_updated": true
+}

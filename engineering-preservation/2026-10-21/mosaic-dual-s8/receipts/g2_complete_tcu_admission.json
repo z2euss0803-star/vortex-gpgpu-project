@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "utc": "2026-10-18T14:47:32.066779+00:00",
+  "stage": "G2_complete_TCU",
+  "status": "PASS",
+  "contract_sha256": "3e511c2afda578767461fa8d64a0d3997dcda53b9b221af7bfddf6563b2f1abf",
+  "accepted_run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261018T143936068306Z_candidate_tcu_compat",
+  "admission_sha256": "6dbdab5559a46b04b8ae7dab093b568decf8c81426ffd73e6fb2d625d54c7cdc",
+  "semantic_readback_sha256": "f1e9a04ab3fee0650550e9291514f86d8369133a70d85e4d1dc3e924ecd0f284",
+  "negative_control": {
+    "run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261018T144533606387Z_candidate_tcu_compat_negative",
+    "status": "EXPECTED_REJECTION_CONFIRMED",
+    "admission_sha256": "d7f880be636e0d14e7166f248d99ebbb24a14d848750ecd4fa101dbc2fa1cb0a",
+    "native": "all0, semantic Fatal wins",
+    "corruption": "bank1 first page expected bit0"
+  },
+  "product_current_sha256": {
+    "candidate/build/compat_rtl/tcu/VX_tcu_pkg.sv": "bd9f59cac72834e238d8dcc81f497d79cadaf3339b3a32a193d81d2d7c85debc",
+    "candidate/build/compat_rtl/tcu/VX_tcu_uops.sv": "df2ced262f7906de24036f00369870e510f1d06b67e9707eb0ab3b87add580cc",
+    "candidate/build/compat_rtl/tcu/VX_tcu_native_s8.sv": "a965558adb9e085868922dd2afc600f89dac05871672258a89d8130ff6c2d94d",
+    "candidate/build/compat_rtl/tcu/VX_tcu_s8_pair.sv": "37d6a3ca27271e8350bfdfdf4dba27fe147e0324c88cdc9667e519e083920739",
+    "candidate/build/compat_rtl/tcu/s8_compute.sv": "804f5ba91abf919e651ddc01446072165383be228950a16d43d1627425cbba47",
+    "candidate/build/compat_rtl/tcu/VX_tcu_int.sv": "24ea218bdec4ef43db5994cb903e5d77927ce02a2b073e5574ea2c5f3e38f6d6",
+    "candidate/build/compat_rtl/tcu/VX_tcu_unit.sv": "bc7fc5cf5e35c147231349f752165b506017dbf65408c00b3f28da5d3c4c8890",
+    "candidate/config/build.json": "563cd11e9159dba384ae6b98ecfec3107f5aa7bd6ebc7af3abdf12e64b798eda"
+  },
+  "static": {
+    "status": "PASS",
+    "issues": [],
+    "modified": [
+      "candidate/config/build.json",
+      "candidate/build/compat_rtl/tcu/VX_tcu_native_s8.sv",
+      "candidate/build/compat_rtl/tcu/VX_tcu_pkg.sv",
+      "candidate/build/compat_rtl/tcu/VX_tcu_uops.sv"
+    ],
+    "source_count": 306,
+    "scope": "static identity and allowlist only"
+  },
+  "boundaries": [
+    "complete TCU only, no GPU/performance/physical PASS",
+    "TCU_DSP FP16/BF16 input; generic FP32 through GPU FPU remains G3",
+    "vendor unused-cycle DSP OPMODE warnings retained"
+  ]
+}

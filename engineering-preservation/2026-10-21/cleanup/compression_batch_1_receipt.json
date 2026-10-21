@@ -1,0 +1,479 @@
+{
+  "started_utc": "2026-10-21T02:18:37.071509+00:00",
+  "host": "ry",
+  "account": "13151",
+  "action": "NTFS_lossless_compression_no_delete_no_move",
+  "mode": "completed",
+  "disk_free_before": 575045632,
+  "files": [
+    {
+      "started_utc": "2026-10-21T02:18:37.235350+00:00",
+      "finished_utc": "2026-10-21T02:18:38.007573+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\fullsynth_area_medium_v1\\hw\\evidence\\primitive_inventory.txt"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\fullsynth_area_medium_v1\\hw\\evidence\\primitive_inventory.txt",
+        "logical_bytes": 173810017,
+        "allocated_bytes": 173810017,
+        "sha256": "cc6bd74c2ac8a533c38ee1f3000c386e28f7a354fd16de2fa3078c37d0b5e7dc",
+        "mtime_ns": 1791389771978651700
+      },
+      "after": {
+        "logical_bytes": 173810017,
+        "allocated_bytes": 32354304,
+        "sha256": "cc6bd74c2ac8a533c38ee1f3000c386e28f7a354fd16de2fa3078c37d0b5e7dc",
+        "mtime_ns": 1791389771978651700,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 141455713,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:38.200603+00:00",
+      "finished_utc": "2026-10-21T02:18:39.212953+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\evidence\\fullsynth_area_medium_v1_terminal_scene_v1\\run\\hw\\evidence\\primitive_inventory.txt"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\evidence\\fullsynth_area_medium_v1_terminal_scene_v1\\run\\hw\\evidence\\primitive_inventory.txt",
+        "logical_bytes": 173810017,
+        "allocated_bytes": 173810017,
+        "sha256": "cc6bd74c2ac8a533c38ee1f3000c386e28f7a354fd16de2fa3078c37d0b5e7dc",
+        "mtime_ns": 1791389771978651700
+      },
+      "after": {
+        "logical_bytes": 173810017,
+        "allocated_bytes": 32354304,
+        "sha256": "cc6bd74c2ac8a533c38ee1f3000c386e28f7a354fd16de2fa3078c37d0b5e7dc",
+        "mtime_ns": 1791389771978651700,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 141455713,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:39.406950+00:00",
+      "finished_utc": "2026-10-21T02:18:40.260724+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\fullsynth_v2\\hw\\evidence\\primitive_inventory.txt"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\candidates\\e8\\runs\\fullsynth_v2\\hw\\evidence\\primitive_inventory.txt",
+        "logical_bytes": 173282585,
+        "allocated_bytes": 173282585,
+        "sha256": "894806afc64fe833a6947d3dae2f3472e5ae47b4bdb133db8e6d8c983bce03ad",
+        "mtime_ns": 1791380972534332600
+      },
+      "after": {
+        "logical_bytes": 173282585,
+        "allocated_bytes": 32268288,
+        "sha256": "894806afc64fe833a6947d3dae2f3472e5ae47b4bdb133db8e6d8c983bce03ad",
+        "mtime_ns": 1791380972534332600,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 141014297,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:40.461606+00:00",
+      "finished_utc": "2026-10-21T02:18:41.386092+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\evidence\\fullsynth_v2_tracking_failure_scene_v1\\run\\hw\\evidence\\primitive_inventory.txt"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_expand_20261007_v1\\evidence\\fullsynth_v2_tracking_failure_scene_v1\\run\\hw\\evidence\\primitive_inventory.txt",
+        "logical_bytes": 173282585,
+        "allocated_bytes": 173282585,
+        "sha256": "894806afc64fe833a6947d3dae2f3472e5ae47b4bdb133db8e6d8c983bce03ad",
+        "mtime_ns": 1791380972534332600
+      },
+      "after": {
+        "logical_bytes": 173282585,
+        "allocated_bytes": 32268288,
+        "sha256": "894806afc64fe833a6947d3dae2f3472e5ae47b4bdb133db8e6d8c983bce03ad",
+        "mtime_ns": 1791380972534332600,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 141014297,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:41.553648+00:00",
+      "finished_utc": "2026-10-21T02:18:42.535815+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t8\\render128\\trace\\ramulator.log.ch0"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t8\\render128\\trace\\ramulator.log.ch0",
+        "logical_bytes": 139865539,
+        "allocated_bytes": 139865539,
+        "sha256": "72965500856fc4d474542e22fa48b8a265656e1fb7586100310e7e3dedeefad6",
+        "mtime_ns": 1789290140860540600
+      },
+      "after": {
+        "logical_bytes": 139865539,
+        "allocated_bytes": 45797376,
+        "sha256": "72965500856fc4d474542e22fa48b8a265656e1fb7586100310e7e3dedeefad6",
+        "mtime_ns": 1789290140860540600,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 94068163,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:42.673835+00:00",
+      "finished_utc": "2026-10-21T02:18:43.468238+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w8t4\\render128\\trace\\ramulator.log.ch0"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w8t4\\render128\\trace\\ramulator.log.ch0",
+        "logical_bytes": 124424185,
+        "allocated_bytes": 124424185,
+        "sha256": "4d1c172ed22150d850cffe7679651c616244f08382a9cdb8e0ebd9781646b8a8",
+        "mtime_ns": 1789290034920139700
+      },
+      "after": {
+        "logical_bytes": 124424185,
+        "allocated_bytes": 42176512,
+        "sha256": "4d1c172ed22150d850cffe7679651c616244f08382a9cdb8e0ebd9781646b8a8",
+        "mtime_ns": 1789290034920139700,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 82247673,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:43.588719+00:00",
+      "finished_utc": "2026-10-21T02:18:44.453368+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t4\\render128\\trace\\ramulator.log.ch0"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t4\\render128\\trace\\ramulator.log.ch0",
+        "logical_bytes": 106426296,
+        "allocated_bytes": 106426296,
+        "sha256": "2f20e61891d26b96c500c5b42478fb34a22d97599a068b917b3c3f1073e176c1",
+        "mtime_ns": 1789289923851678400
+      },
+      "after": {
+        "logical_bytes": 106426296,
+        "allocated_bytes": 34574336,
+        "sha256": "2f20e61891d26b96c500c5b42478fb34a22d97599a068b917b3c3f1073e176c1",
+        "mtime_ns": 1789289923851678400,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 71851960,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:44.550555+00:00",
+      "finished_utc": "2026-10-21T02:18:45.058535+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c2w4t4\\render128\\trace\\ramulator.log.ch0"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c2w4t4\\render128\\trace\\ramulator.log.ch0",
+        "logical_bytes": 80222646,
+        "allocated_bytes": 80222646,
+        "sha256": "dda1a93c10c9b04542e9b8e1b2bd59a56638ff268b26edb8ea7c7525ddcc8b51",
+        "mtime_ns": 1789289830708826000
+      },
+      "after": {
+        "logical_bytes": 80222646,
+        "allocated_bytes": 25141248,
+        "sha256": "dda1a93c10c9b04542e9b8e1b2bd59a56638ff268b26edb8ea7c7525ddcc8b51",
+        "mtime_ns": 1789289830708826000,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 55081398,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:45.151023+00:00",
+      "finished_utc": "2026-10-21T02:18:45.645240+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c1w4t4\\render128\\trace\\ramulator.log.ch0"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c1w4t4\\render128\\trace\\ramulator.log.ch0",
+        "logical_bytes": 68822215,
+        "allocated_bytes": 68822215,
+        "sha256": "9e964cab7fac1b03b0cacc9414a9a358d1b87498b7723f2a360f3648ca34dfce",
+        "mtime_ns": 1789289750523881500
+      },
+      "after": {
+        "logical_bytes": 68822215,
+        "allocated_bytes": 21512192,
+        "sha256": "9e964cab7fac1b03b0cacc9414a9a358d1b87498b7723f2a360f3648ca34dfce",
+        "mtime_ns": 1789289750523881500,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 47310023,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:45.707931+00:00",
+      "finished_utc": "2026-10-21T02:18:45.955782+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w8t4\\cnn\\trace\\ramulator.log.ch0"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w8t4\\cnn\\trace\\ramulator.log.ch0",
+        "logical_bytes": 39448908,
+        "allocated_bytes": 39448908,
+        "sha256": "85b19af819c8ee5c24ddcf6a11a1d9b61405f18e556a3de25124c6734aaf38d0",
+        "mtime_ns": 1789289976569218900
+      },
+      "after": {
+        "logical_bytes": 39448908,
+        "allocated_bytes": 10932224,
+        "sha256": "85b19af819c8ee5c24ddcf6a11a1d9b61405f18e556a3de25124c6734aaf38d0",
+        "mtime_ns": 1789289976569218900,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 28516684,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:46.010867+00:00",
+      "finished_utc": "2026-10-21T02:18:46.256833+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t8\\cnn\\trace\\ramulator.log.ch0"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t8\\cnn\\trace\\ramulator.log.ch0",
+        "logical_bytes": 38915602,
+        "allocated_bytes": 38915602,
+        "sha256": "a4cc9e969904f45721b10b674f2f4608ed2a4bcb989ec105dce33310d1279134",
+        "mtime_ns": 1789290082362943000
+      },
+      "after": {
+        "logical_bytes": 38915602,
+        "allocated_bytes": 10477568,
+        "sha256": "a4cc9e969904f45721b10b674f2f4608ed2a4bcb989ec105dce33310d1279134",
+        "mtime_ns": 1789290082362943000,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 28438034,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:46.314719+00:00",
+      "finished_utc": "2026-10-21T02:18:46.547723+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t4\\cnn\\trace\\ramulator.log.ch0"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c4w4t4\\cnn\\trace\\ramulator.log.ch0",
+        "logical_bytes": 32121349,
+        "allocated_bytes": 32121349,
+        "sha256": "8c976204143affd1e6fd97cef9c4c7e45fec8f1c6aaf9c6adca39b46c6c81740",
+        "mtime_ns": 1789289874757850300
+      },
+      "after": {
+        "logical_bytes": 32121349,
+        "allocated_bytes": 8380416,
+        "sha256": "8c976204143affd1e6fd97cef9c4c7e45fec8f1c6aaf9c6adca39b46c6c81740",
+        "mtime_ns": 1789289874757850300,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 23740933,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:46.591314+00:00",
+      "finished_utc": "2026-10-21T02:18:46.752655+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c2w4t4\\cnn\\trace\\ramulator.log.ch0"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c2w4t4\\cnn\\trace\\ramulator.log.ch0",
+        "logical_bytes": 27408115,
+        "allocated_bytes": 27408115,
+        "sha256": "89e54306e14ae4d4fb7cca1dc42652aae91c617558996c9604dc3f3f5a200f82",
+        "mtime_ns": 1789289791985683500
+      },
+      "after": {
+        "logical_bytes": 27408115,
+        "allocated_bytes": 7020544,
+        "sha256": "89e54306e14ae4d4fb7cca1dc42652aae91c617558996c9604dc3f3f5a200f82",
+        "mtime_ns": 1789289791985683500,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 20387571,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:46.798869+00:00",
+      "finished_utc": "2026-10-21T02:18:46.978815+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c1w4t4\\cnn\\trace\\ramulator.log.ch0"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\tmp\\vortex_config_20260913\\runs\\bank1-r1\\c1w4t4\\cnn\\trace\\ramulator.log.ch0",
+        "logical_bytes": 27389661,
+        "allocated_bytes": 27389661,
+        "sha256": "30979d39995ca1b468bba0a5cea5dbad55e0e3fbaec1826f4ff1910d4f43af65",
+        "mtime_ns": 1789289716162841300
+      },
+      "after": {
+        "logical_bytes": 27389661,
+        "allocated_bytes": 6979584,
+        "sha256": "30979d39995ca1b468bba0a5cea5dbad55e0e3fbaec1826f4ff1910d4f43af65",
+        "mtime_ns": 1789289716162841300,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 20410077,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:47.472006+00:00",
+      "finished_utc": "2026-10-21T02:18:49.203300+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215251688659Z_candidate_gpu_pair\\phase_3.log"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215251688659Z_candidate_gpu_pair\\phase_3.log",
+        "logical_bytes": 376155586,
+        "allocated_bytes": 376155586,
+        "sha256": "17402b47f096387ecfba505492f7de00e5b4279e576459f9596906af436338ba",
+        "mtime_ns": 1792548672993883300
+      },
+      "after": {
+        "logical_bytes": 376155586,
+        "allocated_bytes": 94040064,
+        "sha256": "17402b47f096387ecfba505492f7de00e5b4279e576459f9596906af436338ba",
+        "mtime_ns": 1792548672993883300,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 282115522,
+      "status": "PASS"
+    },
+    {
+      "started_utc": "2026-10-21T02:18:49.599490+00:00",
+      "finished_utc": "2026-10-21T02:18:51.587286+00:00",
+      "command": [
+        "C:\\WINDOWS\\System32\\compact.exe",
+        "/C",
+        "/A",
+        "/Q",
+        "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215251688659Z_candidate_gpu_pair\\simulate.log"
+      ],
+      "exit_code": 0,
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215251688659Z_candidate_gpu_pair\\simulate.log",
+        "logical_bytes": 374687136,
+        "allocated_bytes": 374687136,
+        "sha256": "a9d1887c7bdcf8c2cdb85e3f9142d843cd09a134af06a8bb11043a9cc404bf47",
+        "mtime_ns": 1792548672993883300
+      },
+      "after": {
+        "logical_bytes": 374687136,
+        "allocated_bytes": 93675520,
+        "sha256": "a9d1887c7bdcf8c2cdb85e3f9142d843cd09a134af06a8bb11043a9cc404bf47",
+        "mtime_ns": 1792548672993883300,
+        "compressed_attribute": true
+      },
+      "byte_identity_unchanged": true,
+      "allocation_saved_bytes": 281011616,
+      "status": "PASS"
+    }
+  ],
+  "finished_utc": "2026-10-21T02:18:51.588286+00:00",
+  "status": "LOSSLESS_COMPRESSION_HASH_VERIFIED",
+  "disk_free_after": 2174763008,
+  "total_allocation_saved_bytes": 1600119674,
+  "disk_free_observed_delta_bytes": 1599717376
+}

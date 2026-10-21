@@ -1,0 +1,134 @@
+{
+  "utc": "2026-10-20T21:46:44.652757+00:00",
+  "status": "FAIL_REQUIRED_BANK_BACKPRESSURE_COVERAGE",
+  "run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T202115546728Z_candidate_gpu_pair",
+  "completed_utc": "2026-10-20T21:34:44.997910+00:00",
+  "issues": [
+    "core0 bank0 no actual response backpressure",
+    "core0 bank1 no actual response backpressure",
+    "core1 bank0 no actual response backpressure",
+    "core1 bank1 no actual response backpressure",
+    "core2 bank0 no actual response backpressure",
+    "core3 bank0 no actual response backpressure",
+    "core3 bank1 no actual response backpressure"
+  ],
+  "observations": {
+    "iterations_per_core_warp": [
+      [
+        0,
+        32,
+        32,
+        32
+      ],
+      [
+        0,
+        32,
+        32,
+        32
+      ],
+      [
+        0,
+        32,
+        32,
+        32
+      ],
+      [
+        0,
+        32,
+        32,
+        32
+      ]
+    ],
+    "fp16_iterations_per_core_warp": [
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ]
+    ],
+    "native_query_count_per_core_warp": [
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ],
+      [
+        0,
+        128,
+        128,
+        128
+      ]
+    ],
+    "native_query_packets": 1536,
+    "bank_stall_cycles": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "outer_fp_captures_during_native_stall": 1,
+    "bank_events": 193,
+    "arbitration_events": 193,
+    "tcu_events": 64952,
+    "scope": "actual dualbank stalls, stable full response, exact I8/FP16/query counts/packets/pages and real retirement; not performance"
+  },
+  "source_archive_sha256": "1916c265f0c420f145b617f18f78574a78d3e2a6188bde9fc09399dacbdb029c",
+  "source_archive_all_entries_verified": 747,
+  "artifacts": {
+    "independent_admission.json": "91293afe61b77819d3e9439907b7731ecbca57166949bc4409105a6a7a31aaad",
+    "gpu_function_admission.json": "73c5cc6e5d9d413fee7d12efd874260f86e6a9d701bf7fd1eb45a889ed897ca1",
+    "natural_exit.json": "ac4eecc574cd2b36917b07f366e93c0d377daebe782db360bab92d262c682064",
+    "gpu_readback.txt": "c5e5badb6923567b05cd8ba7e94deb5c5da6cb3222d16e71deff800983404d48",
+    "gpu_bp_readback.txt": "81bcfb232c82bee7b3d87e37db9d05af600bfd28774475a20fc2b36ff701c0e5",
+    "gpu_bp_tcu_events.txt": "74f670e29027d101efe1236048274190fc4bec173c8a03fa44e120b9bd1ff606",
+    "gpu_bp_query_events.txt": "1c45515f463a703a1ad1dbad317a844e768d72a7c1ffd5826b96bc81db547311",
+    "gpu_bp_bank_events.txt": "1ef14e40a060d2b315d28ee1594cc5e12312b99a283aea0fbf5af68239edcc8d",
+    "gpu_bp_arb_events.txt": "d115bfbede6cbfa9d95f7a10e0033425c12fc72fb6e34f2a632f2e9e8c1c86c6",
+    "gpu_monitor.txt": "a3c13f2503255eb2554192b63967850c625dad9bd196574577d4c3ba5f6bf6b3"
+  },
+  "scope": "Only core2bank1 actual stall; strict FAIL despite other exact counts/numeric/guards/phase order/identity/metadata/retire/reset/DONE/drain no issue"
+}

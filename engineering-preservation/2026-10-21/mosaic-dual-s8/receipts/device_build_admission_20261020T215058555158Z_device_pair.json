@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "utc": "2026-10-20T21:52:20.112820+00:00",
+  "stage": "device_build",
+  "run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215058555158Z_device_pair",
+  "status": "PASS",
+  "issues": [],
+  "probe": {
+    "status": "PASS",
+    "counts": {
+      "pair_begin": 1,
+      "pair_step": 1,
+      "pair_read": 1,
+      "single_begin": 1,
+      "single_step": 1,
+      "single_read": 1
+    }
+  },
+  "outputs": [
+    {
+      "program": "pair_validation",
+      "elf": "pair_validation.elf",
+      "sha256": "46a38ccb559462f9df7acff7d76340883a1ab0648a3832c069da319e50ac62cf",
+      "entry": 2147483648,
+      "symbols": {
+        "_start": 2147483648,
+        "main": 2147483768,
+        "_Exit": 2147486548,
+        "vx_spawn_threads": 2147487728,
+        "__init_tls": 2147486656,
+        "_end": 2147515740,
+        "__tbss_size": 32,
+        "__tdata_size": 0,
+        "__tbss_offset": 0
+      },
+      "segments": [
+        {
+          "index": 1,
+          "gpu_base": 2147483648,
+          "byte_count": 27768,
+          "file_offset": 4096,
+          "file_bytes": 27768,
+          "bss_bytes": 0,
+          "flags": 5,
+          "permissions": "r"
+        },
+        {
+          "index": 2,
+          "gpu_base": 2147515512,
+          "byte_count": 228,
+          "file_offset": 31864,
+          "file_bytes": 176,
+          "bss_bytes": 52,
+          "flags": 6,
+          "permissions": "rw"
+        }
+      ]
+    },
+    {
+      "program": "pair_perf",
+      "elf": "pair_perf.elf",
+      "sha256": "1d03c79e286f27fcc2947363787113b04ac79974e94b0408c61fb600bf12ca28",
+      "entry": 2147483648,
+      "symbols": {
+        "_start": 2147483648,
+        "main": 2147483768,
+        "_Exit": 2147486548,
+        "vx_spawn_threads": 2147487728,
+        "__init_tls": 2147486656,
+        "_end": 2147515740,
+        "__tbss_size": 32,
+        "__tdata_size": 0,
+        "__tbss_offset": 0
+      },
+      "segments": [
+        {
+          "index": 1,
+          "gpu_base": 2147483648,
+          "byte_count": 27768,
+          "file_offset": 4096,
+          "file_bytes": 27768,
+          "bss_bytes": 0,
+          "flags": 5,
+          "permissions": "r"
+        },
+        {
+          "index": 2,
+          "gpu_base": 2147515512,
+          "byte_count": 228,
+          "file_offset": 31864,
+          "file_bytes": 176,
+          "bss_bytes": 52,
+          "flags": 6,
+          "permissions": "rw"
+        }
+      ]
+    },
+    {
+      "program": "pair_protocol",
+      "elf": "pair_protocol.elf",
+      "sha256": "b40c869ede0d3a96dd162f68be103faf977f59ff7ed6c0e0ddbdfbbeadf65054",
+      "entry": 2147483648,
+      "symbols": {
+        "_start": 2147483648,
+        "main": 2147483768,
+        "_Exit": 2147487708,
+        "vx_spawn_threads": 2147488888,
+        "__init_tls": 2147487816,
+        "_end": 2147516892,
+        "__tbss_size": 32,
+        "__tdata_size": 0,
+        "__tbss_offset": 0
+      },
+      "segments": [
+        {
+          "index": 1,
+          "gpu_base": 2147483648,
+          "byte_count": 28928,
+          "file_offset": 4096,
+          "file_bytes": 28928,
+          "bss_bytes": 0,
+          "flags": 5,
+          "permissions": "r"
+        },
+        {
+          "index": 2,
+          "gpu_base": 2147516672,
+          "byte_count": 220,
+          "file_offset": 33024,
+          "file_bytes": 176,
+          "bss_bytes": 44,
+          "flags": 6,
+          "permissions": "rw"
+        }
+      ]
+    },
+    {
+      "program": "pair_compat",
+      "elf": "pair_compat.elf",
+      "sha256": "ea2fe6b19213dbb3f827ffefcbb2281d08cef82160a257b300504f63834cf436",
+      "entry": 2147483648,
+      "symbols": {
+        "_start": 2147483648,
+        "main": 2147483768,
+        "_Exit": 2147487656,
+        "vx_spawn_threads": 2147488836,
+        "__init_tls": 2147487764,
+        "_end": 2147516892,
+        "__tbss_size": 32,
+        "__tdata_size": 0,
+        "__tbss_offset": 0
+      },
+      "segments": [
+        {
+          "index": 1,
+          "gpu_base": 2147483648,
+          "byte_count": 28920,
+          "file_offset": 4096,
+          "file_bytes": 28920,
+          "bss_bytes": 0,
+          "flags": 5,
+          "permissions": "r"
+        },
+        {
+          "index": 2,
+          "gpu_base": 2147516664,
+          "byte_count": 228,
+          "file_offset": 33016,
+          "file_bytes": 176,
+          "bss_bytes": 52,
+          "flags": 6,
+          "permissions": "rw"
+        }
+      ]
+    },
+    {
+      "program": "pair_backpressure",
+      "elf": "pair_backpressure.elf",
+      "sha256": "065ec03cae632946f85fdbbeee75d0725321b3e86ecc8877526a061adebcc5eb",
+      "entry": 2147483648,
+      "symbols": {
+        "_start": 2147483648,
+        "main": 2147484876,
+        "_Exit": 2147490032,
+        "vx_spawn_threads": 2147491212,
+        "__init_tls": 2147490140,
+        "_end": 2147519324,
+        "__tbss_size": 68,
+        "__tdata_size": 0,
+        "__tbss_offset": 0
+      },
+      "segments": [
+        {
+          "index": 1,
+          "gpu_base": 2147483648,
+          "byte_count": 31316,
+          "file_offset": 4096,
+          "file_bytes": 31316,
+          "bss_bytes": 0,
+          "flags": 5,
+          "permissions": "r"
+        },
+        {
+          "index": 2,
+          "gpu_base": 2147519060,
+          "byte_count": 264,
+          "file_offset": 35412,
+          "file_bytes": 180,
+          "bss_bytes": 84,
+          "flags": 6,
+          "permissions": "rw"
+        }
+      ]
+    }
+  ],
+  "input_manifest_sha256": "0d03270e3f3e28db24d2619a6127dc16d4b8f90cd1ad8296ffb8e051c35fdd14",
+  "natural_exit_sha256": "676f20d48648b04981ca05c1fbc67a2cf7a613f66f9ac501208352fdcebe7ccf",
+  "product_manifest_sha256": "9274cba0070ea44ecee417540218be3902b802a0305e09961556ac8f9471df31",
+  "contract_sha256": "3e511c2afda578767461fa8d64a0d3997dcda53b9b221af7bfddf6563b2f1abf",
+  "boundaries": [
+    "actual host C++ header execution + real RV32 CRT/ELF build",
+    "no actual GPU execution or STEP retirement claim",
+    "compiler-driver exits recorded; internal GCC assembler exits not individually traced"
+  ]
+}

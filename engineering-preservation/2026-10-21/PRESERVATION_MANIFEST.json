@@ -1,0 +1,236 @@
+{
+  "utc": "2026-10-21T02:27:58.848562+00:00",
+  "repository": "z2euss0803-star/vortex-gpgpu-project",
+  "visibility_verified": "private",
+  "purpose": "selected important source and evidence preservation, not whole F-drive backup",
+  "files": [
+    {
+      "backup": "cleanup/2026-10-21-F盘无损清理与私有Git保存.md",
+      "source": "current preservation/cleanup record",
+      "bytes": 3769,
+      "sha256": "fc80766be481ad8822b051c483e3de9930a5cab53026fd206261513c352b3b52"
+    },
+    {
+      "backup": "cleanup/all_reversible_changes.json",
+      "source": "current preservation/cleanup record",
+      "bytes": 110665,
+      "sha256": "b6e61ef264932d68369de3b8b041d13dd027a1e1bf119751762c4e3f96c1ade5"
+    },
+    {
+      "backup": "cleanup/cleanup_summary.json",
+      "source": "current preservation/cleanup record",
+      "bytes": 1693,
+      "sha256": "f968618fde835ccd23ae572a15c64057ba8182cbae6c849a5181d88a5e9292e2"
+    },
+    {
+      "backup": "cleanup/compress_integer_candidates.py",
+      "source": "current preservation/cleanup record",
+      "bytes": 23745,
+      "sha256": "6cd74e106d38f716a8267c70c3dbd0b7e85fe73b51cf7679c3fa29c07dd2ca0e"
+    },
+    {
+      "backup": "cleanup/compress_logs.py",
+      "source": "current preservation/cleanup record",
+      "bytes": 6577,
+      "sha256": "e805010332dc35d4178d30b9464ff36f612ad778b33e47b025b908537dfda3cc"
+    },
+    {
+      "backup": "cleanup/compress_numeric.py",
+      "source": "current preservation/cleanup record",
+      "bytes": 12420,
+      "sha256": "93c6e98bec8aa43df44d4155888bfa395007e3ac5dee5cffd524ee7ec711bb3a"
+    },
+    {
+      "backup": "cleanup/compression_batch_1_receipt.json",
+      "source": "current preservation/cleanup record",
+      "bytes": 19156,
+      "sha256": "745d96de90c14ec6cee43b7dcf639197795117587f09612e6306dddc4ff04fe1"
+    },
+    {
+      "backup": "cleanup/compression_batch_2_receipt.json",
+      "source": "current preservation/cleanup record",
+      "bytes": 70739,
+      "sha256": "a75ace69cad6e36292fdfed2efdd21dd61701622f37cb7c96dde8c466452cc92"
+    },
+    {
+      "backup": "cleanup/compression_batch_3_receipt.json",
+      "source": "current preservation/cleanup record",
+      "bytes": 175060,
+      "sha256": "5dacc5576a02fa751522cd89c8158962b173253e4fe6f3da02e07713e46e12f7"
+    },
+    {
+      "backup": "cleanup/deletion_A_fresh_verified.json",
+      "source": "current preservation/cleanup record",
+      "bytes": 1590,
+      "sha256": "ca61be0462b89870b74d8f38f6f4ccc98ac8eadd613848696a4578a5c2eeb24d"
+    },
+    {
+      "backup": "cleanup/inventory.py",
+      "source": "current preservation/cleanup record",
+      "bytes": 3377,
+      "sha256": "b5dfb51d90113c593b341d9160714000fce0fc90f861fb32a3c19d5408a4faa9"
+    },
+    {
+      "backup": "cleanup/user_decisions.json",
+      "source": "current preservation/cleanup record",
+      "bytes": 519,
+      "sha256": "4070d836a93462a9a81c46b847160439946544624d443f13401263cbb5103883"
+    },
+    {
+      "backup": "knowledge/S8-TCU-bit与XSA准确交付-2026-10-18.md",
+      "source": "F:\\obsidian-codex\\codex\\60-输出\\S8-TCU-bit与XSA准确交付-2026-10-18.md",
+      "bytes": 4377,
+      "sha256": "a3175867ffd29ba77ccd10f80d729b97f752e82ba474e3c9cd63e328f0b92266"
+    },
+    {
+      "backup": "knowledge/全GPU八套S8共享B设计与实施计划-2026-10-18.md",
+      "source": "F:\\obsidian-codex\\codex\\50-项目与实验\\IC设计\\全GPU八套S8共享B设计与实施计划-2026-10-18.md",
+      "bytes": 52705,
+      "sha256": "2d3381b2cfb96edf8810b821a1b954c0301f10b9bcadc6da38cb1787ad2bb03f"
+    },
+    {
+      "backup": "knowledge/周期清理机制.md",
+      "source": "F:\\obsidian-codex\\codex\\00-系统\\周期清理机制.md",
+      "bytes": 6117,
+      "sha256": "1ddaa88e5b1c91941f9633c57a154551a8c1ff3cc24d4fab7492be293b75eff9"
+    },
+    {
+      "backup": "mosaic-dual-s8/accepted_device_elfs.zip",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215058555158Z_device_pair",
+      "bytes": 101124,
+      "sha256": "b5192ab2c1cef9d76ae52d428e106ce07e99acd99088fc1ef7f043a928167fb0"
+    },
+    {
+      "backup": "mosaic-dual-s8/attempt8_readback_events_and_receipts.zip",
+      "source": "selected original run members",
+      "bytes": 3417250,
+      "sha256": "6e912f305f243fd74d576498836a19801b2064f80f13c7d864cfb8309240f646"
+    },
+    {
+      "backup": "mosaic-dual-s8/docs/device_validation_layout.md",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\docs\\device_validation_layout.md",
+      "bytes": 2120,
+      "sha256": "d1feaa95d416160510723ccbd00a69ac7426015f73ecb0e86d7069c1d8860eab"
+    },
+    {
+      "backup": "mosaic-dual-s8/docs/dual_s8_shared_b_design.md",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\docs\\dual_s8_shared_b_design.md",
+      "bytes": 18382,
+      "sha256": "d06003ae09b7f58cf06b1cf916be6b92b0ee805fe1b8ef8d561f782c2c970e4f"
+    },
+    {
+      "backup": "mosaic-dual-s8/docs/dual_s8_shared_b_implementation_plan.md",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\docs\\dual_s8_shared_b_implementation_plan.md",
+      "bytes": 20953,
+      "sha256": "8258748d3d231c5a357d95d5de4fafb1528c08e4baddc5a797e65255232f8acc"
+    },
+    {
+      "backup": "mosaic-dual-s8/docs/error_ledger.jsonl",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\docs\\error_ledger.jsonl",
+      "bytes": 14277,
+      "sha256": "cd2eea811113a0c237305c2a9e0fd9e820428af4fbd4b3973617772ab16a686c"
+    },
+    {
+      "backup": "mosaic-dual-s8/docs/execution_ledger.md",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\docs\\execution_ledger.md",
+      "bytes": 38953,
+      "sha256": "bfe7b453b53cbe5f59005bc0291378ed611486769656578c8917ec774886a1f0"
+    },
+    {
+      "backup": "mosaic-dual-s8/docs/planning_contract.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\docs\\planning_contract.json",
+      "bytes": 4772,
+      "sha256": "3e511c2afda578767461fa8d64a0d3997dcda53b9b221af7bfddf6563b2f1abf"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/device_build_admission_20261020T215058555158Z_device_pair.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\device_build_admission_20261020T215058555158Z_device_pair.json",
+      "bytes": 6366,
+      "sha256": "be79785fb78c7e3593b8d33e10b0589b96a7c973e77117052ce7baeaf3cc1ad7"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/g2_complete_tcu_admission.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\g2_complete_tcu_admission.json",
+      "bytes": 2557,
+      "sha256": "32577a0f687e1deff94bfbaaf279387b50b42c986e17a1d24314f752a90fc4f2"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/task5_backpressure_attempt1_coverage_failure.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\task5_backpressure_attempt1_coverage_failure.json",
+      "bytes": 15632,
+      "sha256": "143dbd5658ff089bc81281aaa9f3a4d00ae77641df858155457c3736f5051fd1"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/task5_backpressure_attempt2_coverage_failure.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\task5_backpressure_attempt2_coverage_failure.json",
+      "bytes": 15084,
+      "sha256": "f7e75fae2ebdcbda0453d19b4057a34d08590f49d68ade627794d6ff594d7c2a"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/task5_backpressure_attempt3_coverage_failure.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\task5_backpressure_attempt3_coverage_failure.json",
+      "bytes": 16928,
+      "sha256": "11c85f43ba2953a682546ba04b310167461aafe3d65cb235b9f9e95500d68b2a"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/task5_backpressure_attempt4_coverage_failure.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\task5_backpressure_attempt4_coverage_failure.json",
+      "bytes": 17129,
+      "sha256": "fb2e7c57d4223fb2b652bcca31dc8379c368115898910a42d42a0b17decea2a9"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/task5_backpressure_attempt5_monitor_failure.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\task5_backpressure_attempt5_monitor_failure.json",
+      "bytes": 2721,
+      "sha256": "6495b0da0a79c4ddb6d7fe31caefbcce74210029cdc0d985a0b8efcab1c3869a"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/task5_backpressure_attempt6_coverage_failure.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\task5_backpressure_attempt6_coverage_failure.json",
+      "bytes": 7732,
+      "sha256": "213f8dc4e884c593f328da3002908e149da5794f4afb030b92108a8bb0ab0c2e"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/task5_backpressure_attempt7_coverage_failure.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\task5_backpressure_attempt7_coverage_failure.json",
+      "bytes": 3516,
+      "sha256": "7904f8d99314cacd0a80c8f78eb47b35a12911925d2079b7bba761edc186b6a8"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/task5_backpressure_attempt8_coverage_failure.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\task5_backpressure_attempt8_coverage_failure.json",
+      "bytes": 3423,
+      "sha256": "7d003a8f8141a86e49c2dbe4e619402d30944408baf48e84dcf0a65e5401d5ab"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/task5_backpressure_owner_commit_device_instruction_receipt.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\task5_backpressure_owner_commit_device_instruction_receipt.json",
+      "bytes": 1017,
+      "sha256": "1ca810b0d85ebb37160403f0f0891048ff3c5ef02849482953b24e33fa100db1"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/task5_backpressure_owner_commit_preparation_receipt.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\task5_backpressure_owner_commit_preparation_receipt.json",
+      "bytes": 1207,
+      "sha256": "63a37b99bdfb29a9eb9d2c834445eb46a2674032aeeebd4d51c2e3812df509fe"
+    },
+    {
+      "backup": "mosaic-dual-s8/receipts/user_validation_resource_authorization_20261021.json",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\evidence\\user_validation_resource_authorization_20261021.json",
+      "bytes": 3082,
+      "sha256": "d7af0e260bdb47c29962cc5b6b00781057254ab16c83b32cac6283653f5689b4"
+    },
+    {
+      "backup": "mosaic-dual-s8/verified_source_inputs_attempt8.zip",
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_dual_s8_shared_b_20261018_v1\\runs\\20261020T215251688659Z_candidate_gpu_pair\\verified_source_inputs.zip",
+      "bytes": 3380301,
+      "sha256": "05aa0010c125b7ed4a80be3fc28c987040dd93deeaeb7953462146e885683917"
+    },
+    {
+      "backup": "README.md",
+      "source": "current preservation/cleanup record",
+      "bytes": 2204,
+      "sha256": "8df8dd9b4644a7b8f99f7b492622386ad96d36288142cf4ed3cbab186bb6da86"
+    }
+  ]
+}
