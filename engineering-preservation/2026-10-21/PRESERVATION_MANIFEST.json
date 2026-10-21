@@ -5,10 +5,16 @@
   "purpose": "selected important source and evidence preservation, not whole F-drive backup",
   "files": [
     {
+      "backup": ".gitattributes",
+      "source": "scoped exact-byte preservation rule",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
       "backup": "cleanup/2026-10-21-F盘无损清理与私有Git保存.md",
       "source": "current preservation/cleanup record",
-      "bytes": 3769,
-      "sha256": "fc80766be481ad8822b051c483e3de9930a5cab53026fd206261513c352b3b52"
+      "bytes": 4561,
+      "sha256": "e9d99942ad0d79109bbbcb0c11c8e41cd52fe7eab46cd264fc099f161b6e2ed3"
     },
     {
       "backup": "cleanup/all_reversible_changes.json",
@@ -19,8 +25,8 @@
     {
       "backup": "cleanup/cleanup_summary.json",
       "source": "current preservation/cleanup record",
-      "bytes": 1693,
-      "sha256": "f968618fde835ccd23ae572a15c64057ba8182cbae6c849a5181d88a5e9292e2"
+      "bytes": 1908,
+      "sha256": "1383180a1d823c353e3b9035431dfe94d3223c40d4de5e2e3c449149e2d798a9"
     },
     {
       "backup": "cleanup/compress_integer_candidates.py",
@@ -65,6 +71,12 @@
       "sha256": "ca61be0462b89870b74d8f38f6f4ccc98ac8eadd613848696a4578a5c2eeb24d"
     },
     {
+      "backup": "cleanup/git_line_ending_correction.json",
+      "source": "completion documentation and remote verification receipt",
+      "bytes": 2268,
+      "sha256": "83af943ab11788c5b5fc8395bf5eaae52618a260bd83e010b5c167262216d849"
+    },
+    {
       "backup": "cleanup/inventory.py",
       "source": "current preservation/cleanup record",
       "bytes": 3377,
@@ -75,6 +87,18 @@
       "source": "current preservation/cleanup record",
       "bytes": 519,
       "sha256": "4070d836a93462a9a81c46b847160439946544624d443f13401263cbb5103883"
+    },
+    {
+      "backup": "cleanup/verified_payload_remote_receipt.json",
+      "source": "completion documentation and remote verification receipt",
+      "bytes": 8702,
+      "sha256": "2f3ed224ae3787f845cf4e3ef0d7010ad0f9f7a6a616b7afeb0acfa435667adc"
+    },
+    {
+      "backup": "cleanup/verify_remote_backup.py",
+      "source": "completion documentation and remote verification receipt",
+      "bytes": 3060,
+      "sha256": "4441e7ff6bc7398df2fbceb6fb07cbc550926a39afe9b9510f8bd471f1dea21a"
     },
     {
       "backup": "knowledge/S8-TCU-bit与XSA准确交付-2026-10-18.md",
@@ -231,12 +255,8 @@
       "source": "current preservation/cleanup record",
       "bytes": 2204,
       "sha256": "8df8dd9b4644a7b8f99f7b492622386ad96d36288142cf4ed3cbab186bb6da86"
-    },
-    {
-      "backup": ".gitattributes",
-      "source": "scoped exact-byte preservation rule",
-      "bytes": 8,
-      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
     }
-  ]
+  ],
+  "completion_utc": "2026-10-21T02:32:34.573218+00:00",
+  "verified_payload_commit": "0448fb54df0aa6ad6f75b1eac8877d41614e4563"
 }

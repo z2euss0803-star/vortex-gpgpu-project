@@ -5,7 +5,7 @@
   "action": "NTFS_lossless_compression_only",
   "file_count": 226,
   "total_file_allocation_saved_bytes": 5735703418,
-  "free_F_bytes": 6470860800,
+  "free_F_bytes": 6453633024,
   "batches": [
     {
       "path": "evidence\\20261021T021837071509Z_ntfs_log_compression\\receipt.json",
@@ -40,6 +40,9 @@
   "github_repository": "https://github.com/z2euss0803-star/vortex-gpgpu-project",
   "github_visibility_verified": "private",
   "github_branch": "codex/f-drive-preservation-20261021",
-  "github_upload_status": "PREPARED_NOT_YET_PUSHED",
-  "scope": "selected engineering preservation, not whole F backup; storage verification is not RTL/numerical/board acceptance"
+  "github_upload_status": "PASS_REMOTE_FETCH_EXACT_BYTES",
+  "scope": "selected engineering preservation, not whole F backup; storage verification is not RTL/numerical/board acceptance",
+  "github_verified_payload_commit": "0448fb54df0aa6ad6f75b1eac8877d41614e4563",
+  "github_remote_receipt": "evidence/git_upload_receipt.json",
+  "final_measurement_utc": "2026-10-21T02:32:34.505355+00:00"
 }
