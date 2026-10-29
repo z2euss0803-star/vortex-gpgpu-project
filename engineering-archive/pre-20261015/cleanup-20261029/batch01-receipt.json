@@ -1,0 +1,19 @@
+{
+  "scope": "USER_AUTHORIZED_PRE_20261015_EXACT_VERIFIED_FILE_RELEASE_NO_RECURSIVE_DIRECTORY_DELETE",
+  "natural_exit": 0,
+  "authorization": "User requested pre-October15 engineering deletion, preferred Git upload first, supplied the private target repository",
+  "remote_head": "a8130244e592c43790966796b9391cf94304a227",
+  "F_free_before": 0,
+  "deleted_files": 2631,
+  "deleted_logical_bytes": 1663450403,
+  "roots": [
+    "mosaic_hw4_soc_v2_20261006",
+    "mosaic_hw4_soc_v4_20261006",
+    "mosaic_hw_v3_20261005",
+    "mosaic_hw4_ops_soc_v2_20261006"
+  ],
+  "complete": true,
+  "private_repository": true,
+  "raw_evidence_preserved_in_verified_full_G_archives": true,
+  "F_free_after": 1273413632
+}

@@ -1,0 +1,18 @@
+{
+  "scope": "F_OLD_ENGINEERING_CLEANUP_COMPLETED_FOR_APPROVED_GENERATED_FILE_SCOPE",
+  "natural_exit": 0,
+  "deleted_files": 9033,
+  "deleted_logical_bytes": 68560755590,
+  "F_free_now": 51121623040,
+  "selected_remaining_paths_all_absent": true,
+  "critical_paths_present": [
+    "F:\\obsidian-codex\\codex\\work\\s8_300s_optimization_20261026\\STATUS.json",
+    "F:\\WSL\\Ubuntu-24.04\\ext4.vhdx",
+    "G:\\s8_software_r5_20261028\\delivery\\release-r10-538\\image.ub",
+    "G:\\s8_software_r5_20261028\\software-r11-startup-564\\source\\unified\\service\\installation.cpp"
+  ],
+  "first_batch_remote_commit": "a8130244e592c43790966796b9391cf94304a227",
+  "source_backups": "FIRST_BATCH_ONLY_PLUS_ORIGINAL_REMAINING_SOURCES",
+  "direct_batch_full_backup": false,
+  "note": "F:\\obsidian-codex\\codex\\60-输出\\F盘10月15日前旧工程清理与Git归档记录-2026-10-29.md"
+}

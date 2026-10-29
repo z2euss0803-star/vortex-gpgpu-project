@@ -1,0 +1,201 @@
+{
+  "scope": "USER_EXPLICIT_DIRECT_DELETE_OLD_GENERATED_ENGINEERING_ARTIFACTS",
+  "natural_exit": 0,
+  "authorization": "User latest answer: 你直接删了吧; supersedes additional full archival requirement for remaining generated outputs",
+  "date": "2026-10-29",
+  "cutoff": "2026-10-15T00:00:00+08:00",
+  "plan_sha256": "3e66a450d29b71c6f6ffd01a696c8c7b5a6fbab55cee79bb1c726dbd80d2ec3a",
+  "selected_files": 6402,
+  "selected_logical_bytes": 66897305187,
+  "deleted_files": 6402,
+  "deleted_logical_bytes": 66897305187,
+  "failed": [],
+  "no_recursive_directory_deletion": true,
+  "source_scripts_models_inputs_bit_xsa_reports_fail_logs_preserved": true,
+  "full_backup_of_direct_deleted_files": false,
+  "first_four_full_archives_retained": true,
+  "F_free_before": 1273409536,
+  "started_utc": "2026-10-29T08:31:59.703897+00:00",
+  "per_root": {
+    "fast_style_vortex_20261002": {
+      "files": 363,
+      "bytes": 5122091694
+    },
+    "gpgpu_c1w4t4_soc_tcu_tex_intfix_20260927": {
+      "files": 113,
+      "bytes": 327307483
+    },
+    "hunet_axi_software_diag_20261013T125348669084Z": {
+      "files": 14,
+      "bytes": 258841
+    },
+    "hunet_axi_w4_20261013_080456_0590109": {
+      "files": 11,
+      "bytes": 274856957
+    },
+    "hunet_axi_w4_20261013_090432_bca4c88": {
+      "files": 6,
+      "bytes": 31549
+    },
+    "hunet_axi_w4_20261013_095910_singlethread_sim": {
+      "files": 6,
+      "bytes": 31549
+    },
+    "hunet_axi_w4_20261013_103333_decl_order_fix": {
+      "files": 6,
+      "bytes": 31549
+    },
+    "hunet_axi_w4_20261013_104148_ctrl_order_fix": {
+      "files": 6,
+      "bytes": 31549
+    },
+    "hunet_axi_w4_20261013_104415_xelab_off": {
+      "files": 4,
+      "bytes": 20357
+    },
+    "hunet_capture_fastread_20261009_v1": {
+      "files": 1,
+      "bytes": 8974
+    },
+    "hunet_ethernet_loader_20261009_v1": {
+      "files": 173,
+      "bytes": 8037434
+    },
+    "hunet_ethernet_loader_20261009_v2": {
+      "files": 12,
+      "bytes": 334187
+    },
+    "hunet_gelu_swarch_20261011_v6": {
+      "files": 56,
+      "bytes": 9800752
+    },
+    "hunet_optim_20261010_v2": {
+      "files": 31,
+      "bytes": 6458498
+    },
+    "hunet_quant_verify_20261008_v1": {
+      "files": 817,
+      "bytes": 7630704
+    },
+    "hunet_swopt_20261010_v3": {
+      "files": 77,
+      "bytes": 20412746
+    },
+    "linux_platform_team_handoff_20261012": {
+      "files": 11,
+      "bytes": 233400
+    },
+    "mosaic_hw4_soc_v1_20261006": {
+      "files": 3,
+      "bytes": 21238
+    },
+    "mosaic_hw4_soc_v3_20261006": {
+      "files": 1,
+      "bytes": 12443
+    },
+    "mosaic_hw_v4_20261005": {
+      "files": 17,
+      "bytes": 1710388124
+    },
+    "mosaic_i8u8_dsp_board_20261009_v1": {
+      "files": 864,
+      "bytes": 4399322659
+    },
+    "mosaic_ptq_v2_20261006": {
+      "files": 960,
+      "bytes": 11152979200
+    },
+    "mosaic_smartconnect_opt_20261012_v1": {
+      "files": 8,
+      "bytes": 879476933
+    },
+    "mosaic_tcu_expand_20261007_v1": {
+      "files": 143,
+      "bytes": 2318653826
+    },
+    "mosaic_tcu_formats_20261006_v1": {
+      "files": 256,
+      "bytes": 7353713664
+    },
+    "mosaic_tcu_hw_compare_20261006_v1": {
+      "files": 57,
+      "bytes": 1693703772
+    },
+    "mosaic_tcu_int16_ooc_20261012_v1": {
+      "files": 45,
+      "bytes": 183595175
+    },
+    "mosaic_tcu_redesign_20261006_v1": {
+      "files": 368,
+      "bytes": 10111428096
+    },
+    "mosaic_tcu_s8_integration_20261013_v1": {
+      "files": 94,
+      "bytes": 441494489
+    },
+    "mosaic_tcu_s8_ooc_20261012_v1": {
+      "files": 55,
+      "bytes": 145523286
+    },
+    "mosaic_weights_only_20261006_v1": {
+      "files": 1344,
+      "bytes": 15614170880
+    },
+    "skill_build_vivado_20261013_075221_3375833": {
+      "files": 20,
+      "bytes": 268004
+    },
+    "tcu_i8u8_dsp_probe_20261009_v1": {
+      "files": 4,
+      "bytes": 24575
+    },
+    "vortex_linux_backend_20261008": {
+      "files": 20,
+      "bytes": 1616786
+    },
+    "vortex_linux_backend_delivery_20261009": {
+      "files": 2,
+      "bytes": 8091
+    },
+    "vortex_linux_backend_hunet_submit_timing_20261013": {
+      "files": 103,
+      "bytes": 2988065
+    },
+    "vortex_ppa_ab_20260927": {
+      "files": 46,
+      "bytes": 3541052319
+    },
+    "vortex_v23_dual_ddr_20260929": {
+      "files": 138,
+      "bytes": 1108472161
+    },
+    "vortex_v23_dual_ddr_functional_20261002": {
+      "files": 16,
+      "bytes": 497253
+    },
+    "vortex_v23_dual_ddr_functional_r2_20261003": {
+      "files": 12,
+      "bytes": 429513
+    },
+    "vortex_v23_dual_ddr_functional_r3_20261003": {
+      "files": 15,
+      "bytes": 20082841
+    },
+    "vortex_v23_dual_ddr_functional_recovery_20261003": {
+      "files": 96,
+      "bytes": 439602783
+    },
+    "vortex_v23_mosaic_board_axi_v1_20261004": {
+      "files": 4,
+      "bytes": 100394
+    },
+    "vortex_v23_mosaic_board_axi_xdc_v2_20261004": {
+      "files": 4,
+      "bytes": 100394
+    }
+  },
+  "F_free_observed": 51121614848,
+  "F_free_after": 51121623040,
+  "elapsed_s": 344.5150000001304,
+  "complete_for_selected_files": true
+}
