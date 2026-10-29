@@ -1,0 +1,10 @@
+{
+  "started": "2026-10-06T14:39:57.459663+08:00",
+  "child_pid": 37424,
+  "script": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v4_20261006\\scripts\\run_baseline.py",
+  "launcher_sha256": "1a181b6031de5be3b765bff96bf49326fe982b139aec13585176a2a564c1c4e8",
+  "parent_pid": 34384,
+  "hidden": true,
+  "ordinary_user": true,
+  "board_operation": false
+}

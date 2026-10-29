@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "F:\obsidian-codex\codex\work\mosaic_hw4_soc_v2_20261006\scripts\run_baseline.py", line 51, in main
+    log=run('simulate',['xsim','hw4_shared_baseline_v2','-runall','-onfinish','quit','-log','baseline_native.log'])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\obsidian-codex\codex\work\mosaic_hw4_soc_v2_20261006\scripts\run_baseline.py", line 36, in run
+    if not stage_ok(code,text): raise RuntimeError(f'{stage} failed; preserve {log}')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: simulate failed; preserve F:\obsidian-codex\codex\work\mosaic_hw4_soc_v2_20261006\evidence\simulate.log

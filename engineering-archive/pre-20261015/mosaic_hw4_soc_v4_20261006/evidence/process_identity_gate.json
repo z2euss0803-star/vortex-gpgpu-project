@@ -1,0 +1,13 @@
+{
+  "pass_": true,
+  "identity": {
+    "worker_pid": 37424,
+    "creation_time": "2026-10-06T14:39:57.4527800+08:00",
+    "snapshot": "hw4_shared_baseline_v4",
+    "command": "D:\\PYTHON\\python.exe -B F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v4_20261006\\scripts\\run_baseline.py"
+  },
+  "raw_start_sha256": "e9bc9b127fe543a6d99a9fe03cee84c83c3e60b72950e19b338848b301023386",
+  "normalized_start_sha256": "63674d01fe0d42a402ef2194699eac1004139958ea988031a5173dfcadd87284",
+  "fresh_exit_sha256": "4fb6d194b2011bcf14631f27f6512893fe85db69d2b05c80b8a5c75f7814c71d",
+  "pipeline_inputs_sha256": "f5fe1103990c2e4ec2f126a15e1cbb48651a437a0d6b115027444336d1c62d50"
+}

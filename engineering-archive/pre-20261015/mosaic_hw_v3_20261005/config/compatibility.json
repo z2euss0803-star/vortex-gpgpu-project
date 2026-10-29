@@ -1,0 +1,21 @@
+{
+  "changed": [
+    "Vortex.sv",
+    "Vortex_axi.sv",
+    "VX_cluster.sv",
+    "VX_define.vh",
+    "VX_gpu_pkg.sv",
+    "VX_platform.vh",
+    "VX_socket.sv",
+    "core\\VX_core.sv",
+    "core\\VX_decode.sv",
+    "core\\VX_execute.sv",
+    "tcu\\VX_tcu_fedp_dsp.sv",
+    "tcu\\VX_tcu_fedp_int.sv"
+  ],
+  "extensions": [
+    "TCU",
+    "native TEX"
+  ],
+  "repair": "Explicit integer sign extension and unsigned reduction guard preservation"
+}

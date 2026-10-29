@@ -1,0 +1,8 @@
+{
+  "updated": "2026-10-06T14:39:19.770905+08:00",
+  "pid": 17112,
+  "stage": "baseline",
+  "status": "failed",
+  "error": "simulate failed; preserve F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\simulate.log",
+  "preserve_scene": true
+}

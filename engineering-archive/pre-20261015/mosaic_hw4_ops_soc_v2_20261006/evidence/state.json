@@ -1,0 +1,17 @@
+{
+  "updated": "2026-10-06T15:39:03.226467+08:00",
+  "pid": 15952,
+  "stage": "simulate",
+  "status": "running",
+  "child_pid": 15212,
+  "command": [
+    "G:\\xilinx\\Vivado\\2020.1\\bin\\xsim.bat",
+    "hw4_mosaic_soc_v2",
+    "-runall",
+    "-onfinish",
+    "quit",
+    "-log",
+    "ops_native.log"
+  ],
+  "log": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_ops_soc_v2_20261006\\evidence\\simulate.log"
+}

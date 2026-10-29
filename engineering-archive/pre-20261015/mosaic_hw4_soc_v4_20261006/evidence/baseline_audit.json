@@ -1,0 +1,60 @@
+{
+  "pass_baseline": true,
+  "whole_regression_pass": false,
+  "scope": "New HW4 shared C baseline: actual PL buses and DDR, two runs across PL reset; no A53 ISA/FSBL/MMU/board",
+  "checker_binding_sha256": "882378c8c94ca698de9c6c91f6ea11a13ca936fef329ad45e7e7bd1b4bda197f",
+  "process_exit_sha256": "e0f3051caca587aa6d7af015e209d0d2fbb269fc3ee31bef87e7b086f46fd6d3",
+  "waveform": {
+    "pass": true,
+    "sha256": "7f10b0b9d7b6040675099dcdcf3519bbd559106f06b4957da5de72653d1a0940",
+    "phases": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "reset": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "ready": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "final_counters": {
+      "phase": 6,
+      "dma_jobs": 66,
+      "gpu_rounds": 6,
+      "hpm0_reads": 3698,
+      "hpm0_writes": 36,
+      "hpm1_reads": 471,
+      "hpm1_writes": 462,
+      "hp_reads": 1496,
+      "hp_writes": 36,
+      "ddr_reads": 244,
+      "ddr_writes": 142,
+      "gpu_reads": 169,
+      "gpu_writes": 96,
+      "gpu_flush_issued": 96,
+      "ps_flush_accepted": 96,
+      "resetn_observed": 1,
+      "ready_observed": 1,
+      "ddr_resetn_observed": 1,
+      "host_reads": 6160,
+      "host_writes": 7414,
+      "host_flushes": 72,
+      "host_invalidates": 50,
+      "host_barriers": 692
+    }
+  },
+  "identity_count": 603,
+  "source_manifest_sha256": "73a8837011cc5af758d537e78aa3b6bafdab23efe5c27f2855d92dfe76013121",
+  "bitstream_sha256": "deb74c77e7e76e9108f49307371c42c889b21f8e764c545987a7786ce543ebc8"
+}

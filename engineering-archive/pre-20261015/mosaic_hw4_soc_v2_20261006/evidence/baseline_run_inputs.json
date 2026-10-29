@@ -1,0 +1,6 @@
+{
+  "input_manifest_sha256": "7c4064865904a8a460c352ac3eecccedccb523574460f32adbb2e4befd115690",
+  "launcher_sha256": "e7f12824bd398e613afa78f951d132554d1845a46f715488cf9bb3f6e05f7e65",
+  "audit_sha256": "4434ad23a0fb4ce103a1b41285849f667150cc8dd4d9e1a0ef7bdf7fe4ee6136",
+  "scope": "Actual HW4 top/BD/IP + PS VIP + DDR device; shared C cache ownership model, no A53 ISA/FSBL/MMU/board"
+}

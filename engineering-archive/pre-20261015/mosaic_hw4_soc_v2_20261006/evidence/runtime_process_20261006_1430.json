@@ -1,0 +1,46 @@
+{
+  "sampled": "2026-10-06T14:27:56.2437943+08:00",
+  "query_success": true,
+  "target_count": 3,
+  "worker_pid": 17112,
+  "snapshot": "hw4_shared_baseline_v2",
+  "processes": [
+    {
+      "Name": "python.exe",
+      "ProcessId": 17112,
+      "ParentProcessId": 23672,
+      "CreationDate": "2026-10-06T13:52:23.556349+08:00",
+      "CommandLine": "D:\\PYTHON\\python.exe -B F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\scripts\\run_baseline.py",
+      "UserModeTime": 3750000,
+      "KernelModeTime": 11250000,
+      "WorkingSetSize": 16384000,
+      "PrivatePageCount": 11419648
+    },
+    {
+      "Name": "xsim.exe",
+      "ProcessId": 7596,
+      "ParentProcessId": 2488,
+      "CreationDate": "2026-10-06T14:01:43.998045+08:00",
+      "CommandLine": "\"G:/xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xsim.exe\"   hw4_shared_baseline_v2 -runall -onfinish quit -log baseline_native.log",
+      "UserModeTime": 87187500,
+      "KernelModeTime": 57343750,
+      "WorkingSetSize": 230240256,
+      "PrivatePageCount": 272125952
+    },
+    {
+      "Name": "xsimk.exe",
+      "ProcessId": 31928,
+      "ParentProcessId": 7596,
+      "CreationDate": "2026-10-06T14:01:47.187131+08:00",
+      "CommandLine": "xsim.dir/hw4_shared_baseline_v2/xsimk.exe -runall -simmode gui -wdb hw4_shared_baseline_v2.wdb -simrunnum 0 -socket 56567",
+      "UserModeTime": 15378281250,
+      "KernelModeTime": 216718750,
+      "WorkingSetSize": 3707723776,
+      "PrivatePageCount": 4121145344
+    }
+  ],
+  "free_physical_kib": 3628580,
+  "free_virtual_kib": 7902472,
+  "total_virtual_kib": 31840760,
+  "boot": "2026-10-04T15:43:08.158874+08:00"
+}

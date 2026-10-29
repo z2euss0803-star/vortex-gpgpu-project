@@ -1,0 +1,10 @@
+{
+  "pass_": true,
+  "recorded": "2026-10-06T15:28:49.324014+08:00",
+  "audit_sha256": "c768588d2967406ae98cac526635e6da87e3ddefef5bb72fb178787e9a9b5b72",
+  "process_identity_gate_sha256": "73dd7dfc7a6f3b60684b2880281f17963b7536f6d39129faaae481498037add9",
+  "pipeline_inputs_sha256": "f5fe1103990c2e4ec2f126a15e1cbb48651a437a0d6b115027444336d1c62d50",
+  "original_pre_simulation_vendor_closure_sha256": "58f98a7f0100d83d353582665f1c609c9fefd841faab8e46b727b6a5512a2759",
+  "live_hw_sources_and_vendor_identities_verified": true,
+  "board_operation": false
+}

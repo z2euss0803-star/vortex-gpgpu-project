@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-10-05T15:33:38.7995509+08:00",
+  "worker_pid": 488,
+  "vivado_pid": 37640,
+  "worker_present": false,
+  "vivado_present": false,
+  "all_vivado_xsim": []
+}

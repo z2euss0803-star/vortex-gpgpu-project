@@ -1,0 +1,16 @@
+{
+  "status": "tb_completed_independent_audit_pending",
+  "finished": "2026-10-06T15:27:43.942432+08:00",
+  "markers": {
+    "PS_PL_LOOPBACK_HOST_PASS": 2,
+    "SHARED_HOST_FIRST_RUN_PASS": 1,
+    "SHARED_HOST_RESET_REPEAT_PASS": 1,
+    "SHARED_A53_LOGIC_FULL_SOC_PASS": 1,
+    "LOOPBACK_STARTUP_RESET_PASS": 1,
+    "HW4_CHECKER_ARMED_PASS": 1,
+    "VECADD64_PASS": 6,
+    "CDMA_PARTIAL_PASS": 2
+  },
+  "independent_audit_pending": true,
+  "whole_regression_pass": false
+}

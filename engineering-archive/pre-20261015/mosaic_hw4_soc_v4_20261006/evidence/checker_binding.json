@@ -1,0 +1,44 @@
+{
+  "recorded": "2026-10-06T14:20:26.888262+08:00",
+  "scope": "same functional HW4 RTL; simulation verification adapted after first effective reset",
+  "original_sha256": "1f032cc4992c844eab3f68ab2bce2d9687d43017f924f4b33d598e7734bb0f53",
+  "candidate_sha256": "6390e6d87e4e1dac1cd40dcbed5f63d3a70a18d849da4a29e16b4599c12a5290",
+  "platform_sha256": "1f97acbd8e67ae4143d6633c78b82f62354ad2a466b184d3c3e2b637713be484",
+  "functional_tokens_equal": true,
+  "functional_token_sha256": "ecc0609eb42d0fbe3aa383c029ce5e4478e5e5cb1b15e7a02401dced58add593",
+  "qualification_result_sha256": "86f9d2abe931ecabdb41d773ed0b2e2261a1a07b0bb9f99ddbec91442cbc83dd",
+  "qualification_scenarios": {
+    "SMOKE": [],
+    "OVERFLOW": [
+      [
+        "runtime error: counter overflow",
+        105000
+      ]
+    ],
+    "UNDERFLOW": [
+      [
+        "runtime error: counter underflow",
+        65000
+      ]
+    ],
+    "RESET_X": [
+      [
+        "runtime error: unknown reset after initialization",
+        65000
+      ]
+    ],
+    "INCR_X": [
+      [
+        "runtime error: counter overflow",
+        65000
+      ],
+      [
+        "runtime error: counter underflow",
+        65000
+      ]
+    ]
+  },
+  "qualification_not_rerun": true,
+  "hardware_changed": false,
+  "strict_zero_errors_unchanged": true
+}

@@ -1,0 +1,54 @@
+{
+  "sampled": "2026-10-06T14:13:27.939100+08:00",
+  "scope": "live_prefix_only_not_final_scene",
+  "files": [
+    {
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\simulate.log",
+      "copy": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\runtime_error_prefix_20261006_141327\\simulate.log",
+      "sampled_prefix_bytes": 339608,
+      "copied_bytes": 339608,
+      "sha256": "2836570367b5648c104b179e83963fae575777cc2fa2870e6b171599e6263575",
+      "source_size_after": 339608
+    },
+    {
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\state.json",
+      "copy": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\runtime_error_prefix_20261006_141327\\state.json",
+      "sampled_prefix_bytes": 427,
+      "copied_bytes": 427,
+      "sha256": "524a7a9e90ebaf8028cf270054f2046f9f2a36959883f251a598021a23c30a80",
+      "source_size_after": 427
+    },
+    {
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\stage_exits.jsonl",
+      "copy": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\runtime_error_prefix_20261006_141327\\stage_exits.jsonl",
+      "sampled_prefix_bytes": 3046,
+      "copied_bytes": 3046,
+      "sha256": "0f2348eec56ff615fe45c9d7d266642973d0da3f94f64d36463abc419be06a4d",
+      "source_size_after": 3046
+    },
+    {
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\process_checks.jsonl",
+      "copy": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\runtime_error_prefix_20261006_141327\\process_checks.jsonl",
+      "sampled_prefix_bytes": 3159,
+      "copied_bytes": 3159,
+      "sha256": "50fe79b7b2d875b0b956402b7280ad03da791e06fdbe4861fecd576b13dce9db",
+      "source_size_after": 3159
+    },
+    {
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\build\\xsim\\shared_host.vcd",
+      "copy": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\runtime_error_prefix_20261006_141327\\shared_host.vcd",
+      "sampled_prefix_bytes": 18041516,
+      "copied_bytes": 18041516,
+      "sha256": "d28544111f1f91e6e3e3f876281a88bb0f51a8b5427649424d8636cc03b25719",
+      "source_size_after": 18041954
+    },
+    {
+      "source": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\build\\xsim\\baseline_native.log",
+      "copy": "F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\evidence\\runtime_error_prefix_20261006_141327\\baseline_native.log",
+      "sampled_prefix_bytes": 337990,
+      "copied_bytes": 337990,
+      "sha256": "61a529aed3adf2868de48af4050f7a4cdcfb991cbcc1575b2195e38318730ec2",
+      "source_size_after": 337990
+    }
+  ]
+}

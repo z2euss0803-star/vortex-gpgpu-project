@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-10-05T15:23:07.708587+08:00",
+  "failed_check": "first draft expected nine non-excluded mappings; generated BD has eight",
+  "cause": "counting mistake in ad hoc observer, not a Vivado build failure",
+  "effect": "observer raised AssertionError before writing any audit report",
+  "correction": "derive required mapping list and check eight actual non-excluded segments; preserve this failure record"
+}

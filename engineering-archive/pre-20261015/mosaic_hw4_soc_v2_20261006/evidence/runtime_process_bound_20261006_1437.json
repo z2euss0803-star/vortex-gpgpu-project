@@ -1,0 +1,125 @@
+{
+  "sampled": "2026-10-06T14:36:36.3971930+08:00",
+  "query_success": true,
+  "target_count": 6,
+  "worker_pid": 17112,
+  "snapshot": "hw4_shared_baseline_v2",
+  "tracking_scope": "worker_snapshot_descendants",
+  "global_heavy_count": 2,
+  "receipts": [
+    {
+      "ProcessId": 17112,
+      "CreationDate": "2026-10-06T13:52:23.5563490+08:00",
+      "ParentProcessId": 23672,
+      "Name": "python.exe",
+      "CommandLine": "D:\\PYTHON\\python.exe -B F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\scripts\\run_baseline.py"
+    },
+    {
+      "ProcessId": 31008,
+      "CreationDate": "2026-10-06T13:52:23.5659130+08:00",
+      "ParentProcessId": 17112,
+      "Name": "conhost.exe",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+    },
+    {
+      "ProcessId": 2488,
+      "CreationDate": "2026-10-06T14:01:43.2994860+08:00",
+      "ParentProcessId": 17112,
+      "Name": "cmd.exe",
+      "CommandLine": "C:\\WINDOWS\\system32\\cmd.exe /c G:\\xilinx\\Vivado\\2020.1\\bin\\xsim.bat hw4_shared_baseline_v2 -runall -onfinish quit -log baseline_native.log"
+    },
+    {
+      "ProcessId": 7596,
+      "CreationDate": "2026-10-06T14:01:43.9980450+08:00",
+      "ParentProcessId": 2488,
+      "Name": "xsim.exe",
+      "CommandLine": "\"G:/xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xsim.exe\"   hw4_shared_baseline_v2 -runall -onfinish quit -log baseline_native.log"
+    },
+    {
+      "ProcessId": 31928,
+      "CreationDate": "2026-10-06T14:01:47.1871310+08:00",
+      "ParentProcessId": 7596,
+      "Name": "xsimk.exe",
+      "CommandLine": "xsim.dir/hw4_shared_baseline_v2/xsimk.exe -runall -simmode gui -wdb hw4_shared_baseline_v2.wdb -simrunnum 0 -socket 56567"
+    },
+    {
+      "ProcessId": 3564,
+      "CreationDate": "2026-10-06T14:01:47.4194060+08:00",
+      "ParentProcessId": 31928,
+      "Name": "conhost.exe",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+    }
+  ],
+  "processes": [
+    {
+      "Name": "python.exe",
+      "ProcessId": 17112,
+      "ParentProcessId": 23672,
+      "CreationDate": "2026-10-06T13:52:23.556349+08:00",
+      "CommandLine": "D:\\PYTHON\\python.exe -B F:\\obsidian-codex\\codex\\work\\mosaic_hw4_soc_v2_20261006\\scripts\\run_baseline.py",
+      "UserModeTime": 3750000,
+      "KernelModeTime": 11250000,
+      "WorkingSetSize": 10317824,
+      "PrivatePageCount": 11419648
+    },
+    {
+      "Name": "conhost.exe",
+      "ProcessId": 31008,
+      "ParentProcessId": 17112,
+      "CreationDate": "2026-10-06T13:52:23.565913+08:00",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4",
+      "UserModeTime": 781250,
+      "KernelModeTime": 2656250,
+      "WorkingSetSize": 7798784,
+      "PrivatePageCount": 1204224
+    },
+    {
+      "Name": "cmd.exe",
+      "ProcessId": 2488,
+      "ParentProcessId": 17112,
+      "CreationDate": "2026-10-06T14:01:43.299486+08:00",
+      "CommandLine": "C:\\WINDOWS\\system32\\cmd.exe /c G:\\xilinx\\Vivado\\2020.1\\bin\\xsim.bat hw4_shared_baseline_v2 -runall -onfinish quit -log baseline_native.log",
+      "UserModeTime": 937500,
+      "KernelModeTime": 4843750,
+      "WorkingSetSize": 6721536,
+      "PrivatePageCount": 5632000
+    },
+    {
+      "Name": "xsim.exe",
+      "ProcessId": 7596,
+      "ParentProcessId": 2488,
+      "CreationDate": "2026-10-06T14:01:43.998045+08:00",
+      "CommandLine": "\"G:/xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xsim.exe\"   hw4_shared_baseline_v2 -runall -onfinish quit -log baseline_native.log",
+      "UserModeTime": 100937500,
+      "KernelModeTime": 70000000,
+      "WorkingSetSize": 143077376,
+      "PrivatePageCount": 272941056
+    },
+    {
+      "Name": "xsimk.exe",
+      "ProcessId": 31928,
+      "ParentProcessId": 7596,
+      "CreationDate": "2026-10-06T14:01:47.187131+08:00",
+      "CommandLine": "xsim.dir/hw4_shared_baseline_v2/xsimk.exe -runall -simmode gui -wdb hw4_shared_baseline_v2.wdb -simrunnum 0 -socket 56567",
+      "UserModeTime": 20486406250,
+      "KernelModeTime": 280625000,
+      "WorkingSetSize": 4114845696,
+      "PrivatePageCount": 4309270528
+    },
+    {
+      "Name": "conhost.exe",
+      "ProcessId": 3564,
+      "ParentProcessId": 31928,
+      "CreationDate": "2026-10-06T14:01:47.419406+08:00",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4",
+      "UserModeTime": 156250,
+      "KernelModeTime": 0,
+      "WorkingSetSize": 7692288,
+      "PrivatePageCount": 1232896
+    }
+  ],
+  "free_physical_kib": 3118152,
+  "free_virtual_kib": 7518260,
+  "total_virtual_kib": 31840760,
+  "boot": "2026-10-04T15:43:08.158874+08:00"
+}

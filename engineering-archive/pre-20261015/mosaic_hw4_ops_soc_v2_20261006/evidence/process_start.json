@@ -1,0 +1,53 @@
+{
+  "sampled": "2026-10-06T15:28:59.7935445+08:00",
+  "query_success": true,
+  "target_count": 2,
+  "worker_pid": 15952,
+  "snapshot": "hw4_mosaic_soc_v2",
+  "tracking_scope": "worker_snapshot_descendants",
+  "global_heavy_count": 0,
+  "receipts": [
+    {
+      "ProcessId": 15952,
+      "CreationDate": "2026-10-06T15:28:58.9140630+08:00",
+      "ParentProcessId": 25208,
+      "Name": "python.exe",
+      "CommandLine": "D:\\PYTHON\\python.exe -B F:\\obsidian-codex\\codex\\work\\mosaic_hw4_ops_soc_v2_20261006\\scripts\\run_ops.py"
+    },
+    {
+      "ProcessId": 4268,
+      "CreationDate": "2026-10-06T15:28:58.9228360+08:00",
+      "ParentProcessId": 15952,
+      "Name": "conhost.exe",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+    }
+  ],
+  "processes": [
+    {
+      "Name": "python.exe",
+      "ProcessId": 15952,
+      "ParentProcessId": 25208,
+      "CreationDate": "2026-10-06T15:28:58.9140630+08:00",
+      "CommandLine": "D:\\PYTHON\\python.exe -B F:\\obsidian-codex\\codex\\work\\mosaic_hw4_ops_soc_v2_20261006\\scripts\\run_ops.py",
+      "UserModeTime": 1562500,
+      "KernelModeTime": 2187500,
+      "WorkingSetSize": 908472320,
+      "PrivatePageCount": 1502724096
+    },
+    {
+      "Name": "conhost.exe",
+      "ProcessId": 4268,
+      "ParentProcessId": 15952,
+      "CreationDate": "2026-10-06T15:28:58.9228360+08:00",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4",
+      "UserModeTime": 0,
+      "KernelModeTime": 156250,
+      "WorkingSetSize": 7962624,
+      "PrivatePageCount": 1245184
+    }
+  ],
+  "free_physical_kib": 4292432,
+  "free_virtual_kib": 11162592,
+  "total_virtual_kib": 31840760,
+  "boot": "/Date(1791099788158)/"
+}

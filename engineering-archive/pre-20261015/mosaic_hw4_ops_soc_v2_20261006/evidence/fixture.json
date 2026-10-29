@@ -1,0 +1,344 @@
+{
+  "prepared": "2026-10-06T13:57:24.342096+08:00",
+  "regions": [
+    {
+      "gpu_address": 2147483648,
+      "ps_address": 285212672,
+      "bytes": 32192,
+      "payload_offset": 0
+    },
+    {
+      "gpu_address": 2149580800,
+      "ps_address": 285244864,
+      "bytes": 6717120,
+      "payload_offset": 32192
+    },
+    {
+      "gpu_address": 2164260864,
+      "ps_address": 291961984,
+      "bytes": 896,
+      "payload_offset": 6749312
+    },
+    {
+      "gpu_address": 2164391936,
+      "ps_address": 291962880,
+      "bytes": 7936,
+      "payload_offset": 6750208
+    },
+    {
+      "gpu_address": 2164785152,
+      "ps_address": 291970816,
+      "bytes": 8320,
+      "payload_offset": 6758144
+    },
+    {
+      "gpu_address": 2166358016,
+      "ps_address": 291979136,
+      "bytes": 8320,
+      "payload_offset": 6766464
+    },
+    {
+      "gpu_address": 2166489088,
+      "ps_address": 291987456,
+      "bytes": 4736,
+      "payload_offset": 6774784
+    },
+    {
+      "gpu_address": 2166882304,
+      "ps_address": 291992192,
+      "bytes": 4224,
+      "payload_offset": 6779520
+    },
+    {
+      "gpu_address": 2168455168,
+      "ps_address": 291996416,
+      "bytes": 2176,
+      "payload_offset": 6783744
+    },
+    {
+      "gpu_address": 2168586240,
+      "ps_address": 291998592,
+      "bytes": 18560,
+      "payload_offset": 6785920
+    },
+    {
+      "gpu_address": 2168979456,
+      "ps_address": 292017152,
+      "bytes": 4224,
+      "payload_offset": 6804480
+    },
+    {
+      "gpu_address": 2170552320,
+      "ps_address": 292021376,
+      "bytes": 8320,
+      "payload_offset": 6808704
+    },
+    {
+      "gpu_address": 2170683392,
+      "ps_address": 292029696,
+      "bytes": 41600,
+      "payload_offset": 6817024
+    },
+    {
+      "gpu_address": 2171076608,
+      "ps_address": 292071296,
+      "bytes": 896,
+      "payload_offset": 6858624
+    },
+    {
+      "gpu_address": 2172649472,
+      "ps_address": 292072192,
+      "bytes": 8320,
+      "payload_offset": 6859520
+    },
+    {
+      "gpu_address": 2172780544,
+      "ps_address": 292080512,
+      "bytes": 8320,
+      "payload_offset": 6867840
+    },
+    {
+      "gpu_address": 2174746624,
+      "ps_address": 292088832,
+      "bytes": 2176,
+      "payload_offset": 6876160
+    },
+    {
+      "gpu_address": 2174877696,
+      "ps_address": 292091008,
+      "bytes": 2176,
+      "payload_offset": 6878336
+    },
+    {
+      "gpu_address": 4294377472,
+      "ps_address": 292093184,
+      "bytes": 524288,
+      "payload_offset": 6880512
+    }
+  ],
+  "guard_regions": [
+    {
+      "gpu_address": 2149580800,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2156297856,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2164260864,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2164261696,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2164391936,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2164399808,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2164785152,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2164793408,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2166358016,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2166366272,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2166489088,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2166493760,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2166882304,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2166886464,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2168455168,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2168457280,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2168586240,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2168604736,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2168979456,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2168983616,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2170552320,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2170560576,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2170683392,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2170724928,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2171076608,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2171077440,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2172649472,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2172657728,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2172780544,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2172788800,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2174746624,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2174748736,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2174877696,
+      "bytes": 64
+    },
+    {
+      "gpu_address": 2174879808,
+      "bytes": 64
+    }
+  ],
+  "jobs": [
+    {
+      "name": "conv1_pack",
+      "arg_addr": 268500992,
+      "op": 0,
+      "tasks": 1944
+    },
+    {
+      "name": "conv1_gemm",
+      "arg_addr": 268501248,
+      "op": 1,
+      "tasks": 256
+    },
+    {
+      "name": "conv2_pack",
+      "arg_addr": 268501504,
+      "op": 0,
+      "tasks": 1152
+    },
+    {
+      "name": "conv2_gemm",
+      "arg_addr": 268501760,
+      "op": 1,
+      "tasks": 256
+    },
+    {
+      "name": "deconv1_pack",
+      "arg_addr": 268502016,
+      "op": 0,
+      "tasks": 4608
+    },
+    {
+      "name": "deconv1_gemm",
+      "arg_addr": 268502272,
+      "op": 1,
+      "tasks": 256
+    },
+    {
+      "name": "deconv3_pack",
+      "arg_addr": 268502528,
+      "op": 0,
+      "tasks": 10368
+    },
+    {
+      "name": "deconv3_gemm",
+      "arg_addr": 268502784,
+      "op": 1,
+      "tasks": 12
+    },
+    {
+      "name": "conv1_norm",
+      "arg_addr": 268503040,
+      "op": 2,
+      "tasks": 32
+    },
+    {
+      "name": "res1.conv2_norm",
+      "arg_addr": 268503296,
+      "op": 2,
+      "tasks": 128
+    }
+  ],
+  "counts": [
+    1944,
+    2048,
+    1152,
+    1024,
+    4608,
+    1024,
+    10368,
+    192,
+    2048,
+    512
+  ],
+  "payload_bytes": 7404800,
+  "rounds": 2,
+  "checks_per_round": 24920,
+  "guards_per_round": 5440,
+  "pack_initial_zero": true,
+  "reference_pack_seeded": false,
+  "kernel_image_sha256": "2880624c2a3e57d65636847b4c4a86a9840a016bd0d0c6b604a47930e39ee495",
+  "source_memory_sha256": "6fb269212371fdc732bca9dd597f811ed1262052ed71700bfe0ece65453906c8",
+  "scope": "HW4 PS VIP/native production C device driver/CDMA/actual GPU/DDR4 PHY and device model; no A53 ISA, FSBL or board",
+  "expected_dma_jobs": 4416,
+  "expected_gpu_jobs": 20,
+  "cpu_crt_allocation": "0x0..0x1000; zeroed independently each round via PS-local API; not A53 program memory",
+  "global_timeout_seconds": 5
+}
