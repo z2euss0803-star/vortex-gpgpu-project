@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-16T11:18:06.429438+00:00",
+  "stage": "synthesis",
+  "run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\runs\\20261016T101807584187Z_synthesis",
+  "status": "TOOL_COMPLETE",
+  "native": {
+    "status": "PASS",
+    "reasons": []
+  },
+  "semantic_errors": [],
+  "marker_observed": true,
+  "source_stable": true,
+  "source_sha256": "708bfd8bd611beb9631cf8294e191cf57d1a6a48c777cea7d9f42b8a27c51a7d",
+  "product_manifest_sha256": "add50f8e83482e612b46c42d09c90ba072282658abc1f7cf39c086ca49780d90",
+  "simulation": "WAIVED_NOT_RUN",
+  "board": "NOT_RUN"
+}

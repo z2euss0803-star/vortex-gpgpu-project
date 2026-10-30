@@ -1,0 +1,94 @@
+{
+  "schema": "vortex-result-texture-v1",
+  "version": 1,
+  "role": "MOSAIC_FILE_TO_P8_DUAL_LOD_NOT_DEVICE_OR_DISPLAY_RECEIPT",
+  "source": {
+    "kind": "MOSAIC_RESULT",
+    "state": "RESULT_VALIDATED",
+    "layout": "NCHW_FP32_LE",
+    "shape_prefix": [
+      1,
+      3
+    ],
+    "max_width": 1920,
+    "max_height": 1080,
+    "finite": true,
+    "numeric_fail_rejected": true,
+    "mock_rejected": true,
+    "original_json_and_tensor_retained": true,
+    "scope_never_upgraded": true
+  },
+  "conversion": {
+    "rgb_layout": "HWC_RGB8",
+    "rule": "finite clamp to 0..255 then truncate toward zero",
+    "gamma_or_enhancement": false,
+    "preprocessor": "cover-visible-mean-v1",
+    "geometry": "cover",
+    "crop": "center",
+    "resampling": "LANCZOS",
+    "neural_exif_orientation": 1,
+    "pillow_version": "8.4.0",
+    "pillow_wheel_sha256": "25a49dc2e2f74e65efaa32b153527fc5ac98508d502fa46e74fa4fd678ed6645"
+  },
+  "lods": [
+    {
+      "width": 512,
+      "height": 512,
+      "format": "RGBA8",
+      "bytes": 1048576,
+      "alpha": 255
+    },
+    {
+      "width": 2048,
+      "height": 2048,
+      "format": "RGBA8",
+      "bytes": 16777216,
+      "alpha": 255
+    }
+  ],
+  "total_lod_bytes": 17825792,
+  "identity": {
+    "algorithm": "SHA256",
+    "metadata": "strict canonical sorted JSON excluding package_id",
+    "expected_id": "MUST_COME_FROM_TRUSTED_CONVERTER_OR_CONTROL_AUTHORITY_NOT_SELF_ATTESTED_INPUT",
+    "payload_checks": [
+      "regular bounded files",
+      "descriptor relative nofollow traversal",
+      "exact original source lineage",
+      "exact derived RGB",
+      "LOD SHA256 and CRC32",
+      "opaque alpha",
+      "pinned preprocessing metadata"
+    ]
+  },
+  "publication": {
+    "original_payload_and_ancestor_directories_fsynced_before_manifest": true,
+    "manifest_is_final_atomic_completion_marker": true,
+    "new_directory_only": true,
+    "overwrite": false
+  },
+  "claims": {
+    "gpu_raw_cycles": null,
+    "gpu_execution_acceptance": false,
+    "visual_acceptance": false
+  },
+  "udp": {
+    "original_port": 5007,
+    "raw_uploaded_origin": "PHOTO_UPLOAD",
+    "raw_crc_or_identical_pixels_cannot_assert_mosaic_lineage": true,
+    "internal_applied_phase": 4,
+    "wire_applied_phase": 3,
+    "applied_requires": "original GPU ACK and checked readback, current displayed-pose redraw, original KMS presentation and old front retirement"
+  },
+  "hardware": {
+    "renderer_provider": "P8_W4_ONLY",
+    "source_model_hardware": "independently identified result may come from S8",
+    "old_program_ids": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "public_uapi_unchanged": true
+  }
+}

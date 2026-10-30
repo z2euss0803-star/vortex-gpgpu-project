@@ -1,0 +1,99 @@
+{
+  "task": "U13_COMPONENT_NOT_WHOLE_TASK",
+  "scope": "HOST_SMALL_MATH_MIGRATION_NOT_GPU_OR_FORMAL21",
+  "runs": [
+    "U13-mosaic-math-normal-033",
+    "U13-mosaic-math-sanitize-034",
+    "U13-mosaic-math-aarch64-035"
+  ],
+  "source_rows": 1600,
+  "raw_manifest_sha256": "c6183c857e9f1566ae7eebabb9e24f10ee49f935fa7befd910719b0a07a7e0bf",
+  "protected_original_files_unchanged": 222,
+  "coverage": {
+    "phases": 77,
+    "geometries": 5,
+    "budgets": 8,
+    "batches": 10915325,
+    "items": 52412912
+  },
+  "primitive_vectors": 21,
+  "primitive_vector_scope": "NEW_INDEPENDENT_SMALL_HOST_CASES_NOT_OLD_FORMAL21",
+  "propagation": {
+    "layers": 16,
+    "weights": "ORIGINAL_W16A16",
+    "input": "DETERMINISTIC_SYNTHETIC_12x8",
+    "budgets": [
+      3,
+      4,
+      16,
+      64
+    ],
+    "jobs": [
+      727,
+      547,
+      168,
+      88
+    ],
+    "comparison": "ALL16_INTERMEDIATE_BYTES_EQUAL_FROZEN_V3_HOST"
+  },
+  "fma": "EXPLICIT_IN_FROZEN_INSTANCE_NORM_ONLY",
+  "archives": [
+    {
+      "members": 28,
+      "logical_bytes": 19354373,
+      "archive_bytes": 4861078,
+      "sha256": "5fb3b986778c1a4720e72b6585e4a71e800f3a4930f5bb00bae1c0da9784d58c",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U13-mosaic-math-normal-033-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2185203712,
+      "verified_members": 28,
+      "members_sha256": "aab45e49c0f3d137622b5531f17fcf1b98b6811658ddce78eed87c465425e6b0",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U13-mosaic-math-normal-033-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    {
+      "members": 28,
+      "logical_bytes": 22610291,
+      "archive_bytes": 5517327,
+      "sha256": "568ed79206039da00d3a1bdc4ac42da6e98140657a62a36986d0fa4584c7e5ee",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U13-mosaic-math-sanitize-034-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2181005312,
+      "verified_members": 28,
+      "members_sha256": "d57d651d29c787e6ac8c9c062eb8c72869462f624772a212023775f5cfa82a25",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U13-mosaic-math-sanitize-034-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    {
+      "members": 39,
+      "logical_bytes": 23689761,
+      "archive_bytes": 6793978,
+      "sha256": "c32a97c8f39a299c3937d2399be80865684357cccbc1791b32f888c63fb9948f",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U13-mosaic-math-aarch64-035-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2178347008,
+      "verified_members": 39,
+      "members_sha256": "d55f25ff62da9148da3b7f7ae1c168f46b95f1dcadc3b87c2fecf0612ec325e9",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U13-mosaic-math-aarch64-035-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    }
+  ],
+  "gpu_raw_cycles": null,
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "remaining": [
+    "SSA/operator registration and complete model package",
+    "controlled0x10020 args/entry/RV32/catalog",
+    "native owner multi-batch guards/retirement",
+    "whole task and whole service acceptance"
+  ]
+}

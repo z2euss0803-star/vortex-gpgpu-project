@@ -1,0 +1,15 @@
+{
+  "scope": "HOST_ALLOCATION_FAILURE_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "baseline": "556adc68a57861c08cfb408c5145dcef98c35c8b",
+  "errors": [
+    {"run":"U10-pinned-exit-red-089","natural_exit":2,"class":"TEST_COMPILE_FAILURE_NOT_FUNCTIONAL_RED","cause":"Result.value is const optional; test tried reset; ignored write return was Werror","fix":"use scope lifetime and inspect write return; production unchanged"},
+    {"run":"U10-pinned-exit-red-090","natural_exit":2,"child_exit":88,"class":"FUNCTIONAL_RED","cause":"ResultStore destructor allocates a retention vector while allocation refused; noexcept termination"},
+    {"run":"U10-pinned-all-red-091","natural_exit":1,"independent_child_exits":[88,88,88,0,0,0],"class":"FUNCTIONAL_RED","cause":"ResultStore, Scheduler and Runtime uncertain destructors allocate retention or error strings; all terminate under ENOMEM; empty states cleanly exit"}
+  ],
+  "fix":"embedded allocation-free process-exit retention node with anchored atomic intrusive list; catch shutdown error construction failure before retaining; no guessed device release",
+  "green":{"run":"U10-pinned-exit-green-094","natural_exit":0,"independent_modes":6,"closed_device_while_uncertain":0,"unknown_retire_calls":0},
+  "regression":{"run":"U10-pinned-normal-regression-095","natural_exit":0,"code_items":879,"elfs":12,"compiler_jobs":2,"test_runner_jobs":1},
+  "archive":{"sha256":"90ab7f86338e00b584b43955ed8b9fb1ad8fb844b3af25c03a4b816b5cda218b","verified_members":169,"hardlinks":1},
+  "limits":["intentional process-lifetime quarantine; no same-process recovery API", "current changes await final U10 SAN/TSan/matched cross", "CPU pool pthread_join failure retention is separate existing path and remains under review", "no application, image or physical device acceptance"]
+}

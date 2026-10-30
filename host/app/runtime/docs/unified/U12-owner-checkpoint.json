@@ -1,0 +1,230 @@
+{
+  "task": "U12",
+  "state": "TASK12_OFFLINE_COMPONENT_IMPLEMENTATION_AND_CROSS_COMPLETE_U20_REAL_FACTORY_PENDING",
+  "base_commit": "1fabfb31e5aafb360b1123faf9dbd464eb48b98a",
+  "verified": [
+    {
+      "run": "U12-hunet-owner-final-normal-243",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0,
+        0
+      ],
+      "input_rows": 1584,
+      "manifest_sha256": "b94e85fe38882130e3d9eb7a8a1ee693dff5457198f5eb74eb8319012defa8d0"
+    },
+    {
+      "run": "U12-hunet-owner-sanitize-244",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0,
+        0
+      ],
+      "input_rows": 1584,
+      "manifest_sha256": "b94e85fe38882130e3d9eb7a8a1ee693dff5457198f5eb74eb8319012defa8d0"
+    },
+    {
+      "run": "U12-hunet-owner-thread-245",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0,
+        0
+      ],
+      "input_rows": 1584,
+      "manifest_sha256": "b94e85fe38882130e3d9eb7a8a1ee693dff5457198f5eb74eb8319012defa8d0"
+    },
+    {
+      "run": "U12-hunet-owner-aarch64-246",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "input_rows": 1584,
+      "manifest_sha256": "b94e85fe38882130e3d9eb7a8a1ee693dff5457198f5eb74eb8319012defa8d0"
+    },
+    {
+      "run": "U12-owner-service-regression-247",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0,
+        0
+      ],
+      "input_rows": 1584,
+      "manifest_sha256": "b94e85fe38882130e3d9eb7a8a1ee693dff5457198f5eb74eb8319012defa8d0"
+    }
+  ],
+  "archives": {
+    "U12-owner-final-normal": {
+      "members": 195,
+      "logical_bytes": 67520274,
+      "archive_bytes": 46907693,
+      "sha256": "96ceeb6cecedc3ce938d78d92d6f22a374872c875af97bad3356fd8f750ef283",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U12-owner-final-normal-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2099748864,
+      "verified_members": 195,
+      "members_sha256": "343608d23d4e35d1622d5d77b49cc13783edd7f67389545df6d759b95697f256",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-owner-final-normal\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    "U12-hunet-owner-sanitize-244-verified": {
+      "members": 195,
+      "logical_bytes": 227047516,
+      "archive_bytes": 73495761,
+      "sha256": "8bd235d334b88a2ff4bc72ca7303039491b81e733aa82e0e734de2f23744a048",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U12-hunet-owner-sanitize-244-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 1913245696,
+      "verified_members": 195,
+      "members_sha256": "f905925f43543d343e687db72679573b3998deb01f330f8c514d8ea8b7358298",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-hunet-owner-sanitize-244-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    "U12-hunet-owner-thread-245-verified": {
+      "members": 195,
+      "logical_bytes": 75323237,
+      "archive_bytes": 48718553,
+      "sha256": "2d61ca9f463cafbc51b6f2d54364fde5187bb07862c2995a5c54ad2ab6f6c7e2",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U12-hunet-owner-thread-245-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2089361408,
+      "verified_members": 195,
+      "members_sha256": "673d25dbea8c2f49eb234d46dd760dd66baffdaa3c8c9597ef1a9d5e933b2404",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-hunet-owner-thread-245-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    "U12-hunet-owner-aarch64-246-verified": {
+      "members": 203,
+      "logical_bytes": 75338430,
+      "archive_bytes": 49329585,
+      "sha256": "cdddf18fe5b148c79e1248d6c9bdcf2ab26d70e92efeb8408c7f19e49a9872e2",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U12-hunet-owner-aarch64-246-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2088407040,
+      "verified_members": 203,
+      "members_sha256": "e38de9cc84890e4f87f47355fdff9d146e000e942cfeb4a37da859e2c32f19b4",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-hunet-owner-aarch64-246-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    "U12-owner-service-regression-247-verified": {
+      "members": 134,
+      "logical_bytes": 55713050,
+      "archive_bytes": 15865691,
+      "sha256": "f098abfb44dd13897aac598c3a32f6744bdc1632aaa8ab540c484a8ef8959e47",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U12-owner-service-regression-247-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2141343744,
+      "verified_members": 134,
+      "members_sha256": "97be5c983b0bb066fa0bdb4a7d35733dad5b24e39bddb4338dd021ebad217348",
+      "hardlink_members": 1,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-owner-service-regression-247-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    }
+  },
+  "protected_audit": {
+    "scope": "CURRENT_RAW_FROZEN_INPUT_AUDIT_NOT_GIT_BLOB_NORMALIZATION",
+    "protected_core_driver_vxl_uapi_unchanged": 198,
+    "frozen_vxnn_device_files_unchanged": 12,
+    "current_raw_manifest_rows": 1584,
+    "gpu_raw_cycles": null,
+    "baseline": "U12-catalog-normal-225",
+    "tested_source": "U12-hunet-owner-aarch64-246",
+    "current_raw_manifest_sha256": "b94e85fe38882130e3d9eb7a8a1ee693dff5457198f5eb74eb8319012defa8d0"
+  },
+  "prerequisite_checkpoints": [
+    "u12_math",
+    "u12_scalar",
+    "u12_handoff",
+    "u12_controlled_program",
+    "u12_registry",
+    "u12_model_graph",
+    "u12_arena",
+    "u12_guards",
+    "u12_storage",
+    "u12_lowering",
+    "u12_deferred",
+    "u12_catalog",
+    "u12_residency"
+  ],
+  "model_id": "42c8b728786d3489fdd7af455d458ebe9bdde73f4a93648349e25d386a893e0e",
+  "previous_model_id": "dee7f3f4e85a694434d99a18bd6a6ffde0e2ef8e8293b9450418cd62f15fbe07",
+  "identity_reason": "Regenerated source-bound package after scheduler readiness API/dispatch change; math CODE schema weights and numeric references unchanged",
+  "gpu_raw_cycles": null,
+  "scope": "HOST_REAL_C_CONTROL_LOADER_WITH_EXPLICIT_ZERO_GPU_OUTPUT_MARKERS_NOT_GPU_MATH",
+  "full_graph": {
+    "nodes": 116,
+    "c_protocol_gpu_jobs": 103,
+    "shared_pool_cpu_commits": 13,
+    "workers": 4,
+    "constants": 119,
+    "physical_gpu_executed": false,
+    "numeric": "NOT_EVALUATED"
+  },
+  "cases": [
+    "flow",
+    "guard",
+    "trace-error",
+    "cancel",
+    "publish-error",
+    "publish-sha",
+    "publish-scope",
+    "publish-numeric",
+    "publish-live-token",
+    "publish-binding",
+    "publish-path",
+    "publish-many"
+  ],
+  "service_regression": {
+    "natural_exit": 0,
+    "matched_out_recompilations": 0,
+    "compiler_jobs": 2,
+    "test_runner_jobs": 1
+  },
+  "cross_component_elf_count": 3,
+  "target_elf_executed": false,
+  "code_sha256": "b3d9bf022a135fa4b528f68fc49e653ab9f3c649281623d39a5f3d57756b594c",
+  "schema_sha256": "79319f1611265bc2ad131b91642de7ddbe0c30d4b3621ce3a8060e90e1114c89",
+  "weights_sha256": "674069f415d51ce502dd00e579125c0ca8fe6d7e71a71d08cfae457e293e39bc",
+  "diagnostics_default": false,
+  "history": "ORIGINAL_ORT_8105_FAIL_R2_AND_REFERENCE_RETAINED_NO_NEW_NUMERIC_RESULT",
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN_NO_ACCESS",
+  "sd": "NOT_TOUCHED",
+  "error_runs": [
+    "U12-hunet-owner-red-237",
+    "U12-hunet-owner-functional-red-238",
+    "U12-hunet-owner-expanded-240",
+    "U12-owner-output-retention-red-242"
+  ],
+  "remaining": [
+    "U13 Mosaic operators and bounded coverage",
+    "U14-U18 bridge P8 IMAGE and DP adapters",
+    "U19-U20 optimizations and real compiled factories with durable sinks",
+    "U21-U25 validation matching images boot chains fresh whole branch review conditional SD delivery",
+    "Future authorized physical numerical timing visual acceptance"
+  ]
+}

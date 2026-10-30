@@ -1,0 +1,13 @@
+{
+  "scope": "T04_RETAIN_UNTIL_FRESH_EXCLUSIVE_CACHE_APPROVAL_AND_ARCHIVE_VERIFICATION",
+  "image_required_free_bytes": 16106127360,
+  "protected": [
+    "Oct20 matching kernel source/build, Module.symvers and generated headers",
+    "current d6, S8 and Mosaic/HUNet source/model/program/bit/XSA/image bundles",
+    "C graphics and active tasks, existing coordination files and locks",
+    "all raw failure/cancellation/cycle/timing evidence and testdisk recovery",
+    "shared downloads, sstate, SDK/sysroots and unique toolchains"
+  ],
+  "real_release_allowlist": [],
+  "gpu_raw_cycles": null
+}

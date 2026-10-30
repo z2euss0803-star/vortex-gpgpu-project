@@ -1,0 +1,8 @@
+$(OUT)/test_display_hash_reuse: $(OUT)/display/tests/unified/test_display_hash_reuse.o $(U18_OBJ)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) -Wl,--wrap=vxl_hunet_hash -o $@
+$(OUT)/test_raster_cache: $(OUT)/display/tests/unified/test_raster_cache.o $(U18_OBJ)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) -o $@
+$(OUT)/test_scanout_copy: $(OUT)/display/tests/viewer/test_scanout_copy.o $(U18_OBJ)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) -o $@
+$(OUT)/test_kms_copy_regression: $(OUT)/display/tests/viewer/test_kms.o $(U18_OBJ)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) -o $@

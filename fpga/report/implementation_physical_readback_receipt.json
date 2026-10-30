@@ -1,0 +1,172 @@
+{
+  "utc": "2026-10-16T13:18:57.359335+00:00",
+  "scope": "current_whole_gpu_offline_physical_report_readback",
+  "status": "COMPLETED_WITH_OPEN_SIGNOFF",
+  "run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\runs\\20261016T112140123132Z_implementation",
+  "evidence_identity_receipt_sha256": "5f3d4035a362ae2e668f062f31e970a1b373596ed525be0aec3932f6d4837669",
+  "natural_exit_utc": "2026-10-16T13:14:17.787466+00:00",
+  "native_natural_exit": 0,
+  "checkpoint": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\runs\\20261016T112140123132Z_implementation\\artifacts\\top_routed.dcp",
+  "checkpoint_sha256": "f550075ce584a2d2af606ff11e048d0a64c25962aa23e50e37430b4061839439",
+  "report_hashes": {
+    "route_status.rpt": "4431afe176511bb54251b3c2934f419bd969b0d8054cb763b82292a34fe2bea3",
+    "timing_summary.rpt": "9930ad11eeef2a2fa1f576acb00ee3b5192d50861806f9321a50759e606fc6a0",
+    "drc.rpt": "43c8d2f2fef39501a257fe302a71d616ac9a5dadb113b82d803442ea8d50e9f7",
+    "cdc.rpt": "5718ec704aca5e975f3a5777bce6e1bf29a8b64aa859cbf693e7fe4051e56431",
+    "clocks.rpt": "23bb756ad361ec8c3c01aa89754c6cd04df8bf57437f046ff40dca2d574ea2e1",
+    "bus_skew.rpt": "4bd877c17b73db00e86644ee362b327936cd88bcefd5d9f9df6a594d0b922c8e",
+    "exceptions.rpt": "ab88a6fd8957879bcb4d2f29aed48091d577899454ac2b16c1f4311fd161755b",
+    "route_structure.txt": "27b675c939534688f10b904ece86bb2f436ce78014c79efd879f0e50d9845a4c",
+    "utilization_routed.rpt": "9bd06f320d6d02df3ba3078327e93adf8eea0f8937495688421c11b4d297feaa",
+    "utilization_routed_hier.rpt": "1399de7b1371e6d4c0fa629735ed749310c10a39620ba18dfbbbde87d4917620"
+  },
+  "route": {
+    "routable": 432384,
+    "fully_routed": 432384,
+    "routing_errors": 0,
+    "status": "PASS"
+  },
+  "timing_existing_constraints_only": {
+    "status": "PASS",
+    "setup_wns_ns": 0.404,
+    "setup_tns_ns": 0.0,
+    "hold_whs_ns": 0.01,
+    "hold_ths_ns": 0.0,
+    "pulse_wpws_ns": 0.039,
+    "pulse_tpws_ns": 0.0,
+    "all_reported_failing_endpoints": 0,
+    "clk_pl_0_period_ns": 10.312,
+    "generated_config_actual_mhz": 96.968727,
+    "requested_mhz": 100,
+    "not_board_measured": true
+  },
+  "resources": {
+    "CLB LUTs": {
+      "used": 198827.0,
+      "available": 298560.0,
+      "percent": 66.6
+    },
+    "CLB Registers": {
+      "used": 232680.0,
+      "available": 597120.0,
+      "percent": 38.97
+    },
+    "Block RAM Tile": {
+      "used": 235.5,
+      "available": 600.0,
+      "percent": 39.25
+    },
+    "DSPs": {
+      "used": 690.0,
+      "available": 2928.0,
+      "percent": 23.57
+    },
+    "CLB": {
+      "used": 35758.0,
+      "available": 37320.0,
+      "percent": 95.81
+    }
+  },
+  "s8_arrays": {
+    "count": 4,
+    "dsp_each": 64,
+    "dsp_total": 256,
+    "status": "STRUCTURE_VERIFIED_NOT_FUNCTION"
+  },
+  "bus_skew": {
+    "reported_paths": 18,
+    "violations": 0,
+    "minimum_slack_ns": 2.271,
+    "status": "PASS"
+  },
+  "drc_rules": [
+    {
+      "rule": "AVAL-318",
+      "severity": "Warning",
+      "count": 64
+    },
+    {
+      "rule": "DPIP-2",
+      "severity": "Warning",
+      "count": 229
+    },
+    {
+      "rule": "DPOP-3",
+      "severity": "Warning",
+      "count": 93
+    },
+    {
+      "rule": "DPOP-4",
+      "severity": "Warning",
+      "count": 93
+    },
+    {
+      "rule": "RTSTAT-10",
+      "severity": "Warning",
+      "count": 1
+    },
+    {
+      "rule": "AVAL-155",
+      "severity": "Advisory",
+      "count": 320
+    }
+  ],
+  "calibration_chain": {
+    "async_reg_both": true,
+    "same_site": "SLICE_X27Y95",
+    "stage0_load_only_stage1": true,
+    "stage0_to_stage1_timed_paths": 1,
+    "slack_ns": 9.823,
+    "scope": "specific chain only, not all CDC/MTBF"
+  },
+  "open_items": [
+    {
+      "id": "CLOCK_REQUEST_ACTUAL",
+      "status": "OPEN",
+      "evidence": "clocks.rpt; generated PS XCI requested100MHz actual96.968727MHz, period10.312ns",
+      "boundary": "No 100MHz physical acceptance or speedup claim; PS setting preserved"
+    },
+    {
+      "id": "DDR_RESET_OUTPUT",
+      "status": "OPEN",
+      "evidence": "timing_summary.rpt no_output_delay c0_ddr4_reset_n",
+      "boundary": "No silent waiver, output delay insertion or false path"
+    },
+    {
+      "id": "EXCEPTION_COVERAGE",
+      "status": "OPEN",
+      "evidence": "exceptions.rpt positions4,5,33,34,35 have0coverage; other partial coverage rows",
+      "boundary": "Coverage file does not identify complete per-exception provenance; no blanket signoff"
+    },
+    {
+      "id": "CDC15_MEMORY_FABRIC",
+      "status": "OPEN",
+      "count": 1213,
+      "boundary": "All report warning rows reference memory_fabric; not automatically safe, no inherited vendor/baseline waiver"
+    },
+    {
+      "id": "DRC_WARNINGS",
+      "status": "OPEN",
+      "evidence": "480Warning/320Advisory: AVAL-318=64, DPIP-2=229, DPOP-3=93, DPOP-4=93, RTSTAT-10=1",
+      "boundary": "No Error/Critical is not warning waiver; AVAL318 PCIN placement/tieoff caution retained"
+    },
+    {
+      "id": "BASELINE_OPEN",
+      "status": "OPEN",
+      "boundary": "Original W4 12Critical/resetexception/ORT8081 unchanged; not independently closed by current candidate reports"
+    },
+    {
+      "id": "FUNCTION_BOARD",
+      "status": "WAIVED_NOT_RUN_AND_NOT_RUN",
+      "boundary": "New functional simulation waived; no board/runtime clock or actual performance verified"
+    }
+  ],
+  "full_physical_signoff": "OPEN_NOT_PASS",
+  "automatic_implementation_admission": "REFUSED_PRESERVED",
+  "functional_simulation": "WAIVED_NOT_RUN",
+  "board": "NOT_RUN",
+  "performance_improvement": "NOT_MEASURED",
+  "monitor": "PAUSED_NO_ACTIVE_EDA",
+  "independent_review": "evidence/implementation_independent_review.json",
+  "independent_review_sha256": "ca93aed1678384437beb28ca13f9bd753e341fd58a1c8655613b9f4c1c396e0f"
+}

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "header_bytes": 64,
+  "rule_bytes": 64,
+  "max_rules": 64,
+  "header_u32": ["magic", "version", "bytes", "args_bytes", "field_count", "code_gpu", "rodata_gpu", "crt_gpu", "crt_bytes", "stack_gpu", "stack_bytes", "provider_flags", "reserved0", "reserved1", "reserved2", "reserved3"],
+  "rule_u32": ["kind", "arg_offset", "data_ref", "access", "alignment", "element_bytes", "count_offset0", "count_offset1", "count_offset2", "relative_arg_offset", "constant_bytes", "min_value", "max_value", "reserved0", "reserved1", "reserved2"],
+  "kinds": {"SCALAR32": 1, "ADDRESS32": 2, "ZERO_RANGE": 3},
+  "absent_offset": 4294967295,
+  "coverage": "every argument word covered exactly once; unused metadata zero",
+  "scalar": "one u32 or constant_bytes/4 consecutive words, each within min..max",
+  "address": "zero placeholder replaced by admitted object GPU32 address + ref.offset + optional relative scalar",
+  "extent": "constant_bytes + element_bytes * product(validated scalar counts); overflow and reference bounds rejected",
+  "counts": "only SCALAR32 fields may supply counts or relative offset",
+  "code_rodata_crt_stack": "explicit trusted fixed GPU32 locations, independently checked against address pools, reservations and live objects; never inferred from file offsets",
+  "private_state": "args, CRT and stack explicitly zeroed and read back before CPU aliases are sealed",
+  "job_reference_count": "8 DATA refs; args and code/rodata/private program objects are separate pinned references",
+  "gpu_raw_cycles": null
+}

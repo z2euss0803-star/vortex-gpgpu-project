@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "endian": "little",
+  "catalog_path": "/lib/firmware/vxl/catalog-v1.bin",
+  "program_path": "/lib/firmware/vxl/programs/<entry_id_hex>.bin",
+  "max_catalog_bytes": 65536,
+  "max_entries": 16,
+  "header_bytes": 64,
+  "entry_bytes": 512,
+  "max_code_plus_rodata_bytes": 8388608,
+  "max_args_bytes": 4096,
+  "entry_id": "SHA256(entry with entry_id zeroed || schema)",
+  "payload_sha": "SHA256(all bytes following catalog header, including finalized entry_id)",
+  "code_and_rodata_offsets": "relative to the separate program container; schema offset is relative to catalog start",
+  "reloc_count": "total typed schema rule count, including scalars and reserved zeros",
+  "files": "root-owned regular files, no group/other write, opened with O_NOFOLLOW",
+  "update": "empty device with no owner or references; provider retains private bytes for lifetime",
+  "trust": "administrator controlled code, not an untrusted GPU code sandbox",
+  "hardware_declaration": "full provider identity; not independent measurement of loaded PL",
+  "working_set": {"S8": {"NN": 5, "IMAGE": 10}, "P8": 4},
+  "working_set_note": "catalog entries do not promise simultaneous residency; fixed-PC programs require prior completed/retired unload before another overlapping code allocation"
+}

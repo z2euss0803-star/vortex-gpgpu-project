@@ -1,0 +1,19 @@
+{
+  "contract": "cnn-i32-8x8-v1", "version": 1,
+  "dtype": "int32", "byte_order": "little", "batch": 1,
+  "input_layout": "NCHW", "weight_layout": "OIHW",
+  "layers": [
+    {"program_id":2,"name":"conv","kernel":[3,3],"stride":1,"padding":0,"flip_kernel":false,"counts":[64,18,2,72]},
+    {"program_id":3,"name":"relu","counts":[72,0,0,72]},
+    {"program_id":4,"name":"pool","kernel":[2,2],"stride":2,"counts":[72,0,0,18]},
+    {"program_id":5,"name":"fc","counts":[18,36,2,2]}
+  ],
+  "code":{"gpu":"0x10000000","bytes":4096,"zero_tail":true},
+  "args":{"gpu":"0x10010000","bytes":64,"magic":"0x434e4e31","version":1},
+  "tensor_elements":{"x":64,"wconv":18,"bconv":2,"z":72,"r":72,"p":18,"wfc":36,"bfc":2,"y":2},
+  "guard":{"bytes":64,"left":"0x55aa55aa","right":"0xaa55aa55","padding":"0xc0def00d","poison":"0xdeadbeef"},
+  "arithmetic":{"accumulator":"int32","cpu_reference":"checked_int64","max_abs_conv":110,"max_abs_fc":5942,"comparison":"bit_exact"},
+  "timing":{"clock":"CLOCK_MONOTONIC","unit":"ns","first":1,"warmup":3,"measured":20,"p95":"nearest_rank","device_cycles":"unsupported"},
+  "hardware_change":false,
+  "current_evidence_scope":"CONTRACT_ONLY_NOT_GPU"
+}

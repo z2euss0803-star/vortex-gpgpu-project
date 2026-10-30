@@ -1,0 +1,14 @@
+#!/bin/sh
+# BusyBox on this target supports addr add, not addr replace.
+case "$1" in
+ start)
+  ip link set dev eth0 up || exit $?
+  if ip -4 addr show dev eth0 | grep -q 'inet 192.168.13.10/24'; then
+   exit 0
+  fi
+  ip addr add 192.168.13.10/24 dev eth0
+  ;;
+ status) ip -4 addr show dev eth0 ;;
+ stop) exit 0 ;;
+ *) echo "Usage: $0 {start|status|stop}" >&2; exit 2 ;;
+esac

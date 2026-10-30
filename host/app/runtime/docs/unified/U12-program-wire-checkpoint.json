@@ -1,0 +1,49 @@
+{
+  "task": "U12",
+  "state": "CONTROLLED_PROGRAM_WIRE_CHECKPOINT_NOT_FULL_TASK",
+  "runs": [
+    {
+      "run": "U12-wire-and-rodata-final-normal-075",
+      "input_files_checked_current": 1515,
+      "manifest_sha256": "50c4762b9d2463852747f284ae72d03ec1f4c13aef7e8536216dedeed45d989e",
+      "natural_exit": 0
+    },
+    {
+      "run": "U12-wire-and-rodata-final-sanitize-076",
+      "input_files_checked_current": 1515,
+      "manifest_sha256": "50c4762b9d2463852747f284ae72d03ec1f4c13aef7e8536216dedeed45d989e",
+      "natural_exit": 0
+    },
+    {
+      "run": "U12-wire-and-rodata-final-aarch64-077",
+      "input_files_checked_current": 1515,
+      "manifest_sha256": "50c4762b9d2463852747f284ae72d03ec1f4c13aef7e8536216dedeed45d989e",
+      "natural_exit": 0
+    }
+  ],
+  "rv32_run": "U12-hunet-rv32-callback-audit-071",
+  "program": 65552,
+  "code_sha256": "b3d9bf022a135fa4b528f68fc49e653ab9f3c649281623d39a5f3d57756b594c",
+  "elf_sha256": "ab45885abdae5c51ff0ebc21963a88fa2c97cbd86b1023401bf812eee8c1a6d0",
+  "schema_sha256": "79319f1611265bc2ad131b91642de7ddbe0c30d4b3621ce3a8060e90e1114c89",
+  "args_bytes": 128,
+  "refs": 8,
+  "frozen_gpu_jobs": 103,
+  "descriptors": 314,
+  "rv32_static_stack_bound": 960,
+  "per_hart_stack_guarded_bytes": 8128,
+  "core_driver_uapi_unchanged_files": 153,
+  "primary_archive": "D:/codex-unified-gpu-20261021/evidence/U12-controlled-program-and-wire-final/raw-and-artifacts.tar.gz",
+  "archive_sha256": "b03e64ee6829114cba2f154aeeee7e6880ab711fd65a3884a44222d9db0d58bf",
+  "verified_archive_members": 89,
+  "gpu_raw_cycles": null,
+  "board": "NOT_RUN",
+  "image": "NOT_BUILT",
+  "sd": "NOT_TOUCHED",
+  "remaining": [
+    "registered operator implementation",
+    "full103GPU+13CPU graph/model migration",
+    "production factory U20",
+    "complete application numeric/performance gates"
+  ]
+}

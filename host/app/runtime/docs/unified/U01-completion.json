@@ -1,0 +1,37 @@
+{
+  "task": "U01",
+  "status": "COMPLETE",
+  "base": "42f3ae655f9d229d99bcb0f98701f5944868105b",
+  "baseline_files": 4961,
+  "p8_source_files": 473,
+  "old_tasks_mapped": 62,
+  "dirty_reference_only": 7,
+  "A_tests": 5,
+  "Ubuntu_tests": 5,
+  "Ubuntu_baseline_targets": [
+    "test-contract",
+    "test-uapi",
+    "test-memory",
+    "test-jobs",
+    "test-probe",
+    "test-copy",
+    "test-submit",
+    "test-runtime"
+  ],
+  "natural_exit": 0,
+  "source_archive_sha256": "65f477fbc430cfaac126ba4a37eb066278b523e87efc132abf30fad8fb1bfadd",
+  "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "cross": "NOT_RUN",
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "errors": [
+    {
+      "event": "U01_IMPORT_RAW_SHA_DIFFERENCE",
+      "cause": "Git CRLF checkout differs from committed LF blob in four JSON files",
+      "resolution": "Both hashes recorded; only committed Git bytes imported; normalized equality verified",
+      "evidence": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U01-import-byte-difference.json"
+    }
+  ]
+}

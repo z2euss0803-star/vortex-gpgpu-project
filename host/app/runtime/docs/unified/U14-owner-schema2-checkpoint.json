@@ -1,0 +1,64 @@
+{
+  "scope": "U14_GENERIC_C_SCHEMA_AND_SHARED_OWNER_HOST_PROTOCOL_COMPONENT_NOT_FULL_TASK",
+  "source_files": 1763,
+  "canonical_manifest_sha256": "671a3793a3d634509943e1b5569cd99e36c8c5aeb7bd6762fc0ce7d9b0031ca2",
+  "runs": [
+    "U14-image-predicate-final-normal-139",
+    "U14-image-predicate-final-sanitize-140",
+    "U14-image-predicate-final-cross-141",
+    "U14-image-owner-schema2-normal-142",
+    "U14-image-adapter-schema2-normal-143",
+    "U14-image-owner-schema2-sanitize-144",
+    "U14-image-owner-schema2-cross-145",
+    "U14-image-owner-schema2-thread-146",
+    "U14-image-adapter-schema2-sanitize-153",
+    "U14-image-adapter-schema2-cross-154",
+    "U14-image-adapter-schema2-thread-155"
+  ],
+  "catalog_sha256": "899024b44c627c45908b974fe0ce560b2d44eaf80eedd7f31ab4d6d05fc55389",
+  "archives": [
+    {
+      "members": 422,
+      "logical_bytes": 178528549,
+      "archive_bytes": 36357706,
+      "sha256": "44d9a5dbf26edcaffe7e532d3d507604a9bfcf7831b8bf228a912958ddce55a0",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-schema2-matrix-150-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2101669888,
+      "verified_members": 422,
+      "members_sha256": "c14ccdcb7394fafab6ede0c63876350d489fb55f93ff2d67239017cb229ea7a9",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-schema2-matrix-150\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 57,
+      "logical_bytes": 17847211,
+      "archive_bytes": 4836522,
+      "sha256": "5d940f22647674984539bb287056e8d3a8a73eb5d8d086f4553dd975156c09f0",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-schema2-adapter-matrix-156-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2274037760,
+      "verified_members": 57,
+      "members_sha256": "ebc5a1d1b386962c055cba9012acfa265e2f483a2d8cb74991cdec8e6129a6eb",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-schema2-adapter-matrix-156\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    }
+  ],
+  "old_schema1": "RETAINED",
+  "old_uapi": "UNCHANGED",
+  "original_gpu_code": "UNCHANGED",
+  "gpu_raw_cycles": null,
+  "board": "NOT_RUN",
+  "image": "NOT_BUILT",
+  "pending": [
+    "Shared owner91 frozen arithmetic outputs",
+    "Fresh impacted NN regressions and actual matched kernel compile",
+    "U14 final receipt and U15..U25 real service/image closure"
+  ]
+}

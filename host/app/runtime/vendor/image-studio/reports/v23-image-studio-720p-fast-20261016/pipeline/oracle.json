@@ -1,0 +1,29 @@
+{
+  "board_run": false,
+  "actual_C_pipeline": true,
+  "actual_RV32_words": true,
+  "width": 1280,
+  "height": 720,
+  "results": [
+    {
+      "style": 1,
+      "sha256": "fceb5e7c853ccf830a4033898acd9d6ad1fcd36f7b9d8575200a743bb9892d2f",
+      "pixel_differences": 0
+    },
+    {
+      "style": 2,
+      "sha256": "355cc9bbbb3ffcbc72ab210196096133d26eb541e57ff089662a88c542a99ac6",
+      "pixel_differences": 0
+    },
+    {
+      "style": 3,
+      "sha256": "df3750995c1d0bedb282c24fd3b39da6acb26af7ca7a294da387c863bb2694d2",
+      "pixel_differences": 0
+    },
+    {
+      "style": 4,
+      "sha256": "88c480b0bb2581221170b6ea5cd05c254b19be2cb3a161fdfe460f3858886176",
+      "pixel_differences": 0
+    }
+  ]
+}

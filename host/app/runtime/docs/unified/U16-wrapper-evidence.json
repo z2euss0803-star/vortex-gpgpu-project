@@ -1,0 +1,37 @@
+{
+  "scope": "READ_ONLY_RTL_SOURCE_NOT_NEW_SIMULATION_OR_BOARD",
+  "files": [
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\inputs\\w4-20261016\\HUNet_W4\\hardware\\w4\\rtl\\gpgpu_ctrl.sv",
+      "sha256": "ffadc943f82be9882a620ae58b420ae28c943d026e8eaa5d50b5652302903230",
+      "bytes": 10801
+    },
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\inputs\\w4-20261016\\HUNet_W4\\hardware\\w4\\rtl\\gpgpu_subsystem.sv",
+      "sha256": "07b83e2e0aefc98ccb39d3f5253f5fcad0467185c0625f95803083868fcc6867",
+      "bytes": 10388
+    },
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\inputs\\w4-20261016\\HUNet_W4\\hardware\\w4\\build\\compat_rtl\\Vortex_axi.sv",
+      "sha256": "e96b8bbef9dcec9194fcfa91d7ad494fea7729b66e4ee781cbac9b955225c67d",
+      "bytes": 11442
+    },
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\inputs\\w4-20261016\\HUNet_W4\\hardware\\w4\\build\\compat_rtl\\Vortex.sv",
+      "sha256": "26f071d086d58f244478760c5819538f168b7e59303ddace10f295c253c565a7",
+      "bytes": 9694
+    },
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\inputs\\w4-20261016\\HUNet_W4\\hardware\\w4\\build\\compat_rtl\\VX_cluster.sv",
+      "sha256": "030f3e542b9a9ab2f3211d2887e5c09de4202500efe26529c5eb64ca00c50192",
+      "bytes": 5196
+    },
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\inputs\\w4-20261016\\HUNet_W4\\hardware\\w4\\build\\compat_rtl\\VX_socket.sv",
+      "sha256": "68606ac0b7c93fbb06aaf87b09d70ad6339b67879888ebf75e4b63c780129685",
+      "bytes": 9992
+    }
+  ],
+  "gpu_raw_cycles": null,
+  "proof": "Vortex_axi busy->Vortex OR per_cluster_busy->VX_cluster OR per_socket_busy->VX_socket OR per_core_busy; gpgpu_ctrl RUN->DRAIN after !gpu_busy then8 quiet cycles->DONE/jobs+1; quiet includes memory AW/W/AR and responses and TEX pending. Static frozen source review, not new RTL or board result."
+}

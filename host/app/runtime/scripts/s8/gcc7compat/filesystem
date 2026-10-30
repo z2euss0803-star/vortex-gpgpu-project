@@ -1,0 +1,8 @@
+/* Ubuntu native GCC7 test-only adapter. Target builds never add this path. */
+#pragma once
+#if defined(__GNUC__) && __GNUC__ < 8
+#include <experimental/filesystem>
+namespace std { namespace filesystem = experimental::filesystem; }
+#else
+#include_next <filesystem>
+#endif

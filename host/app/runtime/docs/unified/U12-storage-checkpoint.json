@@ -1,0 +1,106 @@
+{
+  "task": "U12",
+  "state": "CONTROLLED_STORAGE_COMPONENT_CHECKPOINT_NOT_NATIVE_DISPATCH_OR_TASK_COMPLETE",
+  "base_commit": "a7b7154daac475367187b58e17d1598774d5c19c",
+  "verified": [
+    {
+      "run": "U12-storage-final-normal-202",
+      "natural_exit": 0,
+      "current_raw_input_rows": 1555,
+      "manifest_sha256": "bc3cdef4c69b597ca0ca6a72da91c90a9c4803b96fd86d6d43ff5605aeb4a4a6",
+      "command_exits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "run": "U12-storage-final-sanitize-206",
+      "natural_exit": 0,
+      "current_raw_input_rows": 1555,
+      "manifest_sha256": "bc3cdef4c69b597ca0ca6a72da91c90a9c4803b96fd86d6d43ff5605aeb4a4a6",
+      "command_exits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "run": "U12-storage-final-aarch64-211",
+      "natural_exit": 0,
+      "current_raw_input_rows": 1555,
+      "manifest_sha256": "bc3cdef4c69b597ca0ca6a72da91c90a9c4803b96fd86d6d43ff5605aeb4a4a6",
+      "command_exits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "old_core_driver_uapi_unchanged": 153,
+  "frozen_device_sources_unchanged": 8,
+  "program_code_sha256": "b3d9bf022a135fa4b528f68fc49e653ab9f3c649281623d39a5f3d57756b594c",
+  "schema_sha256": "79319f1611265bc2ad131b91642de7ddbe0c30d4b3621ce3a8060e90e1114c89",
+  "gpu_raw_cycles": null,
+  "storage_scope": "REAL_C_ALLOCATOR_COPY_PROGRAM_LOADER_RELOCATION_WITH_HOST_MEMORY_NOT_BOARD_DMA",
+  "program_scope": "FROZEN_CODE_BYTES_LOADED_NOT_EXECUTED",
+  "internal_unused_prefix_bytes": 8388608,
+  "data_payload_bytes": 28456256,
+  "backing_requested_bytes": 36844864,
+  "physical_data_objects": 1,
+  "guarded_tensor_views": 236,
+  "immutable_constants": 119,
+  "workspaces": 103,
+  "marker_graph_nodes": 116,
+  "marker_gpu_nodes": 103,
+  "marker_cpu_boundaries": 13,
+  "actual_gpu_starts": 0,
+  "actual_math_executed": false,
+  "actual_board_allocation": false,
+  "guard_writes": 678,
+  "guard_reads": 57176,
+  "model_id": "c9fbc4c08fa0a5623c0b81b87a14b0f5e3b3fcced32c20257f12c28fb86f7791",
+  "cross_elf_count": 5,
+  "target_elf_executed": false,
+  "archives": {
+    "U12-storage-final-normal": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-storage-final-normal\\raw-and-artifacts.tar.gz",
+      "sha256": "72840c83310c56c5b99e899f79219ebee888c0120442b29b2eba52e49e41caa4",
+      "verified_members": 231
+    },
+    "U12-storage-final-sanitize": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-storage-final-sanitize\\raw-and-artifacts.tar.gz",
+      "sha256": "c15ff91480e79ea0301c61fcfa761d75e7ef4ae07153d1db9d66139f3cfd09c9",
+      "verified_members": 190
+    },
+    "U12-storage-final-target": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-storage-final-target\\raw-and-artifacts.tar.gz",
+      "sha256": "e71bd6943a44067f9c624142fc11b9ca375ac0ce0682b4b747e014b8fdb400fa",
+      "verified_members": 201
+    }
+  },
+  "error_runs": [
+    "U12-storage-functional-red-190",
+    "U12-storage-provider-red-200"
+  ],
+  "new_threads": false,
+  "tsan": "NO_NEW_RUN_NO_NEW_THREADS_EXISTING_POOL_UNCHANGED",
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "numeric": "NO_NEW_INFERENCE_RESULT_HISTORICAL_ORT_FAIL_UNCHANGED",
+  "sd": "NOT_TOUCHED",
+  "performance_note": "57176 host guard reads are not a measured board DMA/inference cost; preserve checks and measure separately before optimization",
+  "pending": [
+    "Trusted per-node argument/ref lowering and program catalog entry binding",
+    "Deferred program residency/eviction across queued requests and old families",
+    "Native shared CPU pool and post-ACK guard hooks with U20 service factories",
+    "U13-U25 application adapters whole branch review matching images and boot-chain audits",
+    "Future authorized board numerical visual and performance gates"
+  ]
+}

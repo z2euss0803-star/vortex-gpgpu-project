@@ -1,0 +1,66 @@
+{
+  "base": "65157a0ef279eaebae42f2fefb0c9bceafc297d8",
+  "scope": "UBUNTU_RUNTIME_CONTROL_NOT_BOARD_OR_NATIVE_GPU_EXECUTOR",
+  "gpu_raw_cycles": null,
+  "failures": [
+    {
+      "run": "U10-runtime-red-019",
+      "natural_exit": 2,
+      "source_archive_sha256": "b5b2645da8a26c8859320f1c4379f37ce43e21fdef0ddbe40d408168526cfe04",
+      "class": "EXPECTED_FUNCTIONAL_RED",
+      "symptom": "compiled Runtime scaffold fails READY without execution assertion",
+      "verified_by": "U10-runtime-final-normal-026"
+    },
+    {
+      "run": "U10-runtime-green-020",
+      "natural_exit": 2,
+      "source_archive_sha256": "00f1264919d94d513ca9aa2563c25be386fbb2649df7e0adc165070ff4e58895",
+      "class": "BUILD_FAILURE",
+      "symptom": "GCC7 Werror misleading-indentation at admission source check",
+      "fix": "explicit braces; no warning suppression",
+      "verified_by": "U10-runtime-green-021"
+    },
+    {
+      "run": "U10-runtime-boundary-red-022",
+      "natural_exit": 2,
+      "source_archive_sha256": "a03dfc31ab13f348bba254ae16aa7c389709409ec7b4c9299ed803369492053a",
+      "class": "REPRODUCED_BOUNDARY_FAILURES",
+      "symptoms": [
+        "bad final output leaves dispatch/admission open",
+        "late cancellation changes visible state after raw completion",
+        "queued expiry absent from Runtime visible state",
+        "first-error query is still ENOSYS"
+      ],
+      "fixes": [
+        "latch FAULTED and pin raw pending outcome before returning identity error",
+        "preserve visible pending delivery for terminal scheduler state",
+        "persist queued expiry as control-only REQUEST_STATE event; no invented GPU completion",
+        "retain first error category/code/detail across successful evidence recovery"
+      ],
+      "verified_by": [
+        "U10-runtime-boundary-green-024",
+        "U10-runtime-final-normal-026",
+        "U10-runtime-final-sanitize-027",
+        "U10-runtime-final-tsan-029"
+      ]
+    },
+    {
+      "run": "U10-runtime-aarch64-030",
+      "natural_exit": 1,
+      "class": "RESOURCE_REFUSAL_BEFORE_COMPILER",
+      "source_archive_sha256": "6423d29c0fa5e5204b870942b2206e6e62e74aadfd4804aff4c7c6bab81d90c7",
+      "symptom": "fresh resource gate refused available RAM/disk before compiler startup",
+      "fix": "verify every A source archive member then release only two exact B duplicate transfer files; no source/model/old error deletion",
+      "verified_by": "U10-runtime-aarch64-032"
+    }
+  ],
+  "intermediate_success": "U10-runtime-green-021 flow/limits/active-cancel natural0 before boundary fixes",
+  "full_u10_complete": false,
+  "final_verified_runs": [
+    "U10-runtime-final-normal-026",
+    "U10-runtime-final-sanitize-027",
+    "U10-runtime-final-tsan-029",
+    "U10-runtime-aarch64-032"
+  ],
+  "native_executor_and_daemon_integrated": false
+}

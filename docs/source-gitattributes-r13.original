@@ -1,0 +1,8 @@
+* text=auto eol=lf
+vendor/** -text
+vendor/image-studio/** whitespace=cr-at-eol
+docs/*.patch whitespace=-blank-at-eol
+evidence/** -text -whitespace
+tests/hunet_opt/fixtures/c0-timing/** -text -whitespace
+data/demo/*.rgb binary
+vendor/p8/** whitespace=cr-at-eol

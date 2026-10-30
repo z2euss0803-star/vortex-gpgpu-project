@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"DemoRunV1",
+  "type":"object",
+  "required":["schema","run_id","app","scope","boot_id","generation","build_id","identities","diagnostics","shape","state","numeric_class","cycle_valid","timing_valid","raw_cycles","artifacts"],
+  "properties":{
+    "schema":{"const":1},"run_id":{"type":"string","pattern":"^[0-9a-f]{32}$"},
+    "app":{"enum":["mosaic","hunet"]},"scope":{"enum":["OFFLINE","MOCK","REAL_BOARD"]},
+    "generation":{"type":"integer","minimum":1,"maximum":4294967295},
+    "diagnostics":{"type":"boolean"},"cycle_valid":{"type":"boolean"},"timing_valid":{"type":"boolean"},
+    "raw_cycles":{"type":["integer","null"],"minimum":0,"maximum":18446744073709551615}
+  },
+  "$comment":"Normative shape, artifact, identity and evidence invariants are enforced by demo/contracts.py and demo/json.c. A schema check alone does not admit a run."
+}

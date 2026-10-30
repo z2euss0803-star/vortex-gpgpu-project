@@ -1,0 +1,30 @@
+{
+  "task": "U12",
+  "state": "MATH_COMPONENT_CHECKPOINT_NOT_TASK_COMPLETE",
+  "base": "edb70daedef355817fd98f3e8e0fc7434e7ff501",
+  "runs": {
+    "U12-math-boundary-normal-006": 1487,
+    "U12-math-boundary-sanitize-007": 1487
+  },
+  "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-math-component\\raw-and-artifacts.tar.gz",
+  "archive_sha256": "5c428a3a000c296eb0a719f51f8af1411bea784cdf16129dfe5e161a2d48000e",
+  "members": 27,
+  "pack_stages": 35,
+  "descriptors": 314,
+  "pack_values": 3266688,
+  "normal_natural_exit": 0,
+  "sanitizer_natural_exit": 0,
+  "scope": "ACTUAL_TYPED_MATH_SOURCE_VERSUS_FROZEN_HOST_FUNCTIONS_NOT_GPU",
+  "gpu_raw_cycles": null,
+  "cross": "NEW_U12_CODE_PENDING",
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "pending": [
+    "scalar math/source equivalence and actual RV32 entry/FCSR/library binding",
+    "HUNet operator/model graph registry and immutable package",
+    "13 shared-pool GELU GPU/CPU dependency commit/retirement tests",
+    "legacy numeric and historical output classification and matching cross",
+    "U20 actual arena/provider/adapters/production registration"
+  ]
+}

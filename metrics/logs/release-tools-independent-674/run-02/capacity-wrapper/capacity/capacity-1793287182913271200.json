@@ -1,0 +1,11 @@
+{
+  "baseline_bytes": 43437066041,
+  "baseline_sha256": "c852a46a44a1f4cad7ad7ab0d9cb6d661d32cbbe5c0e945269768b6d37535d69",
+  "cap": 50000000000,
+  "files": 3,
+  "logical_bytes_upper_bound": 43437066107,
+  "new_subtree_bytes": 66,
+  "no_subtraction": true,
+  "root": "G:\\s8_software_r5_20261028\\software-r13-performance-633\\evidence\\release-tools-independent-674\\run-02\\capacity-fixture",
+  "scope": "NATIVE_CONSERVATIVE_BASELINE_PLUS_ENTIRE_R13_SUBTREE"
+}

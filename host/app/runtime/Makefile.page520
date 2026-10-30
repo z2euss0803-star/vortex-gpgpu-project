@@ -1,0 +1,6 @@
+include Makefile.unified
+PAGE520_LINK = $(OUT)/nn-native/unified/service/native_result_view.o $(OUT)/nn-native/unified/service/sealed_assets.o $(OUT)/nn-native/unified/service/native_files.o $(filter-out $(OUT)/display/unified/service/result.o,$(U18_OBJ)) $(RUNTIME_OBJECTS) $(OUT)/nn/nnrt/package/canonical.o
+$(OUT)/test_hunet_page_view: $(OUT)/nn-native/tests/unified/test_hunet_page_view.o $(PAGE520_LINK)
+	$(CXX) $(UXFLAGS) $(sort $^) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+$(OUT)/test_native_result_view520: $(OUT)/nn-native/tests/unified/test_native_result_view520_legacy.o $(PAGE520_LINK)
+	$(CXX) $(UXFLAGS) $(sort $^) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@

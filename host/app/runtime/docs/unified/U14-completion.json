@@ -1,0 +1,702 @@
+{
+  "task": "U14",
+  "state": "COMPLETE_OFFLINE_COMPONENT_NOT_FULL_SERVICE",
+  "base": "a7908fb32934180a024964543c2921149bee5e5b",
+  "implementation_head": "f90ebd71c663748939fe4318090f21643ca38f2f",
+  "source_files": 1766,
+  "canonical_manifest_sha256": "3c699f995d715886bf5f40a88007d41c52a8c4342db1244781aa00e868ff6cd4",
+  "final_runs": [
+    "U14-image-owner-pixels-normal-164",
+    "U14-image-owner-pixels-sanitize-168",
+    "U14-owner-pixels-cross-171",
+    "U14-hunet-schema2-regression-172",
+    "U14-mosaic-schema2-regression-173",
+    "U14-matched-kernel-schema2-174",
+    "U14-final-named-pipeline-182",
+    "U14-final-owner-faults-184"
+  ],
+  "output_sha_count": 91,
+  "outputs": [
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-3-p0.rgba",
+      "bytes": 147456,
+      "sha256": "5365e53e01ccd5cffea1d16cbf426e9f98c9ec58acbc3c7bf758e86895a9152c"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-3-p1.rgba",
+      "bytes": 147456,
+      "sha256": "4f7d3a137c40de85eeeac6dd3a93c45ab5ea614f530ca329d1d48ce51fe43899"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-3-p2.rgba",
+      "bytes": 147456,
+      "sha256": "c95df94baebe1d941bc4d901aa0f55c6d14fc328bd7b55098a4b38a15015188f"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-3-p3.rgba",
+      "bytes": 147456,
+      "sha256": "5ca0e2f28fdca9e538ddaa1e8c0e3bf650f96fc1fd5a6b6be4ddb073b736fcfc"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-3-p4.rgba",
+      "bytes": 147456,
+      "sha256": "9b572bce9e08f9b011c49867825fa7b9389e35b8cde213371ea8baf61d26e283"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-3-p5.rgba",
+      "bytes": 147456,
+      "sha256": "06d69cdb972b12c74d60f3497172627e3aa22a8de61dfed5162eb2efdda3f0cb"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-3-p6.rgba",
+      "bytes": 147456,
+      "sha256": "2ee4cf46def3d03ec38f1c30e0c570708dddd867bde39bc410ea9f16979078cc"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-2-p0.rgba",
+      "bytes": 147456,
+      "sha256": "4b6ef79f5fc6e261f6cb092a7d7da9786e114c445bef1cd8a2506704946a5868"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-1-p0.rgba",
+      "bytes": 147456,
+      "sha256": "b4fd27279b2f87013403a4be697557d3665cc26fb72eb88a5a033512595b3ebf"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-1-p1.rgba",
+      "bytes": 147456,
+      "sha256": "3d6cc12759d10801f41f759fdf6588caa1e0c6ed7ec6a78dff22f93f07381f35"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-1-p2.rgba",
+      "bytes": 147456,
+      "sha256": "bb023169af79d966aaf01f0d7ee8fa4f858443a95caa3b3bb02aabe2d215bab5"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-1-p3.rgba",
+      "bytes": 147456,
+      "sha256": "78f89f6a018fe8d6876f4590c7d017e933fc9faf0c2351a2a1f33438014bcb62"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-1-p4.rgba",
+      "bytes": 147456,
+      "sha256": "922de7bee731fd14d428bcfa1512f71493e630a49193a7544cb6566e9e085f92"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-1-p5.rgba",
+      "bytes": 147456,
+      "sha256": "5b0b31a068a93fbcc827bcd08ff90ae9ecec0ab4be3e41423e079ac18d4da000"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-1-p6.rgba",
+      "bytes": 147456,
+      "sha256": "429c27b3650aa33b68e984fa74923224cb8fc58e5d8594efde9d2fb4e062a50d"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p0.rgba",
+      "bytes": 147456,
+      "sha256": "dcdb6a7ead1d2a611f7410f336bee248011b5747d5ffa06cd545bcb031e6590f"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p1.rgba",
+      "bytes": 147456,
+      "sha256": "fb7fc612a05557beccb5631c3a83d07aaff33a4b3c41f636cc82a7c77c3fa36d"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p2.rgba",
+      "bytes": 147456,
+      "sha256": "a6a127df36714f7e118e67fb8dc2bab49b74fe467cb7d8938b4d15f3fb6530e6"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p3.rgba",
+      "bytes": 147456,
+      "sha256": "09a0b03fe63c9f0bdcad2d55ee00cccf8287914a2ef256e0b6a3212a86df2c5c"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p4.rgba",
+      "bytes": 147456,
+      "sha256": "f9f557ef35c160ec8e501be89d2a6709044b395fa5401feb6a24c08040918e5f"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p5.rgba",
+      "bytes": 147456,
+      "sha256": "f354d8c02da8c6b21bc19e981cf6e2e7477cf019fcd23a387f6b1ab7be49db82"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p6.rgba",
+      "bytes": 147456,
+      "sha256": "a6e9835aa8827604bc43ef69ee857787eba0ada8f8c9dbaf3f1bf52d8a4af781"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p0-b2.rgba",
+      "bytes": 147456,
+      "sha256": "3b099dec6e3b1a235a38907a99c6b0a2ad674d7c01a7158c2a9cf28ce2b81255"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p1-b2.rgba",
+      "bytes": 147456,
+      "sha256": "c6814a49a84f3ccb9913c2619dda12c05cf0bdf6d4761593bd45a9ce9dacc548"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p2-b2.rgba",
+      "bytes": 147456,
+      "sha256": "b5ed654da5813598e7ba176ced681bfaab2600ee42f25bfb6d9d4cb09d98facf"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p3-b2.rgba",
+      "bytes": 147456,
+      "sha256": "5324e25aa01d91d05b2a44dd064cb4d6f6f5793dd0caaa0eceed9fb64419e3e3"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p4-b2.rgba",
+      "bytes": 147456,
+      "sha256": "4c8339b747fc82ab2f2fef81cfac6dbc5109e627739dcb2a08d7027b42760052"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p5-b2.rgba",
+      "bytes": 147456,
+      "sha256": "8e639736e7228a857e31f6a66e8810bd966118ea9a60290de569ddb1f362f7cb"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p6-b2.rgba",
+      "bytes": 147456,
+      "sha256": "69370fba6bb965d92649efb6fbb8dad890642cbd563977a7c75a576e20520b33"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p0-b4.rgba",
+      "bytes": 147456,
+      "sha256": "3eebf27c5f5a4b7234cee43d5e856e068997cf1933ea5aba130c6e2ca4026207"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p1-b4.rgba",
+      "bytes": 147456,
+      "sha256": "0280638084d6221176b7028a1caaf68e7489cc2e0413f7e44b6717c2f90eb6db"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p2-b4.rgba",
+      "bytes": 147456,
+      "sha256": "ae1e9fd1dcdaff16044e2ddbdab84bc4ea73c48e1631a54a3323246e42b897ee"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p3-b4.rgba",
+      "bytes": 147456,
+      "sha256": "bc3eaa9c86deb6f45baf6fe65993f0b47dbb73f99f9d0cb92d2fbc14eeae5e50"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p4-b4.rgba",
+      "bytes": 147456,
+      "sha256": "940958672e800a9fc8a6b8a28a9750cbe968e2e718e51f7915d1fde12abd0c31"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p5-b4.rgba",
+      "bytes": 147456,
+      "sha256": "7218cb34a21eb2d841d93a568b5af00d71bb182f110f7363ee8ad388456df84d"
+    },
+    {
+      "mode": "colors",
+      "path": "build/U14-image-owner-pixels-normal-164/colors/style-4-p6-b4.rgba",
+      "bytes": 147456,
+      "sha256": "e3d1d20ab80cac75058a561626fde03579d485139860b0318c2b1a93ba9617df"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-1.rgba",
+      "bytes": 147456,
+      "sha256": "e653e2acec9a5f7834371b76ff33cc153403ce7bacf5f46b842900934cefbff2"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-2.rgba",
+      "bytes": 147456,
+      "sha256": "f2f0d1550459d965ddc560dcc036c5580c085fad24592a4e35f40a44981f1c16"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-3.rgba",
+      "bytes": 147456,
+      "sha256": "f2f0d1550459d965ddc560dcc036c5580c085fad24592a4e35f40a44981f1c16"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-4.rgba",
+      "bytes": 147456,
+      "sha256": "4bb9d6b6ca28d894dec8ec7d4c475017a76899b17bd194a9fdfd069138681a02"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-5.rgba",
+      "bytes": 147456,
+      "sha256": "4bb9d6b6ca28d894dec8ec7d4c475017a76899b17bd194a9fdfd069138681a02"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-6.rgba",
+      "bytes": 147456,
+      "sha256": "3c90dd7f2c9e189b816594a7745b85caf40ece54d55519787cebb122219caf4a"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-7.rgba",
+      "bytes": 147456,
+      "sha256": "f16b776e52802f7eb950a1f8e8bf3eb67768c659403137d190df4e0e79e0e0f2"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-8.rgba",
+      "bytes": 147456,
+      "sha256": "4bb9d6b6ca28d894dec8ec7d4c475017a76899b17bd194a9fdfd069138681a02"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-9.rgba",
+      "bytes": 147456,
+      "sha256": "4bb9d6b6ca28d894dec8ec7d4c475017a76899b17bd194a9fdfd069138681a02"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-10.rgba",
+      "bytes": 147456,
+      "sha256": "4bb9d6b6ca28d894dec8ec7d4c475017a76899b17bd194a9fdfd069138681a02"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-11.rgba",
+      "bytes": 147456,
+      "sha256": "f2f0d1550459d965ddc560dcc036c5580c085fad24592a4e35f40a44981f1c16"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-12.rgba",
+      "bytes": 147456,
+      "sha256": "0767c56be163ed62c87c3871d1486a68d93daa27f6eff363250451086aeb970b"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-13.rgba",
+      "bytes": 147456,
+      "sha256": "64ace84d64d3e8b07114ebba0dba43257b4178a431e0ff431ea6cc7ed8467d8b"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-14.rgba",
+      "bytes": 147456,
+      "sha256": "a2d8b6541f8c485dff62596db30c8529d8867072f3bf66ff84cc7f02ea1426ea"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-15.rgba",
+      "bytes": 147456,
+      "sha256": "0988ad7b0dba52424727511afa2256d42bd1b87fb66ed4092f60ea189bdd77a3"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-16.rgba",
+      "bytes": 147456,
+      "sha256": "63d3222bcec3f195940fd69415ef993d2a3523d3d5d1462650fafd2a4d299880"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-17.rgba",
+      "bytes": 147456,
+      "sha256": "0fcd5ace24cf11a7d331afff9bb4e2926e88e45bb5388f28af6dcf21e98224ea"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-18.rgba",
+      "bytes": 147456,
+      "sha256": "9816c8c5f075e3b76d0a6d9da2f19cfd37c1494c3f5f6a8f7d4f78efce8fcd45"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-19.rgba",
+      "bytes": 147456,
+      "sha256": "ee36bfda3d570d010bd382a24a35adfd43f476247d6809e4265f2f0d45c3599c"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-20.rgba",
+      "bytes": 147456,
+      "sha256": "dfce0d8fee4f7691d8a741974c69ee3fd97b55c4df5f43ab26b9a686c3cbac00"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-21.rgba",
+      "bytes": 147456,
+      "sha256": "717ff91148b986aa4264d820533d94a41e24e3eff09f83197ee01b697b9998db"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-22.rgba",
+      "bytes": 147456,
+      "sha256": "ee36bfda3d570d010bd382a24a35adfd43f476247d6809e4265f2f0d45c3599c"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-23.rgba",
+      "bytes": 147456,
+      "sha256": "ee36bfda3d570d010bd382a24a35adfd43f476247d6809e4265f2f0d45c3599c"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-24.rgba",
+      "bytes": 147456,
+      "sha256": "f8ff9bf974cea0aa3dee6f08ef20634a12c49b8a52005dce9d629f3f107af212"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-25.rgba",
+      "bytes": 147456,
+      "sha256": "810241837b871082707650a4e496bc385c4880521dfad66f0e502d1d73071030"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-26.rgba",
+      "bytes": 147456,
+      "sha256": "e37a3441158eb2a921a75cbf324e5bccfd2dd2eb5bc00befa3989243fdd48614"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-27.rgba",
+      "bytes": 147456,
+      "sha256": "3e018738b26f2ff804e0d119d06edfd3c468c073af4eb0ee7e4daf79eb0a7e9e"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-28.rgba",
+      "bytes": 147456,
+      "sha256": "96ab697c2e879129a38dc6fa97322f6247522e9468964e3362befc9bf84e1e7d"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-29.rgba",
+      "bytes": 147456,
+      "sha256": "c443f84b7e0a3e024f2436f440b5d3e7bb4bcfcad17a67747cee6d57515c7588"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-30.rgba",
+      "bytes": 147456,
+      "sha256": "a9d06c0185fad18d45e58c59f854e73438bcaa53dea43ce78d2b4111e8392611"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-31.rgba",
+      "bytes": 147456,
+      "sha256": "1b776128541a36886ac810f6242191efe4413624fd12b28da5422c9475fbc0f5"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-32.rgba",
+      "bytes": 147456,
+      "sha256": "1991fef115f9057277668755f5a06a8187e6a05da4de07a8b19da04f90d8263b"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-33.rgba",
+      "bytes": 147456,
+      "sha256": "a9d06c0185fad18d45e58c59f854e73438bcaa53dea43ce78d2b4111e8392611"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-34.rgba",
+      "bytes": 147456,
+      "sha256": "0c7f4a4eaf7853cf5ac983349e84dc18e3d2ccf109d4de402aad56f8279a09b9"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-35.rgba",
+      "bytes": 147456,
+      "sha256": "57ead9b3d1ee6de594b766aa06a5f681f44bb364f73b96655b30aae5e8870f21"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-36.rgba",
+      "bytes": 147456,
+      "sha256": "3fff9b83dd3d5e338181fe04125af051756edb56e04485861b32638ffb18b74e"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-37.rgba",
+      "bytes": 147456,
+      "sha256": "2806ada0b6d1bb5d2a9bf5364db976ab5706181051c3f4d1f8dff487e335c745"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-38.rgba",
+      "bytes": 147456,
+      "sha256": "025fcda7256ffe5cab9c3f2d39337ee8d8a0e611d47e7923ddbfe616414efdde"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-39.rgba",
+      "bytes": 147456,
+      "sha256": "3fff9b83dd3d5e338181fe04125af051756edb56e04485861b32638ffb18b74e"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-40.rgba",
+      "bytes": 147456,
+      "sha256": "85698a43e16ecc2a6403cddbccc2ca4248ca1dea5a7fdd5a3e5ae435feb8fec2"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-41.rgba",
+      "bytes": 147456,
+      "sha256": "0c7f4a4eaf7853cf5ac983349e84dc18e3d2ccf109d4de402aad56f8279a09b9"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-42.rgba",
+      "bytes": 147456,
+      "sha256": "4d1e72ddcbeaac41ecb9ccd42f8603f2439e37c7384e86f7843967c161d7edbc"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-43.rgba",
+      "bytes": 147456,
+      "sha256": "7c670bc44e6441ff0c0f1e2663df6c544133827740bc6ba4bbc9f32fef0c3ada"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-44.rgba",
+      "bytes": 147456,
+      "sha256": "3266ecbeabb6e2791821fb39f05c12c2d7fe18b8d4c588f19dabd256f209b152"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-45.rgba",
+      "bytes": 147456,
+      "sha256": "d651fd228db60bc3558dcf1bcf3dfab91803866c10e6d0c418f09951f1f89c46"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-46.rgba",
+      "bytes": 147456,
+      "sha256": "a9d06c0185fad18d45e58c59f854e73438bcaa53dea43ce78d2b4111e8392611"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-47.rgba",
+      "bytes": 147456,
+      "sha256": "1991fef115f9057277668755f5a06a8187e6a05da4de07a8b19da04f90d8263b"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-48.rgba",
+      "bytes": 147456,
+      "sha256": "0c1aecbef64d51fb78361d0e89738769d3a8bd37f4f77c9da2024b55c839c5e2"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-49.rgba",
+      "bytes": 147456,
+      "sha256": "395b4d2f3596a8730bba757a0abdc862c7b3e51272b4587ea35765eeaa07b630"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-50.rgba",
+      "bytes": 147456,
+      "sha256": "0c1aecbef64d51fb78361d0e89738769d3a8bd37f4f77c9da2024b55c839c5e2"
+    },
+    {
+      "mode": "replay",
+      "path": "build/U14-image-owner-pixels-normal-164/replay/tx-51.rgba",
+      "bytes": 147456,
+      "sha256": "a9d06c0185fad18d45e58c59f854e73438bcaa53dea43ce78d2b4111e8392611"
+    },
+    {
+      "mode": "full",
+      "path": "build/U14-image-owner-pixels-normal-164/full/style-1.rgba",
+      "bytes": 3686400,
+      "sha256": "fceb5e7c853ccf830a4033898acd9d6ad1fcd36f7b9d8575200a743bb9892d2f"
+    },
+    {
+      "mode": "full",
+      "path": "build/U14-image-owner-pixels-normal-164/full/style-2.rgba",
+      "bytes": 3686400,
+      "sha256": "355cc9bbbb3ffcbc72ab210196096133d26eb541e57ff089662a88c542a99ac6"
+    },
+    {
+      "mode": "full",
+      "path": "build/U14-image-owner-pixels-normal-164/full/style-3.rgba",
+      "bytes": 3686400,
+      "sha256": "df3750995c1d0bedb282c24fd3b39da6acb26af7ca7a294da387c863bb2694d2"
+    },
+    {
+      "mode": "full",
+      "path": "build/U14-image-owner-pixels-normal-164/full/style-4.rgba",
+      "bytes": 3686400,
+      "sha256": "88c480b0bb2581221170b6ea5cd05c254b19be2cb3a161fdfe460f3858886176"
+    }
+  ],
+  "kernel": {
+    "scope": "MATCHED_KERNEL_AARCH64_MODULE_ONLY_NOT_IMAGE_NOT_BOARD",
+    "natural_exit": 0,
+    "module_sha256": "e8eefa602d153edb55a27adf23bbd8c2229afc5c9cfda0be762f7a8e4b9c23f6",
+    "module_bytes": 5567944,
+    "gpu_raw_cycles": null
+  },
+  "archives": [
+    {
+      "members": 192,
+      "logical_bytes": 63504937,
+      "archive_bytes": 12162011,
+      "sha256": "6408de8ce45498b4bb7de3153d8d2dfbb541dc7869c12c8b633bafd5388f3558",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-owner-pixels-normal-165-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2161410048,
+      "verified_members": 192,
+      "members_sha256": "e2c756eca0b3dde068fdcc34d740126a566fe3b6cce68c0dc0f24fef10dee6c8",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-owner-pixels-normal-165\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 193,
+      "logical_bytes": 167081443,
+      "archive_bytes": 29065234,
+      "sha256": "21c6e61d65ccda3d00ab390b135ecf043b791742e54eeab0523f5f2623eefd92",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-owner-pixels-sanitize-169-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2078277632,
+      "verified_members": 193,
+      "members_sha256": "c51146c21236349ab8fd338cbe8b6c0640612ca8e5a7ef4881e97849fbf193ad",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-owner-pixels-sanitize-169\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 71,
+      "logical_bytes": 20940920,
+      "archive_bytes": 5784977,
+      "sha256": "8b79fbb38d19ccb03bc0fe5002b0b35e157c843ba39e12b953d8068d8f004ab5",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-owner-pixels-cross-175-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2218323968,
+      "verified_members": 71,
+      "members_sha256": "d5a06f3864cef2766db1ca9dab4b00566c5dae2bcfe47731c70ebe14e2291c69",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-owner-pixels-cross-175\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 196,
+      "logical_bytes": 67618948,
+      "archive_bytes": 46938897,
+      "sha256": "6cdffd675016c964bcd81de910683e44e92589e6607ac54cb07e658bb5ca2091",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-hunet-schema2-regression-177-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2123960320,
+      "verified_members": 196,
+      "members_sha256": "3d895af10172fc290785ccf908fb40a70243d836ac0a52b3975d73843232f25d",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-hunet-schema2-regression-177\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 130,
+      "logical_bytes": 21954472,
+      "archive_bytes": 10427446,
+      "sha256": "64664b098f620cc07d157e521d82939a36b3ed15569172ccb464f67e8f5fc531",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-mosaic-schema2-regression-179-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2159022080,
+      "verified_members": 130,
+      "members_sha256": "dee7a130fec8db6101092e70b0b66ccbc27a47efeaea28eb9621ed5aaced28bd",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-mosaic-schema2-regression-179\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 120,
+      "logical_bytes": 31124382,
+      "archive_bytes": 4702176,
+      "sha256": "6f87f20bacf7f79125ab9d671622ee09323fda68c50b1b78ece64e030983e0fc",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-final-named-and-kernel-183-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2265427968,
+      "verified_members": 120,
+      "members_sha256": "67fa3e9847f6bb93cba3588e0121c66c68b438ce71bb804d43cfdfc4839a85fc",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-final-named-and-kernel-183\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 70,
+      "logical_bytes": 13885533,
+      "archive_bytes": 3449148,
+      "sha256": "be0d87cd235f8965ae060754d55ed7890e9a48b243807273c6215344c638519a",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-final-owner-faults-185-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2278723584,
+      "verified_members": 70,
+      "members_sha256": "9db6e6f92e9ea2e99b7ea62be821c5d0185b483427fa61a9eb0c8b2e00e8c6fa",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-final-owner-faults-185\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    }
+  ],
+  "production_code_match_tsan_cut": "1763->1766: only Makefile/test_bridge/header,3 added docs/test/controller; all production image/core/residency source bytes unchanged",
+  "gpu_raw_cycles": null,
+  "board": "NOT_RUN",
+  "display": "NOT_RUN",
+  "application_quality": "NOT_ACCEPTED_FROM_HOST_MODEL",
+  "image": "NOT_BUILT",
+  "sd": "NOT_TOUCHED",
+  "remaining": [
+    "U15..U25",
+    "U20 real service factories/global persistent cache budget/cookie activation namespace",
+    "HUNet inherited last-trace-error ordering at U20",
+    "Complete matching S8/P8 images and boot audit",
+    "Whole-branch fresh review before authorized SD"
+  ]
+}

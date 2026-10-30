@@ -1,0 +1,13 @@
+﻿metric,value,unit,evidence_layer,status,source
+release_version,R13,,SOURCE,BOUND,host/app/source-lock-r13.json
+frozen_source_files,2308,files,SOURCE,HASH_VERIFIED,host/app/source-lock-r13.json
+installed_nn_entries,9,entries,HOST,PREPARATION_RECORDED,metrics/evidence/models-host-receipt.json
+aarch64_cross,,,CROSS,NATURAL_EXIT_0_RECORDED,metrics/evidence/userspace-cross-receipt.json
+fit_rootfs_content,,,IMAGE,CONTENT_AUDITED_RECORDED,metrics/evidence/image-content-audit.json
+r13_boot,,,BOARD,NOT_RUN,host/deploy/MANUAL.md
+r13_gpu_cycles,,cycles,BOARD,UNKNOWN,host/deploy/MANUAL.md
+mosaic_1280x960,,seconds,APPLICATION,NOT_RUN,host/model/MODEL.md
+three_app_demo,300,seconds target,APPLICATION,TARGET_NOT_PROVEN,report/design.md
+s8_wns,0.404,ns,IMPLEMENTATION,EXISTING_CONSTRAINTS_ONLY,fpga/report/timing_summary.rpt
+s8_generated_clock,96.968727,MHz configured,IMPLEMENTATION,NOT_BOARD_MEASURED,fpga/report/clocks.rpt
+s8_physical_signoff,,,IMPLEMENTATION,OPEN_NOT_PASS,fpga/report/implementation_independent_review.json

@@ -1,0 +1,959 @@
+{
+  "task": "U20",
+  "state": "IN_PROGRESS_NOT_FULL_TASK_ACCEPTANCE",
+  "gpu_raw_cycles": null,
+  "board": "NOT_ACCESSED",
+  "sd": "NOT_TOUCHED",
+  "prerequisites": [
+    {
+      "component": "Daemon trusted deferred GPU preparation forwarding",
+      "red": "U20-native-prepare-red-001",
+      "red_archive": "U20-native-prepare-functional-red-002",
+      "red_archive_sha256": "79b89a430fe019d8b758cfb55aaecc8fe57a45df109b8773f9a83d7ff3681ae1",
+      "red_detail": "Child naturally exits1 at missing callback. Exact partial journal records COMPUTE_PORT errno95; not a completed durable error delivery.",
+      "green": "U20-native-prepare-normal-003",
+      "natural_exit": 0,
+      "green_archive": "U20-native-prepare-checkpoint-004",
+      "green_archive_sha256": "e280520573ae3a49ec3ee695a0cb6b9310772697ed7fe08fbb975ced240204a9",
+      "scope": "Actual host Daemon/RPC/Runtime/C-core control path only; not native application execution or whole U20"
+    },
+    {
+      "component": "Common native-session resident lifetime and retirement-safe global accounting",
+      "normal": "U20-resident-final-normal-015",
+      "asan_ubsan": "U20-resident-final-sanitize-020",
+      "thread_sanitizer": "U20-resident-final-thread-023",
+      "matching_cross": "U20-resident-final-cross-024",
+      "natural_exit": 0,
+      "source_manifest_sha256": "52537c8631899d208f1f7b35765fcc65b663be45368d64c585d2a081da85b74e",
+      "source_files": 1929,
+      "cross_elfs": 3,
+      "executed_target_elfs": false,
+      "software_archive": "U20-resident-software-checkpoint-021",
+      "software_archive_sha256": "6e3cd6dcf67ce9784bc248f7c1e86fe9e98b631a49085ccdfe5875f751266776",
+      "thread_cross_archive": "U20-resident-thread-cross-025",
+      "thread_cross_archive_sha256": "9879d099ab0dd8f345331befb626d067a144ce719acd4c872db836fe3bd72045",
+      "boundaries": [
+        "CPU1GiB includes128MiB control margin",
+        "Idle image shadow132MiB charged before allocation",
+        "Two resident model identities with exact same-model footprint",
+        "64 private lifetime leases",
+        "Active request and idle session share one charge",
+        "800 concurrent reservation transitions",
+        "20 actual allocation fault points",
+        "Native retirement may destroy last lease without Runtime mutex reentry"
+      ],
+      "scope": "Host Runtime/Daemon control flow only; installed native factories not yet wired; GPUcycles null"
+    },
+    {
+      "component": "Private checked output stage, common display owner, final execution binding, distinct durable journal and weak native roots",
+      "state": "COMPONENT_VERIFIED_NOT_NATIVE_APPLICATION_INTEGRATION",
+      "runs": {
+        "normal": "U20-stage-final-normal-049",
+        "asan_ubsan": "U20-stage-final-sanitize-050",
+        "thread_sanitizer": "U20-stage-final-thread-057",
+        "matching_cross": "U20-stage-final-cross-058"
+      },
+      "natural_exit": 0,
+      "source_manifest_sha256": "2b569db460131051163d1370420c666eae25097616205dade44770696f4b9ae1",
+      "source_files": 1932,
+      "cross_elfs": 14,
+      "executed_target_elfs": false,
+      "software_archive": "U20-stage-normal-sanitize-051",
+      "software_archive_sha256": "97a5e8b4c5f351c8b54c19550a110237772cc86c8b403570d1701812e29992ad",
+      "thread_cross_archive": "U20-stage-thread-cross-059",
+      "thread_cross_archive_sha256": "2049f7bb9ab61af1c3482eedd4bc3df1105ba4fd17fb7f875d618ae7f788419b",
+      "boundaries": [
+        "Stage hidden from client/TEX; exact DP source lease only",
+        "Final active non-GPU owner callback identity and thread checks",
+        "Exact staged output commits only after durable Runtime delivery",
+        "Evidence retry never re-executes math",
+        "Application cookie/source lease/raw OS event remain separate",
+        "Auto DP tokens skip live logical aliases",
+        "Original C display/retirement/failure and HUNet page regressions",
+        "Distinct result_stage journal with client_visible=false",
+        "Shared weak Runtime/results/journal roots and configured scope",
+        "Original UAPI/core/v2/driver/v2 unchanged in U20"
+      ],
+      "gpu_raw_cycles": null
+    },
+    {
+      "component": "TRUSTED_NATIVE_SOURCE_ROUTER_ONE_OWNER_BUDGET_AND_POOL",
+      "state": "COMPONENT_VERIFIED_NOT_FULL_U20_OR_NATIVE_APP_FACTORIES",
+      "source_manifest": "435746799a3bdc0eea94a3c34c322ae93c90e8e62ed31e66a7e8522e584c0bea",
+      "source_files": 1936,
+      "runs": [
+        {
+          "name": "U20-native-router-portfix-normal-085",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_native",
+            "U20-native-router-portfix-normal-085",
+            "normal"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "4cace5d3787b3e4579583519b6bf212d48dcc0bb0b0a516571039f05206a002e",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "unit",
+            "worker_count": 2,
+            "available_ram": 11203260416,
+            "free_disk": 2151763968,
+            "required_ram": 2147483648,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1936,
+          "source_tree_proof": {
+            "verified_files": 1936,
+            "verified_bytes": 66214875,
+            "canonical_manifest_sha256": "435746799a3bdc0eea94a3c34c322ae93c90e8e62ed31e66a7e8522e584c0bea",
+            "verification_seconds": 0.29554337897570804
+          },
+          "source_tree_scope": "FULL_FROZEN_SOURCE_TREE_MATCH_NOT_GPU",
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-native-router-final-sanitize-089",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_native",
+            "U20-native-router-final-sanitize-089",
+            "sanitize"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "4cace5d3787b3e4579583519b6bf212d48dcc0bb0b0a516571039f05206a002e",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "sanitize",
+            "worker_count": 2,
+            "available_ram": 11202420736,
+            "free_disk": 2159497216,
+            "required_ram": 8589934592,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1936,
+          "source_reuse": {
+            "verified_files": 1936,
+            "verified_bytes": 66214875,
+            "canonical_manifest_sha256": "435746799a3bdc0eea94a3c34c322ae93c90e8e62ed31e66a7e8522e584c0bea",
+            "verification_seconds": 0.30954621196724474
+          },
+          "source_parent": "U20-native-router-portfix-normal-085",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-native-router-final-thread-095",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_native",
+            "U20-native-router-final-thread-095",
+            "thread"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "4cace5d3787b3e4579583519b6bf212d48dcc0bb0b0a516571039f05206a002e",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "sanitize",
+            "worker_count": 2,
+            "available_ram": 11202322432,
+            "free_disk": 2168762368,
+            "required_ram": 8589934592,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1936,
+          "source_reuse": {
+            "verified_files": 1936,
+            "verified_bytes": 66214875,
+            "canonical_manifest_sha256": "435746799a3bdc0eea94a3c34c322ae93c90e8e62ed31e66a7e8522e584c0bea",
+            "verification_seconds": 0.30935981700895354
+          },
+          "source_parent": "U20-native-router-portfix-normal-085",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-native-router-final-cross-098",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_native",
+            "U20-native-router-final-cross-098",
+            "cross"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "4cace5d3787b3e4579583519b6bf212d48dcc0bb0b0a516571039f05206a002e",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "cross",
+            "worker_count": 2,
+            "available_ram": 11202359296,
+            "free_disk": 2160398336,
+            "required_ram": 8589934592,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1936,
+          "source_reuse": {
+            "verified_files": 1936,
+            "verified_bytes": 66214875,
+            "canonical_manifest_sha256": "435746799a3bdc0eea94a3c34c322ae93c90e8e62ed31e66a7e8522e584c0bea",
+            "verification_seconds": 0.31039598799543455
+          },
+          "source_parent": "U20-native-router-portfix-normal-085",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "natural_exit": 0
+        }
+      ],
+      "archives": [
+        {
+          "members": 149,
+          "logical_bytes": 22421339,
+          "archive_bytes": 5903538,
+          "sha256": "65a01cf0e609a9090ce9e4183e5d6304b32ec667957fbc0e6808f9447b114270",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-native-router-matrix-checkpoint-086-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 2122969088,
+          "verified_members": 149,
+          "members_sha256": "5a1b47e1ad9c667952ecacae3b9b9e74e2b29acc69c852748b702024a6b654f3",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-native-router-matrix-checkpoint-086\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 150,
+          "logical_bytes": 183313161,
+          "archive_bytes": 32618361,
+          "sha256": "28a8a56d77d99d2828a877436b169757f1297b2b44bb6a79c1a152cd53ceb61b",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-native-router-sanitize-090-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 1943076864,
+          "verified_members": 150,
+          "members_sha256": "01696232a1de40eaf456d15465410bafae4887d1a2aa3a8d2b1a31d357826bc6",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-native-router-sanitize-090\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 150,
+          "logical_bytes": 31509291,
+          "archive_bytes": 7974220,
+          "sha256": "befc2371dca1787af594d26ab385ca971c459ae20577b67f4d112888aa672b1c",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-native-router-thread-096-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 2128793600,
+          "verified_members": 150,
+          "members_sha256": "7cf2bc73d6e0f8c21003900cf1e18802ab94e9fd8be7f1fcab02d0a04cc95557",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-native-router-thread-096\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 73,
+          "logical_bytes": 31018011,
+          "archive_bytes": 8525618,
+          "sha256": "1eed914911082931205e54ad1c2546dc29a764db0cd6517d4e756c4f2bc5f058",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-native-router-cross-099-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 2120630272,
+          "verified_members": 73,
+          "members_sha256": "4aea09562ca18119bd62e09d1db16f6ae2a95402ad5680d1ab18e813c6cb5e69",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-native-router-cross-099\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        }
+      ],
+      "allocation_injection_points": 40,
+      "actual_allocation_refusals": 2,
+      "concurrent_metadata_binds": 320,
+      "index_bound": 256,
+      "synthetic_control_sources": [
+        "NN",
+        "IMAGE"
+      ],
+      "old_runtime_and_daemon_regression": true,
+      "executed_target_elfs": false,
+      "matching_target_elfs": 4,
+      "gpu_raw_cycles": null,
+      "board": "NOT_RUN",
+      "sd": "NOT_TOUCHED"
+    },
+    {
+      "component": "HUNET_MOSAIC_NATIVE_FACTORY_COMMON_OWNER_PACKAGE_LIFETIME_AND_IMMUTABLE_FILES",
+      "state": "COMPONENT_VERIFIED_NOT_INSTALLED_SERVICE_OR_FULL_U20",
+      "source_files": 1940,
+      "source_manifest": "8ad6675120de092e1e60346c0764b9ea20231cbc33a65c75705f44cecc41454f",
+      "runs": [
+        {
+          "name": "U20-native-nn-final-normal-127",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_nn",
+            "U20-native-nn-final-normal-127",
+            "normal"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "af2b1defbe64780962d31bc6dc5ba5bad46b78e5b7580e888bbb116cf2d63eb3",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "unit",
+            "worker_count": 2,
+            "available_ram": 11204059136,
+            "free_disk": 2183266304,
+            "required_ram": 2147483648,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1940,
+          "source_tree_proof": {
+            "verified_files": 1940,
+            "verified_bytes": 66264885,
+            "canonical_manifest_sha256": "8ad6675120de092e1e60346c0764b9ea20231cbc33a65c75705f44cecc41454f",
+            "verification_seconds": 0.300926779047586
+          },
+          "source_tree_scope": "FULL_FROZEN_SOURCE_TREE_MATCH_NOT_GPU",
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-native-nn-final-sanitize-132",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_nn",
+            "U20-native-nn-final-sanitize-132",
+            "sanitize"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "af2b1defbe64780962d31bc6dc5ba5bad46b78e5b7580e888bbb116cf2d63eb3",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "sanitize",
+            "worker_count": 2,
+            "available_ram": 11206172672,
+            "free_disk": 2207031296,
+            "required_ram": 8589934592,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1940,
+          "source_reuse": {
+            "verified_files": 1940,
+            "verified_bytes": 66264885,
+            "canonical_manifest_sha256": "8ad6675120de092e1e60346c0764b9ea20231cbc33a65c75705f44cecc41454f",
+            "verification_seconds": 0.3273901949869469
+          },
+          "source_parent": "U20-native-nn-final-normal-127",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-native-nn-final-thread-137",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_nn",
+            "U20-native-nn-final-thread-137",
+            "thread"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "af2b1defbe64780962d31bc6dc5ba5bad46b78e5b7580e888bbb116cf2d63eb3",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "sanitize",
+            "worker_count": 2,
+            "available_ram": 11206098944,
+            "free_disk": 2206556160,
+            "required_ram": 8589934592,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1940,
+          "source_reuse": {
+            "verified_files": 1940,
+            "verified_bytes": 66264885,
+            "canonical_manifest_sha256": "8ad6675120de092e1e60346c0764b9ea20231cbc33a65c75705f44cecc41454f",
+            "verification_seconds": 0.29441705701174214
+          },
+          "source_parent": "U20-native-nn-final-normal-127",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-native-nn-final-cross-141",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_nn",
+            "U20-native-nn-final-cross-141",
+            "cross"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "af2b1defbe64780962d31bc6dc5ba5bad46b78e5b7580e888bbb116cf2d63eb3",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "cross",
+            "worker_count": 2,
+            "available_ram": 11207053312,
+            "free_disk": 2206076928,
+            "required_ram": 8589934592,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1940,
+          "source_reuse": {
+            "verified_files": 1940,
+            "verified_bytes": 66264885,
+            "canonical_manifest_sha256": "8ad6675120de092e1e60346c0764b9ea20231cbc33a65c75705f44cecc41454f",
+            "verification_seconds": 0.3005395589862019
+          },
+          "source_parent": "U20-native-nn-final-normal-127",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "natural_exit": 0
+        }
+      ],
+      "archives": [
+        {
+          "members": 379,
+          "logical_bytes": 100950182,
+          "archive_bytes": 60058573,
+          "sha256": "548355320b539cc621c3ce34045bef932ee8c148590177ca509bbd333f13c30e",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-native-nn-final-normal-128-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 2021130240,
+          "verified_members": 379,
+          "members_sha256": "328ce1483138e782d370bbb31f282a761d77b681dd6c5218907d9db799efa5c7",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-native-nn-final-normal-128\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 380,
+          "logical_bytes": 431386302,
+          "archive_bytes": 113875187,
+          "sha256": "c7f309d5d097e674bd98194429f12d452ae459af43de7a339009db9db4028568",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-native-nn-sanitize-134-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 1660628992,
+          "verified_members": 380,
+          "members_sha256": "be69bf9e3775d0ba8e2f018136956f19fc60df33c5fd9f71f1250ad229e74087",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-native-nn-sanitize-134\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 380,
+          "logical_bytes": 119671542,
+          "archive_bytes": 64134978,
+          "sha256": "3a4ba59af23bcc27c31b3453c8b76d6ce6afcfb8180f18d86852ebf79578bf6e",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-native-nn-thread-138-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 2021613568,
+          "verified_members": 380,
+          "members_sha256": "9cd6f477553c661c1f2342a668c13cc29952755f4c273e8fb590122ed78ca50f",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-native-nn-thread-138\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 298,
+          "logical_bytes": 113476375,
+          "archive_bytes": 63184761,
+          "sha256": "0eaddc261a3f7982a29e78c54145ff2ea71b60ccb63a52b1c34883d164d3ad8b",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-native-nn-cross-142-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 2028593152,
+          "verified_members": 298,
+          "members_sha256": "baf3c89658ba79aa1974ea4add984eb5ec5e831f1041d3e9ce743dcc166a2a39",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-native-nn-cross-142\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        }
+      ],
+      "gpu_raw_cycles": null,
+      "executed_target_elfs": false,
+      "matching_target_elfs": 3,
+      "numeric": "HOST_GPU_ZERO_MARKER_NOT_INFERENCE; original contracts/history retained; NOT_EVALUATED",
+      "cpu": "13 HUNet GELU commits through real B x86 four-worker pool and C readback/hash protocol; not A53/real GPU tensors",
+      "cases": [
+        "two original source families",
+        "shared resident reservation before package allocation",
+        "exact sealed model/plan/input/extent",
+        "20 concurrent real metadata preparations per family per case",
+        "same global queue and cancel/reap",
+        "guard and immutable output creation failures latch without retry/publish",
+        "active source alone retains factory state after cancelled source/entry/wrapper destruction",
+        "checked output owner/mode/extent/hash/path",
+        "full original completion and CPU phase traces",
+        "GPU-only native source needs no synthetic non-GPU callback",
+        "prior native router allocation/concurrency regressions"
+      ],
+      "remaining": [
+        "production installed registry still empty",
+        "IMAGE/P8 factories and UDP/control/display lifecycle",
+        "generic admitted-operator networkB and full aggregate regression",
+        "U21 capacity, U22-U25 complete production cross/two images/content audit/review/conditional SD"
+      ],
+      "board": "NOT_RUN",
+      "sd": "NOT_TOUCHED"
+    },
+    {
+      "component": "SEALED_NATIVE_NN_DAEMON_LIFECYCLE_AND_BOUNDED_ASYNC_PREPARATION",
+      "state": "SCOPED_COMPONENT_VERIFIED_NOT_FULL_U20_OR_INFERENCE",
+      "source_files": 1947,
+      "source_manifest": "d28669ca690de2177138f09a64c539ab1c6428553cf4f59363abb04df976c6c5",
+      "runs": [
+        {
+          "name": "U20-preparation-safety-normal-306",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_lifecycle",
+            "U20-preparation-safety-normal-306",
+            "normal"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "b4cabf85fa0212874ec13816327594556a94387f75166ae87863056eaba58c93",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "unit",
+            "worker_count": 2,
+            "available_ram": 11204956160,
+            "free_disk": 2165862400,
+            "required_ram": 2147483648,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1947,
+          "source_tree_proof": {
+            "verified_files": 1947,
+            "verified_bytes": 66349222,
+            "canonical_manifest_sha256": "d28669ca690de2177138f09a64c539ab1c6428553cf4f59363abb04df976c6c5",
+            "verification_seconds": 0.3083908830303699
+          },
+          "source_tree_scope": "FULL_FROZEN_SOURCE_TREE_MATCH_NOT_GPU",
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-preparation-safety-sanitize-311",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_lifecycle",
+            "U20-preparation-safety-sanitize-311",
+            "sanitize"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "b4cabf85fa0212874ec13816327594556a94387f75166ae87863056eaba58c93",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "sanitize",
+            "worker_count": 2,
+            "available_ram": 11206246400,
+            "free_disk": 2189713408,
+            "required_ram": 8589934592,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1947,
+          "source_reuse": {
+            "verified_files": 1947,
+            "verified_bytes": 66349222,
+            "canonical_manifest_sha256": "d28669ca690de2177138f09a64c539ab1c6428553cf4f59363abb04df976c6c5",
+            "verification_seconds": 0.3456502379849553
+          },
+          "source_parent": "U20-preparation-safety-normal-306",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-preparation-safety-thread-315",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_lifecycle",
+            "U20-preparation-safety-thread-315",
+            "thread"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "b4cabf85fa0212874ec13816327594556a94387f75166ae87863056eaba58c93",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "sanitize",
+            "worker_count": 2,
+            "available_ram": 11204870144,
+            "free_disk": 2189307904,
+            "required_ram": 8589934592,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1947,
+          "source_reuse": {
+            "verified_files": 1947,
+            "verified_bytes": 66349222,
+            "canonical_manifest_sha256": "d28669ca690de2177138f09a64c539ab1c6428553cf4f59363abb04df976c6c5",
+            "verification_seconds": 0.367764153983444
+          },
+          "source_parent": "U20-preparation-safety-normal-306",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-preparation-safety-cross-319",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_installation",
+            "U20-preparation-safety-cross-319",
+            "cross"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "b4cabf85fa0212874ec13816327594556a94387f75166ae87863056eaba58c93",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "cross",
+            "worker_count": 2,
+            "available_ram": 11206963200,
+            "free_disk": 2188886016,
+            "required_ram": 8589934592,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1947,
+          "source_reuse": {
+            "verified_files": 1947,
+            "verified_bytes": 66349222,
+            "canonical_manifest_sha256": "d28669ca690de2177138f09a64c539ab1c6428553cf4f59363abb04df976c6c5",
+            "verification_seconds": 0.3646555399755016
+          },
+          "source_parent": "U20-preparation-safety-normal-306",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-preparation-safety-normal-323",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u20_installation",
+            "U20-preparation-safety-normal-323",
+            "normal"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "b4cabf85fa0212874ec13816327594556a94387f75166ae87863056eaba58c93",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "unit",
+            "worker_count": 2,
+            "available_ram": 11205836800,
+            "free_disk": 2188472320,
+            "required_ram": 2147483648,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1947,
+          "source_reuse": {
+            "verified_files": 1947,
+            "verified_bytes": 66349222,
+            "canonical_manifest_sha256": "d28669ca690de2177138f09a64c539ab1c6428553cf4f59363abb04df976c6c5",
+            "verification_seconds": 0.34767917706631124
+          },
+          "source_parent": "U20-preparation-safety-normal-306",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "a_source_authority": {
+            "root": "D:\\codex-unified-gpu-20261021\\frozen-source\\U20-preparation-safety-normal-306",
+            "frozen": true,
+            "scope": "A_FROZEN_PARENT_SOURCE_NOT_CURRENT_HEAD",
+            "proof": {
+              "verified_files": 1947,
+              "verified_bytes": 66349222,
+              "canonical_manifest_sha256": "d28669ca690de2177138f09a64c539ab1c6428553cf4f59363abb04df976c6c5",
+              "verification_seconds": 0.8120000000344589
+            }
+          },
+          "natural_exit": 0
+        },
+        {
+          "name": "U20-preparation-safety-normal-327",
+          "argv": [
+            "python3",
+            "-m",
+            "scripts.unified.check_u10",
+            "U20-preparation-safety-normal-327",
+            "normal"
+          ],
+          "cwd": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+          "archive_sha256": "b4cabf85fa0212874ec13816327594556a94387f75166ae87863056eaba58c93",
+          "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "worker_count": 2,
+          "sd": "NOT_TOUCHED",
+          "resource_gate": {
+            "state": "RESOURCE_ADMITTED",
+            "kind": "unit",
+            "worker_count": 2,
+            "available_ram": 11207180288,
+            "free_disk": 2187546624,
+            "required_ram": 2147483648,
+            "required_disk": 2147483648,
+            "compiler_jobs": 2,
+            "test_runner_jobs": 1
+          },
+          "files_verified": 1947,
+          "source_reuse": {
+            "verified_files": 1947,
+            "verified_bytes": 66349222,
+            "canonical_manifest_sha256": "d28669ca690de2177138f09a64c539ab1c6428553cf4f59363abb04df976c6c5",
+            "verification_seconds": 0.3978958789957687
+          },
+          "source_parent": "U20-preparation-safety-normal-306",
+          "source_archive_transfer_bytes": 0,
+          "source_verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+          "source_check_tests": 6,
+          "a_source_authority": {
+            "root": "D:\\codex-unified-gpu-20261021\\frozen-source\\U20-preparation-safety-normal-306",
+            "frozen": true,
+            "scope": "A_FROZEN_PARENT_SOURCE_NOT_CURRENT_HEAD",
+            "proof": {
+              "verified_files": 1947,
+              "verified_bytes": 66349222,
+              "canonical_manifest_sha256": "d28669ca690de2177138f09a64c539ab1c6428553cf4f59363abb04df976c6c5",
+              "verification_seconds": 0.859000000054948
+            }
+          },
+          "natural_exit": 0
+        }
+      ],
+      "archives": [
+        {
+          "members": 124,
+          "logical_bytes": 14698976,
+          "archive_bytes": 3520971,
+          "sha256": "1a645c66562ca7c51e6088287919d477777ec801f3b98d372d1f79d01b995218",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-preparation-safety-normal-307-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 2147168256,
+          "verified_members": 124,
+          "members_sha256": "d87f62ef9f403c6530f59bb5d3efce821d2c8e9113aee47e3cc59eb18f0e2a3c",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-preparation-safety-normal-307\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 125,
+          "logical_bytes": 108117229,
+          "archive_bytes": 18579624,
+          "sha256": "c568a7906ff552356b6af2d5fad758f80c760d01cd2fd0841081a4d7957411ab",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-preparation-safety-evidence-312-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 2062553088,
+          "verified_members": 125,
+          "members_sha256": "09a138e8b94dbf5ae6dfb23771e239b50579dc2c08b5cdb68abcc3cdffcaf34c",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-preparation-safety-evidence-312\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 125,
+          "logical_bytes": 21098805,
+          "archive_bytes": 4760592,
+          "sha256": "8d3eceddc591a8c8e87e70f1c000268efed2921d5f4a5fd13b17f6df1e5fcd85",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-preparation-safety-evidence-316-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 2162962432,
+          "verified_members": 125,
+          "members_sha256": "adee9232c2786995ac50d969d031cdbf2c9135e0c2ea85071de22477e9d4a7b3",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-preparation-safety-evidence-316\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 308,
+          "logical_bytes": 138904495,
+          "archive_bytes": 69912583,
+          "sha256": "6cd56632672747573883a4e86b3c295c9189446fa5d4bedca97a35ca2431497d",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-preparation-safety-evidence-320-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 1979224064,
+          "verified_members": 308,
+          "members_sha256": "31a1ebe46a6d15d76597c0c5ac877d255d881c0735b71e4a936228019f57693f",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-preparation-safety-evidence-320\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 1006,
+          "logical_bytes": 124064555,
+          "archive_bytes": 66409511,
+          "sha256": "986ac5327928b1d05d23571b7fd5d9e240cf27dc87c954ea5a139f47a7e7efee",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-preparation-safety-evidence-324-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 1995321344,
+          "verified_members": 1006,
+          "members_sha256": "503e3fe0e5dac97a9c5c72d1be246c6eda32bd745c0bebc61291ad82afe7a1bf",
+          "hardlink_members": 0,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-preparation-safety-evidence-324\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        },
+        {
+          "members": 172,
+          "logical_bytes": 83098166,
+          "archive_bytes": 22475991,
+          "sha256": "fd769a42c5df659b86d58d7f80f9d9808f8cf909fdbbc72821a62a0f2efa4036",
+          "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U20-preparation-safety-evidence-328-evidence.tar.gz",
+          "gpu_raw_cycles": null,
+          "host": "z2euss-virtual-machine",
+          "uid": 1000,
+          "free_disk": 2081460224,
+          "verified_members": 172,
+          "members_sha256": "a94050813b6ebb8c51cbb0700481fb791aa5a863c59ecb87430212bcbf338f4a",
+          "hardlink_members": 1,
+          "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U20-preparation-safety-evidence-328\\raw-and-artifacts.tar.gz",
+          "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+        }
+      ],
+      "tests": "actual native NN RPC/shared C owner/real host CPU4 and file output;15 lifecycle/first-error/cancel/close cases; shared metadata+execution request8;6 CLI checks; five matched AArch64 ELFs/rootfs; oldRuntime regressions",
+      "numerics": "HOST_ZERO_MARKERS_NOT_EVALUATED",
+      "target_execution": false,
+      "physical_gpu_cycles": null,
+      "first_failures": "all original146/151/161/171/176/182/194/207/221/226/231/247/279/302 and cumulative ERRORS.json retained"
+    }
+  ],
+  "remaining": [
+    "Actual IMAGE/P8 native factories and shared KMS/UDP ingress/execution lifecycle",
+    "Global shadow/assets reservation hookup for the remaining native applications",
+    "Bounded output spool, common timing hookup and generic admitted-operator networkB",
+    "Full U20 original NN/image/P8/provider/extension software regression gate",
+    "U21 B guard checks, then U22-U25 complete cross/kernel/dual-image/release gates under real resources"
+  ]
+}

@@ -1,0 +1,15 @@
+#!/bin/sh
+# Optional explicit start by the B controller. This file is NOT an autostart job.
+# No GPU computation or DP device is opened merely by booting the image.
+set -eu
+test "$(id -u)" = 0
+umask 077
+mkdir -p /run/vxl-demo /var/lib/vxl-demo
+for directory in /run/vxl-demo /var/lib/vxl-demo; do
+    test -d "$directory" && test ! -L "$directory"
+done
+case "${1:-}" in
+ controller) exec /usr/bin/vxl_demo --serve-local --store /var/lib/vxl-demo --socket /run/vxl-demo/demo.sock --runtime-root /usr/share/codex-demo ;;
+ viewer) exec /usr/bin/vxl_dp_viewer --serve /var/lib/vxl-demo /run/vxl-demo/dp.sock /dev/dri/card0 ;;
+ *) echo 'usage: demo-viewer-init controller|viewer' >&2; exit 2 ;;
+esac

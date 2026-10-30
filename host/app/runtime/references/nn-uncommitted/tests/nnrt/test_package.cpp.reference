@@ -1,0 +1,13 @@
+#include <vxnn/package.hpp>
+#include <cassert>
+#include <cstdio>
+#include <fstream>
+#include <iterator>
+using namespace vxnn;
+int main(int argc,char **argv){
+ assert(argc==2);PackageLimits limits;auto good=load_package(Path(argv[1])/"valid",limits);assert(good&&good.value->assets().size()==4);
+ assert(good.value->declared_max_jobs()==16&&good.value->resident_bytes()>0);
+ const char *bad[]={"duplicate-key","unknown-field","nan","path-escape","asset-missing","asset-drift","float-metadata","bad-limits","unlisted-file","writable-file","symlink","hardlink","fifo"};
+ for(const char *name:bad){auto result=load_package(Path(argv[1])/name,limits);assert(!result&&result.error->category=="PACKAGE_REJECTED");}
+ puts("MODEL_PACKAGE_ADMISSION_HOST_PASS_NO_DEVICE_OPEN_GPU_CYCLES_NULL");return 0;
+}

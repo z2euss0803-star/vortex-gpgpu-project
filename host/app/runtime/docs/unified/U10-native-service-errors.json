@@ -1,0 +1,134 @@
+{
+  "scope": "NATIVE_USERLAND_SERVICE_AND_HOST_C_CORE_PROTOCOL_NOT_KERNEL_OR_BOARD",
+  "base": "7ab831621b27fbeb35b6012fb812e9ff780a45e6",
+  "gpu_raw_cycles": null,
+  "errors": [
+    {
+      "run": "U10-daemon-red-110",
+      "natural_exit": 2,
+      "kind": "BUILD_RULE_FAILURE_NOT_RED",
+      "cause": "wrong bridge object path and undefined backend object variable"
+    },
+    {
+      "run": "U10-daemon-functional-red-111",
+      "natural_exit": 2,
+      "kind": "LINK_FAILURE_NOT_RED",
+      "cause": "SHA implementation linked both nn/sha.o and backend/core/hunet_sha256.o"
+    },
+    {
+      "runs": [
+        "U10-daemon-functional-red-112",
+        "U10-daemon-green-113"
+      ],
+      "natural_exit": 2,
+      "kind": "INVALID_POSITIVE_FIXTURE_NOT_ACCEPTED_AS_VALID_RED",
+      "cause": "test passed relative evidence directory; Journal requires absolute trusted directory",
+      "fix": "absolute path fixture; original logs retained"
+    },
+    {
+      "run": "U10-daemon-valid-functional-red-114",
+      "natural_exit": 2,
+      "kind": "VALID_FUNCTIONAL_RED",
+      "cause": "native Daemon startup and worker not integrated",
+      "frozen_stub_restored_from": "U10-daemon-functional-red-112/source.tar.gz",
+      "implementation_before_valid_red_preserved": true
+    },
+    {
+      "run": "U10-daemon-cli-red-116",
+      "natural_exit": 2,
+      "kind": "FUNCTIONAL_RED",
+      "cause": "compiled CLI lacked real secure configuration and explicit startup; 3 of 6 tests failed"
+    },
+    {
+      "run": "U10-daemon-eagain-red-117",
+      "natural_exit": 2,
+      "kind": "FUNCTIONAL_RED",
+      "cause": "post-ACK EAGAIN application failure mistaken for scheduler idle; factory admission continued",
+      "fix": "require READY phase for idle; block factory before admission on non-READY phase; retain original Runtime error"
+    },
+    {
+      "run": "U10-daemon-native-evidence/first-audit-failure.txt",
+      "kind": "A_AUDIT_FAILURE",
+      "cause": "auditor expected binding.hardware, actual contract is binding.hardware_sha",
+      "fix": "preserve original auditor, verify same ca307f10 archive and all 454 members, rerun audit without rerunning application"
+    },
+    {
+      "run": "U10-pool-exit-red-121",
+      "natural_exit": 2,
+      "child_exit": 88,
+      "kind": "FUNCTIONAL_RED",
+      "cause": "unknown pthread_join error followed by allocation refusal terminated noexcept pool destructor"
+    },
+    {
+      "runs": [
+        "U10-pool-exit-green-122",
+        "U10-service-final-normal-123"
+      ],
+      "natural_exits": [
+        2,
+        1
+      ],
+      "kind": "INVALID_POOL_CAPACITY_POSITIVE_CONTROL",
+      "cause": "next pool configured workers4/tasks1, violates existing tasks>=workers bound",
+      "fix": "use valid workers4/tasks32 and assert EAGAIN for actual global worker-slot refusal",
+      "sequencing_error": "123 had already been launched without applying the failed 122 gate; allowed frozen run to finish naturally and retained its failure"
+    },
+    {
+      "run": "U10-service-final-sanitize-127",
+      "natural_exit": 1,
+      "kind": "FIRST_LSAN_FAILURE_161_BYTES",
+      "cause": "GCC7 host O2/no-elide two-long-string aggregate partial construction under one-shot allocation refusal; reproduced without runtime in128/129",
+      "first_archive_sha256": "66fee6d68b6a1931f1cddec87970e9d6024a566ae5c23f772b1f1adf66f22bbf",
+      "fix": "Error explicit value-parameter RAII constructor; same fields, no kernel UAPI change; no LeakSanitizer suppression",
+      "focused_green": "U10-control-error-oom-green-130",
+      "focused_natural_exit": 0
+    },
+    {
+      "run": "U10-fault-idempotency-red-135",
+      "natural_exit": 2,
+      "kind": "FUNCTIONAL_RED",
+      "cause": "Daemon fault guard rejected existing admitted identity before ServiceControl memo lookup",
+      "assertion": "fault preserves already admitted idempotent query without factory or execution",
+      "fix": "retain original handle overload; add trusted internal admission gate after identity memo path; runtime READY required before a new factory"
+    }
+  ],
+  "verified": [
+    "U10-daemon-green-115",
+    "U10-daemon-integrated-green-118",
+    "U10-pool-exit-corrected-green-124",
+    "U10-service-final-normal-125",
+    "U10-service-final-normal-126"
+  ],
+  "normal": {
+    "run": "U10-service-final-normal-126",
+    "prebuilt_elfs": 17,
+    "code_items": 891,
+    "compiler_jobs": 2,
+    "test_runner_jobs": 1,
+    "natural_exit": 0
+  },
+  "archives": [
+    {
+      "sha256": "ca307f10c3b3b9764b1307d50755f01393373b5dffd9ee1a0fa077ee3b960b67",
+      "members": 454
+    },
+    {
+      "sha256": "96523e093115492b989a66101e6066abc1b955788b2d7486b09576ede516c933",
+      "members": 424
+    },
+    {
+      "sha256": "9c2d1650c8e99ad61c5aa84bcb00af33ff70088ffcdc73d9cd44d76d1b443f0e",
+      "members": 34,
+      "scope": "OOM reduction original failures and focused repair"
+    }
+  ],
+  "remaining_at_checkpoint": [
+    "fresh normal131 running after Error repair",
+    "fresh ASan+UBSan, TSan and matching18ELF cross",
+    "U11-U18 actual native applications",
+    "U11-U25 complete plan/review/image gates"
+  ],
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED"
+}

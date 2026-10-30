@@ -1,0 +1,158 @@
+{
+  "task": "U06",
+  "base": "a8b8c6429db0afc0debb486fcdf1d3d65c1cab86",
+  "state": "COMPONENTS_VERIFIED_NOT_U06_COMPLETE",
+  "verified_runs": [
+    "U06-provider-sanitize-004",
+    "U06-control-sanitize-007",
+    "U06-backend-lifetime-sanitize-012",
+    "U06-components-fresh-015",
+    "U06-components-cross-017",
+    "U06-components-regression-018"
+  ],
+  "errors": [
+    {
+      "id": "U06-BOUNCE-001",
+      "run": "U06-bounce-reservation-red-003",
+      "exit": 2,
+      "cause": "v2 private stack occupies old legacy bounce; the new native bounce region was not excluded by the public allocator",
+      "fix": "dedicated v2 bounce at PS+0xfe000; private stack stays PS+0xff000; allocator skips bounce, native mapping rejects overlap; legacy adapter unchanged",
+      "verified_run": "U06-components-regression-018"
+    },
+    {
+      "id": "U06-COMPILE-001",
+      "run": "U06-control-functional-006",
+      "exit": 2,
+      "cause": "GCC7 Werror misleading indentation in program info branch",
+      "fix": "split guard and assignment; keep Werror",
+      "verified_run": "U06-control-sanitize-007"
+    },
+    {
+      "id": "U06-PROGREF-001",
+      "run": "U06-backend-lifetime-red-010",
+      "exit": 2,
+      "cause": "user backend erased program mapping after releasing only one duplicate load reference",
+      "fix": "track load users matching core, remove metadata only after last successful release",
+      "verified_run": "U06-components-regression-018"
+    },
+    {
+      "id": "U06-ACK-001",
+      "run": "U06-backend-ack-red-011",
+      "exit": 2,
+      "cause": "after kernel ACK retired but envelope copy faulted, user staging could not be explicitly recovered",
+      "fix": "retain first EFAULT; a later explicit ACK resolves known ESTALE and kernel-checked unpinned buffer release; no SUBMIT retry",
+      "verified_run": "U06-components-regression-018"
+    },
+    {
+      "id": "U06-CAPS-001",
+      "run": "U06-caps-admission-red-013",
+      "exit": 2,
+      "cause": "draft CAPS producer zero feature placeholder could not feed provider admission",
+      "fix": "advertise native INT16 or P8 graphics in new v2 feature_mask; same envelope/layout/old ABI; provider remains exclusive",
+      "verified_run": "U06-components-fresh-015"
+    },
+    {
+      "id": "U06-SLICE-001",
+      "run": "U06-backend-slice-release-red-014",
+      "exit": 2,
+      "cause": "user adapter accepted a subview release and requested whole kernel object release",
+      "fix": "require offset0 and full base length before release ioctl",
+      "verified_run": "U06-components-regression-018"
+    },
+    {
+      "id": "U06-KERNEL-001",
+      "run": "U06-components-cross-016",
+      "exit": 2,
+      "cause": "private callback member barrier expanded Linux barrier() macro",
+      "fix": "rename private callback memory_barrier; keep real barrier hook and Werror",
+      "verified_run": "U06-components-cross-017"
+    }
+  ],
+  "evidence_archive": {
+    "members": 166,
+    "sha256": "a7a18a85a10e9214717f0f689252a2d7b993ad9a6fb05eb0567f0610773939da",
+    "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U01-U06-components-evidence.tar.gz",
+    "gpu_raw_cycles": null,
+    "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U01-U06-components\\raw-and-artifacts.tar.gz",
+    "scope": "ORIGINAL_OFFLINE_LOGS_AND_PREBINDING_ARTIFACTS_VERIFIED_ON_A_NOT_BOARD",
+    "verified_members": 166,
+    "artifacts": {
+      "cross-artifacts/U05-prebinding-010/receipt.json": {
+        "scope": "PRE_BINDING_U05_ADAPTER_AARCH64_MODULE_NOT_RELEASE_NOT_IMAGE_NOT_BOARD",
+        "command": [
+          "make",
+          "-j1",
+          "-C",
+          "/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work-shared/zynqmp-generic/kernel-source",
+          "O=/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build",
+          "ARCH=arm64",
+          "CROSS_COMPILE=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-",
+          "M=/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U05-prebinding-010/source/driver",
+          "W=1",
+          "modules"
+        ],
+        "kernel_release": "5.4.0-xilinx-v2020.1",
+        "parent_inputs": {
+          "/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build/.config": "3c82c86b054c6572a797326db1c0384a9f758297ddd8a62dcbc51b21e629a1f1",
+          "/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build/Module.symvers": "a869b98a5662c7918aaeabd819ea5ebc3cde883e8208f7d6925e06ff6879a312"
+        },
+        "gpu_raw_cycles": null,
+        "natural_exit": 0,
+        "module_sha256": "2129fbcde92a7c54a3dd41185c85d011057ab9aab48518b2cbe03e63482f46dd",
+        "module_bytes": 5129552
+      },
+      "cross-artifacts/U06-prebinding-017/cpp-receipt.json": {
+        "object_sha256": "9194aad60f09649ce3ca670882718b27da06b5d97d139dce83846dd81ae1c5fd",
+        "object_bytes": 3023160,
+        "natural_exit": 0,
+        "toolchain_prefix": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-",
+        "gpu_raw_cycles": null
+      },
+      "cross-artifacts/U06-prebinding-017-module/receipt.json": {
+        "scope": "PRE_BINDING_U06_ADAPTER_AARCH64_MODULE_NOT_RELEASE_NOT_IMAGE_NOT_BOARD",
+        "command": [
+          "make",
+          "-j1",
+          "-C",
+          "/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work-shared/zynqmp-generic/kernel-source",
+          "O=/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build",
+          "ARCH=arm64",
+          "CROSS_COMPILE=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-",
+          "M=/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U06-prebinding-017-module/source/driver",
+          "W=1",
+          "modules"
+        ],
+        "kernel_release": "5.4.0-xilinx-v2020.1",
+        "parent_inputs": {
+          "/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build/.config": "3c82c86b054c6572a797326db1c0384a9f758297ddd8a62dcbc51b21e629a1f1",
+          "/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build/Module.symvers": "a869b98a5662c7918aaeabd819ea5ebc3cde883e8208f7d6925e06ff6879a312"
+        },
+        "gpu_raw_cycles": null,
+        "natural_exit": 0,
+        "module_sha256": "74984a68615a0e06f303f592f9908f1a529de3c9b951213168f8fff64b0ec691",
+        "module_bytes": 5216552
+      }
+    }
+  },
+  "remaining": [
+    "Matching startup DT/manifest/catalog/provider attachment before misc registration; never bind legacy and compute owners concurrently",
+    "Actual execution prepare/START/guard/digest/snapshot/drain/retirement/ACK callbacks and fault retention tests; preserve P8 indirect-reference checks",
+    "Cross-bound final application ELF/program identities and U22/U23 artifacts; prebinding module/object is not deployable",
+    "U06 complete-task acceptance before U07; later image gate still needs 15GiB, latest free is about3.09GiB"
+  ],
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED",
+  "board": "NOT_RUN",
+  "image": "NOT_BUILT",
+  "scope": "OFFLINE_COMPONENTS_AND_PRE_BINDING_CROSS_ONLY",
+  "rulings": [
+    "No old ABI/program identity or hardware source changed; v2 feature_mask completes previously unadvertised capability bits, not a physical PL attestation.",
+    "Buffer payloads64/128 bytes and program payload64 bytes remain inside unchanged128-byte envelope; public CODE/rodata loading is unavailable.",
+    "IGpuBackend virtual interface preserved; submit adapts ordinary parameter data to private typed ARGS and retains through uncertainty/ACK. ProgramRef.program_sha for this new backend is the catalog entry ID.",
+    "JobDesc deadline_ns is absolute Linux monotonic; compute wire budget is remaining time after argument transfer, capped60s; WAIT is separate.",
+    "Only whole buffer bases may be released. Repeated program load references and known ACK-copy uncertainty are retained explicitly; no automatic submit/reset retry.",
+    "Both provider primitives and backend use actual shared code with injected OS/MMIO/CDMA boundary. No actual kernel runtime/epoll/DMA/GPU/application result is claimed.",
+    "TEX state function is an internal checked primitive; frozen per-program state binding is still pending and must not enable new P8 rendering behavior speculatively.",
+    "Shared fixtures moved to test-only headers and inline helpers; Make dependencies now include all v2 headers; a fresh OUT was compiled for final sanitizer evidence."
+  ]
+}

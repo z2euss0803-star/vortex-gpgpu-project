@@ -1,0 +1,213 @@
+{
+  "scope": "INDEPENDENT_STATIC_RELEASE_TOOL_REVIEW_NO_BUILD_NO_IMAGE_NO_TARGET",
+  "natural_exit": 0,
+  "scripts": [
+    {
+      "name": "final_models_host_r13_668.py",
+      "previous_sha256": "74f10d4b6ef970a60e7c6afb64e81f65de8a5f83d886c03b34ac378993877e3b",
+      "sha256": "2791ccc244d0ae26b93b55f8237bb722e5059796c1ab2bf52bc70ffa3d82600e",
+      "syntax_parse": true,
+      "exact_declared_adaptation_plus_recorded_generator_transform": true
+    },
+    {
+      "name": "audit_vxgpud_r13_669.py",
+      "previous_sha256": "c70d7ef50d086503db8c9a18195e105e36b409b1477850eb7b979d1a5b6065bf",
+      "sha256": "1586d64cae53253337ce9495cc1153280d8ead6764fc5942fd520477905d31b7",
+      "syntax_parse": true,
+      "exact_declared_adaptation_plus_recorded_generator_transform": true
+    },
+    {
+      "name": "cross_userspace_r13_669.py",
+      "previous_sha256": "b71c42e57c08b154a174238c074aa65d02ab8a59c66acd82a7b0549be706abe5",
+      "sha256": "6844512ba9d4bd28d4d8471fc05ce05478d0f5ac88623849f6229c8848ed1405",
+      "syntax_parse": true,
+      "exact_declared_adaptation_plus_recorded_generator_transform": true
+    },
+    {
+      "name": "build_installation_probe_r13_670.py",
+      "previous_sha256": "2ebb4c0959be56626b83373c374b9f79125cecb29500e04969352fb0f64cc5f7",
+      "sha256": "b660fe89e14c345faec0dea16e5c1dda16eb11305b25ca0d2f67f7a102f1c9b9",
+      "syntax_parse": true,
+      "exact_declared_adaptation_plus_recorded_generator_transform": true
+    },
+    {
+      "name": "pack_r13_image_671.py",
+      "previous_sha256": "c42344abe112a50ee386b58254088cf455e31d6af620d0a769c8b5c70ab28746",
+      "sha256": "ce44029ed9f0d4db644c9d29ce96818cbfe1587370eb0b069573efbbf2c02cf2",
+      "syntax_parse": true,
+      "exact_declared_adaptation_plus_recorded_generator_transform": true
+    }
+  ],
+  "all_declared_adaptations_verified": true,
+  "pack_ast_identical_gate_functions": [
+    "need",
+    "digest",
+    "wire",
+    "canonical",
+    "evidence",
+    "regular",
+    "file_ref",
+    "unique_json",
+    "json_file",
+    "is_digest",
+    "evidence_path",
+    "load_runtime",
+    "validate_model_rows",
+    "network_payload",
+    "rootfs_policy_projection_valid",
+    "audit_rootfs_r10",
+    "existing_removal_prefixes",
+    "inventory",
+    "presets_audit",
+    "kernel_reuse_audit",
+    "host_config_check",
+    "failed_receipt",
+    "main"
+  ],
+  "explicit_v8_firmware_calls": [
+    {
+      "script": "final_models_host_r13_668.py",
+      "line": 150,
+      "variant": "reuse-v8"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "line": 250,
+      "variant": "reuse-v8"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "line": 291,
+      "variant": "reuse-v8"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "line": 206,
+      "variant": "reuse-v8"
+    }
+  ],
+  "new_g_constant_paths": [
+    {
+      "script": "final_models_host_r13_668.py",
+      "key": "S",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\source"
+    },
+    {
+      "script": "final_models_host_r13_668.py",
+      "key": "E",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\evidence\\a-r13-models-host-668"
+    },
+    {
+      "script": "final_models_host_r13_668.py",
+      "key": "H",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\host-final-r13-668"
+    },
+    {
+      "script": "final_models_host_r13_668.py",
+      "key": "M",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\models-final-r13-668"
+    },
+    {
+      "script": "final_models_host_r13_668.py",
+      "key": "LOCK",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\source\\build\\source-lock-r13-668.json"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "key": "ROOT",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\source"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "key": "TASK",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\image-packer-r13-671"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "key": "SOURCE_LOCK",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\source\\build\\source-lock-r13-668.json"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "key": "CROSS_RECEIPT",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\runtime-audit-r5-r13-669\\receipt.json"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "key": "MODEL_RECEIPT",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\evidence\\a-r13-models-host-668\\receipt.json"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "key": "MODELS",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\models-final-r13-668"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "key": "HOST_PARSER",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\host-final-r13-668\\out\\vxgpud"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "key": "WORK",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\image-stage-r13-671a"
+    },
+    {
+      "script": "pack_r13_image_671.py",
+      "key": "RELEASE",
+      "path": "\\mnt\\g\\s8_software_r5_20261028\\software-r13-performance-633\\delivery\\release-r13-671"
+    }
+  ],
+  "capacity": {
+    "helper_sha256": "7c0b0898706b1ed6c85e80be8b2d9ee5123080c643de296c12a8de7563487ca5",
+    "fixture_expected_subtree_bytes": 66,
+    "observed": {
+      "baseline_bytes": 43437066041,
+      "baseline_sha256": "c852a46a44a1f4cad7ad7ab0d9cb6d661d32cbbe5c0e945269768b6d37535d69",
+      "cap": 50000000000,
+      "files": 3,
+      "logical_bytes_upper_bound": 43437066107,
+      "new_subtree_bytes": 66,
+      "no_subtraction": true,
+      "root": "G:\\s8_software_r5_20261028\\software-r13-performance-633\\evidence\\release-tools-independent-674\\run-02\\capacity-fixture",
+      "scope": "NATIVE_CONSERVATIVE_BASELINE_PLUS_ENTIRE_R13_SUBTREE"
+    },
+    "wrapper_adds_own_receipt_bytes": true,
+    "rejected": [
+      "at-cap",
+      "over-cap",
+      "wrong-baseline",
+      "subtraction-not-forbidden",
+      "wrong-scope",
+      "bool-bytes",
+      "changed-helper-sha"
+    ],
+    "symlink_refused": true,
+    "baseline_not_scanned": true
+  },
+  "fresh_readonly_program_admission": [
+    {
+      "directory": "hunet-fp16-v3",
+      "family_sha256": "82c50aa5dac60ba0aae90e325578647fa3b1f1fc4710649a01c62db9951375f4",
+      "receipt_sha256": "9452edd0552cdc6a18b41b12ad3203a07ddefc0399da943962bfaa00a7b4f1e7",
+      "code_sha256": "8cb3e18144d60a05e57009d23d02f0da8d07d9741b1bb780d4a0d4fa144990a6",
+      "schema_sha256": "79319f1611265bc2ad131b91642de7ddbe0c30d4b3621ce3a8060e90e1114c89",
+      "variant": "span32-tile2-v3"
+    },
+    {
+      "directory": "mosaic-int16-v8",
+      "family_sha256": "1f2f30cd356be56cd06a7fdfe04cc3d2107770b0273b27f20c12c22c5a3b46a1",
+      "receipt_sha256": "78534070f3f82a7c8593f45ad0c2ca6d1fdab43594498820be85cf62df46abee",
+      "code_sha256": "618632402b615385dd165f7fa25a4526843cb7e975517a3c7fb16d27435fa34c",
+      "schema_sha256": "9a03920a64917e13254a20e235bfb01bee937a0d199594def5f578daa6d21dd4",
+      "variant": "reuse-v8"
+    }
+  ],
+  "source_lock_sha256": "7cf8849a1042050792c8d2c05ee841caffb52b53179f1cceef086b0198c59c34",
+  "source_snapshot_id": "e5792d4e19f0b908197d0df5bc9650033c41e34e09a8e3decdf31eadba36c973",
+  "runtime_source_id": "b8c00b2e8f31f6803c7c982008581983fc73dfe850c9f6e1bff7d6a76a77bad1",
+  "script_sources_unchanged": true,
+  "build_executed": false,
+  "image_executed": false,
+  "gpu_raw_cycles": null
+}

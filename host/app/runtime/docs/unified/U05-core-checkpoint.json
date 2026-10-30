@@ -1,0 +1,40 @@
+{
+  "task": "U05",
+  "state": "CORE_SOFTWARE_VERIFIED_TASK_STILL_IN_PROGRESS",
+  "base": "72b0020f7645a2ededfd8af66e6a6113884225cf",
+  "verified_runs": [
+    "U05-core-green-004",
+    "U05-core-sanitize-005"
+  ],
+  "pending": [
+    "Linux ioctl/fops/worker/poll wiring",
+    "signal and timed-wait adapter cases",
+    "matched kernel compile in U22/U23"
+  ],
+  "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "cross": "NOT_RUN",
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "errors": [
+    {
+      "id": "U05-COMPILE-001",
+      "run": "U05-core-green-002",
+      "cause": "GCC7 misleading indentation warnings; warnings retained as errors",
+      "fix": "split guard and assignment statements"
+    },
+    {
+      "id": "U05-ATOMIC-001",
+      "run": "U05-core-functional-003",
+      "cause": "old cookie at nonfirst batch entry returned before clearing staged slots",
+      "fix": "all cookie rejection paths go through whole-batch rollback"
+    },
+    {
+      "id": "U05-ARGS-001",
+      "run": "U05-core-functional-003",
+      "cause": "public copy correctly blocked pinned argument source; private read-only submission snapshots incorrectly used public copy",
+      "fix": "typed unsealed ARGS snapshots under device mutex; CODE/ARGS cannot be writable data refs; public copy protections unchanged"
+    }
+  ]
+}

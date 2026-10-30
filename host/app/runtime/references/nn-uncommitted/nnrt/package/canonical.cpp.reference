@@ -1,0 +1,2 @@
+#include <vxnn/package.hpp>
+namespace vxnn {Result<std::string> canonical_metadata(const std::string&,bool){return Result<std::string>::success("{}");}}

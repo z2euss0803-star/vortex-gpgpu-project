@@ -1,0 +1,100 @@
+[
+  {
+    "scope": "STATIC_PROGRAM_AUDIT_NOT_EXECUTION",
+    "program_id": 6,
+    "entry": 2147483648,
+    "elf_sha256": "bca0afcbca9cd5efbc0fce69348cc9c92986288bc39d8e070a913652f12d168c",
+    "wire_sha256": "2043f983252c07d31e78158de3138d4c19ff295abb56531ab8ed306fa7011284",
+    "wire_bytes": 41792,
+    "segments": [
+      {
+        "offset": 4096,
+        "start": 2147483648,
+        "end": 2147520800,
+        "file_bytes": 37152,
+        "memory_bytes": 37152,
+        "flags": 5
+      },
+      {
+        "offset": 41248,
+        "start": 2147524896,
+        "end": 2147525404,
+        "file_bytes": 460,
+        "memory_bytes": 508,
+        "flags": 6
+      }
+    ],
+    "immutable_spans": [
+      {
+        "start": 2147483648,
+        "bytes": 37152,
+        "sha256": "235e5c4c3a0ce6e8fdd32b2f6a9003dfbb86645114c3e4ae238cc991344812aa"
+      }
+    ],
+    "edata": 2147525376,
+    "end": 2147525404,
+    "tls_stride": 28,
+    "tls_end": 2147527196,
+    "stack_active_base": 4294377472,
+    "stack_reserved_base": 4293918720,
+    "stack_top": 4294901760,
+    "stack_stride": 8192,
+    "exit_register": 8,
+    "return_saved_before_perf": true,
+    "exit_slots": [
+      268443784,
+      268444040,
+      268444296,
+      268444552
+    ]
+  },
+  {
+    "scope": "STATIC_PROGRAM_AUDIT_NOT_EXECUTION",
+    "program_id": 7,
+    "entry": 2147483648,
+    "elf_sha256": "2664cb6e24f1d990127db02a58e2f130acdb563a134f4a5f45efce28a5a7c646",
+    "wire_sha256": "37c8c9181819a211ea5a2e5527df1a076a1cff74cee4a4d1bc2107698f26f368",
+    "wire_bytes": 30336,
+    "segments": [
+      {
+        "offset": 4096,
+        "start": 2147483648,
+        "end": 2147509592,
+        "file_bytes": 25944,
+        "memory_bytes": 25944,
+        "flags": 5
+      },
+      {
+        "offset": 30040,
+        "start": 2147513688,
+        "end": 2147513948,
+        "file_bytes": 176,
+        "memory_bytes": 260,
+        "flags": 6
+      }
+    ],
+    "immutable_spans": [
+      {
+        "start": 2147483648,
+        "bytes": 25944,
+        "sha256": "eafaae391f0a8593244ae57572bcfebd855d9e0737c034740911f95bd402b0e5"
+      }
+    ],
+    "edata": 2147513920,
+    "end": 2147513948,
+    "tls_stride": 28,
+    "tls_end": 2147515740,
+    "stack_active_base": 4294377472,
+    "stack_reserved_base": 4293918720,
+    "stack_top": 4294901760,
+    "stack_stride": 8192,
+    "exit_register": 8,
+    "return_saved_before_perf": true,
+    "exit_slots": [
+      268443784,
+      268444040,
+      268444296,
+      268444552
+    ]
+  }
+]

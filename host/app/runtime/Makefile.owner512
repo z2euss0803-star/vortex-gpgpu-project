@@ -1,0 +1,7 @@
+include Makefile.unified
+MOSAIC_WIRE_SOURCE += device/vxnn/mosaic_wire_reuse_v4.cpp
+$(OUT)/backend/tests/unified/mosaic_owner_profile_bridge.o: tests/unified/mosaic_owner_profile_bridge.c tests/unified/mosaic_owner_profile_hooks.h $(V2_ALL_HEADERS)
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -c $< -o $@
+$(OUT)/test_mosaic_owner_profile: tests/unified/test_mosaic_owner_profile.cpp unified/mosaic_request.cpp unified/catalog.cpp unified/residency.cpp nnrt/models/mosaic_plan.cpp nnrt/models/mosaic.cpp nnrt/ops/mosaic.cpp nnrt/ops/mosaic_lowering.cpp $(MOSAIC_WIRE_SOURCE) nnrt/memory/arena_storage.cpp nnrt/memory/arena_guard.cpp nnrt/memory/arena.cpp unified/service/compute_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/mosaic_owner_profile_bridge.o tests/unified/mosaic_owner_profile_hooks.cpp
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@

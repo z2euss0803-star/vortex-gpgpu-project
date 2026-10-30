@@ -1,0 +1,252 @@
+{
+  "scope": "ACTUAL_BOTH_PROVIDER_COMPLETE_LINUX_BOOT_CHAIN_AND_CONTENT_NOT_BOARD",
+  "natural_exit": 0,
+  "providers": [
+    {
+      "provider": {
+        "name": "S8_NATIVE_INT16",
+        "provider_flags": 1,
+        "compatible": "vortex,hw4-s8-demo-v1",
+        "bit_sha256": "94ae9d3e6eb73ba55a8eec8c802e3818cd6b3a9be7e60542da5ae9459e3579e1",
+        "xsa_sha256": "02e68160e21b01621fde1eac6e472810e0fe50cd1842acb3ab63469314355e94",
+        "namespaces": [
+          1,
+          3
+        ],
+        "ps_base": 268435456,
+        "ps_bytes": 1048576,
+        "pl_base": 21474836480,
+        "pl_bytes": 2147483648,
+        "contexts": 1,
+        "preempt": false,
+        "hardware_contract": "1bf11d26789e7c602f9c05a5ecc97e2605ac7807deade8f4bfc549487f45ec5d",
+        "board_identity_verified": false
+      },
+      "build_id": "VXU-S8-NN-IMAGE-20261025T231610Z",
+      "complete_build_receipt": {
+        "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\U23-U24-actual-metadata-1588\\image_build_s8.json",
+        "bytes": 1017571,
+        "sha256": "11e761905ab54d58e85adea42c1b98fdc889f1e7198c08b9c14b8ee4b023227b",
+        "source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U24-boot-metadata-completion-1519/receipt.json"
+      },
+      "payload_receipt": {
+        "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\U23-U24-actual-metadata-1588\\payload_s8.json",
+        "bytes": 1053462,
+        "sha256": "73477da629a0fd57756e77c9e2d949c7c12c9a04619320b2d4797fe6865fdb31",
+        "source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U24-runtime-closure-payload-1495/receipt.json"
+      },
+      "content_audit_receipt": {
+        "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\U23-U24-actual-metadata-1588\\audit_s8.json",
+        "bytes": 11503,
+        "sha256": "cde0245ec17bbaadd570467259ad9e59446727dcfed7e023eb8f6a4b9e18920d",
+        "source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U24-s8-post-cache-content-audit-1582/receipt.json"
+      },
+      "startup_files": {
+        "BOOT.BIN": {
+          "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\startup-files-S8-1599\\BOOT.BIN",
+          "bytes": 24829132,
+          "sha256": "3536befc84376814ad1cad210e8f782932ec24541b9b7e36ed488fe18663ebc9",
+          "original_source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U23-kernel-s8-1323/project/images/linux/BOOT.BIN"
+        },
+        "boot.scr": {
+          "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\startup-files-S8-1599\\boot.scr",
+          "bytes": 272,
+          "sha256": "856d5bfd8fd199b2617261eba0316bd6ede27167e7d2db6c38a69dfb84b1632c",
+          "original_source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U23-kernel-s8-1323/project/images/linux/boot.scr"
+        },
+        "image.ub": {
+          "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\startup-files-S8-1599\\image.ub",
+          "bytes": 121906576,
+          "sha256": "2f7b691bb494339c33161198ffb01216edbc67ad8b306a81c645e015028bb219",
+          "original_source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U23-kernel-s8-1323/project/images/linux/image.ub"
+        }
+      },
+      "all_audited_image_files": {
+        "BOOT.BIN": {
+          "bytes": 24829132,
+          "sha256": "3536befc84376814ad1cad210e8f782932ec24541b9b7e36ed488fe18663ebc9"
+        },
+        "boot.scr": {
+          "bytes": 272,
+          "sha256": "856d5bfd8fd199b2617261eba0316bd6ede27167e7d2db6c38a69dfb84b1632c"
+        },
+        "image.ub": {
+          "bytes": 121906576,
+          "sha256": "2f7b691bb494339c33161198ffb01216edbc67ad8b306a81c645e015028bb219"
+        },
+        "Image": {
+          "bytes": 23953920,
+          "sha256": "4843ca48af695a981bbcbcde8150be673f280cc9153008cbe78f69dd8bcbc77b"
+        },
+        "system.dtb": {
+          "bytes": 40428,
+          "sha256": "29fbabb2a68090bf47f9fc6bbd3c89ce749d5e630b359ec555cf87d9e1dbf38f"
+        },
+        "rootfs.cpio.gz": {
+          "bytes": 112604728,
+          "sha256": "1e32d2b181e72d5c15370bbbf6d114715a5cb5772081f124b3d670df58c80442"
+        },
+        "rootfs.tar.gz": {
+          "bytes": 112699001,
+          "sha256": "3b5ba464c2a7bacf5366056e3a2010ed5ed222b1053c4f0a4673df718deaf2dc"
+        }
+      },
+      "source_provenance": {
+        "producer_source_root": "/home/z2euss/workspace/unified_gpu_runtime_20261021/producer-source/U23-image-controller-runtime-fix-1490",
+        "producer_source_snapshot_id": "baa67819164a46dea7c61b17449295d180561fd101554bfef4fb2af331886ef3",
+        "auditor_source_root": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+        "auditor_source_snapshot_id": "2be67c75e45d7808d335318f7f7b4b69985ea0eb0c82e24270f65db15a8d609a",
+        "runtime_source_id": "d1dff571b14da4d12954179b69846691dddfb851db43e7bcc0dd9f45d6988f1b",
+        "changed_checker_paths": [
+          "scripts/unified/audit_image.py",
+          "scripts/unified/image.py",
+          "tests/unified/test_image_boot.py",
+          "tests/unified/test_image_runtime_closure.py"
+        ],
+        "producer_rebuilt": false
+      },
+      "independent_complete_BOOT": {
+        "bif_sha256": "d896490a8ee6498debb6f96c3a6833a80a2f90b9326eeedafe051bcef12c84ae",
+        "boot_sha256": "3536befc84376814ad1cad210e8f782932ec24541b9b7e36ed488fe18663ebc9",
+        "independent_sha256": "3536befc84376814ad1cad210e8f782932ec24541b9b7e36ed488fe18663ebc9"
+      },
+      "compiled_in_completion_step": false,
+      "board": "NOT_RUN",
+      "display": "NOT_RUN",
+      "application_precision": "NOT_RUN",
+      "performance": "NOT_MEASURED",
+      "gpu_raw_cycles": null
+    },
+    {
+      "provider": {
+        "name": "P8_W4_GRAPHICS",
+        "provider_flags": 2,
+        "compatible": "vortex,w4-graphics-p8-v1",
+        "bit_sha256": "faeaddb98d5d39a4e787c6b2aaf559d6a6163191a1cc8eb18331624b896290dc",
+        "xsa_sha256": "08183adeb93ec2ffe3c8c5643813daae12365f61efb95a0d985f04660c340536",
+        "namespaces": [
+          2
+        ],
+        "ps_base": 268435456,
+        "ps_bytes": 1048576,
+        "pl_base": 21474836480,
+        "pl_bytes": 2147483648,
+        "contexts": 1,
+        "preempt": false,
+        "hardware_contract": "22343e02d30978412eeb245474fb2e272bf19fe1da08ec00c0e13e24f005b012",
+        "board_identity_verified": false
+      },
+      "build_id": "VXU-P8-GRAPHICS-20261026T012852Z",
+      "complete_build_receipt": {
+        "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\U23-U24-actual-metadata-1620\\image_build_p8.json",
+        "bytes": 1014310,
+        "sha256": "0c92d7ee8c859d674a5e1afd91648085d10a1c7dfebee51707eb06860e4ae11e",
+        "source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U24-p8-complete-image-1596/receipt.json"
+      },
+      "payload_receipt": {
+        "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\U23-U24-actual-metadata-1620\\payload_p8.json",
+        "bytes": 1021119,
+        "sha256": "89b25a6bccfcd98f8449533b1dbd41f7f1ce11992dce6a5bce7a67deca089a6d",
+        "source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U24-p8-runtime-payload-1580/receipt.json"
+      },
+      "content_audit_receipt": {
+        "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\U23-U24-actual-metadata-1620\\audit_p8.json",
+        "bytes": 11291,
+        "sha256": "d46dcff3de839dad7931f483c19599cf2751a701f5d394311cd0b5f2bff21f14",
+        "source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U24-p8-complete-content-audit-1617/receipt.json"
+      },
+      "startup_files": {
+        "BOOT.BIN": {
+          "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\startup-files-P8-1621\\BOOT.BIN",
+          "bytes": 24829136,
+          "sha256": "29b034096d29b71f44252a33df1e43dadbfdd70117d1f12359c76b1211f905a8",
+          "original_source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U23-kernel-p8-1544/project/images/linux/BOOT.BIN"
+        },
+        "boot.scr": {
+          "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\startup-files-P8-1621\\boot.scr",
+          "bytes": 272,
+          "sha256": "f676ab41793bbc5591628a985e8c645f6a85ec3f60471690fe3399330bb1b45f",
+          "original_source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U23-kernel-p8-1544/project/images/linux/boot.scr"
+        },
+        "image.ub": {
+          "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\startup-files-P8-1621\\image.ub",
+          "bytes": 72929008,
+          "sha256": "6ba73ed05412dd54f1c0b5d1d8da57c50b7c413a6db739016106121cfb155150",
+          "original_source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U23-kernel-p8-1544/project/images/linux/image.ub"
+        }
+      },
+      "all_audited_image_files": {
+        "BOOT.BIN": {
+          "bytes": 24829136,
+          "sha256": "29b034096d29b71f44252a33df1e43dadbfdd70117d1f12359c76b1211f905a8"
+        },
+        "boot.scr": {
+          "bytes": 272,
+          "sha256": "f676ab41793bbc5591628a985e8c645f6a85ec3f60471690fe3399330bb1b45f"
+        },
+        "image.ub": {
+          "bytes": 72929008,
+          "sha256": "6ba73ed05412dd54f1c0b5d1d8da57c50b7c413a6db739016106121cfb155150"
+        },
+        "Image": {
+          "bytes": 23953920,
+          "sha256": "e598c3a3b8bf6deacc9048546ffd3f15129960d46aef706c12986547ad615e3c"
+        },
+        "system.dtb": {
+          "bytes": 40432,
+          "sha256": "a4150957a05adadea70b9426786055754e9a2bbe92ea95582090d9432bb628b6"
+        },
+        "rootfs.cpio.gz": {
+          "bytes": 63627153,
+          "sha256": "4dc34b3ac1877fad7ef283c5bde5f99a0cde4e6521feba4a25c2e40411a6e323"
+        },
+        "rootfs.tar.gz": {
+          "bytes": 63720623,
+          "sha256": "8980d590cab21ef57ab8eec2e6ae43bc462d7b1ca9aabc27ab93a19e5881d0fd"
+        }
+      },
+      "source_provenance": {
+        "producer_source_root": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+        "producer_source_snapshot_id": "2be67c75e45d7808d335318f7f7b4b69985ea0eb0c82e24270f65db15a8d609a",
+        "auditor_source_root": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source",
+        "auditor_source_snapshot_id": "2be67c75e45d7808d335318f7f7b4b69985ea0eb0c82e24270f65db15a8d609a",
+        "runtime_source_id": "d1dff571b14da4d12954179b69846691dddfb851db43e7bcc0dd9f45d6988f1b",
+        "changed_checker_paths": [],
+        "producer_rebuilt": false
+      },
+      "independent_complete_BOOT": {
+        "bif_sha256": "a3a07b2aa7b729824a546337465bfb50e13ffd9e28e980bc5562c21320f96777",
+        "boot_sha256": "29b034096d29b71f44252a33df1e43dadbfdd70117d1f12359c76b1211f905a8",
+        "independent_sha256": "29b034096d29b71f44252a33df1e43dadbfdd70117d1f12359c76b1211f905a8"
+      },
+      "compiled_in_completion_step": true,
+      "board": "NOT_RUN",
+      "display": "NOT_RUN",
+      "application_precision": "NOT_RUN",
+      "performance": "NOT_MEASURED",
+      "gpu_raw_cycles": null
+    }
+  ],
+  "matching_Ubuntu_tests": {
+    "kernel": 34,
+    "image": 35,
+    "run": "U24-fit-auditor-ubuntu-1526",
+    "U24_source_files_exactly_match_frozen_cut": true
+  },
+  "first_errors_preserved": [
+    "S8 original1504 independentBOOT checker mismatch and1515 capsule",
+    "P8 actual content audit1604 SDK PT_INTERP failure and1605 raw capsule",
+    "SDK recovery1609 iterator failure before any write"
+  ],
+  "SDK_recovery": {
+    "run": "U24-sdk-dependency-recovery-1612",
+    "restored_names": 6052,
+    "tool_version_checks": 10,
+    "AArch64_C_and_Cpp_link_checks": 2,
+    "target_executed": false,
+    "original_boot_bytes_unchanged": true
+  },
+  "services_enabled_by_default": false,
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED"
+}

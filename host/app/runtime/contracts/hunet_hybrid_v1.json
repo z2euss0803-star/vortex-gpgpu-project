@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "scope": "FIXED_HYBRID_ROLE_CONTRACT_NOT_BOARD",
+  "source_base": "9b3c4d58de551e49af45d3f567c91bf0311aa75c",
+  "program_id": 8,
+  "cpu_algorithm": "ERF_NATIVE_V1",
+  "threads": 4,
+  "logical_jobs": 1023,
+  "gpu_jobs": 1010,
+  "cpu_jobs": 13,
+  "stages": 100,
+  "cpu_stages": [
+    {
+      "stage": 8,
+      "sequence": 296,
+      "elements": 393216
+    },
+    {
+      "stage": 17,
+      "sequence": 591,
+      "elements": 393216
+    },
+    {
+      "stage": 28,
+      "sequence": 768,
+      "elements": 196608
+    },
+    {
+      "stage": 37,
+      "sequence": 847,
+      "elements": 196608
+    },
+    {
+      "stage": 49,
+      "sequence": 896,
+      "elements": 98304
+    },
+    {
+      "stage": 55,
+      "sequence": 913,
+      "elements": 98304
+    },
+    {
+      "stage": 61,
+      "sequence": 930,
+      "elements": 98304
+    },
+    {
+      "stage": 67,
+      "sequence": 947,
+      "elements": 98304
+    },
+    {
+      "stage": 73,
+      "sequence": 964,
+      "elements": 98304
+    },
+    {
+      "stage": 79,
+      "sequence": 981,
+      "elements": 98304
+    },
+    {
+      "stage": 87,
+      "sequence": 1000,
+      "elements": 49152
+    },
+    {
+      "stage": 93,
+      "sequence": 1011,
+      "elements": 49152
+    },
+    {
+      "stage": 98,
+      "sequence": 1020,
+      "elements": 1280
+    }
+  ],
+  "maximum_cpu_bytes": 1572864,
+  "profile": {
+    "id": 4,
+    "name": "hw4-hunet-v5",
+    "control": 2684354560,
+    "cdma": 2952855552,
+    "ready_gpio": 2952921088,
+    "mmio_bytes": 65536,
+    "ps_base": 268435456,
+    "ps_size": 1048576,
+    "dma_bits": 32,
+    "gpu_pl_base": 2147483648,
+    "gpu_pl_end": 4294967296,
+    "pl_system_base": 21474836480,
+    "pl_gpu_visible_end": 23622320128,
+    "pl_physical_end": 25769803776,
+    "bit_sha256": "deb74c77e7e76e9108f49307371c42c889b21f8e764c545987a7786ce543ebc8",
+    "xsa_sha256": "7fdd711f0229ee01d369188d44852c0f85193aada485ac4b1998e2b4e3e32a91",
+    "topology": {
+      "clusters": 1,
+      "cores": 4,
+      "warps": 4,
+      "threads": 4
+    },
+    "program_ids": [
+      6,
+      7
+    ],
+    "watchdog": 4000000000,
+    "execution_ms": 60000,
+    "network_ms": 180000,
+    "cdma_policy": {
+      "alignment": 16,
+      "chunk": 4096,
+      "dre": false,
+      "sg": false,
+      "polling": true
+    },
+    "private": {
+      "crt_base": 268443648,
+      "crt_bytes": 4096,
+      "console": 268443712,
+      "csr": 268443776,
+      "args_base": 268501056,
+      "args_bytes": 128,
+      "bounce_base": 269479936,
+      "bounce_bytes": 4096,
+      "stack_base": 4293918720,
+      "stack_end": 4294967296
+    },
+    "evidence_scope": "STATIC_SOURCE_AND_LINUX_POLICY_NOT_BOARD"
+  },
+  "identities": {
+    "weights": "674069f415d51ce502dd00e579125c0ca8fe6d7e71a71d08cfae457e293e39bc",
+    "jobs_file": "6c3fbdaf6de98b170b813d0a2dab84f3bd76a1b22e580c55312f058a908c1765",
+    "aux_file": "8330485df5c42475c7729d037b9c68043e9a99707c7833fe20a4d8df23fee1ac",
+    "onnx": "3b190dc642bb5be30ae76e6359e546e6cbda143e6b32577f97e530d9667afc70",
+    "original_acceptance": "37b274adc2dac5f21b9b7a568eb1bdceb384365aab8755d9963b4a639560ef1a",
+    "original_R2": "fe3885b177e0901d19519e8e37944334c6846671e6f06d5d7e326801408da3f3",
+    "original_ORT_FP32": "dbae979b131d50cba1a857ab121ca41ef5a372f25eaf638736240e84b70eb14d",
+    "bit": "deb74c77e7e76e9108f49307371c42c889b21f8e764c545987a7786ce543ebc8",
+    "xsa": "7fdd711f0229ee01d369188d44852c0f85193aada485ac4b1998e2b4e3e32a91"
+  }
+}

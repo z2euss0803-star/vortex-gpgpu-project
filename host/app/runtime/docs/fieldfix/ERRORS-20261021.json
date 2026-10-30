@@ -1,0 +1,82 @@
+[
+  {
+    "id": "P0-HUNET-COLD-IDLE-RED",
+    "kind": "VALID_FUNCTIONAL_REGRESSION",
+    "evidence": "results/verified/red-003",
+    "natural_exit": 2,
+    "cause": "profile idle incorrectly requires historical IOC before any CDMA transfer",
+    "repair": "selection-only Idle+no-error; transfer completion still strict Idle+IOC",
+    "status": "UBUNTU_ORDINARY_AND_SAN_PASS_BOARD_CAUSE_UNCONFIRMED"
+  },
+  {
+    "id": "HARNESS-MAKE-ENTRY",
+    "kind": "HARNESS_FAILURE_NOT_VALID_RED",
+    "evidence": "results/verified/red-001",
+    "natural_exit": 2,
+    "cause": "Makefile.demo used standalone without top-level core/include variables",
+    "repair": "top-level make"
+  },
+  {
+    "id": "HARNESS-HOST-GCC",
+    "kind": "HARNESS_FAILURE_NOT_VALID_RED",
+    "evidence": "results/verified/red-002",
+    "natural_exit": 2,
+    "cause": "Ubuntu host GCC does not support default file-prefix-map",
+    "repair": "reuse existing validated host-only CFLAGS; cross compiler flags unchanged"
+  },
+  {
+    "id": "HARNESS-A-QUOTING",
+    "kind": "LOCAL_HELPER_GENERATION_FAILED",
+    "evidence": "tool transcript in this session; no remote action",
+    "natural_exit": 1,
+    "cause": "PowerShell quoting in python -c",
+    "repair": "saved helper file via apply_patch"
+  },
+  {
+    "id": "HARNESS-A-TEMP",
+    "kind": "A_SANDBOX_TEMP_PERMISSION_ERROR",
+    "evidence": "tool transcript in this session",
+    "natural_exit": 1,
+    "cause": "default TemporaryDirectory points to inaccessible sandbox directory",
+    "repair": "test temp directory explicitly under candidate build/demo"
+  },
+  {
+    "id": "HARNESS-PATCH-CRLF",
+    "kind": "INTEGRATION_CHECK_FAILED_NO_PRODUCT_PATCH_APPLIED",
+    "evidence": "original patch retained in prior E1; tool transcript",
+    "natural_exit": 1,
+    "cause": "prior Windows patch CRLF vs exported LF source",
+    "repair": "normalize independent patch copy; git apply --check then apply"
+  },
+  {
+    "id": "HARNESS-JSON-HOST",
+    "kind": "BUILD_DEPENDENCY_CONFIGURATION",
+    "evidence": "results/verified/integration-001",
+    "natural_exit": 1,
+    "cause": "system pkg-config json-c absent",
+    "repair": "reuse frozen json-c-0.18-vxl1 host dependency; no installation"
+  },
+  {
+    "id": "HARNESS-HELPER-IMPORT",
+    "kind": "HELPER_FAILURE_AFTER_PASSED_TESTS",
+    "evidence": "results/verified/integration-002",
+    "natural_exit": 1,
+    "cause": "helper parent process imports scripts outside source cwd",
+    "repair": "separate compile-only helper; prior successful tests retained, not rerun"
+  },
+  {
+    "id": "FIELD-MOSAIC-WATCHDOG",
+    "kind": "PRESERVED_BOARD_FAILURE_UNRESOLVED",
+    "evidence": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_mosaic_dp_20261018\\evidence\\demo\\T24\\dp-fix-20261021T022911Z",
+    "status": "NO_NEW_GPU_TEST",
+    "failed_counter_observation": 4000000001,
+    "raw_cycles_valid": false
+  },
+  {
+    "id": "FIELD-HUNET-SELECT",
+    "kind": "PRESERVED_BOARD_FAILURE",
+    "evidence": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_mosaic_dp_20261018\\evidence\\demo\\T24\\hunet-first-20261021T030034Z",
+    "status": "SOURCE_CANDIDATE_PASS_SPECIFIC_FIELD_PREDICATE_NOT_CAPTURED",
+    "gpu_raw_cycles": null
+  }
+]

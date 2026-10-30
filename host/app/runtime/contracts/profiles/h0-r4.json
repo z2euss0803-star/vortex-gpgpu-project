@@ -1,0 +1,83 @@
+{
+  "profile": "h0-r4",
+  "status": "EXTRACTED",
+  "contract_major": 1,
+  "contract_minor": 0,
+  "xsa_sha256": "01bc96ad997fb0d18967d196649697d2c443e5ad86a27faddd1a59cf278bf2d6",
+  "bit_sha256": "70c72d344d0e67fcea13695fdcdd2a54feca76a2889008b99d1db578250739ff",
+  "registers": [
+    {
+      "name": "HPM",
+      "base": 2684354560,
+      "size": 65536
+    },
+    {
+      "name": "cdma",
+      "base": 2952855552,
+      "size": 65536
+    },
+    {
+      "name": "status_gpio",
+      "base": 2952921088,
+      "size": 65536
+    }
+  ],
+  "cdma": {
+    "address_bits": 40,
+    "data_bits": 128,
+    "dre": false,
+    "sg": false,
+    "irq_connected": false,
+    "alignment": 16,
+    "policy_chunk": 4096
+  },
+  "windows": [
+    {
+      "domain": "PS",
+      "bus_base": 0,
+      "size": 2147483648,
+      "gpu_base": 0,
+      "allocation": "UNAPPROVED"
+    },
+    {
+      "domain": "PL",
+      "bus_base": 21474836480,
+      "size": 2147483648,
+      "gpu_base": 2147483648,
+      "allocation": "DEVICE_MEMORY"
+    }
+  ],
+  "pl_cdma_only": {
+    "bus_base": 23622320128,
+    "size": 2147483648
+  },
+  "fence": {
+    "gpu_base": 268632064,
+    "size": 64,
+    "ordinary_allocation": false
+  },
+  "identity": {
+    "id": 1448608260,
+    "config": 263172,
+    "features": 15,
+    "capability": 65537,
+    "evidence": "delivery/source/sw + reference RTL; live binding still required"
+  },
+  "completion": {
+    "requires_jobs_increment": true,
+    "requires_done": true,
+    "requires_pending_zero": true,
+    "requires_errors_zero": true,
+    "requires_fence": true,
+    "fault_reset": "UNPROVEN"
+  },
+  "commands": {
+    "start": 1,
+    "ack_done": 2
+  },
+  "acceptance": {
+    "hardware_owner": null,
+    "evidence": null,
+    "ps_pool_approved": false
+  }
+}

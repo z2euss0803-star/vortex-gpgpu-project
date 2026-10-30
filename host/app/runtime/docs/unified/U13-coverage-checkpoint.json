@@ -1,0 +1,44 @@
+{
+  "task": "U13_COMPONENT_ONLY",
+  "scope": "HOST_GEOMETRY_AND_COVERAGE_NOT_GPU_MATH",
+  "cases": {
+    "phases": 77,
+    "geometries": 5,
+    "budgets": 8,
+    "batches": 10915325,
+    "items": 52412912
+  },
+  "runs": [
+    "U13-mosaic-coverage-normal-002",
+    "U13-mosaic-coverage-sanitize-003",
+    "U13-mosaic-coverage-aarch64-004"
+  ],
+  "functional_red": "U13-mosaic-coverage-red-001",
+  "source_rows": 1589,
+  "raw_manifest_sha256": "aec844843c9a059fe21f5b169e03db63aee1f400023c1dddd79973c51e8a43eb",
+  "archive": {
+    "members": 36,
+    "logical_bytes": 5368353,
+    "archive_bytes": 2182852,
+    "sha256": "f806637429d2daff5dc0b697a1d199bdd2f3b5a1dde5440bfd48a7a9ccf5139d",
+    "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U13-mosaic-coverage-final-evidence.tar.gz",
+    "gpu_raw_cycles": null,
+    "host": "z2euss-virtual-machine",
+    "uid": 1000,
+    "free_disk": 2176847872,
+    "verified_members": 36,
+    "members_sha256": "31b2526b888ea52b38705a80bc37dfa41995c54958c40d137e1d6154c9cc9c96",
+    "hardlink_members": 0,
+    "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U13-mosaic-coverage-final\\raw-and-artifacts.tar.gz",
+    "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+  },
+  "gpu_raw_cycles": null,
+  "cross": "AARCH64_ELF_ROOTFS_SYMBOLS_NOT_EXECUTED",
+  "remaining": [
+    "generic Mosaic math operators",
+    "registered 16-layer model",
+    "new controlled RV32 program and binding",
+    "native request owner and guards",
+    "full task acceptance"
+  ]
+}

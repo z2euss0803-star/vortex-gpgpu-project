@@ -1,0 +1,77 @@
+{
+  "scope": "HOST_SSA_MOSAIC_POINT_MIGRATION_NOT_GPU_OR_WHOLE_U13",
+  "source_rows": 1601,
+  "raw_manifest_sha256": "955920987a2bd44fbd3be0c6552079ad239207d428ddda56e9e851573d607da8",
+  "runs": [
+    "U13-mosaic-ssa-normal-042",
+    "U13-mosaic-ssa-sanitize-043",
+    "U13-mosaic-ssa-aarch64-044"
+  ],
+  "archives": [
+    {
+      "members": 28,
+      "logical_bytes": 19372963,
+      "archive_bytes": 4868809,
+      "sha256": "4b743bae4ed9196dbd61ddf0c0223b5661927f64cbf01efe3a26b0f0b0adec24",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U13-mosaic-ssa-normal-042-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2183741440,
+      "verified_members": 28,
+      "members_sha256": "c280fdcde3eaa659d1353e10bc51f87f2d5bef16490adf81dd1bc85826c023ab",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U13-mosaic-ssa-normal-042-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    {
+      "members": 28,
+      "logical_bytes": 22715746,
+      "archive_bytes": 5545735,
+      "sha256": "7f86d1adc6ef1a03c46be7f38a2f97a3a304e7e06023c7eafcaf43c815efa307",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U13-mosaic-ssa-sanitize-043-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2179432448,
+      "verified_members": 28,
+      "members_sha256": "66dfb5a587a5f22e0bef2ca38b468050c4f9f29649db602ef9207ce8e76ea3ca",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U13-mosaic-ssa-sanitize-043-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    {
+      "members": 39,
+      "logical_bytes": 23705064,
+      "archive_bytes": 6801264,
+      "sha256": "0a8f4aac919812544b795f4073438eedcb1ee598df36ea0c1a449037ded34ad5",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U13-mosaic-ssa-aarch64-044-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2176868352,
+      "verified_members": 39,
+      "members_sha256": "bfae9f407a21f8f38757f228cae07fe2782226022b18a931f6d2db65a859f490",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U13-mosaic-ssa-aarch64-044-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    }
+  ],
+  "layers": 16,
+  "input": "SYNTHETIC_12x8_ORIGINAL_W16A16_WEIGHTS",
+  "modes": [
+    "frozen-compatible in-place",
+    "separate input/output and immutable stats source"
+  ],
+  "budgets": [
+    3,
+    4,
+    16,
+    64
+  ],
+  "extra_gpu_copy_jobs": 0,
+  "source_unchanged_and_alias_rejected": true,
+  "host_fixture_swap": "VECTOR_OWNERSHIP_ONLY_NOT_GPU_TRANSFER",
+  "gpu_raw_cycles": null,
+  "remaining": "operator registry/model/controlled program/native owner/service"
+}

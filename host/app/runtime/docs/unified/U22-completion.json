@@ -1,0 +1,838 @@
+{
+  "task": "U22",
+  "scope": "COMPLETE_MATCHED_RV32_AND_BOTH_AARCH64_CROSS_NOT_EXECUTED_KERNEL_IMAGE_OR_BOARD",
+  "base": "31d4a64e57427f470358e4fe820cc267f155ca93",
+  "source": {
+    "parent": "U22-cross-audit-1274",
+    "root": "D:\\codex-unified-gpu-20261021\\frozen-source\\U22-cross-audit-1274",
+    "manifest_sha256": "e9a96070b8f816061c3099ef47c8c7ca4d2961290672b5cf0985a4cb808d959d",
+    "source_archive_sha256": "0893f5ac2a1d1faa2d2bf2191e5bd78fc23949348414901c6c58e2dc59406e72"
+  },
+  "source_files": 2054,
+  "source_bytes": 68405268,
+  "gates": [
+    {
+      "target": "rv32",
+      "run": "U22-rv32-1276",
+      "source_snapshot_id": "187584a83fb34fb675c99f58e8136d0139348bc210264332a2225f75103cceca",
+      "source_lock_sha256": "968eadfe9720a9092479f977fe14f3a6811c26ec4a27b7f26e6ee99d917c1b1f",
+      "archive": {
+        "members": 168,
+        "logical_bytes": 22018691,
+        "archive_bytes": 5628293,
+        "sha256": "7a80ccd3d99716c45d37e65810ebcb6ae51fbf9cc86eea756fdf85182b80048b",
+        "remote": null,
+        "streamed": true,
+        "gpu_raw_cycles": null,
+        "host": "z2euss-virtual-machine",
+        "uid": 1000,
+        "free_disk": 15140827136,
+        "verified_members": 168,
+        "members_sha256": "e7ba9d5c490271278fea61f7ab9b008c3d602c44e24ebbe65e6704ef87da8d41",
+        "hardlink_members": 0,
+        "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U22-rv32-1277\\raw-and-artifacts.tar.gz",
+        "scope": "U22_RAW_TARGET_BUILD_ARTIFACTS_NOT_EXECUTED_NOT_BOARD"
+      },
+      "commands": 0,
+      "natural_exit": 0,
+      "gpu_raw_cycles": null,
+      "libraries": [
+        {
+          "namespace": 1,
+          "profile": 1,
+          "logical_program": 65537,
+          "name": "int16-family-v1",
+          "elf": {
+            "scope": "STRUCTURAL_TARGET_ELF_ONLY_NOT_COMPILE_OR_EXECUTION_RECEIPT",
+            "target": "rv32",
+            "class_bits": 32,
+            "machine": 243,
+            "entry": 2147483648,
+            "type": 2,
+            "flags": 2,
+            "loads": [
+              {
+                "start": 268443648,
+                "end": 268444700,
+                "offset": 0,
+                "file_bytes": 212,
+                "memory_bytes": 1052,
+                "flags": 6
+              },
+              {
+                "start": 2147483648,
+                "end": 2147497372,
+                "offset": 4096,
+                "file_bytes": 13724,
+                "memory_bytes": 13724,
+                "flags": 7
+              }
+            ],
+            "interpreter": null,
+            "needed": [],
+            "undefined_symbol_count": 0,
+            "test_bridge_symbols": [],
+            "bytes": 35652,
+            "sha256": "0e8e046cae2aa2d5cb55f8c65f2d6cc1d20be4c3e3e9718b6477970171ee2da9",
+            "target_executed": false,
+            "gpu_raw_cycles": null
+          },
+          "code_sha256": "2d18b13752e3248aef7ae4c206b1f0bd19972dad5ca1d2776a0f555e0661cafb",
+          "rodata_sha256": null,
+          "runtime": {
+            "entry": 2147483648,
+            "args_gpu": 2148532288,
+            "args_bytes": 128,
+            "crt_gpu": 268443648,
+            "crt_bytes": 4096,
+            "retire_offset": 8,
+            "retire_stride": 256,
+            "retire_value": 0,
+            "retire_count": 4,
+            "tls_base": 268444704,
+            "tls_end": 268446752,
+            "tbss_stride": 32,
+            "runtime_bytes": 65536,
+            "mutable_state_domain": "PS_CRT",
+            "stack_gpu": 4293918720,
+            "stack_bytes": 1048576,
+            "stack_stride": 8192,
+            "rodata_bytes": 0,
+            "fcsr_init": 0,
+            "guards": [
+              {
+                "gpu": 2147483648,
+                "offset": 65472,
+                "bytes": 64,
+                "stride": 64,
+                "count": 1
+              },
+              {
+                "gpu": 268443648,
+                "offset": 4032,
+                "bytes": 64,
+                "stride": 64,
+                "count": 1
+              },
+              {
+                "gpu": 4293918720,
+                "offset": 458752,
+                "bytes": 64,
+                "stride": 8192,
+                "count": 64
+              }
+            ]
+          },
+          "build_receipt_sha256": "4e2e13d429cb6806e0bf45561f86a07a0caaed70b662b0de1cafa0ce1d03176d",
+          "action": "ACTUAL_MATCHED_RECOMPILE_NOT_EXECUTED"
+        },
+        {
+          "namespace": 1,
+          "profile": 1,
+          "logical_program": 65552,
+          "name": "hunet-fp16-v1",
+          "elf": {
+            "scope": "STRUCTURAL_TARGET_ELF_ONLY_NOT_COMPILE_OR_EXECUTION_RECEIPT",
+            "target": "rv32",
+            "class_bits": 32,
+            "machine": 243,
+            "entry": 2147483648,
+            "type": 2,
+            "flags": 2,
+            "loads": [
+              {
+                "start": 268443648,
+                "end": 268444700,
+                "offset": 0,
+                "file_bytes": 212,
+                "memory_bytes": 1052,
+                "flags": 6
+              },
+              {
+                "start": 2147483648,
+                "end": 2147509308,
+                "offset": 4096,
+                "file_bytes": 25660,
+                "memory_bytes": 25660,
+                "flags": 7
+              }
+            ],
+            "interpreter": null,
+            "needed": [],
+            "undefined_symbol_count": 0,
+            "test_bridge_symbols": [],
+            "bytes": 56484,
+            "sha256": "ab45885abdae5c51ff0ebc21963a88fa2c97cbd86b1023401bf812eee8c1a6d0",
+            "target_executed": false,
+            "gpu_raw_cycles": null
+          },
+          "code_sha256": "b3d9bf022a135fa4b528f68fc49e653ab9f3c649281623d39a5f3d57756b594c",
+          "rodata_sha256": null,
+          "runtime": {
+            "entry": 2147483648,
+            "args_gpu": 2148532288,
+            "args_bytes": 128,
+            "crt_gpu": 268443648,
+            "crt_bytes": 4096,
+            "retire_offset": 8,
+            "retire_stride": 256,
+            "retire_value": 0,
+            "retire_count": 4,
+            "tls_base": 268444704,
+            "tls_end": 268446752,
+            "tbss_stride": 32,
+            "runtime_bytes": 65536,
+            "mutable_state_domain": "PS_CRT",
+            "stack_gpu": 4293918720,
+            "stack_bytes": 1048576,
+            "stack_stride": 8192,
+            "rodata_bytes": 0,
+            "fcsr_init": 0,
+            "guards": [
+              {
+                "gpu": 2147483648,
+                "offset": 65472,
+                "bytes": 64,
+                "stride": 64,
+                "count": 1
+              },
+              {
+                "gpu": 268443648,
+                "offset": 4032,
+                "bytes": 64,
+                "stride": 64,
+                "count": 1
+              },
+              {
+                "gpu": 4293918720,
+                "offset": 458752,
+                "bytes": 64,
+                "stride": 8192,
+                "count": 64
+              }
+            ]
+          },
+          "build_receipt_sha256": "241fd1de66d9130cbbb04b7227414053de9450bb71596c2e5fa28d7eda74134a",
+          "action": "ACTUAL_MATCHED_RECOMPILE_NOT_EXECUTED"
+        },
+        {
+          "namespace": 1,
+          "profile": 1,
+          "logical_program": 65568,
+          "name": "mosaic-int16-v1",
+          "elf": {
+            "scope": "STRUCTURAL_TARGET_ELF_ONLY_NOT_COMPILE_OR_EXECUTION_RECEIPT",
+            "target": "rv32",
+            "class_bits": 32,
+            "machine": 243,
+            "entry": 2147483648,
+            "type": 2,
+            "flags": 2,
+            "loads": [
+              {
+                "start": 268443648,
+                "end": 268444700,
+                "offset": 0,
+                "file_bytes": 244,
+                "memory_bytes": 1052,
+                "flags": 6
+              },
+              {
+                "start": 2147483648,
+                "end": 2147518460,
+                "offset": 4096,
+                "file_bytes": 34812,
+                "memory_bytes": 34812,
+                "flags": 7
+              },
+              {
+                "start": 2148597760,
+                "end": 2154905600,
+                "offset": 40960,
+                "file_bytes": 6307840,
+                "memory_bytes": 6307840,
+                "flags": 4
+              }
+            ],
+            "interpreter": null,
+            "needed": [],
+            "undefined_symbol_count": 0,
+            "test_bridge_symbols": [],
+            "bytes": 6385284,
+            "sha256": "126a607bf2c5d205b2555611e21bccae922512a72e57e580a12b854e6256f65b",
+            "target_executed": false,
+            "gpu_raw_cycles": null
+          },
+          "code_sha256": "1b81a93f72dcbf1b2f59c31f620e3839595b5df5d070102d31bf882eb78a0699",
+          "rodata_sha256": "30e0e46cb30629f4a7de447405225e208b37f15aaf2be23603bbe4cb975b5643",
+          "runtime": {
+            "entry": 2147483648,
+            "args_gpu": 2148532288,
+            "args_bytes": 128,
+            "crt_gpu": 268443648,
+            "crt_bytes": 4096,
+            "retire_offset": 8,
+            "retire_stride": 256,
+            "retire_value": 0,
+            "retire_count": 4,
+            "tls_base": 268444704,
+            "tls_end": 268446752,
+            "tbss_stride": 32,
+            "runtime_bytes": 65536,
+            "mutable_state_domain": "PS_CRT",
+            "stack_gpu": 4293918720,
+            "stack_bytes": 1048576,
+            "stack_stride": 8192,
+            "rodata_gpu": 2148597760,
+            "rodata_bytes": 6307840,
+            "fcsr_init": 0,
+            "guards": [
+              {
+                "gpu": 2147483648,
+                "offset": 65472,
+                "bytes": 64,
+                "stride": 64,
+                "count": 1
+              },
+              {
+                "gpu": 268443648,
+                "offset": 4032,
+                "bytes": 64,
+                "stride": 64,
+                "count": 1
+              },
+              {
+                "gpu": 4293918720,
+                "offset": 458752,
+                "bytes": 64,
+                "stride": 8192,
+                "count": 64
+              }
+            ]
+          },
+          "build_receipt_sha256": "e31459e912c4fc636b823ef7d54084b04ccdca4181531b3dad5848962ed60c6f",
+          "action": "ACTUAL_MATCHED_RECOMPILE_NOT_EXECUTED"
+        }
+      ],
+      "original_shaders": [
+        {
+          "namespace": 2,
+          "profile": 5,
+          "program": 9,
+          "raw_sha256": "d177e3fbb5c489dc9699224511e6d3efe746b35179f63b23b67476b8966320a8",
+          "object_sha256": "7a59efdf591f81462024cac453665d68811b83f88200386aac666ff27debcd8f",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 2,
+          "profile": 5,
+          "program": 10,
+          "raw_sha256": "e8c862565c29604a44ec0dc9a464320841bb790385fd337208ff526513d96b8e",
+          "object_sha256": "91aa3d999076c3f4d17fdd4db17e3dae82d4bbb841d82fa92e309b5a580ec76e",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 2,
+          "profile": 5,
+          "program": 11,
+          "raw_sha256": "f7444827893eda8abfad9e1d807c317123d04f6047ae1261b320fdc213d999d7",
+          "object_sha256": "cec5cc3324721d825860a5b169b7cd305cc28b6bcbc03b8086ba8c122562941b",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 2,
+          "profile": 5,
+          "program": 12,
+          "raw_sha256": "6d00b9235f68303962ab30d8793f2dc743dab6545058e5d2393dc3fe76a66908",
+          "object_sha256": "378d31a12ed3bffaf0a6fe04e11145c88d8f85d535db3ff731aa4e9dec472648",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 3,
+          "profile": 256,
+          "program": 512,
+          "original_image_op": 0,
+          "raw_sha256": "a9a71093ebf293036f732bd472a4b99931e23594433d61836d3a13d9b34c161f",
+          "original_ebreak_padded_sha256": "0ce125fa7dd278e42206f714741abffe975ff7ffa4db1307e3e033440b5f4f53",
+          "object_sha256": "3676ee6979f9777dc65071594f4867b391663c39d7dc684f46c644e873915c54",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 3,
+          "profile": 256,
+          "program": 513,
+          "original_image_op": 1,
+          "raw_sha256": "b9ed742e47208e8bd5c69b5cb926b87d585120aa5301bcbc02b3040ec6aba03d",
+          "original_ebreak_padded_sha256": "72cda81b9cd5171dd368e71f81552987b78b9e50449c7938b4696764bbda1093",
+          "object_sha256": "9933659cfdb3b2f272a1007a20b09950f25cf72b11149bc47ff824e51d5ebaf3",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 3,
+          "profile": 256,
+          "program": 514,
+          "original_image_op": 2,
+          "raw_sha256": "8731e7c80896698697eca07178140ff034ce7a74b6af80be701cb2a85868b826",
+          "original_ebreak_padded_sha256": "d23a16357b5eea0653f33f8fbdaabd04ffbf367408b70baafa2d2f6538968124",
+          "object_sha256": "5228479072e33f513639cd8c0ff9b8cfe919df0df015e42488fcae19aa4956e4",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 3,
+          "profile": 256,
+          "program": 515,
+          "original_image_op": 3,
+          "raw_sha256": "2f36242fa6b7137c335adda4429024885427e1477fdf6ce15b6b5ad3089bb5d4",
+          "original_ebreak_padded_sha256": "0f70bb513ab30179f165639ab932ed8ee4a3c9ae262679294695987e32e65738",
+          "object_sha256": "2d4e4ad5b395de45e0d91d4e731f64ef8e965c3e8802409439dbe026b128bade",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 3,
+          "profile": 256,
+          "program": 516,
+          "original_image_op": 4,
+          "raw_sha256": "8040af3721d371fa615e7d26b440e1f7676f2f82a4405c3bbf1eb0e4c8ad610f",
+          "original_ebreak_padded_sha256": "8bbaeefb2eae04d36cafe955189fd10c5c98210bc06915bd98a3e04b572a436a",
+          "object_sha256": "d7f813ad8f802ca19d0debbb13419754afb0d3eb018f256782be6375addbdb24",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 3,
+          "profile": 256,
+          "program": 517,
+          "original_image_op": 5,
+          "raw_sha256": "b30ac8f7571b7026c2fc7b8d7a77d1815892e0575ee5ac60669b9f265f31aa99",
+          "original_ebreak_padded_sha256": "b70c369d4fcfaf3f78b77dd06b38a481882cfb72b53d3e65eec528febffb3ea6",
+          "object_sha256": "1622a67d5c5f31a2cae032715d4ea2639f310c0b4d4bcdd1e4446e2e4eca0522",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 3,
+          "profile": 256,
+          "program": 518,
+          "original_image_op": 6,
+          "raw_sha256": "66562b7bcba7fc8ba72f836747fe9b96d64f81ca757b0d5b1d0cbeb0e0a08955",
+          "original_ebreak_padded_sha256": "ec4e774f1d5b1a3d3f4a51cb0ebf4551a0bfb3d29740bbaa323791622175a928",
+          "object_sha256": "47e7b2d8bf8174d773b50e009ab830923af1e87eb972c0faeeb12fc049ba22da",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 3,
+          "profile": 256,
+          "program": 519,
+          "original_image_op": 7,
+          "raw_sha256": "57020b917d0a821cd9319933bbc9d50f420c0675a8d7e5daeb5e602a073ee4da",
+          "original_ebreak_padded_sha256": "a1abee66582b0ecddf6961f136e82ab8c9493bbf32b5013951bbae519eb6113a",
+          "object_sha256": "e9dfcdc63f6088e77766fdb5b579c32d1924b0ce611da84fb7b58d726e72e649",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 3,
+          "profile": 256,
+          "program": 520,
+          "original_image_op": 8,
+          "raw_sha256": "cac7e492453b1ab43043e42553dfde29ee201720507ae413bbca44a9e29a9570",
+          "original_ebreak_padded_sha256": "bb5f071464279eb798ec2665d7aa616a1542df3ae6cbd57d630918e155830e93",
+          "object_sha256": "9766d1b95978789e9f58a247e2045be188e8e1c7973132710c5c6dc5328fee56",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        },
+        {
+          "namespace": 3,
+          "profile": 256,
+          "program": 521,
+          "original_image_op": 9,
+          "raw_sha256": "ca7f83f87a010b46674f2249c9ecbd9488f6a3b64e6ca89af3f8ad11db777d7c",
+          "original_ebreak_padded_sha256": "afb1610f8f5e96a8f27ad9b3d04f54c1a4a81094b22e0bc2a988b70a10de2813",
+          "object_sha256": "91375f8e853c67b569757efd9516775715f42c4906a6051d7f7406724529e52c",
+          "action": "ORIGINAL_BYTES_VERIFIED_NOT_RECOMPILED"
+        }
+      ],
+      "original_asset_count": 18,
+      "old_oracle_count": 3
+    },
+    {
+      "target": "aarch64-s8",
+      "run": "U22-aarch64-s8-1278",
+      "source_snapshot_id": "187584a83fb34fb675c99f58e8136d0139348bc210264332a2225f75103cceca",
+      "source_lock_sha256": "968eadfe9720a9092479f977fe14f3a6811c26ec4a27b7f26e6ee99d917c1b1f",
+      "archive": {
+        "members": 225,
+        "logical_bytes": 269157752,
+        "archive_bytes": 71027531,
+        "sha256": "d7f95179666bae6fa0c389aca616cc1647b4dd4ce573861c965d040b16c0178e",
+        "remote": null,
+        "streamed": true,
+        "gpu_raw_cycles": null,
+        "host": "z2euss-virtual-machine",
+        "uid": 1000,
+        "free_disk": 14870806528,
+        "verified_members": 225,
+        "members_sha256": "50c80126783fc7b02c84c61ca14372df3ba154bcd4608460d3f81b910d1a7601",
+        "hardlink_members": 0,
+        "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U22-aarch64-s8-1279\\raw-and-artifacts.tar.gz",
+        "scope": "U22_RAW_TARGET_BUILD_ARTIFACTS_NOT_EXECUTED_NOT_BOARD"
+      },
+      "commands": 19,
+      "natural_exit": 0,
+      "gpu_raw_cycles": null,
+      "provider_flags": 1,
+      "elfs": [
+        {
+          "name": "vxgpud",
+          "bytes": 21482352,
+          "sha256": "ec12a5b8f0b9c12bd22891b34cca0d1d9e1340ef2b9fc8904a08bc2e706bbc5c",
+          "installable": true
+        },
+        {
+          "name": "test_installed_image",
+          "bytes": 24890024,
+          "sha256": "30d42336cf4247912236fae12477922e41f0dd2d68700141128dd14d31ccb1c3",
+          "installable": false
+        },
+        {
+          "name": "test_installed_p8",
+          "bytes": 25030176,
+          "sha256": "cb932ae4d8820ddb9acb445ee1198a3008050262adbd9b561834698edc9c444f",
+          "installable": false
+        },
+        {
+          "name": "test_native_daemon",
+          "bytes": 21640768,
+          "sha256": "cb04fd772061a3cc9d61afd1a92175c0a718cf9d4579582f4ccfd20ac858cdb9",
+          "installable": false
+        },
+        {
+          "name": "test_native_daemon_hunet",
+          "bytes": 21642568,
+          "sha256": "372c4984265711f81f88ab98be8835800b3c270e172316fd77c0ca3314ab283a",
+          "installable": false
+        },
+        {
+          "name": "test_daemon",
+          "bytes": 6310816,
+          "sha256": "3679cc93410b4e2a366fd0ab9f8c9f741b67b2d933ed9edb453d3fd933f9430f",
+          "installable": false
+        },
+        {
+          "name": "test_preparation",
+          "bytes": 3246400,
+          "sha256": "2820f596779054f33aba0a9d4776c0f6113430067f842babf27a444e73044e8a",
+          "installable": false
+        },
+        {
+          "name": "test_installed_media",
+          "bytes": 1214192,
+          "sha256": "eb5b7d2be12f755e52a6ff0964f0077c3b3db4c01b9dcdc9fc734347b0cade92",
+          "installable": false
+        },
+        {
+          "name": "test_native_result_view",
+          "bytes": 11819864,
+          "sha256": "b2764cf9f87ed7d5c2b0824e1db705000300358ea04b7f832f1879c0e8576ddc",
+          "installable": false
+        },
+        {
+          "name": "test_native_result_export",
+          "bytes": 4105880,
+          "sha256": "c73fed1bb9b50d08cfa29b6a46ceade1be9406e0ec8ddb6c6f5ca7c18d2e2251",
+          "installable": false
+        },
+        {
+          "name": "test_native_export_bridge",
+          "bytes": 977512,
+          "sha256": "2949408e4d54e2d58b03dcb88c1eb28272e400d00745d8c2b5ace978c893a659",
+          "installable": false
+        },
+        {
+          "name": "test_texture_source",
+          "bytes": 596256,
+          "sha256": "e750cb42f2a48bd321d38d1ea01004e2d245a959540886433ebd716490900405",
+          "installable": false
+        },
+        {
+          "name": "test_end_to_end",
+          "bytes": 25077912,
+          "sha256": "fa38a799df4258a3ff771508dbcd60683121d3c47afd52ff7bd94b23217552e3",
+          "installable": false
+        },
+        {
+          "name": "test_native_int16_extension",
+          "bytes": 21618248,
+          "sha256": "c4c3f562517365c800fc522fab00ee3b05a2a1d308c137fe24c46fa5be796d07",
+          "installable": false
+        }
+      ],
+      "installation": [
+        {
+          "source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U22-aarch64-s8-1278/vxgpud",
+          "destination": "/usr/bin/vxgpud",
+          "sha256": "ec12a5b8f0b9c12bd22891b34cca0d1d9e1340ef2b9fc8904a08bc2e706bbc5c",
+          "mode": "0755"
+        },
+        {
+          "source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U22-aarch64-s8-1278/vxgpuctl.py",
+          "destination": "/usr/bin/vxgpuctl",
+          "sha256": "1fec886505053725ea86ce3e26bf29075b530cccb5507d5ca601d2a1b380eb83",
+          "mode": "0755",
+          "interpreter": "python3",
+          "bytecode": "HOST_SYNTAX_CHECK_ONLY_DO_NOT_INSTALL_PYC"
+        }
+      ],
+      "rootfs_sha256": "d5163fa50ae6b3b945a280c96b6273e0eff9af312a992407bdf8b9abee3eb647",
+      "required_versions": [
+        "CXXABI_1.3",
+        "CXXABI_1.3.11",
+        "CXXABI_1.3.2",
+        "CXXABI_1.3.3",
+        "CXXABI_1.3.5",
+        "CXXABI_1.3.9",
+        "GCC_3.0",
+        "GLIBCXX_3.4",
+        "GLIBCXX_3.4.11",
+        "GLIBCXX_3.4.14",
+        "GLIBCXX_3.4.15",
+        "GLIBCXX_3.4.19",
+        "GLIBCXX_3.4.20",
+        "GLIBCXX_3.4.21",
+        "GLIBCXX_3.4.22",
+        "GLIBCXX_3.4.26",
+        "GLIBCXX_3.4.9",
+        "GLIBC_2.17",
+        "GLIBC_2.25",
+        "GLIBC_2.29"
+      ],
+      "tools": {
+        "gcc": {
+          "path": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-gcc",
+          "sha256": "360811f71152e6f7d24cdc6c44ec39821b54382fcf169d1a8b6b0e379427c6a0"
+        },
+        "g++": {
+          "path": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-g++",
+          "sha256": "b2b53eb4fb540505648712e76562538aa3581e695bb3142f6409c98e251ed84f"
+        },
+        "readelf": {
+          "path": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+          "sha256": "7efdff67928cc4dab21cb98b6ddc371ed926268ad9e0dffa23774d4b8d72b0e5"
+        },
+        "ld": {
+          "path": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-ld",
+          "sha256": "930ec710fd97aadb2a7251a845ae9151251842831e8be1343f275875d7e4dbdb"
+        },
+        "as": {
+          "path": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-as",
+          "sha256": "dfaf0ba0153bbaf7e263f6b13f77d23f3799a566ae211088b34e166f01783c1e"
+        }
+      }
+    },
+    {
+      "target": "aarch64-p8",
+      "run": "U22-aarch64-p8-1280",
+      "source_snapshot_id": "187584a83fb34fb675c99f58e8136d0139348bc210264332a2225f75103cceca",
+      "source_lock_sha256": "968eadfe9720a9092479f977fe14f3a6811c26ec4a27b7f26e6ee99d917c1b1f",
+      "archive": {
+        "members": 225,
+        "logical_bytes": 269157744,
+        "archive_bytes": 71027271,
+        "sha256": "002b185b5986135e621648c3d08084902d0c673c2b7b4649a8515a65d9da435b",
+        "remote": null,
+        "streamed": true,
+        "gpu_raw_cycles": null,
+        "host": "z2euss-virtual-machine",
+        "uid": 1000,
+        "free_disk": 14600777728,
+        "verified_members": 225,
+        "members_sha256": "d15854d56066b4298e7d3b757a3d9f8f1f6ddeefd9efbfdb6d5e19c347b3517b",
+        "hardlink_members": 0,
+        "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U22-aarch64-p8-1281\\raw-and-artifacts.tar.gz",
+        "scope": "U22_RAW_TARGET_BUILD_ARTIFACTS_NOT_EXECUTED_NOT_BOARD"
+      },
+      "commands": 19,
+      "natural_exit": 0,
+      "gpu_raw_cycles": null,
+      "provider_flags": 2,
+      "elfs": [
+        {
+          "name": "vxgpud",
+          "bytes": 21482352,
+          "sha256": "ec12a5b8f0b9c12bd22891b34cca0d1d9e1340ef2b9fc8904a08bc2e706bbc5c",
+          "installable": true
+        },
+        {
+          "name": "test_installed_image",
+          "bytes": 24890024,
+          "sha256": "30d42336cf4247912236fae12477922e41f0dd2d68700141128dd14d31ccb1c3",
+          "installable": false
+        },
+        {
+          "name": "test_installed_p8",
+          "bytes": 25030176,
+          "sha256": "cb932ae4d8820ddb9acb445ee1198a3008050262adbd9b561834698edc9c444f",
+          "installable": false
+        },
+        {
+          "name": "test_native_daemon",
+          "bytes": 21640768,
+          "sha256": "cb04fd772061a3cc9d61afd1a92175c0a718cf9d4579582f4ccfd20ac858cdb9",
+          "installable": false
+        },
+        {
+          "name": "test_native_daemon_hunet",
+          "bytes": 21642568,
+          "sha256": "372c4984265711f81f88ab98be8835800b3c270e172316fd77c0ca3314ab283a",
+          "installable": false
+        },
+        {
+          "name": "test_daemon",
+          "bytes": 6310816,
+          "sha256": "3679cc93410b4e2a366fd0ab9f8c9f741b67b2d933ed9edb453d3fd933f9430f",
+          "installable": false
+        },
+        {
+          "name": "test_preparation",
+          "bytes": 3246400,
+          "sha256": "2820f596779054f33aba0a9d4776c0f6113430067f842babf27a444e73044e8a",
+          "installable": false
+        },
+        {
+          "name": "test_installed_media",
+          "bytes": 1214192,
+          "sha256": "eb5b7d2be12f755e52a6ff0964f0077c3b3db4c01b9dcdc9fc734347b0cade92",
+          "installable": false
+        },
+        {
+          "name": "test_native_result_view",
+          "bytes": 11819864,
+          "sha256": "b2764cf9f87ed7d5c2b0824e1db705000300358ea04b7f832f1879c0e8576ddc",
+          "installable": false
+        },
+        {
+          "name": "test_native_result_export",
+          "bytes": 4105880,
+          "sha256": "c73fed1bb9b50d08cfa29b6a46ceade1be9406e0ec8ddb6c6f5ca7c18d2e2251",
+          "installable": false
+        },
+        {
+          "name": "test_native_export_bridge",
+          "bytes": 977512,
+          "sha256": "2949408e4d54e2d58b03dcb88c1eb28272e400d00745d8c2b5ace978c893a659",
+          "installable": false
+        },
+        {
+          "name": "test_texture_source",
+          "bytes": 596256,
+          "sha256": "e750cb42f2a48bd321d38d1ea01004e2d245a959540886433ebd716490900405",
+          "installable": false
+        },
+        {
+          "name": "test_end_to_end",
+          "bytes": 25077912,
+          "sha256": "fa38a799df4258a3ff771508dbcd60683121d3c47afd52ff7bd94b23217552e3",
+          "installable": false
+        },
+        {
+          "name": "test_native_int16_extension",
+          "bytes": 21618248,
+          "sha256": "c4c3f562517365c800fc522fab00ee3b05a2a1d308c137fe24c46fa5be796d07",
+          "installable": false
+        }
+      ],
+      "installation": [
+        {
+          "source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U22-aarch64-p8-1280/vxgpud",
+          "destination": "/usr/bin/vxgpud",
+          "sha256": "ec12a5b8f0b9c12bd22891b34cca0d1d9e1340ef2b9fc8904a08bc2e706bbc5c",
+          "mode": "0755"
+        },
+        {
+          "source": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U22-aarch64-p8-1280/vxgpuctl.py",
+          "destination": "/usr/bin/vxgpuctl",
+          "sha256": "1fec886505053725ea86ce3e26bf29075b530cccb5507d5ca601d2a1b380eb83",
+          "mode": "0755",
+          "interpreter": "python3",
+          "bytecode": "HOST_SYNTAX_CHECK_ONLY_DO_NOT_INSTALL_PYC"
+        }
+      ],
+      "rootfs_sha256": "d5163fa50ae6b3b945a280c96b6273e0eff9af312a992407bdf8b9abee3eb647",
+      "required_versions": [
+        "CXXABI_1.3",
+        "CXXABI_1.3.11",
+        "CXXABI_1.3.2",
+        "CXXABI_1.3.3",
+        "CXXABI_1.3.5",
+        "CXXABI_1.3.9",
+        "GCC_3.0",
+        "GLIBCXX_3.4",
+        "GLIBCXX_3.4.11",
+        "GLIBCXX_3.4.14",
+        "GLIBCXX_3.4.15",
+        "GLIBCXX_3.4.19",
+        "GLIBCXX_3.4.20",
+        "GLIBCXX_3.4.21",
+        "GLIBCXX_3.4.22",
+        "GLIBCXX_3.4.26",
+        "GLIBCXX_3.4.9",
+        "GLIBC_2.17",
+        "GLIBC_2.25",
+        "GLIBC_2.29"
+      ],
+      "tools": {
+        "gcc": {
+          "path": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-gcc",
+          "sha256": "360811f71152e6f7d24cdc6c44ec39821b54382fcf169d1a8b6b0e379427c6a0"
+        },
+        "g++": {
+          "path": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-g++",
+          "sha256": "b2b53eb4fb540505648712e76562538aa3581e695bb3142f6409c98e251ed84f"
+        },
+        "readelf": {
+          "path": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+          "sha256": "7efdff67928cc4dab21cb98b6ddc371ed926268ad9e0dffa23774d4b8d72b0e5"
+        },
+        "ld": {
+          "path": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-ld",
+          "sha256": "930ec710fd97aadb2a7251a845ae9151251842831e8be1343f275875d7e4dbdb"
+        },
+        "as": {
+          "path": "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-as",
+          "sha256": "dfaf0ba0153bbaf7e263f6b13f77d23f3799a566ae211088b34e166f01783c1e"
+        }
+      }
+    }
+  ],
+  "common_cpu_elfs_byte_identical": [
+    "vxgpud",
+    "test_installed_image",
+    "test_installed_p8",
+    "test_native_daemon",
+    "test_native_daemon_hunet",
+    "test_daemon",
+    "test_preparation",
+    "test_installed_media",
+    "test_native_result_view",
+    "test_native_result_export",
+    "test_native_export_bridge",
+    "test_texture_source",
+    "test_end_to_end",
+    "test_native_int16_extension"
+  ],
+  "old_error": {
+    "run": "U22-aarch64-s8-1134",
+    "make_natural_exit": 2,
+    "wrapper_natural_exit": 1,
+    "archive": "U22-aarch64-first-error-1270",
+    "sha256": "4cc1f78327c5119be135af49a6d8d8732a8738c143f406391259917706370874",
+    "root_cause": "mistaken non-existent test_native_s8_joint instead of real test_end_to_end",
+    "repair": "correct actual target list; all-target make-n preflight before compilation",
+    "behavioral_red": "A-U22-real-target-list-red-1271",
+    "local_green": "A-U22-target-fix-green-1272_50_INPUT_CHECKS",
+    "ubuntu_units": 21
+  },
+  "gpu_raw_cycles": null,
+  "target_executed": false,
+  "kernel": "U23_NOT_BUILT_NEW",
+  "image": "U24_NOT_BUILT_NEW",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "review": "AUTHOR_PHASE_AUDIT_FINAL_FRESH_ASTRA_ONLY_AFTER_ALL25"
+}

@@ -1,0 +1,23 @@
+{
+  "scope": "UNIT_AUDIT_FIXTURES_FROM_ACTUAL_HISTORICAL_TARGET_ELFS_NOT_NEW_COMPILE",
+  "files": [
+    {
+      "path": "aarch64.elf",
+      "bytes": 1156880,
+      "sha256": "37d0bb679e9f52b611d8c616f7f6c2b6e477d8acd0ca7ee5eaeb4846eb17287f",
+      "archive_sha256": "ac0f1becb345afa5b20b9f4fe2dd4decea7ba79b22e5a18f88b0629f6b277b49",
+      "member": "build/U20-native-delivery-cross-890/test_installed_media",
+      "original_scope": "HISTORICAL_TARGET_COMPILE_NOT_EXECUTED_NOT_NEW_U22"
+    },
+    {
+      "path": "rv32.elf",
+      "bytes": 56484,
+      "sha256": "ab45885abdae5c51ff0ebc21963a88fa2c97cbd86b1023401bf812eee8c1a6d0",
+      "archive_sha256": "b03e64ee6829114cba2f154aeeee7e6880ab711fd65a3884a44222d9db0d58bf",
+      "member": "build/U12-hunet-rv32-callback-audit-071/kernel.elf",
+      "original_scope": "HISTORICAL_TARGET_COMPILE_NOT_EXECUTED_NOT_NEW_U22"
+    }
+  ],
+  "gpu_raw_cycles": null,
+  "board": "NOT_RUN"
+}

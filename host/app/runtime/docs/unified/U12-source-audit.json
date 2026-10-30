@@ -1,0 +1,172 @@
+{
+  "task": "U12",
+  "base": "edb70daedef355817fd98f3e8e0fc7434e7ff501",
+  "phase": "READ_ONLY_SOURCE_AUDIT_NOT_NEW_MIGRATION_PASS",
+  "sources": [
+    {
+      "path": "device/hunet_fused.cpp",
+      "bytes": 3561,
+      "sha256": "954fbb1b7b73b3cf410f2ddcd277b0a3ba315dbc7bcf14d17642a5e09b6893af"
+    },
+    {
+      "path": "device/hunet_fused_ops.h",
+      "bytes": 1700,
+      "sha256": "26fb78e0e1fbc02d154252e0bfbed127b2484acd7b23ae82072faf7a9745aa6f"
+    },
+    {
+      "path": "vendor/hunet/v5/include/hunet_math.h",
+      "bytes": 1632,
+      "sha256": "050ec4940bc59e817c45c504221fbb10428cbff7e2fe439e572e2279ca2aa02e"
+    },
+    {
+      "path": "vendor/hunet/v5/include/hunet_ops_baseline.h",
+      "bytes": 3074,
+      "sha256": "152d00a0674627918f4181a6608872122f3d64ab240781715b61ba3e103cd54a"
+    },
+    {
+      "path": "vendor/hunet/v5/include/hunet_ordered_reductions.h",
+      "bytes": 1731,
+      "sha256": "53d26744f162379a96c0130376374d0d86d222674b38aacdaa44b067ffbf00ca"
+    },
+    {
+      "path": "include/vxl/hunet_fused_wire.h",
+      "bytes": 1129,
+      "sha256": "9852ea9403e4d96640594f1e68b18e90ebe09334f3860e167d42b4d0e65a01b7"
+    },
+    {
+      "path": "contracts/hunet_fused_v1.json",
+      "bytes": 406441,
+      "sha256": "2b9b3d050a43111dbb3b9e11e3b2689a92567a728ec5a528d9f31df985817996"
+    },
+    {
+      "path": "contracts/hunet_hybrid_v1.json",
+      "bytes": 3465,
+      "sha256": "7d636d2034fce8a9716074cdc20f6a1ba26b482438d7dd11cacf05407692de8c"
+    },
+    {
+      "path": "generated/hunet_fused/manifest.json",
+      "bytes": 983,
+      "sha256": "5d796374b4dd4616bad71c180a7aa6ecf8763a99ade7f076a63a0a5b7e2eef50"
+    },
+    {
+      "path": "generated/hunet_fused/jobs.bin",
+      "bytes": 13184,
+      "sha256": "d3d4b893703c2971ea01d323a7f6ee78322b3f9c9b731384aaf69920e6870f2a"
+    },
+    {
+      "path": "generated/hunet_fused/descriptors.bin",
+      "bytes": 20096,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_fused/layout.json",
+      "bytes": 44841,
+      "sha256": "4042f159a385fc4c739bb177cab785fae7cf8b97dc58f983b480d16685ad8bae"
+    },
+    {
+      "path": "generated/hunet_fused/schedule.json",
+      "bytes": 176201,
+      "sha256": "8fbc48ecd039ccc71ae2f98f9425a3bad3da335877bb97e82c5ea57c825a4f14"
+    },
+    {
+      "path": "nnrt/cpu/gelu.cpp",
+      "bytes": 2854,
+      "sha256": "a2f40fdd10d7f577fa88c7e6b66db01b991a97d264aaba19a3cf63921a289893"
+    },
+    {
+      "path": "docs/unified/U08-gelu-inputs.json",
+      "bytes": 14022,
+      "sha256": "e7b883e0a4a6ad716520ab784b1ba37af2ccbc5a667c99c86d4695024fdd64e9"
+    },
+    {
+      "path": "tests/demo/fixtures/hunet/logits.f32",
+      "bytes": 32420,
+      "sha256": "58a75990aad6711810065fa7a3c83e81a3eaaba13769f0395eac95dd7fa48654"
+    },
+    {
+      "path": "tests/demo/fixtures/hunet/probe-result.json",
+      "bytes": 3633,
+      "sha256": "9311f7071cf3b34e44d77f7bf68f597453e8ff68ce7484a84f4dcc7504fad9e5"
+    },
+    {
+      "path": "tests/demo/fixtures/hunet/verification-receipt.json",
+      "bytes": 525,
+      "sha256": "9a263f35a9bac3cca56717b119e0a27982471d540993e04a266b21e8b3748408"
+    }
+  ],
+  "generated_manifest_comparisons": [
+    {
+      "path": "catalog.h",
+      "declared_sha256": "0fa7aa5ea4dc1cfbee2e8197cc707ed77417713ffccb78a32d9d068b6fc5f545",
+      "actual_sha256": "0fa7aa5ea4dc1cfbee2e8197cc707ed77417713ffccb78a32d9d068b6fc5f545",
+      "raw_match": true
+    },
+    {
+      "path": "descriptors.bin",
+      "declared_sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655",
+      "actual_sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655",
+      "raw_match": true
+    },
+    {
+      "path": "descriptors.h",
+      "declared_sha256": "cfea9ef3d4eb0e0fbfead52537cbfab4324a783e3bc4a64c530b6cbf5ee2964b",
+      "actual_sha256": "cfea9ef3d4eb0e0fbfead52537cbfab4324a783e3bc4a64c530b6cbf5ee2964b",
+      "raw_match": true
+    },
+    {
+      "path": "identity.h",
+      "declared_sha256": "93e7f5fc571deea64605b5718345aade3fba4dfa1f0f7ae1470137583fcd0e7f",
+      "actual_sha256": "93e7f5fc571deea64605b5718345aade3fba4dfa1f0f7ae1470137583fcd0e7f",
+      "raw_match": true
+    },
+    {
+      "path": "jobs.bin",
+      "declared_sha256": "d3d4b893703c2971ea01d323a7f6ee78322b3f9c9b731384aaf69920e6870f2a",
+      "actual_sha256": "d3d4b893703c2971ea01d323a7f6ee78322b3f9c9b731384aaf69920e6870f2a",
+      "raw_match": true
+    },
+    {
+      "path": "layout.h",
+      "declared_sha256": "a274234f3beeb1ab284339c81a7e9d9a29ef800472bc2f9550d5585f79718c37",
+      "actual_sha256": "35770042e32de25e6b0b4361ad172836a929b8f1c3fde74c6b4c5d8032b0de67",
+      "raw_match": false,
+      "reason": "Preexisting tracked baseline adds only one unused attribute; original manifest stale, not raw PASS",
+      "mathematical_and_address_bytes_equivalent_after_exact_annotation_removal": true
+    },
+    {
+      "path": "layout.json",
+      "declared_sha256": "4042f159a385fc4c739bb177cab785fae7cf8b97dc58f983b480d16685ad8bae",
+      "actual_sha256": "4042f159a385fc4c739bb177cab785fae7cf8b97dc58f983b480d16685ad8bae",
+      "raw_match": true
+    },
+    {
+      "path": "schedule.json",
+      "declared_sha256": "8fbc48ecd039ccc71ae2f98f9425a3bad3da335877bb97e82c5ea57c825a4f14",
+      "actual_sha256": "8fbc48ecd039ccc71ae2f98f9425a3bad3da335877bb97e82c5ea57c825a4f14",
+      "raw_match": true
+    }
+  ],
+  "selected_baseline": "program9 fused PACK-GEMM-store and V5 ordered GN/GAP",
+  "new_library_id": 65552,
+  "legacy_program_id9": "UNCHANGED",
+  "optional_opt_sources": "not selected into first equivalence migration",
+  "stages": 100,
+  "gpu_jobs": 103,
+  "cpu_gelu_jobs": 13,
+  "diagnostics_default": false,
+  "wmma": {
+    "tileM": 8,
+    "tileN": 4,
+    "tileK": 8,
+    "input": "FP16_RNE",
+    "accumulator": "FP32",
+    "cores": 4,
+    "warps": 4,
+    "lanes": 4
+  },
+  "historical_reference_scope": "W4 historic results only; no new S8 inference or compatibility result",
+  "gpu_raw_cycles": null,
+  "board": "NOT_RUN",
+  "image": "NOT_BUILT",
+  "sd": "NOT_TOUCHED"
+}

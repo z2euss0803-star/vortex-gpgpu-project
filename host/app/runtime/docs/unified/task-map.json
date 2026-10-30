@@ -1,0 +1,662 @@
+{
+  "version": 1,
+  "tasks": [
+    {
+      "line": "NN",
+      "task": 1,
+      "mapped_to": [
+        "U01"
+      ],
+      "status": "REUSED_SOURCE_REVALIDATE_BOUNDARY",
+      "scope": "COMMITTED_SOURCE_ONLY",
+      "commit": "42f3ae655f9d229d99bcb0f98701f5944868105b"
+    },
+    {
+      "line": "NN",
+      "task": 2,
+      "mapped_to": [
+        "U01"
+      ],
+      "status": "REUSED_SOURCE_REVALIDATE_BOUNDARY",
+      "scope": "COMMITTED_SOURCE_ONLY",
+      "commit": "42f3ae655f9d229d99bcb0f98701f5944868105b"
+    },
+    {
+      "line": "NN",
+      "task": 3,
+      "mapped_to": [
+        "U01",
+        "U13"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 4,
+      "mapped_to": [
+        "U21"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 5,
+      "mapped_to": [
+        "U01",
+        "U02"
+      ],
+      "status": "REUSED_SOURCE_REVALIDATE_BOUNDARY",
+      "scope": "COMMITTED_SOURCE_ONLY",
+      "commit": "42f3ae655f9d229d99bcb0f98701f5944868105b"
+    },
+    {
+      "line": "NN",
+      "task": 6,
+      "mapped_to": [
+        "U07"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 7,
+      "mapped_to": [
+        "U07"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 8,
+      "mapped_to": [
+        "U08",
+        "U09",
+        "U10"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 9,
+      "mapped_to": [
+        "U08",
+        "U09",
+        "U10"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 10,
+      "mapped_to": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 11,
+      "mapped_to": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 12,
+      "mapped_to": [
+        "U11",
+        "U12",
+        "U13"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 13,
+      "mapped_to": [
+        "U11",
+        "U12",
+        "U13"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 14,
+      "mapped_to": [
+        "U11",
+        "U12",
+        "U13"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 15,
+      "mapped_to": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 16,
+      "mapped_to": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 17,
+      "mapped_to": [
+        "U11",
+        "U12",
+        "U13"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 18,
+      "mapped_to": [
+        "U10",
+        "U18"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 19,
+      "mapped_to": [
+        "U11",
+        "U20",
+        "U23"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 20,
+      "mapped_to": [
+        "U19"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 21,
+      "mapped_to": [
+        "U22"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 22,
+      "mapped_to": [
+        "U23",
+        "U24"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 23,
+      "mapped_to": [
+        "U25"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "NN",
+      "task": 24,
+      "mapped_to": [
+        "U25"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 1,
+      "mapped_to": [
+        "U01"
+      ],
+      "status": "INHERITED_PASS",
+      "scope": "HOST_IDENTITY_ONLY",
+      "commit": "d7a092f62c1db47b2e80f7e0721716712ebc6598",
+      "receipt": "F:\\obsidian-codex\\codex\\work\\image_studio_linux_port_20261021\\execution\\T01-completion.json",
+      "new_candidate": "REVALIDATION_REQUIRED"
+    },
+    {
+      "line": "IMAGE",
+      "task": 2,
+      "mapped_to": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06",
+        "U14"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 3,
+      "mapped_to": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06",
+        "U14"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 4,
+      "mapped_to": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06",
+        "U14"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 5,
+      "mapped_to": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06",
+        "U14"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 6,
+      "mapped_to": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06",
+        "U14"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 7,
+      "mapped_to": [
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06",
+        "U14"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 8,
+      "mapped_to": [
+        "U14",
+        "U15",
+        "U10"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 9,
+      "mapped_to": [
+        "U14",
+        "U15",
+        "U10"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 10,
+      "mapped_to": [
+        "U14",
+        "U15",
+        "U10"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 11,
+      "mapped_to": [
+        "U18",
+        "U19",
+        "U20"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 12,
+      "mapped_to": [
+        "U18",
+        "U19",
+        "U20"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 13,
+      "mapped_to": [
+        "U18",
+        "U19",
+        "U20"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 14,
+      "mapped_to": [
+        "U18",
+        "U19",
+        "U20"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 15,
+      "mapped_to": [
+        "U21"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 16,
+      "mapped_to": [
+        "U22"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 17,
+      "mapped_to": [
+        "U23"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 18,
+      "mapped_to": [
+        "U24"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 19,
+      "mapped_to": [
+        "U25"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "IMAGE",
+      "task": 20,
+      "mapped_to": [
+        "U25"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 1,
+      "mapped_to": [
+        "U01",
+        "U17"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 2,
+      "mapped_to": [
+        "U01",
+        "U17"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 3,
+      "mapped_to": [
+        "U01",
+        "U17"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 4,
+      "mapped_to": [
+        "U01",
+        "U17"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 5,
+      "mapped_to": [
+        "U16",
+        "U17"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 6,
+      "mapped_to": [
+        "U16",
+        "U17"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 7,
+      "mapped_to": [
+        "U16",
+        "U17"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 8,
+      "mapped_to": [
+        "U16",
+        "U17"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 9,
+      "mapped_to": [
+        "U16",
+        "U17"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 10,
+      "mapped_to": [
+        "U18",
+        "U19",
+        "U20"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 11,
+      "mapped_to": [
+        "U18",
+        "U19",
+        "U20"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 12,
+      "mapped_to": [
+        "U18",
+        "U19",
+        "U20"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 13,
+      "mapped_to": [
+        "U21"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 14,
+      "mapped_to": [
+        "U22"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 15,
+      "mapped_to": [
+        "U23"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 16,
+      "mapped_to": [
+        "U23"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 17,
+      "mapped_to": [
+        "U24"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    },
+    {
+      "line": "P8",
+      "task": 18,
+      "mapped_to": [
+        "U25"
+      ],
+      "status": "PENDING",
+      "scope": "NO_NEW_EXECUTION"
+    }
+  ]
+}

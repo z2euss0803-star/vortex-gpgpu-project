@@ -1,0 +1,36 @@
+/include/ "system-conf.dtsi"
+/ {
+    reserved-memory {
+        #address-cells = <2>; #size-cells = <2>; ranges;
+        vxl_ps_hw4: vortex-ps@10000000 {
+            compatible = "shared-dma-pool";
+            reg = <0 0x10000000 0 0x00100000>;
+            no-map;
+        };
+    };
+};
+&{/amba_pl@0/HPM@a0000000} { status = "disabled"; };
+&{/amba_pl@0/dma@b0010000} { status = "disabled"; };
+&{/amba_pl@0/gpio@b0020000} {
+    clocks = <&{/firmware/zynqmp-firmware/clock-controller} 71>;
+};
+&{/amba_pl@0} {
+    vortex-backend@a0000000 {
+        compatible = "vortex,hw4-s8-validation-v1";
+        reg = <0 0xa0000000 0 0x10000>, <0 0xb0010000 0 0x10000>;
+        reg-names = "gpu", "cdma";
+        clocks = <&{/firmware/zynqmp-firmware/clock-controller} 71>;
+        clock-names = "axi";
+        resets = <&{/firmware/zynqmp-firmware/reset-controller} 116>;
+        ready-gpios = <&{/amba_pl@0/gpio@b0020000} 0 0 0>;
+        memory-region = <&vxl_ps_hw4>;
+        vortex,ps-placement-approved;
+        status = "okay";
+    };
+};
+&{/chosen} { bootargs = "earlycon console=ttyPS0,115200 root=/dev/ram0 rw"; };
+&sdhci1 {
+    no-1-8-v;
+    disable-wp;
+    codex,sd-compat-variant = "sd-compat-two-flags-trial-a1";
+};

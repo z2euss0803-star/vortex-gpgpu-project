@@ -1,0 +1,77 @@
+[
+  {
+    "id": "U09-RED-001",
+    "run": "U09-red-001",
+    "expected_red": true,
+    "cause": "Compiled scaffolds reject first valid request; assertion accept A",
+    "fix": "Implement common bounded queue, lazy ready dispatch, ACK/retirement and cancellation",
+    "resolution": "FINAL_NORMAL_SAN_TSAN_AND_MATCHED_AARCH64_EMULATION_PASS",
+    "final_runs": [
+      "U09-final-normal-012",
+      "U09-final-sanitizers-014",
+      "U09-final-tsan-017",
+      "U09-aarch64-018",
+      "U09-aarch64-emulation-019"
+    ]
+  },
+  {
+    "id": "U09-TOKEN-RED-001",
+    "run": "U09-token-red-003",
+    "expected_red": true,
+    "cause": "Borrow claim scaffold rejects existing four-token reservation",
+    "fix": "Claim/unclaim original reservation; reject double execution/release while claimed; CpuPool borrowed path does not charge a second set",
+    "resolution": "FINAL_NORMAL_SAN_TSAN_AND_MATCHED_AARCH64_EMULATION_PASS",
+    "final_runs": [
+      "U09-final-normal-012",
+      "U09-final-sanitizers-014",
+      "U09-final-tsan-017",
+      "U09-aarch64-018",
+      "U09-aarch64-emulation-019"
+    ]
+  },
+  {
+    "id": "U09-LOWERING-001",
+    "run": "U09-fault-red-005",
+    "expected_red": true,
+    "cause": "Exception from next lowered work returned error but left request queued and retryable",
+    "fix": "Convert source exceptions to retained request failure, no successor dispatch or token leak; request_error preserves reason",
+    "resolution": "FINAL_NORMAL_SAN_TSAN_AND_MATCHED_AARCH64_EMULATION_PASS",
+    "final_runs": [
+      "U09-final-normal-012",
+      "U09-final-sanitizers-014",
+      "U09-final-tsan-017",
+      "U09-aarch64-018",
+      "U09-aarch64-emulation-019"
+    ]
+  },
+  {
+    "id": "U09-ALLOC-001",
+    "run": "U09-alloc-gelu-red-011",
+    "expected_red": true,
+    "cause": "Completion lookup allocation could throw; terminal cleanup also allocated after token retirement",
+    "fix": "Catch allocation before mutation, retain active on delivery error, store admitted request key for allocation-free terminal removal; rotate request ring without pop/push allocation",
+    "resolution": "FINAL_NORMAL_SAN_TSAN_AND_MATCHED_AARCH64_EMULATION_PASS",
+    "final_runs": [
+      "U09-final-normal-012",
+      "U09-final-sanitizers-014",
+      "U09-final-tsan-017",
+      "U09-aarch64-018",
+      "U09-aarch64-emulation-019"
+    ]
+  },
+  {
+    "id": "U09-GELU-TOKEN-001",
+    "run": "U09-alloc-gelu-red-011",
+    "expected_red": true,
+    "cause": "Original GELU API only supported new pool reservation; borrowed entry scaffold rejects existing full global32",
+    "fix": "Share one unchanged GELU compute implementation between original and reserved entry; borrowed pool claims original4 token and owner retires it",
+    "resolution": "FINAL_NORMAL_SAN_TSAN_AND_MATCHED_AARCH64_EMULATION_PASS",
+    "final_runs": [
+      "U09-final-normal-012",
+      "U09-final-sanitizers-014",
+      "U09-final-tsan-017",
+      "U09-aarch64-018",
+      "U09-aarch64-emulation-019"
+    ]
+  }
+]

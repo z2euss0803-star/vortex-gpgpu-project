@@ -1,0 +1,24 @@
+{
+  "scope": "ACTUAL_OFFLINE_IMPLEMENTATION_AND_RELEASE_PREVIEW_NOT_FINAL_REVIEW_OR_SD",
+  "implementation": "COMPLETE",
+  "Ubuntu_policy_tests": 18,
+  "A_source_authority_tests": 9,
+  "actual_preview": {
+    "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_unified_gpu_20261021\\build\\U25-actual-release-pre-review-1629\\receipt.json",
+    "sha256": "527d8589e9fdd4f7809212cf04702d83498a36a1b968851db8a06be23e0a97cb",
+    "source_snapshot_id": "d334d8289a57bac223bef84c7e4d07105ad6c9174f8548c7125a68a02039eb5d",
+    "natural_exit": 0
+  },
+  "runtime_source_id": "d1dff571b14da4d12954179b69846691dddfb851db43e7bcc0dd9f45d6988f1b",
+  "remaining": [
+    "fresh whole-branch review",
+    "source-matched final acceptance assembly",
+    "authorized fresh SD identify/backup/write/readback"
+  ],
+  "board": "NOT_RUN",
+  "display": "NOT_RUN",
+  "application_precision": "NOT_RUN",
+  "performance": "NOT_MEASURED",
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED"
+}

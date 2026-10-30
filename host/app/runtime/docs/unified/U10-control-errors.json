@@ -1,0 +1,18 @@
+{
+  "scope":"HOST_TRUSTED_CONTROL_AND_REAL_RUNTIME_NOT_PRODUCTION_DAEMON",
+  "baseline":"85b8242",
+  "gpu_raw_cycles":null,
+  "errors":[
+    {"run":"U10-control-red-097","natural_exit":2,"class":"TEST_COMPILE_FAILURE_NOT_RED","cause":"test used absent queued_requests member and collided with existing C test_control output name","fix":"use pending count and distinct test_service_control output; old v2 target retained"},
+    {"run":"U10-control-functional-red-098","natural_exit":2,"class":"LINK_FAILURE_NOT_RED","cause":"canonical JSON object also needs vxl_hunet_hash","fix":"link matching existing SHA object"},
+    {"run":"U10-control-functional-red-099","natural_exit":2,"class":"FUNCTIONAL_RED","assertion":"registry inventory must work","cause":"strict RPC transport was not connected to actual Runtime/trusted factories"},
+    {"run":"U10-control-green-100","natural_exit":2,"class":"IMPLEMENTATION_COMPILE_FAILURE","cause":"numeric enum name differed; GCC7 misleading-indentation Werror","fix":"use existing NEW_MISMATCH enum and explicit boundaries; no compiler-warning suppression"},
+    {"run":"U10-control-identity-red-106","natural_exit":2,"class":"FUNCTIONAL_RED","assertion":"controller startup binding must equal actual Runtime probe","cause":"control accepted its own trusted declaration without comparing Runtime cached probe","fix":"read-only Runtime identity getter; compare all hashes/provider/generation/verification classification"}
+  ],
+  "normal_green":["U10-control-green-102","U10-control-alloc-103","U10-control-normal-regression-104","U10-control-final-normal-107"],
+  "allocation_test":{"positions":256,"failed_responses_including_expected_rejection":186,"admitted_but_response_allocation_failed":7,"not_all_positions_injected":true,"no_duplicate_factory_after_admission":true},
+  "final":{"run":"U10-control-final-normal-107","natural_exit":0,"code_manifest_items":883,"prebuilt_u10_elfs":14,"old_v2_control_regression":true,"compiler_jobs":2,"test_runner_jobs":1},
+  "archive":{"sha256":"8361f299552e96c68a4b9e85353d9ac2d420324b4c3384ee386b0abc9bf95908","verified_members":389,"hardlinks":2},
+  "remaining":["production vxgpud and native application registration/pump", "CPU pool join-failure retention review", "final U10 SAN/TSan/matching cross", "U11-U25 app/numeric/display/image acceptance"],
+  "image":"NOT_BUILT","board":"NOT_RUN","sd":"NOT_TOUCHED"
+}

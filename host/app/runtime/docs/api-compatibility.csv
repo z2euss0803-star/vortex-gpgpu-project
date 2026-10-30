@@ -1,0 +1,24 @@
+api,status,equivalent_behavior,test_or_limit
+vx_dev_open,SUPPORTED,exclusive session and implicit DCR,test_public_api
+vx_dev_close,SUPPORTED,deferred driver lifetime and zynq optional MPM omitted,test_public_api and test_engine
+vx_dev_caps,PARTIAL,4 cores warps threads and 2GiB PL capacity,ISA flags unsupported until manifest verified
+vx_mem_alloc,SUPPORTED,PL padded pool; pin flag unsupported,test_engine and test_public_api
+vx_mem_reserve,SUPPORTED,explicit profile PS/PL address; FENCE forbidden,test_core and test_public_api
+vx_mem_free,SUPPORTED,owner stale double-free and busy rejected,test_engine and test_public_api
+vx_mem_access,METADATA_ONLY,range validation; no hardware permission isolation,test_public_api
+vx_mem_address,SUPPORTED,RV32 profile encoding; no CPU virtual pointer,test_public_api
+vx_mem_info,SUPPORTED,capacity and allocated padding count,test_tools
+vx_copy_to_dev,SUPPORTED,byte ranges via aligned RMW; error prefix not atomic,test_engine
+vx_copy_from_dev,SUPPORTED,uaccess faults retained; no fabricated zero result,test_engine
+vx_copy_dev_to_dev,SUPPORTED,same range no-op; partial overlap rejected,test_engine
+vx_start,PARTIAL,opaque buffers mapped to versioned SUBMIT,production only exact fixed vecadd16 diagnostic
+vx_ready_wait,SUPPORTED,wait timeout is not execution deadline,test_engine and test_public_api
+vx_dcr_write,PARTIAL,startup 32bit and MPM class0 metadata; high bits rejected,test_public_api; start buffers determine PC/ARG
+vx_dcr_read,PARTIAL,known startup metadata; unknown DCR rejected,test_public_api
+vx_mpm_query,UNSUPPORTED,EOPNOTSUPP; no fake counters,test_public_api
+vx_upload_kernel_bytes,SUPPORTED,actual two-u64 address header and payload/BSS,test_public_api; no ELF passthrough
+vx_upload_kernel_file,SUPPORTED,uses actual utility loader,format validation shared with bytes path
+vx_upload_bytes,SUPPORTED,allocate and upload,test_public_api
+vx_upload_file,SUPPORTED,uses actual utility loader,format path inherited; not independently file-I/O tested
+vx_check_occupancy,PARTIAL,original utility over available caps,no local memory capability
+vx_dump_perf,UNSUPPORTED_FOR_ZYNQ,public close does not query unimplemented optional counters,legacy dispatch fixture checks preserved non-zynq close path; actual simx/xrt/opae backend systems not retested

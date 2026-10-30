@@ -1,0 +1,143 @@
+[
+  {
+    "run": "U17-result-source-red-001",
+    "class_": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "natural_exit": 1,
+    "controller_exit": 0,
+    "error": "Complete validated Mosaic import ENOSYS stub; original positive assertion observed before implementation, archive002 retained.",
+    "archive_sha256": "e9390d3f97e749ac1049c5d0a97f6cf6f70165613f20c17faa101544f71de14c",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-frozen-udp-protocol-005",
+    "class_": "CROSS_PLATFORM_MANIFEST_SEPARATOR_ERROR",
+    "natural_exit": 1,
+    "error": "A Windows relative path was serialized with backslashes; Ubuntu file lookup stopped before C compile.006 retains first log; metadata only normalized to POSIX;007 all8 frozen C protocol tests passed.",
+    "archive_sha256": "cb4f8317e200c0fc504e8a3b8bb72d5f33af93c66b71499afbaba81f9c12422f",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-dual-lod-package-red-011",
+    "class_": "EXPECTED_FUNCTIONAL_RED",
+    "controller_exit": 0,
+    "error": "Missing dualLOD builder assertion;012 preserved before implementation",
+    "archive_sha256": "1dd46d9ad6731f19efbe6642f1c050183a76e275516be101c18315a581214a65",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-package-durability-red-014",
+    "class_": "EXPECTED_FUNCTIONAL_RED",
+    "controller_exit": 0,
+    "error": "Payload directories not fsynced before manifest rename;015 retained,016 all4 tests pass including payload fsync fault",
+    "archive_sha256": "b6beef02a4be7e98a54c804cfa5d6958328c5cef14c7bd5243e522208cfa27f8",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-cpp-texture-bind-red-017",
+    "class_": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "controller_exit": 0,
+    "error": "C++ controlled package admission ENOSYS;018 retained",
+    "archive_sha256": "2d0977f60611b49d1d39ca18960734ed3fa626140c846f33c68959f17db8cc8a",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-cpp-texture-bind-normal-019",
+    "class_": "PRIVATE_NAMESPACE_ALIAS_COMPILE_ERROR",
+    "natural_exit": 1,
+    "error": "New common IO header alias j imported alongside local j; rename header-only alias io_json;020 retains raw compiler log and actual generated package.",
+    "archive_sha256": "2052f2c6b2de0c146e6d74b74d5f5c131d3c44bfd13489e4aba033108a9f3e72",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-cpp-texture-bind-normal-021",
+    "class_": "WERROR_MISLEADING_INDENTATION",
+    "natural_exit": 1,
+    "error": "Origin comparison loop explicit braces; checks/Werror retained.022 raw preserved;023/024 ordinary,025SAN,026TSan pass.",
+    "archive_sha256": "38fa0ac0b2fbb3300229c60c3f1892f46534572d0bb8024aa40e9e7b4bdf1344",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-p8-texture-red-032",
+    "class_": "TEST_PARAMETER_VARIANT_COMPILE_ERROR_NOT_FUNCTIONAL_RED",
+    "natural_exit": 1,
+    "error": "Test compared variant parameter directly with25; use std::get<uint64_t>. Original033 archive preserved before retry034. No production fix precedes compiled functionalRED.",
+    "archive_sha256": "2124ef64fdc87d53279efdf15ae5adf68739fec7ca6b24aa9d7d31c5c874da6b",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-p8-texture-functional-red-034",
+    "class_": "IMMUTABLE_RESULT_TEST_COMPILE_ERROR_NOT_FUNCTIONAL_RED",
+    "natural_exit": 1,
+    "error": "Result value intentionally const; test clones frame before mutating/rebin.035 preserves raw.",
+    "archive_sha256": "e2cc68e7b2eba68dde57010ebad2b88416a76ccd31e88a27d9784b8e2d2a1ebf",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-p8-texture-functional-red-036",
+    "class_": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "controller_exit": 0,
+    "error": "Actual test executable asserts admitted Mosaic texture frame must prepare; stub rejects.037 raw preserved before implementation.",
+    "archive_sha256": "f98279c071b28ffa6662255c6ecce90c740d5d1d044ccfd6276beb1a7fe49752",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-p8-owner-texture-red-040",
+    "class_": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "controller_exit": 0,
+    "error": "Actual shared owner rejects admitted custom texture before implementation.041 archived first assertion.042 ordinary15 cases now pass including paused porcelain/warrior redraw.",
+    "archive_sha256": "1aba5768fb4e73eedbb5c85b26d3c27200e8bfee08e49215124b8819b711ae0e",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-json-identity-order-red-048",
+    "class_": "DISPROVED_ORDER_HYPOTHESIS_CONTROLLER_EXPECTATION_ONLY",
+    "natural_exit": 1,
+    "cpp_positive_exits": [
+      0,
+      0
+    ],
+    "error": "Source canonical JSON parser already sorts keys; reordered valid package accepted. No production code changed.049 probe and original expectation preserved.",
+    "archive_sha256": "b3dce281f7e00b44f6c729ab4c0e3359d5e05badb38f0291bc19628867b50801",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-texture-service-red-056",
+    "class_": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "controller_exit": 0,
+    "error": "Actual service creation returns ENOSYS before implementation.057 raw retained; ingress implementation does not enable APPLIED or production commit yet.",
+    "archive_sha256": "0f23a56a24e67876cb22531c4adc8b669c2ae570200eee4b134f41dfa8b22c09",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-texture-completion-red-063",
+    "class_": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "controller_exit": 0,
+    "error": "Trusted complete-owner commit refused before implementation;064 preserves first assertion",
+    "archive_sha256": "74e1ceb67693a47d24f7ceb035eecb1fde8884bd165123fa53188ed6cfe7c345",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-texture-output-crc-red-065",
+    "class_": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "controller_exit": 0,
+    "error": "Actual checked readback CRC absent before implementation;066 preserved",
+    "archive_sha256": "9b00976cf292b46bbb67a4d0be897f5fc7697e333ac8a2ac14ff31b52bd722e1",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-texture-applied-gate-red-067",
+    "class_": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "controller_exit": 0,
+    "error": "After original C jobs, CRC and host presentation APPLIED gate still refused;068 preserved",
+    "archive_sha256": "929ce1c775162bea1f74c0ecfe4311e5e47f1ca2cc952a4a14bd02f3283d5fb8",
+    "gpu_raw_cycles": null
+  },
+  {
+    "run": "U17-texture-cancel-retirement-red-070",
+    "class_": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "controller_exit": 0,
+    "error": "Queued cancelled request was actually retired by common Runtime but receiver still retained it;071 original assertion preserved before allowing only snapshot-proven retired/unpublished/error-free cancellation.",
+    "archive_sha256": "df72d1b64103a5139bcb7b4e3ada717e35ed1c03d45a2c1273949c79082b213a",
+    "gpu_raw_cycles": null
+  }
+]

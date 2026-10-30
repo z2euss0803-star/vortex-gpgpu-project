@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "scope": "U20_UBUNTU_SOFTWARE_ONLY_SEPARATE_ACTUAL_PROVIDER_IDENTITIES",
+  "gpu_raw_cycles": null,
+  "board": "NOT_RUN",
+  "test_runner_jobs": 1,
+  "compiler_jobs_max": 2,
+  "groups": [
+    {"id":"foundation","module":null,"modes":["normal","sanitize","thread"],"coverage":"actual C owner, objects, catalog, relocation, pins, batch, full execution/retirement; registry, graph, scheduler, CPU pool, integer legacy layouts and exact IMAGE background bytes/unaligned tails/guards"},
+    {"id":"stage","module":"scripts.unified.check_u20_stage","modes":["normal","sanitize","thread"],"coverage":"runtime, result/display roots, cancellation, fault and lifetime"},
+    {"id":"native-media","module":"scripts.unified.check_u20_scene_matrix","modes":["normal","sanitize","thread"],"coverage":"actual native NN-independent IMAGE/P8 services, UDP, shared budget, guard, original frames/retirement and first-error closure"},
+    {"id":"installed","module":"scripts.unified.check_u20_installed_service","modes":["normal","sanitize","thread"],"normal_mode":"all","coverage":"sealed production daemon, original v1 NN, HUNet view, Mosaic immutable export/texture provenance and startup rollback"},
+    {"id":"p8-public","module":"scripts.unified.check_u20_p8_controls","modes":["normal","sanitize","thread"],"normal_mode":"all","coverage":"B controls/file ingress, original startup100 and frames, permission error queryable with new admission closed"},
+    {"id":"s8-joint","module":"scripts.unified.check_u20_s8_joint","modes":["normal","sanitize","thread"],"coverage":"one real C context with native NN+IMAGE, queue8/ninth EAGAIN, hardware capability isolation and safe request-boundary residency"},
+    {"id":"integer-extension","module":"scripts.unified.check_u20_integer_native","modes":["normal","sanitize","thread"],"coverage":"actual public native A then A+B execution, existing operators/program/driver unchanged, full exact frozen integer HOST PE references"},
+    {"id":"hunet-math","module":"scripts.unified.check_u12_math_components","modes":["normal","sanitize"],"coverage":"35 PACK stages/314 descriptors and original scalar reference; no new application ORT PASS"},
+    {"id":"mosaic-math","module":"scripts.unified.check_u13_math","modes":["normal","sanitize"],"coverage":"21 native INT16/I48 primitives, 77-phase lazy coverage and eight sixteen-layer propagation cases at original thresholds"},
+    {"id":"image-pixels","module":"scripts.unified.check_u14_pixels","modes":["normal","sanitize"],"coverage":"original 91 frozen image outputs, four styles/themes/caches and transactional recipe"},
+    {"id":"p8-math","module":"scripts.unified.check_u16_math","modes":["normal","sanitize"],"coverage":"original controls/geometry and frozen RV32 fixed-frame instruction-model visual references; not physical GPU or DP"},
+    {"id":"texture-negative","module":"scripts.unified.check_u17_adversarial","modes":["normal","sanitize"],"coverage":"actual filesystem texture/source provenance and adversarial path/hash/precision/metadata cases"},
+    {"id":"display","module":"scripts.unified.check_u18","modes":["normal","sanitize","thread"],"coverage":"actual C display owner and common result leases with injected KMS, never physical display proof"},
+    {"id":"events","module":"scripts.unified.check_u19","modes":["normal","sanitize","thread"],"coverage":"raw events, identity, independent timing and optimization policy; synthetic cycles never physical"}
+  ],
+  "thread_scope": "Real scheduler, CPU pool, preparation, resident/result/display leases and all native public service adapters. Pure numerical reference programs run normal+ASan/UBSan; their omission from TSan is explicit, not a TSan PASS.",
+  "success_requires": "every selected group natural0, matching child receipt/source and all required checks; cross/image/board remain separate gates"
+}

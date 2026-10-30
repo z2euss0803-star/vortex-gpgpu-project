@@ -1,0 +1,17 @@
+NNRT_FLAGS = -std=c++17 -O2 -g -Wall -Wextra -Werror -fno-fast-math -ffp-contract=off -Iinclude $(DEMO_JSON_CFLAGS)
+NNRT_HEADERS = $(wildcard include/vxnn/*.hpp)
+$(OUT)/nnrt/json.o: demo/json.c
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) -c $< -o $@
+$(OUT)/nnrt/sha.o: core/hunet_sha256.c
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude -c $< -o $@
+$(OUT)/nnrt/test_legacy_backend: tests/nnrt/test_legacy_backend.cpp nnrt/backend/legacy.cpp nnrt/evidence.cpp $(OUT)/nnrt/json.o $(OUT)/nnrt/sha.o $(NNRT_HEADERS)
+	$(CXX) $(NNRT_FLAGS) $(filter %.cpp %.o,$^) $(DEMO_JSON_LIBS) -pthread -lstdc++fs -Wl,--wrap=open -Wl,--wrap=close -o $@
+$(OUT)/nnrt/test_event_timing: tests/nnrt/test_event_timing.cpp nnrt/evidence.cpp $(NNRT_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(NNRT_FLAGS) $(filter %.cpp %.o,$^) $(DEMO_JSON_LIBS) -pthread -lstdc++fs -o $@
+.PHONY: test-nnrt-legacy
+test-nnrt-legacy: $(OUT)/nnrt/test_legacy_backend $(OUT)/nnrt/test_event_timing
+	$(OUT)/nnrt/test_legacy_backend tests/demo/fixtures/run-v1.json
+	NNRT_TIMING_TEST_BINARY=$(abspath $(OUT)/nnrt/test_event_timing) $(PYTHON) -m unittest tests.nnrt.test_event_timing -v

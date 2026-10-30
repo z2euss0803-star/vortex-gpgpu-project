@@ -1,0 +1,77 @@
+{
+  "files": [
+    "Makefile.unified",
+    "include/vxl/v2/objects.h",
+    "include/vxl/v2/program.h",
+    "core/v2/catalog.c",
+    "core/v2/program.c",
+    "core/v2/relocate.c",
+    "driver/v2/program.c",
+    "scripts/unified/build_catalog.py",
+    "contracts/unified/catalog-v1.json",
+    "contracts/unified/schema-v1.json",
+    "tests/unified/test_catalog.py",
+    "tests/v2/catalog_fixture.py",
+    "tests/v2/relocate_fixture.py",
+    "tests/v2/private_fixture.py",
+    "tests/v2/program_fixture.h",
+    "tests/v2/test_program.c",
+    "tests/v2/test_program_load.c",
+    "tests/v2/test_relocate.c",
+    "tests/v2/test_catalog_driver.c",
+    "tests/v2/test_private_init.c"
+  ],
+  "verified_runs": [
+    "U04-load-private-integrity-green-011",
+    "U04-final-sanitize-012"
+  ],
+  "red_runs": [
+    "U04-catalog-red-001",
+    "U04-loader-relocate-red-004",
+    "U04-file-admission-red-007",
+    "U04-private-state-red-009",
+    "U04-cached-integrity-red-010"
+  ],
+  "message": "feat(unified): U04 共同program catalog、参数schema和封存重定位",
+  "rulings": [
+    "Binary schema fixes explicit code/rodata/CRT/stack GPU32 placements; container offsets are not GPU addresses. Actual frozen ELF/provider binding stays U22/U23.",
+    "Additional narrowly scoped fixture files separate loader, private-state and file-boundary tests; no model math or old binary identities changed.",
+    "Programs sharing fixed code PC are catalog entries, not simultaneously resident contexts. Release and retirement must precede loading another overlapping code object.",
+    "Permanent program pins remain during trusted read-only resident-hash verification. Public COPY cannot bypass pins or sealing; corrupted resident data quarantines with all objects retained.",
+    "Linux file-reading branch added for later matched kernel compile; host-boundary tests do not claim Linux kernel/real DMA execution."
+  ],
+  "evidence_archive": {
+    "members": 69,
+    "sha256": "e581f2b48a4315ea7805454e65d1d9e9f3d5ec44299ecccd1e71bbc238a6b1bb",
+    "receipt": "work\\unified_gpu_runtime_20261021\\execution\\U01-U04-raw-evidence\\receipt.json"
+  },
+  "errors": [
+    {
+      "id": "U04-COMPILE-001",
+      "run": "U04-loader-relocate-green-005",
+      "exit": 2,
+      "cause": "u32 length comparison to UINT64_MAX always false; GCC7 Werror",
+      "fix": "remove redundant comparison; cast to u64 before alignment; retain pool bounds"
+    },
+    {
+      "id": "U04-PRIVATE-001",
+      "run": "U04-private-state-red-009",
+      "cause": "PL-backed storage not guaranteed initially zero",
+      "fix": "explicit zero plus readback of private args/CRT/stack"
+    },
+    {
+      "id": "U04-CACHE-001",
+      "run": "U04-cached-integrity-red-010",
+      "cause": "cached program admitted by metadata without checking resident bytes",
+      "fix": "trusted read-only hash of resident code/rodata; quarantine retains objects on mismatch"
+    }
+  ],
+  "task": "U04",
+  "base": "c8a5e609d414bbad8798212b394f8c4a5cf7613f",
+  "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED",
+  "board": "NOT_RUN",
+  "cross": "NOT_RUN",
+  "image": "NOT_BUILT"
+}

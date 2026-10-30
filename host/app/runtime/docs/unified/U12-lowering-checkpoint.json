@@ -1,0 +1,86 @@
+{
+  "task": "U12",
+  "state": "TRUSTED_ARGUMENT_REF_LOWERING_COMPONENT_NOT_NATIVE_DISPATCH_OR_TASK_COMPLETE",
+  "base_commit": "374a6f01dcec0264831651272f408af5f610003b",
+  "verified": [
+    {
+      "run": "U12-lowering-normal-213",
+      "natural_exit": 0,
+      "current_raw_input_rows": 1560,
+      "manifest_sha256": "9fbde7505cf1e3aab51e674a401dd47254010f5f1d114b5f8c526d12ae2890ad",
+      "command_exits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "run": "U12-lowering-sanitize-214",
+      "natural_exit": 0,
+      "current_raw_input_rows": 1560,
+      "manifest_sha256": "9fbde7505cf1e3aab51e674a401dd47254010f5f1d114b5f8c526d12ae2890ad",
+      "command_exits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "run": "U12-lowering-aarch64-215",
+      "natural_exit": 0,
+      "current_raw_input_rows": 1560,
+      "manifest_sha256": "9fbde7505cf1e3aab51e674a401dd47254010f5f1d114b5f8c526d12ae2890ad",
+      "command_exits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "archives": {
+    "U12-lowering-final-normal": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-lowering-final-normal\\raw-and-artifacts.tar.gz",
+      "sha256": "cd126cab117b4e050d4d78d1be0827ab2cb699ed1ecf936a60f3622dba0cb738",
+      "verified_members": 189
+    },
+    "U12-lowering-final-sanitize": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-lowering-final-sanitize\\raw-and-artifacts.tar.gz",
+      "sha256": "9f5197ab3fc77533476e9e6d71d04d6fe00e727561f42c209d52e3d1ac907571",
+      "verified_members": 189
+    },
+    "U12-lowering-final-target": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-lowering-final-target\\raw-and-artifacts.tar.gz",
+      "sha256": "37c55c63e36d6c90170c6fc6302cc8d49d84354605f544bebb37e878aba9aacb",
+      "verified_members": 199
+    }
+  },
+  "gpu_raw_cycles": null,
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "numeric": "NO_NEW_INFERENCE_RESULT_HISTORICAL_ORT_FAIL_UNCHANGED",
+  "cross_elf_count": 4,
+  "target_elf_executed": false,
+  "gpu_nodes": 103,
+  "cpu_rejected": 13,
+  "new_threads": false,
+  "tsan": "NO_NEW_THREADS_NO_NEW_TSAN_RUN",
+  "scope": "ZERO_ADDRESS128B_ARGS_AND8_OWNED_TYPED_REFS_NOT_PHYSICAL_GPU_EXECUTION",
+  "core_driver_all_vxl_uapi_headers_unchanged": 198,
+  "frozen_vxnn_device_files_unchanged": 12,
+  "error_runs": [
+    "U12-lowering-red-212"
+  ],
+  "model_id": "c9fbc4c08fa0a5623c0b81b87a14b0f5e3b3fcced32c20257f12c28fb86f7791",
+  "pending": [
+    "Dispatch-time trusted program residency and explicit internal deferred metadata without invented handles",
+    "Actual owner catalog entry ID vs CODE binding, shared CPU pool and post-ACK guard hooks",
+    "U20 native service composition and U13-U25 remaining adapters/review/matched images",
+    "Future authorized board numerical visual and performance gates"
+  ]
+}

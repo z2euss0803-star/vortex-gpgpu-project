@@ -1,0 +1,47 @@
+{
+  "files": [
+    "Makefile.unified",
+    "include/uapi/vx_compute_v2.h",
+    "include/vxl/v2/types.h",
+    "include/vxunified/types.hpp",
+    "contracts/unified",
+    "tests/unified/test_identity.cpp",
+    "tests/v2/test_wire.c"
+  ],
+  "verified_runs": [
+    "U02-wire-identity-green-002",
+    "U02-wire-identity-sanitize-003"
+  ],
+  "red_run": "U02-wire-identity-red-001",
+  "message": "feat(unified): U02 硬件能力、程序键与版本化wire合同",
+  "rulings": [
+    "Existing original NN ioctl table is binding; initial unpublished draft aliases corrected before release to BUFFER_CREATE/INFO/COPY/RELEASE, PROGRAM_LOAD/INFO/RELEASE, SUBMIT_BATCH, WAIT, COMPLETE_REAP, FAULT_INFO — original approved semantics retained; no extra image ABI.",
+    "CAPS reports BOOT_MANIFEST_DECLARED; immutable software identity does not attest physically loaded PL; board verification remains false."
+  ],
+  "audit": {
+    "old_and_new_ioctl_count": 40,
+    "collisions": 0,
+    "compat32": "EOPNOTSUPP",
+    "layouts": [
+      128,
+      48,
+      512,
+      256,
+      256,
+      64,
+      512
+    ],
+    "sanitizers": [
+      "address",
+      "undefined"
+    ]
+  },
+  "task": "U02",
+  "base": "2d05a3bbd32d13fcaabe42cbfd6c226f799fea66",
+  "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED",
+  "board": "NOT_RUN",
+  "cross": "NOT_RUN",
+  "image": "NOT_BUILT"
+}

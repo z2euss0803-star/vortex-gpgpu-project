@@ -1,0 +1,14 @@
+{
+  "production_commit": "0a0b2bba5209101c27cbf5842d3847611d557b32",
+  "production_tree": "b9d569d8e2a5b32800e3b1856f9256648560128a",
+  "documentation_head": "10a43d0a295616ed31b5d91fb0a9ded39c594631",
+  "release_zip": {
+    "path": "D:\\CodexArchives\\Mosaic-HUNet-DP-Release-20261020\\0a0b2bb\\delivery\\offline-demo-release.zip",
+    "bytes": 245991434,
+    "sha256": "c6b332f499c2d7327903c489cdbba71f890e8c60cd7861ca3a14c91b1b63f280"
+  },
+  "main_unchanged": true,
+  "scope": "DESIGN_BASELINE_NOT_IMPLEMENTATION",
+  "gpu_raw_cycles": null,
+  "source_manifest": "F:\\obsidian-codex\\codex\\work\\linux_nn_runtime_upgrade_20261021\\inventory\\baseline.json"
+}

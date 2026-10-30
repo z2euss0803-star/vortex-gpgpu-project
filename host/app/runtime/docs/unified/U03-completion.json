@@ -1,0 +1,51 @@
+{
+  "files": [
+    "Makefile.unified",
+    "include/vxl/v2/objects.h",
+    "core/v2/owner.c",
+    "core/v2/objects.c",
+    "core/v2/validate.c",
+    "driver/v2/buffers.c",
+    "include/vxunified/resources.hpp",
+    "unified/resources.cpp",
+    "tests/v2/test_objects.c",
+    "tests/v2/test_buffer_adapter.c",
+    "tests/unified/test_leases.cpp"
+  ],
+  "verified_runs": [
+    "U03-adapter-lease-green-004",
+    "U03-sanitize-005",
+    "U03-thread-sanitize-006"
+  ],
+  "red_runs": [
+    "U03-objects-lease-red-001",
+    "U03-adapter-lease-collision-red-003"
+  ],
+  "message": "feat(unified): U03 共同owner、对象、地址与跨消费者租约",
+  "rulings": [
+    "One device mutex is explicitly injected into ResourceTable; lease serial belongs to device context, preventing cross-table token collisions. Common adapter tests use actual byte-copy implementation with stubbed hardware boundary, not real DMA.",
+    "Linux fd/ioctl provider wiring remains U06 and actual kernel audit U23. U03 validates shared C lifetime/legacy owner/lock gate without claiming kernel or board PASS.",
+    "Atomic allocation rollback uses bounded slot indices, avoiding a 3KiB temporary ref array on kernel stack."
+  ],
+  "checks": {
+    "objects": 64,
+    "allocation_failure_points": 35,
+    "consumers": 5,
+    "concurrent_threads": 4,
+    "concurrent_iterations": 4000,
+    "unknown_stop": "RETAIN_QUARANTINE",
+    "sanitizers": [
+      "address",
+      "undefined",
+      "thread"
+    ]
+  },
+  "task": "U03",
+  "base": "5d26cff3f734a7533120bd7529379d3d71656199",
+  "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED",
+  "board": "NOT_RUN",
+  "cross": "NOT_RUN",
+  "image": "NOT_BUILT"
+}

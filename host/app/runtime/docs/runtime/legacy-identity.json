@@ -1,0 +1,1109 @@
+{
+  "production_commit": "0a0b2bba5209101c27cbf5842d3847611d557b32",
+  "files": [
+    {
+      "path": "device/hunet_fused.cpp",
+      "bytes": 3561,
+      "mode": 436,
+      "sha256": "954fbb1b7b73b3cf410f2ddcd277b0a3ba315dbc7bcf14d17642a5e09b6893af"
+    },
+    {
+      "path": "device/hunet_fused_ops.h",
+      "bytes": 1700,
+      "mode": 436,
+      "sha256": "26fb78e0e1fbc02d154252e0bfbed127b2484acd7b23ae82072faf7a9745aa6f"
+    },
+    {
+      "path": "device/hunet_opt.cpp",
+      "bytes": 14410,
+      "mode": 436,
+      "sha256": "0450c1c1c8843923981e513bf1dcf70a9ef2b90502383a6f8c0f01fb764349c1"
+    },
+    {
+      "path": "device/hunet_opt_gn.h",
+      "bytes": 2238,
+      "mode": 436,
+      "sha256": "9b44fbd7f9e6d73ddf3e9208ff45d7023b954a7ae60948014efd6352af40a072"
+    },
+    {
+      "path": "device/hunet_opt_gn_norm.h",
+      "bytes": 1380,
+      "mode": 436,
+      "sha256": "1e8f52cd74f469dde7404cb9cc312e7bef938e989afb989f2da0a851d806d255"
+    },
+    {
+      "path": "device/hunet_opt_gn_runtime.h",
+      "bytes": 2585,
+      "mode": 436,
+      "sha256": "fbfeb84842b11c8a630f7241f2e4680f4247abedb7185def2bb968c724891ec1"
+    },
+    {
+      "path": "device/hunet_opt_graph.h",
+      "bytes": 148,
+      "mode": 436,
+      "sha256": "733656483586487219ff3e3bf0a3f257a35733044be35218890f26e64a9a8546"
+    },
+    {
+      "path": "device/hunet_opt_pack.h",
+      "bytes": 4247,
+      "mode": 436,
+      "sha256": "c2c980060384e00e89bbf14d382ef13222a6b0456d7140112d485ed7d0d05300"
+    },
+    {
+      "path": "device/hunet_opt_scalar.h",
+      "bytes": 3549,
+      "mode": 436,
+      "sha256": "d686e7acf7711b861605adcd6f2cce20db2dfb8e805582164483654f6170acf6"
+    },
+    {
+      "path": "device/hunet_opt_views.h",
+      "bytes": 1291,
+      "mode": 436,
+      "sha256": "1dddebd4b3e16b5c26dfcd66674e28dce5d6452624275962c705fcb874362d7c"
+    },
+    {
+      "path": "device/hunet_opt_wmma.h",
+      "bytes": 3020,
+      "mode": 436,
+      "sha256": "ee180581d907cfb4717c32a0e56c3226c2d9694a57eacd16eed23519095f9aa1"
+    },
+    {
+      "path": "device/hunet_wmma.cpp",
+      "bytes": 1266,
+      "mode": 436,
+      "sha256": "662a6bf13ea8df9fe07753ec8291dba80b946da2e5ad9f3faa52c2e541fd3020"
+    },
+    {
+      "path": "device/mosaic_s8/conv.cpp",
+      "bytes": 1684,
+      "mode": 436,
+      "sha256": "f54846152875f03da4967a842b4a23fc1a891b6ec9d0c78d0aa2c5e317c777f2"
+    },
+    {
+      "path": "device/mosaic_s8/crt/link32.ld",
+      "bytes": 10236,
+      "mode": 436,
+      "sha256": "fcacd55ea84d15aca3a1abeff45d064a8dd65964a3f49b66356b321cecff41d0"
+    },
+    {
+      "path": "device/mosaic_s8/crt/vx_start.S",
+      "bytes": 3060,
+      "mode": 436,
+      "sha256": "592496e4492d57e0e28f7b67be0dbbf4ee56893cbd02136b242c40184df90fd6"
+    },
+    {
+      "path": "device/mosaic_s8/entry.h",
+      "bytes": 501,
+      "mode": 436,
+      "sha256": "8ab9c58bff4ee4bebe78d5988581fc400bfa310627d5fcee9dd1b24e19363b95"
+    },
+    {
+      "path": "device/mosaic_s8/entry_context.cpp",
+      "bytes": 4297,
+      "mode": 436,
+      "sha256": "35cd60ac70582662bea53e6de1a4bd15b33bd4c1e571776f00d7685acb6d7377"
+    },
+    {
+      "path": "device/mosaic_s8/graph.cpp",
+      "bytes": 5544,
+      "mode": 436,
+      "sha256": "02befbe48a1a23167172232192be3c73fb1508689539283545c66092d779fa2b"
+    },
+    {
+      "path": "device/mosaic_s8/graph.h",
+      "bytes": 2213,
+      "mode": 436,
+      "sha256": "452cefc904e66ff5d08d3059f2aac89e8e593db3ae39db8f478012bc8aa60505"
+    },
+    {
+      "path": "device/mosaic_s8/graph_internal.h",
+      "bytes": 1037,
+      "mode": 436,
+      "sha256": "8cb5d88e64b5c01c11b8b59bc68c469f0209f23bf9d567eab7d649abe62be66f"
+    },
+    {
+      "path": "device/mosaic_s8/instance_norm.cpp",
+      "bytes": 2642,
+      "mode": 436,
+      "sha256": "893dc2d02416cbe48a999f326eb91bd7c869952c612ca94053b05058c2a460d2"
+    },
+    {
+      "path": "device/mosaic_s8/instance_norm_compat_v1.cpp",
+      "bytes": 3389,
+      "mode": 436,
+      "sha256": "944a3d67cd51d57ef6d5d67881087f07c57144aa3bffe528eaeec762125394bc"
+    },
+    {
+      "path": "device/mosaic_s8/instance_norm_compat_v2.cpp",
+      "bytes": 4824,
+      "mode": 436,
+      "sha256": "2bbdce3ca700ffc7ddb9ac6f2fd17335b35b1702d3b055170d7fdba580b99b15"
+    },
+    {
+      "path": "device/mosaic_s8/instance_norm_compat_v3.cpp",
+      "bytes": 2989,
+      "mode": 436,
+      "sha256": "a3c1851e1ff0cd5b00cb41f00777906045dff2fc00937a53225221053ac54c9d"
+    },
+    {
+      "path": "device/mosaic_s8/isa_adapter.cpp",
+      "bytes": 1493,
+      "mode": 436,
+      "sha256": "65fa206c118cbbd45bd482316e524bce04ec3646b56eddb4c4a7d5e888a735c2"
+    },
+    {
+      "path": "device/mosaic_s8/launch.h",
+      "bytes": 435,
+      "mode": 436,
+      "sha256": "1347b9b1884803436fee6e216ef75cccd1bcae8f3208bcc0555773aa4e3899a6"
+    },
+    {
+      "path": "device/mosaic_s8/main.cpp",
+      "bytes": 2485,
+      "mode": 436,
+      "sha256": "4ed34f9e002510e59c48ba3fa80011f436a9b852905a4cc0175bc4c1ca6d818a"
+    },
+    {
+      "path": "device/mosaic_s8/norm_compat.h",
+      "bytes": 838,
+      "mode": 436,
+      "sha256": "f76bf5da2b4edbe57e78feab23cbef07b73c9df43459a8280f53129e6ec67b2d"
+    },
+    {
+      "path": "device/mosaic_s8/norm_compat_lut_v2.h",
+      "bytes": 373,
+      "mode": 436,
+      "sha256": "02fc8fb1c155d92877f0b0090a7c4f11dc2803cabbc8dde6a28ea25faa110899"
+    },
+    {
+      "path": "device/mosaic_s8/norm_explicit_fma_prefix.h",
+      "bytes": 772,
+      "mode": 436,
+      "sha256": "0584120b2dfa78124f29c27ae8c754830731561778bd7cd6d4b3955c5749ebb7"
+    },
+    {
+      "path": "device/mosaic_s8/point_ops.cpp",
+      "bytes": 1583,
+      "mode": 436,
+      "sha256": "83bdc2b5c6beaa19858878d00f18503b4951c7ee6e3b515157c7e469f330e6e0"
+    },
+    {
+      "path": "device/mosaic_s8/point_ops_compat_v3.cpp",
+      "bytes": 1722,
+      "mode": 436,
+      "sha256": "29bc91fd5f2df392838a624914d6bda9b8b9157cbb9ce859c3d7575740b02dcd"
+    },
+    {
+      "path": "device/mosaic_s8/quant_pack.cpp",
+      "bytes": 2195,
+      "mode": 436,
+      "sha256": "3bc3b92c0373589b42d99a12fecaaafe66d351c686d072a54077e319889c04a4"
+    },
+    {
+      "path": "device/mosaic_s8/tile.cpp",
+      "bytes": 2169,
+      "mode": 436,
+      "sha256": "f3d8b5104886360180a21692621b5d611484dc462cc962c37d6a3224aec7a3ef"
+    },
+    {
+      "path": "device/mosaic_s8/tile.h",
+      "bytes": 975,
+      "mode": 436,
+      "sha256": "bbca774f3358fb7b12937a78b747ebf4139bfc2ab260bd60da730ab3bdb6c453"
+    },
+    {
+      "path": "device/mosaic_s8/unpack.cpp",
+      "bytes": 418,
+      "mode": 436,
+      "sha256": "e843b75fef6464641e3ea0487518cc3b7265477513ea14158061844c2aed6405"
+    },
+    {
+      "path": "device/s8/admission.cpp",
+      "bytes": 1474,
+      "mode": 436,
+      "sha256": "96a4d16011422488da9b631a36268a39325c4df6a82ede2048e642d4f514b028"
+    },
+    {
+      "path": "device/s8/admission.h",
+      "bytes": 136,
+      "mode": 436,
+      "sha256": "8986dac243fc21c4186a8b8a2887a64e20b986ad6af490f2c2c8b8495f1ae76b"
+    },
+    {
+      "path": "device/s8/compat.cpp",
+      "bytes": 3991,
+      "mode": 436,
+      "sha256": "b353936205ab75bc10fff84a88078f36b0e59150ad45ef47fca2c463fe043320"
+    },
+    {
+      "path": "device/s8/compat.h",
+      "bytes": 591,
+      "mode": 436,
+      "sha256": "f421945c4cceb50c5510c4bbfcb8f9f0b8d572a1aa36215a952f382557bac81e"
+    },
+    {
+      "path": "device/s8/crt/link32.ld",
+      "bytes": 9915,
+      "mode": 436,
+      "sha256": "512918806acb41152b1d27e33dd8f35df06bd01f0462c06ffcf281ce9dec0aeb"
+    },
+    {
+      "path": "device/s8/crt/perf_stub.c",
+      "bytes": 494,
+      "mode": 436,
+      "sha256": "3205bca15d9cb00a8d73a3b085ca2d3a1b1b2b93c5799331b043cd56f85a9928"
+    },
+    {
+      "path": "device/s8/isa.h",
+      "bytes": 1144,
+      "mode": 436,
+      "sha256": "ff6fde7e063a6b775d2ccb4868708983e9d1c84028f89658adbd8c0d2850d189"
+    },
+    {
+      "path": "device/s8/main.cpp",
+      "bytes": 3721,
+      "mode": 436,
+      "sha256": "cf36620df9269c0c4e19341cc84f534fd03252d2b2be2b9f105a4072d1065067"
+    },
+    {
+      "path": "device/s8/negative.cpp",
+      "bytes": 11780,
+      "mode": 436,
+      "sha256": "72c4e68d0466a0e16ca12413d68ab1e482b44a800861859755eede8d85032aa2"
+    },
+    {
+      "path": "device/s8/negative.h",
+      "bytes": 734,
+      "mode": 436,
+      "sha256": "77986237c1d07325dcd6105f229c780b849fc5cdd463cd8055c4c7fa3d5e2d4f"
+    },
+    {
+      "path": "device/s8/phase.cpp",
+      "bytes": 2296,
+      "mode": 436,
+      "sha256": "3b25e5c64ee63675a4a5d942b3169b2a555619d90a5df573e51943aad8daf455"
+    },
+    {
+      "path": "device/s8/phase.h",
+      "bytes": 587,
+      "mode": 436,
+      "sha256": "da3f716101bed69b45743c6fc3cb409b3bd0649a5834a7ce108b8cac6334d4c4"
+    },
+    {
+      "path": "device/s8/protocol.cpp",
+      "bytes": 7654,
+      "mode": 436,
+      "sha256": "da49ff87c919f5fbf468ff080f336b9d87dad5667c30849d9333d148aad0c49b"
+    },
+    {
+      "path": "device/s8/protocol.h",
+      "bytes": 1401,
+      "mode": 436,
+      "sha256": "e0b993a2a52c277673d8d9ae0064deb9a18395e5771ff440e7d0980d76582083"
+    },
+    {
+      "path": "device/s8/runtime.h",
+      "bytes": 793,
+      "mode": 436,
+      "sha256": "874fd6c99ba0f0f367c886b4e3df7534b63efb39faf804afd5611c0f326b28c7"
+    },
+    {
+      "path": "device/s8/unpack.cpp",
+      "bytes": 414,
+      "mode": 436,
+      "sha256": "3356716b2d782f09a86cec7e97cc18cf3e38a8c72bb020437c7c590aa6eacbce"
+    },
+    {
+      "path": "device/s8/unpack.h",
+      "bytes": 143,
+      "mode": 436,
+      "sha256": "cc360dac48054737fc96741665ae4ce2c477742aa49eee319485ac4b20500203"
+    },
+    {
+      "path": "generated/cnn/programs.h",
+      "bytes": 4767,
+      "mode": 436,
+      "sha256": "f25c759ed186b912e54003f131d9af42ad2d251654e40d0861978171f52fe4d9"
+    },
+    {
+      "path": "generated/demo/ascii.h",
+      "bytes": 4283,
+      "mode": 436,
+      "sha256": "03a933bbd16d5f0a92e393e5dcc5250c497d9cc66364d1c221501d0f33f0538b"
+    },
+    {
+      "path": "generated/hunet/assets.h",
+      "bytes": 21048,
+      "mode": 436,
+      "sha256": "a7e9b5c1a166d5036be5061eb2ffd485750a8784936b0f876ee76fe6dd1f6ab0"
+    },
+    {
+      "path": "generated/hunet/catalog.h",
+      "bytes": 459018,
+      "mode": 436,
+      "sha256": "182807d496c22c45fd71c94819811b21a2bb58de14f3b15f2cc3bcac49a03879"
+    },
+    {
+      "path": "generated/hunet/catalog.json",
+      "bytes": 11485,
+      "mode": 436,
+      "sha256": "f4b4bd72b8f49ec105b5ca2d1693173dd54b79f8fff0ea192bb98f35e93d7cf4"
+    },
+    {
+      "path": "generated/hunet/layout.h",
+      "bytes": 3117,
+      "mode": 436,
+      "sha256": "b5d839831d043f779d526d583786a08ccb5369ad4cd5490fe0a4fff6985335be"
+    },
+    {
+      "path": "generated/hunet/programs.h",
+      "bytes": 2813,
+      "mode": 436,
+      "sha256": "5e8907f176161e44b1b4252f8e7870d929b8ca61c55c3d5419ac144ceb6a3434"
+    },
+    {
+      "path": "generated/hunet/segments.json",
+      "bytes": 2495,
+      "mode": 436,
+      "sha256": "4c941b4b9bde9093c147ce78ad41504f52095ae468f6c902df07ed8675e03dd7"
+    },
+    {
+      "path": "generated/hunet/stages.h",
+      "bytes": 2877,
+      "mode": 436,
+      "sha256": "6e006c69e2c027ca9b8c0fa8759fc83a04c9f3d132d21b9a6bbce8badcb85789"
+    },
+    {
+      "path": "generated/hunet/wmma.json",
+      "bytes": 1854,
+      "mode": 436,
+      "sha256": "22088f0f90e71299476030d54aaf1ade6499f5e14313967783e1aab2f3feece8"
+    },
+    {
+      "path": "generated/hunet/wmma_contract.h",
+      "bytes": 1265,
+      "mode": 436,
+      "sha256": "a3da4528d99a938d9bd5adb094de1ea6af3a21b53b1c0200b518dc8abcaea694"
+    },
+    {
+      "path": "generated/hunet_fused/catalog.h",
+      "bytes": 49019,
+      "mode": 436,
+      "sha256": "0fa7aa5ea4dc1cfbee2e8197cc707ed77417713ffccb78a32d9d068b6fc5f545"
+    },
+    {
+      "path": "generated/hunet_fused/descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_fused/descriptors.h",
+      "bytes": 52597,
+      "mode": 436,
+      "sha256": "cfea9ef3d4eb0e0fbfead52537cbfab4324a783e3bc4a64c530b6cbf5ee2964b"
+    },
+    {
+      "path": "generated/hunet_fused/identity.h",
+      "bytes": 934,
+      "mode": 436,
+      "sha256": "93e7f5fc571deea64605b5718345aade3fba4dfa1f0f7ae1470137583fcd0e7f"
+    },
+    {
+      "path": "generated/hunet_fused/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "d3d4b893703c2971ea01d323a7f6ee78322b3f9c9b731384aaf69920e6870f2a"
+    },
+    {
+      "path": "generated/hunet_fused/layout.h",
+      "bytes": 467,
+      "mode": 436,
+      "sha256": "35770042e32de25e6b0b4361ad172836a929b8f1c3fde74c6b4c5d8032b0de67"
+    },
+    {
+      "path": "generated/hunet_fused/layout.json",
+      "bytes": 44841,
+      "mode": 436,
+      "sha256": "4042f159a385fc4c739bb177cab785fae7cf8b97dc58f983b480d16685ad8bae"
+    },
+    {
+      "path": "generated/hunet_fused/manifest.json",
+      "bytes": 983,
+      "mode": 436,
+      "sha256": "5d796374b4dd4616bad71c180a7aa6ecf8763a99ade7f076a63a0a5b7e2eef50"
+    },
+    {
+      "path": "generated/hunet_fused/schedule.json",
+      "bytes": 176201,
+      "mode": 436,
+      "sha256": "8fbc48ecd039ccc71ae2f98f9425a3bad3da335877bb97e82c5ea57c825a4f14"
+    },
+    {
+      "path": "generated/hunet_opt/C1_H/catalog.h",
+      "bytes": 145484,
+      "mode": 436,
+      "sha256": "2360c5d903adef999a441212855bea7373d581ac5c27b2afbb8607a5b6d59790"
+    },
+    {
+      "path": "generated/hunet_opt/C1_H/catalog.json",
+      "bytes": 157458,
+      "mode": 436,
+      "sha256": "4e48a6240fc7361df49a8375f405e9ab32eb5bb92d29e9b6c1625e6c40528ac2"
+    },
+    {
+      "path": "generated/hunet_opt/C1_H/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/C1_H/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/C1_H/layout.json",
+      "bytes": 1184,
+      "mode": 436,
+      "sha256": "c4d64cb2e48bf91bdeb662a933fd96ea93be9aa7be306a98f4cf1d2d7fdb82e2"
+    },
+    {
+      "path": "generated/hunet_opt/C1_H/manifest.json",
+      "bytes": 812,
+      "mode": 436,
+      "sha256": "958326611a726f5d969687710af860f2508d1587534e2a250ba9ffa34b117f11"
+    },
+    {
+      "path": "generated/hunet_opt/C1_H/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/C1_T/catalog.h",
+      "bytes": 145484,
+      "mode": 436,
+      "sha256": "1d0da9522a148171e3c175355c0783a58aaf2a0d47d98417f5dbb618eae2ee78"
+    },
+    {
+      "path": "generated/hunet_opt/C1_T/catalog.json",
+      "bytes": 157463,
+      "mode": 436,
+      "sha256": "8582e7ac868f2aae4c109819c5d1f22380d9c75e5bfcd9fee12f991a2ecdb947"
+    },
+    {
+      "path": "generated/hunet_opt/C1_T/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/C1_T/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/C1_T/layout.json",
+      "bytes": 1189,
+      "mode": 436,
+      "sha256": "e8b6c10b6ea4b2201c16b0de8dd4812816f349c4360c773902c5a384f9ccf590"
+    },
+    {
+      "path": "generated/hunet_opt/C1_T/manifest.json",
+      "bytes": 812,
+      "mode": 436,
+      "sha256": "714cf05360326c2994813dcd2d6c811c860458769deef20b75735e8be17adb53"
+    },
+    {
+      "path": "generated/hunet_opt/C1_T/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/COMBINED/catalog.h",
+      "bytes": 541726,
+      "mode": 436,
+      "sha256": "acd1278c67856b20675e75a1618fbc0d142f043d1fb2f8f93a8049df05bc0bf9"
+    },
+    {
+      "path": "generated/hunet_opt/COMBINED/catalog.json",
+      "bytes": 166310,
+      "mode": 436,
+      "sha256": "4c72f831ba97d3a3f6966c5cf57ad4027af884d18c32290591d8b75d4cbd2911"
+    },
+    {
+      "path": "generated/hunet_opt/COMBINED/device_graph.h",
+      "bytes": 28648,
+      "mode": 436,
+      "sha256": "8a6907ae30b4418a49d6aad13de4cc1f7342625cf088329dfdf177298033202f"
+    },
+    {
+      "path": "generated/hunet_opt/COMBINED/graph-descriptors.bin",
+      "bytes": 81920,
+      "mode": 436,
+      "sha256": "2c8db0b540188febd5ed447ecb813f34ccc6ba4a465a8533f6198aef8787e290"
+    },
+    {
+      "path": "generated/hunet_opt/COMBINED/jobs.bin",
+      "bytes": 9088,
+      "mode": 436,
+      "sha256": "379005660c25b93c1911819c552308079c1eda72c0fd0ee5b1ab6035f2c3f27b"
+    },
+    {
+      "path": "generated/hunet_opt/COMBINED/layout.json",
+      "bytes": 1267,
+      "mode": 436,
+      "sha256": "e31e3046b2c8b225284b43d47252f1f6b72e19a5c1a182e94812c6fcd7badd65"
+    },
+    {
+      "path": "generated/hunet_opt/COMBINED/manifest.json",
+      "bytes": 1028,
+      "mode": 436,
+      "sha256": "80f880f0b06f87eb8f8d0a8daf61f4e182f7908ceb442b75eb212db64f277199"
+    },
+    {
+      "path": "generated/hunet_opt/COMBINED/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/COMBINED/views.h",
+      "bytes": 1762,
+      "mode": 436,
+      "sha256": "378a742db8a9c68fe483be6d04b2e90810fca3d63cf707ab59e95aa7951e3759"
+    },
+    {
+      "path": "generated/hunet_opt/G1/catalog.h",
+      "bytes": 145484,
+      "mode": 436,
+      "sha256": "d31ad4d7574161e763bff4e8eb93c6d43a9dc8ca191bce4c48c70d3c50864595"
+    },
+    {
+      "path": "generated/hunet_opt/G1/catalog.json",
+      "bytes": 157461,
+      "mode": 436,
+      "sha256": "4e25480944e03aa310b94812c4d07a8bca36be70a14170236345ba0ee9e6f40a"
+    },
+    {
+      "path": "generated/hunet_opt/G1/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/G1/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/G1/layout.json",
+      "bytes": 1189,
+      "mode": 436,
+      "sha256": "226b9703a9a2b9db285486f1a5136b9e9349c7190c5f28898230aaa72f883e6b"
+    },
+    {
+      "path": "generated/hunet_opt/G1/manifest.json",
+      "bytes": 810,
+      "mode": 436,
+      "sha256": "ba34c8e36b5b6b0cadc187f431e755b26958f4e727212a86d82f3c683a353c42"
+    },
+    {
+      "path": "generated/hunet_opt/G1/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/G2_LOCATE/catalog.h",
+      "bytes": 145484,
+      "mode": 436,
+      "sha256": "dccdbaef1bffd2cdb8afc8378d019c06ced33cf3a797752d1003b6fed9af2325"
+    },
+    {
+      "path": "generated/hunet_opt/G2_LOCATE/catalog.json",
+      "bytes": 157468,
+      "mode": 436,
+      "sha256": "acde53d278adb3500b6310e15363c8f48bcb8fdfb1972af92af27321e45f0706"
+    },
+    {
+      "path": "generated/hunet_opt/G2_LOCATE/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/G2_LOCATE/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/G2_LOCATE/layout.json",
+      "bytes": 1189,
+      "mode": 436,
+      "sha256": "33eae5f2b1e75fa57d8441703ce00aa999f20a0e5a1e24ddd0e039014f11c104"
+    },
+    {
+      "path": "generated/hunet_opt/G2_LOCATE/manifest.json",
+      "bytes": 817,
+      "mode": 436,
+      "sha256": "ae47a291052fcea8435bcd3e0994b2a8fb0859ebd12594a755a34d4c3abda573"
+    },
+    {
+      "path": "generated/hunet_opt/G2_LOCATE/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/G2_PACK/catalog.h",
+      "bytes": 145484,
+      "mode": 436,
+      "sha256": "89b3e80604a112f14f244ffec6d45956dc17508c34ee79c96bc92e3dc99795fd"
+    },
+    {
+      "path": "generated/hunet_opt/G2_PACK/catalog.json",
+      "bytes": 157466,
+      "mode": 436,
+      "sha256": "5df7fac62cc1c4b979fb31d84955125d07bc5ee848e1d9ccf168dc22dc964233"
+    },
+    {
+      "path": "generated/hunet_opt/G2_PACK/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/G2_PACK/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/G2_PACK/layout.json",
+      "bytes": 1189,
+      "mode": 436,
+      "sha256": "ca22ac40049e3bb5af0a20f237cff47c23807c66efee8e4b3920e304f1f918e1"
+    },
+    {
+      "path": "generated/hunet_opt/G2_PACK/manifest.json",
+      "bytes": 815,
+      "mode": 436,
+      "sha256": "8eb4479f4f73bc0cc0b214c4676b3e8c6c791489c85b86f2b46d67e3eccca8fa"
+    },
+    {
+      "path": "generated/hunet_opt/G2_PACK/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/G2_TIMING/catalog.h",
+      "bytes": 145485,
+      "mode": 436,
+      "sha256": "3052d045514dd06eb631b448bf63998bc9036506b29d9524c07f17b842aed103"
+    },
+    {
+      "path": "generated/hunet_opt/G2_TIMING/catalog.json",
+      "bytes": 157467,
+      "mode": 436,
+      "sha256": "413a40d8fecbd085dd1e88766d19c11f1231cbde22e70e5e4bd42904c0dfeb81"
+    },
+    {
+      "path": "generated/hunet_opt/G2_TIMING/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/G2_TIMING/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/G2_TIMING/layout.json",
+      "bytes": 1188,
+      "mode": 436,
+      "sha256": "cb0d27e383a455ed133f92cf62d599e9d42ce9ab7e8c8ad0de8ef579f7a7af58"
+    },
+    {
+      "path": "generated/hunet_opt/G2_TIMING/manifest.json",
+      "bytes": 817,
+      "mode": 436,
+      "sha256": "4b5260cc2564a529fd9037f7deb63545a9ede08cb4fd2e8fe196c9795c669d54"
+    },
+    {
+      "path": "generated/hunet_opt/G2_TIMING/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA2/catalog.h",
+      "bytes": 145484,
+      "mode": 436,
+      "sha256": "fd036f6001faf62bb410109d042d29673a92169dcc5d924f8dd7c6865658e670"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA2/catalog.json",
+      "bytes": 157468,
+      "mode": 436,
+      "sha256": "61445c45651eddf61d17d67bf97c227194c66538005fbbb55cd08fbb913e6355"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA2/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA2/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA2/layout.json",
+      "bytes": 1190,
+      "mode": 436,
+      "sha256": "2e83c996d81116bd714e8625e5b6c4a8800489acf1a079c70eb794db4578342a"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA2/manifest.json",
+      "bytes": 816,
+      "mode": 436,
+      "sha256": "0c3f0e696d51688b11194a9c447ee2c19ba2249c2e6280bd423510fec8f33780"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA2/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA4/catalog.h",
+      "bytes": 145484,
+      "mode": 436,
+      "sha256": "7c877057f83f31017c8ba87f5ed7220cd836d884009a7ff4989b7069593933e3"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA4/catalog.json",
+      "bytes": 157468,
+      "mode": 436,
+      "sha256": "f73ca85362d4c7ef70ca1d6d8513e4c1837270325b43d2ea0c978f9f9ddf1e01"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA4/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA4/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA4/layout.json",
+      "bytes": 1190,
+      "mode": 436,
+      "sha256": "7f406b9320fc159bd11785a3154a47d91a210bd61bbf694b6f0b5533ec29bcbb"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA4/manifest.json",
+      "bytes": 816,
+      "mode": 436,
+      "sha256": "ec15c1c9c0ae2558bda6b4acba0a7991f32f002792dd376712796ca7588630e6"
+    },
+    {
+      "path": "generated/hunet_opt/G2_WMMA4/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/G3_NORM/catalog.h",
+      "bytes": 466539,
+      "mode": 436,
+      "sha256": "2ec58e5dd4a0374b54e3fc08ea8f4dd7abfb45fa39cc33e7a8b405c798a7cd41"
+    },
+    {
+      "path": "generated/hunet_opt/G3_NORM/catalog.json",
+      "bytes": 162724,
+      "mode": 436,
+      "sha256": "ebc84fb5474b960886b2c52d551ab4b671631b1125c3d828c35cd27f022d9c84"
+    },
+    {
+      "path": "generated/hunet_opt/G3_NORM/graph-descriptors.bin",
+      "bytes": 65536,
+      "mode": 436,
+      "sha256": "608ab63086a0a083b04bcd5bb3470def7d536ab0c1061b92882fda48db416b91"
+    },
+    {
+      "path": "generated/hunet_opt/G3_NORM/jobs.bin",
+      "bytes": 11136,
+      "mode": 436,
+      "sha256": "dd2d294cc1554088f9f76070c709ca4afd932c916114f0028bc4db78c99b31ae"
+    },
+    {
+      "path": "generated/hunet_opt/G3_NORM/layout.json",
+      "bytes": 1189,
+      "mode": 436,
+      "sha256": "226b9703a9a2b9db285486f1a5136b9e9349c7190c5f28898230aaa72f883e6b"
+    },
+    {
+      "path": "generated/hunet_opt/G3_NORM/manifest.json",
+      "bytes": 818,
+      "mode": 436,
+      "sha256": "99447739b630474a38dced49fb57d80b19f40060e16486fd62152c937355fe04"
+    },
+    {
+      "path": "generated/hunet_opt/G3_NORM/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/G3_VIEWS/catalog.h",
+      "bytes": 541726,
+      "mode": 436,
+      "sha256": "4110a11b9868e8fbb00b7aaf7446e3553582fcb9698024bf786970133448aad6"
+    },
+    {
+      "path": "generated/hunet_opt/G3_VIEWS/catalog.json",
+      "bytes": 166214,
+      "mode": 436,
+      "sha256": "ed9969688ecb0021dda29c3b826573d8f6e18aad532871269c9d9c3282068774"
+    },
+    {
+      "path": "generated/hunet_opt/G3_VIEWS/device_graph.h",
+      "bytes": 28648,
+      "mode": 436,
+      "sha256": "8a6907ae30b4418a49d6aad13de4cc1f7342625cf088329dfdf177298033202f"
+    },
+    {
+      "path": "generated/hunet_opt/G3_VIEWS/graph-descriptors.bin",
+      "bytes": 81920,
+      "mode": 436,
+      "sha256": "2c8db0b540188febd5ed447ecb813f34ccc6ba4a465a8533f6198aef8787e290"
+    },
+    {
+      "path": "generated/hunet_opt/G3_VIEWS/jobs.bin",
+      "bytes": 9088,
+      "mode": 436,
+      "sha256": "379005660c25b93c1911819c552308079c1eda72c0fd0ee5b1ab6035f2c3f27b"
+    },
+    {
+      "path": "generated/hunet_opt/G3_VIEWS/layout.json",
+      "bytes": 1274,
+      "mode": 436,
+      "sha256": "f135d9857ea0c398a1ed107a0a18e5e3b2aa6af6b46faf6df1003babb964bbb0"
+    },
+    {
+      "path": "generated/hunet_opt/G3_VIEWS/manifest.json",
+      "bytes": 1028,
+      "mode": 436,
+      "sha256": "eb7b4a571fbd36185e0aceb338662e697edba6f289a07007a39d05f53dd63f11"
+    },
+    {
+      "path": "generated/hunet_opt/G3_VIEWS/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/G3_VIEWS/views.h",
+      "bytes": 1762,
+      "mode": 436,
+      "sha256": "378a742db8a9c68fe483be6d04b2e90810fca3d63cf707ab59e95aa7951e3759"
+    },
+    {
+      "path": "generated/hunet_opt/G4/catalog.h",
+      "bytes": 145484,
+      "mode": 436,
+      "sha256": "379551f05a93f9adecf0a4a4c46d13c38498b74ea7ed9d324e8f42b0234faf38"
+    },
+    {
+      "path": "generated/hunet_opt/G4/catalog.json",
+      "bytes": 157564,
+      "mode": 436,
+      "sha256": "71c50a7a15d61180be1e3343c031cc18c6a2ecd0c031edf79b891fdabe19209e"
+    },
+    {
+      "path": "generated/hunet_opt/G4/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/G4/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/G4/layout.json",
+      "bytes": 1189,
+      "mode": 436,
+      "sha256": "b40db41413dc5d0b109c7bb0107a35df5639ca896dd8bf49cc7b797868b99747"
+    },
+    {
+      "path": "generated/hunet_opt/G4/manifest.json",
+      "bytes": 810,
+      "mode": 436,
+      "sha256": "3c12b29eb48bc2f445f82f940b412feb98281b749e4d15e5a91fc9ed1203380a"
+    },
+    {
+      "path": "generated/hunet_opt/G4/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C1/catalog.h",
+      "bytes": 145484,
+      "mode": 436,
+      "sha256": "1441831b1e9cf522fd299fafbecb87e1125741a5a54544cf70bafb5bc1959c61"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C1/catalog.json",
+      "bytes": 157567,
+      "mode": 436,
+      "sha256": "37b42218ee74b43cc56c1b66f138a774eb8aaf5ed9dd000b2580e4969b4e4c88"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C1/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C1/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C1/layout.json",
+      "bytes": 1189,
+      "mode": 436,
+      "sha256": "048f4d19d90e47e6ab6847a7aeca6bcd9cea13e76388fe2928676714f48b7f6c"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C1/manifest.json",
+      "bytes": 813,
+      "mode": 436,
+      "sha256": "37bd8a7cc3bb4b59203cde4b1eb751be4e75f358fb45d240e3074c166d9acc83"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C1/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C16/catalog.h",
+      "bytes": 145484,
+      "mode": 436,
+      "sha256": "f7cb6167a23943e37bd93fcfddabe5661e41c05ac64aa594b96058a523ad68c2"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C16/catalog.json",
+      "bytes": 157570,
+      "mode": 436,
+      "sha256": "473afca9776753d11771d69fe48dbadc82b3fcf15838e7937b2d9158992fd478"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C16/graph-descriptors.bin",
+      "bytes": 0,
+      "mode": 436,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C16/jobs.bin",
+      "bytes": 13184,
+      "mode": 436,
+      "sha256": "7d001876d6da199e9231d28a506a11233bb43b4569e139b8d040ceff32fd39e5"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C16/layout.json",
+      "bytes": 1190,
+      "mode": 436,
+      "sha256": "64dfd34b81ec28ba44c2af96c7966befccde49ad867ad659651b64615c8d1c56"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C16/manifest.json",
+      "bytes": 814,
+      "mode": 436,
+      "sha256": "2904310323a40849d159eee6582bdd25fabbcf2fbe8fb42489af2f1ddfc06357"
+    },
+    {
+      "path": "generated/hunet_opt/G4_C16/matrix-descriptors.bin",
+      "bytes": 20096,
+      "mode": 436,
+      "sha256": "a113c4288da8aa9e6928a30a4de3f6abf4eb9d695767ecb3998766bd75246655"
+    },
+    {
+      "path": "generated/hunet_opt/device_graph.h",
+      "bytes": 48,
+      "mode": 436,
+      "sha256": "09d8a9ad210722fa15e895fd6add411dbfa387eee6caa87f7a542177dcf67ac6"
+    },
+    {
+      "path": "generated/hunet_opt/views.h",
+      "bytes": 41,
+      "mode": 436,
+      "sha256": "9642862c494c3044dc065b5c404760e4e5426f5b6adebb658cb544510a875c65"
+    },
+    {
+      "path": "include/uapi/vx_demo.h",
+      "bytes": 130,
+      "mode": 436,
+      "sha256": "d0e9a274f932af1cd789a600275fd667475c167cace10bdad023e33317014dfa"
+    },
+    {
+      "path": "include/uapi/vx_hunet.h",
+      "bytes": 2701,
+      "mode": 436,
+      "sha256": "b00de37dff0a21796e2bd8e7567b06f1e5d75313ab95f719584481eaa4b0767e"
+    },
+    {
+      "path": "include/uapi/vx_hunet_fused.h",
+      "bytes": 383,
+      "mode": 436,
+      "sha256": "a0f55c9e26200309173893bf5184209618e6d77fd430c5703bc19daff1568c1a"
+    },
+    {
+      "path": "include/uapi/vx_hunet_hybrid.h",
+      "bytes": 2481,
+      "mode": 436,
+      "sha256": "38d4638ad66c8e504446074d1d07de9bc64c3548e321e5c19484a2924059124f"
+    },
+    {
+      "path": "include/uapi/vx_hunet_opt.h",
+      "bytes": 179,
+      "mode": 436,
+      "sha256": "55c6e6d4773f0a48dcca101b27abfed01841c99762ba6507f646e2d96d21930f"
+    },
+    {
+      "path": "include/uapi/vx_linux.h",
+      "bytes": 1750,
+      "mode": 436,
+      "sha256": "23d24b72069e865f44b7fe91de67c3722a7746ef29b09753f6883b1d3aabb5fc"
+    },
+    {
+      "path": "include/uapi/vx_mosaic.h",
+      "bytes": 886,
+      "mode": 436,
+      "sha256": "501790eac2746984e85bd5107f5bc9527584ce23ed7f78c6896a9d05e2beffce"
+    }
+  ]
+}

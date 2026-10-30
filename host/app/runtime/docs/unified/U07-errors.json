@@ -1,0 +1,41 @@
+[
+  {
+    "id": "U07-INSPECT-001",
+    "run": "U07-dependency-inspection-001",
+    "exit": 1,
+    "cause": "Read-only dependency probe assumed demo_deps exists in actual-built-env; key absent",
+    "fix": "Inspect existing deps directory without changing it",
+    "board_failure": false
+  },
+  {
+    "id": "U07-RED-001",
+    "run": "U07-red-004",
+    "exit": 2,
+    "cause": "Expected functional RED: canonical metadata/package/registry/graph/planner scaffolds reject valid cases",
+    "fix": "Implement real validated parser, package, registry, graph and memory planner; first green U07-green-check-006",
+    "expected_red": true
+  },
+  {
+    "id": "U07-COMPILE-001",
+    "run": "U07-first-implementation-005",
+    "exit": 2,
+    "cause": "GCC7 Werror misleading indentation in graph and memory loops",
+    "fix": "Explicit braces and separate following statements; retain Werror"
+  },
+  {
+    "id": "U07-CONTRACT-001",
+    "run": "U07-negative-contract-red-007",
+    "exit": 2,
+    "cause": "Unbound constant accepted and invalid enum domain treated as PL",
+    "fix": "Bind constant to exact sealed weight asset/length/SHA; explicit CPU/PS/PL domain validation; require readable operator inputs",
+    "expected_red": true
+  },
+  {
+    "id": "U07-DIRECTORY-001",
+    "run": "U07-directory-budget-red-010",
+    "exit": 2,
+    "cause": "A nonlisted empty directory was admitted and directory traversal was not tied to listed file count",
+    "fix": "Reject empty/unlisted child directories; file limit4096 and depth8 also bound traversed nonempty directories",
+    "expected_red": true
+  }
+]

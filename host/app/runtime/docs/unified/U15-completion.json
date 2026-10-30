@@ -1,0 +1,182 @@
+{
+  "task": "U15",
+  "state": "COMPLETE_OFFLINE_COMPONENT_NOT_FULL_SERVICE",
+  "base": "3d88c97",
+  "implementation_head": "b9c2af2279422e1669c5e63d22ce95550c9afdba",
+  "source_files": 1790,
+  "tested_manifest_sha256": "a08799461b6a69e0a933249a03a7fde47a3d3af2a517e7fb0b7b1f1757e7a156",
+  "delivery_manifest_sha256": "1c9ee6702c0cb542f869f54835861153d8c59da6874ecf6e59767bd274fe497b",
+  "final_runs": [
+    "U15-async-network-normal-094",
+    "U15-async-thread-097",
+    "U15-async-sanitize-100",
+    "U15-async-cross-103",
+    "U15-delivery-normal-109",
+    "U15-final-close-111"
+  ],
+  "public_abi": "UNCHANGED",
+  "frozen_sender_sha256": "b4491ab75d3678f851c2cfba4d4a3f6e322488dff70612769d695c2297acb90a",
+  "wire": {
+    "port": 5011,
+    "window": 8,
+    "chunk": 1200,
+    "header": 64,
+    "metrics": 64,
+    "idle_ms": 15000,
+    "total_ms": 180000
+  },
+  "functional": {
+    "groups": 15,
+    "original_gui_actions": 4,
+    "host_marker_jobs": [
+      5,
+      0,
+      0,
+      2
+    ],
+    "controlled_packet_losses": 3,
+    "normal_executor_pause_ms": 12000,
+    "create_allocation_positions": 12,
+    "ingress_allocation_positions": 16,
+    "typed_result_output_sha_dp_retirement": true
+  },
+  "cross_elfs": [
+    {
+      "path": "build/U15-async-cross-103/test_image_socket",
+      "bytes": 6728328,
+      "mode": 509,
+      "kind": "file",
+      "sha256": "98b26d497331d0494c85cd38d68aec6296d2fa7d7551b4eadf0c0d8f78ed6787"
+    },
+    {
+      "path": "build/U15-async-cross-103/test_image_service",
+      "bytes": 6738640,
+      "mode": 509,
+      "kind": "file",
+      "sha256": "7e484b06a6083fb4cffbe126e8ae61615a9e0b3f2f650643ec487d783c21a405"
+    },
+    {
+      "path": "build/U15-async-cross-103/test_image_udp",
+      "bytes": 49624,
+      "mode": 509,
+      "kind": "file",
+      "sha256": "fe6716e0dc9a9b80af224539deeb877a39ced4135e58c5981c90c434e29537ff"
+    },
+    {
+      "path": "build/U15-async-cross-103/test_image_owner",
+      "bytes": 6486832,
+      "mode": 509,
+      "kind": "file",
+      "sha256": "c2f675878d6896890e65596c87bad1e95b4c101c78253392147585bfcdb5ba96"
+    }
+  ],
+  "target_runtime": {
+    "rootfs_sha256": "d5163fa50ae6b3b945a280c96b6273e0eff9af312a992407bdf8b9abee3eb647",
+    "files": {
+      "ld-linux-aarch64.so.1": {
+        "path": "lib/ld-linux-aarch64.so.1",
+        "sha256": "2c307a67d7673dcb99e0e78bb6c3ae6ca468e21e5a0f7cbc6ad82846ad7afd4c"
+      },
+      "libc.so.6": {
+        "path": "lib/libc.so.6",
+        "sha256": "aeebc1b6491583b277e08ad1ca2509f4e28d628cb3df78073b71d676dea2bbe0"
+      },
+      "libstdc++.so.6": {
+        "path": "usr/lib/libstdc++.so.6",
+        "sha256": "48f2c5788373d1987b8c21920838a109e945b5054a239a18a2115d105331e3a0"
+      },
+      "libgcc_s.so.1": {
+        "path": "lib/libgcc_s.so.1",
+        "sha256": "46ecda5c0995aaf773c409100398418361cbebdadffa768a24c950a84ae7cf76"
+      },
+      "libm.so.6": {
+        "path": "lib/libm.so.6",
+        "sha256": "f5379ab0ba0797b5d66619425d8175263ac813ae7d7127376db2663be78a0a4b"
+      },
+      "libpthread.so.0": {
+        "path": "lib/libpthread.so.0",
+        "sha256": "edcd56cc1d6e01b0a2dec0258318b965835aacc9ae6ded0d1fbba5f1084caadb"
+      }
+    },
+    "required_versions": [
+      "CXXABI_1.3",
+      "CXXABI_1.3.9",
+      "GCC_3.0",
+      "GLIBCXX_3.4",
+      "GLIBCXX_3.4.11",
+      "GLIBCXX_3.4.14",
+      "GLIBCXX_3.4.15",
+      "GLIBCXX_3.4.20",
+      "GLIBCXX_3.4.21",
+      "GLIBCXX_3.4.22",
+      "GLIBCXX_3.4.26",
+      "GLIBCXX_3.4.9",
+      "GLIBC_2.17",
+      "GLIBC_2.25"
+    ]
+  },
+  "whitespace_only_delivery_change": {
+    "file": "unified/adapters/image_service.cpp",
+    "changes": "18 blank line trailing spaces removed; line count unchanged",
+    "compiler_input_equivalence": "execution/U15-whitespace-proof-107/proof.json",
+    "modes": [
+      "normal",
+      "sanitize",
+      "thread",
+      "cross"
+    ],
+    "delivered_source_ordinary_revalidated": true
+  },
+  "archives": [
+    {
+      "name": "U15-async-normal-evidence-095",
+      "sha256": "e0606381f09bd2c7a07f852dbc0d393d593bc2c6299bb57cd30847333c65615f",
+      "members": 98,
+      "verified_members": 98,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U15-async-normal-evidence-095\\raw-and-artifacts.tar.gz"
+    },
+    {
+      "name": "U15-async-thread-evidence-098",
+      "sha256": "fc4ffb94d46b800a4b7d2c49a9d7bcb3fdb3e3dfa168093905896e6b251a6cca",
+      "members": 99,
+      "verified_members": 99,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U15-async-thread-evidence-098\\raw-and-artifacts.tar.gz"
+    },
+    {
+      "name": "U15-async-sanitize-evidence-101",
+      "sha256": "c99bc10d02245ebe34b23fca768246676bc862b5a54967209f46bb8dd21502c2",
+      "members": 99,
+      "verified_members": 99,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U15-async-sanitize-evidence-101\\raw-and-artifacts.tar.gz"
+    },
+    {
+      "name": "U15-async-cross-evidence-104",
+      "sha256": "5c2db13b8a1322b0501297ff81071248c58bdea524d9209414775a4ece843913",
+      "members": 94,
+      "verified_members": 94,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U15-async-cross-evidence-104\\raw-and-artifacts.tar.gz"
+    },
+    {
+      "name": "U15-delivery-normal-evidence-110",
+      "sha256": "d2958c9c75799400043af1c27e984b15b079452c129e9c51d75211271bcab533",
+      "members": 98,
+      "verified_members": 98,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U15-delivery-normal-evidence-110\\raw-and-artifacts.tar.gz"
+    }
+  ],
+  "remaining": [
+    "U20 actual shared service/factories and network/executor lifecycle integration; no mutable global app mapping",
+    "U19 lifetime charge for receiver2frames+64KiB and ImageSession shadow/table",
+    "U20 HUNet final raw trace order repair remains open",
+    "U16-U18 P8/file bridge/DP; U21-U25 review/build/audit/conditional SD",
+    "Original PC long-lived Client can consume stale replies; only frozen GUI one-Client-per-action compatibility accepted",
+    "Py36 protocol test uses preparedRGBA; original Pillow Resampling preprocessing not accepted"
+  ],
+  "gpu_raw_cycles": null,
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "display": "NOT_RUN",
+  "numeric": "NO_NEW_APPLICATION_RESULT",
+  "performance": "NO_PHYSICAL_GPU_MEASUREMENT",
+  "sd": "NOT_TOUCHED"
+}

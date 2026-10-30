@@ -1,0 +1,76 @@
+{
+  "task": "U12",
+  "state": "FULL_REAL_WEIGHT_GRAPH_COMPONENT_CHECKPOINT_NOT_TASK_COMPLETE",
+  "base_commit": "d3e9332",
+  "verified": [
+    {
+      "run": "U12-model-final-normal-124",
+      "natural_exit": 0,
+      "current_input_rows_checked": 1533,
+      "manifest_sha256": "c39d4ae0fc805a61703929d8dbd1b99af02c2361eb675fd5564b1761b1024bcb"
+    },
+    {
+      "run": "U12-model-final-sanitize-126",
+      "natural_exit": 0,
+      "current_input_rows_checked": 1533,
+      "manifest_sha256": "c39d4ae0fc805a61703929d8dbd1b99af02c2361eb675fd5564b1761b1024bcb"
+    },
+    {
+      "run": "U12-model-final-aarch64-131",
+      "natural_exit": 0,
+      "current_input_rows_checked": 1533,
+      "manifest_sha256": "c39d4ae0fc805a61703929d8dbd1b99af02c2361eb675fd5564b1761b1024bcb"
+    }
+  ],
+  "old_driver_uapi_core_rows_unchanged": 153,
+  "model_id": "c9fbc4c08fa0a5623c0b81b87a14b0f5e3b3fcced32c20257f12c28fb86f7791",
+  "graph_nodes": 116,
+  "gpu_jobs": 103,
+  "cpu_gelu_nodes": 13,
+  "weight_views": 84,
+  "descriptor_tables": 35,
+  "total_constants": 119,
+  "model_bytes": 47771644,
+  "graph_bytes": 117801,
+  "semantic_negative_packages": 7,
+  "weights_original_sha256": "674069f415d51ce502dd00e579125c0ca8fe6d7e71a71d08cfae457e293e39bc",
+  "old_reference_sha256": "58a75990aad6711810065fa7a3c83e81a3eaaba13769f0395eac95dd7fa48654",
+  "history_sha256": "9311f7071cf3b34e44d77f7bf68f597453e8ff68ce7484a84f4dcc7504fad9e5",
+  "diagnostics": false,
+  "gpu_raw_cycles": null,
+  "archives": {
+    "host": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-model-graph-final-checked-host\\raw-and-artifacts.tar.gz",
+      "sha256": "625a4963859de38c887759e59ce1cdf638a7b7b22941095b7dbc7d69c6edb73d",
+      "members": 366,
+      "verified_members": 366
+    },
+    "target": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-model-graph-final-target\\raw-and-artifacts.tar.gz",
+      "sha256": "9892148037209b1bedd3280f3ab27dab26ef9fe0dabbf3d61b850b9af54084dd",
+      "members": 158,
+      "verified_members": 158
+    },
+    "first_functional_red": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-model-first-functional-red\\raw-and-artifacts.tar.gz",
+      "sha256": "efb0a040b36a18b07bffc4516d7aa08f9a62677aa6ce9e975506e41e6ec12ed8",
+      "members": 159,
+      "verified_members": 159
+    },
+    "identity_error": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-model-identity-first-error\\raw-and-artifacts.tar.gz",
+      "sha256": "e4c08c5b5b1fe23f126ddfae9506bfe3b0f7b8f874416ba41182a87ef933e3a9",
+      "members": 190,
+      "verified_members": 190
+    }
+  },
+  "target_executed": false,
+  "application_numeric": "NO_NEW_RESULT_HISTORICAL_ORT_FAIL_RETAINED",
+  "pending": [
+    "production memory arena and 64-object accounting",
+    "lazy native execution bindings and actual CPU/GPU dependency integration",
+    "native service/factories U20",
+    "all later tasks, independent final review, image and boot-chain audits",
+    "board, application numeric/visual/performance gates"
+  ]
+}

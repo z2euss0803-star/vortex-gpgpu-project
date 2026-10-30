@@ -1,0 +1,80 @@
+{
+  "schema": 1,
+  "logical_program": 65568,
+  "namespace_id": 1,
+  "logical_profile": 1,
+  "scope": "RO64_V2_ACTUAL_RV32_STATIC_NOT_EXECUTED",
+  "code_sha256": "ba2a8b1f45b8e5a2a515c0d05783022672855a6bfc11cc8407e30ac977e20308",
+  "rodata_sha256": "30e0e46cb30629f4a7de447405225e208b37f15aaf2be23603bbe4cb975b5643",
+  "schema_sha256": "c6564333cf23245cedd82391cdf5054fdcf3fa677388e7ba6d05ca3d795df43d",
+  "gpu_raw_cycles": null,
+  "program_receipt_sha256": "125351cf94914009c1caacf547feb6700f80171c6d9e37adbaca5e70bf97b078",
+  "sources": [
+    {
+      "path": "device/mosaic_s8/conv.cpp",
+      "sha256": "f54846152875f03da4967a842b4a23fc1a891b6ec9d0c78d0aa2c5e317c777f2"
+    },
+    {
+      "path": "device/mosaic_s8/crt/vx_start.S",
+      "sha256": "592496e4492d57e0e28f7b67be0dbbf4ee56893cbd02136b242c40184df90fd6"
+    },
+    {
+      "path": "device/mosaic_s8/instance_norm_compat_v2.cpp",
+      "sha256": "2bbdce3ca700ffc7ddb9ac6f2fd17335b35b1702d3b055170d7fdba580b99b15"
+    },
+    {
+      "path": "device/mosaic_s8/instance_norm_compat_v3.cpp",
+      "sha256": "a3c1851e1ff0cd5b00cb41f00777906045dff2fc00937a53225221053ac54c9d"
+    },
+    {
+      "path": "device/mosaic_s8/isa_adapter.cpp",
+      "sha256": "65fa206c118cbbd45bd482316e524bce04ec3646b56eddb4c4a7d5e888a735c2"
+    },
+    {
+      "path": "device/mosaic_s8/quant_pack.cpp",
+      "sha256": "3bc3b92c0373589b42d99a12fecaaafe66d351c686d072a54077e319889c04a4"
+    },
+    {
+      "path": "device/mosaic_s8/tile.cpp",
+      "sha256": "f3d8b5104886360180a21692621b5d611484dc462cc962c37d6a3224aec7a3ef"
+    },
+    {
+      "path": "device/mosaic_s8/unpack.cpp",
+      "sha256": "e843b75fef6464641e3ea0487518cc3b7265477513ea14158061844c2aed6405"
+    },
+    {
+      "path": "device/s8/crt/perf_stub.c",
+      "sha256": "3205bca15d9cb00a8d73a3b085ca2d3a1b1b2b93c5799331b043cd56f85a9928"
+    },
+    {
+      "path": "device/vxnn/mosaic_entry.cpp",
+      "sha256": "aaf33cb5eadbce2ebdba5a6efa2515b396c2e69df5672ef893ebc095df0711d2"
+    },
+    {
+      "path": "device/vxnn/mosaic_link32.ld",
+      "sha256": "5468daac0a417409113880ad33f1f9a4019baa296cc360415a7e526d65359ef7"
+    },
+    {
+      "path": "device/vxnn/mosaic_ops.cpp",
+      "sha256": "1f80381a45d85b9080294f4b365058be0919ddc2bb224b650f4beedc37394d61"
+    },
+    {
+      "path": "device/vxnn/mosaic_wire_ro64.cpp",
+      "sha256": "05ae4c4fe554df85545a132772c10eebc5f573d977a96d634b98699dd3da3d7c"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/src/vx_spawn.c",
+      "sha256": "07fd17e46bf993669b05bc8a07c007fbc4e82a7796443d0edb30df740dabeecd"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/src/vx_syscalls.c",
+      "sha256": "b7fba26c84aa431ddc597fa5cdf5cb1309fa81afe9a47ae9544af2f0023a7b2c"
+    }
+  ],
+  "variant": "ro64-v2",
+  "legacy": {
+    "directory": "data/nnrt/programs/mosaic-int16-v1",
+    "family_sha256": "d9938c6c3bcee8400d5deed1a6282ec1e2a4e8f884c6c9a539361bd697f39bb9",
+    "code_sha256": "1b81a93f72dcbf1b2f59c31f620e3839595b5df5d070102d31bf882eb78a0699"
+  }
+}

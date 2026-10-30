@@ -1,0 +1,24 @@
+{
+  "scope": "ORIGINAL_IMAGE_DECODE_RGB8_FOR_DP_NOT_NETWORK_PREPROCESS_OR_INFERENCE",
+  "source": "F:\\obsidian-codex\\codex\\20-原始资料\\IC设计\\神经网络\\HUNet上板验证输入-2026-10-08\\测试图01-多字拓片.webp",
+  "source_bytes": 27726,
+  "source_sha256": "af15de374f85c1d83f1e0abbf776bb316e7931cbe9bd6ad02a85be801123f0be",
+  "path": "data/demo/hunet-source-roi0.rgb",
+  "bytes": 490590,
+  "sha256": "6daf55f02b1bbae91b26b197b374f4e102765a53b733c1c30cc47b4439d4124a",
+  "width": 474,
+  "height": 345,
+  "stride": 1422,
+  "bbox": {
+    "x0": 40,
+    "y0": 12,
+    "x1": 87,
+    "y1": 105,
+    "image_width": 474,
+    "image_height": 345,
+    "roi_index": 0
+  },
+  "network_input_sha256": "de5513346d7922032e415b2d5eb40a5862b084a2ed264b73602ab8f00769f0de",
+  "conversion": "PIL RGB decode only; no resizing, recoloring, Otsu or network preprocessing applied",
+  "gpu_raw_cycles": null
+}

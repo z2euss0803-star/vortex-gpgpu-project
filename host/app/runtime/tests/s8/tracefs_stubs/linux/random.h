@@ -1,0 +1,1 @@
+/* Native boot nonce boundary only. */

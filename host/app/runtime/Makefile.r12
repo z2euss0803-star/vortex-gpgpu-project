@@ -1,0 +1,9 @@
+include Makefile.unified
+$(OUT)/test_preparation_isolation: tests/unified/test_preparation_isolation.cpp $(DAEMON_NATIVE)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+
+$(OUT)/test_runtime_quota_diagnostics: tests/unified/test_runtime_quota_diagnostics.cpp unified/service/control.cpp $(OUT)/nn/nnrt/package/canonical.o $(OUT)/nn/sha.o $(RUNTIME_OBJECTS)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+
+# Only deliberate allocator-injection test translation units, not production.
+$(OUT)/test_control_alloc $(OUT)/test_service_alloc: private UXFLAGS += -fno-inline

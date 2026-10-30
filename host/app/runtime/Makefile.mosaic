@@ -1,0 +1,159 @@
+.PHONY: test-mosaic-assets test-mosaic-assets-sanitize
+.PHONY: test-mosaic-batch-plan
+$(OUT)/mosaic/test_batch_plan: tests/mosaic_s8/test_batch_plan.c userspace/mosaic_batch.c include/vxl/mosaic_client.h
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude tests/mosaic_s8/test_batch_plan.c userspace/mosaic_batch.c -o $@
+test-mosaic-batch-plan: $(OUT)/mosaic/test_batch_plan
+	$<
+.PHONY: test-mosaic-batch-client
+test-mosaic-batch-client: $(OUT)/mosaic/program-fixture/program_fixture.h $(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude -I$(MOSAIC_REAL_FIXTURE) -I$(OUT)/mosaic/program-fixture -I$(OUT)/mosaic/contract-fixture tests/mosaic_s8/test_batch_client.c userspace/mosaic_client.c userspace/mosaic_batch.c mosaic/assets.c $(MOSAIC_RUNTIME_SOURCES) core/mosaic_engine.c core/pool.c -Wl,--wrap=ioctl -o $(OUT)/mosaic/test_batch_client
+	$(OUT)/mosaic/test_batch_client $(MOSAIC_REAL_FIXTURE)/weights.ms8
+test-mosaic-assets-make:
+	$(PYTHON) -m unittest tests.mosaic_s8.test_make_assets -v
+ifndef MOSAIC_FIXTURE
+MOSAIC_FIXTURE = $(OUT)/mosaic/assets-fixture
+$(MOSAIC_FIXTURE)/mosaic_fixture.h: scripts/mosaic/assets.py tests/mosaic_s8/test_assets.py
+	$(PYTHON) -m scripts.mosaic.assets --test-fixture --out $(MOSAIC_FIXTURE)
+endif
+$(OUT)/mosaic/test_assets: mosaic/assets.c tests/mosaic_s8/test_assets.c include/vxl/mosaic_assets.h core/hunet_sha256.c $(MOSAIC_FIXTURE)/mosaic_fixture.h
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude -I$(MOSAIC_FIXTURE) tests/mosaic_s8/test_assets.c mosaic/assets.c core/hunet_sha256.c -o $@
+test-mosaic-assets: $(OUT)/mosaic/test_assets
+	$(PYTHON) -m unittest tests.mosaic_s8.test_assets tests.mosaic_s8.test_make_assets -v
+	$(OUT)/mosaic/test_assets $(MOSAIC_FIXTURE)/weights.ms8
+test-mosaic-assets-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize PYTHON=$(PYTHON) CC='$(CC) -fsanitize=address,undefined -fno-omit-frame-pointer' test-mosaic-assets
+
+.PHONY: test-mosaic-validate test-mosaic-validate-sanitize
+$(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h: scripts/mosaic/contract.py scripts/mosaic/layout.py tests/mosaic_s8/contract_fixture.py config/mosaic/model-v1.json
+	$(PYTHON) -m tests.mosaic_s8.contract_fixture --out $(OUT)/mosaic/contract-fixture
+$(OUT)/mosaic/test_validate: core/mosaic_layout.c core/mosaic_validate.c tests/mosaic_s8/test_validate.c include/vxl/mosaic.h include/vxl/mosaic_wire.h include/vxl/mosaic_layout.h $(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude -I$(OUT)/mosaic/contract-fixture tests/mosaic_s8/test_validate.c core/mosaic_layout.c core/mosaic_validate.c -o $@
+test-mosaic-validate: $(OUT)/mosaic/test_validate
+	$(PYTHON) -m unittest tests.mosaic_s8.test_contract tests.mosaic_s8.test_layout -v
+	$(OUT)/mosaic/test_validate
+test-mosaic-validate-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize PYTHON=$(PYTHON) CC='$(CC) -fsanitize=address,undefined -fno-omit-frame-pointer' test-mosaic-validate
+
+.PHONY: test-mosaic-tile test-mosaic-tile-sanitize
+$(OUT)/mosaic/test_tile: tests/mosaic_s8/test_tile.cpp tests/mosaic_s8/fake_s8.cpp tests/mosaic_s8/fake_s8.h device/mosaic_s8/tile.cpp device/mosaic_s8/unpack.cpp device/mosaic_s8/tile.h
+	mkdir -p $(dir $@)
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -Idevice/mosaic_s8 -Itests/mosaic_s8 tests/mosaic_s8/test_tile.cpp tests/mosaic_s8/fake_s8.cpp device/mosaic_s8/tile.cpp device/mosaic_s8/unpack.cpp -o $@
+test-mosaic-tile: $(OUT)/mosaic/test_tile
+	$(OUT)/mosaic/test_tile
+test-mosaic-tile-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize CXX='$(CXX) -fsanitize=address,undefined -fno-omit-frame-pointer' test-mosaic-tile
+
+.PHONY: test-mosaic-pack test-mosaic-norm test-mosaic-math-sanitize
+$(OUT)/mosaic/test_pack: tests/mosaic_s8/test_pack.cpp device/mosaic_s8/quant_pack.cpp device/mosaic_s8/graph.h
+	mkdir -p $(dir $@)
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -fno-fast-math -ffp-contract=off -Iinclude -Idevice/mosaic_s8 tests/mosaic_s8/test_pack.cpp device/mosaic_s8/quant_pack.cpp -o $@
+test-mosaic-pack: $(OUT)/mosaic/test_pack
+	$(OUT)/mosaic/test_pack
+$(OUT)/mosaic/test_norm: tests/mosaic_s8/test_norm.cpp device/mosaic_s8/instance_norm.cpp device/mosaic_s8/graph.h
+	mkdir -p $(dir $@)
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -fno-fast-math -ffp-contract=off -Iinclude -Idevice/mosaic_s8 tests/mosaic_s8/test_norm.cpp device/mosaic_s8/instance_norm.cpp -o $@
+test-mosaic-norm: $(OUT)/mosaic/test_norm
+	$(OUT)/mosaic/test_norm
+test-mosaic-math-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize CXX='$(CXX) -fsanitize=address,undefined -fno-omit-frame-pointer' test-mosaic-pack test-mosaic-norm
+
+.PHONY: test-mosaic-graph test-mosaic-graph-sanitize
+$(OUT)/mosaic/graph-%.o: core/%.c
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) -c $< -o $@
+MOSAIC_GRAPH_OBJECTS = $(addprefix $(OUT)/mosaic/graph-,mosaic_validate.o mosaic_layout.o hunet_sha256.o)
+$(OUT)/mosaic/graph-assets.o: mosaic/assets.c
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) -c $< -o $@
+$(OUT)/mosaic/test_graph: tests/mosaic_s8/test_graph.cpp tests/mosaic_s8/fake_s8.cpp device/mosaic_s8/graph.cpp device/mosaic_s8/conv.cpp device/mosaic_s8/point_ops.cpp device/mosaic_s8/quant_pack.cpp device/mosaic_s8/instance_norm.cpp device/mosaic_s8/tile.cpp device/mosaic_s8/unpack.cpp device/mosaic_s8/graph.h device/mosaic_s8/graph_internal.h $(MOSAIC_GRAPH_OBJECTS) $(OUT)/mosaic/graph-assets.o $(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h
+	test -n '$(MOSAIC_REAL_FIXTURE)' -a -n '$(MOSAIC_REFERENCE)'
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -fno-fast-math -ffp-contract=off -Iinclude -Idevice/mosaic_s8 -Itests/mosaic_s8 -I$(MOSAIC_REAL_FIXTURE) -I$(OUT)/mosaic/contract-fixture tests/mosaic_s8/test_graph.cpp tests/mosaic_s8/fake_s8.cpp device/mosaic_s8/graph.cpp device/mosaic_s8/conv.cpp device/mosaic_s8/point_ops.cpp device/mosaic_s8/quant_pack.cpp device/mosaic_s8/instance_norm.cpp device/mosaic_s8/tile.cpp device/mosaic_s8/unpack.cpp $(MOSAIC_GRAPH_OBJECTS) $(OUT)/mosaic/graph-assets.o -o $@
+test-mosaic-graph: $(OUT)/mosaic/test_graph
+	mkdir $(OUT)/mosaic/graph-run
+	$(OUT)/mosaic/test_graph $(MOSAIC_REAL_FIXTURE) $(MOSAIC_REFERENCE) $(OUT)/mosaic/graph-run
+test-mosaic-graph-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize PYTHON=$(PYTHON) CC='$(CC) -fsanitize=address,undefined -fno-omit-frame-pointer' CXX='$(CXX) -fsanitize=address,undefined -fno-omit-frame-pointer' MOSAIC_REAL_FIXTURE=$(MOSAIC_REAL_FIXTURE) MOSAIC_REFERENCE=$(MOSAIC_REFERENCE) test-mosaic-graph
+
+MOSAIC_HEADERS = $(wildcard include/vxl/mosaic*.h device/mosaic_s8/*.h)
+$(OUT)/mosaic/test_assets $(OUT)/mosaic/test_validate $(OUT)/mosaic/test_tile $(OUT)/mosaic/test_pack $(OUT)/mosaic/test_norm $(OUT)/mosaic/test_graph $(MOSAIC_GRAPH_OBJECTS) $(OUT)/mosaic/graph-assets.o: $(MOSAIC_HEADERS)
+
+.PHONY: test-mosaic-program test-mosaic-program-sanitize
+$(OUT)/mosaic/program-fixture/program_fixture.h: tests/mosaic_s8/program_fixture.py scripts/mosaic/binding.py
+	$(PYTHON) -m tests.mosaic_s8.program_fixture --manifest $(MOSAIC_REAL_FIXTURE)/manifest.json --out $(OUT)/mosaic/program-fixture
+$(OUT)/mosaic/test_program: core/mosaic_program.c core/mosaic_layout.c core/hunet_sha256.c tests/mosaic_s8/test_program.c $(MOSAIC_HEADERS) $(OUT)/mosaic/program-fixture/program_fixture.h $(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude -I$(MOSAIC_REAL_FIXTURE) -I$(OUT)/mosaic/program-fixture -I$(OUT)/mosaic/contract-fixture tests/mosaic_s8/test_program.c core/mosaic_program.c core/mosaic_layout.c core/hunet_sha256.c -o $@
+test-mosaic-program: $(OUT)/mosaic/test_program
+	$(PYTHON) -m unittest tests.mosaic_s8.test_binding -v
+	$(OUT)/mosaic/test_program
+test-mosaic-program-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize PYTHON=$(PYTHON) CC='$(CC) -fsanitize=address,undefined -fno-omit-frame-pointer' MOSAIC_REAL_FIXTURE=$(MOSAIC_REAL_FIXTURE) test-mosaic-program
+
+.PHONY: test-mosaic-state test-mosaic-state-sanitize
+$(OUT)/mosaic/full-program-fixture/program_fixture.h: tests/mosaic_s8/program_fixture.py scripts/mosaic/binding.py
+	$(PYTHON) -m tests.mosaic_s8.program_fixture --manifest $(MOSAIC_REAL_FIXTURE)/manifest.json --width 1280 --height 960 --prefix full_program_ --out $(OUT)/mosaic/full-program-fixture
+$(OUT)/mosaic/test_state: core/mosaic_program.c core/mosaic_state.c core/mosaic_validate.c core/mosaic_layout.c core/hunet_sha256.c core/range.c tests/mosaic_s8/test_state.c $(MOSAIC_HEADERS) $(OUT)/mosaic/program-fixture/program_fixture.h $(OUT)/mosaic/full-program-fixture/program_fixture.h $(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude -I$(MOSAIC_REAL_FIXTURE) -I$(OUT)/mosaic/program-fixture -I$(OUT)/mosaic/contract-fixture tests/mosaic_s8/test_state.c core/mosaic_program.c core/mosaic_state.c core/mosaic_validate.c core/mosaic_layout.c core/hunet_sha256.c core/range.c -o $@
+test-mosaic-state: $(OUT)/mosaic/test_state
+	$(OUT)/mosaic/test_state
+test-mosaic-state-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize PYTHON=$(PYTHON) CC='$(CC) -fsanitize=address,undefined -fno-omit-frame-pointer' MOSAIC_REAL_FIXTURE=$(MOSAIC_REAL_FIXTURE) test-mosaic-state
+
+.PHONY: test-mosaic-runtime test-mosaic-runtime-sanitize
+MOSAIC_RUNTIME_SOURCES=core/mosaic_program.c core/mosaic_state.c core/mosaic_runtime.c core/mosaic_evidence.c core/mosaic_validate.c core/mosaic_layout.c core/hunet_sha256.c core/range.c
+$(OUT)/mosaic/test_runtime: $(MOSAIC_RUNTIME_SOURCES) tests/mosaic_s8/test_runtime.c $(MOSAIC_HEADERS) include/uapi/vx_mosaic.h $(OUT)/mosaic/program-fixture/program_fixture.h $(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude -I$(MOSAIC_REAL_FIXTURE) -I$(OUT)/mosaic/program-fixture -I$(OUT)/mosaic/contract-fixture tests/mosaic_s8/test_runtime.c $(MOSAIC_RUNTIME_SOURCES) -o $@
+test-mosaic-runtime: $(OUT)/mosaic/test_runtime
+	$(OUT)/mosaic/test_runtime $(MOSAIC_REAL_FIXTURE)/weights.ms8
+test-mosaic-runtime-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize PYTHON=$(PYTHON) CC='$(CC) -fsanitize=address,undefined -fno-omit-frame-pointer' MOSAIC_REAL_FIXTURE=$(MOSAIC_REAL_FIXTURE) test-mosaic-runtime
+
+.PHONY: test-mosaic-ioctl test-mosaic-ioctl-sanitize
+$(OUT)/mosaic/test_ioctl: $(MOSAIC_RUNTIME_SOURCES) core/mosaic_engine.c core/pool.c tests/mosaic_s8/test_ioctl.c tests/mosaic_s8/test_runtime.c $(MOSAIC_HEADERS) include/uapi/vx_mosaic.h $(OUT)/mosaic/program-fixture/program_fixture.h $(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude -I$(MOSAIC_REAL_FIXTURE) -I$(OUT)/mosaic/program-fixture -I$(OUT)/mosaic/contract-fixture tests/mosaic_s8/test_ioctl.c $(MOSAIC_RUNTIME_SOURCES) core/mosaic_engine.c core/pool.c -o $@
+test-mosaic-ioctl: $(OUT)/mosaic/test_ioctl
+	$(OUT)/mosaic/test_ioctl $(MOSAIC_REAL_FIXTURE)/weights.ms8
+test-mosaic-ioctl-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize PYTHON=$(PYTHON) CC='$(CC) -fsanitize=address,undefined -fno-omit-frame-pointer' MOSAIC_REAL_FIXTURE=$(MOSAIC_REAL_FIXTURE) test-mosaic-ioctl
+
+.PHONY: test-mosaic-driver test-mosaic-driver-sanitize
+test-mosaic-driver: $(GEN) $(OUT)/mosaic/program-fixture/program_fixture.h $(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h
+	$(CC) $(CPPFLAGS) $(CFLAGS) -Itests/hunet/hw_stubs -I$(MOSAIC_REAL_FIXTURE) -I$(OUT)/mosaic/program-fixture -I$(OUT)/mosaic/contract-fixture tests/mosaic_s8/test_driver.c $(CORE) mock/device_model.c -o $(OUT)/mosaic/test_driver
+	./$(OUT)/mosaic/test_driver $(MOSAIC_REAL_FIXTURE)/weights.ms8
+test-mosaic-driver-sanitize:
+	$(MAKE) -j1 OUT=$(OUT)/sanitize CFLAGS='$(CFLAGS) -fsanitize=address,undefined -fno-omit-frame-pointer' MOSAIC_REAL_FIXTURE=$(MOSAIC_REAL_FIXTURE) test-mosaic-driver
+
+.PHONY: test-mosaic-client test-mosaic-client-sanitize
+test-mosaic-client: $(OUT)/mosaic/program-fixture/program_fixture.h $(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude -I$(MOSAIC_REAL_FIXTURE) -I$(OUT)/mosaic/program-fixture -I$(OUT)/mosaic/contract-fixture tests/mosaic_s8/test_client.c userspace/mosaic_client.c userspace/mosaic_batch.c mosaic/assets.c $(MOSAIC_RUNTIME_SOURCES) core/mosaic_engine.c core/pool.c -Wl,--wrap=ioctl -o $(OUT)/mosaic/test_client
+	$(OUT)/mosaic/test_client $(MOSAIC_REAL_FIXTURE)/weights.ms8
+test-mosaic-client-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize PYTHON='$(PYTHON)' CC='$(CC) -fsanitize=address,undefined -fno-omit-frame-pointer' MOSAIC_REAL_FIXTURE=$(MOSAIC_REAL_FIXTURE) test-mosaic-client
+
+MOSAIC_SESSION_C = demo/json.c demo/store.c demo/runner.c demo/owner.c demo/evidence.c viewer/frame.c userspace/mosaic_client.c userspace/mosaic_batch.c mosaic/assets.c $(MOSAIC_RUNTIME_SOURCES) core/mosaic_engine.c core/pool.c
+MOSAIC_SESSION_OBJS = $(patsubst %.c,$(OUT)/mosaic/session/%.o,$(MOSAIC_SESSION_C))
+$(OUT)/mosaic/session/%.o: %.c $(MOSAIC_HEADERS)
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) -c $< -o $@
+$(OUT)/mosaic/session/shim.o: tests/mosaic_s8/test_client.c $(OUT)/mosaic/program-fixture/program_fixture.h $(OUT)/mosaic/contract-fixture/mosaic_contract_fixture.h
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -DMOSAIC_SESSION_SHIM -Iinclude -I$(MOSAIC_REAL_FIXTURE) -I$(OUT)/mosaic/program-fixture -I$(OUT)/mosaic/contract-fixture -c $< -o $@
+test-mosaic-session: $(MOSAIC_SESSION_OBJS) $(OUT)/mosaic/session/shim.o
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -fno-fast-math -ffp-contract=off -Iinclude -Idevice/mosaic_s8 -Itests/mosaic_s8 $(DEMO_JSON_CFLAGS) -DDEMO_SOFTWARE_MODEL_TEST tests/mosaic_s8/test_session.cpp adapters/mosaic_runner.cpp tests/mosaic_s8/fake_s8.cpp device/mosaic_s8/graph.cpp device/mosaic_s8/conv.cpp device/mosaic_s8/point_ops.cpp device/mosaic_s8/quant_pack.cpp device/mosaic_s8/instance_norm.cpp device/mosaic_s8/tile.cpp device/mosaic_s8/unpack.cpp $(MOSAIC_SESSION_OBJS) $(OUT)/mosaic/session/shim.o $(DEMO_JSON_LIBS) -lm -Wl,--wrap=ioctl -o $(OUT)/mosaic/test_session
+	$(OUT)/mosaic/test_session $(MOSAIC_REAL_FIXTURE) $(MOSAIC_REFERENCE)
+test-mosaic-session-sanitize:
+	$(MAKE) -f Makefile.mosaic -j1 OUT=$(OUT)/sanitize PYTHON='$(PYTHON)' CC='$(CC) -fsanitize=address,undefined -fno-omit-frame-pointer' CXX='$(CXX) -fsanitize=address,undefined -fno-omit-frame-pointer' MOSAIC_REAL_FIXTURE=$(MOSAIC_REAL_FIXTURE) MOSAIC_REFERENCE=$(MOSAIC_REFERENCE) DEMO_JSON_PREFIX='$(DEMO_JSON_PREFIX)' test-mosaic-session
+
+ifndef DEMO_JSON_CFLAGS
+DEMO_JSON_CFLAGS = $(if $(DEMO_JSON_PREFIX),-I$(DEMO_JSON_PREFIX)/include,$(shell pkg-config --cflags json-c))
+DEMO_JSON_LIBS = $(if $(DEMO_JSON_PREFIX),$(DEMO_JSON_PREFIX)/lib/libjson-c.a -lm,$(shell pkg-config --libs json-c))
+endif
+
+.PHONY: test-mosaic-batch-propagation
+$(OUT)/mosaic/test_batch_propagation: tests/mosaic_s8/test_batch_propagation.cpp $(OUT)/mosaic/test_graph
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -fno-fast-math -ffp-contract=off -Iinclude -Idevice/mosaic_s8 -Itests/mosaic_s8 -I$(MOSAIC_REAL_FIXTURE) -I$(OUT)/mosaic/contract-fixture tests/mosaic_s8/test_batch_propagation.cpp tests/mosaic_s8/fake_s8.cpp device/mosaic_s8/graph.cpp device/mosaic_s8/conv.cpp device/mosaic_s8/point_ops.cpp device/mosaic_s8/quant_pack.cpp device/mosaic_s8/instance_norm.cpp device/mosaic_s8/tile.cpp device/mosaic_s8/unpack.cpp $(MOSAIC_GRAPH_OBJECTS) $(OUT)/mosaic/graph-assets.o -o $@
+test-mosaic-batch-propagation: $(OUT)/mosaic/test_batch_propagation
+	mkdir -p $(OUT)/mosaic/batch-graph-run
+	$(OUT)/mosaic/test_batch_propagation $(MOSAIC_REAL_FIXTURE) $(MOSAIC_REFERENCE) $(OUT)/mosaic/batch-graph-run

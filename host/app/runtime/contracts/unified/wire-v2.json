@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "request_bytes": 128,
+  "data_ref_bytes": 48,
+  "job_bytes": 512,
+  "completion_bytes": 256,
+  "caps_bytes": 256,
+  "catalog_header_bytes": 64,
+  "catalog_entry_bytes": 512,
+  "reserved_input": 0,
+  "compat32": "EOPNOTSUPP",
+  "ioctl": {
+    "CAPS": 128,
+    "BUFFER_CREATE": 129,
+    "BUFFER_INFO": 130,
+    "BUFFER_COPY": 131,
+    "BUFFER_RELEASE": 132,
+    "PROGRAM_LOAD": 133,
+    "PROGRAM_INFO": 134,
+    "PROGRAM_RELEASE": 135,
+    "SUBMIT_BATCH": 136,
+    "WAIT": 137,
+    "COMPLETE_REAP": 138,
+    "FAULT_INFO": 139
+  },
+  "legacy_major": 1,
+  "legacy_request_bytes": 176,
+  "legacy_header_sha256_lf": {
+    "vx_demo.h": "d0e9a274f932af1cd789a600275fd667475c167cace10bdad023e33317014dfa",
+    "vx_hunet.h": "b00de37dff0a21796e2bd8e7567b06f1e5d75313ab95f719584481eaa4b0767e",
+    "vx_hunet_fused.h": "a0f55c9e26200309173893bf5184209618e6d77fd430c5703bc19daff1568c1a",
+    "vx_hunet_hybrid.h": "38d4638ad66c8e504446074d1d07de9bc64c3548e321e5c19484a2924059124f",
+    "vx_hunet_opt.h": "55c6e6d4773f0a48dcca101b27abfed01841c99762ba6507f646e2d96d21930f",
+    "vx_linux.h": "23d24b72069e865f44b7fe91de67c3722a7746ef29b09753f6883b1d3aabb5fc",
+    "vx_mosaic.h": "501790eac2746984e85bd5107f5bc9527584ce23ed7f78c6896a9d05e2beffce"
+  },
+  "identity_source": "BOOT_MANIFEST_DECLARED_NOT_LOADED_PL_MEASUREMENT"
+}

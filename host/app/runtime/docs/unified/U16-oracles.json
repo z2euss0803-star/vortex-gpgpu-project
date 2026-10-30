@@ -1,0 +1,25 @@
+{
+  "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-linux-graphics\\frame\\porcelain_pose0.bin",
+  "bundle_sha256": "cc0aaefd72dfff3a343374484285ecd001d341071cfaa1999dd0d264986e5757",
+  "oracles": [
+    {
+      "name": "projected",
+      "source_offset": 2222128,
+      "bytes": 14336,
+      "sha256": "4f49257d9f0815f495b70c1dd4d6fa87a0a4ead2a319e38a71cfcd3682c68dcc"
+    },
+    {
+      "name": "color",
+      "source_offset": 2236464,
+      "bytes": 262144,
+      "sha256": "16565e56a3bb0988a6e28c35abe75517718a1e8d03f3c8e07d9dc0b9c4835295"
+    },
+    {
+      "name": "depth",
+      "source_offset": 2498608,
+      "bytes": 262144,
+      "sha256": "65188e8bbcf67afa1f0ab7145d02c34f5e1cdfc3719f96694d66bfa204b9ff22"
+    }
+  ],
+  "gpu_raw_cycles": null
+}

@@ -1,0 +1,62 @@
+#include <vxunified/native_files.hpp>
+#include "scheduler_fixture.hpp"
+#include <atomic>
+#include <dirent.h>
+#include <fcntl.h>
+#include <new>
+#include <sys/stat.h>
+#include <thread>
+#include <unistd.h>
+static thread_local int fail_after=-1;
+void*operator new(std::size_t n){if(fail_after>=0&&fail_after--==0){fail_after=-1;throw std::bad_alloc();}auto*p=std::malloc(n?n:1);if(!p)throw std::bad_alloc();return p;}
+void operator delete(void*p)noexcept{std::free(p);}void operator delete(void*p,std::size_t)noexcept{std::free(p);}
+namespace {
+unsigned descriptor_count(){auto*d=opendir("/proc/self/fd");require(d,"descriptor inventory");unsigned count=0;while(auto*entry=readdir(d))if(entry->d_name[0]!='.')++count;closedir(d);return count;}
+void descriptor_diagnostic(int point,unsigned before,unsigned after){std::printf("U20_NATIVE_FILE_FD_OOM point=%d before=%u after=%u\n",point,before,after);auto*d=opendir("/proc/self/fd");require(d,"diagnostic descriptor inventory");while(auto*entry=readdir(d)){if(entry->d_name[0]=='.')continue;char path[512],target[4096];std::snprintf(path,sizeof(path),"/proc/self/fd/%s",entry->d_name);auto n=readlink(path,target,sizeof(target)-1);if(n>=0){target[n]=0;std::printf("U20_NATIVE_FILE_FD %s -> %s\n",entry->d_name,target);}}closedir(d);std::fflush(stdout);}
+BackendIdentity hardware(){BackendIdentity h;h.hardware_contract=digest(11);h.bit=digest(12);h.xsa=digest(13);h.compatible=digest(14);h.device_generation=1;h.provider_flags=1;return h;}
+struct Port:ExecutionPort {
+ unsigned runs=0;
+ Result<BackendIdentity>probe(int,BackendMode)override{return Result<BackendIdentity>::success(hardware());}
+ Result<void>execute(int,const WorkItem&,vxnn::CpuPool*,ExecutionReceipt&)override{++runs;return Result<void>::failure({EIO,"NATIVE_FILES_TEST","no compute permitted"});}
+ Result<void>retire_request(int,RequestKey)override{return Result<void>::success();}
+};
+}
+int main(int argc,char**argv){
+ if(argc==2&&std::string(argv[1])=="declared-context"){
+  char root[]="/tmp/vx-native-files-XXXXXX";require(mkdtemp(root),"private declared-context filesystem fixture");std::printf("NATIVE_FILES_OWNER=%s\n",root);std::fflush(stdout);ServiceConfig c;c.private_dir=root;auto owner=value(DeviceOwner::acquire(c,[](const std::string&){return Result<int>::success(open("/dev/null",O_RDWR|O_CLOEXEC));}),"fixture owner, not a physical GPU");auto port=std::make_shared<Port>();unsigned receipts=0;
+  auto rt=value(Runtime::start(owner,hardware(),vxnn::EvidenceScope::REAL_BOARD,port,[&](const ExecutionReceipt&,DeliveryStage){++receipts;return Result<void>::failure({EPERM,"HOST_FIXTURE","no execution receipt allowed"});},[&](const PublishedResult&){++receipts;return Result<void>::failure({EPERM,"HOST_FIXTURE","no publication allowed"});}),"declared-context constructor fixture only");StartupContext ctx;ctx.runtime=rt;ctx.results=rt->trusted_results();ctx.identity=hardware();ctx.boot_id="boot";ctx.scope=vxnn::EvidenceScope::REAL_BOARD;ctx.private_dir=root;std::string output=std::string(root)+"/outputs";require(!mkdir(output.c_str(),0700),"own empty output directory");
+  auto files=NativeFiles::create(ctx,output);require(bool(files),"U20 shared filesystem must admit matched declared real-IO context without claiming independent PL verification");require(!ctx.identity.board_identity_verified&&!rt->identity().board_identity_verified&&port->runs==0&&receipts==0&&rt->stats().scheduler.requests==0,"declared identity remains false; no job, output or board receipt produced");auto raised=ctx;raised.identity.board_identity_verified=true;require(!NativeFiles::create(raised,output),"caller cannot raise matched identity proof marker");raised=ctx;raised.scope=vxnn::EvidenceScope::HOST_PROTOCOL_TEST;require(!NativeFiles::create(raised,output),"foreign Runtime evidence scope still rejected");ok(rt->shutdown(),"empty constructor-only fixture closes");puts("U20_DECLARED_CONTEXT_FILESYSTEM_ADMISSION_KEEP_PL_UNKNOWN_PASS_HOST_CONSTRUCTOR_ONLY_NOT_GPU_BOARD gpu_raw_cycles=null");return 0;
+ }
+ require(argc==1,"known native file test mode");
+ char root[]="/tmp/vx-native-files-XXXXXX";require(mkdtemp(root),"private native output test");std::printf("NATIVE_FILES_OWNER=%s\n",root);std::fflush(stdout);ServiceConfig config;config.private_dir=root;auto owner=value(DeviceOwner::acquire(config,[](const std::string&){return Result<int>::success(open("/dev/null",O_RDWR|O_CLOEXEC));}),"sole owner");auto port=std::make_shared<Port>();auto rt=value(Runtime::start(owner,hardware(),vxnn::EvidenceScope::HOST_PROTOCOL_TEST,port,[](const ExecutionReceipt&,DeliveryStage){return Result<void>::success();},[](const PublishedResult&){return Result<void>::success();}),"same Runtime");StartupContext ctx;ctx.runtime=rt;ctx.results=rt->trusted_results();ctx.identity=hardware();ctx.boot_id="boot";ctx.scope=vxnn::EvidenceScope::HOST_PROTOCOL_TEST;ctx.private_dir=root;
+ std::string output=std::string(root)+"/outputs";require(!mkdir(output.c_str(),0700),"output root");std::shared_ptr<NativeFiles>files;{auto created=NativeFiles::create(ctx,output);require(bool(created),"U20 shared native output store must retain immutable evidence in common host budget");files=*created.value;}
+ auto foreign=ctx;foreign.results.reset();require(!NativeFiles::create(foreign,output),"foreign result root refused");foreign=ctx;foreign.scope=vxnn::EvidenceScope::REAL_BOARD;require(!NativeFiles::create(foreign,output),"scope cannot be raised");
+ unsigned allocation_refusals=0;for(int point=0;point<32;++point){const auto before=descriptor_count();std::optional<Result<std::shared_ptr<NativeFiles>>>attempt;bool escaped=false;fail_after=point;try{attempt.emplace(NativeFiles::create(ctx,output));}catch(const std::bad_alloc&){escaped=true;}fail_after=-1;require(!escaped&&attempt.has_value(),"output-root allocation returns explicit failure");if(!*attempt){++allocation_refusals;require(attempt->error->code==ENOMEM,"original output-root allocation reason");}attempt.reset();auto after=descriptor_count();if(after!=before)descriptor_diagnostic(point,before,after);require(after==before,"every allocation point retains descriptor ownership, no root fd leak");}require(allocation_refusals>0,"real output-root allocations exercised");
+ const auto baseline=rt->stats().cpu_bytes;RequestKey key{"boot","client","first"};{auto unused=value(files->request(key,128,16),"preflight output metadata");require(rt->stats().cpu_bytes==baseline+128+16+8192&&files->stats().retained_requests==0,"reserve BEFORE write, preflight does not retain phantom files");}require(rt->stats().cpu_bytes==baseline,"unused preflight reservation released");
+ auto request=value(files->request(key,4096,16),"bounded original files");require(!files->request(key,4096,16),"live duplicate request cannot replace evidence");uint8_t row[]={1,2,3,4};ok(request->append_trace({row,4}),"original binary trace");std::vector<std::thread>threads;for(unsigned t=0;t<4;++t)threads.emplace_back([&]{for(unsigned i=0;i<32;++i)ok(request->append_trace({row,4}),"concurrent raw trace append");});for(auto&t:threads)t.join();
+ uint8_t pixels[16]={0,1,2,255,3,4,5,255,6,7,8,255,9,10,11,255};auto artifact=value(request->output("output.rgba",{pixels,16},"RGBA8888",{2,2,4}),"durable original output");auto raw=value(files->read(artifact),"own exact output read");require(raw==std::vector<uint8_t>(pixels,pixels+16)&&artifact.bytes==16&&artifact.shape==vxnn::Shape({2,2,4}),"original bytes, dimensions and SHA retained");struct stat st{};require(!stat((output+"/"+artifact.path).c_str(),&st)&&st.st_uid==geteuid()&&(st.st_mode&07777)==0400&&st.st_nlink==1,"immutable same-uid single-link file");
+ require(files->stats().retained_requests==1&&files->stats().written_bytes==516+16&&files->stats().reserved_bytes==4096+16+8192,"raw trace and output use exact common retained quota");auto copy=artifact;copy.path="unknown/output.rgba";require(!files->read(copy),"unknown artifact cannot enter export/composer");copy=artifact;copy.shape={1,4,4};require(!files->read(copy),"shape mutation refused even with same file SHA");
+ auto duplicate=request->output("output.rgba",{pixels,16},"RGBA8888",{2,2,4});require(!duplicate&&duplicate.error->code==EEXIST,"no original output overwrite");auto again=request->append_trace({row,4},true);require(!again&&again.error->code==EEXIST,"first storage error latched");require(value(files->read(artifact),"original survives duplicate error")==raw,"first bytes retained after error");
+ auto invalid=value(files->request({"boot","client","invalid"},1,16),"negative request");auto escaped=invalid->output("../escape",{pixels,16},"RGBA8888",{2,2,4});require(!escaped,"unsafe leaf refused before filesystem traversal");invalid.reset();require(files->stats().retained_requests==1,"invalid pre-I/O request not pinned as saved evidence");
+ auto limited=value(files->request({"boot","client","too-much-trace"},3,16),"trace bound");require(!limited->append_trace({row,4}),"sealed trace budget enforced before write");limited.reset();require(files->stats().retained_requests==1,"excess trace never writes");
+ require(!files->request({"foreign-boot","client","x"},1,16)&&!files->request({"boot","client","bad-limit"},~uint64_t(0),16),"boot and overflow bounds");
+ request.reset();require(rt->stats().cpu_bytes==baseline+516+16+8192,"sealed evidence charges actual retained bytes and metadata after final writer closes");
+ require(files->stats().reserved_bytes==516+16+8192&&value(files->read(artifact),"sealed original still readable")==raw,"sealing neither deletes nor weakens immutable artifact proof");
+ const auto sealed=files->stats().reserved_bytes;
+ std::vector<std::shared_ptr<HostMemoryLease>>full;for(unsigned n=0;n<63;++n)full.push_back(value(rt->reserve_host_memory(1),"original live host limit"));
+ require(!files->request({"boot","client","host64-full"},1,16),"merged storage cannot bypass original host64 gate");full.clear();
+ unsigned quota_oom=0;for(int point=0;point<48;++point){const RequestKey oom_key{"boot","client","quota-oom-"+std::to_string(point)};std::optional<Result<std::shared_ptr<NativeRequestFiles>>>attempt;bool escaped=false;fail_after=point;try{attempt.emplace(files->request(oom_key,128,16));}catch(const std::bad_alloc&){escaped=true;}fail_after=-1;require(!escaped&&attempt,"quota allocation failure remains explicit");if(!*attempt){++quota_oom;require(attempt->error->code==ENOMEM,"original quota allocation error");}attempt.reset();require(rt->stats().cpu_bytes==baseline+sealed&&files->stats().retained_requests==1,"failed/unused quota rollback leaves existing original bytes exactly charged");}require(quota_oom,"actual quota OOM points exercised");
+ // Concurrent and sequential records retain actual bytes without consuming
+ // a separate live-host slot forever for each completed frame.
+ std::vector<ResultArtifact>saved(255);threads.clear();
+ auto retain=[&](unsigned n){auto f=value(files->request({"boot","client","kept-"+std::to_string(n)},65536,4ULL<<20),"completed file records must not exhaust live host lifetime64");saved[n]=value(f->output("pixel.rgba",{pixels,16},"RGBA8888",{2,2,4}),"retain every original record");};
+ for(unsigned t=0;t<4;++t){threads.emplace_back([&,t](){for(unsigned n=t;n<32;n+=4)retain(n);});}
+ for(auto&t:threads)t.join();
+ require(rt->stats().cpu_bytes==baseline+sealed+32*(8192+16),"concurrent quota merge and sealing preserve exact common byte total");
+ for(unsigned n=32;n<255;++n){retain(n);require(rt->stats().cpu_bytes==baseline+sealed+uint64_t(n+1)*(8192+16),"all actual bytes and bounded record metadata remain in common CPU budget");}
+ require(files->stats().retained_requests==256&&!files->request({"boot","client","index257"},1,16),"storage index256 unchanged; never auto-delete evidence to make room");
+ for(const auto&a:saved)require(value(files->read(a),"all sealed originals retained")==raw,"same immutable bytes after256 records");
+ require(!files->request({"boot","client","first"},1,16),"retained request cannot be reused after writer retirement");
+ ok(rt->shutdown(),"host output is not a GPU activity");require(!files->request({"boot","client","closed"},1,16),"closing cannot reserve output backing");files.reset();require(rt->stats().cpu_bytes==baseline&&!port->runs,"storage retirement releases host quota, zero START");
+ std::printf("U20_NATIVE_FILES_COMMON_BUDGET_IMMUTABLE_TRACE_OUTPUT_ERROR_CONCURRENCY_PASS_HOST_NOT_GPU_DP root_oom=%u gpu_raw_cycles=null\n",allocation_refusals);
+}

@@ -1,0 +1,31 @@
+{
+  "scope": "SPEC_SELF_REVIEW_NOT_USER_APPROVAL",
+  "required_topics_checked": [
+    "单设备所有者",
+    "单 GPU 活动作业",
+    "CPU 线程池",
+    "176字节",
+    "128字节",
+    "PINNED_UNKNOWN",
+    "48位",
+    "8×8",
+    "raw_cycles",
+    "null",
+    "历史",
+    "15 GiB",
+    "0a0b2bba",
+    "不自动",
+    "新增",
+    "相同",
+    "ASan/UBSan",
+    "CLOCK_MONOTONIC"
+  ],
+  "placeholders": 0,
+  "open_gates": [
+    "USER_WRITTEN_SPEC_REVIEW",
+    "DETAILED_PLAN_REVIEW",
+    "P0_FIELD_CAUSES_AND_RELEASE_GATES"
+  ],
+  "gpu_raw_cycles": null,
+  "spec_sha256": "1819e31e84161ba34ba5ca7530175851d3a934e63e01746800e20edfeb6131ad"
+}

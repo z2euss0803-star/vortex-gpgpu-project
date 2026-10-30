@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "source": "vendor/hunet/sdk-linux-crt/kernel/src/vx_spawn.c",
+  "sha256": "07fd17e46bf993669b05bc8a07c007fbc4e82a7796443d0edb30df740dabeecd",
+  "group_size": 4,
+  "warps_per_core": 4,
+  "cores": 4,
+  "distribution": "active=min(ceil(groups/4),4); contiguous quotient/remainder ranges per core",
+  "scope": "SOURCE_RULE_NOT_GPU_EXECUTION"
+}

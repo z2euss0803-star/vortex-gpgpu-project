@@ -1,0 +1,386 @@
+{
+  "state": "U18_OWNER_AND_RASTER_CHECKPOINT_NOT_FULL_TASK",
+  "base": "d315277be3a74d8ba71966d317f9a967eb169a68",
+  "scope": "UBUNTU_REAL_COMMON_RESULT_LEASE_AND_C_VIEWER_FAKE_KMS_NOT_NATIVE_DP",
+  "source_cut": "U18-raster-page-normal-027",
+  "source_archive_sha256": "a9018e684e50f04c1b9f96232a0ebf016755a5a7e88e0884feb4b3feb9fa89a5",
+  "source_manifest_sha256": "70dda4ef58d4ba8c23b73bb4f46adaa30729f30123fac4c02ebdaba93027c8bb",
+  "matrix": [
+    {
+      "name": "U18-raster-page-normal-027",
+      "mode": "normal",
+      "natural_exit": 0,
+      "commands": [
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-raster-page-normal-027",
+            "DEBUG_FLAGS=-g1",
+            "build/U18-raster-page-normal-027/test_display",
+            "build/U18-raster-page-normal-027/test_page_switch",
+            "build/U18-raster-page-normal-027/test_display_pages",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 8.849562814983074,
+          "log": "build/U18-raster-page-normal-027/command-000.log",
+          "sha256": "2d9277791b57e16e785921a972d765b8263905d035807ca9df8841f5e06de558"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-raster-page-normal-027",
+            "DEBUG_FLAGS=-g1",
+            "test-unified-display",
+            "test-unified-page-switch",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.03265848202863708,
+          "log": "build/U18-raster-page-normal-027/command-001.log",
+          "sha256": "d838bb6b83aed678e844fe5afcf6f212508d4106ce349371c5329205c2335a50"
+        },
+        {
+          "argv": [
+            "build/U18-raster-page-normal-027/test_display",
+            "reject"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0036842169938609004,
+          "log": "build/U18-raster-page-normal-027/command-002.log",
+          "sha256": "43f1c176f005daa21679e9727faf513bd629100af8206be2fd20ca5897f046fb"
+        },
+        {
+          "argv": [
+            "build/U18-raster-page-normal-027/test_display",
+            "evidence"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0026963349664583802,
+          "log": "build/U18-raster-page-normal-027/command-003.log",
+          "sha256": "5660ea97896bd2427b2711998d7311fac7aef35cb9cd290a3e867e715db40b82"
+        },
+        {
+          "argv": [
+            "build/U18-raster-page-normal-027/test_display_pages"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.2685889240237884,
+          "log": "build/U18-raster-page-normal-027/command-004.log",
+          "sha256": "a2a49c900b40cdeab60efdb6c746cbb51906c1e7146f43fe4ea4e94ec37b179a"
+        }
+      ],
+      "target_runtime": null,
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    {
+      "name": "U18-raster-page-sanitize-028",
+      "mode": "sanitize",
+      "natural_exit": 0,
+      "commands": [
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-raster-page-sanitize-028",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=address,undefined",
+            "build/U18-raster-page-sanitize-028/test_display",
+            "build/U18-raster-page-sanitize-028/test_page_switch",
+            "build/U18-raster-page-sanitize-028/test_display_pages",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 35.986635171982925,
+          "log": "build/U18-raster-page-sanitize-028/command-000.log",
+          "sha256": "45577d30d36708650423adce1a1030e0ce0c39e1a89d1e396628682d97e900d3"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-raster-page-sanitize-028",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=address,undefined",
+            "test-unified-display",
+            "test-unified-page-switch",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.07230071298545226,
+          "log": "build/U18-raster-page-sanitize-028/command-001.log",
+          "sha256": "b0b8621c083f7820e81c3052036d9324fb0034da16866dab16d99c36f01c4a76"
+        },
+        {
+          "argv": [
+            "build/U18-raster-page-sanitize-028/test_display",
+            "reject"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.023833810002543032,
+          "log": "build/U18-raster-page-sanitize-028/command-002.log",
+          "sha256": "43f1c176f005daa21679e9727faf513bd629100af8206be2fd20ca5897f046fb"
+        },
+        {
+          "argv": [
+            "build/U18-raster-page-sanitize-028/test_display",
+            "evidence"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.02537527901586145,
+          "log": "build/U18-raster-page-sanitize-028/command-003.log",
+          "sha256": "5660ea97896bd2427b2711998d7311fac7aef35cb9cd290a3e867e715db40b82"
+        },
+        {
+          "argv": [
+            "build/U18-raster-page-sanitize-028/test_display_pages"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.4971169410273433,
+          "log": "build/U18-raster-page-sanitize-028/command-004.log",
+          "sha256": "a2a49c900b40cdeab60efdb6c746cbb51906c1e7146f43fe4ea4e94ec37b179a"
+        }
+      ],
+      "target_runtime": null,
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    {
+      "name": "U18-raster-page-thread-029",
+      "mode": "thread",
+      "natural_exit": 0,
+      "commands": [
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-raster-page-thread-029",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=thread",
+            "build/U18-raster-page-thread-029/test_display",
+            "build/U18-raster-page-thread-029/test_page_switch",
+            "build/U18-raster-page-thread-029/test_display_pages",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 10.231114926980808,
+          "log": "build/U18-raster-page-thread-029/command-000.log",
+          "sha256": "c59efe223162aeb29701a9a0d88bf85011e7e7009120b57a4ed5ccf7f4fe9fbb"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-raster-page-thread-029",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=thread",
+            "test-unified-display",
+            "test-unified-page-switch",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.07829684199532494,
+          "log": "build/U18-raster-page-thread-029/command-001.log",
+          "sha256": "dc86432bbaddca3034b1115e97257bebda13d0c7e1233fcfc697e63098937555"
+        },
+        {
+          "argv": [
+            "build/U18-raster-page-thread-029/test_display",
+            "reject"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.024322839046362787,
+          "log": "build/U18-raster-page-thread-029/command-002.log",
+          "sha256": "43f1c176f005daa21679e9727faf513bd629100af8206be2fd20ca5897f046fb"
+        },
+        {
+          "argv": [
+            "build/U18-raster-page-thread-029/test_display",
+            "evidence"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.025448855012655258,
+          "log": "build/U18-raster-page-thread-029/command-003.log",
+          "sha256": "5660ea97896bd2427b2711998d7311fac7aef35cb9cd290a3e867e715db40b82"
+        },
+        {
+          "argv": [
+            "build/U18-raster-page-thread-029/test_display_pages"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 1.7368789369938895,
+          "log": "build/U18-raster-page-thread-029/command-004.log",
+          "sha256": "a2a49c900b40cdeab60efdb6c746cbb51906c1e7146f43fe4ea4e94ec37b179a"
+        }
+      ],
+      "target_runtime": null,
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    {
+      "name": "U18-raster-page-cross-030",
+      "mode": "cross",
+      "natural_exit": 0,
+      "commands": [
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-g++",
+            "--version"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.006077630969230086,
+          "log": "build/U18-raster-page-cross-030/command-000.log",
+          "sha256": "eb592c0c26adf30a942c441f32156a4ba030254782b1cc21f12893358cb6be27"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-gcc",
+            "-dumpmachine"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.005269917950499803,
+          "log": "build/U18-raster-page-cross-030/command-001.log",
+          "sha256": "8711caaed6fee45adb1c0471a448ca8e9739a16f54dbc23fbb391eec5955069c"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-raster-page-cross-030",
+            "DEBUG_FLAGS=-g1",
+            "CC=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-gcc",
+            "CXX=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-g++",
+            "NN_JSON_PREFIX=/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/json-install",
+            "build/U18-raster-page-cross-030/test_display",
+            "build/U18-raster-page-cross-030/test_page_switch",
+            "build/U18-raster-page-cross-030/test_display_pages",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 11.569048461969942,
+          "log": "build/U18-raster-page-cross-030/command-002.log",
+          "sha256": "515d47094c049582a982b355a06dc7bbccfd1ba1107be09318a0f19318927b0b"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-raster-page-cross-030/test_display"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.004381716018542647,
+          "log": "build/U18-raster-page-cross-030/command-003.log",
+          "sha256": "7900e7d25a93ba4f299edb69bd7dd5386256ae961bdae3fa7b7d411d580aebaf"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-raster-page-cross-030/test_page_switch"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0037495410069823265,
+          "log": "build/U18-raster-page-cross-030/command-004.log",
+          "sha256": "1e993fc3991444aa3453d9a1e10330d1e2ca61fba04f53316504e0d386608156"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-raster-page-cross-030/test_display_pages"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0034570530406199396,
+          "log": "build/U18-raster-page-cross-030/command-005.log",
+          "sha256": "d052cb01c857b4d5324cc28a4700d767023d7e34be628b662d2e314d9df7f251"
+        }
+      ],
+      "target_runtime": {
+        "rootfs_sha256": "d5163fa50ae6b3b945a280c96b6273e0eff9af312a992407bdf8b9abee3eb647",
+        "files": {
+          "ld-linux-aarch64.so.1": {
+            "path": "lib/ld-linux-aarch64.so.1",
+            "sha256": "2c307a67d7673dcb99e0e78bb6c3ae6ca468e21e5a0f7cbc6ad82846ad7afd4c"
+          },
+          "libc.so.6": {
+            "path": "lib/libc.so.6",
+            "sha256": "aeebc1b6491583b277e08ad1ca2509f4e28d628cb3df78073b71d676dea2bbe0"
+          },
+          "libstdc++.so.6": {
+            "path": "usr/lib/libstdc++.so.6",
+            "sha256": "48f2c5788373d1987b8c21920838a109e945b5054a239a18a2115d105331e3a0"
+          },
+          "libgcc_s.so.1": {
+            "path": "lib/libgcc_s.so.1",
+            "sha256": "46ecda5c0995aaf773c409100398418361cbebdadffa768a24c950a84ae7cf76"
+          },
+          "libm.so.6": {
+            "path": "lib/libm.so.6",
+            "sha256": "f5379ab0ba0797b5d66619425d8175263ac813ae7d7127376db2663be78a0a4b"
+          },
+          "libpthread.so.0": {
+            "path": "lib/libpthread.so.0",
+            "sha256": "edcd56cc1d6e01b0a2dec0258318b965835aacc9ae6ded0d1fbba5f1084caadb"
+          }
+        },
+        "required_versions": [
+          "CXXABI_1.3",
+          "CXXABI_1.3.9",
+          "GCC_3.0",
+          "GLIBCXX_3.4",
+          "GLIBCXX_3.4.11",
+          "GLIBCXX_3.4.14",
+          "GLIBCXX_3.4.20",
+          "GLIBCXX_3.4.21",
+          "GLIBCXX_3.4.22",
+          "GLIBC_2.17",
+          "GLIBC_2.25"
+        ]
+      },
+      "executed_target_elfs": false,
+      "gpu_raw_cycles": null
+    }
+  ],
+  "archive": {
+    "members": 147,
+    "logical_bytes": 81151393,
+    "archive_bytes": 17570769,
+    "sha256": "0569efbc2cc5ee9b821139a9e9bf5405f0f07397ca9bf568874a738549605dfb",
+    "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U18-raster-matrix-031-evidence.tar.gz",
+    "gpu_raw_cycles": null,
+    "host": "z2euss-virtual-machine",
+    "uid": 1000,
+    "free_disk": 2177798144,
+    "verified_members": 147,
+    "members_sha256": "ea5b0d83a58baa27caf320f7713ce70eb10e09191e09c4852674792290fe6fa3",
+    "hardlink_members": 0,
+    "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U18-raster-matrix-031\\raw-and-artifacts.tar.gz",
+    "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+  },
+  "gpu_raw_cycles": null,
+  "image": "NOT_BUILT",
+  "sd": "NOT_TOUCHED",
+  "board": "NOT_ACCESSED",
+  "remaining": [
+    "HUNet dedicated panel binding preserving labels/ROI/numeric history",
+    "native factory lifetime and actual selected caps",
+    "original native restoration and old common service regressions",
+    "full final matrix and named task closure before U19/U20"
+  ]
+}

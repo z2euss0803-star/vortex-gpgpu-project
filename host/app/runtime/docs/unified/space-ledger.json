@@ -1,0 +1,82 @@
+{
+  "format": "vx-unified-space-ledger-v1",
+  "state": "IN_PROGRESS_IMAGE_CAPACITY_OPEN",
+  "scope": "OFFLINE_CAPACITY_POLICY_NOT_IMAGE_OR_BOARD_ACCEPTANCE",
+  "gpu_raw_cycles": null,
+  "hosts": {
+    "A": "RY: implementation and independent D archive",
+    "B_Windows": "DESKTOP-O7FQKAL: metadata only, device identity must be refreshed before future media operations",
+    "B_Ubuntu": "z2euss-virtual-machine uid1000: verification/build with all3 existing locks"
+  },
+  "thresholds": {
+    "unit_ram_bytes_per_compiler": 1073741824,
+    "sanitize_cross_ram_bytes_per_compiler": 4294967296,
+    "software_disk_bytes": 2147483648,
+    "image_disk_bytes": 16106127360,
+    "compiler_workers": [
+      1,
+      2
+    ],
+    "image_workers": 1,
+    "test_runner_workers": 1
+  },
+  "provenance": {
+    "capacity": "work/unified_gpu_runtime_20261021/execution/U21-capacity-refresh-001",
+    "windows_metadata": "work/unified_gpu_runtime_20261021/execution/U21-windows-inventory-002",
+    "dependencies": "work/unified_gpu_runtime_20261021/execution/U21-cache-dependencies-003",
+    "exact_old_cache": "work/unified_gpu_runtime_20261021/execution/U21-private-cache-inventory-005",
+    "full_005_receipt": "work/unified_gpu_runtime_20261021/execution/U21-read-inventory-receipt-006/stdout.bin",
+    "archive": "work/unified_gpu_runtime_20261021/execution/U21-old-cnn-cache-archive-007/receipt.json",
+    "release": "work/unified_gpu_runtime_20261021/execution/U21-old-cnn-cache-release-008/transport/stdout.bin",
+    "software": "work/unified_gpu_runtime_20261021/execution/U21-software-normal-011"
+  },
+  "protected": [
+    "/home/z2euss/workspace/petalinux/codex_linux_backend_hunet_v5_20261011/env_backend/build/sstate-cache: shared by current Mosaic/S8 and old projects",
+    "all shared downloads/hardlinks",
+    "/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend: active kernel source/build and actual built environment",
+    "/home/z2euss/workspace/petalinux/codex_linux_backend_s8_9c34bfb2_20261018/env_backend: matched rootfs/headers/image parent",
+    "/home/z2euss/workspace/petalinux/codex_linux_backend_hunet_v5_cpu_roi_w4_20261015_d6ea455_20261015T150415665813Z/env_backend: actual compiler embedded sysroot/search dependencies",
+    "/home/z2euss/codex_hunet_fullopt_20261016/tools",
+    "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/json-install",
+    "original source/model/input/hardware/image/raw timing/error receipts and C-used contents",
+    "TestDisk processes, BOOT-working.img and recovery data"
+  ],
+  "candidates": [
+    {
+      "path": "/home/z2euss/workspace/petalinux/codex_linux_backend_cnn_i32_20261011/env_backend/build/sstate-cache",
+      "state": "EXACT_CACHE_RELEASED_AFTER_FULL_INDEPENDENT_ARCHIVE_VERIFICATION",
+      "captured_regular_files": 3032,
+      "captured_logical_regular_bytes": 3303672847,
+      "captured_allocated_directory_bytes": 3320233984,
+      "captured_shared_or_symlink_members": 0,
+      "captured_config_reference": "only own build/conf/sanity_info mentions exact cache; fresh checks required",
+      "proposed_archive": "D:/codex-unified-gpu-20261021/engineering-archives/U21-old-cnn-cache-007/sstate-cache.tar.gz",
+      "restore": "verify every archive member, restore into the retained empty exact cache root before an explicitly requested old rebuild",
+      "rebuild_cost": "old builds lose sstate hits and may need recompilation; source/images/downloads remain",
+      "required_before_release": "fresh ownership/process/dependency/3lock facts, full independent A archive member verification, source rehash after archive",
+      "actual_free_delta_bytes": 3320229888,
+      "archive_sha256": "16109601365357eee49e17a926d73ff1ceb4b7026f1258f39d01c2f5dd771a9b",
+      "archive_bytes": 3256605501,
+      "verified_archive_members": 5442,
+      "after_free_bytes": 5505531904,
+      "release_evidence": "work/unified_gpu_runtime_20261021/execution/U21-old-cnn-cache-release-008/transport/stdout.bin",
+      "source_root_retained": true
+    },
+    {
+      "path": "old CNN reviewfix/HUNet hybrid/opt tmp trees",
+      "state": "KEEP_SHARED_LINKS_OR_SPECIAL_MEMBERS",
+      "reason": "005 observed shared hardlinks/symlinks/special members; age/build name does not authorize release"
+    }
+  ],
+  "not_authorized_by_this_policy": [
+    "format",
+    "partition",
+    "automatic filesystem repair",
+    "kill C or unknown process",
+    "migrate SSD or VMDK",
+    "SD/board/PL operations"
+  ],
+  "image_gate": "NOT_MET: 5505531904B <16106127360B; no threshold reduction, no safe additional whole-cache candidate; continue independent software work",
+  "tests": "U21-software-normal-011 actual natural0: old C++ leases plus10 Python policy/temporary POSIX operations/real existing C lock refusal; A9 pure tests also pass. Final named task run pending.",
+  "current_ubuntu_free_bytes": 5505531904
+}

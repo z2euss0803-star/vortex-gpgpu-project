@@ -1,0 +1,156 @@
+.PHONY: test-s8-contract
+test-s8-contract:
+	$(PYTHON) -m unittest discover -s tests/s8 -p test_contract.py -v
+	@mkdir -p $(OUT)/s8
+	$(PYTHON) -m scripts.s8.contract --out $(OUT)/s8/generated
+	$(CC) $(CPPFLAGS) -I$(OUT)/s8/generated $(CFLAGS) tests/s8/test_uapi.c -o $(OUT)/s8/test_uapi
+	./$(OUT)/s8/test_uapi
+
+.PHONY: test-s8-reference test-s8-reference-sanitize
+test-s8-reference:
+	$(PYTHON) -m unittest discover -s tests/s8 -p test_oracle.py -v
+	$(CXX) -Itools $(CXXFLAGS) tools/s8/reference.cpp tests/s8/test_reference.cpp -o $(OUT)/s8/test_reference
+	./$(OUT)/s8/test_reference build/s8/reference.bin
+test-s8-reference-sanitize:
+	$(MAKE) CXXFLAGS='-std=c++17 -O1 -g -Wall -Wextra -Werror -fsanitize=address,undefined -fno-omit-frame-pointer' test-s8-reference
+
+.PHONY: test-s8-layout
+test-s8-layout:
+	$(PYTHON) -m unittest discover -s tests/s8 -p test_layout.py -v
+	@mkdir -p $(OUT)/s8
+	$(CC) $(CPPFLAGS) $(CFLAGS) core/s8_layout.c tests/s8/test_layout.c -o $(OUT)/s8/test_layout
+	./$(OUT)/s8/test_layout
+
+.PHONY: test-s8-validate
+test-s8-validate: $(GEN)
+	$(PYTHON) -m unittest discover -s tests/s8 -p test_build_edges.py -v
+	@mkdir -p $(OUT)/s8
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(CORE) tests/s8/test_validate.c -o $(OUT)/s8/test_validate
+	./$(OUT)/s8/test_validate
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(CORE) mock/device_model.c tests/s8/test_profiles.c -o $(OUT)/s8/test_profiles
+	./$(OUT)/s8/test_profiles
+
+.PHONY: test-s8-program
+test-s8-program: $(GEN)
+	@mkdir -p $(OUT)/s8
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(CORE) mock/device_model.c tests/s8/test_program.c -o $(OUT)/s8/test_program
+	./$(OUT)/s8/test_program
+
+.PHONY: test-s8-cpp-api
+test-s8-cpp-api:
+	@mkdir -p $(OUT)/s8
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c core/s8_layout.c -o $(OUT)/s8/cpp_layout.o
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c core/s8_validate.c -o $(OUT)/s8/cpp_validate.o
+	$(CC) $(CPPFLAGS) $(CFLAGS) -c core/s8_timing.c -o $(OUT)/s8/cpp_timing.o
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) tests/s8/test_cpp_api.cpp $(OUT)/s8/cpp_layout.o $(OUT)/s8/cpp_validate.o $(OUT)/s8/cpp_timing.o -o $(OUT)/s8/test_cpp_api
+	./$(OUT)/s8/test_cpp_api
+
+.PHONY: test-s8-state
+test-s8-state: $(GEN)
+	@mkdir -p $(OUT)/s8
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(CORE) mock/device_model.c tests/s8/test_state.c -o $(OUT)/s8/test_state
+	./$(OUT)/s8/test_state
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(CORE) mock/device_model.c tests/s8/test_capture.c -o $(OUT)/s8/test_capture
+	./$(OUT)/s8/test_capture
+
+.PHONY: test-s8-hw
+test-s8-ioctl: $(GEN)
+	@mkdir -p $(OUT)/s8
+	$(CC) $(CPPFLAGS) -Itests/hunet/hw_stubs $(CFLAGS) $(CORE) mock/device_model.c tests/s8/test_ioctl_adapter.c -o $(OUT)/s8/test_ioctl_adapter
+	./$(OUT)/s8/test_ioctl_adapter
+test-s8-hw: $(GEN)
+	$(PYTHON) -m tests.s8.make_hw_fixture
+	$(CC) $(CPPFLAGS) -Itests/hunet/hw_stubs $(CFLAGS) $(CORE) tests/s8/test_hw_adapter.c -o $(OUT)/s8/test_hw_adapter
+	./$(OUT)/s8/test_hw_adapter
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(CORE) tests/s8/test_kernel_timing.c -o $(OUT)/s8/test_kernel_timing
+	./$(OUT)/s8/test_kernel_timing
+	$(CC) $(CPPFLAGS) -Itests/hunet/hw_stubs $(CFLAGS) $(CORE) mock/device_model.c tests/s8/test_ioctl_adapter.c -o $(OUT)/s8/test_ioctl_adapter
+	./$(OUT)/s8/test_ioctl_adapter
+
+.PHONY: test-s8-legacy-scope
+test-s8-legacy-scope: test-opt-load-fastwait
+	$(PYTHON) -m unittest discover -s tests/hunet_timing -p test_analysis.py -v
+	$(CC) $(CFLAGS) -Iinclude core/hunet_evidence.c core/hunet_sha256.c core/digest.c core/hunet_fused_validate.c tests/hunet_timing/test_guards.c -ffunction-sections -Wl,--gc-sections -o $(OUT)/s8/test_legacy_guards
+	./$(OUT)/s8/test_legacy_guards
+
+.PHONY: test-s8-trace
+test-s8-trace: $(GEN)
+	@mkdir -p $(OUT)/s8 build/s8
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(CORE) mock/device_model.c tests/s8/test_trace.c -o $(OUT)/s8/test_trace
+	./$(OUT)/s8/test_trace
+	$(PYTHON) -m unittest discover -s tests/s8 -p test_tracefs.py -v
+	$(CC) $(CPPFLAGS) -Itests/s8/tracefs_stubs $(CFLAGS) $(CORE) mock/device_model.c tests/s8/test_tracefs_adapter.c -o $(OUT)/s8/test_tracefs_adapter
+	./$(OUT)/s8/test_tracefs_adapter
+
+.PHONY: test-s8-protocol
+test-s8-protocol:
+	@mkdir -p $(OUT)/s8
+	$(CXX) -Iinclude $(CXXFLAGS) device/s8/unpack.cpp tools/s8/reference.cpp tests/s8/test_device_unpack.cpp -o $(OUT)/s8/test_device_unpack
+	./$(OUT)/s8/test_device_unpack
+	$(CXX) -Iinclude $(CXXFLAGS) device/s8/protocol.cpp device/s8/unpack.cpp tools/s8/reference.cpp tests/s8/test_protocol.cpp -o $(OUT)/s8/test_protocol
+	./$(OUT)/s8/test_protocol
+
+.PHONY: test-s8-negative
+test-s8-negative:
+	@mkdir -p $(OUT)/s8
+	$(CXX) -Iinclude $(CXXFLAGS) device/s8/protocol.cpp device/s8/negative.cpp device/s8/unpack.cpp tools/s8/reference.cpp tests/s8/test_negative.cpp -o $(OUT)/s8/test_negative
+	./$(OUT)/s8/test_negative
+	$(PYTHON) -m unittest discover -s tests/s8 -p test_negative_catalog.py -v
+
+.PHONY: test-s8-compat
+test-s8-compat:
+	@mkdir -p $(OUT)/s8
+	$(CXX) -Iinclude $(CXXFLAGS) device/s8/compat.cpp tools/s8/reference.cpp tests/s8/test_compat.cpp -o $(OUT)/s8/test_compat
+	./$(OUT)/s8/test_compat
+	$(PYTHON) -m unittest discover -s tests/s8 -p test_compat.py -v
+
+.PHONY: test-s8-timing
+test-s8-timing:
+	@mkdir -p $(OUT)/s8
+	$(CXX) -Iinclude $(CXXFLAGS) device/s8/phase.cpp tests/s8/test_phase.cpp -o $(OUT)/s8/test_phase
+	./$(OUT)/s8/test_phase
+	$(PYTHON) -m unittest discover -s tests/s8 -p test_timing.py -v
+
+.PHONY: test-s8-client
+test-s8-client: $(GEN)
+	@mkdir -p $(OUT)/s8
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(CORE) userspace/s8_client.c tests/s8/test_client.c -o $(OUT)/s8/test_client
+	./$(OUT)/s8/test_client
+
+.PHONY: test-s8-session
+test-s8-session: test-s8-client
+	$(CC) $(CPPFLAGS) $(CFLAGS) -ffunction-sections -c core/hunet_sha256.c -o $(OUT)/s8/session_sha.o
+	$(CC) $(CPPFLAGS) $(CFLAGS) -ffunction-sections -c userspace/s8_client.c -o $(OUT)/s8/session_client.o
+	$(CC) $(CPPFLAGS) $(CFLAGS) -ffunction-sections -c core/s8_validate.c -o $(OUT)/s8/session_validate.o
+	$(CC) $(CPPFLAGS) $(CFLAGS) -ffunction-sections -c core/s8_timing.c -o $(OUT)/s8/session_timing.o
+	$(CC) $(CPPFLAGS) $(CFLAGS) -ffunction-sections -c core/s8_program.c -o $(OUT)/s8/session_program.o
+	$(CXX) -Iinclude -Ivendor/vortex/runtime/common $(CXXFLAGS) -ffunction-sections -Wl,--gc-sections tools/s8/reference.cpp tests/s8/test_session.cpp $(OUT)/s8/session_sha.o $(OUT)/s8/session_client.o $(OUT)/s8/session_validate.o $(OUT)/s8/session_timing.o $(OUT)/s8/session_program.o -o $(OUT)/s8/test_session
+	./$(OUT)/s8/test_session
+
+.PHONY: test-s8-audit
+test-s8-audit:
+	$(PYTHON) -m unittest discover -s tests/s8 -p test_audit.py -v
+	$(PYTHON) -m unittest discover -s tests/s8 -p test_summary.py -v
+
+.PHONY: test-s8-offline test-s8-sanitize
+test-s8-offline: test-s8-contract test-s8-reference test-s8-layout test-s8-validate test-s8-program test-s8-cpp-api test-s8-state test-s8-hw test-s8-trace test-s8-protocol test-s8-negative test-s8-compat test-s8-timing test-s8-session test-s8-audit test-s8-device-admission
+	$(PYTHON) -m unittest discover -s tests/s8 -p 'test_*.py' -v
+	@echo S8_COMPLETE_OFFLINE_SOFTWARE_PASS_NOT_RTL_NOT_BOARD
+test-s8-sanitize:
+	$(MAKE) CFLAGS='-std=c11 -O1 -g -Wall -Wextra -Werror -fPIC -fno-fast-math -ffp-contract=off -fsanitize=address,undefined -fno-omit-frame-pointer' CXXFLAGS='-std=c++17 -O1 -g -Wall -Wextra -Werror -fPIC -fno-fast-math -ffp-contract=off -fsanitize=address,undefined -fno-omit-frame-pointer' test-s8-offline
+
+.PHONY: test-s8-device-admission s8-rv32
+test-s8-device-admission:
+	@mkdir -p $(OUT)/s8
+	$(CXX) -Iinclude $(CXXFLAGS) device/s8/admission.cpp tests/s8/test_device_admission.cpp -o $(OUT)/s8/test_device_admission
+	./$(OUT)/s8/test_device_admission
+s8-rv32:
+	$(PYTHON) -m scripts.s8.build_rv32 --env $(S8_ENV) --out $(OUT)/s8/rv32
+
+S8_CPU_OBJS = $(patsubst %.c,$(OUT)/%.o,$(CORE)) $(OUT)/userspace/s8_client.o
+$(OUT)/libvxl-s8.so: $(GEN) $(S8_CPU_OBJS)
+	$(CC) -shared -Wl,-z,defs $(S8_CPU_OBJS) $(LDFLAGS) -o $@
+$(OUT)/vxl_s8: $(GEN) tools/vxl_s8.cpp tools/s8/session.cpp tools/s8/reference.cpp $(OUT)/libvxl-s8.so
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) tools/vxl_s8.cpp tools/s8/session.cpp tools/s8/reference.cpp -L$(OUT) -lvxl-s8 $(LDFLAGS) -o $@
+.PHONY: s8-cpu
+s8-cpu: $(OUT)/libvxl-s8.so $(OUT)/vxl_s8

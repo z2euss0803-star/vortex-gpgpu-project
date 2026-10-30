@@ -1,0 +1,48 @@
+{
+  "files": [
+    "Makefile.unified",
+    "include/vxnn/cpu.hpp",
+    "nnrt/cpu/pool.cpp",
+    "nnrt/cpu/gelu.cpp",
+    "tests/nnrt/test_cpu_pool.cpp",
+    "tests/nnrt/test_gelu_pool.cpp",
+    "scripts/unified/check_u08.py",
+    "scripts/unified/check_u08_emulation.py",
+    "docs/unified/U08-errors.json",
+    "docs/unified/U08-gelu-inputs.json"
+  ],
+  "message": "feat(unified): U08 四worker共享CPU池与HUNet GELU等价",
+  "verified_runs": [
+    "U08-real13-normal-008",
+    "U08-sanitizers-009",
+    "U08-aarch64-010",
+    "U08-aarch64-emulation-012",
+    "U08-tsan-013"
+  ],
+  "cross": "TWO_MATCHED_AARCH64_ELFS_ROOTFS_SYMBOL_AUDIT_PLUS_PRIVATE_USER_EMULATION_NOT_BOARD",
+  "evidence_archive": "D:\\codex-unified-gpu-20261021\\evidence\\U08-final-retry\\raw-and-artifacts.tar.gz",
+  "evidence_sha256": "69b7e7364fe7d7b39c13df5245e069b2898b8c3e26c975ab0b3f49cf5ecc78a7",
+  "original_members": 171,
+  "standalone_helper_manifest": "D:/codex-unified-gpu-20261021/evidence/U08-final-retry/direct-helper-manifest.json",
+  "emulated_reference": {
+    "layers": 13,
+    "elements": 1869056,
+    "bit_differences": 0,
+    "gpu_reference_bit_differences": 18889,
+    "scope": "AARCH64_USER_EMULATION_NOT_BOARD_NOT_PERFORMANCE"
+  },
+  "rulings": [
+    "U08 preserves original four ranges and erf expression; same target libm yields frozen A53 bitwise equality on13 real inputs. Host libm differences remain separately recorded, not threshold relaxation.",
+    "CPU cancellation drains all ranges and suppresses successful publication. Request terminal-state no-resurrection is owned and must be tested by U09, not claimed from pool alone.",
+    "Use one process PendingBudget32 for CPU/GPU/opaque. U09 must transfer reservation ownership and must not charge a second logical task at dispatch.",
+    "U08 requires one process-wide four-worker cap. Failed join retains state and worker slots until process exit; no inferred quiescence.",
+    "User explicitly requests faster verification. Reuse identity-matching objects/dependencies and batch independent checks within current C/resource gates; do not waive worker1 or necessary checks."
+  ],
+  "task": "U08",
+  "base": "db82eb92fc4e920fa5efb932a581fe25d3e62be8",
+  "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED",
+  "board": "NOT_RUN",
+  "image": "NOT_BUILT"
+}

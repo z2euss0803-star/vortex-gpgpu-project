@@ -1,0 +1,31 @@
+{
+  "base": "11a5e18e5d12254c222d503747a7f91d949163c9",
+  "task": "U10",
+  "state": "COMPONENT_MILESTONE_FULL_TASK_IN_PROGRESS",
+  "scope": "UBUNTU_SOFTWARE_AND_MATCHED_AARCH64_LINK_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "verified_runs": [
+    "U10-final-normal-014",
+    "U10-final-sanitize-015",
+    "U10-final-tsan-016",
+    "U10-aarch64-017"
+  ],
+  "evidence_archive": "D:\\codex-unified-gpu-20261021\\evidence\\U10-components-final\\raw-and-artifacts.tar.gz",
+  "archive_sha256": "392decce69ac2b9c0b8dc08cf8ed37263695e2b8377a4955f719ed5915194d33",
+  "verified_members": 145,
+  "code_manifest_checks": {
+    "U10-final-normal-014": 864,
+    "U10-final-sanitize-015": 864,
+    "U10-final-tsan-016": 864,
+    "U10-aarch64-017": 864
+  },
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "remaining": [
+    "Runtime with shared budget/input64MiB/service1GiB/model2 and CPU/GPU executor integration",
+    "native vxgpud explicit-mode CAPS/startup/legacy borrowing integration",
+    "pending raw outcome persistence retry without re-execution",
+    "actual adapters and app/display acceptance in later plan tasks"
+  ]
+}

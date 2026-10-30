@@ -1,0 +1,701 @@
+{
+  "task": "U19",
+  "state": "SCOPED_COMPONENT_MATRIX_VERIFIED_NAMED_TASK_CLOSE_FOLLOWS_COMMIT",
+  "base": "3918e7e0829032d479eff33edbfc2f95075cb209",
+  "source_binding": {
+    "files": 1925,
+    "identical_full_manifest_all_four_modes": true,
+    "source_archive_sha256": "7a4e3e05c0db13d62c7a08aaf25be8afa293162355d6d10e668ae8bca559160e",
+    "canonical_manifest_sha256": "9b85970435d44d4ec5078d0f786a346429b66fe90231a8c8f01b6dd7e09973e8"
+  },
+  "matrix": [
+    {
+      "name": "U19-final-normal-020",
+      "mode": "normal",
+      "natural_exit": 0,
+      "receipt_sha256": "a0432f7efcdaad96479c6afe0fa9e42b36857ea7e6a0180431a42c95a56a9592",
+      "commands": [
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U19-final-normal-020",
+            "DEBUG_FLAGS=-g1",
+            "build/U19-final-normal-020/test_unified_timing",
+            "build/U19-final-normal-020/test_optimization",
+            "build/U19-final-normal-020/test_evidence_adversarial",
+            "build/U19-final-normal-020/test_original_event_timing",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 16.031906958960462,
+          "log": "build/U19-final-normal-020/command-000.log",
+          "sha256": "5c59e737113d12f94ac46233f9597b4ad9b1f9e75f15824c4962631052070a7a"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U19-final-normal-020",
+            "DEBUG_FLAGS=-g1",
+            "test-unified-evidence",
+            "test-unified-optimization",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.030318482022266835,
+          "log": "build/U19-final-normal-020/command-001.log",
+          "sha256": "c017dd97e4bc1321de9e102de606cc8ceef965a29e3d73c9e99163ba1eee2eba"
+        },
+        {
+          "argv": [
+            "build/U19-final-normal-020/test_evidence_adversarial",
+            "duplicate-counter"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.003370565944351256,
+          "log": "build/U19-final-normal-020/command-002.log",
+          "sha256": "4292b082d025b11e206639372a8c6a148b80ff1503cfb99598a9dbf7b323a22c"
+        },
+        {
+          "argv": [
+            "build/U19-final-normal-020/test_evidence_adversarial",
+            "pending-lifetime"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.002614657045342028,
+          "log": "build/U19-final-normal-020/command-003.log",
+          "sha256": "f141c4affcd9e488b87da49aa3c1fda3da3b0695dd4a95eb2c5a8992bf78485a"
+        },
+        {
+          "argv": [
+            "build/U19-final-normal-020/test_evidence_adversarial",
+            "weighted"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0023145040031522512,
+          "log": "build/U19-final-normal-020/command-004.log",
+          "sha256": "5352045ff2401793ed613dea0695a438b842b1e3b9f45c99237474b0f999b621"
+        },
+        {
+          "argv": [
+            "build/U19-final-normal-020/test_evidence_adversarial",
+            "constant-concurrent"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0035219250130467117,
+          "log": "build/U19-final-normal-020/command-005.log",
+          "sha256": "b12c993eaadae448286e6e42dea4f0ed5c319ced9bc3f1d3d02e8d1dceec9e99"
+        },
+        {
+          "argv": [
+            "build/U19-final-normal-020/test_evidence_adversarial",
+            "constant-alias"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0030934959650039673,
+          "log": "build/U19-final-normal-020/command-006.log",
+          "sha256": "95bf877477d5b77aa831855893f1e99e60445484cf510d03a9501e4eee50257b"
+        },
+        {
+          "argv": [
+            "build/U19-final-normal-020/test_evidence_adversarial",
+            "zero-parent"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0029645829927176237,
+          "log": "build/U19-final-normal-020/command-007.log",
+          "sha256": "acede7d8b1092df04039ff39aaeaee5bb75366c2cb0d103efe6ec88c87bc2e76"
+        },
+        {
+          "argv": [
+            "build/U19-final-normal-020/test_unified_timing",
+            "build/U19-final-normal-020/event.jsonl"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.02093468699604273,
+          "log": "build/U19-final-normal-020/command-008.log",
+          "sha256": "3898106876c10b558e8ba664f5f4f8fde2c5d99033be53a886e1cea973ed98a4"
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "tests.unified.test_performance_audit",
+            "-v"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.23741892504040152,
+          "log": "build/U19-final-normal-020/command-009.log",
+          "sha256": "54ae118ed4f8139a68a45a1da31c1930b6bd0e4f41a8f23b1a6a7e757e38e28d"
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "tests.nnrt.test_event_timing",
+            "tests.nnrt.test_evidence",
+            "-v"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.2707859899965115,
+          "log": "build/U19-final-normal-020/command-010.log",
+          "sha256": "bc7ea69b72281c2f37db2ee7e7a5750bdf2d0b18595b04efea65ce4f6267e70a"
+        }
+      ],
+      "elfs": [
+        {
+          "path": "build/U19-final-normal-020/test_evidence_adversarial",
+          "bytes": 1180320,
+          "sha256": "291dfbd1a8b4c2714cb18ca1d7c104881c09d3c5009ba55346ea53e2f04dc3dd"
+        },
+        {
+          "path": "build/U19-final-normal-020/test_optimization",
+          "bytes": 478648,
+          "sha256": "9ea234cbe4f8f47e5ae8717ef307db9e532720603094aa19545ed2f25fdcce2e"
+        },
+        {
+          "path": "build/U19-final-normal-020/test_original_event_timing",
+          "bytes": 310800,
+          "sha256": "aedb3158cb331a3c9684a98757060ef013764e04499c40a24b96e45bc0468277"
+        },
+        {
+          "path": "build/U19-final-normal-020/test_unified_timing",
+          "bytes": 782720,
+          "sha256": "80e6da7567e79f6997b50f193822cb29911e8783dd41e2b4e6085e6341f64d74"
+        }
+      ],
+      "target_runtime": null,
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    {
+      "name": "U19-final-sanitize-021",
+      "mode": "sanitize",
+      "natural_exit": 0,
+      "receipt_sha256": "f57273c336f7faa5bc365ee6b92de7df38808be65edfef78e034da8d3b76e971",
+      "commands": [
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U19-final-sanitize-021",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=address,undefined",
+            "build/U19-final-sanitize-021/test_unified_timing",
+            "build/U19-final-sanitize-021/test_optimization",
+            "build/U19-final-sanitize-021/test_evidence_adversarial",
+            "build/U19-final-sanitize-021/test_original_event_timing",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 74.418862978986,
+          "log": "build/U19-final-sanitize-021/command-000.log",
+          "sha256": "fdb81c03b9ea6715d37a119e613cff341e276811531dfb11d44a94c4350e94f2"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U19-final-sanitize-021",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=address,undefined",
+            "test-unified-evidence",
+            "test-unified-optimization",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.14101970399497077,
+          "log": "build/U19-final-sanitize-021/command-001.log",
+          "sha256": "02962e245f3d1b551ff878757af0ba4d1ede1b10c99fd6cbbfca432fca0604c1"
+        },
+        {
+          "argv": [
+            "build/U19-final-sanitize-021/test_evidence_adversarial",
+            "duplicate-counter"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.031544316036161035,
+          "log": "build/U19-final-sanitize-021/command-002.log",
+          "sha256": "4292b082d025b11e206639372a8c6a148b80ff1503cfb99598a9dbf7b323a22c"
+        },
+        {
+          "argv": [
+            "build/U19-final-sanitize-021/test_evidence_adversarial",
+            "pending-lifetime"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.024388874997384846,
+          "log": "build/U19-final-sanitize-021/command-003.log",
+          "sha256": "f141c4affcd9e488b87da49aa3c1fda3da3b0695dd4a95eb2c5a8992bf78485a"
+        },
+        {
+          "argv": [
+            "build/U19-final-sanitize-021/test_evidence_adversarial",
+            "weighted"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.023859045992139727,
+          "log": "build/U19-final-sanitize-021/command-004.log",
+          "sha256": "5352045ff2401793ed613dea0695a438b842b1e3b9f45c99237474b0f999b621"
+        },
+        {
+          "argv": [
+            "build/U19-final-sanitize-021/test_evidence_adversarial",
+            "constant-concurrent"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.04293433704879135,
+          "log": "build/U19-final-sanitize-021/command-005.log",
+          "sha256": "b12c993eaadae448286e6e42dea4f0ed5c319ced9bc3f1d3d02e8d1dceec9e99"
+        },
+        {
+          "argv": [
+            "build/U19-final-sanitize-021/test_evidence_adversarial",
+            "constant-alias"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.02154513803543523,
+          "log": "build/U19-final-sanitize-021/command-006.log",
+          "sha256": "95bf877477d5b77aa831855893f1e99e60445484cf510d03a9501e4eee50257b"
+        },
+        {
+          "argv": [
+            "build/U19-final-sanitize-021/test_evidence_adversarial",
+            "zero-parent"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.02618936001090333,
+          "log": "build/U19-final-sanitize-021/command-007.log",
+          "sha256": "acede7d8b1092df04039ff39aaeaee5bb75366c2cb0d103efe6ec88c87bc2e76"
+        },
+        {
+          "argv": [
+            "build/U19-final-sanitize-021/test_unified_timing",
+            "build/U19-final-sanitize-021/event.jsonl"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.11531639599706978,
+          "log": "build/U19-final-sanitize-021/command-008.log",
+          "sha256": "3898106876c10b558e8ba664f5f4f8fde2c5d99033be53a886e1cea973ed98a4"
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "tests.unified.test_performance_audit",
+            "-v"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.24449159699724987,
+          "log": "build/U19-final-sanitize-021/command-009.log",
+          "sha256": "3cd4c3727c783260285675fec99b520b8adb73826dc9e5dc7aaf1dbcafa6603b"
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "tests.nnrt.test_event_timing",
+            "tests.nnrt.test_evidence",
+            "-v"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.33785332296974957,
+          "log": "build/U19-final-sanitize-021/command-010.log",
+          "sha256": "9b8185ccd9e01a40087ee5e351b840ee9b8d297e1451c813c70f25b69bf1ccc6"
+        }
+      ],
+      "elfs": [
+        {
+          "path": "build/U19-final-sanitize-021/test_evidence_adversarial",
+          "bytes": 12297952,
+          "sha256": "e4a54aade9ea68f685b6388731490da4d8dc8dffed0fb6fe496117761d1b339b"
+        },
+        {
+          "path": "build/U19-final-sanitize-021/test_optimization",
+          "bytes": 4162432,
+          "sha256": "96402b6854c01771548682c0f2b55c3b0ada5baff18f67ce6bb29ddac24ef3ed"
+        },
+        {
+          "path": "build/U19-final-sanitize-021/test_original_event_timing",
+          "bytes": 2503096,
+          "sha256": "6f130554b24def54f0859e78a580616d1c8ae17bd562749fb39113a52681f4cf"
+        },
+        {
+          "path": "build/U19-final-sanitize-021/test_unified_timing",
+          "bytes": 9494248,
+          "sha256": "ca3301bea9656da36b24a7beee245ce92c241016e704d2f86e9db99e3f1fbd02"
+        }
+      ],
+      "target_runtime": null,
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    {
+      "name": "U19-final-thread-022",
+      "mode": "thread",
+      "natural_exit": 0,
+      "receipt_sha256": "749b73655b710e18fefdf17afa9c64ff4f7397c102367556493dd3d8f64e534c",
+      "commands": [
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U19-final-thread-022",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=thread",
+            "build/U19-final-thread-022/test_unified_timing",
+            "build/U19-final-thread-022/test_optimization",
+            "build/U19-final-thread-022/test_evidence_adversarial",
+            "build/U19-final-thread-022/test_original_event_timing",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 19.328604711976368,
+          "log": "build/U19-final-thread-022/command-000.log",
+          "sha256": "a3583d6934c3d1e106470103201a97473722f84efb3d515d5831f74f976af600"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U19-final-thread-022",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=thread",
+            "test-unified-evidence",
+            "test-unified-optimization",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.2213453419972211,
+          "log": "build/U19-final-thread-022/command-001.log",
+          "sha256": "7637c9fccd0f167695273b13376228fbabd064656c0ce9dc703818125d5ad708"
+        },
+        {
+          "argv": [
+            "build/U19-final-thread-022/test_evidence_adversarial",
+            "duplicate-counter"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.015988238039426506,
+          "log": "build/U19-final-thread-022/command-002.log",
+          "sha256": "4292b082d025b11e206639372a8c6a148b80ff1503cfb99598a9dbf7b323a22c"
+        },
+        {
+          "argv": [
+            "build/U19-final-thread-022/test_evidence_adversarial",
+            "pending-lifetime"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.020626780984457582,
+          "log": "build/U19-final-thread-022/command-003.log",
+          "sha256": "f141c4affcd9e488b87da49aa3c1fda3da3b0695dd4a95eb2c5a8992bf78485a"
+        },
+        {
+          "argv": [
+            "build/U19-final-thread-022/test_evidence_adversarial",
+            "weighted"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.020442400011233985,
+          "log": "build/U19-final-thread-022/command-004.log",
+          "sha256": "5352045ff2401793ed613dea0695a438b842b1e3b9f45c99237474b0f999b621"
+        },
+        {
+          "argv": [
+            "build/U19-final-thread-022/test_evidence_adversarial",
+            "constant-concurrent"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0730015059816651,
+          "log": "build/U19-final-thread-022/command-005.log",
+          "sha256": "b12c993eaadae448286e6e42dea4f0ed5c319ced9bc3f1d3d02e8d1dceec9e99"
+        },
+        {
+          "argv": [
+            "build/U19-final-thread-022/test_evidence_adversarial",
+            "constant-alias"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.015907461987808347,
+          "log": "build/U19-final-thread-022/command-006.log",
+          "sha256": "95bf877477d5b77aa831855893f1e99e60445484cf510d03a9501e4eee50257b"
+        },
+        {
+          "argv": [
+            "build/U19-final-thread-022/test_evidence_adversarial",
+            "zero-parent"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.017763932002708316,
+          "log": "build/U19-final-thread-022/command-007.log",
+          "sha256": "acede7d8b1092df04039ff39aaeaee5bb75366c2cb0d103efe6ec88c87bc2e76"
+        },
+        {
+          "argv": [
+            "build/U19-final-thread-022/test_unified_timing",
+            "build/U19-final-thread-022/event.jsonl"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.16528598504373804,
+          "log": "build/U19-final-thread-022/command-008.log",
+          "sha256": "3898106876c10b558e8ba664f5f4f8fde2c5d99033be53a886e1cea973ed98a4"
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "tests.unified.test_performance_audit",
+            "-v"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.28087962802965194,
+          "log": "build/U19-final-thread-022/command-009.log",
+          "sha256": "2e5c956cdb7c1345132a2300a739038f75f64c28b9ab8e4dc76d004d50709d1e"
+        },
+        {
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "tests.nnrt.test_event_timing",
+            "tests.nnrt.test_evidence",
+            "-v"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.30398804298602045,
+          "log": "build/U19-final-thread-022/command-010.log",
+          "sha256": "8d5cfb843356fb40a02f809ae6e9668f0febb3ece463efdb1094d32b0e86ef22"
+        }
+      ],
+      "elfs": [
+        {
+          "path": "build/U19-final-thread-022/test_evidence_adversarial",
+          "bytes": 1726896,
+          "sha256": "ec5815a7c95016f2a066810788e01e9177fc9127fe7f1ba976b0c1b28576d658"
+        },
+        {
+          "path": "build/U19-final-thread-022/test_optimization",
+          "bytes": 712248,
+          "sha256": "42f8fc8e2ea65c0bd78fd66de4a6da5765e6aa5bc155dcd2e47797c886ba18a2"
+        },
+        {
+          "path": "build/U19-final-thread-022/test_original_event_timing",
+          "bytes": 436752,
+          "sha256": "c06ce5b8e45df6b3c1e1a64353089f4cdb4db4713e13908119776f75462d4314"
+        },
+        {
+          "path": "build/U19-final-thread-022/test_unified_timing",
+          "bytes": 1106720,
+          "sha256": "32886e5d0b6dd8f55e034f175f8e6e4bc40e97e3f3452d921fd03c2844035150"
+        }
+      ],
+      "target_runtime": null,
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    {
+      "name": "U19-final-cross-023",
+      "mode": "cross",
+      "natural_exit": 0,
+      "receipt_sha256": "da32778f1e8941ab0cc4752edbdca98b8383fc49705b1b66061eb649cc4c8ebc",
+      "commands": [
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-g++",
+            "--version"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.00574847700772807,
+          "log": "build/U19-final-cross-023/command-000.log",
+          "sha256": "eb592c0c26adf30a942c441f32156a4ba030254782b1cc21f12893358cb6be27"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-gcc",
+            "-dumpmachine"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0052462840103544295,
+          "log": "build/U19-final-cross-023/command-001.log",
+          "sha256": "8711caaed6fee45adb1c0471a448ca8e9739a16f54dbc23fbb391eec5955069c"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U19-final-cross-023",
+            "DEBUG_FLAGS=-g1",
+            "CC=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-gcc",
+            "CXX=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-g++",
+            "NN_JSON_PREFIX=/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/json-install",
+            "build/U19-final-cross-023/test_unified_timing",
+            "build/U19-final-cross-023/test_optimization",
+            "build/U19-final-cross-023/test_evidence_adversarial",
+            "build/U19-final-cross-023/test_original_event_timing",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 21.530201239977032,
+          "log": "build/U19-final-cross-023/command-002.log",
+          "sha256": "55c73c7c57bfd015feae9980d7fbf6beb15f7720a7d46e5535abb9f7fdac04ee"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U19-final-cross-023/test_unified_timing"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0042294650338590145,
+          "log": "build/U19-final-cross-023/command-003.log",
+          "sha256": "6290a67112ae7dd88c572702c1aafe76632d72c0b443ba56a6eb0f4e36148bd7"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U19-final-cross-023/test_optimization"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0033331679878756404,
+          "log": "build/U19-final-cross-023/command-004.log",
+          "sha256": "04be57ed798ca3dbef9a18b4a87b210b94e6ed73481a18bc79f0cd43413965c3"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U19-final-cross-023/test_evidence_adversarial"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.005304674035869539,
+          "log": "build/U19-final-cross-023/command-005.log",
+          "sha256": "73d44c3a827ed7b384bde0d4418a9a61c886a756d9d6d32348cfaf8509ec1815"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U19-final-cross-023/test_original_event_timing"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.005801611987408251,
+          "log": "build/U19-final-cross-023/command-006.log",
+          "sha256": "41896b14ca79f7ad1108ae1e5c5355d8ac1e1af444491ef3e9aba163688bc5f2"
+        }
+      ],
+      "elfs": [
+        {
+          "path": "build/U19-final-cross-023/test_evidence_adversarial",
+          "bytes": 1251632,
+          "sha256": "0c3f01accc6ec54a934885a24247616df9a19537d7205d8d14652d71636785c9"
+        },
+        {
+          "path": "build/U19-final-cross-023/test_optimization",
+          "bytes": 502520,
+          "sha256": "5ce6725b01e35cab92dd8e5bc8981fa9e709cf26f38fea85453446445345a591"
+        },
+        {
+          "path": "build/U19-final-cross-023/test_original_event_timing",
+          "bytes": 340480,
+          "sha256": "8f3fa30fa33f56d1e60710b92264d4f01d75ff1d517e7ab3e542fde6a0f7b6b2"
+        },
+        {
+          "path": "build/U19-final-cross-023/test_unified_timing",
+          "bytes": 847936,
+          "sha256": "d98289e575a358ff85ef61ba72fc72d817370827d9e022bb7d75fc238e360e03"
+        }
+      ],
+      "target_runtime": {
+        "rootfs_sha256": "d5163fa50ae6b3b945a280c96b6273e0eff9af312a992407bdf8b9abee3eb647",
+        "files": {
+          "ld-linux-aarch64.so.1": {
+            "path": "lib/ld-linux-aarch64.so.1",
+            "sha256": "2c307a67d7673dcb99e0e78bb6c3ae6ca468e21e5a0f7cbc6ad82846ad7afd4c"
+          },
+          "libc.so.6": {
+            "path": "lib/libc.so.6",
+            "sha256": "aeebc1b6491583b277e08ad1ca2509f4e28d628cb3df78073b71d676dea2bbe0"
+          },
+          "libstdc++.so.6": {
+            "path": "usr/lib/libstdc++.so.6",
+            "sha256": "48f2c5788373d1987b8c21920838a109e945b5054a239a18a2115d105331e3a0"
+          },
+          "libgcc_s.so.1": {
+            "path": "lib/libgcc_s.so.1",
+            "sha256": "46ecda5c0995aaf773c409100398418361cbebdadffa768a24c950a84ae7cf76"
+          },
+          "libm.so.6": {
+            "path": "lib/libm.so.6",
+            "sha256": "f5379ab0ba0797b5d66619425d8175263ac813ae7d7127376db2663be78a0a4b"
+          },
+          "libpthread.so.0": {
+            "path": "lib/libpthread.so.0",
+            "sha256": "edcd56cc1d6e01b0a2dec0258318b965835aacc9ae6ded0d1fbba5f1084caadb"
+          }
+        },
+        "required_versions": [
+          "CXXABI_1.3",
+          "CXXABI_1.3.9",
+          "GCC_3.0",
+          "GLIBCXX_3.4",
+          "GLIBCXX_3.4.11",
+          "GLIBCXX_3.4.14",
+          "GLIBCXX_3.4.21",
+          "GLIBCXX_3.4.22",
+          "GLIBCXX_3.4.9",
+          "GLIBC_2.17",
+          "GLIBC_2.25"
+        ]
+      },
+      "executed_target_elfs": false,
+      "gpu_raw_cycles": null
+    }
+  ],
+  "archive": {
+    "members": 89,
+    "logical_bytes": 42507901,
+    "archive_bytes": 10258800,
+    "sha256": "c51fc731a8a971855627c9967160cb2b121749a7e9e82acdc6d59ea1e2a67d3c",
+    "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U19-final-matrix-024-evidence.tar.gz",
+    "gpu_raw_cycles": null,
+    "host": "z2euss-virtual-machine",
+    "uid": 1000,
+    "free_disk": 2206474240,
+    "verified_members": 89,
+    "members_sha256": "94f34892956b417474fc2000caf855e266eb8da4d740c2a3573be02707918a90",
+    "hardlink_members": 0,
+    "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U19-final-matrix-024\\raw-and-artifacts.tar.gz",
+    "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+  },
+  "numeric": "CONTRACT_AND_CPU_COPY_BYTE_TESTS_NO_NEW_NEURAL_RESULT",
+  "native_integration": "U20_PENDING; HELPERS_NOT_ENABLED_NATIVE_GPU_OPTIMIZATIONS",
+  "gpu_raw_cycles": null,
+  "image": "NOT_BUILT",
+  "board": "NOT_ACCESSED",
+  "sd": "NOT_TOUCHED",
+  "hardware": "UNCHANGED_FROZEN_S8_AND_P8_CAPABILITY_ISOLATION",
+  "public_abi": "UNCHANGED",
+  "performance": "NO_GPU_OR_APPLICATION_SPEEDUP_CLAIM"
+}

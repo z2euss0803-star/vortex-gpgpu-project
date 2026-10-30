@@ -1,0 +1,1151 @@
+{
+  "records": [
+    {
+      "roi_index": 0,
+      "roi_id": "p1_001",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_001.f32",
+      "bytes": 196608,
+      "sha256": "de5513346d7922032e415b2d5eb40a5862b084a2ed264b73602ab8f00769f0de"
+    },
+    {
+      "roi_index": 1,
+      "roi_id": "p1_002",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_002.f32",
+      "bytes": 196608,
+      "sha256": "8062b330498dcb48bccd8f90d713270fe857a666865432b8cdcdf36a299f0887"
+    },
+    {
+      "roi_index": 2,
+      "roi_id": "p1_003",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_003.f32",
+      "bytes": 196608,
+      "sha256": "54276f9197ff5abc9c67cec63dd20ac9565594a81a4ea13df068e894365a68d0"
+    },
+    {
+      "roi_index": 3,
+      "roi_id": "p1_004",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_004.f32",
+      "bytes": 196608,
+      "sha256": "8b4f7ee27c9a8d4963bc00e72c8d1348808eeefccbdfc28fd10470302a1049b5"
+    },
+    {
+      "roi_index": 4,
+      "roi_id": "p1_005",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_005.f32",
+      "bytes": 196608,
+      "sha256": "fbaf2795678d28b6caeffe7d3f3a62d710c36cfa7cae8e3b7e56af8c2b79c0d5"
+    },
+    {
+      "roi_index": 5,
+      "roi_id": "p1_006",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_006.f32",
+      "bytes": 196608,
+      "sha256": "a6041f6caa5f4374cd8172106f7df083c3a7ff83fc4c8cbbb7d5e6725a31bce9"
+    },
+    {
+      "roi_index": 6,
+      "roi_id": "p1_007",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_007.f32",
+      "bytes": 196608,
+      "sha256": "aebca231895f045057c0f53fb6eae086daf74be3fe5e888ff0a933491fa5495a"
+    },
+    {
+      "roi_index": 7,
+      "roi_id": "p1_008",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_008.f32",
+      "bytes": 196608,
+      "sha256": "d62249bb7cd886b05b2533989a6686330a16e527d47546474b97513eb5d490a3"
+    },
+    {
+      "roi_index": 8,
+      "roi_id": "p1_009",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_009.f32",
+      "bytes": 196608,
+      "sha256": "98a1c5b05a94d8048dedc3e5672e70f453ecf9791f0b35adc5ee77d4e2fd5dd3"
+    },
+    {
+      "roi_index": 9,
+      "roi_id": "p1_010",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_010.f32",
+      "bytes": 196608,
+      "sha256": "a124791840a00d18cdb3644e78b0fd013f16eeef9e075766a7ceb44b83e13bde"
+    },
+    {
+      "roi_index": 10,
+      "roi_id": "p1_011",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_011.f32",
+      "bytes": 196608,
+      "sha256": "75d78215cdf6d4cf5032952e6da9b5457e3f6caaeecc827d7c1f76858ff8538c"
+    },
+    {
+      "roi_index": 11,
+      "roi_id": "p1_012",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_012.f32",
+      "bytes": 196608,
+      "sha256": "d2f86a627b1ed2dac1d8787c9f13f76af4d1ec2cc603bfb0e8518a9de869517a"
+    },
+    {
+      "roi_index": 12,
+      "roi_id": "p1_013",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_013.f32",
+      "bytes": 196608,
+      "sha256": "d42cb875a0185f697ab96a3640e4338604dfe160ce34b164784fdf8e180bcbde"
+    },
+    {
+      "roi_index": 13,
+      "roi_id": "p1_014",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_014.f32",
+      "bytes": 196608,
+      "sha256": "6b79ee43c2e5a4ddab72503cb518d39e3b9a46357528eaa40fbf378eb607a4b7"
+    },
+    {
+      "roi_index": 14,
+      "roi_id": "p1_015",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_015.f32",
+      "bytes": 196608,
+      "sha256": "30ee19760722400b12273b58b6299538576f44036e348dbd2f52d2d1bbd00dec"
+    },
+    {
+      "roi_index": 15,
+      "roi_id": "p1_016",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_016.f32",
+      "bytes": 196608,
+      "sha256": "4d55a680424077633cfac0a1f5a73d53ee919633edb13f5de4e022efbbcb4fa5"
+    },
+    {
+      "roi_index": 16,
+      "roi_id": "p1_017",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_017.f32",
+      "bytes": 196608,
+      "sha256": "827046e8b66893821e709cbea40f078b89c298ed68da3bfc3f96897f766dc056"
+    },
+    {
+      "roi_index": 17,
+      "roi_id": "p1_018",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_018.f32",
+      "bytes": 196608,
+      "sha256": "4e401d0aeb58ca206fae226cdb07b1339bca16e9921d165455cab210d463c056"
+    },
+    {
+      "roi_index": 18,
+      "roi_id": "p1_019",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_019.f32",
+      "bytes": 196608,
+      "sha256": "29869c68911bef55c7d8b033dae5ffac0438a20be47ce1e9390bce5ff7edd46c"
+    },
+    {
+      "roi_index": 19,
+      "roi_id": "p1_020",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_020.f32",
+      "bytes": 196608,
+      "sha256": "741e3b5484ba4dc2b8cc49556af4c4a717e75c87215103b298d9262dc05c367e"
+    },
+    {
+      "roi_index": 20,
+      "roi_id": "p2_001",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_001.f32",
+      "bytes": 196608,
+      "sha256": "61b5b138192ba69970ba4ab401004284389b89d4021d8a99b9c45efd358e4707"
+    },
+    {
+      "roi_index": 21,
+      "roi_id": "p2_002",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_002.f32",
+      "bytes": 196608,
+      "sha256": "fbf2b726d70acefb24cb32c03b038a6383aad03599153cddcea8334c3acf8d8a"
+    },
+    {
+      "roi_index": 22,
+      "roi_id": "p2_003",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_003.f32",
+      "bytes": 196608,
+      "sha256": "ea62f1761c4b9dcac63a31c2311321af06700699da78fe96a7c491c4492a0ba7"
+    },
+    {
+      "roi_index": 23,
+      "roi_id": "p2_004",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_004.f32",
+      "bytes": 196608,
+      "sha256": "dfd337893b71ab63364d66501428cc1f409e2d93731024a049c6cde84e63b3b7"
+    },
+    {
+      "roi_index": 24,
+      "roi_id": "p2_005",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_005.f32",
+      "bytes": 196608,
+      "sha256": "20090d609e03fec760409ad7f490ac5b1a7734e81d346180c0dfa5a08b7d9245"
+    },
+    {
+      "roi_index": 25,
+      "roi_id": "p2_006",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_006.f32",
+      "bytes": 196608,
+      "sha256": "3455278b50e90bfd2a498d59ce57035eec4a42b4b1db97f1aa2c1c266231a5d7"
+    },
+    {
+      "roi_index": 26,
+      "roi_id": "p2_007",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_007.f32",
+      "bytes": 196608,
+      "sha256": "52707f15d956315ce995e112ea25dd4baeb0723a8b0e461d6e14871bd31e4793"
+    },
+    {
+      "roi_index": 27,
+      "roi_id": "p2_008",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_008.f32",
+      "bytes": 196608,
+      "sha256": "651d7c822ea5f8cfd22e8869f53c041ac1c6429bee5141e1f82d56b254aa9a80"
+    },
+    {
+      "roi_index": 28,
+      "roi_id": "p2_009",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_009.f32",
+      "bytes": 196608,
+      "sha256": "b3968460a7dda8a1826e38ca0a513221172d2e75c072a798496fbfaf943eb2e3"
+    },
+    {
+      "roi_index": 29,
+      "roi_id": "p2_010",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_010.f32",
+      "bytes": 196608,
+      "sha256": "fae2e92f651486abfa7b043d91870d5408a849a0e463d551a282a125ef4f943f"
+    },
+    {
+      "roi_index": 30,
+      "roi_id": "p2_011",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_011.f32",
+      "bytes": 196608,
+      "sha256": "f00751274f041e524854af5c11fa920475056e14803313c611ea9b6e0d906f66"
+    },
+    {
+      "roi_index": 31,
+      "roi_id": "p2_012",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_012.f32",
+      "bytes": 196608,
+      "sha256": "a701899cd50cc50018a5d414cd887169c18ca85430d8d02dbdb456da46e98f0a"
+    },
+    {
+      "roi_index": 32,
+      "roi_id": "p2_013",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p2_013.f32",
+      "bytes": 196608,
+      "sha256": "b9f4e62da76a03c3b9f71fdeab91221e979eeaaecef9ea7bf767d34a6f7056bd"
+    },
+    {
+      "roi_index": 33,
+      "roi_id": "p1_021",
+      "included": false,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_021.f32",
+      "bytes": 196608,
+      "sha256": "b8bc568e68a736f6c35871f930e5ce8e458c1aa7697bd59724e7ff9c00180702"
+    },
+    {
+      "roi_index": 34,
+      "roi_id": "p1_022",
+      "included": false,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_022.f32",
+      "bytes": 196608,
+      "sha256": "1a56dbb8b9f3bd6d4ffa7c73ce1c0bc6e5ca9389efe9f2868a68475cd9423990"
+    },
+    {
+      "roi_index": 35,
+      "roi_id": "p1_023",
+      "included": false,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_023.f32",
+      "bytes": 196608,
+      "sha256": "d8b9fd1c6cfafa41f00c871694e12f91abf1c082c88cb8839b193afaec3aaf59"
+    },
+    {
+      "roi_index": 36,
+      "roi_id": "p1_024",
+      "included": false,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_024.f32",
+      "bytes": 196608,
+      "sha256": "066a092a6dfffe3c27780a350e95f78472eb0d65f9eae5c979623374a07e1b68"
+    },
+    {
+      "roi_index": 37,
+      "roi_id": "p1_025",
+      "included": false,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_025.f32",
+      "bytes": 196608,
+      "sha256": "4987892bb66c723ac4fe10f3b9a5bc93d20d56fc41863edab7632afd95782622"
+    },
+    {
+      "roi_index": 38,
+      "roi_id": "p1_026",
+      "included": false,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p1_026.f32",
+      "bytes": 196608,
+      "sha256": "d0b9d8649fa190f7afec256e96c4696e0e74940e9ef53d46fec6aca0c67770e9"
+    },
+    {
+      "roi_index": 39,
+      "roi_id": "p3_001",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_001.f32",
+      "bytes": 196608,
+      "sha256": "aeb21050614460467a5aef37512547b121131050e07631702f5c1d00f81baa32"
+    },
+    {
+      "roi_index": 40,
+      "roi_id": "p3_002",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_002.f32",
+      "bytes": 196608,
+      "sha256": "9b03117bb215aea04713bf86f130b7412e1f9536ac638218f41f5923b6618699"
+    },
+    {
+      "roi_index": 41,
+      "roi_id": "p3_003",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_003.f32",
+      "bytes": 196608,
+      "sha256": "45333dfbe90a890a59bc4734d9c1ba998565ef15a85c4add63d4f9bd7f8dee92"
+    },
+    {
+      "roi_index": 42,
+      "roi_id": "p3_004",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_004.f32",
+      "bytes": 196608,
+      "sha256": "1dac4abc203824b7d6d1c66e75e7bfe21aebe5f9209d37ec33af60aa89dafcca"
+    },
+    {
+      "roi_index": 43,
+      "roi_id": "p3_005",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_005.f32",
+      "bytes": 196608,
+      "sha256": "6488a7dac33c39bc3ad794a57118304a350e0001a8ae7e6915730a827e6ce544"
+    },
+    {
+      "roi_index": 44,
+      "roi_id": "p3_006",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_006.f32",
+      "bytes": 196608,
+      "sha256": "2935da0581562db2894fad727e2a08d45b3a337d98509d5b5cd42c0523b409ca"
+    },
+    {
+      "roi_index": 45,
+      "roi_id": "p3_007",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_007.f32",
+      "bytes": 196608,
+      "sha256": "58438ef1a6ab2d05e785cd4387eec042793b22a93a85c5312a7c5f8abf46decb"
+    },
+    {
+      "roi_index": 46,
+      "roi_id": "p3_008",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_008.f32",
+      "bytes": 196608,
+      "sha256": "de4958117e4a8434140f60ce09e252bb52617d94475424a01a360ca3b3da3579"
+    },
+    {
+      "roi_index": 47,
+      "roi_id": "p3_009",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_009.f32",
+      "bytes": 196608,
+      "sha256": "7218ae5eeffb55fce589d6efaf747613f230b776f222c0a4f49e922eb0c2ac23"
+    },
+    {
+      "roi_index": 48,
+      "roi_id": "p3_010",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_010.f32",
+      "bytes": 196608,
+      "sha256": "0517b25a6beb40838bbefd1d68bc1ca878b7f8a1e8a1447cf652c17c29230f15"
+    },
+    {
+      "roi_index": 49,
+      "roi_id": "p3_011",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_011.f32",
+      "bytes": 196608,
+      "sha256": "214258688d6e9c1cd6667c7a2490a8b24f8d01c569f41e9d084fe9816138a798"
+    },
+    {
+      "roi_index": 50,
+      "roi_id": "p3_012",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_012.f32",
+      "bytes": 196608,
+      "sha256": "4895243e91cb1774e0ffce892a662571d7c41ea9024083d81894c7a43af144df"
+    },
+    {
+      "roi_index": 51,
+      "roi_id": "p3_013",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_013.f32",
+      "bytes": 196608,
+      "sha256": "2d9d14c96a88287d67ece4a61f1caca82f5d0143370cb37b7dec3b1604ee7bcc"
+    },
+    {
+      "roi_index": 52,
+      "roi_id": "p3_014",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_014.f32",
+      "bytes": 196608,
+      "sha256": "93d32c2997cbc476fb05e1af22944ceb011d70cdb0a0585b99e2be64b11fbd39"
+    },
+    {
+      "roi_index": 53,
+      "roi_id": "p3_015",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_015.f32",
+      "bytes": 196608,
+      "sha256": "46f6931e87ab46785e503d6862dcb0e0e236b24ecfede7d2b0463c580bfb3f34"
+    },
+    {
+      "roi_index": 54,
+      "roi_id": "p3_016",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_016.f32",
+      "bytes": 196608,
+      "sha256": "103ec1cb76134c7024e4c76407356e7b12488226ad65b276d173c5cff401cad8"
+    },
+    {
+      "roi_index": 55,
+      "roi_id": "p3_017",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_017.f32",
+      "bytes": 196608,
+      "sha256": "9332c7c307cb2feeddabbb81d555947a32c5ec9ba0c1e9a2863f31d1f24c3e74"
+    },
+    {
+      "roi_index": 56,
+      "roi_id": "p3_018",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_018.f32",
+      "bytes": 196608,
+      "sha256": "1355b26142fbb1785ee280c053af5832bbb68270e3b049c28578e1d19c1c5ce2"
+    },
+    {
+      "roi_index": 57,
+      "roi_id": "p3_019",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_019.f32",
+      "bytes": 196608,
+      "sha256": "5e687db373ee9c852c842c6f44a827a9d0b0f2b19dc5111feba41310fc2fa921"
+    },
+    {
+      "roi_index": 58,
+      "roi_id": "p3_020",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_020.f32",
+      "bytes": 196608,
+      "sha256": "daa2a704670911cdb2d8c6f6378c513ea7424cb9db2d4edfc76968373c92ac76"
+    },
+    {
+      "roi_index": 59,
+      "roi_id": "p3_021",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_021.f32",
+      "bytes": 196608,
+      "sha256": "f3afb0db65df84d0aacba8c2da4211063f6a3bdb2e4eb812d186733b43d2c120"
+    },
+    {
+      "roi_index": 60,
+      "roi_id": "p3_022",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_022.f32",
+      "bytes": 196608,
+      "sha256": "1a0e7aa50daebfe9641231fbe160809b681b8213006c03b1d51f59e3626a3ebc"
+    },
+    {
+      "roi_index": 61,
+      "roi_id": "p3_023",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_023.f32",
+      "bytes": 196608,
+      "sha256": "b2051284190d5a70decd06ea61c44083ca341a054fc91d8cf9d55a7612bec1a8"
+    },
+    {
+      "roi_index": 62,
+      "roi_id": "p3_024",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_024.f32",
+      "bytes": 196608,
+      "sha256": "de60093b14b552fdcf93458e9bd93f8e5cef1f0d624d4111f665b5386999cfa5"
+    },
+    {
+      "roi_index": 63,
+      "roi_id": "p3_025",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_025.f32",
+      "bytes": 196608,
+      "sha256": "b55c7cc1530341256a210403417d9bfe39b94a067d59abca1ca1504e483c1a41"
+    },
+    {
+      "roi_index": 64,
+      "roi_id": "p3_026",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_026.f32",
+      "bytes": 196608,
+      "sha256": "d1a4c6decf455d1ea968dac4e0f8fc7b9ef181ea6466a77253de7f27789ba522"
+    },
+    {
+      "roi_index": 65,
+      "roi_id": "p3_027",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_027.f32",
+      "bytes": 196608,
+      "sha256": "34a92e42e8575793294f88d9525e4f52edd9c1ca8201ac4bc4c05ce74dbfccfe"
+    },
+    {
+      "roi_index": 66,
+      "roi_id": "p3_028",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_028.f32",
+      "bytes": 196608,
+      "sha256": "4b51464f92dd8bba722387e1282d08ff6349933b6a04f06f38e92e9e46ddee7d"
+    },
+    {
+      "roi_index": 67,
+      "roi_id": "p3_029",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_029.f32",
+      "bytes": 196608,
+      "sha256": "2971d9d11ec569f4ba5025f80db71e72f2a309d46c745c3133412572f7d1708a"
+    },
+    {
+      "roi_index": 68,
+      "roi_id": "p3_030",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_030.f32",
+      "bytes": 196608,
+      "sha256": "3b29dc3a205a65d325155d2c0f3cb22867d5d6b1287e6a9ffad572700befa079"
+    },
+    {
+      "roi_index": 69,
+      "roi_id": "p3_031",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_031.f32",
+      "bytes": 196608,
+      "sha256": "e6712900a65ea83b4facfefaecd18e36851663ad565feba60c260887f33cfa07"
+    },
+    {
+      "roi_index": 70,
+      "roi_id": "p3_032",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_032.f32",
+      "bytes": 196608,
+      "sha256": "5794381cbffc7b0565fddae584b409ce54d33cc1b22a33f1515c8ad404b57bfb"
+    },
+    {
+      "roi_index": 71,
+      "roi_id": "p3_033",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_033.f32",
+      "bytes": 196608,
+      "sha256": "4cebdeba90828fee83902550447ebb441cbc222b6924c06c0ec6210f9f2e0dbb"
+    },
+    {
+      "roi_index": 72,
+      "roi_id": "p3_034",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_034.f32",
+      "bytes": 196608,
+      "sha256": "0b4389f8b257c24229bf5a17b9dbb5b04a735678ef33022df93f92832ffbdc7b"
+    },
+    {
+      "roi_index": 73,
+      "roi_id": "p3_035",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_035.f32",
+      "bytes": 196608,
+      "sha256": "a47844c7c67d44f0bb537362a0403922af235790914c90b8e5c16fee3cc9a9e1"
+    },
+    {
+      "roi_index": 74,
+      "roi_id": "p3_036",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_036.f32",
+      "bytes": 196608,
+      "sha256": "c76bac95b2831ca66bf31fcac5f561f204e35535401febf70c77eeb87a8d819f"
+    },
+    {
+      "roi_index": 75,
+      "roi_id": "p3_037",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_037.f32",
+      "bytes": 196608,
+      "sha256": "257d713de4f833407174e7a1877776d18392644c60c809ba1a47272549378f85"
+    },
+    {
+      "roi_index": 76,
+      "roi_id": "p3_038",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_038.f32",
+      "bytes": 196608,
+      "sha256": "a38ffd4234b6b7422bd0cf563135d8a1253ab08cdfc8e92be4152876a3e78872"
+    },
+    {
+      "roi_index": 77,
+      "roi_id": "p3_039",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_039.f32",
+      "bytes": 196608,
+      "sha256": "56c72a65f71fd20cfd296cc0282f8adf145f6128f3b468c977bb337e0834c3fe"
+    },
+    {
+      "roi_index": 78,
+      "roi_id": "p3_040",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_040.f32",
+      "bytes": 196608,
+      "sha256": "2d2e9aad0f4b90ddaf666edb8a401b16fc567cb76e83f2c8098d3dcb7381c5f4"
+    },
+    {
+      "roi_index": 79,
+      "roi_id": "p3_041",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_041.f32",
+      "bytes": 196608,
+      "sha256": "4617571b0b4332c3a851a427c2dd3fdf9f23cbcec17325addefbf6c15a2deb09"
+    },
+    {
+      "roi_index": 80,
+      "roi_id": "p3_042",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_042.f32",
+      "bytes": 196608,
+      "sha256": "c914f39e20bf76ff64defadc7bc1fdda3a9c6b03e54f5da27e17d52ccd6858b2"
+    },
+    {
+      "roi_index": 81,
+      "roi_id": "p3_043",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_043.f32",
+      "bytes": 196608,
+      "sha256": "5fd79c76de7ce7e67e07dd3dd492c1b0475ff5940199544c9361013740c14e29"
+    },
+    {
+      "roi_index": 82,
+      "roi_id": "p3_044",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_044.f32",
+      "bytes": 196608,
+      "sha256": "6504fe79442d6f6bc35b2849f77d127b87342ca693d8c3277aa58c703c30689e"
+    },
+    {
+      "roi_index": 83,
+      "roi_id": "p3_045",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_045.f32",
+      "bytes": 196608,
+      "sha256": "3ac0043e34a90e4a3b8d35bc6d655e58b6cb30bcd6a188dfac250fa8df0994b3"
+    },
+    {
+      "roi_index": 84,
+      "roi_id": "p3_046",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_046.f32",
+      "bytes": 196608,
+      "sha256": "c63a885d343a4b100add2f9e3150d95f85edf326cdccb0abbb297f0d55026325"
+    },
+    {
+      "roi_index": 85,
+      "roi_id": "p3_047",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_047.f32",
+      "bytes": 196608,
+      "sha256": "6aeb65d7d1255d88b5b583220a57f0411a8114a7499c482fb26657b5a5477d38"
+    },
+    {
+      "roi_index": 86,
+      "roi_id": "p3_048",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_048.f32",
+      "bytes": 196608,
+      "sha256": "2bd26f2e456eb7667bbbdbd5755c48324d6c327aa1b7dba95b17d564f1db2c6c"
+    },
+    {
+      "roi_index": 87,
+      "roi_id": "p3_049",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_049.f32",
+      "bytes": 196608,
+      "sha256": "1e03f29f4b7480ad55924ad6a54550e5a43da4e4a9c65c6b75a96ce51ff93c85"
+    },
+    {
+      "roi_index": 88,
+      "roi_id": "p3_050",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_050.f32",
+      "bytes": 196608,
+      "sha256": "ed0f27c0ccb1af0d07ff2b200eee20a8933d10248a959a9ec9c4de106521e817"
+    },
+    {
+      "roi_index": 89,
+      "roi_id": "p3_051",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_051.f32",
+      "bytes": 196608,
+      "sha256": "1f91f7d8cf2ec0fdaa2860714827d5c91f2451cb32da7e38b1e442a593c421a6"
+    },
+    {
+      "roi_index": 90,
+      "roi_id": "p3_052",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_052.f32",
+      "bytes": 196608,
+      "sha256": "dddde44fed04f8b8bf4f16c64f2ed3a50ba07a371a156a394ab13c2a8c8b21f0"
+    },
+    {
+      "roi_index": 91,
+      "roi_id": "p3_053",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_053.f32",
+      "bytes": 196608,
+      "sha256": "247505449dfe0a85b3037f8392f250cc8cf43cf42f76046c1da7a1c67302c892"
+    },
+    {
+      "roi_index": 92,
+      "roi_id": "p3_054",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_054.f32",
+      "bytes": 196608,
+      "sha256": "bed48ce547a51aa2482b7a951fa3f452640b4d01ce6eac4fcfafa6252f024ef0"
+    },
+    {
+      "roi_index": 93,
+      "roi_id": "p3_055",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_055.f32",
+      "bytes": 196608,
+      "sha256": "d1e5b885583d3ba00c793fff1323b9061b98d6ecbedf05f13298a57ed91a95ff"
+    },
+    {
+      "roi_index": 94,
+      "roi_id": "p3_056",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_056.f32",
+      "bytes": 196608,
+      "sha256": "c010aa7e277ca820d0a00eb281d4b163b0c5a812554be07cb85ba143e1fa6207"
+    },
+    {
+      "roi_index": 95,
+      "roi_id": "p3_057",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_057.f32",
+      "bytes": 196608,
+      "sha256": "1c98c7725bc4b649658639c6f7af00aba6a84a6c335e7c4a817996e4efced7b2"
+    },
+    {
+      "roi_index": 96,
+      "roi_id": "p3_058",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_058.f32",
+      "bytes": 196608,
+      "sha256": "afcc8fa50a457d06d348d8fb18b3287cdce145b9223eeb754b284487d3541841"
+    },
+    {
+      "roi_index": 97,
+      "roi_id": "p3_059",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_059.f32",
+      "bytes": 196608,
+      "sha256": "f6989c9b4f7de11b7d21911521343b7f4f27bcdffceb0b04ff8cf717e86a4bd7"
+    },
+    {
+      "roi_index": 98,
+      "roi_id": "p3_060",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_060.f32",
+      "bytes": 196608,
+      "sha256": "ef95886a0be2888f593a69572a0d44f4291fd514785601e5f4fa4fdf957ce2d6"
+    },
+    {
+      "roi_index": 99,
+      "roi_id": "p3_061",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_061.f32",
+      "bytes": 196608,
+      "sha256": "05a22a38d106dd98d3d4cf746380661e9dcd1c5f60359ddbf7c3746c3333f97f"
+    },
+    {
+      "roi_index": 100,
+      "roi_id": "p3_062",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_062.f32",
+      "bytes": 196608,
+      "sha256": "eee1ed63a65534382192b4f1b3dc9a38f56effc0318fff614942564bf3df0e29"
+    },
+    {
+      "roi_index": 101,
+      "roi_id": "p3_063",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_063.f32",
+      "bytes": 196608,
+      "sha256": "7348cababc5fd2ab9c1d23d8f6f3fbfc9f2ea85e044ba5becb7dbc5b32168ffc"
+    },
+    {
+      "roi_index": 102,
+      "roi_id": "p3_064",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_064.f32",
+      "bytes": 196608,
+      "sha256": "b72d06f89a5e122c4e73c5afad2bee9e4fb88722c324cd6ed834f67ec4f87fef"
+    },
+    {
+      "roi_index": 103,
+      "roi_id": "p3_065",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_065.f32",
+      "bytes": 196608,
+      "sha256": "7985d66cafc427ee60e07a3883bbdecf48913c1efb5fec0b55233513776e3734"
+    },
+    {
+      "roi_index": 104,
+      "roi_id": "p3_066",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_066.f32",
+      "bytes": 196608,
+      "sha256": "391c0c44e26fb0162a56c3b5963d77d51632cea7271754b117913e326aa456c8"
+    },
+    {
+      "roi_index": 105,
+      "roi_id": "p3_067",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_067.f32",
+      "bytes": 196608,
+      "sha256": "51bb981e6ad09cac2df1850ba685cdd05221dc121bacde269aad7121a726ddbd"
+    },
+    {
+      "roi_index": 106,
+      "roi_id": "p3_068",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_068.f32",
+      "bytes": 196608,
+      "sha256": "0506cfb6f4c1ab82d8621923efc0e246490c497a3fb8cdfd84d2f30c916ad445"
+    },
+    {
+      "roi_index": 107,
+      "roi_id": "p3_069",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_069.f32",
+      "bytes": 196608,
+      "sha256": "78d8d5e917fe9f259ab9492a9ff7b0e987f957b1ffbcf09e4fca63b903e184b7"
+    },
+    {
+      "roi_index": 108,
+      "roi_id": "p3_070",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_070.f32",
+      "bytes": 196608,
+      "sha256": "b1cd66bcfdaa4c5b45b3527001ff1b85d0a9fe3822594e9d572013ac7d18019c"
+    },
+    {
+      "roi_index": 109,
+      "roi_id": "p3_071",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_071.f32",
+      "bytes": 196608,
+      "sha256": "5d42f8141a373a85bb80db700e80375b96e76f59324495a7fc5306fb9933f9de"
+    },
+    {
+      "roi_index": 110,
+      "roi_id": "p3_072",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_072.f32",
+      "bytes": 196608,
+      "sha256": "1a4422613db3a2b6e5e55f6ee70f0fbc7f7d3c187f1248f585179c415064d63c"
+    },
+    {
+      "roi_index": 111,
+      "roi_id": "p3_073",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_073.f32",
+      "bytes": 196608,
+      "sha256": "d3aa524af4116b90f19adfa9047fdd3ce0786083786ac11d3981c8252677d35f"
+    },
+    {
+      "roi_index": 112,
+      "roi_id": "p3_074",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_074.f32",
+      "bytes": 196608,
+      "sha256": "acf0e62e2e8c6f20264e3f26559a3efc49ac1cfcfe26898c58e1820872c1c2d2"
+    },
+    {
+      "roi_index": 113,
+      "roi_id": "p3_075",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_075.f32",
+      "bytes": 196608,
+      "sha256": "9181a54dba7bbe206f78024c607e1cbc9418f2c428a171f963612a2afc73b149"
+    },
+    {
+      "roi_index": 114,
+      "roi_id": "p3_076",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_076.f32",
+      "bytes": 196608,
+      "sha256": "c3d36af1d47758820289522e55a33727c77f5ce257574fad40d31d067fc31d93"
+    },
+    {
+      "roi_index": 115,
+      "roi_id": "p3_077",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_077.f32",
+      "bytes": 196608,
+      "sha256": "61a780d2565850d75849e842f278810a146425f00d493eb15697945fa1864ba9"
+    },
+    {
+      "roi_index": 116,
+      "roi_id": "p3_078",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_078.f32",
+      "bytes": 196608,
+      "sha256": "7001119dccff1f91a1350490b74eff7ffab3ab216c4641db3d742c80860e1144"
+    },
+    {
+      "roi_index": 117,
+      "roi_id": "p3_079",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_079.f32",
+      "bytes": 196608,
+      "sha256": "2235303d3f3a2e9fa9c9ca6a30e5180da4829f780052534f7a9afe7883b14ce8"
+    },
+    {
+      "roi_index": 118,
+      "roi_id": "p3_080",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_080.f32",
+      "bytes": 196608,
+      "sha256": "acba5374e771ffab1a19627b8577616c97beab3aee458c73ca81129326e1424f"
+    },
+    {
+      "roi_index": 119,
+      "roi_id": "p3_081",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_081.f32",
+      "bytes": 196608,
+      "sha256": "7aa696f6e809f14ed0a4fa89f1ddac5dd745c2a90ddec10fe7faae3bde24ea74"
+    },
+    {
+      "roi_index": 120,
+      "roi_id": "p3_082",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_082.f32",
+      "bytes": 196608,
+      "sha256": "a6ecc32ae0f6f028b42383eab2aa4d03b134ec74c5ff6febb78fdaf5a3fadfb8"
+    },
+    {
+      "roi_index": 121,
+      "roi_id": "p3_083",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_083.f32",
+      "bytes": 196608,
+      "sha256": "54c80bf8dd139f1e36a8529c5ec8815e5e6ede5dd4cccc31ecbc79b9c892fa00"
+    },
+    {
+      "roi_index": 122,
+      "roi_id": "p3_084",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_084.f32",
+      "bytes": 196608,
+      "sha256": "730adcd88a75354e259331b03c891aa387610be1f377fc404e0a3445e2d8e02d"
+    },
+    {
+      "roi_index": 123,
+      "roi_id": "p3_085",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_085.f32",
+      "bytes": 196608,
+      "sha256": "195b2f84e9d6cfae90d27ccfa7121f155abfb629193c9c9a51d8b5b8592f269d"
+    },
+    {
+      "roi_index": 124,
+      "roi_id": "p3_086",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_086.f32",
+      "bytes": 196608,
+      "sha256": "911dc547fe6e8046fd8a4acce85a631332a91ebb49ea275c93cd9f460e4a814b"
+    },
+    {
+      "roi_index": 125,
+      "roi_id": "p3_087",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_087.f32",
+      "bytes": 196608,
+      "sha256": "30e45cd7538459a666696a6cbaaae7e5405ad6e9643d1383043471b55248f46d"
+    },
+    {
+      "roi_index": 126,
+      "roi_id": "p3_088",
+      "included": true,
+      "path": "work/hunet_original_tcu_20261008_v1/data/board_inputs/p3_088.f32",
+      "bytes": 196608,
+      "sha256": "38977c7215ccdeea92834472aece3d94381be210268172228f9e432a94564e63"
+    }
+  ],
+  "valid_roi_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126
+  ],
+  "excluded_truncated": [
+    33,
+    34,
+    35,
+    36,
+    37,
+    38
+  ]
+}

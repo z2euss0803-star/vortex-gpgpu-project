@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "transport": {
+    "endpoint": "private0700-directory/control.sock",
+    "socket_mode": "0600",
+    "peer": "Linux SO_PEERCRED same effective uid on server and client",
+    "frame": "4-byte unsigned big-endian length followed by UTF-8 JSON",
+    "max_request_bytes": 65536,
+    "max_response_bytes": 65536,
+    "listen_backlog": 8,
+    "server_connection_deadline_ms": "explicit1..2000; not renewed by each byte",
+    "one_request_per_connection": true,
+    "disconnect": "no implicit cancellation, execution, or resubmit"
+  },
+  "json": {
+    "required": ["version", "command"],
+    "strict": "reject duplicate decoded keys, unknown fields, non-integer numbers, invalid UTF-8, NUL, oversized/deep documents",
+    "keyed_commands": ["submit", "status", "cancel", "result", "display", "export", "reap"],
+    "key": ["boot_id", "client_id", "request_id"],
+    "identifier": "1..128 ASCII alphanumeric or underscore/hyphen/dot/colon; registry identifiers, not paths",
+    "commands": {
+      "models": [], "scenes": [], "effects": [],
+      "submit": ["key", "entry_id", "input_id", "parameters"],
+      "status": ["key"], "cancel": ["key"], "result": ["key"], "reap": ["key"],
+      "display": ["key", "artifact"], "export": ["key", "artifact", "destination_id"]
+    },
+    "parameters": "at most16 named boolean/integer/string<=128 scalars; each trusted adapter must additionally admit its own schema",
+    "artifact": "index0..63; successful execution is not successful display",
+    "response": "version,boot_id,ok, and exactly one of result/error; error has code/category/detail"
+  },
+  "security": {
+    "startup_only": ["backend mode", "device path", "hardware identity", "trusted adapter registry", "export destinations"],
+    "never_client_input": ["raw code", "catalog path", "device fd", "GPU descriptor", "CPU pointer", "DMA/GPU address", "PL operation"],
+    "default": "no auto-start or GPU work",
+    "ambiguous_response": "retain original request/outcome; query same request identity, never resubmit work automatically"
+  },
+  "evidence": {
+    "offline_gpu_raw_cycles": null,
+    "legacy_json": "preserve exact bytes as an escaped string, never parse/re-encode its original numerical payload",
+    "execution_numeric_display": "independent states",
+    "publish": "only after durable evidence; caller retains pending raw outcome on failure"
+  },
+  "implementation_status": "transport and result store implemented; production Runtime/adapters and vxgpud integration remain U10+"
+}

@@ -1,0 +1,36 @@
+{
+  "scope": "UNCHANGED_P8_SOURCE_IMPORT_NOT_GPU_DISPLAY",
+  "files": [
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\network\\texture_rx.c",
+      "candidate": "vendor/p8/network/texture_rx.c",
+      "bytes": 4975,
+      "sha256": "2d2a08a9edefb06bf6a8390a97128d931dbfa5ec95fe6cbba798dea2a9b29741"
+    },
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\network\\texture_rx.h",
+      "candidate": "vendor/p8/network/texture_rx.h",
+      "bytes": 1540,
+      "sha256": "be10473f80849e6c3a87128c8e5dbb6a22adee7653cde99c5411a04b9ffee0d0"
+    },
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\desktop\\texture_sender.py",
+      "candidate": "vendor/p8/desktop/texture_sender.py",
+      "bytes": 11222,
+      "sha256": "7af19f767c61ee49d530917b2204d6aba4031ceb1dcbf82e028a7eb344dfc6cb"
+    },
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\tests\\texture_rx_protocol.py",
+      "candidate": "vendor/p8/tests/texture_rx_protocol.py",
+      "bytes": 8342,
+      "sha256": "5510db313a55268f5e266bd194285fe48da21b9cc3bfafc5edd1ee8a4012a0a6"
+    },
+    {
+      "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\tests\\test_desktop_texture.py",
+      "candidate": "vendor/p8/tests/test_desktop_texture.py",
+      "bytes": 6422,
+      "sha256": "7c41752c85f40b88cceeedbab65b6fdfa7db71283119b9d17ba0eec62907f51c"
+    }
+  ],
+  "gpu_raw_cycles": null
+}

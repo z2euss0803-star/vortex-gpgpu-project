@@ -1,0 +1,9 @@
+{
+  "policy": "USER_20261014_UBUNTU_SOFTWARE_ONLY_FROZEN_HW4",
+  "software_gate": "MATCHING_UBUNTU_NATURAL_EXIT_ZERO",
+  "cross_gate": "ACTUAL_RV32_AARCH64_AND_BOUND_KERNEL",
+  "hardware": "FROZEN_HW4_REUSED_NOT_RETESTED",
+  "image_gate": "ACTUAL_FIT_CPIO_KERNEL_DT_CRYPTO_BINDING_CLI_LIBRARY_LIBM_PROGRAM_ASSETS",
+  "board_authorized": false,
+  "sd_authorized": false
+}

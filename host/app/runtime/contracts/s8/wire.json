@@ -1,0 +1,185 @@
+{
+  "abi_major": 1,
+  "binding_bytes": 512,
+  "binding_digests": [
+    "software_source",
+    "device_flat",
+    "device_ELF",
+    "gpu_layout",
+    "parameter_contract",
+    "case_catalog",
+    "RV32compiler",
+    "RV32runtime",
+    "AArch64runner",
+    "actualkernelconfig",
+    "hardware_source",
+    "routedDCP",
+    "bit",
+    "XSA"
+  ],
+  "binding_offsets": {
+    "abi_major": 20,
+    "bytes": 8,
+    "digests": 32,
+    "features": 24,
+    "magic": 0,
+    "profile": 12,
+    "program": 16,
+    "reserved": 480,
+    "reserved0": 28,
+    "version": 4
+  },
+  "error_codes": [
+    "OK",
+    "BUSY",
+    "BAD_K",
+    "OWNER",
+    "NOT_READY",
+    "BAD_PAGE",
+    "EXCESS_STEP",
+    "INCOMPLETE",
+    "BAD_CONTROL",
+    "BAD_MASK"
+  ],
+  "guard": {
+    "bytes": 64,
+    "gap": 109,
+    "index_multiplier": 61,
+    "raw_sentinel": 204,
+    "seed": 165
+  },
+  "job_bytes": 128,
+  "job_offsets": {
+    "a_base": 32,
+    "args_crc32": 104,
+    "b_base": 36,
+    "binding_tag": 88,
+    "bytes": 8,
+    "case_id": 12,
+    "control_base": 56,
+    "core_mask": 24,
+    "flags": 16,
+    "generation": 64,
+    "identity_base": 52,
+    "input_slot_stride": 40,
+    "k": 20,
+    "magic": 0,
+    "output_base": 44,
+    "output_stride": 48,
+    "owner_warp": 28,
+    "reserved": 108,
+    "run_id": 72,
+    "sequence": 68,
+    "spin_limit": 60,
+    "version": 4
+  },
+  "outer_abi_bytes": 176,
+  "phase_events": [
+    "callback_entry",
+    "BEGIN_before",
+    "BEGIN_after",
+    "STEP_loop_before",
+    "STEP_loop_after",
+    "ready_after",
+    "READ_pages_before",
+    "READ_pages_after_fence",
+    "release_before",
+    "release_after",
+    "publication_fence_after",
+    "callback_exit"
+  ],
+  "profile": 5,
+  "program": 11,
+  "result_bytes": 256,
+  "result_offsets": {
+    "binding_tag": 80,
+    "bytes": 8,
+    "case_id": 12,
+    "core": 28,
+    "detail": 116,
+    "done": 120,
+    "firsterror_event": 112,
+    "flags": 44,
+    "format": 96,
+    "generation": 20,
+    "k": 40,
+    "magic": 0,
+    "owner_warp": 36,
+    "pages_count": 52,
+    "phase_count": 60,
+    "primary_accepted": 104,
+    "primary_bitmap": 108,
+    "primary_elements": 100,
+    "recovery_elements": 124,
+    "reserved": 128,
+    "run_id": 64,
+    "sequence": 24,
+    "status_count": 56,
+    "sw_status": 16,
+    "valid_bits": 48,
+    "version": 4,
+    "warp": 32
+  },
+  "result_regions": {
+    "decoded": [
+      1216,
+      512
+    ],
+    "metadata": [
+      960,
+      256
+    ],
+    "phase": [
+      1728,
+      512
+    ],
+    "prefix": [
+      0,
+      64
+    ],
+    "raw": [
+      64,
+      384
+    ],
+    "recovery_decoded": [
+      2688,
+      512
+    ],
+    "recovery_raw": [
+      2304,
+      384
+    ],
+    "status": [
+      448,
+      512
+    ],
+    "suffix": [
+      4032,
+      64
+    ]
+  },
+  "result_valid_bits": {
+    "decoded": 2,
+    "phase": 32,
+    "raw": 1,
+    "recovery_decoded": 8,
+    "recovery_raw": 4,
+    "status": 16
+  },
+  "runtime_records": {
+    "core_done_bytes": 32,
+    "core_done_count": 4,
+    "core_done_offset": 2112,
+    "core_magic": 826488915,
+    "done": 1162760004,
+    "global_done_bytes": 64,
+    "global_done_offset": 2240,
+    "global_magic": 826751059,
+    "identity_bytes": 32,
+    "identity_count": 64,
+    "identity_offset": 64,
+    "stack_tag": 1398013952,
+    "tls_tag": 1414266880
+  },
+  "version": 1
+}

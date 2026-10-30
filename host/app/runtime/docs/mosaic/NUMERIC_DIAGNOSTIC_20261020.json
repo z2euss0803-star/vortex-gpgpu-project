@@ -1,0 +1,36 @@
+{
+  "scope": "MOSAIC_NORMALIZATION_CAUSE_DIAGNOSTICS_NOT_REPAIR",
+  "date": "2026-10-20",
+  "production_changed": false,
+  "thresholds_changed": false,
+  "first_layer_saved_cudnn_stats_gamma_first_fma_different_bits": 0,
+  "full_diagnostic_exit": 1,
+  "last": {
+    "stage": 15,
+    "max_abs": 0.1479644775390625,
+    "rmse": 0.01657072870500191,
+    "violations": 5672,
+    "different_bits": 196509,
+    "pass": false,
+    "elapsed_host_s": 15.214450094,
+    "gpu_raw_cycles": null
+  },
+  "quantization_mismatches_first": 34,
+  "quantization_mismatches_before_last": 361586,
+  "archive": {
+    "scope": "RAW_EVIDENCE_ARCHIVE_VERIFIED_NOT_NUMERIC_PASS",
+    "sha256": "2dc8273039a10f0c554caabc7f5da735337047e8bbb64c2f25360e8caab338e6",
+    "bytes": 30695522,
+    "members_verified": 69,
+    "gpu_raw_cycles": null
+  },
+  "old_s8_failed_evidence_preserved": true,
+  "gpu_raw_cycles": null,
+  "rv32": "ENTRY_FCSR_FINAL_BINDING_PENDING_NUMERIC_GATE_OPEN",
+  "image": "NOT_BUILT",
+  "board": "NOT_CONNECTED",
+  "sd": "NOT_TOUCHED",
+  "pending": "HISTORICAL_DIAGNOSTIC_STILL_FAILED_INDEPENDENT_V3_FORMAL21_NOW_PASS_TARGET_BINDING_OPEN",
+  "production_files_unchanged_vs_previous_cross_manifest": 125,
+  "followup": "NORM_COMPAT_CANDIDATES_20261020.json"
+}

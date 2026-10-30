@@ -1,0 +1,26 @@
+{
+  "as_of": "2026-10-09",
+  "scope": "H0_DIAGNOSTIC_BACKEND_V0_1_OFFLINE",
+  "offline": "OFFLINE_READY",
+  "h0_board": "NOT_RUN_WAITING_D2_IMAGE_INTEGRATION_AND_DEPLOYMENT",
+  "h1": "NOT_RUN_WAITING_HARDWARE_CONTRACT_ACCEPTANCE",
+  "sd": "NOT_TOUCHED_ONE_CARD_READER_AVAILABLE",
+  "host_gates": {"contract": "PASS", "uapi": "PASS", "memory": "PASS", "jobs": "PASS", "probe": "PASS", "copy": "PASS", "submit": "PASS", "runtime": "PASS"},
+  "target_compile": "PASS_GCC_9_2_XILINX_LINUX_5_4_AARCH64",
+  "original_inputs": "26_OF_26_UNCHANGED",
+  "review": "EXECUTOR_SELF_REVIEW_NO_INDEPENDENT_REVIEWER",
+  "limitations": [
+    "CPU protocol mock does not execute GPU ISA or prove cache/DMA behavior",
+    "Production accepts exact fixed-address H0 diagnostic only; generic CRT and Mosaic unaccepted",
+    "Real PS placement, clock/reset/ready descriptors and boot overlap audit remain D2/G10 gates",
+    "Legacy dispatcher fixture passes; actual simx/xrt/opae systems not rerun",
+    "Kernel module is compile evidence only; deployment must be built-in without unload/unbind"
+  ],
+  "evidence": {
+    "host": "evidence/20261009-ubuntu-final/results.json",
+    "fault_matrix": "evidence/20261009-takeover/fault-matrix-final.log",
+    "target": "evidence/target-audit.json",
+    "target_package": "evidence/20261009-takeover/target-package-verification.json",
+    "protected": "evidence/20261009-takeover/protected-inputs.json"
+  }
+}

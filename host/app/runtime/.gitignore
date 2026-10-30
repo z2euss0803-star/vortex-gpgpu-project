@@ -1,0 +1,13 @@
+build/
+release/
+.toolchain/
+__pycache__/
+*.pyc
+*.o
+*.ko
+*.mod*
+.*.cmd
+Module.symvers
+modules.order
+evidence/*/source.tar.gz
+

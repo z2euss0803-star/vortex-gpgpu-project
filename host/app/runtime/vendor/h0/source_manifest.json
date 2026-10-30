@@ -1,0 +1,997 @@
+{
+  "created": "2026-10-03T14:44:37.687984+08:00",
+  "candidate": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003",
+  "delivery": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\delivery",
+  "copies": [
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_resetfix_20261001\\build\\artifacts\\top.bit",
+        "bytes": 23581017,
+        "sha256": "70c72d344d0e67fcea13695fdcdd2a54feca76a2889008b99d1db578250739ff"
+      },
+      "relative": "top.bit",
+      "bytes": 23581017,
+      "sha256": "70c72d344d0e67fcea13695fdcdd2a54feca76a2889008b99d1db578250739ff"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_resetfix_20261001\\build\\artifacts\\gpgpu_with_bit.xsa",
+        "bytes": 8041180,
+        "sha256": "01bc96ad997fb0d18967d196649697d2c443e5ad86a27faddd1a59cf278bf2d6"
+      },
+      "relative": "gpgpu_with_bit.xsa",
+      "bytes": 8041180,
+      "sha256": "01bc96ad997fb0d18967d196649697d2c443e5ad86a27faddd1a59cf278bf2d6"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\build\\functional_host\\gpu_functional_host.elf",
+        "bytes": 532344,
+        "sha256": "d4a43a65688b8f1080f378db1c4a98c1aeb0fc376f84dee58aa2fc985d250c43"
+      },
+      "relative": "gpu_functional_host.elf",
+      "bytes": 532344,
+      "sha256": "d4a43a65688b8f1080f378db1c4a98c1aeb0fc376f84dee58aa2fc985d250c43"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_loopback_20261001\\delivery_20261002\\ps_init\\psu_init.c",
+        "bytes": 988306,
+        "sha256": "b169599258606f86b12b572402a30c856c4e11374418662c6f1bf075ea89b3f2"
+      },
+      "relative": "ps_init/psu_init.c",
+      "bytes": 988306,
+      "sha256": "b169599258606f86b12b572402a30c856c4e11374418662c6f1bf075ea89b3f2"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_loopback_20261001\\delivery_20261002\\ps_init\\psu_init.h",
+        "bytes": 1678259,
+        "sha256": "a8171a907429122e6d1dad1bbe5837cd311b6b73ee219d9a958da0475b79ca08"
+      },
+      "relative": "ps_init/psu_init.h",
+      "bytes": 1678259,
+      "sha256": "a8171a907429122e6d1dad1bbe5837cd311b6b73ee219d9a958da0475b79ca08"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_loopback_20261001\\delivery_20261002\\ps_init\\psu_init.html",
+        "bytes": 55083,
+        "sha256": "8530958ad6fbe25a2132736d201add7bd962a29cf747565b005845d54224253b"
+      },
+      "relative": "ps_init/psu_init.html",
+      "bytes": 55083,
+      "sha256": "8530958ad6fbe25a2132736d201add7bd962a29cf747565b005845d54224253b"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_loopback_20261001\\delivery_20261002\\ps_init\\psu_init.tcl",
+        "bytes": 891239,
+        "sha256": "f19e7d5756575844f05e553161c2a88a9e2ca687b2e4518dacf9b28b274ec7b3"
+      },
+      "relative": "ps_init/psu_init.tcl",
+      "bytes": 891239,
+      "sha256": "f19e7d5756575844f05e553161c2a88a9e2ca687b2e4518dacf9b28b274ec7b3"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\sw\\board_backend.c",
+        "bytes": 926,
+        "sha256": "faf40f965c22e93f149fb9553ea3fd2bd76cae27956b961e6d19e3a8d241f757"
+      },
+      "relative": "source/sw/board_backend.c",
+      "bytes": 926,
+      "sha256": "faf40f965c22e93f149fb9553ea3fd2bd76cae27956b961e6d19e3a8d241f757"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\sw\\dpi_backend.c",
+        "bytes": 1006,
+        "sha256": "90f9d6b9f5c0ca56b14ffcf33f7ebf4d275c61237f1ba785f4f07dd41ba3e2ef"
+      },
+      "relative": "source/sw/dpi_backend.c",
+      "bytes": 1006,
+      "sha256": "90f9d6b9f5c0ca56b14ffcf33f7ebf4d275c61237f1ba785f4f07dd41ba3e2ef"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\sw\\gpgpu_hw.h",
+        "bytes": 2134,
+        "sha256": "a416fbef3db3f7ada3c568b4e15313abc64ad28d8e25959e6321a0985cf62c4a"
+      },
+      "relative": "source/sw/gpgpu_hw.h",
+      "bytes": 2134,
+      "sha256": "a416fbef3db3f7ada3c568b4e15313abc64ad28d8e25959e6321a0985cf62c4a"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\sw\\host_logic.c",
+        "bytes": 17422,
+        "sha256": "a20e9fcbffab476544f065b09ff2d00ac1141e04f7be333273998c0d3c42cb85"
+      },
+      "relative": "source/sw/host_logic.c",
+      "bytes": 17422,
+      "sha256": "a20e9fcbffab476544f065b09ff2d00ac1141e04f7be333273998c0d3c42cb85"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\sw\\host_platform.h",
+        "bytes": 570,
+        "sha256": "5129e923756e4d2597767a2fb660f8302a211275ebb60e75da81d9115a0089d7"
+      },
+      "relative": "source/sw/host_platform.h",
+      "bytes": 570,
+      "sha256": "5129e923756e4d2597767a2fb660f8302a211275ebb60e75da81d9115a0089d7"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\sw\\lscript.ld",
+        "bytes": 6891,
+        "sha256": "3cfdb938a1311b2b5e882613f82dbab591b56db6e5d540e7a5b14921779d4663"
+      },
+      "relative": "source/sw/lscript.ld",
+      "bytes": 6891,
+      "sha256": "3cfdb938a1311b2b5e882613f82dbab591b56db6e5d540e7a5b14921779d4663"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\sw\\vecadd16.h",
+        "bytes": 537,
+        "sha256": "863ed35f8cac663536d330dbeddfd92a54a064d6e434c5002e885913c546df86"
+      },
+      "relative": "source/sw/vecadd16.h",
+      "bytes": 537,
+      "sha256": "863ed35f8cac663536d330dbeddfd92a54a064d6e434c5002e885913c546df86"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\audit_full_suite.py",
+        "bytes": 3897,
+        "sha256": "7cc65e86277001a01bd883f7600b57bef7858f1e85144a199f0a40ecbe9fb1c7"
+      },
+      "relative": "source/suite/audit_full_suite.py",
+      "bytes": 3897,
+      "sha256": "7cc65e86277001a01bd883f7600b57bef7858f1e85144a199f0a40ecbe9fb1c7"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generate_vectors.py",
+        "bytes": 15631,
+        "sha256": "e57ebd86b80975cdf79b1cd4ecc92684bf63cddab131fe64a2fa1c28b2975d65"
+      },
+      "relative": "source/suite/generate_vectors.py",
+      "bytes": 15631,
+      "sha256": "e57ebd86b80975cdf79b1cd4ecc92684bf63cddab131fe64a2fa1c28b2975d65"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\alu_m_64_threads.hex",
+        "bytes": 760,
+        "sha256": "0c30352aec33ddbc29f906d903d4b813dd162534b93fc5b27246af71461234b6"
+      },
+      "relative": "source/suite/generated/alu_m_64_threads.hex",
+      "bytes": 760,
+      "sha256": "0c30352aec33ddbc29f906d903d4b813dd162534b93fc5b27246af71461234b6"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\cases.json",
+        "bytes": 882969,
+        "sha256": "45cdb747c9885ca91ae6cd5c04d699d20714cc4e9f862314083ad20978b7ac81"
+      },
+      "relative": "source/suite/generated/cases.json",
+      "bytes": 882969,
+      "sha256": "45cdb747c9885ca91ae6cd5c04d699d20714cc4e9f862314083ad20978b7ac81"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\fp32_class_special_values.hex",
+        "bytes": 210,
+        "sha256": "b837810dfbbcd8d1310d6d8e6479b7da99d537a7556d133e558fdf05b5670716"
+      },
+      "relative": "source/suite/generated/fp32_class_special_values.hex",
+      "bytes": 210,
+      "sha256": "b837810dfbbcd8d1310d6d8e6479b7da99d537a7556d133e558fdf05b5670716"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\fp32_exact_arithmetic.hex",
+        "bytes": 680,
+        "sha256": "658fac0ffdd3a48325bdd80a24a629ba734a666df4e2dc5cb019c6f8afe43212"
+      },
+      "relative": "source/suite/generated/fp32_exact_arithmetic.hex",
+      "bytes": 680,
+      "sha256": "658fac0ffdd3a48325bdd80a24a629ba734a666df4e2dc5cb019c6f8afe43212"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\manifest.json",
+        "bytes": 1705,
+        "sha256": "205df94a1a922782959d658d6a16ade7ea420180ba284781634c31c7099e83ef"
+      },
+      "relative": "source/suite/generated/manifest.json",
+      "bytes": 1705,
+      "sha256": "205df94a1a922782959d658d6a16ade7ea420180ba284781634c31c7099e83ef"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\simt_lmem_global_barrier.hex",
+        "bytes": 680,
+        "sha256": "77fb4eaf88b0214559cc3d9d573f3da27aabe9e22b3922c923d86a9d6eec10a8"
+      },
+      "relative": "source/suite/generated/simt_lmem_global_barrier.hex",
+      "bytes": 680,
+      "sha256": "77fb4eaf88b0214559cc3d9d573f3da27aabe9e22b3922c923d86a9d6eec10a8"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\suite_vectors.h",
+        "bytes": 488702,
+        "sha256": "d595f7862fe9dbecc24dd8693a244a455c8010e4026c9dc2b0dcfc5569868d31"
+      },
+      "relative": "source/suite/generated/suite_vectors.h",
+      "bytes": 488702,
+      "sha256": "d595f7862fe9dbecc24dd8693a244a455c8010e4026c9dc2b0dcfc5569868d31"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\tcu_tex_0_fmt9.hex",
+        "bytes": 690,
+        "sha256": "ef88b4d5bd2a4f40b3c412dfb050123e280bacaa2f1618cbd135175c31e826f3"
+      },
+      "relative": "source/suite/generated/tcu_tex_0_fmt9.hex",
+      "bytes": 690,
+      "sha256": "ef88b4d5bd2a4f40b3c412dfb050123e280bacaa2f1618cbd135175c31e826f3"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\tcu_tex_1_fmt2.hex",
+        "bytes": 690,
+        "sha256": "52415ebe774c4c0fc557230fc8b606e9ea0ffcb03b6c84a441d76196f568f419"
+      },
+      "relative": "source/suite/generated/tcu_tex_1_fmt2.hex",
+      "bytes": 690,
+      "sha256": "52415ebe774c4c0fc557230fc8b606e9ea0ffcb03b6c84a441d76196f568f419"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\tcu_tex_2_fmt1.hex",
+        "bytes": 690,
+        "sha256": "93b8cac752cd4f666bc15bebf268d5e9513f93b1a79b3a8e514af8968fed3edb"
+      },
+      "relative": "source/suite/generated/tcu_tex_2_fmt1.hex",
+      "bytes": 690,
+      "sha256": "93b8cac752cd4f666bc15bebf268d5e9513f93b1a79b3a8e514af8968fed3edb"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\tcu_tex_3_fmt1.hex",
+        "bytes": 690,
+        "sha256": "93b8cac752cd4f666bc15bebf268d5e9513f93b1a79b3a8e514af8968fed3edb"
+      },
+      "relative": "source/suite/generated/tcu_tex_3_fmt1.hex",
+      "bytes": 690,
+      "sha256": "93b8cac752cd4f666bc15bebf268d5e9513f93b1a79b3a8e514af8968fed3edb"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\tcu_tex_4_fmt9.hex",
+        "bytes": 690,
+        "sha256": "ef88b4d5bd2a4f40b3c412dfb050123e280bacaa2f1618cbd135175c31e826f3"
+      },
+      "relative": "source/suite/generated/tcu_tex_4_fmt9.hex",
+      "bytes": 690,
+      "sha256": "ef88b4d5bd2a4f40b3c412dfb050123e280bacaa2f1618cbd135175c31e826f3"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\tcu_tex_5_fmt2.hex",
+        "bytes": 690,
+        "sha256": "52415ebe774c4c0fc557230fc8b606e9ea0ffcb03b6c84a441d76196f568f419"
+      },
+      "relative": "source/suite/generated/tcu_tex_5_fmt2.hex",
+      "bytes": 690,
+      "sha256": "52415ebe774c4c0fc557230fc8b606e9ea0ffcb03b6c84a441d76196f568f419"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\tcu_tex_6_fmt1.hex",
+        "bytes": 690,
+        "sha256": "93b8cac752cd4f666bc15bebf268d5e9513f93b1a79b3a8e514af8968fed3edb"
+      },
+      "relative": "source/suite/generated/tcu_tex_6_fmt1.hex",
+      "bytes": 690,
+      "sha256": "93b8cac752cd4f666bc15bebf268d5e9513f93b1a79b3a8e514af8968fed3edb"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\tcu_tex_7_fmt9.hex",
+        "bytes": 690,
+        "sha256": "ef88b4d5bd2a4f40b3c412dfb050123e280bacaa2f1618cbd135175c31e826f3"
+      },
+      "relative": "source/suite/generated/tcu_tex_7_fmt9.hex",
+      "bytes": 690,
+      "sha256": "ef88b4d5bd2a4f40b3c412dfb050123e280bacaa2f1618cbd135175c31e826f3"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\tcu_tex_8_fmt2.hex",
+        "bytes": 690,
+        "sha256": "e4c1ca2dcd15a211915292115eba76be4f2d8fd464f5f75f323e16018c8d41cc"
+      },
+      "relative": "source/suite/generated/tcu_tex_8_fmt2.hex",
+      "bytes": 690,
+      "sha256": "e4c1ca2dcd15a211915292115eba76be4f2d8fd464f5f75f323e16018c8d41cc"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\generated\\tcu_tex_9_fmt1.hex",
+        "bytes": 690,
+        "sha256": "93b8cac752cd4f666bc15bebf268d5e9513f93b1a79b3a8e514af8968fed3edb"
+      },
+      "relative": "source/suite/generated/tcu_tex_9_fmt1.hex",
+      "bytes": 690,
+      "sha256": "93b8cac752cd4f666bc15bebf268d5e9513f93b1a79b3a8e514af8968fed3edb"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\host_suite.c",
+        "bytes": 5396,
+        "sha256": "9201814d2e260d1c8df0583f39cca71c860115cbf64baffaf3a527f29d204fdf"
+      },
+      "relative": "source/suite/host_suite.c",
+      "bytes": 5396,
+      "sha256": "9201814d2e260d1c8df0583f39cca71c860115cbf64baffaf3a527f29d204fdf"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\prepare_full_suite.py",
+        "bytes": 5752,
+        "sha256": "665608fe96ed351a9f08be7e586dfead540d99cb2f63f284b0de09868d3a0e88"
+      },
+      "relative": "source/suite/prepare_full_suite.py",
+      "bytes": 5752,
+      "sha256": "665608fe96ed351a9f08be7e586dfead540d99cb2f63f284b0de09868d3a0e88"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\run_full_suite.py",
+        "bytes": 8608,
+        "sha256": "dd1f4173d546c4784fe9487df89fe26c61c57ceb1722380ab2389a72eaa3a16c"
+      },
+      "relative": "source/suite/run_full_suite.py",
+      "bytes": 8608,
+      "sha256": "dd1f4173d546c4784fe9487df89fe26c61c57ceb1722380ab2389a72eaa3a16c"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\tb\\full_suite_adapter.svh",
+        "bytes": 14122,
+        "sha256": "141f988d771a7a38724bfa16fe7c85ffa901ba387951235c343a85de43d750cc"
+      },
+      "relative": "source/suite/tb/full_suite_adapter.svh",
+      "bytes": 14122,
+      "sha256": "141f988d771a7a38724bfa16fe7c85ffa901ba387951235c343a85de43d750cc"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\tb\\host_access.svh",
+        "bytes": 4022,
+        "sha256": "961ed41c36eaeebb41c0fe7f1ab5e69eeea6082903a7b8d1ac2c140ac4e12812"
+      },
+      "relative": "source/suite/tb/host_access.svh",
+      "bytes": 4022,
+      "sha256": "961ed41c36eaeebb41c0fe7f1ab5e69eeea6082903a7b8d1ac2c140ac4e12812"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\tb\\ps_allocation_check.svh",
+        "bytes": 1182,
+        "sha256": "22e19c77a7e771540b441753811d68ff9dcb7ebb720b94ea92afea2142ed1332"
+      },
+      "relative": "source/suite/tb/ps_allocation_check.svh",
+      "bytes": 1182,
+      "sha256": "22e19c77a7e771540b441753811d68ff9dcb7ebb720b94ea92afea2142ed1332"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\tb\\suite_allocation_check.svh",
+        "bytes": 9521,
+        "sha256": "d011de73782176ec942da3ab52dac0e8946ef4cb57864869946d9ee1728d2b3b"
+      },
+      "relative": "source/suite/tb/suite_allocation_check.svh",
+      "bytes": 9521,
+      "sha256": "d011de73782176ec942da3ab52dac0e8946ef4cb57864869946d9ee1728d2b3b"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\suite\\tb\\tb_gpu_functional.sv",
+        "bytes": 24954,
+        "sha256": "41bf79da3e5cd0b6eba9bac5a0a243e3366d681a3852b55b466d184db2cb7764"
+      },
+      "relative": "source/suite/tb/tb_gpu_functional.sv",
+      "bytes": 24954,
+      "sha256": "41bf79da3e5cd0b6eba9bac5a0a243e3366d681a3852b55b466d184db2cb7764"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\audit_functional_inputs.py",
+        "bytes": 1268,
+        "sha256": "ac04f4541062c78537e52fb9dd6ec9781f419fc52d613bc640ceae0e21a73cc1"
+      },
+      "relative": "source/scripts/audit_functional_inputs.py",
+      "bytes": 1268,
+      "sha256": "ac04f4541062c78537e52fb9dd6ec9781f419fc52d613bc640ceae0e21a73cc1"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\audit_shared_wave.py",
+        "bytes": 2268,
+        "sha256": "5cd121d2d5e03add33b692ddb94c796c6b2e59984e42b3c32f45150866e5c1a7"
+      },
+      "relative": "source/scripts/audit_shared_wave.py",
+      "bytes": 2268,
+      "sha256": "5cd121d2d5e03add33b692ddb94c796c6b2e59984e42b3c32f45150866e5c1a7"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\build_functional_host.tcl",
+        "bytes": 1913,
+        "sha256": "e6b2633f13d466d58be4e3ba68f66e955d14b68c210b2f88f9ba1c8150d8e205"
+      },
+      "relative": "source/scripts/build_functional_host.tcl",
+      "bytes": 1913,
+      "sha256": "e6b2633f13d466d58be4e3ba68f66e955d14b68c210b2f88f9ba1c8150d8e205"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\extract_shared_host.py",
+        "bytes": 3460,
+        "sha256": "0822a96ebf57a3a202f485f272a0c8d3e926c9c2c02e0f33099edca0fecf5562"
+      },
+      "relative": "source/scripts/extract_shared_host.py",
+      "bytes": 3460,
+      "sha256": "0822a96ebf57a3a202f485f272a0c8d3e926c9c2c02e0f33099edca0fecf5562"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\prepare_shared_soc.py",
+        "bytes": 5999,
+        "sha256": "afb5461209e32ccd700d19bff6b273410ff003757c9a02089d0d3b77366fb3e8"
+      },
+      "relative": "source/scripts/prepare_shared_soc.py",
+      "bytes": 5999,
+      "sha256": "afb5461209e32ccd700d19bff6b273410ff003757c9a02089d0d3b77366fb3e8"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\run_shared_soc.py",
+        "bytes": 5453,
+        "sha256": "20b1686c57acddc087a8342aefe598273774a0f17a76cb80196a395d0f37f69a"
+      },
+      "relative": "source/scripts/run_shared_soc.py",
+      "bytes": 5453,
+      "sha256": "20b1686c57acddc087a8342aefe598273774a0f17a76cb80196a395d0f37f69a"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\run_xsct_guarded.tcl",
+        "bytes": 682,
+        "sha256": "f6e390740d7fa203333f398197fb69cd0eaa002c75e0eee6e6db90a5d9efbcc5"
+      },
+      "relative": "source/scripts/run_xsct_guarded.tcl",
+      "bytes": 682,
+      "sha256": "f6e390740d7fa203333f398197fb69cd0eaa002c75e0eee6e6db90a5d9efbcc5"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\run_xsct_job.py",
+        "bytes": 2455,
+        "sha256": "aa58ec12d0a7b891b6cf82ce6924856cb1e3253db7d344d4b6a5208b3d85e9b7"
+      },
+      "relative": "source/scripts/run_xsct_job.py",
+      "bytes": 2455,
+      "sha256": "aa58ec12d0a7b891b6cf82ce6924856cb1e3253db7d344d4b6a5208b3d85e9b7"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\test_host_cache.py",
+        "bytes": 1493,
+        "sha256": "88e619f4598daf39707b7d9e12bd31ff9e5edf7e05723e436ad99c69785bc707"
+      },
+      "relative": "source/scripts/test_host_cache.py",
+      "bytes": 1493,
+      "sha256": "88e619f4598daf39707b7d9e12bd31ff9e5edf7e05723e436ad99c69785bc707"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\test_host_logic.py",
+        "bytes": 1712,
+        "sha256": "eb9dc4d9147a0b45dafac2cc1510eb0cb102d8b40f79020b3c32c64ca770e025"
+      },
+      "relative": "source/scripts/test_host_logic.py",
+      "bytes": 1712,
+      "sha256": "eb9dc4d9147a0b45dafac2cc1510eb0cb102d8b40f79020b3c32c64ca770e025"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\scripts\\test_suite_host.py",
+        "bytes": 1255,
+        "sha256": "f982828a8c65828dbd107e1f0bdca776aec436e0b07a731e06670ad0f0131e9d"
+      },
+      "relative": "source/scripts/test_suite_host.py",
+      "bytes": 1255,
+      "sha256": "f982828a8c65828dbd107e1f0bdca776aec436e0b07a731e06670ad0f0131e9d"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\tb\\host_access.svh",
+        "bytes": 4022,
+        "sha256": "961ed41c36eaeebb41c0fe7f1ab5e69eeea6082903a7b8d1ac2c140ac4e12812"
+      },
+      "relative": "source/tb/host_access.svh",
+      "bytes": 4022,
+      "sha256": "961ed41c36eaeebb41c0fe7f1ab5e69eeea6082903a7b8d1ac2c140ac4e12812"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\tb\\ps_allocation_check.svh",
+        "bytes": 1182,
+        "sha256": "22e19c77a7e771540b441753811d68ff9dcb7ebb720b94ea92afea2142ed1332"
+      },
+      "relative": "source/tb/ps_allocation_check.svh",
+      "bytes": 1182,
+      "sha256": "22e19c77a7e771540b441753811d68ff9dcb7ebb720b94ea92afea2142ed1332"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\tb\\shared_host_adapter.svh",
+        "bytes": 13310,
+        "sha256": "6db1c2392f9e7cc77c359b5816357d1b368abf284d95860261d45463eb045bb6"
+      },
+      "relative": "source/tb/shared_host_adapter.svh",
+      "bytes": 13310,
+      "sha256": "6db1c2392f9e7cc77c359b5816357d1b368abf284d95860261d45463eb045bb6"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\tb\\tb_ps_host_c.sv",
+        "bytes": 24950,
+        "sha256": "12e42989f3624c9a3489ea48329937a844961f593a536d2036b2515a319f8b85"
+      },
+      "relative": "source/tb/tb_ps_host_c.sv",
+      "bytes": 24950,
+      "sha256": "12e42989f3624c9a3489ea48329937a844961f593a536d2036b2515a319f8b85"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\shared_soc_result.json",
+        "bytes": 1601,
+        "sha256": "4b0a09a0618529268dff79924ead8390c8a2e23e8631460a68e578bd32453fcf"
+      },
+      "relative": "reports/shared_soc_result.json",
+      "bytes": 1601,
+      "sha256": "4b0a09a0618529268dff79924ead8390c8a2e23e8631460a68e578bd32453fcf"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\r4_baseline_completion_audit_20261003.json",
+        "bytes": 10639,
+        "sha256": "a812ae38a488d79a0f72a22015ca66d3579300487d8c47e7cccef96566c67021"
+      },
+      "relative": "reports/r4_baseline_completion_audit_20261003.json",
+      "bytes": 10639,
+      "sha256": "a812ae38a488d79a0f72a22015ca66d3579300487d8c47e7cccef96566c67021"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\full_suite_result.json",
+        "bytes": 5172,
+        "sha256": "462041521d3e44d35f3c05ef8bcacd49f2605750046d10f35e0281200c849d9d"
+      },
+      "relative": "reports/full_suite_result.json",
+      "bytes": 5172,
+      "sha256": "462041521d3e44d35f3c05ef8bcacd49f2605750046d10f35e0281200c849d9d"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\functional_elf_audit.json",
+        "bytes": 2108,
+        "sha256": "1f5f6ad9a4679d6e1df8b2f31687cfa3e2482ccec26a3f93a8bcd28140b4482c"
+      },
+      "relative": "reports/functional_elf_audit.json",
+      "bytes": 2108,
+      "sha256": "1f5f6ad9a4679d6e1df8b2f31687cfa3e2482ccec26a3f93a8bcd28140b4482c"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\functional_xsct.log",
+        "bytes": 264,
+        "sha256": "fe86d3a015ccdd3b65529ba54b58288ecd615150d3214762eae871db9ed041ae"
+      },
+      "relative": "reports/functional_xsct.log",
+      "bytes": 264,
+      "sha256": "fe86d3a015ccdd3b65529ba54b58288ecd615150d3214762eae871db9ed041ae"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\functional_xsct.log.process.json",
+        "bytes": 657,
+        "sha256": "056ceb3c4c17d886e41940fbe4f17a07d3a2954c5370f1769821fec4d46b1ac0"
+      },
+      "relative": "reports/functional_xsct.log.process.json",
+      "bytes": 657,
+      "sha256": "056ceb3c4c17d886e41940fbe4f17a07d3a2954c5370f1769821fec4d46b1ac0"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\build_functional_elf.process.json",
+        "bytes": 334,
+        "sha256": "9786dfe4248c928d440c2bbb362ec4cd8b351f3b359bf6902638d52bd68aecd7"
+      },
+      "relative": "reports/build_functional_elf.process.json",
+      "bytes": 334,
+      "sha256": "9786dfe4248c928d440c2bbb362ec4cd8b351f3b359bf6902638d52bd68aecd7"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\final_delivery_preflight_20261003.json",
+        "bytes": 355373,
+        "sha256": "a10addf89ad02073ec5ee6625e521f6d3353e5e06a02354350c13c13be57c0b8"
+      },
+      "relative": "reports/final_delivery_preflight_20261003.json",
+      "bytes": 355373,
+      "sha256": "a10addf89ad02073ec5ee6625e521f6d3353e5e06a02354350c13c13be57c0b8"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\r4_provenance.json",
+        "bytes": 18880,
+        "sha256": "28acb25c888e14fc856b6d8cec959a0b16a986efebe36f5ce77258e4b40f59af"
+      },
+      "relative": "reports/r4_provenance.json",
+      "bytes": 18880,
+      "sha256": "28acb25c888e14fc856b6d8cec959a0b16a986efebe36f5ce77258e4b40f59af"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\shared_soc_inputs.json",
+        "bytes": 162392,
+        "sha256": "954c8317909997e9ac963fc11508870e4c26bd94bfa7782d4be1aacd9207092c"
+      },
+      "relative": "reports/shared_soc_inputs.json",
+      "bytes": 162392,
+      "sha256": "954c8317909997e9ac963fc11508870e4c26bd94bfa7782d4be1aacd9207092c"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\full_suite_inputs.json",
+        "bytes": 171352,
+        "sha256": "c92b4951095985b0c520a4de81f5d5e63431e0c89be0f06db0721b2bb34a3f1e"
+      },
+      "relative": "reports/full_suite_inputs.json",
+      "bytes": 171352,
+      "sha256": "c92b4951095985b0c520a4de81f5d5e63431e0c89be0f06db0721b2bb34a3f1e"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\full_suite_compiled_inputs.json",
+        "bytes": 119726,
+        "sha256": "52512676085a8f725f2f0585ea04ec5a7b63554123ee0be9ef3e4ee3c6f23c36"
+      },
+      "relative": "reports/full_suite_compiled_inputs.json",
+      "bytes": 119726,
+      "sha256": "52512676085a8f725f2f0585ea04ec5a7b63554123ee0be9ef3e4ee3c6f23c36"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_audit_repair_20261003\\full_suite_completion_audit.json",
+        "bytes": 18118,
+        "sha256": "69c2644dc1bca43a7ddec89d5666fcc52913310b1e7324298f795085062d8ad1"
+      },
+      "relative": "reports/supplementary_audit/full_suite_completion_audit.json",
+      "bytes": 18118,
+      "sha256": "69c2644dc1bca43a7ddec89d5666fcc52913310b1e7324298f795085062d8ad1"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_audit_repair_20261003\\audit_full_suite.py",
+        "bytes": 7508,
+        "sha256": "c765fc5ad606917a88e6a4792f86e26723ce4a445a7b55586a389aabc4d05b43"
+      },
+      "relative": "reports/supplementary_audit/audit_full_suite.py",
+      "bytes": 7508,
+      "sha256": "c765fc5ad606917a88e6a4792f86e26723ce4a445a7b55586a389aabc4d05b43"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_audit_repair_20261003\\auditor_tests.log",
+        "bytes": 2998,
+        "sha256": "9147cdf78dbcae603c7c69ef66a0d2d6e44e53975da1e8ad8fd35dc886af3e3d"
+      },
+      "relative": "reports/supplementary_audit/auditor_tests.log",
+      "bytes": 2998,
+      "sha256": "9147cdf78dbcae603c7c69ef66a0d2d6e44e53975da1e8ad8fd35dc886af3e3d"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_audit_repair_20261003\\test_terminal_audit.py",
+        "bytes": 7372,
+        "sha256": "28bea5ad3d1ec6706ae4f517ce95cdbb9bf75fb39c4183071d09bcd0a0976106"
+      },
+      "relative": "reports/supplementary_audit/test_terminal_audit.py",
+      "bytes": 7372,
+      "sha256": "28bea5ad3d1ec6706ae4f517ce95cdbb9bf75fb39c4183071d09bcd0a0976106"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_audit_repair_20261003\\auditor_delta.diff",
+        "bytes": 6754,
+        "sha256": "ccdac421b65df16427690efb25463c7c4a6cb95a3bcfe9e2823bceaa7f1ad2e9"
+      },
+      "relative": "reports/supplementary_audit/auditor_delta.diff",
+      "bytes": 6754,
+      "sha256": "ccdac421b65df16427690efb25463c7c4a6cb95a3bcfe9e2823bceaa7f1ad2e9"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\board_cache_disassembly.txt",
+        "bytes": 2104,
+        "sha256": "399ee6ca80336e8cdfef29e0cb533104f827038cceed2efe5dba6195054ba7e2"
+      },
+      "relative": "reports/board_cache_disassembly.txt",
+      "bytes": 2104,
+      "sha256": "399ee6ca80336e8cdfef29e0cb533104f827038cceed2efe5dba6195054ba7e2"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_resetfix_20261001\\evidence\\delivery_audit.json",
+        "bytes": 3576,
+        "sha256": "ee8c97fec8d19c0744b4762538330d71092595504eff1ae4f924fa9a2c3090fa"
+      },
+      "relative": "reports/original_hardware_delivery_audit.json",
+      "bytes": 3576,
+      "sha256": "ee8c97fec8d19c0744b4762538330d71092595504eff1ae4f924fa9a2c3090fa"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_resetfix_20261001\\build\\dual_sw\\software_manifest.sha256",
+        "bytes": 1683,
+        "sha256": "1c6aeda9a942f61258293a7addbc055970d0736c78666af104fc049f4501f3e9"
+      },
+      "relative": "reports/original_software_manifest.sha256",
+      "bytes": 1683,
+      "sha256": "1c6aeda9a942f61258293a7addbc055970d0736c78666af104fc049f4501f3e9"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\build\\functional_host\\gpu_functional_host.map",
+        "bytes": 124280,
+        "sha256": "454a973b25438099d19119a84ac933e455fe0df463afdc3096681a001766c4ba"
+      },
+      "relative": "reports/gpu_functional_host.map",
+      "bytes": 124280,
+      "sha256": "454a973b25438099d19119a84ac933e455fe0df463afdc3096681a001766c4ba"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\build\\functional_host\\elf_headers.txt",
+        "bytes": 1653,
+        "sha256": "eeac401977626849dedc681fd1bfbd9725d36c86d3d05514d92b5bcbae0808bd"
+      },
+      "relative": "reports/elf_headers.txt",
+      "bytes": 1653,
+      "sha256": "eeac401977626849dedc681fd1bfbd9725d36c86d3d05514d92b5bcbae0808bd"
+    },
+    {
+      "source": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\build\\functional_host\\bsp_path.txt",
+        "bytes": 156,
+        "sha256": "c66b85b8288769721cc659d38c70863c32c04cbeecdd08d1c5b586b3a9f48c69"
+      },
+      "relative": "reports/bsp_path.txt",
+      "bytes": 156,
+      "sha256": "c66b85b8288769721cc659d38c70863c32c04cbeecdd08d1c5b586b3a9f48c69"
+    }
+  ],
+  "documentation": [
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\00_README.md",
+        "bytes": 5726,
+        "sha256": "88f7114fc4aaaa999ee3f8183800bdee105858441dc962c2f10fa7ac662f636f"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\README.md",
+        "bytes": 6297,
+        "sha256": "f7df1d9f2f58f1d356638204e893ebdb0e894714c85778a12188fac7c2cef3b1"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\01_implementation-plan.md",
+        "bytes": 9308,
+        "sha256": "e8e7e1b5f366d7cf7bfb0d71adf5362ad4dbaef5f5fbe545dadabbbb229e02ad"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\docs\\implementation-plan.md",
+        "bytes": 11489,
+        "sha256": "fd3a377a72b36cf4a57ea20dce76a7a887fa87df40a19806c096c04ab3d68109"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\02_progress.md",
+        "bytes": 4412,
+        "sha256": "642629db3277f3a97bab288d9e26c616160d820cf52793c928903cde7d5fe692"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\docs\\progress.md",
+        "bytes": 6483,
+        "sha256": "85bcd8cd03f88f9aa865c50aa0b6fbb82ad702738d016ff2dfb60be17db698e2"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\03_coverage-matrix.md",
+        "bytes": 7321,
+        "sha256": "1715226c4394e1c5c13b61a609803ea44b9474f19db40179a0109b8611222ee1"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\docs\\coverage-matrix.md",
+        "bytes": 7987,
+        "sha256": "066410d6c143939e8353c7577d456883fb1875820131ad906fe42b311c95ae97"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\04_Vortex-v2.3四核双DDR完整GPU-2026-09-29.md",
+        "bytes": 57790,
+        "sha256": "7be06db8de1f3d7a4db2f47dcb5fc38d931dbe8aef070562bf466e4b5cc83975"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\50-项目与实验\\IC设计与FPGA\\Vortex-v2.3四核双DDR完整GPU-2026-09-29.md",
+        "bytes": 59969,
+        "sha256": "caf88acf5d3b220d3327714f191fa9f19293d1944c267eed7f257b47315b94b6"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\05_Vortex下板程序如何复用A53测试逻辑完成整机仿真.md",
+        "bytes": 13932,
+        "sha256": "ef3e67c6c43bf04924e7ca6347fabfac33eb2872b7c632ab834f4200ef43ea36"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\40-问题与推理\\Vortex下板程序如何复用A53测试逻辑完成整机仿真.md",
+        "bytes": 16901,
+        "sha256": "ca09d15748f8d6a2f6fe3038f706f6639fbff84ec188734e979ebb983a54f4ca"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\06_Vortex项目当前验证成熟度如何判断.md",
+        "bytes": 12617,
+        "sha256": "6dcc31bb8df66e49d8794e4d6fb2459dfd7d8833001a27be5540cf0b30031d49"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\40-问题与推理\\Vortex项目当前验证成熟度如何判断.md",
+        "bytes": 14867,
+        "sha256": "6b5f4bbb7a78a57ed642054bc4e332d6ab5ca50c2eeeea438771e96ef8d19382"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\07_IC设计知识地图.md",
+        "bytes": 34507,
+        "sha256": "e0ab3df69d6274075ad022dcc1a3b087484cfe45a663e6be6baded706b1e6645"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\30-知识Wiki\\IC设计\\IC设计知识地图.md",
+        "bytes": 34818,
+        "sha256": "9a82d6dc542be977b343a50c5dd09df1d70416278a0f8cb1a96550a00dd522c2"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\08_问题与推理索引.md",
+        "bytes": 28375,
+        "sha256": "92cb24b77bdc1b8b419b5a17edaab9a4adc4d01c347f053aae536e94c4eacbe5"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\40-问题与推理\\问题与推理索引.md",
+        "bytes": 28686,
+        "sha256": "82d7cc5c3e78171caeb1890574039c6b5e4a78f4dcc3d5a382ecb1b8f9c758f0"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\09_项目与实验索引.md",
+        "bytes": 21660,
+        "sha256": "ee6e500923d23dd329b5d4834fff031482da1f8a8032150f961bf6bdde1bea8c"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\50-项目与实验\\项目与实验索引.md",
+        "bytes": 21971,
+        "sha256": "1049f3031fb1971f62276b76e71818c4226b7fd29c0f999449a96d0c363de66a"
+      }
+    },
+    {
+      "before": {
+        "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_recovery_20261003\\r4_delivery_20261003\\docs_before_final_delivery\\10_迭代日志.md",
+        "bytes": 270633,
+        "sha256": "0dbaeaafea636b1fb42a0303c6abe74ad5d737fa1695147377ffd8ceeaac03dc"
+      },
+      "after": {
+        "path": "F:\\obsidian-codex\\codex\\00-系统\\迭代日志.md",
+        "bytes": 272194,
+        "sha256": "90cd8dc529cae411d097bf4f6c283065032bc68e331cf42cc68ab33cd0d83d64"
+      }
+    }
+  ],
+  "preflight": {
+    "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\evidence\\final_delivery_preflight_20261003.json",
+    "bytes": 355373,
+    "sha256": "a10addf89ad02073ec5ee6625e521f6d3353e5e06a02354350c13c13be57c0b8"
+  },
+  "evidence_retention": "Original complete logs, VCD/WDB, compilation snapshots and preserved failures remain in their recorded F: paths; reports are copied without altering original evidence.",
+  "simulation_rerun": false,
+  "board_executed": false,
+  "final_documentation": [
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\README.md",
+      "bytes": 6320,
+      "sha256": "11131ae260e2b2543568c4a1bc8e69206277ff9392d9caa3a6ea9696ee29ab36"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\docs\\implementation-plan.md",
+      "bytes": 11489,
+      "sha256": "fd3a377a72b36cf4a57ea20dce76a7a887fa87df40a19806c096c04ab3d68109"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\docs\\progress.md",
+      "bytes": 6483,
+      "sha256": "85bcd8cd03f88f9aa865c50aa0b6fbb82ad702738d016ff2dfb60be17db698e2"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\docs\\coverage-matrix.md",
+      "bytes": 7987,
+      "sha256": "066410d6c143939e8353c7577d456883fb1875820131ad906fe42b311c95ae97"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\50-项目与实验\\IC设计与FPGA\\Vortex-v2.3四核双DDR完整GPU-2026-09-29.md",
+      "bytes": 59969,
+      "sha256": "caf88acf5d3b220d3327714f191fa9f19293d1944c267eed7f257b47315b94b6"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\40-问题与推理\\Vortex下板程序如何复用A53测试逻辑完成整机仿真.md",
+      "bytes": 16901,
+      "sha256": "ca09d15748f8d6a2f6fe3038f706f6639fbff84ec188734e979ebb983a54f4ca"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\40-问题与推理\\Vortex项目当前验证成熟度如何判断.md",
+      "bytes": 14867,
+      "sha256": "6b5f4bbb7a78a57ed642054bc4e332d6ab5ca50c2eeeea438771e96ef8d19382"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\30-知识Wiki\\IC设计\\IC设计知识地图.md",
+      "bytes": 34818,
+      "sha256": "9a82d6dc542be977b343a50c5dd09df1d70416278a0f8cb1a96550a00dd522c2"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\40-问题与推理\\问题与推理索引.md",
+      "bytes": 28686,
+      "sha256": "82d7cc5c3e78171caeb1890574039c6b5e4a78f4dcc3d5a382ecb1b8f9c758f0"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\50-项目与实验\\项目与实验索引.md",
+      "bytes": 21971,
+      "sha256": "1049f3031fb1971f62276b76e71818c4226b7fd29c0f999449a96d0c363de66a"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\00-系统\\迭代日志.md",
+      "bytes": 272194,
+      "sha256": "90cd8dc529cae411d097bf4f6c283065032bc68e331cf42cc68ab33cd0d83d64"
+    }
+  ],
+  "final_reviewed_at": "2026-10-03T14:56:16.139834+08:00"
+}

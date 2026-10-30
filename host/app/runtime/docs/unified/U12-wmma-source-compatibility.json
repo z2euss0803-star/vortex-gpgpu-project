@@ -1,0 +1,54 @@
+{
+  "scope": "FROZEN_S8_SOURCE_INTENT_AND_COMPAT_CODE_NOT_HARDWARE_PASS",
+  "hardware_source": "708bfd8bd611beb9631cf8294e191cf57d1a6a48c777cea7d9f42b8a27c51a7d",
+  "bit": "94ae9d3e6eb73ba55a8eec8c802e3818cd6b3a9be7e60542da5ae9459e3579e1",
+  "xsa": "02e68160e21b01621fde1eac6e472810e0fe50cd1842acb3ab63469314355e94",
+  "routed_dcp": "f550075ce584a2d2af606ff11e048d0a64c25962aa23e50e37430b4061839439",
+  "source_snapshot_sha256": "4a541cf4687f21f3c48a4aa900cf5350178f8504672abbf9f45ef00d0b986400",
+  "implementation_launch_sha256": "82243ba22ea8d17294bd786d844a6ca9cf5d801f08f1856c79c3f19044fbc986",
+  "legacy_fp_sources": [
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\candidate\\build\\compat_rtl\\tcu\\VX_tcu_fp.sv",
+      "sha256": "21b8e6a305500869ac21033976f7b7392780e0845db694595421f2a92b58959a",
+      "unchanged_from_frozen_W4_baseline": true
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\candidate\\build\\compat_rtl\\tcu\\VX_tcu_unit.sv",
+      "sha256": "bc7fc5cf5e35c147231349f752165b506017dbf65408c00b3f28da5d3c4c8890",
+      "unchanged_from_frozen_W4_baseline": true
+    }
+  ],
+  "defines": [
+    "NDEBUG",
+    "VIVADO",
+    "XLEN_32",
+    "FPU_DSP",
+    "EXT_TCU_ENABLE",
+    "TCU_DSP",
+    "Z11_TCU_XIL_IP",
+    "EXT_TEX_ENABLE",
+    "GBAR_ENABLE",
+    "NUM_CLUSTERS=1",
+    "NUM_CORES=4",
+    "SOCKET_SIZE=4",
+    "NUM_WARPS=4",
+    "NUM_THREADS=4",
+    "NUM_BARRIERS=2",
+    "ICACHE_SIZE=16384",
+    "DCACHE_SIZE=16384",
+    "DCACHE_WRITEBACK=0",
+    "PLATFORM_MEMORY_NUM_BANKS=1",
+    "PLATFORM_MEMORY_DATA_SIZE=64",
+    "MEM_BLOCK_SIZE=64",
+    "MEM_ADDR_WIDTH=32",
+    "LMEM_BASE_ADDR=1879048192"
+  ],
+  "compat_cpp_sha256": "b353936205ab75bc10fff84a88078f36b0e59150ad45ef47fca2c463fe043320",
+  "wmma": "4 lanes, FP16->FP32, tile8x4x8",
+  "new_native_signed_int16_pe": "retained separate8x8 path",
+  "physical_signoff": "OPEN_NOT_PASS",
+  "simulation": "WAIVED_NOT_RUN",
+  "board": "NOT_RUN",
+  "gpu_raw_cycles": null,
+  "conclusion": "Software library can target declared preserved legacy WMMA path; physical compatibility stays OPEN, namespace admission alone is insufficient"
+}

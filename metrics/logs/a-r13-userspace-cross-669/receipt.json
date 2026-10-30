@@ -1,0 +1,15 @@
+{
+  "natural_exit": 0,
+  "source_snapshot_id": "e5792d4e19f0b908197d0df5bc9650033c41e34e09a8e3decdf31eadba36c973",
+  "runtime_source_id": "b8c00b2e8f31f6803c7c982008581983fc73dfe850c9f6e1bff7d6a76a77bad1",
+  "source_lock_sha256": "7cf8849a1042050792c8d2c05ee841caffb52b53179f1cceef086b0198c59c34",
+  "artifact": {
+    "name": "vxgpud",
+    "path": "/mnt/g/s8_software_r5_20261028/software-r13-performance-633/runtime-build-r5-r13-669/out/vxgpud",
+    "bytes": 26299264,
+    "sha256": "3dae77431afe38f53a6599049b3d85cb6e5cf4b49ae376b73df09e4d8f9a55f8"
+  },
+  "all_userspace_objects_built_fresh": true,
+  "audit_receipt_sha256": "a36f29909adab6a1a09adec1c4ab6fae4b9567cf8aec51999513aedf3a4f8052",
+  "target_executed": false
+}

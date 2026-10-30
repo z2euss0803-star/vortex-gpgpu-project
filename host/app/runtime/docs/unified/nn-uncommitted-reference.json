@@ -1,0 +1,47 @@
+{
+  "files": [
+    {
+      "path": "include/vxnn/package.hpp",
+      "bytes": 2878,
+      "sha256": "56b779346eb2766a9608e9176436baa8d94c46cd435e95cae37bc1fc8ea57f04",
+      "status": "REFERENCE_ONLY_NOT_IMPORTED_NOT_PASS"
+    },
+    {
+      "path": "nnrt/package/canonical.cpp",
+      "bytes": 153,
+      "sha256": "46ba163105d3fd82d9deafca02ced5d58f5c0e6ea5b940e83129e6c81c9bfc7a",
+      "status": "REFERENCE_ONLY_NOT_IMPORTED_NOT_PASS"
+    },
+    {
+      "path": "nnrt/package/reader.cpp",
+      "bytes": 925,
+      "sha256": "be4f8db448077fbc9a1fba549ae2cf598a6e4fde440bf180ae5e124d93f46d07",
+      "status": "REFERENCE_ONLY_NOT_IMPORTED_NOT_PASS"
+    },
+    {
+      "path": "nnrt/package/registry.cpp",
+      "bytes": 692,
+      "sha256": "e311439a9440f168e6ffe315e7aa21cd0c5583bff164950b552f52105f313063",
+      "status": "REFERENCE_ONLY_NOT_IMPORTED_NOT_PASS"
+    },
+    {
+      "path": "tests/nnrt/test_package.cpp",
+      "bytes": 794,
+      "sha256": "2e61f91e87708f58f55040a4dc5c6b284551238950d0aa6aa74d86ea56b1182a",
+      "status": "REFERENCE_ONLY_NOT_IMPORTED_NOT_PASS"
+    },
+    {
+      "path": "tests/nnrt/test_package_golden.py",
+      "bytes": 622,
+      "sha256": "155703d470edd321b948ec6987a359a4bef98772c81b135c3b265778f16aa9ae",
+      "status": "REFERENCE_ONLY_NOT_IMPORTED_NOT_PASS"
+    },
+    {
+      "path": "tests/nnrt/test_registry.cpp",
+      "bytes": 1628,
+      "sha256": "9a3ab24d1c90a07063b62b11b03a1316048c981901e67897139e293b97588ac8",
+      "status": "REFERENCE_ONLY_NOT_IMPORTED_NOT_PASS"
+    }
+  ],
+  "ruling": "U07 must implement and validate its own package/registry; these bytes are inert provenance only."
+}

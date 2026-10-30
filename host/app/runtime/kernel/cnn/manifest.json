@@ -1,0 +1,29 @@
+{
+  "scope": "PROGRAM_GENERATION_NOT_GPU",
+  "programs": [
+    {
+      "id": 2,
+      "bytes": 4096,
+      "instruction_bytes": 540,
+      "sha256": "1583f8e4d917c6742451b4c6a543f6668c22ae7c39742c8c3cda47a7199f7d71"
+    },
+    {
+      "id": 3,
+      "bytes": 4096,
+      "instruction_bytes": 164,
+      "sha256": "9680b10581d48f032203884273b35a12fcdd8f67cf3f949dcda399b89f0caad1"
+    },
+    {
+      "id": 4,
+      "bytes": 4096,
+      "instruction_bytes": 228,
+      "sha256": "a3447a097932e8fc39d093c1560e9f23354dcbd88582ad025835c0e7466097be"
+    },
+    {
+      "id": 5,
+      "bytes": 4096,
+      "instruction_bytes": 404,
+      "sha256": "f002e3b23c4d1295656658cc11cbc9f449f4113109b81b6b7989a7470106632e"
+    }
+  ]
+}

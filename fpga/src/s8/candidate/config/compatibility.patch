@@ -1,0 +1,389 @@
+--- vendor\vortex\hw\rtl\Vortex.sv
++++ build\compat_rtl\Vortex.sv
+@@ -40,6 +40,7 @@
+     input  wire [VX_DCR_ADDR_WIDTH-1:0]     dcr_wr_addr,
+     input  wire [VX_DCR_DATA_WIDTH-1:0]     dcr_wr_data,
+ 
++    output wire tex_pending, tex_error,
+     // Status
+     output wire                             busy
+ );
+@@ -110,7 +111,9 @@
+         assign mem_req_valid[i]  = mem_bus_if[i].req_valid;
+         assign mem_req_rw[i]     = mem_bus_if[i].req_data.rw;
+         assign mem_req_byteen[i] = mem_bus_if[i].req_data.byteen;
+-        assign mem_req_addr[i]   = mem_bus_if[i].req_data.addr;
++        assign mem_req_addr[i]   = mem_bus_if[i].req_data.flags[MEM_REQ_FLAG_FLUSH]
++                                  ? VX_MEM_ADDR_WIDTH'(32'h10030000 >> $clog2(`L3_LINE_SIZE))
++                                  : mem_bus_if[i].req_data.addr;
+         assign mem_req_data[i]   = mem_bus_if[i].req_data.data;
+         assign mem_req_tag[i]    = mem_bus_if[i].req_data.tag;
+         `UNUSED_VAR (mem_bus_if[i].req_data.flags)
+@@ -128,6 +131,8 @@
+     assign dcr_bus_if.write_data  = dcr_wr_data;
+ 
+     wire [`NUM_CLUSTERS-1:0] per_cluster_busy;
++    wire [`NUM_CLUSTERS-1:0] tex_busy_vec,tex_error_vec;
++    assign tex_pending=|tex_busy_vec;assign tex_error=|tex_error_vec;
+ 
+     // Generate all clusters
+     for (genvar cluster_id = 0; cluster_id < `NUM_CLUSTERS; ++cluster_id) begin : g_clusters
+@@ -153,6 +158,7 @@
+             .dcr_bus_if         (cluster_dcr_bus_if),
+ 
+             .mem_bus_if         (per_cluster_mem_bus_if[cluster_id * `L2_MEM_PORTS +: `L2_MEM_PORTS]),
++            .tex_pending(tex_busy_vec[cluster_id]), .tex_error(tex_error_vec[cluster_id]),
+ 
+             .busy               (per_cluster_busy[cluster_id])
+         );
+--- vendor\vortex\hw\rtl\Vortex_axi.sv
++++ build\compat_rtl\Vortex_axi.sv
+@@ -80,6 +80,7 @@
+     input  wire [VX_DCR_DATA_WIDTH-1:0] dcr_wr_data,
+ 
+     // Status
++    output wire tex_pending, tex_error,
+     output wire                         busy
+ );
+     localparam DST_LDATAW = `CLOG2(AXI_DATA_WIDTH);
+@@ -126,6 +127,7 @@
+         .dcr_wr_addr    (dcr_wr_addr),
+         .dcr_wr_data    (dcr_wr_data),
+ 
++        .tex_pending(tex_pending), .tex_error(tex_error),
+         .busy           (busy)
+     );
+ 
+--- vendor\vortex\hw\rtl\VX_cluster.sv
++++ build\compat_rtl\VX_cluster.sv
+@@ -33,6 +33,7 @@
+     // Memory
+     VX_mem_bus_if.master        mem_bus_if [`L2_MEM_PORTS],
+ 
++    output wire tex_pending, tex_error,
+     // Status
+     output wire                 busy
+ );
+@@ -118,6 +119,8 @@
+     ///////////////////////////////////////////////////////////////////////////
+ 
+     wire [NUM_SOCKETS-1:0] per_socket_busy;
++    wire [NUM_SOCKETS-1:0] tex_busy_vec,tex_error_vec;
++    assign tex_pending=|tex_busy_vec;assign tex_error=|tex_error_vec;
+ 
+     // Generate all sockets
+     for (genvar socket_id = 0; socket_id < NUM_SOCKETS; ++socket_id) begin : g_sockets
+@@ -126,7 +129,7 @@
+ 
+         VX_dcr_bus_if socket_dcr_bus_if();
+         wire is_base_dcr_addr = (dcr_bus_if.write_addr >= `VX_DCR_BASE_STATE_BEGIN && dcr_bus_if.write_addr < `VX_DCR_BASE_STATE_END);
+-        `BUFFER_DCR_BUS_IF (socket_dcr_bus_if, dcr_bus_if, is_base_dcr_addr, (NUM_SOCKETS > 1))
++        `BUFFER_DCR_BUS_IF (socket_dcr_bus_if, dcr_bus_if, (is_base_dcr_addr || (dcr_bus_if.write_addr >= 12'h100 && dcr_bus_if.write_addr <= 12'h104)), (NUM_SOCKETS > 1))
+ 
+         VX_socket #(
+             .SOCKET_ID ((CLUSTER_ID * NUM_SOCKETS) + socket_id),
+@@ -148,6 +151,7 @@
+         `ifdef GBAR_ENABLE
+             .gbar_bus_if    (per_socket_gbar_bus_if[socket_id]),
+         `endif
++            .tex_pending(tex_busy_vec[socket_id]), .tex_error(tex_error_vec[socket_id]),
+ 
+             .busy           (per_socket_busy[socket_id])
+         );
+--- vendor\vortex\hw\rtl\VX_define.vh
++++ build\compat_rtl\VX_define.vh
+@@ -1,3 +1,7 @@
++`ifndef Z11_CAT
++`define Z11_CAT_I(a,b) a``b
++`define Z11_CAT(a,b) `Z11_CAT_I(a,b)
++`endif
+ // Copyright © 2019-2023
+ //
+ // Licensed under the Apache License, Version 2.0 (the "License");
+@@ -190,7 +194,7 @@
+         .OUT_W (__outw), \
+         .N     (__n), \
+         .OP    ("__op") \
+-    ) reduce`__LINE__ ( \
++    ) `Z11_CAT(reduce,`__LINE__) ( \
+         .data_in(__in), \
+         .data_out(__out) \
+     )
+@@ -199,7 +203,7 @@
+     VX_popcount #( \
+         .N ($bits(in)), \
+         .MODEL (model) \
+-    ) __pop_count_ex`__LINE__ ( \
++    ) `Z11_CAT(__pop_count_ex,`__LINE__) ( \
+         .data_in  (in), \
+         .data_out (out) \
+     )
+@@ -222,7 +226,7 @@
+         .DATAW  ($bits(dst)), \
+         .RESETW (resetw), \
+         .DEPTH  (latency) \
+-    ) __buffer_ex`__LINE__ ( \
++    ) `Z11_CAT(__buffer_ex,`__LINE__) ( \
+         .clk      (clk), \
+         .reset    (reset), \
+         .enable   (ena), \
+@@ -236,7 +240,7 @@
+     VX_edge_trigger #( \
+         .POS  (0), \
+         .INIT (0) \
+-    ) __neg_edge`__LINE__ ( \
++    ) `Z11_CAT(__neg_edge,`__LINE__) ( \
+         .clk      (clk), \
+         .reset    (1'b0), \
+         .data_in  (src), \
+--- vendor\vortex\hw\rtl\VX_gpu_pkg.sv
++++ build\compat_rtl\VX_gpu_pkg.sv
+@@ -116,7 +116,8 @@
+ 	localparam EX_FPU = (EX_SFU + `EXT_F_ENABLED);
+     localparam EX_TCU = (EX_FPU + `EXT_TCU_ENABLED);
+ 
+-	localparam NUM_EX_UNITS = EX_TCU + 1;
++	localparam EX_TEX = EX_TCU + 1;
++    localparam NUM_EX_UNITS = EX_TEX + 1;
+ 	localparam EX_BITS = `CLOG2(NUM_EX_UNITS);
+ 	localparam EX_WIDTH = `UP(EX_BITS);
+ 
+@@ -820,7 +821,7 @@
+ 
+     // arbitrate between icache and dcache
+     localparam L1_MEM_TAG_WIDTH     = `MAX(ICACHE_MEM_TAG_WIDTH, DCACHE_MEM_TAG_WIDTH);
+-    localparam L1_MEM_ARB_TAG_WIDTH = (L1_MEM_TAG_WIDTH + `CLOG2(2));
++    localparam L1_MEM_ARB_TAG_WIDTH = (L1_MEM_TAG_WIDTH + `CLOG2(3));
+ 
+     /////////////////////////////// L2 Parameters /////////////////////////////
+ 
+--- vendor\vortex\hw\rtl\VX_platform.vh
++++ build\compat_rtl\VX_platform.vh
+@@ -1,3 +1,7 @@
++`ifndef Z11_CAT
++`define Z11_CAT_I(a,b) a``b
++`define Z11_CAT(a,b) `Z11_CAT_I(a,b)
++`endif
+ // Copyright © 2019-2023
+ //
+ // Licensed under the Apache License, Version 2.0 (the "License");
+@@ -33,7 +37,7 @@
+ 
+ `define PACKAGE_ASSERT(cond) \
+     /* verilator lint_on UNUSED */ \
+-    typedef bit [((cond) ? 0 : -1) : 0] static_assertion_at_line_`__LINE__; \
++    typedef bit [((cond) ? 0 : -1) : 0] `Z11_CAT(static_assertion_at_line_,`__LINE__); \
+     /* verilator lint_off UNUSED */
+ 
+ `define ERROR(msg) \
+--- vendor\vortex\hw\rtl\VX_socket.sv
++++ build\compat_rtl\VX_socket.sv
+@@ -37,6 +37,7 @@
+     // Barrier
+     VX_gbar_bus_if.master   gbar_bus_if,
+ `endif
++    output wire tex_pending, tex_error,
+     // Status
+     output wire             busy
+ );
+@@ -168,12 +169,14 @@
+ 
+     ///////////////////////////////////////////////////////////////////////////
+ 
++    `STATIC_ASSERT (`SOCKET_SIZE == 1 && `L1_MEM_PORTS == 1, ("TEX single-core memory contract"))
++    VX_mem_bus_if #(.DATA_SIZE(64), .TAG_WIDTH(L1_MEM_TAG_WIDTH)) tex_mem_bus_if();
+     for (genvar i = 0; i < `L1_MEM_PORTS; ++i) begin : g_mem_bus_if
+         if (i == 0) begin : g_i0
+             VX_mem_bus_if #(
+                 .DATA_SIZE (`L1_LINE_SIZE),
+                 .TAG_WIDTH (L1_MEM_TAG_WIDTH)
+-            ) l1_mem_bus_if[2]();
++            ) l1_mem_bus_if[3]();
+ 
+             VX_mem_bus_if #(
+                 .DATA_SIZE (`L1_LINE_SIZE),
+@@ -183,13 +186,14 @@
+             `ASSIGN_VX_MEM_BUS_IF_EX (l1_mem_bus_if[0], icache_mem_bus_if[0], L1_MEM_TAG_WIDTH, ICACHE_MEM_TAG_WIDTH, UUID_WIDTH);
+             `ASSIGN_VX_MEM_BUS_IF_EX (l1_mem_bus_if[1], dcache_mem_bus_if[0], L1_MEM_TAG_WIDTH, DCACHE_MEM_TAG_WIDTH, UUID_WIDTH);
+ 
++            `ASSIGN_VX_MEM_BUS_IF(l1_mem_bus_if[2], tex_mem_bus_if);
+             VX_mem_arb #(
+-                .NUM_INPUTS (2),
++                .NUM_INPUTS (3),
+                 .NUM_OUTPUTS(1),
+                 .DATA_SIZE  (`L1_LINE_SIZE),
+                 .TAG_WIDTH  (L1_MEM_TAG_WIDTH),
+                 .TAG_SEL_IDX(0),
+-                .ARBITER    ("P"), // prioritize the icache
++                .ARBITER    ("R"), // fair I/D/TEX service
+                 .REQ_OUT_BUF(3),
+                 .RSP_OUT_BUF(3)
+             ) mem_arb (
+@@ -214,6 +218,8 @@
+     ///////////////////////////////////////////////////////////////////////////
+ 
+     wire [`SOCKET_SIZE-1:0] per_core_busy;
++    wire [`SOCKET_SIZE-1:0] tex_busy_vec,tex_error_vec;
++    assign tex_pending=|tex_busy_vec;assign tex_error=|tex_error_vec;
+ 
+     // Generate all cores
+     for (genvar core_id = 0; core_id < `SOCKET_SIZE; ++core_id) begin : g_cores
+@@ -241,6 +247,8 @@
+             .dcache_bus_if  (per_core_dcache_bus_if[core_id * DCACHE_NUM_REQS +: DCACHE_NUM_REQS]),
+ 
+             .icache_bus_if  (per_core_icache_bus_if[core_id]),
++            .tex_mem_if(tex_mem_bus_if),
++            .tex_pending(tex_busy_vec[core_id]), .tex_error(tex_error_vec[core_id]),
+ 
+         `ifdef GBAR_ENABLE
+             .gbar_bus_if    (per_core_gbar_bus_if[core_id]),
+--- vendor\vortex\hw\rtl\core\VX_core.sv
++++ build\compat_rtl\core\VX_core.sv
+@@ -36,6 +36,8 @@
+     VX_mem_bus_if.master    dcache_bus_if [DCACHE_NUM_REQS],
+ 
+     VX_mem_bus_if.master    icache_bus_if,
++    VX_mem_bus_if.master    tex_mem_if,
++    output wire tex_pending, tex_error,
+ 
+ `ifdef GBAR_ENABLE
+     VX_gbar_bus_if.master   gbar_bus_if,
+@@ -44,6 +46,8 @@
+     // Status
+     output wire             busy
+ );
++    wire schedule_busy;
++    assign busy = schedule_busy | tex_pending;
+     VX_schedule_if      schedule_if();
+     VX_fetch_if         fetch_if();
+     VX_decode_if        decode_if();
+@@ -114,7 +118,7 @@
+     `endif
+         .sched_csr_if   (sched_csr_if),
+ 
+-        .busy           (busy)
++        .busy           (schedule_busy)
+     );
+ 
+     VX_fetch #(
+@@ -172,6 +176,8 @@
+ 
+         .base_dcrs      (base_dcrs),
+ 
++        .dcr_bus_if(dcr_bus_if), .tex_mem_if(tex_mem_if),
++        .tex_pending(tex_pending), .tex_error(tex_error),
+         .lsu_mem_if     (lsu_mem_if),
+ 
+         .dispatch_if    (dispatch_if),
+--- vendor\vortex\hw\rtl\core\VX_decode.sv
++++ build\compat_rtl\core\VX_decode.sv
+@@ -465,6 +465,15 @@
+                 endcase
+             end
+         `endif
++            INST_EXT2: begin
++                if (funct7 == 0 && funct3 == 0) begin
++                    ex_type = EX_TEX;
++                    op_type = '0;
++                    `USED_IREG (rd);
++                    `USED_IREG (rs1);
++                    `USED_IREG (rs2);
++                end
++            end
+             INST_EXT1: begin
+                 case (funct7)
+                     7'h00: begin
+--- vendor\vortex\hw\rtl\core\VX_execute.sv
++++ build\compat_rtl\core\VX_execute.sv
+@@ -29,6 +29,9 @@
+ 
+     input base_dcrs_t       base_dcrs,
+ 
++    VX_dcr_bus_if.slave dcr_bus_if,
++    VX_mem_bus_if.master tex_mem_if,
++    output wire tex_pending, tex_error,
+     // Dcache interface
+     VX_lsu_mem_if.master    lsu_mem_if [`NUM_LSU_BLOCKS],
+ 
+@@ -97,6 +100,13 @@
+     );
+ `endif
+ 
++    VX_tex_unit tex_unit (
++        .clk(clk), .reset(reset), .dcr_bus_if(dcr_bus_if),
++        .dispatch_if(dispatch_if[EX_TEX * `ISSUE_WIDTH]),
++        .commit_if(commit_if[EX_TEX * `ISSUE_WIDTH]),
++        .tex_mem_if(tex_mem_if), .tex_pending(tex_pending), .tex_error(tex_error)
++    );
++
+     VX_sfu_unit #(
+         .INSTANCE_ID (`SFORMATF(("%s-sfu", INSTANCE_ID))),
+         .CORE_ID (CORE_ID)
+--- vendor\vortex\hw\rtl\tcu\VX_tcu_fedp_dsp.sv
++++ build\compat_rtl\tcu\VX_tcu_fedp_dsp.sv
+@@ -14,7 +14,9 @@
+ `include "VX_define.vh"
+ 
+ `ifndef SYNTHESIS
++`ifndef Z11_TCU_XIL_IP
+ `define DSP_TEST
++`endif
+ `endif
+ 
+ // Function to convert IEEE-754 half precision (16-bit) to single precision (32-bit)
+@@ -56,7 +58,7 @@
+ 
+     // Calculate FP32 exponent
+     wire [7:0] exp32 =
+-        is_denormal ? 8'd127 - 8'd14 - {3'b0, leading_zeros} + 8'd1 :  // 2^(-14 - (10 - leading_zeros))
++        is_denormal ? 8'd112 - {3'b0, leading_zeros} :  // 2^(-14 - (10 - leading_zeros))
+         is_zero     ? 8'b0 :
+         is_infinity ? 8'b11111111 :
+         is_nan      ? 8'b11111111 :
+--- vendor\vortex\hw\rtl\tcu\VX_tcu_fedp_int.sv
++++ build\compat_rtl\tcu\VX_tcu_fedp_int.sv
+@@ -32,7 +32,8 @@
+     localparam LEVELS = $clog2(N);
+     localparam PRODW = 18;
+     localparam PSELW = PRODW + 1; // add unsinged guard bit
+-    localparam REDW  = `MAX(PRODW + LEVELS, PSELW);
++    // Keep the unsigned guard through every reduction level.
++    localparam REDW  = PSELW + LEVELS;
+     localparam MUL_LATENCY = 2;
+     localparam ADD_LATENCY = 1;
+     localparam RED_LATENCY = LEVELS * ADD_LATENCY;
+@@ -107,10 +108,10 @@
+         reg [PSELW-1:0] mult_sel;
+         always @(*) begin
+             case (delayed_fmt_s)
+-            3'd1: mult_sel = PSELW'($signed(sum_i8));
+-            3'd2: mult_sel = PSELW'(sum_u8);
+-            3'd3: mult_sel = PSELW'($signed(sum_i4));
+-            3'd4: mult_sel = PSELW'(sum_u4);
++            3'd1: mult_sel = {{(PSELW-18){sum_i8[17]}}, sum_i8};
++            3'd2: mult_sel = {{(PSELW-18){1'b0}}, sum_u8};
++            3'd3: mult_sel = {{(PSELW-11){sum_i4[10]}}, sum_i4};
++            3'd4: mult_sel = {{(PSELW-11){1'b0}}, sum_u4};
+             default: mult_sel = 'x;
+             endcase
+         end
+@@ -129,7 +130,7 @@
+ 
+     wire [REDW-1:0] red_in [LEVELS+1][N];
+     for (genvar i = 0; i < N; i++) begin : g_red_inputs
+-        assign red_in[0][i] = REDW'($signed(mult_result[i]));
++        assign red_in[0][i] = {{(REDW-PSELW){mult_result[i][PSELW-1]}}, mult_result[i]};
+     end
+ 
+     // accumulate reduction tree
+@@ -167,7 +168,9 @@
+     wire [31:0] result;
+ 
+     // final accumulation
+-    wire [31:0] acc = 32'($signed(red_in[LEVELS][0])) + delayed_c;
++    // Explicit bits also preserve the sign in Vivado 2020.1 synthesized logic.
++    wire [31:0] red_extended = {{(32-REDW){red_in[LEVELS][0][REDW-1]}}, red_in[LEVELS][0]};
++    wire [31:0] acc = red_extended + delayed_c;
+     VX_pipe_register #(
+         .DATAW (32),
+         .DEPTH (1)

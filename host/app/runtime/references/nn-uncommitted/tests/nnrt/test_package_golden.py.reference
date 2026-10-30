@@ -1,0 +1,14 @@
+import unittest
+from scripts.nnrt.package_model import canonical_metadata
+
+
+class PackageGoldenTests(unittest.TestCase):
+    def test_unicode_large_integer_and_key_order(self):
+        raw='{"z":18446744073709551615,"é":"中文/\\n","a":[]}'.encode('utf-8')
+        self.assertEqual(canonical_metadata(raw),'{{"a":[],"z":18446744073709551615,"é":"中文/\\n"}}'.format().encode('utf-8'))
+    def test_duplicate_and_float_rejected(self):
+        for raw in (b'{"a":1,"a":2}',b'{"scale":1.25}',b'{"x":NaN}'):
+            with self.assertRaises(ValueError):canonical_metadata(raw)
+
+
+if __name__=='__main__':unittest.main()

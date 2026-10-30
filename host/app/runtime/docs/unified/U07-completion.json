@@ -1,0 +1,131 @@
+{
+  "files": [
+    "Makefile.unified",
+    "include/vxnn/package.hpp",
+    "include/vxnn/graph.hpp",
+    "include/vxunified/work.hpp",
+    "nnrt/package/canonical.cpp",
+    "nnrt/package/reader.cpp",
+    "nnrt/package/registry.cpp",
+    "nnrt/package/json.hpp",
+    "nnrt/graph/prepare.cpp",
+    "nnrt/memory/planner.cpp",
+    "tests/nnrt/fixture.hpp",
+    "tests/nnrt/package_fixture.py",
+    "tests/nnrt/test_package.cpp",
+    "tests/nnrt/test_registry.cpp",
+    "tests/nnrt/test_graph.cpp",
+    "tests/nnrt/test_memory_plan.cpp",
+    "scripts/unified/check_u07.py",
+    "docs/unified/U07-package-graph-memory.md",
+    "docs/unified/U07-errors.json"
+  ],
+  "message": "feat(unified): U07 模型包、静态图与张量规划统一接线",
+  "verified_runs": [
+    "U07-final-normal-011",
+    "U07-aarch64-012",
+    "U07-final-sanitizers-013"
+  ],
+  "cross": "FOUR_AARCH64_U07_LINKED_ELFS_AND_ROOTFS_SYMBOL_AUDIT_NOT_TARGET_RUN",
+  "gpu_raw_cycles": null,
+  "evidence_archive": {
+    "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U07-final\\raw-and-artifacts.tar.gz",
+    "sha256": "f10ca493cda5326bdd89e7bc59cff5ed7f7604e6c78c0bf27c6e901bb514cc5b",
+    "verified_members": 2752,
+    "code_manifest_checked": {
+      "U07-final-normal-011": 789,
+      "U07-aarch64-012": 789,
+      "U07-final-sanitizers-013": 789
+    }
+  },
+  "rulings": [
+    "U07 explicit package schema with pinned json-c; uncommitted old implementation remains inert reference, frozen old tests executed as compatibility regression",
+    "Hardware identity carried explicitly by OptimizationPolicy; plan content ID excludes runtime epoch but contains actual hardware/caps/profile and full package identity; future binding still checks epoch",
+    "Graph descriptors are bounded and lazy-job generation remains U08/U09; new optimizations disabled before U19",
+    "Held CPU/GPU/DMA/DP and cancelled-unretired ranges cannot be reused; constants bind exact immutable weight asset; device object/capacity limits precede two-model allowance",
+    "Current work/result types are descriptors only; scheduler and result lease execution remain U08-U10"
+  ],
+  "target_artifacts": [
+    {
+      "path": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/json-install/lib/libjson-c.a",
+      "bytes": 157490,
+      "sha256": "e141feac01b3ed28695541af06b0adc52fb93e8d93d98778199e252fa55529b2"
+    },
+    {
+      "path": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/objects/test_nn_memory_plan",
+      "bytes": 8395784,
+      "sha256": "128f98e739ab4ef96cf9978d4aceae3697d0a6b8b19bbd8d1e2cbecdcd77184c"
+    },
+    {
+      "path": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/objects/test_nn_graph",
+      "bytes": 8885744,
+      "sha256": "9535ca26245ba52a0e301e50959991aaf7820f1d1937016c8be8b9d9f4ff25eb"
+    },
+    {
+      "path": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/objects/test_nn_registry",
+      "bytes": 8726296,
+      "sha256": "e97a46f3f4a2c2ddd9fe3059d70552aa59c3637cff51acf9ba9ee404dfc1ce56"
+    },
+    {
+      "path": "/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/objects/test_nn_package",
+      "bytes": 8293016,
+      "sha256": "62e850f759638a898e45a08f88787fd1b12c152f44d2fed6c49c98e84c6d1b05"
+    }
+  ],
+  "target_runtime": {
+    "rootfs_sha256": "d5163fa50ae6b3b945a280c96b6273e0eff9af312a992407bdf8b9abee3eb647",
+    "needed": [
+      "libc.so.6",
+      "libgcc_s.so.1",
+      "libm.so.6",
+      "libpthread.so.0",
+      "libstdc++.so.6"
+    ],
+    "required_versions": [
+      "CXXABI_1.3",
+      "CXXABI_1.3.9",
+      "GCC_3.0",
+      "GLIBCXX_3.4",
+      "GLIBCXX_3.4.11",
+      "GLIBCXX_3.4.14",
+      "GLIBCXX_3.4.20",
+      "GLIBCXX_3.4.21",
+      "GLIBCXX_3.4.22",
+      "GLIBCXX_3.4.26",
+      "GLIBC_2.17",
+      "GLIBC_2.25"
+    ],
+    "files": {
+      "ld-linux-aarch64.so.1": {
+        "path": "lib/ld-linux-aarch64.so.1",
+        "sha256": "2c307a67d7673dcb99e0e78bb6c3ae6ca468e21e5a0f7cbc6ad82846ad7afd4c"
+      },
+      "libgcc_s.so.1": {
+        "path": "lib/libgcc_s.so.1",
+        "sha256": "46ecda5c0995aaf773c409100398418361cbebdadffa768a24c950a84ae7cf76"
+      },
+      "libc.so.6": {
+        "path": "lib/libc.so.6",
+        "sha256": "aeebc1b6491583b277e08ad1ca2509f4e28d628cb3df78073b71d676dea2bbe0"
+      },
+      "libstdc++.so.6": {
+        "path": "usr/lib/libstdc++.so.6",
+        "sha256": "48f2c5788373d1987b8c21920838a109e945b5054a239a18a2115d105331e3a0"
+      },
+      "libm.so.6": {
+        "path": "lib/libm.so.6",
+        "sha256": "f5379ab0ba0797b5d66619425d8175263ac813ae7d7127376db2663be78a0a4b"
+      },
+      "libpthread.so.0": {
+        "path": "lib/libpthread.so.0",
+        "sha256": "edcd56cc1d6e01b0a2dec0258318b965835aacc9ae6ded0d1fbba5f1084caadb"
+      }
+    }
+  },
+  "task": "U07",
+  "base": "c0958224c1dbcd7959cfcbd6639430e8737b454e",
+  "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+  "sd": "NOT_TOUCHED",
+  "board": "NOT_RUN",
+  "image": "NOT_BUILT"
+}

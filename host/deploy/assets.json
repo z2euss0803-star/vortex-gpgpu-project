@@ -1,0 +1,13 @@
+{
+  "tag": "r13-s8-20261030",
+  "release_url": "https://github.com/z2euss0803-star/vortex-gpgpu-project/releases/tag/r13-s8-20261030",
+  "assets": [
+    {
+      "name": "R13-S8-boot-files.zip",
+      "bytes": 267461672,
+      "sha256": "7a38770f4d274b100cfebe9467ad1fe212b6d21854436e5528a07efc4ee4e5ec",
+      "url": "https://github.com/z2euss0803-star/vortex-gpgpu-project/releases/download/r13-s8-20261030/R13-S8-boot-files.zip"
+    }
+  ],
+  "build_id": "VXU-S8-JOINT-NN-IMAGE-P8-R13-20261029T152945Z"
+}

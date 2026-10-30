@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "scope": "CONTRACT_NOT_HARDWARE_EXECUTION",
+  "provider": "S8_NATIVE_INT16",
+  "program_namespace": 1,
+  "logical_profile": 1,
+  "logical_program": 65537,
+  "args_schema_sha256": "b4bcde7864f8b6cab955f2f98de2d558edefe27257a6465fe89aedba72a95f0d",
+  "old_abi_and_programs": "unchanged; new integer family is separate",
+  "operators": {"MatMulI16.v1": 65537, "BiasI48.v1": 65538, "ReLUI48.v1": 65539},
+  "semantic_version": "1.0.0",
+  "operator_key_formula": "sha256(UTF8(VXNN_INT16_OP:1: + name + : + implementation_sha_hex + : + code_sha_hex))",
+  "matrix": {"M_N": "multiples of8,8..64", "K": "1..64", "layout": "RM_I16", "input": "signed16", "accumulator": "native signed48", "output": "RM_I48S64 signextended i48 in8byte slots"},
+  "bias": {"input": "RM_I48S64", "bias": "ROW_I32, one row broadcast", "overflow": "reject outside signed48 before publishing"},
+  "relu": {"input": "RM_I48S64", "semantics": "max(value,0), exact integer", "sealed_B": "canonical same readonly reference/address/extent asA; not a second numerical input"},
+  "storage": {"I32": "new appended user enum4,4bytes", "I48_RM_I48S64": "8bytes", "old_other_I48_layouts": "retain6bytes"},
+  "arguments": {"bytes": 128, "address_offsets": [24,28,32], "refs": ["A_READ","B_READ","OUT_WRITE"], "client_address_words": "zero before kernel relocation", "gpu_data": "PL80800000..fff00000; never CPU VA or PS DMA"},
+  "runtime": {"CODE": "80000000..80010000, immutable padded wire, last64B A7 guard", "ARGS": "80100040/128B", "CRT": "10002000/4096B; BSS+TLS at+400, last64B guard", "STACK": "fff00000/1MiB,8192stride,64harts", "FCSR": 0},
+  "preparation": "explicit full BackendIdentity overload; no package-derived physical identity or invented epoch",
+  "extension": "A8x8x8 MatMul+Bias; external B16x8x8 adds existing ReLU; same family/program/schema/driver",
+  "hardware_admission": "full hardware/bit/XSA/compatible plus fresh Runtime epoch; no P8 fallback",
+  "gpu_raw_cycles": null
+}

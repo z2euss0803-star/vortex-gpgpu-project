@@ -1,0 +1,43 @@
+{
+  "base": "8f0a90b9a037f0ea4f47fcec4b1826b7e5dd5a49",
+  "scope": "RUNTIME_SCHEDULER_TRANSACTIONAL_DISPATCH_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "first_error": {
+    "run": "U10-dispatch-allocation-red-070",
+    "natural_exit": 2,
+    "injected_allocation_index": 3,
+    "physical_execution_calls": 0,
+    "symptom": "unexecuted dispatch must not retain an active slot",
+    "manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-dispatch-allocation-red-070\\manifest.json"
+  },
+  "focused_green": {
+    "run": "U10-dispatch-allocation-green-072",
+    "natural_exit": 0,
+    "injected_positions": 48,
+    "actual_refusals": 10,
+    "runner_policy_deviation": "direct multi-target make -j2; not serial proof; final runs use prebuild2/tests1"
+  },
+  "final_runs": [
+    "U10-dispatch-final-normal-073",
+    "U10-dispatch-final-sanitize-074",
+    "U10-dispatch-final-tsan-075",
+    "U10-dispatch-aarch64-076"
+  ],
+  "code_manifest_checks": {
+    "U10-dispatch-final-normal-073": 873,
+    "U10-dispatch-final-sanitize-074": 873,
+    "U10-dispatch-final-tsan-075": 873,
+    "U10-dispatch-aarch64-076": 873
+  },
+  "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U10-dispatch-final\\raw-and-artifacts.tar.gz",
+  "archive_sha256": "5e51a7d5661346336c4cb09398a19379615923d83450e25d6060d10dc5d57dc9",
+  "verified_members": 392,
+  "full_u10_complete": false,
+  "remaining": [
+    "program catalog identity retained before WAIT failure",
+    "legacy aggregate execution with independent retirement proof",
+    "production daemon and trusted application factories",
+    "whole-runtime retained-state destructor allocation review",
+    "U11-U25 application and image stages"
+  ]
+}

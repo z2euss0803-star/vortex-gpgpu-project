@@ -1,0 +1,168 @@
+{
+  "task": "U11",
+  "base": "69d60f08073b57dc3c55829164976bb673e18561",
+  "state": "SCOPED_OFFLINE_IMPLEMENTATION_HOST_VALIDATION_AND_MATCHED_CROSS_COMPLETE",
+  "gpu_raw_cycles": null,
+  "program": {
+    "code_sha256": "2d18b13752e3248aef7ae4c206b1f0bd19972dad5ca1d2776a0f555e0661cafb",
+    "gpu_raw_cycles": null,
+    "hardware": {
+      "bit_sha256": "94ae9d3e6eb73ba55a8eec8c802e3818cd6b3a9be7e60542da5ae9459e3579e1",
+      "board_identity_verified": false,
+      "compatible": "vortex,hw4-s8-demo-v1",
+      "contexts": 1,
+      "hardware_contract": "1bf11d26789e7c602f9c05a5ecc97e2605ac7807deade8f4bfc549487f45ec5d",
+      "name": "S8_NATIVE_INT16",
+      "namespaces": [
+        1,
+        3
+      ],
+      "pl_base": 21474836480,
+      "pl_bytes": 2147483648,
+      "preempt": false,
+      "provider_flags": 1,
+      "ps_base": 268435456,
+      "ps_bytes": 1048576,
+      "xsa_sha256": "02e68160e21b01621fde1eac6e472810e0fe50cd1842acb3ab63469314355e94"
+    },
+    "implementation_sha256": "53a4fc77a7f29eccae31405bb0f4bcaeb4ed2bffabe232267c2444c6b737f839",
+    "schema": 1,
+    "schema_sha256": "b4bcde7864f8b6cab955f2f98de2d558edefe27257a6465fe89aedba72a95f0d",
+    "scope": "FROZEN_SOFTWARE_AND_DECLARED_HARDWARE_NOT_PHYSICAL_PASS",
+    "source_rows": [
+      {
+        "path": "contracts/nnrt/ops-int16-v1.json",
+        "sha256": "8ac4f74a1ba7f53e99d75734bd9c0d2f61dfab4787176b22402a72e30617e3cd"
+      },
+      {
+        "path": "device/mosaic_s8/crt/vx_start.S",
+        "sha256": "592496e4492d57e0e28f7b67be0dbbf4ee56893cbd02136b242c40184df90fd6"
+      },
+      {
+        "path": "device/mosaic_s8/isa_adapter.cpp",
+        "sha256": "65fa206c118cbbd45bd482316e524bce04ec3646b56eddb4c4a7d5e888a735c2"
+      },
+      {
+        "path": "device/mosaic_s8/tile.cpp",
+        "sha256": "f3d8b5104886360180a21692621b5d611484dc462cc962c37d6a3224aec7a3ef"
+      },
+      {
+        "path": "device/mosaic_s8/unpack.cpp",
+        "sha256": "e843b75fef6464641e3ea0487518cc3b7265477513ea14158061844c2aed6405"
+      },
+      {
+        "path": "device/s8/crt/perf_stub.c",
+        "sha256": "3205bca15d9cb00a8d73a3b085ca2d3a1b1b2b93c5799331b043cd56f85a9928"
+      },
+      {
+        "path": "device/vxnn/entry.cpp",
+        "sha256": "d8392fb6ad8236bb53b8fa56b3e3f73037a87f45c22a384067908f14b8a31c83"
+      },
+      {
+        "path": "device/vxnn/int16_matmul.cpp",
+        "sha256": "8448758730f9f65a1fbc9b0e4e7a756247695945ce6420759b6f40a827541679"
+      },
+      {
+        "path": "device/vxnn/int48_post.cpp",
+        "sha256": "c53990eef3ab1ac2eccdcc9b154cf546369b7d0825c674ebb6cfc46cdf591f1e"
+      },
+      {
+        "path": "device/vxnn/link32.ld",
+        "sha256": "73a6d047e386df4f5d4e74d6ccb410861e628ab2652d9047e8cf1ca0f10e1015"
+      },
+      {
+        "path": "include/vxnn/ops_int16.hpp",
+        "sha256": "7e7bf904d8cafde7d2fa7b1dffd78214c4a0c783c0ddbf0d5e93d18a1141fd07"
+      },
+      {
+        "path": "include/vxnn/package.hpp",
+        "sha256": "ff05804db8140f79d996ffd787c0e1b35d28805ce61e41422a4b53499f36c0be"
+      },
+      {
+        "path": "nnrt/graph/prepare.cpp",
+        "sha256": "b83dfa3803569b4466ca0f360afd8e74a6cfc4281ceeca1088eb4c2849269ff3"
+      },
+      {
+        "path": "nnrt/ops/int16.cpp",
+        "sha256": "7dbfe550b110ed03cc570361a9c95eda82da7d23b270787aa0d45d9421a1e2af"
+      },
+      {
+        "path": "scripts/unified/generate_int16_packages.py",
+        "sha256": "7dd0b798aacc02c517aef0cc674c7755438bb30dc81fed282b15b010ecb60eeb"
+      },
+      {
+        "path": "vendor/hunet/sdk-linux-crt/kernel/src/vx_spawn.c",
+        "sha256": "07fd17e46bf993669b05bc8a07c007fbc4e82a7796443d0edb30df740dabeecd"
+      },
+      {
+        "path": "vendor/hunet/sdk-linux-crt/kernel/src/vx_syscalls.c",
+        "sha256": "b7fba26c84aa431ddc597fa5cdf5cb1309fa81afe9a47ae9544af2f0023a7b2c"
+      }
+    ]
+  },
+  "models": [
+    {
+      "K": 8,
+      "M": 8,
+      "N": 8,
+      "gpu_raw_cycles": null,
+      "input_sha256": "aafa2e1f0a30ccb1e96d47ea10b1424d3b2c693d7254c152f01d96cf388928d0",
+      "jobs": 2,
+      "model_id": "df816c233060e729ce4710f98331367911b66e235e8a473dea5e3d995085edfe",
+      "path": "data\\nnrt\\packages\\int16-mlp-a",
+      "reference_sha256": "36401728e63160a04f9e699183ba51f65641675f29d91ea7423f406cd6071ddb",
+      "relu": false,
+      "scope": "INDEPENDENT_PYTHON_INTEGER_REFERENCE_NOT_GPU"
+    },
+    {
+      "K": 8,
+      "M": 16,
+      "N": 8,
+      "gpu_raw_cycles": null,
+      "input_sha256": "856681b589926f0ddeb1b4f23d3ba088149e7aa5f3dab84b4a58039a373cc50a",
+      "jobs": 3,
+      "model_id": "60b4f833a0bcd0b1aff4da8c4fdf05823cdfe1409be14763279fa2d9c2ac08c0",
+      "path": "tests\\nnrt\\fixtures\\external-model-b",
+      "reference_sha256": "25587fdd2d2515468b01937279b4716be7d106081d63f20396fea1097ba71c71",
+      "relu": true,
+      "scope": "INDEPENDENT_PYTHON_INTEGER_REFERENCE_NOT_GPU"
+    }
+  ],
+  "host_runs": [
+    "U11-models-final-normal-028",
+    "U11-models-final-sanitize-029"
+  ],
+  "cross_runs": [
+    "U11-models-aarch64-030"
+  ],
+  "host_archive_sha256": "ba9ca1d52c27b4746f0444dae74ce7fe3573f47d773ba9cc0e28fe07223728db",
+  "cross_archive_sha256": "e16b3ee6376f9d2a9911244b2211a3d030c5a6078db1cc11b6e18e5729641ae9",
+  "host_archive": "D:\\codex-unified-gpu-20261021\\evidence\\U11-models-final-host\\raw-and-artifacts.tar.gz",
+  "cross_archive": "D:\\codex-unified-gpu-20261021\\evidence\\U11-models-final-cross\\raw-and-artifacts.tar.gz",
+  "all_current_source_members": 1482,
+  "unchanged_core_driver_uapi_files": 144,
+  "target_runtime_files": 6,
+  "rv32_code_sha256": "2d18b13752e3248aef7ae4c206b1f0bd19972dad5ca1d2776a0f555e0661cafb",
+  "rv32_owned_memory_archive_sha256": "b73fa416b4397ee8c80b83a7772e59de8fa855ff837d532ec64b815cbf780e5c",
+  "first_errors": [
+    "U11-int16-math-red-001",
+    "U11-entry-functional-red-004",
+    "U11-registry-functional-red-008",
+    "U11-entry-alias-red-010",
+    "U11-layout-functional-red-013",
+    "U11-rv32-owned-crt-014",
+    "U11-models-red-017",
+    "U11-models-final-normal-021",
+    "U11-schema-functional-red-027"
+  ],
+  "physical_extension": "OPEN_NOT_RUN",
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "pending_integration": [
+    "U12-U18 actual application adapters and nonempty production registry",
+    "U20 high PL tensor arena proved with actual C allocator/leases",
+    "U20 one physical fixed-window program family, retirement/eviction and argument relocation",
+    "U21-U25 image review/SD delivery/physical acceptance"
+  ]
+}

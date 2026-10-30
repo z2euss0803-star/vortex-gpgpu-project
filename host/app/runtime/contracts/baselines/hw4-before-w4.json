@@ -1,0 +1,51 @@
+{
+  "id": 4,
+  "name": "hw4-hunet-v5",
+  "control": 2684354560,
+  "cdma": 2952855552,
+  "ready_gpio": 2952921088,
+  "mmio_bytes": 65536,
+  "ps_base": 268435456,
+  "ps_size": 1048576,
+  "dma_bits": 32,
+  "gpu_pl_base": 2147483648,
+  "gpu_pl_end": 4294967296,
+  "pl_system_base": 21474836480,
+  "pl_gpu_visible_end": 23622320128,
+  "pl_physical_end": 25769803776,
+  "bit_sha256": "deb74c77e7e76e9108f49307371c42c889b21f8e764c545987a7786ce543ebc8",
+  "xsa_sha256": "7fdd711f0229ee01d369188d44852c0f85193aada485ac4b1998e2b4e3e32a91",
+  "topology": {
+    "clusters": 1,
+    "cores": 4,
+    "warps": 4,
+    "threads": 4
+  },
+  "program_ids": [
+    6,
+    7
+  ],
+  "watchdog": 4000000000,
+  "execution_ms": 60000,
+  "network_ms": 180000,
+  "cdma_policy": {
+    "alignment": 16,
+    "chunk": 4096,
+    "dre": false,
+    "sg": false,
+    "polling": true
+  },
+  "private": {
+    "crt_base": 268443648,
+    "crt_bytes": 4096,
+    "console": 268443712,
+    "csr": 268443776,
+    "args_base": 268501056,
+    "args_bytes": 128,
+    "bounce_base": 269479936,
+    "bounce_bytes": 4096,
+    "stack_base": 4293918720,
+    "stack_end": 4294967296
+  },
+  "evidence_scope": "STATIC_SOURCE_AND_LINUX_POLICY_NOT_BOARD"
+}

@@ -1,0 +1,58 @@
+{
+  "base": "93c4bd964d48ab467987998140c85a24400817d9",
+  "scope": "LEGACY_AGGREGATE_HOST_PROTOCOL_AND_OLD_CODEC_NOT_BOARD_OR_FINAL_CROSS",
+  "gpu_raw_cycles": null,
+  "errors": [
+    {
+      "run": "U10-legacy-proof-red-080",
+      "kind": "FUNCTIONAL_RED",
+      "natural_exit": 2,
+      "detail": "invented v2 completion accepted for legacy aggregate"
+    },
+    {
+      "run": "U10-legacy-port-red-082",
+      "kind": "FUNCTIONAL_RED",
+      "natural_exit": 2,
+      "detail": "legacy Runtime startup not integrated"
+    },
+    {
+      "run": "U10-legacy-port-green-083",
+      "kind": "LINK_FAILURE_NOT_FUNCTIONAL_RED",
+      "natural_exit": 2,
+      "detail": "FdTransport vtable omitted from link"
+    },
+    {
+      "run": "U10-legacy-journal-red-084",
+      "kind": "LINK_FAILURE_NOT_FUNCTIONAL_RED",
+      "natural_exit": 2,
+      "detail": "same omitted FdTransport; original preserved"
+    },
+    {
+      "run": "U10-legacy-journal-functional-red-085",
+      "kind": "FUNCTIONAL_RED",
+      "natural_exit": 2,
+      "detail": "legacy retirement proof missing from durable JSON"
+    },
+    {
+      "run": "U10-legacy-partial-result-red-086",
+      "kind": "FUNCTIONAL_RED",
+      "natural_exit": 2,
+      "detail": "post-check failure loses original legacy result from durable error"
+    }
+  ],
+  "focused": "U10-legacy-offline-green-087",
+  "normal": "U10-legacy-normal-regression-088",
+  "normal_exit": 0,
+  "code_files": 876,
+  "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U10-legacy\\raw-and-artifacts.tar.gz",
+  "archive_sha256": "94eeb5e14ef49c502e068370992fe786f4980696350b189097edae640a68a2d5",
+  "verified_members": 302,
+  "independent_audit": {
+    "work": 3,
+    "result": 1,
+    "error": 1
+  },
+  "final_san_tsan_cross": "PENDING_U10_INTEGRATION",
+  "production_app_factory": "NOT_YET_CONNECTED",
+  "full_u10_complete": false
+}

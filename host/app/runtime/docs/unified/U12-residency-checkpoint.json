@@ -1,0 +1,140 @@
+{
+  "task": "U12",
+  "state": "SINGLE_REQUEST_RESIDENCY_AND_METADATA_DISPATCH_GATE_NOT_NATIVE_HUNET_FACTORY",
+  "base_commit": "f7ce8bb0867206a41c622d43b5e055be60d351b4",
+  "verified": [
+    {
+      "run": "U12-residency-gate-normal-233",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0
+      ],
+      "input_rows": 1576,
+      "manifest_sha256": "3043af2c6a0ce80c0a27bc238f91dead72365a49d573c4ec477b23db6148c04e"
+    },
+    {
+      "run": "U12-residency-sanitize-234",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0
+      ],
+      "input_rows": 1576,
+      "manifest_sha256": "3043af2c6a0ce80c0a27bc238f91dead72365a49d573c4ec477b23db6148c04e"
+    },
+    {
+      "run": "U12-residency-thread-235",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0
+      ],
+      "input_rows": 1576,
+      "manifest_sha256": "3043af2c6a0ce80c0a27bc238f91dead72365a49d573c4ec477b23db6148c04e"
+    },
+    {
+      "run": "U12-residency-aarch64-236",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "input_rows": 1576,
+      "manifest_sha256": "3043af2c6a0ce80c0a27bc238f91dead72365a49d573c4ec477b23db6148c04e"
+    }
+  ],
+  "archives": {
+    "U12-residency-gate-normal": {
+      "members": 59,
+      "logical_bytes": 16090257,
+      "archive_bytes": 4290596,
+      "sha256": "9095ab36d8247a195a523ec3c086c7ead32ac9a2ed4a660333be23e113933682",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U12-residency-gate-normal-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2189438976,
+      "verified_members": 59,
+      "members_sha256": "4b2c53b165b1c77d69e1d2ce8b036be7b936c309a9226081f05ecf01f0ae86c6",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-residency-gate-normal\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    "U12-residency-sanitize-234-verified": {
+      "members": 59,
+      "logical_bytes": 144477341,
+      "archive_bytes": 25742923,
+      "sha256": "ad8579efff7c6ca03729844541ad58b2d743f8be941af28aa84113f9186b1e67",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U12-residency-sanitize-234-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2047377408,
+      "verified_members": 59,
+      "members_sha256": "4fca102be68641ca679c529fbc70720f7169c1fc9af8190ca3e18d9a01b48435",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-residency-sanitize-234-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    "U12-residency-thread-235-verified": {
+      "members": 59,
+      "logical_bytes": 22913066,
+      "archive_bytes": 5864776,
+      "sha256": "b41e00af9b31b70d2e4b74f02358cc611e8ffbddc3701dc45f0003ffac0a21b7",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U12-residency-thread-235-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2188525568,
+      "verified_members": 59,
+      "members_sha256": "b68e13324ad8c54df48244e17dc3621c82e277d4806388226c3f9e7c62e65d3a",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-residency-thread-235-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    },
+    "U12-residency-aarch64-236-verified": {
+      "members": 65,
+      "logical_bytes": 17167612,
+      "archive_bytes": 4940613,
+      "sha256": "4160857a65d5b4558cd0294dfa2032f50e176d2d663e86e797a44583559d2052",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U12-residency-aarch64-236-verified-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2194886656,
+      "verified_members": 65,
+      "members_sha256": "896c46af7dd1f264f19f0266f1651d28ba5e2474f4511055a4658cfc6aed1e74",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-residency-aarch64-236-verified\\raw-and-artifacts.tar.gz",
+      "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+    }
+  },
+  "gpu_raw_cycles": null,
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "cross_elf_count": 5,
+  "target_elf_executed": false,
+  "new_threads": false,
+  "tsan": "8_READERS_8000_READY_CALLS_AND_RUNTIME_POOL_REGRESSIONS_PASS",
+  "abi_changed": false,
+  "normal_eviction": "ONLY_AFTER_EXPLICIT_DATA_CONSUMER_RETIREMENT",
+  "failure_policy": "RETAIN_OWNER_FIRST_ERROR_NO_AUTOMATIC_LOAD_OR_EVICT_RETRY",
+  "error_runs": [
+    "U12-residency-red-229",
+    "U12-residency-functional-red-230",
+    "U12-readiness-red-232"
+  ],
+  "pending": [
+    "Native HUNet request adapter with full graph dispatch and CPU COMMIT",
+    "Trusted U20 application registry and output/display lifetime",
+    "U13-U25 remaining adapters integration review matching images"
+  ]
+}

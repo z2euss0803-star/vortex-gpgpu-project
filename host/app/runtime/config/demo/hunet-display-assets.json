@@ -1,0 +1,70 @@
+{
+  "scope": "LOCAL_DISPLAY_ASSETS_AND_HISTORICAL_FIXTURE_NOT_INFERENCE",
+  "classes": {
+    "path": "F:\\obsidian-codex\\codex\\20-原始资料\\IC设计\\神经网络\\HUNet作者仓库-185d2f6-2026-10-08\\GF_class_indices.json",
+    "bytes": 178378,
+    "sha256": "ce1a0e8c2abcd4c58438885d6697102a7b0379614c90ed1691e3fc7af86c807f"
+  },
+  "font": {
+    "path": "C:\\Windows\\Fonts\\NotoSansSC-VF.ttf",
+    "bytes": 17773244,
+    "sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a",
+    "embedded_license_names": [
+      "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.",
+      "http://scripts.sil.org/OFL"
+    ],
+    "variation_axes": {
+      "Weight": 400
+    },
+    "render_size": 24,
+    "canvas_size": [
+      32,
+      32
+    ]
+  },
+  "class_count": 8105,
+  "glyph_size": [
+    32,
+    32
+  ],
+  "missing_glyphs": [],
+  "missing_policy": "ASCII_CLASS_ID_NO_APPROXIMATE_CHARACTER",
+  "historical_run": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_hunet_cpu_roi_fastwait_20261015\\evidence\\w4-nodiag\\39fb432d2a3549a5abdf8644ca6c2d6e",
+  "top5_ids": [
+    379,
+    1,
+    2744,
+    1010,
+    368
+  ],
+  "ort_pass": false,
+  "files": [
+    {
+      "path": "data/demo/hunet-labels.bin",
+      "bytes": 259456,
+      "sha256": "3afa8a848bedd4d259f205cbf73eaf1a9b27c1f88d00831d99e16ee2af5167e9"
+    },
+    {
+      "path": "data/demo/hunet-glyphs-u8.bin",
+      "bytes": 8299520,
+      "sha256": "9c4ed43ae523d6cd1807ff5763e6bb281dad8cd094af79d0ff0474cd1063f32c"
+    },
+    {
+      "path": "tests/demo/fixtures/hunet/logits.f32",
+      "bytes": 32420,
+      "sha256": "58a75990aad6711810065fa7a3c83e81a3eaaba13769f0395eac95dd7fa48654"
+    },
+    {
+      "path": "tests/demo/fixtures/hunet/probe-result.json",
+      "bytes": 3633,
+      "sha256": "9311f7071cf3b34e44d77f7bf68f597453e8ff68ce7484a84f4dcc7504fad9e5"
+    },
+    {
+      "path": "tests/demo/fixtures/hunet/verification-receipt.json",
+      "bytes": 525,
+      "sha256": "9a263f35a9bac3cca56717b119e0a27982471d540993e04a266b21e8b3748408"
+    }
+  ],
+  "display_asset_revision": "NOTO_REGULAR400_V2",
+  "previous_thin_assets_archive": "evidence/demo/T14/font-regular-refinement/original-thin-assets.tar.gz"
+}

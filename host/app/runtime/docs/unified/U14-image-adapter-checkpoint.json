@@ -1,0 +1,55 @@
+{
+  "scope": "IMAGE_ADAPTER_METADATA_ONLY_NOT_NATIVE_OWNER_OR_BOARD",
+  "runs": [
+    "U14-image-adapter-final-normal-077",
+    "U14-image-adapter-final-sanitize-078",
+    "U14-image-adapter-final-cross-084",
+    "U14-image-adapter-final-thread-085"
+  ],
+  "source_files": 1731,
+  "canonical_manifest_sha256": "c7da180fef9d427c1f0e19077819d68df1e19db8d4dc1193a82880a0642aa936",
+  "gpu_raw_cycles": null,
+  "board": "NOT_RUN",
+  "image": "NOT_BUILT",
+  "sd": "NOT_TOUCHED",
+  "archives": [
+    {
+      "members": 57,
+      "logical_bytes": 7969169,
+      "archive_bytes": 3083773,
+      "sha256": "e078b6f7e4434f58e983e6f6811dc1de385fd87edc3027c77d4f533dfa109c09",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-image-adapter-final-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2158198784,
+      "verified_members": 57,
+      "members_sha256": "e842a1197a1480708ded721fc1898752354c442956fad53211e98bb87c181aa1",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-image-adapter-final\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 16,
+      "logical_bytes": 10211808,
+      "archive_bytes": 1964452,
+      "sha256": "a5fc9b3bf06d90fde65087b0015866b1893c3ffcd4e767c2274fe3212224f416",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U14-image-adapter-sanitize-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2140069888,
+      "verified_members": 16,
+      "members_sha256": "53d1321753ff4142afc4ae05b7137b43aec10d66942859924ca8c569e32f0afc",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U14-image-adapter-sanitize\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    }
+  ],
+  "remaining": [
+    "Actual shared native ImageWorkRequest owner, guards/readback and original trace retention",
+    "Full U14 regression on final owner cut",
+    "U15..U25 and true U20 factories/service",
+    "Actual image build and boot-chain audit before SD"
+  ]
+}

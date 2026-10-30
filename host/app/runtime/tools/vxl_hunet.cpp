@@ -1,0 +1,20 @@
+#include "hunet_tool.h"
+#include "hunet_session.h"
+#include "hunet_timing.h"
+int main(int argc,char **argv){
+ if(argc==2&&!strcmp(argv[1],"--help")){puts("NO_DEFAULT_COMPUTE: --release DIR --roi N --run-id 32HEX --kind first|warmup|measured|diagnostic --index N --mode diagnostic|resident --out NEWDIR");return 0;}
+ try{
+  auto o=options(argc,argv);for(auto k:{"--release","--roi","--run-id","--kind","--index","--mode","--out"})if(!o.count(k))throw std::runtime_error("MISSING_OPTION");if(o.size()!=7)throw std::runtime_error("UNKNOWN_OPTION");
+  unsigned roi=number(o["--roi"]),index=number(o["--index"]);bool diag=o["--mode"]=="diagnostic";if((!diag&&o["--mode"]!="resident")||roi>=127||o["--run-id"].size()!=32)throw std::runtime_error("BAD_CONTRACT");
+  vxl_hunet_begin_v1 b{};b.magic=VXL_HUNET_BEGIN_MAGIC;b.version=1;b.bytes=128;b.roi_index=roi;b.sample_index=index;
+  auto kind=o["--kind"];b.sample_kind=kind=="first"?1:kind=="warmup"?2:kind=="measured"?3:kind=="diagnostic"?4:0;if(!b.sample_kind)throw std::runtime_error("BAD_KIND");
+  for(unsigned i=0;i<16;i++){auto s=o["--run-id"].substr(i*2,2);if(s.find_first_not_of("0123456789abcdefABCDEF")!=std::string::npos)throw std::runtime_error("BAD_RUN_ID");b.run_id[i]=uint8_t(strtoul(s.c_str(),nullptr,16));}
+  char name[40];snprintf(name,sizeof(name),"inputs/%03u.f32",roi);std::vector<uint8_t> input(196608);require(vxl_hunet_read_asset(o["--release"].c_str(),name,input.data(),input.size()),"input");b.input_ptr=reinterpret_cast<uintptr_t>(input.data());b.input_bytes=input.size();vxl_hunet_hash(input.data(),input.size(),b.input_sha256);
+  std::string boot=text_file("/proc/sys/kernel/random/boot_id"),build=text_file("/etc/codex-build-id");utsname un{};if(uname(&un))throw std::runtime_error("UNAME");ArtifactWriter writer(o["--out"]);ToolClient c;require(vxl_hunet_client_open(&c.c,"/dev/vortex0"),"open");uint64_t load_start=hunet_now();require(vxl_hunet_client_load(&c.c,o["--release"].c_str()),"load");uint64_t load_ns=hunet_duration(load_start,hunet_now());HunetRaw r;int rc=hunet_execute(&c.c,b,diag,&r);uint64_t capture_start=hunet_now();
+  writer.write("binding.bin",&c.c.binding,256);writer.write("begin.bin",&b,128);writer.write("job_args.bin",r.jobs.data(),r.jobs.size()*128);writer.write("job_evidence.bin",r.evidence.data(),r.evidence.size()*256);
+  if(rc){writer.write("failed_evidence.bin",&r.failed_evidence,256);writer.write("failure.json","{\"scope\":\"HUNET_LINUX_V1\",\"error\":"+std::to_string(rc)+",\"completed_jobs\":"+std::to_string(r.evidence.size())+",\"files\":"+writer.manifest()+"}\n");return 1;}
+  writer.write("input.f32",r.input.data(),r.input.size());writer.write("logits.f32",r.logits.data(),r.logits.size());writer.write("guards.bin",r.guards.data(),r.guards.size());writer.write("last_trace.u32",r.trace.data(),r.trace.size());writer.write("end.bin",&r.end,128);for(auto &a:r.diagnostic)writer.write(a.name,a.bytes.data(),a.bytes.size());
+  std::string sw="[";for(size_t i=0;i<r.submit_wait_ns.size();i++){if(i)sw+=",";sw+=std::to_string(r.submit_wait_ns[i]);}sw+="]";
+  auto capture_ns=hunet_duration(capture_start,hunet_now());writer.write("run.json","{\"scope\":\"HUNET_LINUX_V1\",\"transport\":\"SCP_CAPTURE\",\"boot_id\":"+quote(boot)+",\"build_id\":"+quote(build)+",\"kernel\":"+quote(un.release)+",\"profile\":4,\"generation\":"+std::to_string(c.c.binding.generation)+",\"run_id\":"+quote(hex(b.run_id,16))+",\"roi_index\":"+std::to_string(roi)+",\"sample_kind\":"+std::to_string(b.sample_kind)+",\"sample_index\":"+std::to_string(index)+",\"mode\":"+quote(o["--mode"])+",\"T_load_ns\":"+std::to_string(load_ns)+",\"T_resident_ns\":"+std::to_string(r.resident_ns)+",\"T_submit_wait_ns\":"+sw+",\"T_capture_ns\":"+std::to_string(capture_ns)+",\"T_diagnostic_capture_ns\":"+std::to_string(r.diagnostic_capture_ns)+",\"T_transfer_ns\":null,\"gpu_seconds\":null,\"files\":"+writer.manifest()+"}\n");puts("HUNET_RAW_CAPTURE_COMPLETE_REQUIRES_EXTERNAL_AUDIT");return 0;
+ }catch(const std::exception &e){fprintf(stderr,"FAIL_STOP: %s\n",e.what());return 1;}
+}

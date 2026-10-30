@@ -1,0 +1,85 @@
+{
+  "task": "U12",
+  "state": "INSTALLED_CATALOG_METADATA_BINDING_NOT_RESIDENCY_OR_NATIVE_APP",
+  "base_commit": "a13bca72b2c2d69f9fb869450fe3facebe0dd269",
+  "verified": [
+    {
+      "run": "U12-catalog-normal-225",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0
+      ],
+      "input_rows": 1569,
+      "manifest_sha256": "d96f1f59ab15c7ce5e49183360145fb84564071d4082c7a244e717e2aabc31b5"
+    },
+    {
+      "run": "U12-catalog-sanitize-226",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0
+      ],
+      "input_rows": 1569,
+      "manifest_sha256": "d96f1f59ab15c7ce5e49183360145fb84564071d4082c7a244e717e2aabc31b5"
+    },
+    {
+      "run": "U12-catalog-thread-227",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0
+      ],
+      "input_rows": 1569,
+      "manifest_sha256": "d96f1f59ab15c7ce5e49183360145fb84564071d4082c7a244e717e2aabc31b5"
+    },
+    {
+      "run": "U12-catalog-aarch64-228",
+      "natural_exit": 0,
+      "command_exits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "input_rows": 1569,
+      "manifest_sha256": "d96f1f59ab15c7ce5e49183360145fb84564071d4082c7a244e717e2aabc31b5"
+    }
+  ],
+  "archive": {
+    "members": 77,
+    "logical_bytes": 7325101,
+    "archive_bytes": 2724061,
+    "sha256": "3294fcfe1d33c113861527588db026791bffc53ba130eec66804a5322b690b73",
+    "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U12-catalog-final-evidence.tar.gz",
+    "gpu_raw_cycles": null,
+    "host": "z2euss-virtual-machine",
+    "uid": 1000,
+    "free_disk": 2223050752,
+    "verified_members": 77,
+    "members_sha256": "15606a8df964ae7e834c90f3239969504ead31fcb3d3086e48418dbdd9c303d5",
+    "hardlink_members": 0,
+    "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-catalog-final\\raw-and-artifacts.tar.gz",
+    "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+  },
+  "gpu_raw_cycles": null,
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "cross_elf_count": 3,
+  "target_elf_executed": false,
+  "thread_sanitizer": "PASS_8_READERS_16000_RESOLVES",
+  "kernel_uapi_changed": false,
+  "original_C_parser_reused": true,
+  "error_runs": [
+    "U12-catalog-red-223",
+    "U12-catalog-functional-red-224"
+  ],
+  "pending": [
+    "Compatible residency admission and ownership lifetime",
+    "Native HUNet adapter with CPU COMMIT and postACK guards",
+    "U13-U25 integration review images and future board acceptance"
+  ]
+}

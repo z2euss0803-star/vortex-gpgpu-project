@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "scope": "INDEPENDENT_IN_COMPAT_ONLY_NOT_DEFAULT_NOT_DEPLOYED",
+  "identity": "NCHW_WEIGHTED_WELFORD_RCP_RSQRT_MAP_FP32_V2",
+  "explicit_fma": "INSTANCE_NORM_ONLY",
+  "weights_scales_and_integer_dot": "UNCHANGED",
+  "full_numeric": "FAILED_SINGLE256_STAGE15_ORIGINAL_THRESHOLD",
+  "tables": {
+    "rcp.f32": {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_mosaic_dp_20261018\\evidence\\demo\\T05\\investigation-20261020\\rtx-driver-scalar-rcp-v3\\rcp-count1-4096.f32",
+      "sha256": "672e6b8767c976a003406e4bdd1a903a7c2299da60341645d61969f37d5e21bf",
+      "bytes": 16384,
+      "remote_path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/norm-v2-672e6b8767c976a003406e4bdd1a903a7c2299da60341645d61969f37d5e21bf-rcp.f32",
+      "transfer_exit": 0
+    },
+    "rsqrt.bin": {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_mosaic_dp_20261018\\evidence\\demo\\T05\\investigation-20261020\\rtx-rsqrt-function-map\\rsqrt-normalized-delta3.bin",
+      "sha256": "98903561f8a8fdcb6132fe34cf3dfbe644ea9c7cd963615de69a3f387b03697e",
+      "bytes": 6291456,
+      "remote_path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/norm-v2-98903561f8a8fdcb6132fe34cf3dfbe644ea9c7cd963615de69a3f387b03697e-rsqrt.bin",
+      "transfer_exit": 0
+    }
+  },
+  "table_semantics": "MODEL_INDEPENDENT_PRIMITIVE_FUNCTION_NO_GOLDEN_STATISTICS",
+  "packed_rodata_bytes": 6307840,
+  "target_placement": "PENDING_FINAL_LINKER_AND_BINDING_AUDIT",
+  "gpu_raw_cycles": null,
+  "failure_receipt": "docs/mosaic/NORM_COMPAT_CANDIDATES_20261020.json"
+}

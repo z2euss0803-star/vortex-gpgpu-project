@@ -1,0 +1,11 @@
+{
+  "scope": "COPIED_HISTORICAL_BOARD_OUTPUT_NOT_NEW_RUN",
+  "run_id": "39fb432d2a3549a5abdf8644ca6c2d6e",
+  "source": "work/vortex_linux_backend_hunet_cpu_roi_fastwait_20261015/evidence/w4-nodiag/39fb432d2a3549a5abdf8644ca6c2d6e/raw/logits.f32",
+  "bytes": 32420,
+  "sha256": "58a75990aad6711810065fa7a3c83e81a3eaaba13769f0395eac95dd7fa48654",
+  "r2": "PASS",
+  "ort": "FAIL",
+  "ort_mismatch_count": 8105,
+  "threshold_changed": false
+}

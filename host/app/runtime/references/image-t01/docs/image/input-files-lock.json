@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\MANIFEST_SHA256.json",
+      "bytes": 44104,
+      "sha256": "96dc7902f3b06d9047d1c6d511ec8ca6ee1a6c96021420dc75ebf825c2f415e3"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\SOURCE_IDENTITY.json",
+      "bytes": 54822,
+      "sha256": "118fa86634072ec82ad4062332dd70688666b3820409c9c4f1d55ee0a3cc380f"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\blur3.bin",
+      "bytes": 1184,
+      "sha256": "b9ed742e47208e8bd5c69b5cb926b87d585120aa5301bcbc02b3040ec6aba03d"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\blur3.padded.bin",
+      "bytes": 1216,
+      "sha256": "72cda81b9cd5171dd368e71f81552987b78b9e50449c7938b4696764bbda1093"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\gaussian_h.bin",
+      "bytes": 316,
+      "sha256": "2f36242fa6b7137c335adda4429024885427e1477fdf6ce15b6b5ad3089bb5d4"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\gaussian_h.padded.bin",
+      "bytes": 320,
+      "sha256": "0f70bb513ab30179f165639ab932ed8ee4a3c9ae262679294695987e32e65738"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\gaussian_v.bin",
+      "bytes": 316,
+      "sha256": "8040af3721d371fa615e7d26b440e1f7676f2f82a4405c3bbf1eb0e4c8ad610f"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\gaussian_v.padded.bin",
+      "bytes": 320,
+      "sha256": "8bbaeefb2eae04d36cafe955189fd10c5c98210bc06915bd98a3e04b572a436a"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\gray.bin",
+      "bytes": 232,
+      "sha256": "a9a71093ebf293036f732bd472a4b99931e23594433d61836d3a13d9b34c161f"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\gray.padded.bin",
+      "bytes": 256,
+      "sha256": "0ce125fa7dd278e42206f714741abffe975ff7ffa4db1307e3e033440b5f4f53"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\manifest.json",
+      "bytes": 3672,
+      "sha256": "3291001ec8f88edcfd64688a2bb88f8c4ea1592455e0b6a47d6b202a9d254fdd"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\neon_combine.bin",
+      "bytes": 692,
+      "sha256": "57020b917d0a821cd9319933bbc9d50f420c0675a8d7e5daeb5e602a073ee4da"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\neon_combine.padded.bin",
+      "bytes": 704,
+      "sha256": "a1abee66582b0ecddf6961f136e82ab8c9493bbf32b5013951bbae519eb6113a"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\neon_core.bin",
+      "bytes": 1192,
+      "sha256": "66562b7bcba7fc8ba72f836747fe9b96d64f81ca757b0d5b1d0cbeb0e0a08955"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\neon_core.padded.bin",
+      "bytes": 1216,
+      "sha256": "ec4e774f1d5b1a3d3f4a51cb0ebf4551a0bfb3d29740bbaa323791622175a928"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\pixel_bayer.bin",
+      "bytes": 380,
+      "sha256": "ca7f83f87a010b46674f2249c9ecbd9488f6a3b64e6ca89af3f8ad11db777d7c"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\pixel_bayer.padded.bin",
+      "bytes": 384,
+      "sha256": "afb1610f8f5e96a8f27ad9b3d04f54c1a4a81094b22e0bc2a988b70a10de2813"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\pixel_mean.bin",
+      "bytes": 396,
+      "sha256": "cac7e492453b1ab43043e42553dfde29ee201720507ae413bbca44a9e29a9570"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\pixel_mean.padded.bin",
+      "bytes": 448,
+      "sha256": "bb5f071464279eb798ec2665d7aa616a1542df3ae6cbd57d630918e155830e93"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\sobel_poster.bin",
+      "bytes": 1352,
+      "sha256": "8731e7c80896698697eca07178140ff034ce7a74b6af80be701cb2a85868b826"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\sobel_poster.padded.bin",
+      "bytes": 1408,
+      "sha256": "d23a16357b5eea0653f33f8fbdaabd04ffbf367408b70baafa2d2f6538968124"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\tables-64KiB.bin",
+      "bytes": 65536,
+      "sha256": "116e71ef50cc30196546d2f8e53440d60942c8b438872d102e4aed74785aebca"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\xdog_color.bin",
+      "bytes": 324,
+      "sha256": "b30ac8f7571b7026c2fc7b8d7a77d1815892e0575ee5ac60669b9f265f31aa99"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\gpu_programs\\xdog_color.padded.bin",
+      "bytes": 384,
+      "sha256": "b70c369d4fcfaf3f78b77dd06b38a481882cfb72b53d3e65eec528febffb3ea6"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\board_io.c",
+      "bytes": 1097,
+      "sha256": "594ce16092988c09eb326d67712af56cb03bb068e501cd6f4c8bf4c5a2ccf0bf"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\desktop\\image_sender.py",
+      "bytes": 14570,
+      "sha256": "b4491ab75d3678f851c2cfba4d4a3f6e322488dff70612769d695c2297acb90a"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\dp_fault_policy.h",
+      "bytes": 519,
+      "sha256": "27fe3e15ec427d47d23fc8ba143f4d10a1d160f5265d56a9fc0c0c2d285286f6"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\dp_main.c",
+      "bytes": 5028,
+      "sha256": "cb657476154c40ec2c24ea574da4d8cbe8ad959a958885fd0c7dc4d40881a556"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\dp_output.c",
+      "bytes": 13828,
+      "sha256": "9221ba1489b45cc528f667197ba2d60ea8f38ab29c4b4750e749b5417598d124"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\dp_output.h",
+      "bytes": 520,
+      "sha256": "7520fddb2ff8c47b2181efce0f4ebfec1e6bc2e60e662450cc4269f81462990a"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\edid_startup.h",
+      "bytes": 648,
+      "sha256": "27982b54486e8ca66a2b178e5bd9591e4f3b6578f5d6cc6346668f3b2e9d7150"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\generated\\builtin.h",
+      "bytes": 11861355,
+      "sha256": "e0cb69e561725a5d709a2420767c20942aef2409480ca206bc79d30b7570c985"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\generated\\image_kernels.h",
+      "bytes": 20562,
+      "sha256": "18935323339515ebb2711456f8a8b0aec3397c58bea43b79f40fd25f39fe457d"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\generated\\tables.h",
+      "bytes": 75010,
+      "sha256": "742dfb7fa8fd2e74b75efa30b957aab9d3cee284cc89731735b5e169ec86aec7"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\image_app.h",
+      "bytes": 168,
+      "sha256": "f5edf0fa7c35bbed42de536169d0a4a62b10d58b25ec0a93f3b104a6aeec9ddc"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\image_contract.h",
+      "bytes": 1511,
+      "sha256": "5e7927647157880891df13fb96a594fbf05bfc961cb52fa2a45f4003c3598e7e"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\image_crc.c",
+      "bytes": 655,
+      "sha256": "6d2de215c3f062477159e832a81eb4cbaf0d40308f6a79349b67fd9b71234c8e"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\image_gpu.c",
+      "bytes": 3843,
+      "sha256": "c85daa4f9170a357b5b889ed0ab3a89822c3f0d13b9947a7719c39de60d2d9c7"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\image_gpu.h",
+      "bytes": 384,
+      "sha256": "02d336ade543d89cbe668a787b0fab330d463ad364114b76ff6337c94e6b7528"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\image_pipeline.c",
+      "bytes": 7202,
+      "sha256": "34c56492f8ca38e0b144d945ddb03314d44572108051f2aeac423bb51fba45df"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\image_pipeline.h",
+      "bytes": 935,
+      "sha256": "306a2f029a8a1881f6999df8f850520a8196235fe97399e7d35280eaf2c5ccf9"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\network\\image_net.c",
+      "bytes": 7307,
+      "sha256": "fbb71ac75e3bf6fcb7783337ebc9dea5d8502ca76c23507d5a87612221a46c95"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\network\\image_net.h",
+      "bytes": 598,
+      "sha256": "d363f97540068a4476aadd21ecb55dcf927f53fd2f63241de98c1e27aefde022"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\network\\image_protocol.c",
+      "bytes": 1276,
+      "sha256": "12891f46f36071a5486b935209e5a9a42b4624745f656e6fb1e6878a1e357417"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\network\\image_protocol.h",
+      "bytes": 881,
+      "sha256": "4f213cd7356a2d53f3119604c87aa3af03199cb017c06fdd4a0d98701f2c00ee"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\network\\image_rx.c",
+      "bytes": 6817,
+      "sha256": "9a62a4315265ae373c987caccf271e9e343d2ab067fbb68d3f7b82c2e17fe656"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\network\\image_rx.h",
+      "bytes": 780,
+      "sha256": "79b583a12cdc370688bfc7ed10632b9c95e37bc55c27f5f28c605a3432014fdd"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\scanout_layout.c",
+      "bytes": 1400,
+      "sha256": "818389396e5f9de1cd04ea51dee12d46fb3b355fc13b3bfb85643dc3dc0fcb73"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\scanout_layout.h",
+      "bytes": 882,
+      "sha256": "1e576914f0a38572722fd2a7f2f0f3c48a931afb7d0366dff7fd278b513c6ff2"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\tests\\app_model.c",
+      "bytes": 5796,
+      "sha256": "1326c454bde464260bacd10e471779d3e197e7d3712d5a1cb7b36ebfedc3ada3"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\tests\\image_kernel_model.c",
+      "bytes": 4170,
+      "sha256": "b2ed0707c08a2cdd22a2b2bf952d69f3a24538574cd8d1d924718daaba3d8846"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\tests\\local_rx_server.c",
+      "bytes": 2319,
+      "sha256": "9b2ef78635dcdcc3bbe322c1ecc936106b985cc97a9dbb23a361b04fe588971a"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\tests\\pipeline_colors.c",
+      "bytes": 4597,
+      "sha256": "fb151c14719f1a75ba4e873e4f1e162083d3f6234ad09eca070de686414e9367"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\tests\\replay_pipeline.c",
+      "bytes": 2758,
+      "sha256": "4bfb6de1cf76a3cf98dc058a81eedf26c9f9059e20b3af127f683de8c9aaf665"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\tests\\rv32_image_model.h",
+      "bytes": 4348,
+      "sha256": "f3d108db03365985505abdba6c131bca87324ed6a480f24c90dda69f26bf24b6"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\tests\\test_gpu_contract.c",
+      "bytes": 2746,
+      "sha256": "6eeccf988a5f96a317c760d3d929d8f8fa069ff739a575a2dd4e1e8fed03f954"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\tests\\test_image_rx.c",
+      "bytes": 3261,
+      "sha256": "66f09594ecb63a991ef292e80cc5059851fbea21c1566ef6cd5ec9b6fa0f2691"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\tests\\test_layout.c",
+      "bytes": 1533,
+      "sha256": "0dc7d54526af8842cbe84597482a6cb642085f97308c8604edde3088f496226b"
+    },
+    {
+      "path": "D:\\codex-image-studio-20261021\\handoff\\src\\vortex23-image-studio-720p-fast\\tests\\test_pipeline.c",
+      "bytes": 3169,
+      "sha256": "e0f62dc855f85e1e6dc51073082759562764633d2253ff6c814216ade4947636"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\文物照片图片工坊-S8-Linux适配设计规格-2026-10-21.md",
+      "bytes": 13056,
+      "sha256": "52240582ad45f515fdd4319be24a40bcd8a2203d925049f4f3872ba5237c0409"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\delivery\\S8_W4_HW4_INT16_20261018\\S8_W4_HW4_INT16_20261018.bit",
+      "bytes": 23581017,
+      "sha256": "94ae9d3e6eb73ba55a8eec8c802e3818cd6b3a9be7e60542da5ae9459e3579e1"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\delivery\\S8_W4_HW4_INT16_20261018\\S8_W4_HW4_INT16_20261018.xsa",
+      "bytes": 8345876,
+      "sha256": "02e68160e21b01621fde1eac6e472810e0fe50cd1842acb3ab63469314355e94"
+    }
+  ]
+}

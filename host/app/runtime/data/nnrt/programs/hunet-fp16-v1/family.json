@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "logical_program": 65552,
+  "namespace": 1,
+  "logical_profile": 1,
+  "scope": "ACTUAL_RV32_STATIC_AND_HOST_WIRE_NOT_FULL_U12_NOT_GPU",
+  "code_sha256": "b3d9bf022a135fa4b528f68fc49e653ab9f3c649281623d39a5f3d57756b594c",
+  "schema_sha256": "79319f1611265bc2ad131b91642de7ddbe0c30d4b3621ce3a8060e90e1114c89",
+  "sources": [
+    {
+      "path": "device/vxnn/hunet_entry.cpp",
+      "sha256": "7721a1e09457ed8bfee83f240ff2ddec78c42799932412f480e4ca007218bf8f"
+    },
+    {
+      "path": "device/vxnn/hunet_wire.cpp",
+      "sha256": "360a3e102b004d471c4b49297abe52565920372ce3bd632993e0408b4935b83e"
+    },
+    {
+      "path": "device/vxnn/hunet_wire.h",
+      "sha256": "34bc88113dd5d78383ccefa984f6b31c9696359e79e3c9b89dcc80d7e8cb82c4"
+    },
+    {
+      "path": "device/vxnn/hunet_scalar_math.h",
+      "sha256": "57aa7c236194b5e574cf7d5cd317ff5271dc3c953afb9094e860f71164b10d52"
+    },
+    {
+      "path": "device/hunet_fused_ops.h",
+      "sha256": "26fb78e0e1fbc02d154252e0bfbed127b2484acd7b23ae82072faf7a9745aa6f"
+    },
+    {
+      "path": "scripts/unified/hunet_schema.py",
+      "sha256": "d77296d35c55c3f06c4f9b94f9d6dc44f0b36f1df03361cfc6959c9eb99e2341"
+    },
+    {
+      "path": "scripts/unified/hunet_rodata.py",
+      "sha256": "bd7bcd94c73b12faa74e3d6918d3920ffc502e221fed189de80f6dcd0cee593a"
+    },
+    {
+      "path": "device/vxnn/link32.ld",
+      "sha256": "bec2f0a7cac8408e8f38219e3dfaf5ceb1bc4a223efcdacc3f145a919f8ed8a0"
+    }
+  ],
+  "gpu_raw_cycles": null,
+  "program_receipt_sha256": "d51e6d76604fc4861aaf2067cdcd541992239b3166ee34d6f65a231bc8b143ca",
+  "evidence_archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-controlled-program-and-wire-final\\raw-and-artifacts.tar.gz",
+  "evidence_sha256": "b03e64ee6829114cba2f154aeeee7e6880ab711fd65a3884a44222d9db0d58bf"
+}

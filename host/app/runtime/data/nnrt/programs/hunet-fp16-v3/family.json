@@ -1,0 +1,140 @@
+{
+  "schema": 1,
+  "logical_program": 65552,
+  "namespace": 1,
+  "logical_profile": 1,
+  "scope": "R13_ACTUAL_RV32_STATIC_NOT_GPU_EXECUTED",
+  "code_sha256": "8cb3e18144d60a05e57009d23d02f0da8d07d9741b1bb780d4a0d4fa144990a6",
+  "schema_sha256": "79319f1611265bc2ad131b91642de7ddbe0c30d4b3621ce3a8060e90e1114c89",
+  "sources": [
+    {
+      "path": "device/hunet_fused_ops.h",
+      "sha256": "26fb78e0e1fbc02d154252e0bfbed127b2484acd7b23ae82072faf7a9745aa6f"
+    },
+    {
+      "path": "device/mosaic_s8/crt/vx_start.S",
+      "sha256": "592496e4492d57e0e28f7b67be0dbbf4ee56893cbd02136b242c40184df90fd6"
+    },
+    {
+      "path": "device/s8/crt/perf_stub.c",
+      "sha256": "3205bca15d9cb00a8d73a3b085ca2d3a1b1b2b93c5799331b043cd56f85a9928"
+    },
+    {
+      "path": "device/vxnn/hunet_entry.cpp",
+      "sha256": "b7995664e3a2c6af479497f216b88fcd4eb6ec38030226c3f37886433f6a2e44"
+    },
+    {
+      "path": "device/vxnn/hunet_grouped_gemm.h",
+      "sha256": "9bd778391fd50aeef18122d890b3695cdeed5a60972d5281cf6edb707d98160f"
+    },
+    {
+      "path": "device/vxnn/hunet_ops.h",
+      "sha256": "12528535180b7378fc52e37e49555f739eee42a669796e0c2e4f120fe80838db"
+    },
+    {
+      "path": "device/vxnn/hunet_scalar_dispatch.h",
+      "sha256": "798183bde59449080362a01476ce1417969b9c02ef5a5169e29f01873e1155d7"
+    },
+    {
+      "path": "device/vxnn/hunet_scalar_math.h",
+      "sha256": "57aa7c236194b5e574cf7d5cd317ff5271dc3c953afb9094e860f71164b10d52"
+    },
+    {
+      "path": "device/vxnn/hunet_wire.cpp",
+      "sha256": "360a3e102b004d471c4b49297abe52565920372ce3bd632993e0408b4935b83e"
+    },
+    {
+      "path": "device/vxnn/hunet_wire.h",
+      "sha256": "34bc88113dd5d78383ccefa984f6b31c9696359e79e3c9b89dcc80d7e8cb82c4"
+    },
+    {
+      "path": "device/vxnn/link32.ld",
+      "sha256": "bec2f0a7cac8408e8f38219e3dfaf5ceb1bc4a223efcdacc3f145a919f8ed8a0"
+    },
+    {
+      "path": "device/vxnn/ranges.h",
+      "sha256": "c84d56a441ebff2845407658c7da9f5b6b137810ddd4548fe1106273d95ddb9a"
+    },
+    {
+      "path": "include/vxl/hunet_fused_wire.h",
+      "sha256": "9852ea9403e4d96640594f1e68b18e90ebe09334f3860e167d42b4d0e65a01b7"
+    },
+    {
+      "path": "scripts/unified/hunet_rodata.py",
+      "sha256": "bd7bcd94c73b12faa74e3d6918d3920ffc502e221fed189de80f6dcd0cee593a"
+    },
+    {
+      "path": "scripts/unified/hunet_schema.py",
+      "sha256": "d77296d35c55c3f06c4f9b94f9d6dc44f0b36f1df03361cfc6959c9eb99e2341"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/hw/VX_config.h",
+      "sha256": "a3d1e54df467df86cb4ebc0165095eabc7ad9cfcdb416ba2c8351d5ffe3ceb88"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/hw/VX_types.h",
+      "sha256": "9379844b0eb8755b039edb62721f7393cde772d20f93899122ea02d23799600f"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/include/vx_intrinsics.h",
+      "sha256": "fff5772074b0551928272c7751c506ca5673c59cb46ad558d5350d5c8087f8cc"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/include/vx_print.h",
+      "sha256": "ad363c358f8b24ebc5d4c173128aebbaad5694cdc2c079f57445fde14adbda85"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/include/vx_spawn.h",
+      "sha256": "7881314ea59c97abae37b6454ba5ce2deda3ac01830b6a062d0358b8ada0b411"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/include/vx_tensor.h",
+      "sha256": "0da2499f0861439e2b85ff8e54f063434025355b37a85bf54300f28f33a83b63"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/src/common.h",
+      "sha256": "fa17ad6e3831a31f19d2156de1819e126407e95a90d053659b3a2314c78652f0"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/src/vx_spawn.c",
+      "sha256": "07fd17e46bf993669b05bc8a07c007fbc4e82a7796443d0edb30df740dabeecd"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/src/vx_syscalls.c",
+      "sha256": "b7fba26c84aa431ddc597fa5cdf5cb1309fa81afe9a47ae9544af2f0023a7b2c"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/sim/common/tensor_cfg.h",
+      "sha256": "78fee31078a42fe24545b203e81b0122ac188c14b192b026007ff87e2957ae95"
+    },
+    {
+      "path": "vendor/hunet/v5/include/hunet_job.h",
+      "sha256": "8fd18103e8c7f8a2e915b1eec84207d5c25bd1cd659a0271f8cb0408ffc1df05"
+    },
+    {
+      "path": "vendor/hunet/v5/include/hunet_math.h",
+      "sha256": "050ec4940bc59e817c45c504221fbb10428cbff7e2fe439e572e2279ca2aa02e"
+    },
+    {
+      "path": "vendor/hunet/v5/include/hunet_ops_baseline.h",
+      "sha256": "152d00a0674627918f4181a6608872122f3d64ab240781715b61ba3e103cd54a"
+    },
+    {
+      "path": "vendor/hunet/v5/include/hunet_ordered_reductions.h",
+      "sha256": "53d26744f162379a96c0130376374d0d86d222674b38aacdaa44b067ffbf00ca"
+    }
+  ],
+  "gpu_raw_cycles": null,
+  "program_receipt_sha256": "9452edd0552cdc6a18b41b12ad3203a07ddefc0399da943962bfaa00a7b4f1e7",
+  "variant": "span32-tile2-v3",
+  "legacy": {
+    "directory": "data/nnrt/programs/hunet-fp16-v2",
+    "family_sha256": "5e251313aa1468afbfdab8a7c9531d4224f2c1a2f0740920bccf1ac8cebfefd1",
+    "code_sha256": "90334b363980dcb3d24c2aa03604a8e834e6dae77b4b31b0c0b8c1b43306cab9"
+  },
+  "implementation": "controlled-span32-tile2-k2-v3",
+  "publication_source": {
+    "path": "scripts/unified/publish_hunet_tile2_v3.py",
+    "sha256": "d478c770685a112822aebca3c4e6793080fd86ad1dd6d28efecdd9ee432b56dd"
+  }
+}

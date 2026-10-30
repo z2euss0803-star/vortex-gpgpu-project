@@ -1,0 +1,289 @@
+{
+  "utc": "2026-10-21T11:06:46.340203+00:00",
+  "source_parent": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_fieldfix_20261021",
+  "parent_commit": "12894074d517b90e40782d270bc603909d718e2e",
+  "production_commit": "0a0b2bba5209101c27cbf5842d3847611d557b32",
+  "production_live_dirty": " M contracts/s8/cases.json\n M contracts/s8/layout.json\n M contracts/s8/negative_events.json\n M contracts/s8/wire.json\n M core/s8_result.c\n M core/s8_state.c\n M core/s8_trace.c\n M core/s8_validate.c\n M device/s8/compat.cpp\n M device/s8/crt/link32.ld\n M device/s8/negative.cpp\n M device/s8/protocol.cpp\n M docs/demo/ERRORS.md\n M driver/vxl_hw.c\n M include/vxl/s8.h\n M include/vxl/s8_runtime.h\n M tests/s8/legacy_sha256.json\n M tests/s8/state_fixture.h\n M tests/s8/test_hw_adapter.c\n M tests/s8/test_program.c\n M tests/s8/whole_fixture.py\n",
+  "production_vs_fieldfix_delta": [
+    {
+      "path": "docs/fieldfix/ERRORS-20261021.json",
+      "production": null,
+      "fieldfix": {
+        "git_blob": "d7740f3b4b7d318f016a95af9240f91bb69084f5",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "docs/fieldfix/README.md",
+      "production": null,
+      "fieldfix": {
+        "git_blob": "520074075b598141e44621975a5004aae375d44f",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "docs/fieldfix/STATUS-20261021.json",
+      "production": null,
+      "fieldfix": {
+        "git_blob": "c8994746dbc298defea0913c1a10e5967ff6563d",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "driver/vxl_ioctl.c",
+      "production": {
+        "git_blob": "ee0c7a3c5b4836c59962b958cd6f0de5de85d562",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": {
+        "git_blob": "3c586e84a37da2d0f6832c3fcd7d35acf8fbde13",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "driver/vxl_profile.c",
+      "production": {
+        "git_blob": "c05be25065b786dad9b5b4eab928e94d4801b29c",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": {
+        "git_blob": "94fd51fb9fd8c30c13fee53b0c9fd63aadf86454",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "evidence/s8/t19/ubuntu-310352eca53d42cd9f8c6325d2470cdd/artifacts/kernel/module.modinfo",
+      "production": {
+        "git_blob": "13247128c7469926c7e5ebfd1b415168a48a40a4",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": null
+    },
+    {
+      "path": "evidence/s8/t19/ubuntu-310352eca53d42cd9f8c6325d2470cdd/artifacts/kernel/source/driver/Module.symvers",
+      "production": {
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": null
+    },
+    {
+      "path": "evidence/s8/t19/ubuntu-3bf439fe5fd64f389740fb3b98690139/artifacts/kernel/module.modinfo",
+      "production": {
+        "git_blob": "13247128c7469926c7e5ebfd1b415168a48a40a4",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": null
+    },
+    {
+      "path": "evidence/s8/t19/ubuntu-3bf439fe5fd64f389740fb3b98690139/artifacts/kernel/source/driver/Module.symvers",
+      "production": {
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": null
+    },
+    {
+      "path": "evidence/s8/t19/ubuntu-6f7091503d2f488dab5534c42552cb3a/artifacts/bound-kernel/module.modinfo",
+      "production": {
+        "git_blob": "13247128c7469926c7e5ebfd1b415168a48a40a4",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": null
+    },
+    {
+      "path": "evidence/s8/t19/ubuntu-6f7091503d2f488dab5534c42552cb3a/artifacts/bound-kernel/source/driver/Module.symvers",
+      "production": {
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": null
+    },
+    {
+      "path": "evidence/s8/t19/ubuntu-733692437d0d4fc2b1cfd61b8a9fb5c6/artifacts/kernel/module.modinfo",
+      "production": {
+        "git_blob": "13247128c7469926c7e5ebfd1b415168a48a40a4",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": null
+    },
+    {
+      "path": "evidence/s8/t19/ubuntu-733692437d0d4fc2b1cfd61b8a9fb5c6/artifacts/kernel/source/driver/Module.symvers",
+      "production": {
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": null
+    },
+    {
+      "path": "evidence/s8/t19/ubuntu-c7a781ee344a46209ee0c2d5beeb007f/artifacts/bound-kernel/module.modinfo",
+      "production": {
+        "git_blob": "13247128c7469926c7e5ebfd1b415168a48a40a4",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": null
+    },
+    {
+      "path": "evidence/s8/t19/ubuntu-c7a781ee344a46209ee0c2d5beeb007f/artifacts/bound-kernel/source/driver/Module.symvers",
+      "production": {
+        "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": null
+    },
+    {
+      "path": "scripts/demo/audit_image.py",
+      "production": {
+        "git_blob": "19be76968d79f8ed4fbeb4f3fc23558c1061c26f",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": {
+        "git_blob": "dd208e8346fe05576a8cd7c15db724bd1b87e35a",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "scripts/demo/image.py",
+      "production": {
+        "git_blob": "c923a1640bedf6879509b793e99869ef9cfe9502",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": {
+        "git_blob": "f6cf1563d40aa2b42f6759ff6a897af406377ca7",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "scripts/demo/network.py",
+      "production": null,
+      "fieldfix": {
+        "git_blob": "b09031c6a71e62bbe007f466e1e004bc02fe841b",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "tests/demo/test_direct_network.py",
+      "production": null,
+      "fieldfix": {
+        "git_blob": "9cb447f71dba9fd37ebcfab54b69b61e0e123948",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "tests/demo/test_profile_driver.c",
+      "production": {
+        "git_blob": "525f07f3992c766f8394109827d328c3b74757f6",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": {
+        "git_blob": "31a92d163843615eec97f1a11262ae6799fecdec",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "tests/viewer/test_native_restore.c",
+      "production": {
+        "git_blob": "8425f5a28b98a811b3e808a7192745647d0353e8",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": {
+        "git_blob": "77549ca75992f2df3473808d017873374a7b492a",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "tools/vxl_dp_viewer.c",
+      "production": {
+        "git_blob": "ab1274d83e74ec9b5ff87dadd9890b2b32f0836f",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": {
+        "git_blob": "618917050e58014fccc885c67f0c121138e4c100",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "viewer/kms.c",
+      "production": {
+        "git_blob": "0fd9b6337b5df06c8ea5230d8d2e846fdabe19dd",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": {
+        "git_blob": "ce74c5e658767bd5de77767cdfb3971854f70e0f",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "viewer/kms.h",
+      "production": {
+        "git_blob": "25a155eb41ab2b1c4563511a93a59411ace1389c",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": {
+        "git_blob": "9a5cc68d554d71813565674330813e922343a4bb",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    },
+    {
+      "path": "viewer/viewer.c",
+      "production": {
+        "git_blob": "71d949f136b1bc9f0e6c7d6e604d6ced5c47da52",
+        "mode": "100644",
+        "kind": "blob"
+      },
+      "fieldfix": {
+        "git_blob": "54c3ac27edd29aebc15a32fef7665ef0caeb6dd2",
+        "mode": "100644",
+        "kind": "blob"
+      }
+    }
+  ],
+  "candidate": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_image_studio_s8_20261021",
+  "branch": "codex/image-studio-s8-20261021",
+  "disk_A": {
+    "F": {
+      "total": 367061364736,
+      "used": 365740822528,
+      "free": 1320542208
+    },
+    "D": {
+      "total": 296021389312,
+      "used": 232442105856,
+      "free": 63579283456
+    }
+  },
+  "gpu_raw_cycles": null
+}

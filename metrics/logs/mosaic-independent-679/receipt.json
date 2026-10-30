@@ -1,0 +1,121 @@
+{
+  "scope": "INDEPENDENT_READONLY_MOSAIC_SOURCE_AND_EVIDENCE_REVIEW_NOT_GPU_OR_RTL",
+  "natural_exit": 0,
+  "critical": 0,
+  "important": 0,
+  "blocking_findings": [],
+  "source_before": {
+    "device/vxnn/mosaic_work_layout_v1.h": "a92fbd5aee3fc72aac04b475bfedf13b3d764d8d613839700a4f761a83a5ed41",
+    "device/vxnn/mosaic_wire_reuse_v4.h": "c357ef93cc1b1a5791da1666f49d590bb8d933d5883533374fbbf96617bdab44",
+    "device/vxnn/mosaic_wire_reuse_v4.cpp": "6745a8a351506d093686a1308afe65d47344aefcfe7fbddf1fc4ae1108101dc2",
+    "device/vxnn/mosaic_wire_coop_v3.h": "a7795f09710fbb5b7307c041a1419d97adc740b0635df6c2a9b79cb39f7e7e15",
+    "device/vxnn/mosaic_wire_coop_v3.cpp": "a3c165d6a2087ae9037325be1b4cc24773c5a975826aae779f1c4bf2b2c17c2f",
+    "device/vxnn/mosaic_wire_ro64.cpp": "05ae4c4fe554df85545a132772c10eebc5f573d977a96d634b98699dd3da3d7c",
+    "device/vxnn/mosaic_wire_fused_v1.cpp": "5eb2c41ceee256a3ba4f228e6b5de316ba3a907985640dda8929e5f93c359ac6",
+    "device/vxnn/mosaic_profile_ops.h": "ce180edec7cd9e45ebf949468cbc7ce749dc286b8e701203d7e20f10d37857bd",
+    "device/vxnn/mosaic_reuse_entry.cpp": "0cb4a8fe58ef483a4a2db8ace7db8105d7ea15007acf60386a62500942f02693",
+    "device/vxnn/mosaic_link32.ld": "5468daac0a417409113880ad33f1f9a4019baa296cc360415a7e526d65359ef7"
+  },
+  "source_after": {
+    "device/vxnn/mosaic_work_layout_v1.h": "a92fbd5aee3fc72aac04b475bfedf13b3d764d8d613839700a4f761a83a5ed41",
+    "device/vxnn/mosaic_wire_reuse_v4.h": "c357ef93cc1b1a5791da1666f49d590bb8d933d5883533374fbbf96617bdab44",
+    "device/vxnn/mosaic_wire_reuse_v4.cpp": "6745a8a351506d093686a1308afe65d47344aefcfe7fbddf1fc4ae1108101dc2",
+    "device/vxnn/mosaic_wire_coop_v3.h": "a7795f09710fbb5b7307c041a1419d97adc740b0635df6c2a9b79cb39f7e7e15",
+    "device/vxnn/mosaic_wire_coop_v3.cpp": "a3c165d6a2087ae9037325be1b4cc24773c5a975826aae779f1c4bf2b2c17c2f",
+    "device/vxnn/mosaic_wire_ro64.cpp": "05ae4c4fe554df85545a132772c10eebc5f573d977a96d634b98699dd3da3d7c",
+    "device/vxnn/mosaic_wire_fused_v1.cpp": "5eb2c41ceee256a3ba4f228e6b5de316ba3a907985640dda8929e5f93c359ac6",
+    "device/vxnn/mosaic_profile_ops.h": "ce180edec7cd9e45ebf949468cbc7ce749dc286b8e701203d7e20f10d37857bd",
+    "device/vxnn/mosaic_reuse_entry.cpp": "0cb4a8fe58ef483a4a2db8ace7db8105d7ea15007acf60386a62500942f02693",
+    "device/vxnn/mosaic_link32.ld": "5468daac0a417409113880ad33f1f9a4019baa296cc360415a7e526d65359ef7"
+  },
+  "unchanged_validator_profile_entry_link_files": {
+    "device/vxnn/mosaic_wire_reuse_v4.h": "c357ef93cc1b1a5791da1666f49d590bb8d933d5883533374fbbf96617bdab44",
+    "device/vxnn/mosaic_wire_reuse_v4.cpp": "6745a8a351506d093686a1308afe65d47344aefcfe7fbddf1fc4ae1108101dc2",
+    "device/vxnn/mosaic_wire_coop_v3.h": "a7795f09710fbb5b7307c041a1419d97adc740b0635df6c2a9b79cb39f7e7e15",
+    "device/vxnn/mosaic_wire_coop_v3.cpp": "a3c165d6a2087ae9037325be1b4cc24773c5a975826aae779f1c4bf2b2c17c2f",
+    "device/vxnn/mosaic_wire_ro64.cpp": "05ae4c4fe554df85545a132772c10eebc5f573d977a96d634b98699dd3da3d7c",
+    "device/vxnn/mosaic_wire_fused_v1.cpp": "5eb2c41ceee256a3ba4f228e6b5de316ba3a907985640dda8929e5f93c359ac6",
+    "device/vxnn/mosaic_profile_ops.h": "ce180edec7cd9e45ebf949468cbc7ce749dc286b8e701203d7e20f10d37857bd",
+    "device/vxnn/mosaic_reuse_entry.cpp": "0cb4a8fe58ef483a4a2db8ace7db8105d7ea15007acf60386a62500942f02693",
+    "device/vxnn/mosaic_link32.ld": "5468daac0a417409113880ad33f1f9a4019baa296cc360415a7e526d65359ef7"
+  },
+  "old_header_sha256": "bbdc97c53fcc22596bcd3d6885901f8cc5710e4bb3bd9fb18c9903744ade8fbb",
+  "change_limited_to_point_branch": true,
+  "host_cases": 640,
+  "abi4_host_cases": 36,
+  "target_packets": 61,
+  "valid_packets": 17,
+  "invalid_packets": 44,
+  "actual_board_packet_sha256": "4c2758c3f7ebf7f748ac354919a72b9c02ec172887f864087f1e5a387ae04099",
+  "actual_entry_abi3_red": -22,
+  "actual_entry_abi3_green": 0,
+  "elf_sha256": "380431bbed5189517c954f55eeb097edc6116b4bfb2c7c0dd2fdf884435a478b",
+  "code_sha256": "618632402b615385dd165f7fa25a4526843cb7e975517a3c7fb16d27435fa34c",
+  "rodata_sha256": "30e0e46cb30629f4a7de447405225e208b37f15aaf2be23603bbe4cb975b5643",
+  "nonblocking_notes": [
+    "Exact compiler-pass/PHI causality remains a hypothesis.",
+    "639 code_sha256 labels ELF bytes; this supplemental record distinguishes ELF from flat CODE."
+  ],
+  "boundary": "Single uniform main lane VM; no full Vortex/SIMT/TCU/RTL/board/application/performance acceptance.",
+  "inputs": {
+    "mosaic-layout-host-638/receipt.json": {
+      "bytes": 2090,
+      "sha256": "e07b04f16fa6e75be796652e1a6d320dccab21c8c7cd46edbd18206c16622399"
+    },
+    "mosaic-layout-host-638/run-layout.stdout": {
+      "bytes": 62,
+      "sha256": "193ae8cf0e87258bcb46ad476c4557893352b95852d84968449244cb66093b7b"
+    },
+    "mosaic-layout-host-638/run-wire.stdout": {
+      "bytes": 70,
+      "sha256": "200dcd2229972ae1d0ae10db2c22a08f97b486538c65c2ff9af860bce7a14393"
+    },
+    "mosaic-layout-host-638/compare.cpp": {
+      "bytes": 787,
+      "sha256": "c9e281516cd5e80d02fc8899adb4b9f3aca89203723bf8db651f4c6546768896"
+    },
+    "mosaic-layout-host-638/old.cpp": {
+      "bytes": 233,
+      "sha256": "b5127c818b2b2c40aa35ceb848727ab3c913e810216709743d279b35fe62dd75"
+    },
+    "mosaic-target-corpus-640/receipt.json": {
+      "bytes": 1750,
+      "sha256": "ecb0ae789c8a070f5411dff212913910e66ee9fb5644ed75872319010608f45b"
+    },
+    "mosaic-target-corpus-640/rows.ndjson": {
+      "bytes": 25601,
+      "sha256": "370bb9d09580d6dcd390c76b05d1a846d2350dc6a31ec8da60a9ca39a6338f90"
+    },
+    "mosaic-target-diff-641a/receipt.json": {
+      "bytes": 17003,
+      "sha256": "bb6e4bd4b4aba153863fef3b6b6da3e2200cdecfc022a62523a136061a3cd09c"
+    },
+    "mosaic-target-build-637/out/receipt.json": {
+      "bytes": 132583,
+      "sha256": "78534070f3f82a7c8593f45ad0c2ca6d1fdab43594498820be85cf62df46abee"
+    },
+    "mosaic-target-red-635/receipt.json": {
+      "bytes": 418,
+      "sha256": "aee4666855383664c96b95ab02ae14071278b94f43cbb9adf0e95bf66240cc5c"
+    },
+    "mosaic-target-point-return-639/receipt.json": {
+      "bytes": 417,
+      "sha256": "308a0c52c0a06e321ea021aa3011f4e15091d6daeed0c34807b7a25ba205f82d"
+    },
+    "orchestration/test_mosaic_target_635.py": {
+      "bytes": 1866,
+      "sha256": "1a98acb9c5d0b2102f38cb0ce9e22bfd70443ce53416d5149bf40101f999746c"
+    },
+    "orchestration/test_mosaic_corpus_target_641.py": {
+      "bytes": 1777,
+      "sha256": "c30d0cc48bb4f3ca2f61644b71ee64df65be634b7725fe3de9530201d7e288e6"
+    },
+    "orchestration/rv32_mainlane_635.py": {
+      "bytes": 5167,
+      "sha256": "e361cb436d3aae5defc05b52fcf50a17a679252120fca389047ec0592556642e"
+    }
+  },
+  "new_compilations": 0,
+  "new_host_or_target_case_executions": 0,
+  "gpu_raw_cycles": null
+}

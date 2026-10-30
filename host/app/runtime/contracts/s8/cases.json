@@ -1,0 +1,357 @@
+{
+  "cases": [
+    {
+      "id": 1,
+      "kind": "identity",
+      "k": 0,
+      "a_bytes": 0,
+      "b_bytes": 0,
+      "result_bytes": 0,
+      "phase_allowed": false,
+      "rule": "crt64"
+    },
+    {
+      "id": 2,
+      "kind": "compat",
+      "k": 0,
+      "a_bytes": 256,
+      "b_bytes": 256,
+      "result_bytes": 256,
+      "phase_allowed": false,
+      "rule": "vecadd63"
+    },
+    {
+      "id": 3,
+      "kind": "compat",
+      "k": 8,
+      "a_bytes": 128,
+      "b_bytes": 64,
+      "result_bytes": 128,
+      "phase_allowed": false,
+      "rule": "wmma8x4"
+    },
+    {
+      "id": 4,
+      "kind": "compat",
+      "k": 0,
+      "a_bytes": 16,
+      "b_bytes": 40,
+      "result_bytes": 20,
+      "phase_allowed": false,
+      "rule": "tex_bilinear"
+    },
+    {
+      "id": 5,
+      "kind": "compat",
+      "k": 0,
+      "a_bytes": 16,
+      "b_bytes": 32,
+      "result_bytes": 16,
+      "phase_allowed": false,
+      "rule": "tex_nearest"
+    },
+    {
+      "id": 101,
+      "kind": "positive",
+      "k": 1,
+      "a_bytes": 16,
+      "b_bytes": 16,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "frozen_0"
+    },
+    {
+      "id": 102,
+      "kind": "positive",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "frozen_1"
+    },
+    {
+      "id": 103,
+      "kind": "positive",
+      "k": 3,
+      "a_bytes": 48,
+      "b_bytes": 48,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "frozen_2"
+    },
+    {
+      "id": 104,
+      "kind": "positive",
+      "k": 2592,
+      "a_bytes": 41472,
+      "b_bytes": 41472,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "frozen_3"
+    },
+    {
+      "id": 105,
+      "kind": "positive",
+      "k": 4096,
+      "a_bytes": 65536,
+      "b_bytes": 65536,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "frozen_4"
+    },
+    {
+      "id": 110,
+      "kind": "positive",
+      "k": 1,
+      "a_bytes": 16,
+      "b_bytes": 16,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "zero"
+    },
+    {
+      "id": 111,
+      "kind": "positive",
+      "k": 3,
+      "a_bytes": 48,
+      "b_bytes": 48,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "ones"
+    },
+    {
+      "id": 112,
+      "kind": "positive",
+      "k": 3,
+      "a_bytes": 48,
+      "b_bytes": 48,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "minus_ones"
+    },
+    {
+      "id": 113,
+      "kind": "positive",
+      "k": 4096,
+      "a_bytes": 65536,
+      "b_bytes": 65536,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "min16"
+    },
+    {
+      "id": 114,
+      "kind": "positive",
+      "k": 4096,
+      "a_bytes": 65536,
+      "b_bytes": 65536,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "alternating"
+    },
+    {
+      "id": 115,
+      "kind": "positive",
+      "k": 3,
+      "a_bytes": 48,
+      "b_bytes": 48,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "indices"
+    },
+    {
+      "id": 120,
+      "kind": "positive",
+      "k": 3,
+      "a_bytes": 48,
+      "b_bytes": 48,
+      "result_bytes": 384,
+      "phase_allowed": true,
+      "rule": "core_warp_tags"
+    },
+    {
+      "id": 51456,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "201_0"
+    },
+    {
+      "id": 51457,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "201_1"
+    },
+    {
+      "id": 51712,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "202_0"
+    },
+    {
+      "id": 51968,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "203_0"
+    },
+    {
+      "id": 51969,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "203_1"
+    },
+    {
+      "id": 51970,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "203_2"
+    },
+    {
+      "id": 51971,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "203_3"
+    },
+    {
+      "id": 51972,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "203_4"
+    },
+    {
+      "id": 51973,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "203_5"
+    },
+    {
+      "id": 51974,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "203_6"
+    },
+    {
+      "id": 52224,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "204_0"
+    },
+    {
+      "id": 52225,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "204_1"
+    },
+    {
+      "id": 52480,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "205_0"
+    },
+    {
+      "id": 52736,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "206_0"
+    },
+    {
+      "id": 52992,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "207_0"
+    },
+    {
+      "id": 53248,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "208_0"
+    },
+    {
+      "id": 53249,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "208_1"
+    },
+    {
+      "id": 53504,
+      "kind": "negative",
+      "k": 2,
+      "a_bytes": 32,
+      "b_bytes": 32,
+      "result_bytes": 384,
+      "phase_allowed": false,
+      "rule": "209_0"
+    }
+  ],
+  "seed": 20261013,
+  "vector_sha256": "c1040e4976018155577a4afab6fb53f31ab5e220473d8f286d49cb32912b9c22",
+  "version": 1
+}

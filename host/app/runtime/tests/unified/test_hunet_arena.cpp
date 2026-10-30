@@ -1,0 +1,23 @@
+#include <vxnn/model_hunet.hpp>
+#include <vxnn/arena.hpp>
+#include "nnrt/package/json.hpp"
+#include <cstdio>
+#include <cstdlib>
+using namespace vxnn;
+static void need(bool b,const char*s){if(!b){std::fprintf(stderr,"U12_REAL_ARENA_ASSERT %s\n",s);std::exit(70);}}
+static bool intersect(uint64_t a,uint64_t n,uint64_t b,uint64_t m){return a<b+m&&b<a+n;}
+int main(int argc,char**argv){
+ need(argc==2,"frozen real package path");auto loaded=load_package(Path(argv[1]));need(bool(loaded),"secure package loader");const auto&p=*loaded.value;const auto&raw=*p.assets().at("binding.json").content;auto binding=json::parse(std::string(raw.begin(),raw.end()));auto*b=binding.get();HunetFamily family{json::digest(json::member(b,"code_sha256")),json::digest(json::member(b,"implementation_sha256")),json::digest(json::member(b,"schema_sha256"))};OperatorRegistry registry;need(bool(register_hunet_operators(registry,family)),"source-bound operators");
+ vxunified::BackendIdentity hw;auto*h=json::member(b,"hardware");hw.hardware_contract=json::digest(json::member(h,"hardware_contract"));hw.bit=json::digest(json::member(h,"bit_sha256"));hw.xsa=json::digest(json::member(h,"xsa_sha256"));hw.compatible=content_digest(json::str(json::member(h,"compatible")));hw.provider_flags=1;hw.device_generation=3;
+ DeviceCaps caps;caps.ps_base=0x10000000;caps.ps_bytes=1<<20;caps.pl_base=0x80000000;caps.pl_bytes=2ULL<<30;caps.gpu_address_bits=caps.ps_dma_bits=caps.cycle_counter_bits=32;caps.pl_address_bits=40;auto prepared=prepare_hunet(p,registry,caps,hw);need(bool(prepared),"actual complete graph prepare");const auto&plan=*prepared.value;
+ MemoryBudget budget;budget.pl_bytes=caps.pl_bytes;budget.ps_bytes=caps.ps_bytes;budget.pl_reserved=8<<20;
+ auto old=plan_memory(plan,budget);need(!old,"old independent-object planner refuses119 constants; budget is never raised");auto arena=plan_arenas(plan,budget);if(!arena)std::fprintf(stderr,"ARENA %s\n",arena.error->detail.c_str());need(bool(arena),"full real graph guarded arena planning");const auto&a=*arena.value;
+ need(a.objects.size()==1&&a.object_count==1&&a.tensors.size()==plan.tensors.size()&&a.workspaces.size()==103,"one physical arena preserves every tensor and GPU workspace");need(a.objects[0].domain==AddressDomain::PL&&a.objects[0].offset>=budget.pl_reserved&&a.pl_peak<=budget.pl_bytes,"reserved low region and capacity preserved without fixed GPU pointer");
+ std::vector<ArenaAllocation> allocations;for(const auto&o:a.objects)allocations.push_back({o.slot,o.domain,{42+o.slot,11,0,o.bytes,3,hw.device_generation}});auto resolved=bind_arenas(a,allocations,hw.device_generation);need(resolved&&resolved.value->tensors.size()==plan.tensors.size()&&resolved.value->workspaces.size()==103,"all actual graph views bind one object generation; host metadata only");
+ struct Live {uint64_t first,last,offset,bytes;};std::vector<Live> intervals;unsigned constants=0;
+ for(size_t i=0;i<plan.tensors.size();i++){const auto&t=plan.tensors[i];const auto&v=a.tensors[i];need(v.tensor.tensor==t.desc.id&&v.tensor.bytes==t.desc.bytes&&v.tensor.offset%t.desc.alignment==0,"unaltered tensor identity/shape/storage/alignment");need(v.guard_before+64==v.object_offset&&v.guard_after==v.object_offset+t.desc.bytes&&v.guard_after+64<=a.objects[0].bytes,"full guards within object for every real tensor");if(t.desc.constant){constants++;need(resolved.value->tensors.at(t.desc.id).access==1,"constant reference remains read-only");}intervals.push_back({t.first,t.desc.constant?UINT64_MAX:t.last,v.tensor.offset-64,v.tensor.bytes+128});}
+ for(size_t i=0;i<plan.nodes.size();i++){const auto&n=plan.nodes[i];if(!n.workspace_bytes)continue;const auto&v=a.workspaces.at(n.node.id);need(v.tensor.bytes==n.workspace_bytes&&v.access==3,"exact workspace extent/access");intervals.push_back({i+1,i+1,v.tensor.offset-64,v.tensor.bytes+128});}
+ for(size_t i=0;i<intervals.size();i++)for(size_t j=0;j<i;j++){const auto&x=intervals[i];const auto&y=intervals[j];if(!(x.last<y.first||y.last<x.first))need(!intersect(x.offset,x.bytes,y.offset,y.bytes),"no live tensor or workspace overlap including both64-byte guards");}
+ need(constants==119,"all original constant views retained");auto near=budget;near.existing_objects=63;need(bool(plan_arenas(plan,near)),"63 occupied device objects plus one real data arena");near.existing_objects=64;need(!plan_arenas(plan,near),"global64 object limit preserved");
+ std::printf("U12_REAL_HUNET_ARENA_PLAN_PASS_NOT_ALLOCATION tensors=%zu constants=%u workspaces=%zu objects=%u arena_bytes=%llu gpu_raw_cycles=null\n",a.tensors.size(),constants,a.workspaces.size(),a.object_count,(unsigned long long)a.objects[0].bytes);
+}

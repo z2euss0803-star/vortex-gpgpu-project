@@ -1,0 +1,20 @@
+include Makefile.r12
+include Makefile.display-hash-tests
+
+$(OUT)/nn-native/tests/unified/test_native_p8_cache.o: tests/unified/test_native_p8_cache.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off -DVX_NATIVE_P8 -c $< -o $@
+$(OUT)/test_native_p8_cache: $(OUT)/nn-native/tests/unified/test_native_p8_cache.o $(MEDIA_LINK) $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+$(OUT)/test_native_raster_budget: $(OUT)/display/tests/unified/test_native_raster_budget.o $(NATIVE_DISPLAY_OBJECTS)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -o $@
+
+$(OUT)/nn-native/tests/unified/test_native_p8_settle.o: tests/unified/test_native_p8_settle.cpp tests/unified/test_native_p8_cache.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off -DVX_NATIVE_P8 -c $< -o $@
+$(OUT)/test_native_p8_settle: $(OUT)/nn-native/tests/unified/test_native_p8_settle.o $(MEDIA_LINK) $(OUT)/nn-native/unified/service/native_p8_service.o $(OUT)/nn-native/p8/texture_service.o $(OUT)/p8/texture_receiver.o $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -Wl,--wrap=socket -Wl,--wrap=bind -Wl,--wrap=getsockname -Wl,--wrap=recvfrom -Wl,--wrap=__recvfrom_chk -Wl,--wrap=sendto -o $@
+
+$(OUT)/test_p8_active_instructions: tests/unified/test_p8_active_instructions.cpp p8/renderer.cpp p8/scene.cpp include/vxunified/p8.hpp vendor/p8/rv32_complex_model.h $(OUT)/backend/core/hunet_sha256.o
+	$(CXX) $(UXFLAGS) $(filter %.cpp %.o,$^) -o $@

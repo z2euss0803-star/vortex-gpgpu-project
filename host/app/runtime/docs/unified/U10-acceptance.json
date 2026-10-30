@@ -1,0 +1,110 @@
+{
+  "task": "U10",
+  "state": "OFFLINE_NATIVE_DAEMON_SOFTWARE_WIRING_AND_MATCHED_LINK_ACCEPTED",
+  "base": "11a5e18e5d12254c222d503747a7f91d949163c9",
+  "source_head_at_validation": "7b9b2c18e837a751f25eeb58fd026eaf7ba1c7e9",
+  "scope": "HOST_PROTOCOL_TEST_AND_AARCH64_LINK_NOT_KERNEL_EXECUTION_BOARD_OR_REAL_APPLICATION",
+  "gpu_raw_cycles": null,
+  "compiler_jobs": 2,
+  "test_runner_jobs": 1,
+  "artifacts": {
+    "host": {
+      "members": 256,
+      "logical_bytes": 463159477,
+      "archive_bytes": 90090324,
+      "sha256": "6db2d18c07c2437dc846ec19da8f1772cb6cde9a337e7317156806e57e1b416e",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U10-service-final-host-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 1706946560,
+      "verified_members": 256,
+      "members_sha256": "1333e14b7e49a2be2efde29482908f96ccdfc8d3d748639cb31315778fe6d175",
+      "hardlink_members": 2,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U10-service-final-host\\raw-and-artifacts.tar.gz",
+      "scope": "VERIFIED_U10_NATIVE_SERVICE_HOST_OR_MATCHED_ELF_LINK_NOT_KERNEL_BOARD_OR_APPLICATION",
+      "validation": {
+        "U10-service-final-normal-137": {
+          "mode": "normal",
+          "code_manifest_checks": 893,
+          "elfs": 30,
+          "daemon_json": 9,
+          "natural_exit": 0
+        },
+        "U10-service-final-sanitize-138": {
+          "mode": "sanitize",
+          "code_manifest_checks": 893,
+          "elfs": 18,
+          "daemon_json": 9,
+          "natural_exit": 0
+        }
+      },
+      "full_u10_complete": false
+    },
+    "tsan": {
+      "members": 122,
+      "logical_bytes": 61749509,
+      "archive_bytes": 16937710,
+      "sha256": "5bfda8cfa0443ba0ce1b328b4e11cebea3c21e816045f0759b86a7320a4c80b7",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U10-service-final-tsan-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2105110528,
+      "verified_members": 122,
+      "members_sha256": "9b92c33d79c0c8e03ecab6c228057075f4d3c628c57c32923a3419b204c78089",
+      "hardlink_members": 1,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U10-service-final-tsan\\raw-and-artifacts.tar.gz",
+      "scope": "VERIFIED_U10_NATIVE_SERVICE_HOST_OR_MATCHED_ELF_LINK_NOT_KERNEL_BOARD_OR_APPLICATION",
+      "validation": {
+        "U10-service-final-tsan-139": {
+          "mode": "thread",
+          "code_manifest_checks": 893,
+          "elfs": 18,
+          "daemon_json": 9,
+          "natural_exit": 0
+        }
+      },
+      "full_u10_complete": false
+    },
+    "cross": {
+      "members": 104,
+      "logical_bytes": 56307755,
+      "archive_bytes": 15700561,
+      "sha256": "3f5147d248c51b3c5a0760a24faadca0d784563a0132f666c2fb214d4b249cd8",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U10-service-final-cross-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2094628864,
+      "verified_members": 104,
+      "members_sha256": "488120d55094fdd84ff974b558bdabc3004e986d2efeb318f9d2c5175039a77c",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U10-service-final-cross\\raw-and-artifacts.tar.gz",
+      "scope": "VERIFIED_U10_NATIVE_SERVICE_HOST_OR_MATCHED_ELF_LINK_NOT_KERNEL_BOARD_OR_APPLICATION",
+      "validation": {
+        "U10-service-final-aarch64-140": {
+          "mode": "cross",
+          "code_manifest_checks": 893,
+          "elfs": 24,
+          "daemon_json": 0,
+          "natural_exit": 0
+        }
+      },
+      "full_u10_complete": false
+    }
+  },
+  "original_errors": [
+    "U10-service-final-sanitize-127:161-byte LSan failure preserved before RAII repair",
+    "U10-fault-idempotency-red-135:existing identity blocked after fault preserved before gate-order repair"
+  ],
+  "production_registry": "EMPTY_UNTIL_U11_U18_NATIVE_APP_BINDINGS",
+  "native_hardware_execution": "NOT_RUN",
+  "application_accuracy": "NO_NEW_APPLICATION_RESULT",
+  "application_performance": "NOT_MEASURED",
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "whole_plan_complete": false,
+  "remaining": "U11-U25: native operators and real applications/bridge/display/review/actual images and delivery"
+}

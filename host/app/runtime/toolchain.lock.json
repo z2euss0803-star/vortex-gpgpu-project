@@ -1,0 +1,12 @@
+{
+  "source_project": "/home/z2euss/workspace/petalinux/codex_h0_firstboot_20261008/env_firstboot",
+  "kernel_source": "/home/z2euss/workspace/vortex_linux_backend_20261008/.toolchain/kernel-source",
+  "kernel_build": "/home/z2euss/workspace/vortex_linux_backend_20261008/.toolchain/kernel-build",
+  "sysroot": "/home/z2euss/workspace/petalinux/codex_h0_firstboot_20261008/env_firstboot/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/recipe-sysroot",
+  "cross_compile": "/home/z2euss/workspace/vortex_linux_backend_20261008/.toolchain/bin/aarch64-xilinx-linux-",
+  "gcc": "aarch64-xilinx-linux-gcc (GCC) 9.2.0\nCopyright (C) 2019 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "original_protected": {
+    "/home/z2euss/workspace/petalinux/codex_h0_firstboot_20261008/env_firstboot/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build/.config": "f338708ce99b2630fe45a261de4c9e9fc30db456774076d073a161f6ab3af9ab",
+    "/home/z2euss/workspace/petalinux/codex_h0_firstboot_20261008/env_firstboot/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build/Module.symvers": "a869b98a5662c7918aaeabd819ea5ebc3cde883e8208f7d6925e06ff6879a312"
+  }
+}

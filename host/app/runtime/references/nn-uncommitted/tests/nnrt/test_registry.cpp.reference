@@ -1,0 +1,18 @@
+#include <vxnn/package.hpp>
+#include <cassert>
+#include <cstdio>
+using namespace vxnn;
+int main(int argc,char **argv){
+ assert(argc==2);OperatorRegistry registry;OperatorSpec spec;spec.key.name="test.identity";spec.key.semantic_version="1.0.0";spec.key.implementation_sha.fill(0xaa);spec.available=true;spec.supported_types={DType::FP32};spec.supported_layouts={"NCHW"};
+ spec.infer_shapes=[](const auto &in,const auto&,const auto&){return Result<std::vector<Shape>>::success({in[0].shape});};
+ spec.workspace=[](const auto&,const auto&,const auto&){return Result<uint64_t>::success(0);};
+ spec.validate=[](const auto&,const auto&,const auto&){return Result<void>::success();};
+ spec.prepare=[&](NodeId id,const auto&,const auto&,const auto &parameters,const auto&){return Result<PreparedNode>::success({id,spec.key,{},{},parameters,{}});};
+ spec.execute=[](const PreparedNode&,ExecutionContext&){return Result<Completion>::failure({-ENOTSUP,"HOST_PROTOCOL_TEST","no GPU execution in registry fixture"});};
+ assert(registry.add(spec));std::string mode=argv[1];
+ if(mode=="resolve"){assert(registry.resolve(spec.key.name,spec.key.semantic_version,spec.key.implementation_sha));Digest other{};assert(!registry.resolve(spec.key.name,spec.key.semantic_version,other));}
+ else if(mode=="duplicate"){assert(!registry.add(spec));}
+ else if(mode=="dtype"){TensorDesc d;d.dtype=DType::I16;d.layout="NCHW";assert(!registry.validate(spec.key,{d},{},{}));d.dtype=DType::FP32;d.layout="NHWC";assert(!registry.validate(spec.key,{d},{},{}));}
+ else return 2;
+ puts("OPERATOR_REGISTRY_EXACT_KEY_AND_TYPE_HOST_PASS_GPU_CYCLES_NULL");return 0;
+}

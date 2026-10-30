@@ -1,0 +1,201 @@
+{
+  "scope": "WRITTEN_PLAN_SELF_REVIEW_NOT_IMPLEMENTATION_OR_USER_APPROVAL",
+  "date": "2026-10-21",
+  "tasks": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T08",
+    "T09",
+    "T10",
+    "T11",
+    "T12",
+    "T13",
+    "T14",
+    "T15",
+    "T16",
+    "T17",
+    "T18",
+    "T19",
+    "T20",
+    "T21",
+    "T22",
+    "T23",
+    "T24"
+  ],
+  "step_count": 120,
+  "files": [
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\Linux神经网络运行时调度器与通用GPU驱动实施计划-2026-10-21.md",
+      "candidate_path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_runtime_v2_20261021\\docs\\runtime\\PLAN_ENTRY.md",
+      "bytes": 13042,
+      "lines": 99,
+      "sha256": "719413e9ef6b1afa18a287f3515a740d1c332485e9d8882c9dba97248ae6adcb"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\Linux运行时实施子计划A-当前修复与资源-2026-10-21.md",
+      "candidate_path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_runtime_v2_20261021\\docs\\runtime\\plan-A.md",
+      "bytes": 8561,
+      "lines": 61,
+      "sha256": "cf6eff2c8c65ec0c7777589a206a4d80cd2a441d85bfdcf31b4871f88ebca316"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\Linux运行时实施子计划B-用户态运行时-2026-10-21.md",
+      "candidate_path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_runtime_v2_20261021\\docs\\runtime\\plan-B.md",
+      "bytes": 10257,
+      "lines": 73,
+      "sha256": "73f6d13fc8e59df75dc3a541f32c5f481941d882608002e934da87b09403827d"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\Linux运行时实施子计划C-通用驱动与受控程序-2026-10-21.md",
+      "candidate_path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_runtime_v2_20261021\\docs\\runtime\\plan-C.md",
+      "bytes": 15608,
+      "lines": 101,
+      "sha256": "6c8464a9f0a2f5ba324078da0395b8a31b232cf41865a239d524357cd3102134"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\Linux运行时实施子计划D-整合构建与现场验收-2026-10-21.md",
+      "candidate_path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_runtime_v2_20261021\\docs\\runtime\\plan-D.md",
+      "bytes": 15699,
+      "lines": 109,
+      "sha256": "ba80d0392401472fcc9ef8e04949cd1492d9d6f93fc9bef99fa6b39ac094bf55"
+    }
+  ],
+  "spec_section_coverage": {
+    "1": [
+      "T01",
+      "T02",
+      "T17",
+      "T24"
+    ],
+    "2": [
+      "T01",
+      "T21"
+    ],
+    "3": [
+      "T02",
+      "T03",
+      "T04",
+      "T22",
+      "T23"
+    ],
+    "4": [
+      "T05",
+      "T09"
+    ],
+    "5": [
+      "T06",
+      "T07"
+    ],
+    "6": [
+      "T07",
+      "T10",
+      "T11",
+      "T20"
+    ],
+    "7": [
+      "T08",
+      "T09",
+      "T15"
+    ],
+    "8": [
+      "T10",
+      "T11"
+    ],
+    "9": [
+      "T15",
+      "T16"
+    ],
+    "10": [
+      "T13",
+      "T14",
+      "T17",
+      "T18"
+    ],
+    "11": [
+      "T01",
+      "T05",
+      "T20",
+      "T23"
+    ],
+    "12": [
+      "T19",
+      "T21",
+      "T22",
+      "T23"
+    ],
+    "13": [
+      "T04",
+      "T21",
+      "T22",
+      "T24"
+    ],
+    "14": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T09",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16",
+      "T17",
+      "T18",
+      "T19",
+      "T20",
+      "T21",
+      "T22",
+      "T23",
+      "T24"
+    ]
+  },
+  "review_focus": {
+    "accepted_submit_copy_fault": [
+      "T15",
+      "T16"
+    ],
+    "cancel_cpu_race": [
+      "T08",
+      "T09"
+    ],
+    "dp_result_retirement": [
+      "T07",
+      "T18"
+    ],
+    "owner_close_unknown_device": [
+      "T10",
+      "T15"
+    ],
+    "immutable_alias_write": [
+      "T07",
+      "T11"
+    ]
+  },
+  "self_review_fixes": [
+    "split GPU library into INT16/HUNet/Mosaic tasks so legacy wrapping is not counted as extensibility",
+    "separate kernel/runtime/program/model identities so external model addition does not force driver rebuild",
+    "specify accepted-cookie recovery after copy fault and two-phase completion read/ack",
+    "explicit binary kernel catalog avoids adding JSON parser to Linux",
+    "Mosaic diagnostic prefix budget avoids pretending partial END or unbounded batch expansion",
+    "specify Result<void> without optional<void> and share PreparedNode definition",
+    "use NumericReport consistently across migration task"
+  ],
+  "placeholders": 0,
+  "uncovered_spec_sections": [],
+  "unapproved_implementation_started": false,
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED",
+  "board": "NOT_CONNECTED"
+}

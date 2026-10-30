@@ -1,0 +1,1 @@
+{"known_failures":["HISTORICAL_ORT_8105_NOT_NEW_PASS"],"reference_sha":"58a75990aad6711810065fa7a3c83e81a3eaaba13769f0395eac95dd7fa48654","schema":1,"semantics":"HUNET_V5_ORDERED_FP16_FP32_ERF4_FROZEN_HISTORY_V1","threshold_sha":"9311f7071cf3b34e44d77f7bf68f597453e8ff68ce7484a84f4dcc7504fad9e5"}

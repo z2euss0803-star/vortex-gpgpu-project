@@ -1,0 +1,36 @@
+#include <vxnn/hunet_registry.hpp>
+#include "nnrt/package/json.hpp"
+#include <cerrno>
+#include <cstdio>
+#include <cstdlib>
+#include <fstream>
+#include <sstream>
+using namespace vxnn;
+static void need(bool b,const char*s){if(!b){std::fprintf(stderr,"U12_REGISTRY_ASSERT %s\n",s);std::exit(68);}}
+static std::string read(const char*p){std::ifstream f(p,std::ios::binary);need(bool(f),"open actual fixture/code/schema");std::ostringstream s;s<<f.rdbuf();return s.str();}
+static Shape shape(json_object*a){Shape s;for(size_t i=0;i<json::count(a);i++)s.push_back(json::u64(json::at(a,i)));return s;}
+struct Recording:HunetExecutionContext {
+ unsigned gpu=0,cpu=0;bool fake_cycles=false,failed_completion=false;
+ Result<Completion>submit(const PreparedNode&,uint32_t op)override{need(op!=6,"CPU GELU cannot be submitted as GPU");gpu++;Completion c;return Result<Completion>::success(c);}
+ Result<Completion>cpu_gelu(const PreparedNode&)override{cpu++;Completion c;if(fake_cycles){c.cycles_valid=true;c.raw_cycles=1;}if(failed_completion)c.result=-EIO;return Result<Completion>::success(c);}
+};
+struct GpuOnly:ExecutionContext {unsigned called=0;Result<Completion>submit(const PreparedNode&,uint32_t)override{called++;return Result<Completion>::success({});}};
+int main(int argc,char**argv){
+ need(argc==4,"fixture, actual CODE and schema paths required");HunetFamily family{content_digest(read(argv[2])),content_digest("U12_HOST_REGISTRY_FIXTURE_NOT_PRODUCTION_IDENTITY"),content_digest(read(argv[3]))};OperatorRegistry registry;
+ need(bool(register_hunet_operators(registry,family)),"register bounded frozen arithmetic and separate CPU GELU operators");need(!register_hunet_operators(registry,family),"duplicate registration transactional");
+ Int16Family old{content_digest(read("data/nnrt/programs/int16-family-v1/code.bin")),content_digest("U12_OLD_INTEGER_REGISTRY_FIXTURE")};need(bool(register_int16_operators(registry,old)),"old integer family registers alongside HUNet without identity replacement");auto old_key=int16_operator_key(VXNN_MATMUL_I16,old);need(bool(registry.resolve(old_key.name,old_key.semantic_version,old_key.implementation_sha)),"old exact integer key preserved");
+ DeviceCaps caps;caps.alignment=64;caps.gpu_address_bits=caps.ps_dma_bits=caps.cycle_counter_bits=32;caps.pl_address_bits=40;auto cases=json::parse(read(argv[1]));Recording context;unsigned seen=0;
+ for(size_t ci=0;ci<json::count(cases.get());ci++){auto*c=json::at(cases.get(),ci);auto op=json::u32(json::member(c,"op"));auto key=hunet_operator_key(op,family);auto found=registry.resolve(key.name,key.semantic_version,key.implementation_sha);need(bool(found),"exact semantic/operator/program key registered");auto spec=*found.value;std::vector<TensorDesc> in;
+  auto*ins=json::member(c,"inputs");for(size_t i=0;i<json::count(ins);i++){auto*t=json::at(ins,i);TensorDesc d;d.id=json::u32(json::member(t,"id"));auto ty=json::str(json::member(t,"dtype"));d.dtype=ty=="FP16"?DType::FP16:ty=="U8"?DType::U8:DType::FP32;d.layout=json::str(json::member(t,"layout"));d.shape=shape(json::member(t,"shape"));d.bytes=json::u64(json::member(t,"bytes"));d.access=1;d.constant=json::boolean(json::member(t,"constant"));d.content_sha=json::digest(json::member(t,"sha256"));if(d.constant)d.asset="METADATA_FIXTURE_NOT_WEIGHTS";in.push_back(d);}
+  auto*p=json::member(c,"parameters");ScalarParams params{{"shape",shape(json::member(p,"shape"))},{"flags",json::u64(json::member(p,"flags"))},{"descriptors",json::str(json::member(p,"descriptors"))}};auto out_shape=shape(json::member(c,"output_shape"));auto layout=json::str(json::member(c,"output_layout"));auto call=inspect_hunet_operator(op,in,params,caps);need(bool(call),"all frozen node input and descriptor contracts accepted");need(call.value->output_shape==out_shape&&call.value->output_layout==layout&&call.value->workspace_bytes==json::u64(json::member(c,"workspace")),"inference/workspace match independently decoded old schedule");for(auto a:call.value->args.address)need(!a,"no raw CPU or historical GPU addresses in prepared args");
+  auto inferred=spec.infer_shapes(in,params,caps);need(inferred&&*inferred.value==std::vector<Shape>{out_shape},"registered inference");TensorDesc out;out.id=1000;out.dtype=DType::FP32;out.layout=layout;out.shape=out_shape;out.bytes=4;for(auto n:out_shape)out.bytes*=n;out.access=2;
+  auto prepared=spec.prepare(77,in,{out},params,caps);need(bool(prepared),"registered node prepare");need(prepared.value->program_requirements==(op==6?std::vector<Digest>{}:std::vector<Digest>{family.program_sha}),"CPU has no GPU program requirement");auto completion=spec.execute(*prepared.value,context);need(completion&&!completion.value->raw_cycles,"typed dispatch never invents GPU cycles");seen++;
+  auto wrong=in;wrong[0].domain=AddressDomain::CPU;need(!spec.validate(wrong,params,caps),"CPU VA domain cannot enter PL references");wrong=in;wrong[0].bytes--;need(!spec.validate(wrong,params,caps),"short logical tensor rejected");wrong=in;wrong[0].dtype=DType::I16;need(!spec.validate(wrong,params,caps),"FP32 cannot be reinterpreted as signed INT16");auto bad=params;bad["raw_gpu_address"]=uint64_t(0x80800000);need(!spec.validate(in,bad,caps),"unknown raw-address parameter rejected");auto low=caps;low.max_refs_per_job=7;need(!spec.validate(in,params,low),"eight-ref capability required");auto altered=out;altered.id=in[0].id;need(!spec.prepare(77,in,{altered},params,caps),"in-place output forbidden");
+  if(op==6){GpuOnly only;need(!spec.execute(*prepared.value,only)&&!only.called,"CPU op has no GPU fallback");context.fake_cycles=true;need(!spec.execute(*prepared.value,context),"CPU completion cannot claim GPU cycles");context.fake_cycles=false;context.failed_completion=true;auto failed=spec.execute(*prepared.value,context);need(!failed&&failed.error->code==EIO,"failed CPU completion cannot release dependent GPU as success");context.failed_completion=false;}
+  if(op==15){wrong=in;wrong[1].dtype=DType::I16;need(!spec.validate(wrong,params,caps),"FP16 weights never signed I16");bad=params;auto hex=std::get<std::string>(bad["descriptors"]);hex[0]=hex[0]=='0'?'1':'0';bad["descriptors"]=hex;need(!spec.validate(in,bad,caps),"descriptor bytes cannot diverge from immutable input digest");}
+  if(op==15&&(call.value->args.flags&2)){wrong=in;wrong[0].shape={call.value->args.co,1,1};need(bool(spec.validate(wrong,params,caps)),"frozen GAP CHW channel vector is the exact no-copy Conv1D linear view");wrong[0].shape={1,call.value->args.co,1};need(!spec.validate(wrong,params,caps),"unregistered equal-size axis view rejected");}
+  if(op==11){wrong=in;wrong[1].layout="CHW_F32";wrong[1].shape={call.value->args.co,1,1};need(bool(spec.validate(wrong,params,caps)),"frozen sigmoid CHW channel vector broadcasts without materialization");wrong[1].shape={1,call.value->args.co,1};need(!spec.validate(wrong,params,caps),"wrong channel axis rejected");}
+ }
+ need(seen==116&&context.gpu==103&&context.cpu==39,"all103GPU and13CPU metadata paths plus26 CPU completion rejection probes");HunetFamily missing=family;missing.schema_sha={};OperatorRegistry fresh;need(!register_hunet_operators(fresh,missing),"no missing schema binding");
+ puts("U12_REGISTERED_HUNET_103_GPU_13_CPU_METADATA_DISPATCH_PASS_NOT_GPU_EXECUTION gpu_raw_cycles=null");
+}

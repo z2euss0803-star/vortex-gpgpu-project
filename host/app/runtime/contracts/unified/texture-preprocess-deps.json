@@ -1,0 +1,10 @@
+{
+  "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/Pillow-8.4.0-25a49dc2e2f74e65efaa32b153527fc5ac98508d502fa46e74fa4fd678ed6645.whl",
+  "bytes": 3065250,
+  "sha256": "25a49dc2e2f74e65efaa32b153527fc5ac98508d502fa46e74fa4fd678ed6645",
+  "package": "Pillow",
+  "version": "8.4.0",
+  "host_python": "CPython3.6_x86_64",
+  "purpose": "HOST_PREPROCESS_ONLY_NOT_PETALINUX_RUNTIME",
+  "dependency_scope": "ISOLATED_NO_SYSTEM_SITE_PACKAGES_CHANGE"
+}

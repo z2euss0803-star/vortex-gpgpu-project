@@ -1,0 +1,125 @@
+[
+  {
+    "date": "2026-10-24",
+    "run": "U18-display-owner-red-001",
+    "scope": "BUILD_LINK_FAILURE_NOT_FUNCTIONAL_RED",
+    "error": "undefined reference demo_sha_hex",
+    "root_cause": "original implementation is demo/store.c; test link omitted that original object",
+    "preserved_archive": "U18-link-error-002",
+    "archive_sha256": "f05fd6216205bfaaba26d873a0e6fcdd122dc98cb160ddbba0c4593eb57f2fc4",
+    "repair": "add original demo/store.c object; checks and original viewer unchanged",
+    "retest": "U18-display-owner-red-003 compiled and witnessed both expected functional assertions",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U18-display-normal-005",
+    "error": "host fake KMS presentation rejected at ResultStore mark_displayed with EINVAL",
+    "classification": "INTEGRATION_FAILURE_NOT_BOARD",
+    "preserved_archive": "U18-host-clock-error-006",
+    "archive_sha256": "9dc0be61c8c47c089151273a224194a969d8362def94c2ac4d1480b1d9372f4a",
+    "confirmed_by": "U18-host-clock-red-007 actual errno22 in both compiled test ELFs; archive008 4ee92943ca925ce087410ef916608d8252cdcc0328ad84d3d08fd620b57f62a9",
+    "repair": "permit HOST_MONOTONIC only for HOST_PROTOCOL_TEST producer; original Linux clock remains allowed",
+    "retest": "U18-display-normal-009 natural0",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U18-display-reject-red-010",
+    "error": "pre-submit composer rejection released common lease but observation.pending remained true",
+    "classification": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "preserved_archive": "U18-rejection-functional-red-011",
+    "archive_sha256": "a4dd02a79aa0a27931299a01ee75d34c4fbfeb955781755fd607946d50eec15d",
+    "repair": "derive pending observation from actual retained pending holder after rejection",
+    "retest": "U18-display-fault-normal-012 running",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U18-original-evidence-red-014",
+    "classification": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "error": "display layer overwrote original journal error category and detail",
+    "preserved_archive": "U18-original-evidence-functional-red-015",
+    "archive_sha256": "194ede2cad436914a1c5fd59e99b7c9d874688e5e18b6c972faed1f2196846bd",
+    "repair": "overload first-error transfer to retain complete original Error for journal/store retirement failures",
+    "retest": "U18-owner-errors-normal-016 natural0",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U18-owner-matrix-normal-017",
+    "classification": "TEST_COMPILE_ERROR_NOT_FUNCTIONAL_RED",
+    "error": "test join loop missing braces triggers -Werror=misleading-indentation",
+    "preserved_archive": "U18-thread-test-compile-error-018",
+    "archive_sha256": "856c69d6c4a069a82945f44157afda3a884765aa4e8f1534cb9f147ff83ccdea",
+    "repair": "explicit braces around join loop; no compiler option changed",
+    "retest": "019/021/022/023 natural0 under same source identity",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U18-raster-page-red-025",
+    "classification": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "error": "native P8/image/Mosaic raster page layout absent",
+    "preserved_archive": "U18-raster-page-functional-red-026",
+    "archive_sha256": "e5c631f44551c53c835be2fd7abf474e84d0be56cedbb24d203e402c91f53414",
+    "repair": "source-bound opaque RGBA/native layout and original finite CHW clamp/truncate conversion",
+    "retest": "027normal/028ASanUBSan/029TSan/030matchingcross natural0, archived031; no nativeDP or board",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U18-hunet-native-red-034",
+    "classification": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "error": "HUNet bound panel, actual selected caps, managed KMS context and native path factory missing",
+    "preserved_archive": "U18-hunet-native-functional-red-035",
+    "archive_sha256": "665799aa94a2815c829b2e1d75321bd3322d34d89c4451b43243a37430aa8e5e",
+    "repair": "original HUNet C compositor and raw-logit/raw-result SHA binding; actual caps; retained native context; fixed Linux native clock",
+    "retest": "036 natural0; final full matrix still in progress",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U18-pre-submit-allocation-red-038",
+    "classification": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "error": "composer bad_alloc before KMS submit releases hold but leaves observation.pending true",
+    "preserved_archive": "U18-hunet-native-allocation-040",
+    "archive_sha256": "e47fc925aecded720bcab2cb92255b5969c3b14654c347c6138619fdec74f594",
+    "repair": "derive observation.pending from actual retained holder after release; retain original release error if any",
+    "retest": "045 normal,046 ASanUBSan,051 TSan natural0; no false pending or common lease",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U18-complete-normal-042",
+    "classification": "REGRESSION_BUILD_DEPENDENCY_ERROR_NOT_FUNCTIONAL_RED",
+    "error": "old Makefile.demo used absent system pkg-config json-c instead of the existing frozen private json-c prefix",
+    "preserved_archive": "U18-old-regression-build-error-043",
+    "archive_sha256": "f895b9103d64f56c5c3af17fc1ae58611f9f975dd851917464483acb37b9d3c0",
+    "repair": "pass original DEMO_JSON_PREFIX explicitly, no legacy source/check/compiler rule relaxed",
+    "retest": "045 normal and046 ASanUBSan natural0 including original four C display and shared owner/result/allocation regressions",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U18-complete-thread-048",
+    "classification": "RESOURCE_GATE_REFUSAL_BEFORE_COMPILER",
+    "error": "fresh RAM/disk resource gate refused; no test/compiler was started",
+    "preserved_archive": "U18-final-matrix-part1-049",
+    "archive_sha256": "16b285761a654f0ee5c519b40480f39446960a5c5033a48b3fca2c264737a9fe",
+    "repair": "full archive/member proof then exact completed own build release050, actual free delta116555776B; original resource threshold unchanged",
+    "retest": "051 TSan natural0 after exact verified release050; gate unchanged",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U18-complete-cross-052",
+    "classification": "REGRESSION_FIXTURE_STATIC_LINK_ERROR_NOT_GPU_OR_PRODUCTION_FAILURE",
+    "error": "original native restore fixture injects drm symbols; static target libdrm pulls conflicting real definitions",
+    "preserved_archive": "U18-static-drm-regression-error-053",
+    "archive_sha256": "5261d2b14a748644b2b9a74be88490766d551d15bd59691ec638b7873b7a8db6",
+    "repair": "keep unchanged injected fixture in actual host normal/ASan/TSan regressions; cross actual native.cpp+kms.c against verified target libdrm; do not permit multiple definitions or edit original fixture",
+    "retest": "054 ten AArch64 ELFs and rootfs version audit natural0",
+    "gpu_raw_cycles": null
+  }
+]

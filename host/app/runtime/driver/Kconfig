@@ -1,0 +1,8 @@
+config VXL_LINUX
+ bool "Exclusive Vortex H0 Linux backend"
+ depends on ARM64 && OF && GPIOLIB
+ select CRYPTO
+ select CRYPTO_HASH
+ select CRYPTO_SHA256
+ help
+   Built-in only deployment. Requires validated reserved PS memory and exact H0 profile.

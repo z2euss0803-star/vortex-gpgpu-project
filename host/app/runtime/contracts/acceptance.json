@@ -1,0 +1,1 @@
+{"hardware_contract_status":"EXTRACTED_H0_PROPOSED_H1","hardware_owner_acceptance":null,"h1_manifest":null,"ps_placement_acceptance":null,"board_evidence":null,"offline_examples":"tests/contract/test_profiles.py tests/core/test_core.c tests/mock/test_engine.c tests/core/test_program.c tests/runtime/test_public_api.cpp"}

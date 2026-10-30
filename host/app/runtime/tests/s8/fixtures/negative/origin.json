@@ -1,0 +1,115 @@
+{
+  "files": [
+    {
+      "bytes": 4096,
+      "case_id": 51456,
+      "path": "negative-51456.bin",
+      "sha256": "17f4f6ba13e8edab01667be4c69832d136df7e5164328c63d1a5ae8b6a49d2e6"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 51457,
+      "path": "negative-51457.bin",
+      "sha256": "85ffcf095f483fc060a08d6d8fb72d7838de013a9038a62230e4f561ae529cfd"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 51712,
+      "path": "negative-51712.bin",
+      "sha256": "d233d04217333404eb7c23b698f7ab71cddefca91b591768be177163d0d9aaf2"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 51968,
+      "path": "negative-51968.bin",
+      "sha256": "4e6df71b1646d146f0cd224889daef25559a7b34f472fb9e1d4de1a952be9098"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 51969,
+      "path": "negative-51969.bin",
+      "sha256": "811152d0a1b74d349ef883c48a0c19526a86535cd672a941c05377b2b8a1361a"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 51970,
+      "path": "negative-51970.bin",
+      "sha256": "03e312fba331ba9775062ad73b054bc5292f41a9a5008e3a8b7016041ffdc108"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 51971,
+      "path": "negative-51971.bin",
+      "sha256": "661f4d7d8a19d0f1b68a8e80aeeadec218ca6b22a40976d55f21f882ee379c8e"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 51972,
+      "path": "negative-51972.bin",
+      "sha256": "ff318797e590f5f7ee957dff39f40fb50d870639f36e0966f5dec338dcc00de4"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 51973,
+      "path": "negative-51973.bin",
+      "sha256": "eab03007d6cfda60926246b4cc03211ab19652ea28643d24c79234fe78050a75"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 51974,
+      "path": "negative-51974.bin",
+      "sha256": "194deac470ac1854ffc7fd0561fd13fcc2a60d403efde2a4edb8204773f047f3"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 52224,
+      "path": "negative-52224.bin",
+      "sha256": "2ad7b464472f21342d05712c7769d0d618abc670aaad8b6064f16815f06d8725"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 52225,
+      "path": "negative-52225.bin",
+      "sha256": "b7422a0b76d1f56e73de15be6e34e813437892e053f32a17288c8004c1c5c60a"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 52480,
+      "path": "negative-52480.bin",
+      "sha256": "7a8de6c67f7b31b06fb9228641dbc3597d7480ed99437f549bac177d8494bdeb"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 52736,
+      "path": "negative-52736.bin",
+      "sha256": "1705aac565150abef9eecda01b02c5f681acfa70a2f2f4f27c331a7fc86fc84c"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 52992,
+      "path": "negative-52992.bin",
+      "sha256": "dbb2e2e5ce550fdf30b1b194bde4b89dc76e124a558a642fb31fd3e9b42e4941"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 53248,
+      "path": "negative-53248.bin",
+      "sha256": "8f0f138c1282b7e2155572dd20431b0eb8a4af0404492b857618b47c80412d66"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 53249,
+      "path": "negative-53249.bin",
+      "sha256": "ababd7ae7a75b0618bbeb515dd150f7f57406b7bf4423dabb9782bccbff9f1b5"
+    },
+    {
+      "bytes": 4096,
+      "case_id": 53504,
+      "path": "negative-53504.bin",
+      "sha256": "eac1d2811c80e668947654582d8fed8e27c64c1676de8366aad78773d7bec207"
+    }
+  ],
+  "origin": "production device/s8/negative.cpp with CPU instruction boundary fixture; NOT RTL or board",
+  "scope": "SOFTWARE_TEST_ONLY",
+  "source_archive_sha256": "92e8fdeb59e3e2018c25afcac234e9142f1080c030bfeaeb80fd4798f7635db7"
+}

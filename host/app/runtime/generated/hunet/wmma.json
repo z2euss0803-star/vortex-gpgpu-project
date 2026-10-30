@@ -1,0 +1,74 @@
+[
+  {
+    "id": 0,
+    "m": 8,
+    "n": 4,
+    "k": 8,
+    "tiles": 1,
+    "owner_counts": [
+      1,
+      0,
+      0,
+      0
+    ],
+    "args_sha256": "2afc70d06aaa4006bc9cb32d08e547ac7d6e4d94f64d2bcaa0c96a6c158f7b1d",
+    "files": {
+      "a.f16": {
+        "bytes": 128,
+        "sha256": "d59c1bf3882a2b1449a8300ff1afd45b406968b851dc91726f85b4ed6ef1d047"
+      },
+      "args.bin": {
+        "bytes": 128,
+        "sha256": "2afc70d06aaa4006bc9cb32d08e547ac7d6e4d94f64d2bcaa0c96a6c158f7b1d"
+      },
+      "b.f16": {
+        "bytes": 64,
+        "sha256": "0e52e0f053ad9d396f9837e8fec044da6ac87e0be45131d27f8493362b656369"
+      },
+      "expected.f32": {
+        "bytes": 128,
+        "sha256": "026c59483c33c5f2169254523b8b9b5f23a6571b4f99a17da0095f1ce7139f9d"
+      },
+      "matrix.bin": {
+        "bytes": 32,
+        "sha256": "67b81326dcddffb0285b7fa33e044f1b3101755c27cc3c4c5527549036dbed0f"
+      }
+    }
+  },
+  {
+    "id": 1,
+    "m": 128,
+    "n": 4,
+    "k": 8,
+    "tiles": 16,
+    "owner_counts": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "args_sha256": "7694eacd0abfb49f7f52a36671a001da3a5a22c282fecd08d8266e24330dbbcb",
+    "files": {
+      "a.f16": {
+        "bytes": 2048,
+        "sha256": "c16cc064ce95c8e1701e446e515d146b2b06137d6f1776f38812eb3082b90b5a"
+      },
+      "args.bin": {
+        "bytes": 128,
+        "sha256": "7694eacd0abfb49f7f52a36671a001da3a5a22c282fecd08d8266e24330dbbcb"
+      },
+      "b.f16": {
+        "bytes": 64,
+        "sha256": "0e52e0f053ad9d396f9837e8fec044da6ac87e0be45131d27f8493362b656369"
+      },
+      "expected.f32": {
+        "bytes": 2048,
+        "sha256": "2486b30c973b1d0adf14571e9e4bc6f59bbc40b9ebb42fc9f5f447bfbfe145b4"
+      },
+      "matrix.bin": {
+        "bytes": 32,
+        "sha256": "7dd13d7c60b1aac5d1b1e662bc6a4f702fd26897da282fcf9338dd8e9d616082"
+      }
+    }
+  }
+]

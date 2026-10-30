@@ -1,0 +1,28 @@
+#include <vxnn/arena.hpp>
+#include "fixture.hpp"
+#include <cstdio>
+using namespace vxnn;
+static PlannedTensor tensor(uint32_t id,uint64_t first,uint64_t last,uint64_t bytes=64){PlannedTensor t;t.desc.id=id;t.desc.bytes=bytes;t.desc.alignment=64;t.desc.domain=AddressDomain::PL;t.desc.access=3;t.first=first;t.last=last;return t;}
+static bool intersects(uint64_t a,uint64_t n,uint64_t b,uint64_t m){return a<b+m&&b<a+n;}
+static void inspect(const Plan&p,const ArenaPlan&a,const MemoryBudget&b){
+ require(a.plan_id==p.plan_id&&a.tensors.size()==p.tensors.size(),"all plan views retained");
+ require(a.object_count==a.objects.size()+b.existing_objects&&a.object_count<=64,"count physical device arenas rather than logical tensors");
+ for(const auto&v:a.tensors){auto it=std::find_if(a.objects.begin(),a.objects.end(),[&](const auto&o){return o.slot==v.arena;});require(it!=a.objects.end(),"view owns one arena");require(v.guard_bytes==64&&v.guard_before+64==v.object_offset&&v.guard_after==v.object_offset+v.tensor.bytes&&v.guard_after+64<=it->bytes,"two complete64-byte per-view guards");require(it->offset+v.object_offset==v.tensor.offset,"domain and object offsets remain distinct");for(const auto&h:b.held)if(!h.retired&&h.domain==it->domain)require(!intersects(it->offset,it->bytes,h.offset,h.bytes),"whole physical arena avoids held GPU/DP range including its gaps");}
+}
+int main(){
+ Plan p;p.caps=graph_caps();p.resident_bytes=128;p.plan_id=content_digest("INDEPENDENT_ARENA_HOST_FIXTURE");MemoryBudget b;b.pl_bytes=1<<20;b.ps_bytes=1<<20;
+ for(unsigned i=1;i<=119;i++){auto t=tensor(i,0,0);t.desc.constant=true;t.desc.access=1;p.tensors.push_back(t);}
+ auto result=plan_arenas(p,b);if(!result)std::fprintf(stderr,"ARENA_ERROR %d %s\n",result.error->code,result.error->detail.c_str());require(bool(result),"119 constants fit bounded guarded arena without relaxing64 kernel objects");inspect(p,*result.value,b);require(result.value->objects.size()==1,"one PL object for disjoint constant views");
+ std::vector<ArenaAllocation> allocations;for(const auto&o:result.value->objects)allocations.push_back({o.slot,o.domain,{o.slot+10,7,0,o.bytes,3,9}});auto bound=bind_arenas(*result.value,allocations,9);require(bound&&bound.value->tensors.size()==119,"all real-reference views resolve to owned arena generation");for(const auto&v:result.value->tensors){const auto&r=bound.value->tensors.at(v.tensor.tensor);require(r.offset==v.object_offset&&r.bytes==v.tensor.bytes&&r.access==1&&r.device_generation==9,"no raw address or write promotion for constants");}
+ for(unsigned fault=0;fault<6;fault++){auto wrong=allocations;if(fault==0)wrong[0].backing.device_generation++;if(fault==1)wrong[0].backing.object_generation=0;if(fault==2)wrong[0].backing.bytes--;if(fault==3)wrong[0].backing.offset=64;if(fault==4)wrong[0].domain=AddressDomain::CPU;if(fault==5)wrong[0].backing.access=0;require(!bind_arenas(*result.value,wrong,9),"stale/short/aliased/domain/permission allocation rejected");}
+ require(!bind_arenas(*result.value,allocations,0),"no invented device epoch");auto extra=allocations;extra.push_back(extra[0]);require(!bind_arenas(*result.value,extra,9),"extra/duplicate backing rejected");
+ b.existing_objects=63;require(bool(plan_arenas(p,b)),"63 other objects plus one real arena fits64");b.existing_objects=64;require(!plan_arenas(p,b),"no physical object budget waiver");b.existing_objects=0;
+ p.tensors={tensor(1,0,1,17),tensor(2,2,3,8),tensor(3,1,4,64)};auto reuse=plan_arenas(p,b);require(bool(reuse),"lifetime reuse");inspect(p,*reuse.value,b);require(reuse.value->tensors[0].tensor.offset==reuse.value->tensors[1].tensor.offset&&reuse.value->tensors[0].tensor.offset!=reuse.value->tensors[2].tensor.offset,"retired storage reused; concurrent guards do not alias");
+ auto constant=p;constant.tensors[0].desc.constant=true;constant.tensors[0].desc.access=1;auto noalias=plan_arenas(constant,b);require(noalias&&noalias.value->tensors[0].tensor.offset!=noalias.value->tensors[1].tensor.offset,"constants remain live independent of caller last");
+ p.tensors={tensor(1,0,4,512),tensor(2,0,4,512)};b.held={{AddressDomain::PL,704,128,false}};auto held=plan_arenas(p,b);require(bool(held),"split arenas around nonretired hole");inspect(p,*held.value,b);require(held.value->objects.size()==2,"cannot wrap held hole inside one physical arena");
+ b.existing_objects=63;require(!plan_arenas(p,b),"two split arenas exceed remaining one object");b.existing_objects=0;b.held[0].retired=true;require(plan_arenas(p,b).value->objects.size()==1,"proven retired hole can be reclaimed");b.held.clear();
+ p.tensors[0].desc.alignment=256;auto aligned=plan_arenas(p,b);require(aligned&&aligned.value->tensors[0].tensor.offset%256==0,"data rather than storage guard is aligned");b.pl_bytes=64;require(!plan_arenas(p,b),"guard storage counted in capacity");b.pl_bytes=1<<20;p.tensors[0].desc.bytes=UINT64_MAX;require(!plan_arenas(p,b),"guard/align overflow rejected");
+ p.tensors={tensor(1,0,4)};p.nodes.resize(1);p.nodes[0].node.id=77;p.nodes[0].workspace_bytes=123;auto workspace=plan_arenas(p,b);require(workspace&&workspace.value->workspaces.count(77)&&workspace.value->workspaces.at(77).guard_bytes==64,"workspace has same bounds and guards");
+ p.nodes.clear();p.tensors={tensor(1,0,4)};p.tensors[0].desc.domain=AddressDomain::CPU;b.existing_objects=64;auto cpu=plan_arenas(p,b);require(cpu&&cpu.value->object_count==64&&cpu.value->cpu_peak==320,"CPU arena storage counts CPU bytes but consumes no device object");require(!bind_arenas(*cpu.value,{{1,AddressDomain::CPU,{1,1,0,192,3,9}}},9),"CPU storage requires host provider, never becomes a fake GPU object");
+ puts("U12_GUARDED_ARENA_AND_BINDING_PLAN_PASS_NOT_DEVICE_ALLOCATION gpu_raw_cycles=null");
+}

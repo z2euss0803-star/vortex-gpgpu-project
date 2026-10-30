@@ -1,0 +1,7 @@
+{
+  "ssh":"C:/Windows/System32/OpenSSH/ssh.exe",
+  "scp":"C:/Windows/System32/OpenSSH/scp.exe",
+  "ssh_config":"REPLACE_WITH_VERIFIED_CONFIG",
+  "host":"REPLACE_WITH_VERIFIED_BOARD_ALIAS",
+  "timeout":30
+}

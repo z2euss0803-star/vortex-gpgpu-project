@@ -1,0 +1,91 @@
+[
+  {
+    "previous": "G:\\s8_software_r5_20261028\\task-scripts\\final_models_host_r12_598.py",
+    "previous_sha256": "74f10d4b6ef970a60e7c6afb64e81f65de8a5f83d886c03b34ac378993877e3b",
+    "current": "G:\\s8_software_r5_20261028\\software-r13-performance-633\\release-tools-668b\\final_models_host_r13_668.py",
+    "sha256": "2791ccc244d0ae26b93b55f8237bb722e5059796c1ab2bf52bc70ffa3d82600e",
+    "changes": {
+      "G / 'software-r12-lifecycle-587/source'": "G / 'software-r13-performance-633/source'",
+      "G / 'evidence/a-r12-models-host-598'": "G / 'software-r13-performance-633/evidence/a-r13-models-host-668'",
+      "G / 'host-final-r12-598'": "G / 'software-r13-performance-633/host-final-r13-668'",
+      "G / 'models-final-r12-598'": "G / 'software-r13-performance-633/models-final-r13-668'",
+      "source-lock-r12-598.json": "source-lock-r13-668.json",
+      "G / 'tmp-final-598'": "G / 'software-r13-performance-633/tmp-final-668'",
+      "/dev/shm/s8_final_models_598": "/dev/shm/s8_final_models_668",
+      "ACTUAL_R12_HOST": "ACTUAL_R13_HOST",
+      "P('/var/tmp/s8_300s_optimization_20261026/deps/json-c/extracted/usr')": "G / 'offline-rebuild-inputs-541/host-json-c/usr'",
+      "'-j2'": "'-j4'",
+      "variant='reuse-v7'": "variant='reuse-v8'"
+    }
+  },
+  {
+    "previous": "F:\\obsidian-codex\\codex\\work\\s8_300s_optimization_20261026\\evidence\\a-drm-r4-20261027T073653Z\\aarch64-helper\\audit_vxgpud_v6.py",
+    "previous_sha256": "c70d7ef50d086503db8c9a18195e105e36b409b1477850eb7b979d1a5b6065bf",
+    "current": "G:\\s8_software_r5_20261028\\software-r13-performance-633\\release-tools-668b\\audit_vxgpud_r13_669.py",
+    "sha256": "1586d64cae53253337ce9495cc1153280d8ead6764fc5942fd520477905d31b7",
+    "changes": {
+      "ROOT": "original frozen dependency owner",
+      "TASK_G": "R13 subtree",
+      "compiler_jobs": 2
+    }
+  },
+  {
+    "previous": "G:\\s8_software_r5_20261028\\task-scripts\\cross_userspace_r12_599.py",
+    "previous_sha256": "b71c42e57c08b154a174238c074aa65d02ab8a59c66acd82a7b0549be706abe5",
+    "current": "G:\\s8_software_r5_20261028\\software-r13-performance-633\\release-tools-668b\\cross_userspace_r13_669.py",
+    "sha256": "6844512ba9d4bd28d4d8471fc05ce05478d0f5ac88623849f6229c8848ed1405",
+    "changes": {
+      "source=G/'software-r12-lifecycle-587/source'": "source=G/'software-r13-performance-633/source'",
+      "source-lock-r12-598.json": "source-lock-r13-668.json",
+      "G/'runtime-build-r5-r12-599'": "G/'software-r13-performance-633/runtime-build-r5-r13-669'",
+      "G/'evidence/a-r12-userspace-cross-599'": "G/'software-r13-performance-633/evidence/a-r13-userspace-cross-669'",
+      "G/'tmp-r12-599'": "G/'software-r13-performance-633/tmp-r13-669'",
+      "ACTUAL_A_R12_SOURCE_PINNED_FULL": "ACTUAL_A_R13_SOURCE_PINNED_FULL",
+      "str(helper/'audit_vxgpud_v6.py')": "str(G/'software-r13-performance-633/release-tools-668b/audit_vxgpud_r13_669.py')",
+      "'r5-r12-599'": "'r5-r13-669'",
+      "G/'runtime-audit-r5-r12-599/receipt.json'": "G/'software-r13-performance-633/runtime-audit-r5-r13-669/receipt.json'",
+      "command('build',base+['-j1'])": "command('build',base+['-j2'])"
+    }
+  },
+  {
+    "previous": "G:\\s8_software_r5_20261028\\task-scripts\\build_installation_probe_r12_600.py",
+    "previous_sha256": "2ebb4c0959be56626b83373c374b9f79125cecb29500e04969352fb0f64cc5f7",
+    "current": "G:\\s8_software_r5_20261028\\software-r13-performance-633\\release-tools-668b\\build_installation_probe_r13_670.py",
+    "sha256": "b660fe89e14c345faec0dea16e5c1dda16eb11305b25ca0d2f67f7a102f1c9b9",
+    "changes": {
+      "g/'software-r12-lifecycle-587/source'": "g/'software-r13-performance-633/source'",
+      "g/'installation-decoder-r12-600'": "g/'software-r13-performance-633/installation-decoder-r13-670'",
+      "g/'host-final-r12-598/": "g/'software-r13-performance-633/host-final-r13-668/",
+      "source-lock-r12-598.json": "source-lock-r13-668.json",
+      "('r12',s/'unified/service/installation.cpp')": "('r13',s/'unified/service/installation.cpp')",
+      "out/'decoder-r12'": "out/'decoder-r13'",
+      "'r12-admits-real-nine'": "'r13-admits-real-nine'",
+      "P('/var/tmp/s8_300s_optimization_20261026/deps/json-c/extracted/usr')": "g/'offline-rebuild-inputs-541/host-json-c/usr'"
+    }
+  },
+  {
+    "previous": "G:\\s8_software_r5_20261028\\task-scripts\\pack_r12_image_601.py",
+    "previous_sha256": "c42344abe112a50ee386b58254088cf455e31d6af620d0a769c8b5c70ab28746",
+    "current": "G:\\s8_software_r5_20261028\\software-r13-performance-633\\release-tools-668b\\pack_r13_image_671.py",
+    "sha256": "ce44029ed9f0d4db644c9d29ce96818cbfe1587370eb0b069573efbbf2c02cf2",
+    "changes": {
+      "GROOT/'software-r12-lifecycle-587/source'": "GROOT/'software-r13-performance-633/source'",
+      "GROOT/'image-packer-r12-601'": "GROOT/'software-r13-performance-633/image-packer-r13-671'",
+      "source-lock-r12-598.json": "source-lock-r13-668.json",
+      "GROOT/'runtime-audit-r5-r12-599/receipt.json'": "GROOT/'software-r13-performance-633/runtime-audit-r5-r13-669/receipt.json'",
+      "GROOT/'evidence/a-r12-models-host-598/receipt.json'": "GROOT/'software-r13-performance-633/evidence/a-r13-models-host-668/receipt.json'",
+      "GROOT/'models-final-r12-598'": "GROOT/'software-r13-performance-633/models-final-r13-668'",
+      "GROOT/'host-final-r12-598/out/vxgpud'": "GROOT/'software-r13-performance-633/host-final-r13-668/out/vxgpud'",
+      "GROOT/'image-stage-r12-601a'": "GROOT/'software-r13-performance-633/image-stage-r13-671a'",
+      "GROOT/'delivery/release-r12-601'": "GROOT/'software-r13-performance-633/delivery/release-r13-671'",
+      "GROOT/'installation-decoder-r12-600/out/decoder-r12'": "GROOT/'software-r13-performance-633/installation-decoder-r13-670/out/decoder-r13'",
+      "GROOT/'installation-decoder-r12-600/receipt.json'": "GROOT/'software-r13-performance-633/installation-decoder-r13-670/receipt.json'",
+      "s8_r12_install_": "s8_r13_install_",
+      "IMAGE-P8-R12-": "IMAGE-P8-R13-",
+      "ACTUAL_R12_MATCHED": "ACTUAL_R13_MATCHED",
+      "A/RY R12 offline": "A/RY R13 offline",
+      "reuse-v7": "reuse-v8",
+      "_runtime=None": "_runtime=None\nCAPACITY_HELPER_SHA='7c0b0898706b1ed6c85e80be8b2d9ee5123080c643de296c12a8de7563487ca5'"
+    }
+  }
+]

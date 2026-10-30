@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "scope": "PRIVATE_CONTROLLED_LIBRARY_CONTRACT_NOT_PUBLIC_UAPI",
+  "logical_program": 65552,
+  "legacy_programs_unchanged": true,
+  "native_int16_pe_unchanged": "SIGNED_INT16_8x8_PER_CORE",
+  "arithmetic": {
+    "matrix": "FROZEN_FP16_WMMA_8x4x8_FP32_INCREASING_K",
+    "packing": "FP16_RNE_FROZEN_SOURCE",
+    "scalar": "FROZEN_V5_ORDERED_KAHAN_NO_FMA",
+    "gelu": "A53_SHARED_FOUR_WORKER_ERF_NATIVE_V1_CPU_ONLY"
+  },
+  "args_bytes": 128,
+  "schema_sha256": "79319f1611265bc2ad131b91642de7ddbe0c30d4b3621ce3a8060e90e1114c89",
+  "gpu_opcodes": [
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "cpu_opcodes": [
+    6
+  ],
+  "references": [
+    {
+      "index": 0,
+      "role": "X",
+      "access": 1,
+      "address_offset": 16,
+      "extent_offset": 48,
+      "alignment": 4
+    },
+    {
+      "index": 1,
+      "role": "W",
+      "access": 1,
+      "address_offset": 20,
+      "extent_offset": 52,
+      "alignment": 4
+    },
+    {
+      "index": 2,
+      "role": "BIAS",
+      "access": 1,
+      "address_offset": 24,
+      "extent_offset": 56,
+      "alignment": 4
+    },
+    {
+      "index": 3,
+      "role": "GAMMA",
+      "access": 1,
+      "address_offset": 28,
+      "extent_offset": 60,
+      "alignment": 4
+    },
+    {
+      "index": 4,
+      "role": "BETA",
+      "access": 1,
+      "address_offset": 32,
+      "extent_offset": 64,
+      "alignment": 4
+    },
+    {
+      "index": 5,
+      "role": "STATS_OR_DESCRIPTORS",
+      "access": 1,
+      "address_offset": 36,
+      "extent_offset": 68,
+      "alignment": 4
+    },
+    {
+      "index": 6,
+      "role": "Y",
+      "access": 2,
+      "address_offset": 40,
+      "extent_offset": 72,
+      "alignment": 4
+    },
+    {
+      "index": 7,
+      "role": "PACK_AND_TRACE_WORKSPACE",
+      "access": 3,
+      "address_offset": 44,
+      "extent_offset": 76,
+      "alignment": 4
+    }
+  ],
+  "unused_reads": "EXACT_X_ADDRESS_AND_EXTENT_ALIAS",
+  "descriptor": "64B_CANONICAL_CONTIGUOUS_FULL_COVERAGE_MAX32",
+  "diagnostics_default": false,
+  "numeric_thresholds": "UNCHANGED_HISTORICAL_FAILURES_RETAINED",
+  "gpu_raw_cycles": null
+}

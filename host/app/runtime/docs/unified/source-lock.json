@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "D:\\codex-graphics-w4-p8-20261021\\handoff\\FILE_MANIFEST.json",
+      "bytes": 2460682,
+      "sha256": "da13d30c865c052d1b9474565e2904e1246f246578a418a8090501607cab01a5",
+      "role": "P8_ORIGINAL_MANIFEST"
+    },
+    {
+      "path": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-linux-w4\\W4_GRAPHICS_IDENTITY.json",
+      "bytes": 793,
+      "sha256": "d494b63efaf8135d5a84a727861de7db9933c03c1f1bab43f6970cd3280a14c8",
+      "role": "P8_HARDWARE_DECLARATION"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\NN三维图片工坊统一运行时与GPU后端融合实施计划-2026-10-21.md",
+      "bytes": 19622,
+      "sha256": "d20156ccd66710ae1b1b8d59229531c42048ff65a260f743398e2514346e5e54",
+      "role": "APPROVED_SPEC_OR_PLAN"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\NN三维图片工坊统一运行时与GPU后端融合设计规格-2026-10-21.md",
+      "bytes": 14788,
+      "sha256": "fde1bfe4e0387995442f6808e8b93c81f1f66458ac12c4d3bb3863201c49c971",
+      "role": "APPROVED_SPEC_OR_PLAN"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\统一GPU融合实施子计划A-公共合同与设备后端-2026-10-21.md",
+      "bytes": 16704,
+      "sha256": "69cb72500110072110f33556c94b473652200eda0d13aa6f3d0e9badce43dfd2",
+      "role": "APPROVED_SPEC_OR_PLAN"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\统一GPU融合实施子计划B-图调度与统一服务-2026-10-21.md",
+      "bytes": 12327,
+      "sha256": "c3c4098e4a19db92480c1b798766d5818831921d28b9c01a1ac732ffe36292c6",
+      "role": "APPROVED_SPEC_OR_PLAN"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\统一GPU融合实施子计划C-神经网络图形图片适配-2026-10-21.md",
+      "bytes": 20949,
+      "sha256": "163b7ee5d0727663a753e79e4ae32ae559ccd76909bcc9dca31fc900f01bd7be",
+      "role": "APPROVED_SPEC_OR_PLAN"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\60-输出\\统一GPU融合实施子计划D-优化验证与双平台镜像-2026-10-21.md",
+      "bytes": 18875,
+      "sha256": "8cf12621660869bbefc4ec153bbde54fba093151e6a4368ab32d15be2eceba95",
+      "role": "APPROVED_SPEC_OR_PLAN"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\image_studio_linux_port_20261021\\execution\\T01-completion.json",
+      "bytes": 972,
+      "sha256": "b2179318bc59b1953c82bdf792b1b1ce8e5bd17f26f4ec109d44530ec8f2e296",
+      "role": "HISTORICAL_HOST_RECEIPT_NOT_NEW_PASS"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_image_studio_s8_20261021\\docs\\image\\baseline-working-files.json",
+      "bytes": 1001468,
+      "sha256": "1bc514933a737626ac9a1765ade2edbcd7793637fe7a5a4275f4cab62a98d859",
+      "role": "IMAGE_T01_COMMITTED_REFERENCE"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_image_studio_s8_20261021\\docs\\image\\baseline.json",
+      "bytes": 9030,
+      "sha256": "be7983a205b5b701a353ed9b88e1e6f29f34b87cd64f5f0047ca386a1feae17e",
+      "role": "IMAGE_T01_COMMITTED_REFERENCE"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_image_studio_s8_20261021\\docs\\image\\input-files-lock.json",
+      "bytes": 13949,
+      "sha256": "b9f9d18a5acfc64e20218db230e983777c8560375c0c5031a24deeb53d8dedec",
+      "role": "IMAGE_T01_COMMITTED_REFERENCE"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_image_studio_s8_20261021\\docs\\image\\namespace.json",
+      "bytes": 788,
+      "sha256": "8a12b6bd833205b628f38e3ec189783106eea7a00703a3cc15b6aed5109fca56",
+      "role": "IMAGE_T01_COMMITTED_REFERENCE"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_image_studio_s8_20261021\\docs\\image\\source-lock.json",
+      "bytes": 669,
+      "sha256": "6f9f728e8d31e2ebd444a523f7039cde8d6c6e566842f2a03f8597353e8ce330",
+      "role": "IMAGE_T01_COMMITTED_REFERENCE"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_image_studio_s8_20261021\\scripts\\image\\freeze_inputs.py",
+      "bytes": 1776,
+      "sha256": "69444f0e9dbf57b3452d36fbfcce311700aba5522614157f666df27766402717",
+      "role": "IMAGE_T01_COMMITTED_REFERENCE"
+    },
+    {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_image_studio_s8_20261021\\tests\\image\\test_identity.py",
+      "bytes": 1896,
+      "sha256": "445c5bb39a214fe82234a37133cb85f045256cd6b460131f82c94e0c1c78eefb",
+      "role": "IMAGE_T01_COMMITTED_REFERENCE"
+    }
+  ]
+}

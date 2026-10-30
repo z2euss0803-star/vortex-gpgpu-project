@@ -1,0 +1,99 @@
+{
+  "task": "U12",
+  "state": "LOGICAL_GUARD_COMPONENT_CHECKPOINT_NOT_NATIVE_OR_TASK_COMPLETE",
+  "base_commit": "0a37b22f3d32ec78c36572b96f068b4732ff7a8a",
+  "verified": [
+    {
+      "run": "U12-guard-final-normal-176",
+      "natural_exit": 0,
+      "current_raw_input_rows": 1546,
+      "manifest_sha256": "11a19b658ad82991d78764e5bf62253a276656d493f79bc344ec9669b3b68ded",
+      "command_exits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "run": "U12-guard-final-sanitize-180",
+      "natural_exit": 0,
+      "current_raw_input_rows": 1546,
+      "manifest_sha256": "11a19b658ad82991d78764e5bf62253a276656d493f79bc344ec9669b3b68ded",
+      "command_exits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "run": "U12-guard-final-aarch64-185",
+      "natural_exit": 0,
+      "current_raw_input_rows": 1546,
+      "manifest_sha256": "11a19b658ad82991d78764e5bf62253a276656d493f79bc344ec9669b3b68ded",
+      "command_exits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "old_core_driver_uapi_unchanged": 153,
+  "gpu_raw_cycles": null,
+  "clock": "LINUX_CLOCK_MONOTONIC_HOST_OBSERVATION_ONLY",
+  "guard_bytes_each_side": 64,
+  "marker_graph_nodes": 116,
+  "marker_cpu_boundaries": 13,
+  "marker_gpu_nodes": 103,
+  "actual_gpu_starts": 0,
+  "actual_math_executed": false,
+  "actual_board_allocation": false,
+  "guard_writes": 678,
+  "guard_reads": 57176,
+  "model_id": "c9fbc4c08fa0a5623c0b81b87a14b0f5e3b3fcced32c20257f12c28fb86f7791",
+  "cross_elf_count": 5,
+  "target_elf_executed": false,
+  "archives": {
+    "U12-guard-final-normal": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-guard-final-normal\\raw-and-artifacts.tar.gz",
+      "sha256": "4edffeafcc866b27b34129bbc1a4a7ade7e0f76df54a056c759b8aeed3e9abaf",
+      "verified_members": 189
+    },
+    "U12-guard-final-sanitize": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-guard-final-sanitize\\raw-and-artifacts.tar.gz",
+      "sha256": "916edccea75628662b2106f2da6b74a07dbc285b2b2a687d62f7c0d33680fb1e",
+      "verified_members": 189
+    },
+    "U12-guard-final-target": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-guard-final-target\\raw-and-artifacts.tar.gz",
+      "sha256": "2a018644e625c01a373c20b5ce6398db8b11d6ac839e514e20dc88b72b7419a1",
+      "verified_members": 200
+    }
+  },
+  "error_runs": [
+    "U12-guard-functional-red-155",
+    "U12-guard-functional-red-157",
+    "U12-guard-functional-red-159",
+    "U12-guard-green-161",
+    "U12-guard-epoch-red-170",
+    "U12-guard-full-normal-172"
+  ],
+  "new_threads": false,
+  "tsan": "NO_NEW_RUN_NO_NEW_THREADS_EXISTING_POOL_UNCHANGED",
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "numeric": "NO_NEW_INFERENCE_RESULT_HISTORICAL_ORT_FAIL_UNCHANGED",
+  "sd": "NOT_TOUCHED",
+  "pending": [
+    "Actual native data allocation/private CODE ARGS CRT stack reservation and residency proof",
+    "Trusted deferred program catalog binding and GPU node argument/ref lowering",
+    "Actual shared CPU pool and post-ACK guard integration with native adapter/service",
+    "U13-U25 application adapters, whole branch review, matching images and boot-chain audit",
+    "Future board numerical/visual/performance gates"
+  ]
+}

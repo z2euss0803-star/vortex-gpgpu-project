@@ -1,0 +1,46 @@
+{
+  "task": "U12",
+  "state": "SCALAR_AND_LAYOUT_COMPONENT_NOT_FULL_MIGRATION",
+  "runs": {
+    "U12-scalar-boundary-normal-012": {
+      "source_members": 1492,
+      "commands": 2,
+      "mode": "normal"
+    },
+    "U12-scalar-boundary-sanitize-013": {
+      "source_members": 1492,
+      "commands": 2,
+      "mode": "sanitize"
+    },
+    "U12-math-aarch64-014": {
+      "source_members": 1492,
+      "commands": 6,
+      "mode": "cross"
+    }
+  },
+  "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U12-scalar-component\\raw-and-artifacts.tar.gz",
+  "archive_sha256": "a437d2e8f6436189e5ed99670fb36d865b7143db8bce2b8f985f877e40f7f4a9",
+  "members": 55,
+  "scalar_jobs": 68,
+  "scalar_values_including_copy": 2814287,
+  "pack_stages": 35,
+  "descriptors": 314,
+  "packed_values": 3266688,
+  "math_reference": "unmodified actual V5 scalar C++ using checked low32 host mmap; candidate typed pointers and zero address words",
+  "cross": "MATCHED_GCC92_TWO_AARCH64_MATH_TEST_ELFS_AND_ROOTFS_SYMBOLS_NOT_EXECUTED",
+  "gpu_raw_cycles": null,
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "first_errors": [
+    "U12-scalar-functional-red-008",
+    "U12-scalar-boundary-normal-011"
+  ],
+  "pending": [
+    "FP16 dtype and operator/model immutable graph",
+    "13 shared CPU/GPU dependency commits/retirement",
+    "actual RV32 library entry/FCSR and schema/program binding",
+    "full legacy and numeric preservation regression",
+    "U20 actual provider/arena/production factories"
+  ]
+}

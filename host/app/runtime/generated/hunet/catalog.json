@@ -1,0 +1,625 @@
+{
+  "scope": "STATIC_CATALOG_NOT_GPU",
+  "jobs": 1023,
+  "matrices": 314,
+  "stages": [
+    {
+      "stage_id": 0,
+      "last_sequence": 96,
+      "gpu": 2231566528,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 1,
+      "last_sequence": 98,
+      "gpu": 2231959872,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 2,
+      "last_sequence": 99,
+      "gpu": 2232353216,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 3,
+      "last_sequence": 100,
+      "gpu": 2232451648,
+      "bytes": 294912
+    },
+    {
+      "stage_id": 4,
+      "last_sequence": 196,
+      "gpu": 2232746688,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 5,
+      "last_sequence": 197,
+      "gpu": 2232845120,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 6,
+      "last_sequence": 293,
+      "gpu": 2233238464,
+      "bytes": 1572864
+    },
+    {
+      "stage_id": 7,
+      "last_sequence": 295,
+      "gpu": 2234811456,
+      "bytes": 1572864
+    },
+    {
+      "stage_id": 8,
+      "last_sequence": 296,
+      "gpu": 2236384448,
+      "bytes": 1572864
+    },
+    {
+      "stage_id": 9,
+      "last_sequence": 392,
+      "gpu": 2237957440,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 10,
+      "last_sequence": 393,
+      "gpu": 2238350784,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 11,
+      "last_sequence": 394,
+      "gpu": 2238744128,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 12,
+      "last_sequence": 395,
+      "gpu": 2238842560,
+      "bytes": 294912
+    },
+    {
+      "stage_id": 13,
+      "last_sequence": 491,
+      "gpu": 2239137600,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 14,
+      "last_sequence": 492,
+      "gpu": 2239236032,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 15,
+      "last_sequence": 588,
+      "gpu": 2239629376,
+      "bytes": 1572864
+    },
+    {
+      "stage_id": 16,
+      "last_sequence": 590,
+      "gpu": 2241202368,
+      "bytes": 1572864
+    },
+    {
+      "stage_id": 17,
+      "last_sequence": 591,
+      "gpu": 2242775360,
+      "bytes": 1572864
+    },
+    {
+      "stage_id": 18,
+      "last_sequence": 687,
+      "gpu": 2244348352,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 19,
+      "last_sequence": 688,
+      "gpu": 2244741696,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 20,
+      "last_sequence": 712,
+      "gpu": 2245135040,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 21,
+      "last_sequence": 714,
+      "gpu": 2245331776,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 22,
+      "last_sequence": 715,
+      "gpu": 2245528512,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 23,
+      "last_sequence": 716,
+      "gpu": 2245577792,
+      "bytes": 147456
+    },
+    {
+      "stage_id": 24,
+      "last_sequence": 740,
+      "gpu": 2245725376,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 25,
+      "last_sequence": 741,
+      "gpu": 2245774656,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 26,
+      "last_sequence": 765,
+      "gpu": 2245971392,
+      "bytes": 786432
+    },
+    {
+      "stage_id": 27,
+      "last_sequence": 767,
+      "gpu": 2246757952,
+      "bytes": 786432
+    },
+    {
+      "stage_id": 28,
+      "last_sequence": 768,
+      "gpu": 2247544512,
+      "bytes": 786432
+    },
+    {
+      "stage_id": 29,
+      "last_sequence": 792,
+      "gpu": 2248331072,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 30,
+      "last_sequence": 793,
+      "gpu": 2248527808,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 31,
+      "last_sequence": 794,
+      "gpu": 2248724544,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 32,
+      "last_sequence": 795,
+      "gpu": 2248773824,
+      "bytes": 147456
+    },
+    {
+      "stage_id": 33,
+      "last_sequence": 819,
+      "gpu": 2248921408,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 34,
+      "last_sequence": 820,
+      "gpu": 2248970688,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 35,
+      "last_sequence": 844,
+      "gpu": 2249167424,
+      "bytes": 786432
+    },
+    {
+      "stage_id": 36,
+      "last_sequence": 846,
+      "gpu": 2249953984,
+      "bytes": 786432
+    },
+    {
+      "stage_id": 37,
+      "last_sequence": 847,
+      "gpu": 2250740544,
+      "bytes": 786432
+    },
+    {
+      "stage_id": 38,
+      "last_sequence": 871,
+      "gpu": 2251527104,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 39,
+      "last_sequence": 872,
+      "gpu": 2251723840,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 40,
+      "last_sequence": 873,
+      "gpu": 2251920576,
+      "bytes": 192
+    },
+    {
+      "stage_id": 41,
+      "last_sequence": 876,
+      "gpu": 2251920896,
+      "bytes": 192
+    },
+    {
+      "stage_id": 42,
+      "last_sequence": 877,
+      "gpu": 2251921216,
+      "bytes": 192
+    },
+    {
+      "stage_id": 43,
+      "last_sequence": 878,
+      "gpu": 2251921536,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 44,
+      "last_sequence": 884,
+      "gpu": 2252118272,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 45,
+      "last_sequence": 886,
+      "gpu": 2252216704,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 46,
+      "last_sequence": 887,
+      "gpu": 2252315136,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 47,
+      "last_sequence": 889,
+      "gpu": 2252413568,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 48,
+      "last_sequence": 895,
+      "gpu": 2252512000,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 49,
+      "last_sequence": 896,
+      "gpu": 2252905344,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 50,
+      "last_sequence": 902,
+      "gpu": 2253298688,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 51,
+      "last_sequence": 903,
+      "gpu": 2253397120,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 52,
+      "last_sequence": 904,
+      "gpu": 2253495552,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 53,
+      "last_sequence": 906,
+      "gpu": 2253593984,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 54,
+      "last_sequence": 912,
+      "gpu": 2253692416,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 55,
+      "last_sequence": 913,
+      "gpu": 2254085760,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 56,
+      "last_sequence": 919,
+      "gpu": 2254479104,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 57,
+      "last_sequence": 920,
+      "gpu": 2254577536,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 58,
+      "last_sequence": 921,
+      "gpu": 2254675968,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 59,
+      "last_sequence": 923,
+      "gpu": 2254774400,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 60,
+      "last_sequence": 929,
+      "gpu": 2254872832,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 61,
+      "last_sequence": 930,
+      "gpu": 2255266176,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 62,
+      "last_sequence": 936,
+      "gpu": 2255659520,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 63,
+      "last_sequence": 937,
+      "gpu": 2255757952,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 64,
+      "last_sequence": 938,
+      "gpu": 2255856384,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 65,
+      "last_sequence": 940,
+      "gpu": 2255954816,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 66,
+      "last_sequence": 946,
+      "gpu": 2256053248,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 67,
+      "last_sequence": 947,
+      "gpu": 2256446592,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 68,
+      "last_sequence": 953,
+      "gpu": 2256839936,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 69,
+      "last_sequence": 954,
+      "gpu": 2256938368,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 70,
+      "last_sequence": 955,
+      "gpu": 2257036800,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 71,
+      "last_sequence": 957,
+      "gpu": 2257135232,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 72,
+      "last_sequence": 963,
+      "gpu": 2257233664,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 73,
+      "last_sequence": 964,
+      "gpu": 2257627008,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 74,
+      "last_sequence": 970,
+      "gpu": 2258020352,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 75,
+      "last_sequence": 971,
+      "gpu": 2258118784,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 76,
+      "last_sequence": 972,
+      "gpu": 2258217216,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 77,
+      "last_sequence": 974,
+      "gpu": 2258315648,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 78,
+      "last_sequence": 980,
+      "gpu": 2258414080,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 79,
+      "last_sequence": 981,
+      "gpu": 2258807424,
+      "bytes": 393216
+    },
+    {
+      "stage_id": 80,
+      "last_sequence": 987,
+      "gpu": 2259200768,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 81,
+      "last_sequence": 988,
+      "gpu": 2259299200,
+      "bytes": 98304
+    },
+    {
+      "stage_id": 82,
+      "last_sequence": 991,
+      "gpu": 2259397632,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 83,
+      "last_sequence": 993,
+      "gpu": 2259446912,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 84,
+      "last_sequence": 994,
+      "gpu": 2259496192,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 85,
+      "last_sequence": 996,
+      "gpu": 2259545472,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 86,
+      "last_sequence": 999,
+      "gpu": 2259594752,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 87,
+      "last_sequence": 1000,
+      "gpu": 2259791488,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 88,
+      "last_sequence": 1003,
+      "gpu": 2259988224,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 89,
+      "last_sequence": 1004,
+      "gpu": 2260037504,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 90,
+      "last_sequence": 1005,
+      "gpu": 2260086784,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 91,
+      "last_sequence": 1007,
+      "gpu": 2260136064,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 92,
+      "last_sequence": 1010,
+      "gpu": 2260185344,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 93,
+      "last_sequence": 1011,
+      "gpu": 2260382080,
+      "bytes": 196608
+    },
+    {
+      "stage_id": 94,
+      "last_sequence": 1014,
+      "gpu": 2260578816,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 95,
+      "last_sequence": 1015,
+      "gpu": 2260628096,
+      "bytes": 49152
+    },
+    {
+      "stage_id": 96,
+      "last_sequence": 1016,
+      "gpu": 2260677376,
+      "bytes": 768
+    },
+    {
+      "stage_id": 97,
+      "last_sequence": 1019,
+      "gpu": 2260678272,
+      "bytes": 5120
+    },
+    {
+      "stage_id": 98,
+      "last_sequence": 1020,
+      "gpu": 2260683520,
+      "bytes": 5120
+    },
+    {
+      "stage_id": 99,
+      "last_sequence": 1023,
+      "gpu": 2260688768,
+      "bytes": 32420
+    }
+  ],
+  "op_counts": {
+    "1": 314,
+    "2": 314,
+    "3": 314,
+    "4": 16,
+    "5": 16,
+    "12": 8,
+    "13": 4,
+    "6": 13,
+    "8": 12,
+    "9": 2,
+    "10": 1,
+    "11": 1,
+    "7": 8
+  },
+  "jobs_sha256": "6c3fbdaf6de98b170b813d0a2dab84f3bd76a1b22e580c55312f058a908c1765",
+  "aux_sha256": "8330485df5c42475c7729d037b9c68043e9a99707c7833fe20a4d8df23fee1ac",
+  "layout_sha256": "efc47209044c6be3c0ee5c6cb4923fb13ab19073a47a549f56cfa73e9ac1a635"
+}

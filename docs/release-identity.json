@@ -1,0 +1,14 @@
+{
+  "version": "R13",
+  "build_id": "VXU-S8-JOINT-NN-IMAGE-P8-R13-20261029T152945Z",
+  "source_snapshot_id": "e5792d4e19f0b908197d0df5bc9650033c41e34e09a8e3decdf31eadba36c973",
+  "runtime_source_id": "b8c00b2e8f31f6803c7c982008581983fc73dfe850c9f6e1bff7d6a76a77bad1",
+  "source_lock_sha256": "7cf8849a1042050792c8d2c05ee841caffb52b53179f1cceef086b0198c59c34",
+  "bit_sha256": "94ae9d3e6eb73ba55a8eec8c802e3818cd6b3a9be7e60542da5ae9459e3579e1",
+  "xsa_sha256": "02e68160e21b01621fde1eac6e472810e0fe50cd1842acb3ab63469314355e94",
+  "board": "R13_NOT_RUN",
+  "goal_300s": "OPEN",
+  "source_metadata_relocations": {
+    ".gitattributes": "docs/source-gitattributes-r13.original"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "utc": "2026-10-18T08:04:18.093450+00:00",
+  "scope": "S8_exact_offline_bit_XSA_delivery",
+  "status": "FILES_HASH_VERIFIED_HSI_IMPORT_PASS_PHYSICAL_OPEN",
+  "bit": {
+    "file": "S8_W4_HW4_INT16_20261018.bit",
+    "bytes": 23581017,
+    "sha256": "94ae9d3e6eb73ba55a8eec8c802e3818cd6b3a9be7e60542da5ae9459e3579e1",
+    "header": {
+      "a": "top;UserID=0XFFFFFFFF;Version=2020.1",
+      "b": "xczu11eg-ffvc1156-2-i",
+      "c": "2026/10/18",
+      "d": "15:52:15"
+    },
+    "payload_bytes": 23580908
+  },
+  "xsa": {
+    "file": "S8_W4_HW4_INT16_20261018.xsa",
+    "bytes": 8345876,
+    "sha256": "02e68160e21b01621fde1eac6e472810e0fe50cd1842acb3ab63469314355e94",
+    "embedded_bit": "S8_W4_HW4_INT16_20261018.bit",
+    "embedded_bit_sha256": "94ae9d3e6eb73ba55a8eec8c802e3818cd6b3a9be7e60542da5ae9459e3579e1"
+  },
+  "routed_dcp_sha256": "f550075ce584a2d2af606ff11e048d0a64c25962aa23e50e37430b4061839439",
+  "source_sha256": "708bfd8bd611beb9631cf8294e191cf57d1a6a48c777cea7d9f42b8a27c51a7d",
+  "bit_run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\runs\\20261018T074409866931Z_bit_export",
+  "xsa_run": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\runs\\20261018T075827875372Z_xsa_export",
+  "tool": "Vivado/Vitis 2020.1",
+  "physical_signoff": "OPEN_NOT_PASS",
+  "simulation": "WAIVED_NOT_RUN",
+  "board": "NOT_RUN",
+  "petalinux_build": "NOT_RUN",
+  "hsi_import": "PASS_metadata_only",
+  "old_W4_is_not_S8": true,
+  "delivery": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\delivery\\S8_W4_HW4_INT16_20261018",
+  "archive": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\delivery\\S8_W4_HW4_INT16_20261018.zip",
+  "archive_sha256": "2e043907810bae25a12dfae1a4e3b6d048be8e75c2055fc23276de068d3ffc14",
+  "manifest_sha256": "4212d68e351670fb94f0f6ebd2c71104714aeef74c9dbad13965caac8efc9bb9"
+}

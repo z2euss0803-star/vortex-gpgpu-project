@@ -1,0 +1,246 @@
+{
+  "state": "COMPLETE_OFFLINE_COMPONENT_NOT_SERVICE_IMAGE_OR_BOARD",
+  "task": "U16",
+  "base": "1bf2ea25d7e0152d91e01b70f2964d4d3a0faabb",
+  "source_files": 1856,
+  "source_manifest_sha256": "3fe8d7c0c582dfcea3b3dda8fe539e300e7f7ff7868e2a4de65ea14b86882782",
+  "owner_test_cut": "055/056/058 production byte-identical to064; only old test identity selection fixed",
+  "stages": {
+    "U16-p8-owner-final-normal-055": {
+      "mode": "normal",
+      "scope": "U16_ACTUAL_C_OWNER_CPU_INJECTION_NOT_GPU_OR_NATIVE_HW_RETIREMENT",
+      "natural_exit": 0,
+      "command_count": 14,
+      "artifact_count": 47,
+      "receipt_sha256": "d4ffad017828613dbc677072260ed60afb8ddcefff88cbcff56c0041a0160dc9",
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    "U16-p8-owner-final-sanitize-056": {
+      "mode": "sanitize",
+      "scope": "U16_ACTUAL_C_OWNER_CPU_INJECTION_NOT_GPU_OR_NATIVE_HW_RETIREMENT",
+      "natural_exit": 0,
+      "command_count": 14,
+      "artifact_count": 47,
+      "receipt_sha256": "0f09909b3c4c734e17de0f2900d8e6ca64efd9ecb07c68274bbf022346388f8d",
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    "U16-p8-owner-final-thread-058": {
+      "mode": "thread",
+      "scope": "U16_ACTUAL_C_OWNER_CPU_INJECTION_NOT_GPU_OR_NATIVE_HW_RETIREMENT",
+      "natural_exit": 0,
+      "command_count": 14,
+      "artifact_count": 47,
+      "receipt_sha256": "2bfeb0bb49e65ba85d6e1f8443f43c5a280f5fac4dd473728f3f2ae251d98734",
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    "U16-p8-math-legacy-final-normal-064": {
+      "mode": "normal",
+      "scope": "U16_FROZEN_MATH_INSTRUCTION_AND_NATIVE_POLICY_HOST_NOT_GPU_DP",
+      "natural_exit": 0,
+      "command_count": 7,
+      "artifact_count": 17,
+      "receipt_sha256": "8683d72f27d323771e9223c4f2ca4bd98149de649bee10255104db6262a85d0d",
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    "U16-owner-cross-065": {
+      "mode": "cross",
+      "scope": "U16_ACTUAL_C_OWNER_CPU_INJECTION_NOT_GPU_OR_NATIVE_HW_RETIREMENT",
+      "natural_exit": 0,
+      "command_count": 4,
+      "artifact_count": 43,
+      "receipt_sha256": "f3afd4740d47aae013ec5542fb4cf67354d4b183ce3a27baa601f38d01e9aff0",
+      "executed_target_elfs": false,
+      "gpu_raw_cycles": null
+    },
+    "U16-math-cross-066": {
+      "mode": "cross",
+      "scope": "U16_FROZEN_MATH_INSTRUCTION_AND_NATIVE_POLICY_HOST_NOT_GPU_DP",
+      "natural_exit": 0,
+      "command_count": 8,
+      "artifact_count": 21,
+      "receipt_sha256": "b18a6d67c2e51f4302f19755d89d516dc99f6fc876e6d020e7676927f6b8e755",
+      "executed_target_elfs": false,
+      "gpu_raw_cycles": null
+    },
+    "U16-math-final-sanitize-068": {
+      "mode": "sanitize",
+      "scope": "U16_FROZEN_MATH_INSTRUCTION_AND_NATIVE_POLICY_HOST_NOT_GPU_DP",
+      "natural_exit": 0,
+      "command_count": 7,
+      "artifact_count": 17,
+      "receipt_sha256": "5db25203504455d6d1b9a03fea5247f30d5eaec51960f7f8a9345c84b3b9e01d",
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    "U16-math-final-thread-069": {
+      "mode": "thread",
+      "scope": "U16_FROZEN_MATH_INSTRUCTION_AND_NATIVE_POLICY_HOST_NOT_GPU_DP",
+      "natural_exit": 0,
+      "command_count": 6,
+      "artifact_count": 16,
+      "receipt_sha256": "70f3526f49ba60a11f5e46ecfd2acb22a3f2c3df15b62b9b9fc2c0b952e3bbf1",
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    }
+  },
+  "kernel": {
+    "scope": "PRE_BINDING_U06_ADAPTER_AARCH64_MODULE_NOT_RELEASE_NOT_IMAGE_NOT_BOARD",
+    "command": [
+      "make",
+      "-j1",
+      "-C",
+      "/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work-shared/zynqmp-generic/kernel-source",
+      "O=/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build",
+      "ARCH=arm64",
+      "CROSS_COMPILE=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-",
+      "M=/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U16-matched-kernel-exec-v2-067-module/source/driver",
+      "W=1",
+      "modules"
+    ],
+    "kernel_release": "5.4.0-xilinx-v2020.1",
+    "parent_inputs": {
+      "/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build/.config": "3c82c86b054c6572a797326db1c0384a9f758297ddd8a62dcbc51b21e629a1f1",
+      "/home/z2euss/workspace/petalinux/codex_linux_backend_mosaic_dp_0a0b2bb_20261020/env_backend/build/tmp/work/zynqmp_generic-xilinx-linux/linux-xlnx/5.4+gitAUTOINC+22b71b4162-r0/linux-zynqmp_generic-standard-build/Module.symvers": "a869b98a5662c7918aaeabd819ea5ebc3cde883e8208f7d6925e06ff6879a312"
+    },
+    "gpu_raw_cycles": null,
+    "natural_exit": 0,
+    "module_sha256": "6ddd580554cb8d925ad321addf4e829821e89fe86cf147f61de0f43437ced16b",
+    "module_bytes": 5569128
+  },
+  "archive": {
+    "members": 967,
+    "logical_bytes": 224204749,
+    "archive_bytes": 48245003,
+    "sha256": "98e61ccc14d59ee79038abee8a79d904c1313e2430fd816bb925e752f8b1c784",
+    "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U16-final-matrix-071-evidence.tar.gz",
+    "gpu_raw_cycles": null,
+    "host": "z2euss-virtual-machine",
+    "uid": 1000,
+    "free_disk": 4197343232,
+    "verified_members": 967,
+    "members_sha256": "0feeb68399b2a2dfe28e39cf5c216f949619d175d9bb14efecc9bb7dca6078c9",
+    "hardlink_members": 0,
+    "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U16-final-matrix-071\\raw-and-artifacts.tar.gz",
+    "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+  },
+  "catalog": {
+    "scope": "PRIVATE_CATALOG_NOT_GPU",
+    "namespace": 2,
+    "logical_profile": 5,
+    "provider": {
+      "name": "P8_W4_GRAPHICS",
+      "provider_flags": 2,
+      "compatible": "vortex,w4-graphics-p8-v1",
+      "bit_sha256": "faeaddb98d5d39a4e787c6b2aaf559d6a6163191a1cc8eb18331624b896290dc",
+      "xsa_sha256": "08183adeb93ec2ffe3c8c5643813daae12365f61efb95a0d985f04660c340536",
+      "namespaces": [
+        2
+      ],
+      "ps_base": 268435456,
+      "ps_bytes": 1048576,
+      "pl_base": 21474836480,
+      "pl_bytes": 2147483648,
+      "contexts": 1,
+      "preempt": false,
+      "hardware_contract": "22343e02d30978412eeb245474fb2e272bf19fe1da08ec00c0e13e24f005b012",
+      "board_identity_verified": false
+    },
+    "catalog_sha256": "25fd3c002e0ad6d6c218b1f9ee4719fdaead7aeacb513cf6be73ecd1cc3acd79",
+    "programs": [
+      {
+        "logical_program": 9,
+        "name": "cm_transform_kernel",
+        "entry_id": "f0e0636ba7b87abb50c40665a3f83aa03253a81c49ae9d9b37cc2cfaa7b72d92",
+        "code_sha256": "7a59efdf591f81462024cac453665d68811b83f88200386aac666ff27debcd8f",
+        "schema_sha256": "91b6fdaf0fec8365aa391e8bc284a8d1b18990c0b33cd90a908b84e868cfbcda",
+        "raw_sha256": "d177e3fbb5c489dc9699224511e6d3efe746b35179f63b23b67476b8966320a8",
+        "args_bytes": 64,
+        "data_refs": 2,
+        "gpu_raw_cycles": null
+      },
+      {
+        "logical_program": 10,
+        "name": "cm_raster_kernel",
+        "entry_id": "b28e1e6c5d5e3ce2636016aa80d3213896db08fe9dc264f67a1f6376f48337b5",
+        "code_sha256": "91aa3d999076c3f4d17fdd4db17e3dae82d4bbb841d82fa92e309b5a580ec76e",
+        "schema_sha256": "b489e9e5f64e6f1d0778d40f47a166297a851acdaa0b5c76a84f94f08b296916",
+        "raw_sha256": "e8c862565c29604a44ec0dc9a464320841bb790385fd337208ff526513d96b8e",
+        "args_bytes": 64,
+        "data_refs": 7,
+        "gpu_raw_cycles": null
+      },
+      {
+        "logical_program": 11,
+        "name": "cm_transform_high_kernel",
+        "entry_id": "09cd62c6a9fa992bef2a7f393dd9ff35a4b3c2f5eae88c321a507ac47bc7a649",
+        "code_sha256": "cec5cc3324721d825860a5b169b7cd305cc28b6bcbc03b8086ba8c122562941b",
+        "schema_sha256": "1221eeddd6a9c7cff1ff4b82373a9fd795747a8bfeaef3e77c9b953e1a0de8d3",
+        "raw_sha256": "f7444827893eda8abfad9e1d807c317123d04f6047ae1261b320fdc213d999d7",
+        "args_bytes": 64,
+        "data_refs": 2,
+        "gpu_raw_cycles": null
+      },
+      {
+        "logical_program": 12,
+        "name": "cm_raster_high_kernel",
+        "entry_id": "47ebf7890de41e433353f715968bb90b4ed846e3a77889c912ab72c4e03bd021",
+        "code_sha256": "378d31a12ed3bffaf0a6fe04e11145c88d8f85d535db3ff731aa4e9dec472648",
+        "schema_sha256": "d687dc3bf48a8bc15aa838cb6b944c3de08d08f6aa005b200d0db80239aadc57",
+        "raw_sha256": "6d00b9235f68303962ab30d8793f2dc743dab6545058e5d2393dc3fe76a66908",
+        "args_bytes": 64,
+        "data_refs": 7,
+        "gpu_raw_cycles": null
+      }
+    ],
+    "execution_policy": {
+      "version": 2,
+      "bytes": 1088,
+      "sha256": "560b1247c01aa6d42f0956164ec4b5a45615c4bc2a234b60b41a18e03c45f37e",
+      "retirement": "GLOBAL_DRAIN_NO_EXIT_WORDS",
+      "normalized_core_mask": "GLOBAL_RETIREMENT_INFERENCE_NOT_RAW_CORE_MMIO",
+      "tex": "DISABLED_ORIGINAL_MANUAL_SAMPLER",
+      "board": "NOT_RUN"
+    },
+    "gpu_raw_cycles": null
+  },
+  "frozen_reference": {
+    "arrays": 18,
+    "bytes": 22115372,
+    "oracles": 3,
+    "instruction_frames": 10,
+    "warrior_poses": [
+      0,
+      100,
+      25,
+      101,
+      50,
+      102,
+      75,
+      103
+    ],
+    "reverse_raster": true,
+    "instruction_evidence": "HOST_INSTRUCTION_MODEL_NOT_RTL_OR_GPU",
+    "startup100": "LOGICAL_GATE_TESTED_NOT100_PHYSICAL_FRAMES"
+  },
+  "owner_cases": 13,
+  "original_UAPI": "UNCHANGED",
+  "normalized_core_mask": "GLOBAL_INFERENCE_ONLY_IN_EXPLICIT_V2_MODE_NOT_EXIT_WORD_CAPTURE",
+  "gpu_raw_cycles": null,
+  "board": "NOT_RUN",
+  "display": "NOT_RUN",
+  "image": "NOT_BUILT",
+  "sd": "NOT_TOUCHED",
+  "application_quality": "NOT_ACCEPTED_FROM_HOST_MODEL",
+  "performance": "NOT_MEASURED_ON_GPU",
+  "remaining": [
+    "U17..U25",
+    "U19 lifetime budgets and U20 real factories/service",
+    "Actual matching S8/P8 image contents and boot chain",
+    "Fresh whole-branch review before authorized SD",
+    "Physical GPU/output/DP/performance acceptance waits board"
+  ]
+}

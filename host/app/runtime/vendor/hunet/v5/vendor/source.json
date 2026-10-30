@@ -1,0 +1,12 @@
+[
+  {
+    "file": "erff.c",
+    "url": "https://git.musl-libc.org/cgit/musl/plain/src/math/erff.c?h=v1.1.19",
+    "sha256": "876ad823d25e58330628ccdc5d24a3f10cc255135046a4e2903daf33cb75c18f"
+  },
+  {
+    "file": "expf_float.c",
+    "url": "https://git.musl-libc.org/cgit/musl/plain/src/math/expf.c?h=v1.1.19",
+    "sha256": "5990e92426b8a17a91891377c1eccbee83eead58099251e193b09f438fe32f24"
+  }
+]

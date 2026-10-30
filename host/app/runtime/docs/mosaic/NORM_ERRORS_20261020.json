@@ -1,0 +1,96 @@
+{
+  "scope": "APPEND_ONLY_FAILED_RUN_INDEX_NOT_RECLASSIFIED_AS_PASS",
+  "utc": "2026-10-20T11:46:01.914980+00:00",
+  "records": [
+    {
+      "id": "RESOURCE-020-002",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\rtx-scalar-rcp",
+      "description": "PyTorch型标量探针在4GiB预算门处拒绝；未开始CUDA计算。改为不导入Torch的driver/NVRTC小探针，另存普通单测预算，不降低整网/镜像门。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "RESOURCE-020-003",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\rtx-driver-scalar-rcp",
+      "description": "WDDM把桌面进程标C+G，空compute-apps门误拒绝，未创建CUDA context。保存原列表并核对DWM/Taskmgr；改用实际利用率/空闲显存与固定缓冲预算，不结束其他进程。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "BUILD-020-002",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\rtx-driver-scalar-rcp-v2",
+      "description": "NVRTC找不到nvrtc-builtins DLL，编译失败未启动GPU。仅在子进程PATH及显式预载补全同版本依赖，v3成功，未改系统安装。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "BUILD-020-003",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\b-compat-unit-red",
+      "description": "旧分步表达式未满足独立FMA舍入见证，保留功能RED；v1显式FMA单测GREEN不代表整网通过。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "NORM-020-003",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\b-full-compat-v1",
+      "description": "真实256全链v1末层max_abs0.1569976806640625/RMSE0.016023627569399696，自然1；原阈值不变、16层输出保留。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "TRANSPORT-020-001",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\b-weighted-welford-rcp-probe",
+      "description": "WinError206本机命令行过长，SSH未启动；改为SCP传小脚本、核对SHA后用短命令执行，独立file目录保留原失败。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "NORM-020-004",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\b-compat-v2-unit-red",
+      "description": "v1倒数根与原参考原语相差1ULP，闭式见证RED；模型无关全域映射独立记录，不使用黄金层统计。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "TEST-020-001",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\b-compat-v2-unit-green",
+      "description": "初版测试把数学RN预期当作硬件近似RSQ值；独立全域采样显示实际0x3f7ffffe，修正测试预期，保留错误目录；未改阈值。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "NORM-020-005",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\b-full-compat-v2",
+      "description": "v2前两层bitexact，第三层首次差异；末层max_abs0.1251068115234375/RMSE0.014203833595331252，自然1。固定输入32/128/512线程探针均未匹配，停止盲猜。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "BUILD-020-004",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\b-singleread-green",
+      "description": "新增v3两处同一行if/赋值触发-Werror=misleading-indentation，自然1；拆行后独立green2编译/运行0，未关闭告警。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "NORM-020-006",
+      "evidence": "evidence\\demo\\T05\\investigation-20261020\\b-singleread-red",
+      "description": "v2固定第三层159552项bit差异为功能RED；实际CUDA trace与SASS确认single-read的统计及仿射顺序，新v3固定输入0项差异。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "INPUT-020-001",
+      "evidence": "evidence/demo/T05/investigation-20261020/formal-v3-input-20",
+      "description": "末张正式应用输入不在native输入目录，初次准备失败、未传输或运行。找到原正式run的original_input.bin（14745600B，SHA11a8b47e3bc69123ac8a09e7e65150cb1b916ef60d612a9a702e9980f9e22063），独立retry使用原文件；没有重新预处理。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "AUDIT-020-001",
+      "evidence": "evidence/demo/T05/investigation-20261020/audit-unit-red",
+      "description": "审计初版仅检查数量，功能RED有7项失败；实现逐row/层/哈希/阈值/退出/输入身份及伪GPU周期拒绝，8项测试GREEN。原RED及失败helper保留。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "BUILD-020-005",
+      "evidence": "evidence/demo/T05/investigation-20261020/b-final-norm-verification",
+      "description": "普通/SAN/8审计测试已通过，但RV32数据.S编译经glibc包装启动器的子预处理器失败，自然1。未改编译器或系统；独立green2直接使用同clang的-cc1as RV32/ilp32f，验证ELF/ABI/符号容量后自然0。",
+      "raw_gpu_cycles": null
+    },
+    {
+      "id": "INVOKE-020-002",
+      "evidence": "evidence/demo/T05/investigation-20261020/a-final-audit-wrong-cwd",
+      "description": "A最后补跑审计从知识库根目录启动，import scripts失败，未执行数值计算。保留独立错误收据；从实际工程根目录运行同一8测试自然0，无源码/阈值变化。",
+      "raw_gpu_cycles": null
+    }
+  ]
+}

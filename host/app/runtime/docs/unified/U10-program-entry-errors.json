@@ -1,0 +1,27 @@
+{
+  "base": "c327908",
+  "scope": "PROGRAM_ENTRY_FOCUSED_AND_NORMAL_NOT_FINAL_SAN_TSAN_CROSS_OR_BOARD",
+  "gpu_raw_cycles": null,
+  "failures": [
+    {
+      "run": "U10-program-entry-red-077",
+      "natural_exit": 2,
+      "kind": "FUNCTIONAL_RED",
+      "detail": "WAIT error lacks admitted catalog entry despite known handle/generation"
+    },
+    {
+      "run": "U10-program-journal-red-078",
+      "natural_exit": 2,
+      "kind": "FUNCTIONAL_RED",
+      "detail": "JSON lacks program_catalog_entry_id"
+    }
+  ],
+  "normal": "U10-program-entry-green-079",
+  "normal_exit": 0,
+  "code_files": 873,
+  "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U10-program-entry\\raw-and-artifacts.tar.gz",
+  "archive_sha256": "cb35a7ac5292673ce79f0107e4185e900358f390ca94f2032f9a3cfce9a8e495",
+  "verified_members": 156,
+  "final_san_tsan_cross": "NOT_RECHECKED_AFTER_C327908",
+  "full_u10_complete": false
+}

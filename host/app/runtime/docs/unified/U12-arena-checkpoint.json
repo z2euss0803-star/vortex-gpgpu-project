@@ -1,0 +1,76 @@
+{
+  "task": "U12",
+  "state": "GUARDED_ARENA_COMPONENT_CHECKPOINT_NOT_TASK_COMPLETE",
+  "base_commit": "b80874ef25d6667f0fcec3561c9c60fd5ec9215b",
+  "verified": [
+    {
+      "run": "U12-arena-final-normal-145",
+      "current_raw_input_rows": 1540,
+      "manifest_sha256": "9d341808cf648dd87c6ed9f5b82b715d716bffda4045c7874b28281ed5e4f5c2",
+      "natural_exit": 0
+    },
+    {
+      "run": "U12-arena-final-sanitize-147",
+      "current_raw_input_rows": 1540,
+      "manifest_sha256": "9d341808cf648dd87c6ed9f5b82b715d716bffda4045c7874b28281ed5e4f5c2",
+      "natural_exit": 0
+    },
+    {
+      "run": "U12-arena-final-aarch64-151",
+      "current_raw_input_rows": 1540,
+      "manifest_sha256": "9d341808cf648dd87c6ed9f5b82b715d716bffda4045c7874b28281ed5e4f5c2",
+      "natural_exit": 0
+    }
+  ],
+  "old_core_driver_uapi_unchanged": 153,
+  "old_plan_memory_unchanged": true,
+  "model_id": "c9fbc4c08fa0a5623c0b81b87a14b0f5e3b3fcced32c20257f12c28fb86f7791",
+  "tensors": 236,
+  "constants": 119,
+  "gpu_workspaces": 103,
+  "device_data_arenas": 1,
+  "arena_bytes": 28456256,
+  "per_view_guards_bytes": 64,
+  "low_region_reserved_bytes": 8388608,
+  "guard_scope": "HOST_PLANNING_AND_MEMORY_COPY_NOT_GPU_GUARD_EXECUTION",
+  "cross_elf_count": 4,
+  "target_elf_execution": false,
+  "gpu_raw_cycles": null,
+  "application_numeric": "NO_NEW_RESULT_HISTORICAL_FAILURES_UNCHANGED",
+  "board": "NOT_RUN",
+  "image": "NOT_BUILT",
+  "sd": "NOT_TOUCHED",
+  "archives": {
+    "host": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-arena-final-host\\raw-and-artifacts.tar.gz",
+      "sha256": "7350a3e05ba234901a57bd2bab767cc5bd8a7a0dc6b2583c563724ece907f599",
+      "members": 306,
+      "verified_members": 306
+    },
+    "target": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-arena-final-target\\raw-and-artifacts.tar.gz",
+      "sha256": "cd033afca44e576cfbb82974271e9343b1ffc845e4dc6d73e261f84c9225d553",
+      "members": 164,
+      "verified_members": 164
+    },
+    "functional_red": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-arena-first-functional-red\\raw-and-artifacts.tar.gz",
+      "sha256": "60c4bebcbabfbf58aed02a356619f816eeaefa1caac514c53f65eeb44d35f92b",
+      "members": 16,
+      "verified_members": 16
+    },
+    "first_core_failure": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-arena-core-first-error\\raw-and-artifacts.tar.gz",
+      "sha256": "e84a45fd3d4d5c992672aa04bc4780493dfca81c2098cac9043a82691cacc5ec",
+      "members": 6,
+      "verified_members": 6
+    }
+  },
+  "pending": [
+    "native owned arena allocation and fixed CODE/ARGS/high-region reservation",
+    "logical guard seed/check during actual CPU/GPU node execution",
+    "deferred program load and validated parameter reference lowering",
+    "native service factories U20 and remaining plan stages",
+    "actual image/boot chain audit and future authorized board gates"
+  ]
+}

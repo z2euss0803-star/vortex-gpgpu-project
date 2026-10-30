@@ -1,0 +1,47 @@
+{
+  "members": 71,
+  "logical_bytes": 804776,
+  "archive_bytes": 247335,
+  "sha256": "ce876d30659bfeb6fbea599311046b71f8d970d052e6fb62cc332c3128f3d08c",
+  "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U11-entry-rv32-evidence.tar.gz",
+  "gpu_raw_cycles": null,
+  "host": "z2euss-virtual-machine",
+  "uid": 1000,
+  "free_disk": 2174787584,
+  "verified_members": 71,
+  "members_sha256": "d7ecd2ed330a80109c1a958ed53d28c1688ae3a8a0ffe3434c44aab53876a154",
+  "hardlink_members": 0,
+  "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U11-entry-rv32\\raw-and-artifacts.tar.gz",
+  "scope": "U11_HOST_ENTRY_CHECKS_AND_ACTUAL_RV32_LINK_STATIC_AUDIT_NOT_GPU_EXECUTED",
+  "source_manifest_checks": 1447,
+  "rv32_flat": {
+    "bytes": 17920,
+    "sha256": "47e68ffd2beb1a7f73df0026996cbbefac78d88e11142bd5a46efb3b6e9f3f7c"
+  },
+  "rv32_elf": {
+    "bytes": 35604,
+    "sha256": "e4c230565753c869b3f2fede906e547cda1412af9df9bf45d859c0be933fe504"
+  },
+  "static_stack_bytes": 4224,
+  "runtime": {
+    "entry": 2147483648,
+    "args_gpu": 2148532288,
+    "args_bytes": 128,
+    "crt_gpu": 268443648,
+    "crt_bytes": 4096,
+    "retire_offset": 8,
+    "retire_stride": 256,
+    "retire_value": 0,
+    "retire_count": 4,
+    "tls_base": 2147501536,
+    "tbss_stride": 32,
+    "runtime_bytes": 19968,
+    "stack_gpu": 4293918720,
+    "stack_bytes": 1048576,
+    "stack_stride": 8192,
+    "rodata_bytes": 0,
+    "fcsr_init": 0
+  },
+  "full_u11_complete": false,
+  "target_executed": false
+}

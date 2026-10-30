@@ -1,0 +1,14 @@
+#include <vxnn/package.hpp>
+#include <cerrno>
+namespace vxnn {
+struct ModelPackage::Data {};
+const Digest& ModelPackage::model_id()const {static const Digest empty{};return empty;}
+const std::map<std::string,VerifiedAsset>& ModelPackage::assets()const {static const std::map<std::string,VerifiedAsset> empty;return empty;}
+const std::string& ModelPackage::graph_json()const {static const std::string empty;return empty;}
+const std::string& ModelPackage::program_requirements_json()const {return graph_json();}
+const std::string& ModelPackage::numeric_contract_json()const {return graph_json();}
+uint64_t ModelPackage::resident_bytes()const{return 0;}
+uint32_t ModelPackage::declared_max_jobs()const{return 0;}
+uint64_t ModelPackage::declared_max_evidence_bytes()const{return 0;}
+Result<ModelPackage> load_package(const Path&,const PackageLimits&){return Result<ModelPackage>::failure({-ENOSYS,"PACKAGE_REJECTED","stub"});}
+}

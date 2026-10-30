@@ -1,0 +1,100 @@
+{
+  "task": "U12",
+  "state": "DEFERRED_DISPATCH_MECHANISM_NOT_PROGRAM_RESIDENCY_MANAGER_OR_NATIVE_APP_OR_TASK_COMPLETE",
+  "base_commit": "939aef8c8bc0986d46db9d235724a5dbfef44b6e",
+  "verified": [
+    {
+      "run": "U12-deferred-wide-normal-220",
+      "natural_exit": 0,
+      "input_rows": 1563,
+      "manifest_sha256": "4a2b65e3fb5a0e63460d40e2d8af0dd91347e1b394193faed761627f4d386d20",
+      "command_exits": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "run": "U12-deferred-sanitize-221",
+      "natural_exit": 0,
+      "input_rows": 1563,
+      "manifest_sha256": "4a2b65e3fb5a0e63460d40e2d8af0dd91347e1b394193faed761627f4d386d20",
+      "command_exits": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "run": "U12-deferred-aarch64-222",
+      "natural_exit": 0,
+      "input_rows": 1563,
+      "manifest_sha256": "4a2b65e3fb5a0e63460d40e2d8af0dd91347e1b394193faed761627f4d386d20",
+      "command_exits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "archives": {
+    "U12-deferred-final-normal": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-deferred-final-normal\\raw-and-artifacts.tar.gz",
+      "sha256": "b383555cbfd2a059523f7ac2ddc6c777e08ca314fd82d339928c6e1f024ba625",
+      "verified_members": 344
+    },
+    "U12-deferred-final-sanitize": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-deferred-final-sanitize\\raw-and-artifacts.tar.gz",
+      "sha256": "15027ff86ad2f4c37471a7b4875b86024bde7849d33e1414852e850b14921f16",
+      "verified_members": 212
+    },
+    "U12-deferred-final-target": {
+      "path": "D:\\codex-unified-gpu-20261021\\evidence\\U12-deferred-final-target\\raw-and-artifacts.tar.gz",
+      "sha256": "d2ab40ad4b64538c3bffc5f7b3f19f00e9757bc2ae5edcdd3d83abb3239bf9f0",
+      "verified_members": 207
+    }
+  },
+  "gpu_raw_cycles": null,
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "sd": "NOT_TOUCHED",
+  "numeric": "NO_NEW_INFERENCE_RESULT_HISTORICAL_ORT_FAIL_UNCHANGED",
+  "cross_elf_count": 5,
+  "target_elf_executed": false,
+  "internal_deferred_alternative": true,
+  "old_concrete_gpu_path_retained": true,
+  "kernel_uapi_changed": false,
+  "prepare_interval": "HOST_OR_LINUX_MONOTONIC_SUBSET_OF_EXECUTE_NOT_ADDITIVE_TOTAL",
+  "new_threads": false,
+  "tsan": "NO_NEW_RUN_EXISTING_LOCKS_NO_NEW_THREADS",
+  "next": "TRUSTED_INSTALLED_CATALOG_BINDING_COMPATIBLE_RESIDENCY_POLICY_AND_NATIVE_OWNER_HOOKS",
+  "wide_service_regression": {
+    "natural_exit": 0,
+    "matched_out_recompilations": 0,
+    "compiler_jobs": 2,
+    "test_runner_jobs": 1
+  },
+  "model_id": "dee7f3f4e85a694434d99a18bd6a6ffde0e2ef8e8293b9450418cd62f15fbe07",
+  "core_driver_all_vxl_uapi_headers_unchanged": 198,
+  "frozen_vxnn_device_files_unchanged": 12,
+  "previous_model_id": "c9fbc4c08fa0a5623c0b81b87a14b0f5e3b3fcced32c20257f12c28fb86f7791",
+  "model_identity_reason": "Transitive WorkItem/scheduler implementation changed; regenerate package honestly, CODE/schema/math/assets unchanged",
+  "error_runs": [
+    "U12-deferred-red-216",
+    "U12-deferred-wide-normal-218",
+    "U12-deferred-wide-normal-219"
+  ],
+  "pending": [
+    "Trusted installed catalog entryID distinct from CODE and native factory binding",
+    "Compatible residency scheduling/backpressure for overlapping fixed program reservations",
+    "Actual shared CPU COMMIT and post-ACK guards with result lifecycle",
+    "U20 service plus U13-U25 adapters/review/matched images and future authorized board acceptance"
+  ]
+}

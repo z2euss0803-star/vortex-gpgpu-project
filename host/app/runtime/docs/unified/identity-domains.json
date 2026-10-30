@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "scope": "IDENTITY_DOMAIN_RULES_NOT_A_NEW_CROSS_KERNEL_IMAGE_OR_BOARD_RECEIPT",
+  "hash": "SHA256 of actual bytes; structured manifests use sorted keys and explicit domain tags",
+  "domains": {
+    "source_snapshot_id": "Complete frozen working-byte input manifest; includes source, programs and model inputs. A package addition may change this ID without changing kernel or runtime code.",
+    "hardware_id": "Provider flag, compatible, frozen bit/XSA/contract hashes and observed address/capability declaration. S8 and P8/W4 remain different hardware identities.",
+    "uapi_id": "Actual shared public UAPI headers and binary sizes/versions; private program schemas do not replace this identity.",
+    "kernel_source_id": "Actual Kbuild-selected driver/core/headers/generated legacy inputs and provider policy. Model packages are excluded; dependencies must be observed and hashed, never inferred only from a directory name.",
+    "kernel_build_id": "Kernel source identity plus actual compiler, configuration, generated headers, Module.symvers, builtin driver object, vmlinux, Image and DTB. New package-only network B must retain the exact kernel ELF hash.",
+    "runtime_source_id": "User-space owner, scheduler, adapters, operator implementations, loaders and compiled contracts. Model packages and raw request inputs have separate identities.",
+    "program_elf_id": "Actual RV32 ELF bytes and matching compiler/source/static audit receipt; not interchangeable with flat GPU CODE bytes.",
+    "program_raw_id": "Original machine-code payload bytes. Original IMAGE/P8 shaders are preserved and are not reassembled or rewritten.",
+    "program_original_padded_id": "Original IMAGE 64-byte alignment uses EBREAK words and retains its own SHA. The separate admitted 2048-byte object adds zero tail after that original padded payload; it never replaces original EBREAK words with zero.",
+    "program_object_id": "Actual admitted CODE object bytes. Original raw shaders and their 2048-byte zero-tail objects keep separate hashes; NN CODE guards/rodata follow their own frozen owned layouts.",
+    "private_schema_id": "Exact private argument layout and validated reference/address predicates; namespace/profile/program and complete provider identity are mandatory.",
+    "catalog_entry_id": "Full provider/hardware/program/schema/object/policy binding. A shared numeric program ID across namespaces or providers is never a cache identity.",
+    "model_id": "Frozen content manifest including graph, weights, operator identities, layout, precision, preprocessing and original numerical contract/history.",
+    "input_id": "Exact request bytes plus shape, dtype, layout, crop/normalization and preprocessing identities; filenames alone are insufficient.",
+    "result_id": "Output bytes with original execution scope, source/model/input/program/kernel/runtime/hardware identities, device epoch and raw evidence. Texture/display acceptance cannot upgrade its numerical or GPU scope."
+  },
+  "address_domains": {
+    "cpu_va": "CPU virtual pointer: never substitute it for a DMA or GPU address.",
+    "ps_dma": "DMA API address constrained by the matched coherent pool and mask, not by CPU VA arithmetic.",
+    "gpu32": "Relocated 32-bit GPU address within the admitted object/view and frozen program range.",
+    "pl_system40": "PL/system address is independently range-checked; the frozen providers declare system PL base 0x500000000 and 2 GiB capacity. It is not the GPU32 base."
+  },
+  "claim_policy": {
+    "structural_elf_audit": "Does not prove a new compilation or target execution.",
+    "matching_cross_compile": "Requires actual commands/natural exits/compiler and full dependency closure; not image or board acceptance.",
+    "rv32_static": "Requires actual entry/FCSR/rodata/stack/owned-state and machine-code binding; not physical PE execution.",
+    "offline_gpu_raw_cycles": null,
+    "board": "NOT_RUN",
+    "image": "NOT_BUILT"
+  }
+}

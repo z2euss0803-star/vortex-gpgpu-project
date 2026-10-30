@@ -1,0 +1,10 @@
+{
+  "scope": "DIRECT_USER_WRITTEN_SPEC_APPROVAL_NOT_PLAN_APPROVAL",
+  "client_date": "2026-10-21",
+  "recorded_at": "2026-10-21T15:12:24.445710+08:00",
+  "approved_commit": "72159ec6b86788eb6c7ea38975b5c4fa0b4f646e",
+  "approved_spec_sha256": "1819e31e84161ba34ba5ca7530175851d3a934e63e01746800e20edfeb6131ad",
+  "user_answer": "批准规格，编写详细实施计划",
+  "implementation_authorized_by_this_answer": false,
+  "sd_or_board_operation_performed": false
+}

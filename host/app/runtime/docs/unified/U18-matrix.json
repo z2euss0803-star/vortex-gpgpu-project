@@ -1,0 +1,1424 @@
+{
+  "task": "U18",
+  "state": "SCOPED_COMPONENT_MATRIX_VERIFIED_NAMED_TASK_CLOSE_FOLLOWS_COMMIT",
+  "base": "d315277be3a74d8ba71966d317f9a967eb169a68",
+  "scope": "COMMON_RESULT_AND_ACTUAL_C_DISPLAY_WITH_FAKE_OS_KMS_NOT_PHYSICAL_DP",
+  "source_binding": {
+    "compiled_production_tests_headers_assets_and_makefiles_identical": true,
+    "host_to_cross_controller_only_change": [
+      "scripts/unified/check_u18.py"
+    ],
+    "controller_change": "cross excludes only the original injected-libdrm host fixture; production native links matched actual libdrm; ordinary branch behavior unchanged",
+    "normal_manifest_sha256": "a69c6d720b478088a5514c12e846ae3beb9c0d12dc9910bb22628048ce8f9933",
+    "cross_manifest_sha256": "92334a7be7ef1b1fc4a05863273ae228f5362c678ea0bb219b093c613cffe808"
+  },
+  "matrix": [
+    {
+      "name": "U18-complete-normal-045",
+      "mode": "normal",
+      "natural_exit": 0,
+      "receipt_sha256": "ef75859579cb1ca92496c1cefbf3784975acc87591d5ded9520f2d2ca409920e",
+      "commands": [
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-normal-045",
+            "DEBUG_FLAGS=-g1",
+            "build/U18-complete-normal-045/test_display",
+            "build/U18-complete-normal-045/test_page_switch",
+            "build/U18-complete-normal-045/test_display_pages",
+            "build/U18-complete-normal-045/test_display_hunet",
+            "build/U18-complete-normal-045/test_display_native",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 12.034741457027849,
+          "log": "build/U18-complete-normal-045/command-000.log",
+          "sha256": "c7cb673a800f9b02859126bd9cf2c931b35f2724d5c9cbda3a5c6323dea25433"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-normal-045",
+            "DEBUG_FLAGS=-g1",
+            "build/U18-complete-normal-045/test_service",
+            "build/U18-complete-normal-045/test_service_alloc",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 6.338725494977552,
+          "log": "build/U18-complete-normal-045/command-001.log",
+          "sha256": "cf1bfebb099dff790fbc034d9539c775ec762611531862e728370b66205648e4"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.demo",
+            "OUT=build/U18-complete-normal-045",
+            "PYTHON=python3",
+            "DEMO_JSON_PREFIX=/home/z2euss/workspace/mosaic_hunet_dp_20261018/deps/json-c-0.18-vxl1",
+            "build/U18-complete-normal-045/demo/test_native_restore",
+            "build/U18-complete-normal-045/demo/test_kms",
+            "build/U18-complete-normal-045/demo/test_present",
+            "build/U18-complete-normal-045/demo/test_viewer_hunet_frame",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 1.2987617769977078,
+          "log": "build/U18-complete-normal-045/command-002.log",
+          "sha256": "9331ac4523e29c20c9e9bb21654d51bc63404585c3d1bff4935f2ad6887eeb74"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-normal-045",
+            "DEBUG_FLAGS=-g1",
+            "test-unified-display",
+            "test-unified-page-switch",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.02764241397380829,
+          "log": "build/U18-complete-normal-045/command-003.log",
+          "sha256": "f4055ccdce313fdfb1d6e3643c35d44e6325493c81c3c4dc2f623fc2e4fa682a"
+        },
+        {
+          "argv": [
+            "build/U18-complete-normal-045/test_display",
+            "reject"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.003142393019516021,
+          "log": "build/U18-complete-normal-045/command-004.log",
+          "sha256": "43f1c176f005daa21679e9727faf513bd629100af8206be2fd20ca5897f046fb"
+        },
+        {
+          "argv": [
+            "build/U18-complete-normal-045/test_display",
+            "evidence"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.002819367975462228,
+          "log": "build/U18-complete-normal-045/command-005.log",
+          "sha256": "5660ea97896bd2427b2711998d7311fac7aef35cb9cd290a3e867e715db40b82"
+        },
+        {
+          "argv": [
+            "build/U18-complete-normal-045/test_display",
+            "allocation"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0032221119618043303,
+          "log": "build/U18-complete-normal-045/command-006.log",
+          "sha256": "e1fcdb62a7d9a47ddddf9e3bbe7e87be58cc23dddddc84fc77aaffbae600e81b"
+        },
+        {
+          "argv": [
+            "build/U18-complete-normal-045/test_display",
+            "scope"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.002784568991046399,
+          "log": "build/U18-complete-normal-045/command-007.log",
+          "sha256": "4d5c2a380d0dcbae5543d02f571a90f08354db1a1ae82c30886c19eb91ec53d9"
+        },
+        {
+          "argv": [
+            "build/U18-complete-normal-045/test_display_pages"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.28636923694284633,
+          "log": "build/U18-complete-normal-045/command-008.log",
+          "sha256": "a2a49c900b40cdeab60efdb6c746cbb51906c1e7146f43fe4ea4e94ec37b179a"
+        },
+        {
+          "argv": [
+            "build/U18-complete-normal-045/test_display_hunet"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.21684886299772188,
+          "log": "build/U18-complete-normal-045/command-009.log",
+          "sha256": "96c9dd8f394c057cd94a1ebc58acf1f716ba5df21b075c47618929dc2e371ed2"
+        },
+        {
+          "argv": [
+            "build/U18-complete-normal-045/test_display_native",
+            "caps"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0038828389951959252,
+          "log": "build/U18-complete-normal-045/command-010.log",
+          "sha256": "94a307178e531f506862c72f2f84ded9f47680e2d5702b05ff5fd127383b1e73"
+        },
+        {
+          "argv": [
+            "build/U18-complete-normal-045/test_display_native",
+            "lifetime"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.003315007023047656,
+          "log": "build/U18-complete-normal-045/command-011.log",
+          "sha256": "194437b0100d75654b07ebe51821d0c624042fc5bfc04f95add6ab7b9f0e5b7b"
+        },
+        {
+          "argv": [
+            "build/U18-complete-normal-045/test_display_native",
+            "lifetime-failure"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0036695600138045847,
+          "log": "build/U18-complete-normal-045/command-012.log",
+          "sha256": "5b90ebcc25a3992caf00972910106019b7fe40fe3bf2f9f3514c7013fb4c4ff8"
+        },
+        {
+          "argv": [
+            "build/U18-complete-normal-045/test_display_native",
+            "path"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0033177610021084547,
+          "log": "build/U18-complete-normal-045/command-013.log",
+          "sha256": "e89e8f924869388427ada822b5dcad0f4999c0de8bbb5f42544fa936070ebc6a"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-normal-045",
+            "DEBUG_FLAGS=-g1",
+            "test-unified-service",
+            "test-unified-service-alloc",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.025856670981738716,
+          "log": "build/U18-complete-normal-045/command-014.log",
+          "sha256": "a2c3605353c5d7dffe33fe5df001076a2111b0674b8ec7091c4b667363abb7eb"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.demo",
+            "OUT=build/U18-complete-normal-045",
+            "PYTHON=python3",
+            "DEMO_JSON_PREFIX=/home/z2euss/workspace/mosaic_hunet_dp_20261018/deps/json-c-0.18-vxl1",
+            "test-demo-native-restore",
+            "test-demo-kms",
+            "test-demo-present",
+            "test-demo-hunet-frame",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.06726254196837544,
+          "log": "build/U18-complete-normal-045/command-015.log",
+          "sha256": "5345d69b120ffb024846194d22f41c67b6eb6d4bd3d1ee03618453bef1a1a0bb"
+        }
+      ],
+      "elfs": [
+        {
+          "path": "build/U18-complete-normal-045/test_display_native",
+          "bytes": 1221856,
+          "sha256": "51eac1307f4231780210293d752e28cece720068ab06cd3669b6fc155b7f0d40"
+        },
+        {
+          "path": "build/U18-complete-normal-045/test_display_pages",
+          "bytes": 1191248,
+          "sha256": "1603e6c29ad4fc9929ae9322919ee2c8c52ca8246db35f643ea68d984bd5e48b"
+        },
+        {
+          "path": "build/U18-complete-normal-045/test_display",
+          "bytes": 1296384,
+          "sha256": "d6cf66a19396cacfafd733d00acd69c9068c24ec8bdc8c3dd080db4c52bb433a"
+        },
+        {
+          "path": "build/U18-complete-normal-045/test_service",
+          "bytes": 692320,
+          "sha256": "0ce5df71735548a25dde2c411e294aa86c4b45aa877f7ff735859a31e4d0e7c7"
+        },
+        {
+          "path": "build/U18-complete-normal-045/test_display_hunet",
+          "bytes": 1183152,
+          "sha256": "c725286c8384612aa512cb3b35f58dfbdf8017abf782d747a072631cccf5148e"
+        },
+        {
+          "path": "build/U18-complete-normal-045/test_service_alloc",
+          "bytes": 507160,
+          "sha256": "68702b772e2342e3471b43e457fe4f2ea1de00f05b0465fe8f829011b2bfe58d"
+        },
+        {
+          "path": "build/U18-complete-normal-045/test_page_switch",
+          "bytes": 1217720,
+          "sha256": "c94ddc890d0605cdc92de1ff4c6be01158d900ac0c828c75e6e990496677263b"
+        },
+        {
+          "path": "build/U18-complete-normal-045/demo/test_viewer_hunet_frame",
+          "bytes": 229424,
+          "sha256": "2ab0804fd554813e9deaf98ba8badec6a48318fcb19061087aa5863c1c41010f"
+        },
+        {
+          "path": "build/U18-complete-normal-045/demo/test_kms",
+          "bytes": 219976,
+          "sha256": "70003c56ef5c5a9f7f7b9735b4445d3c687c56120c69910d4fa6c76d788cfd5e"
+        },
+        {
+          "path": "build/U18-complete-normal-045/demo/test_native_restore",
+          "bytes": 88064,
+          "sha256": "906955941a2b33fa8a005511c22848541e34e03f12324edb2fe5c222aeec5590"
+        },
+        {
+          "path": "build/U18-complete-normal-045/demo/test_present",
+          "bytes": 223472,
+          "sha256": "6a4817a5e674739ae09e7dcd5539136bc6f4dbafc3618c61106fad5c837ad460"
+        }
+      ],
+      "target_runtime": null,
+      "drm_dependency": null,
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    {
+      "name": "U18-complete-sanitize-046",
+      "mode": "sanitize",
+      "natural_exit": 0,
+      "receipt_sha256": "c20af23695bd79534b7783521e87365c3fd2a398ecaff123991e0e966d2fb75e",
+      "commands": [
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-sanitize-046",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=address,undefined",
+            "build/U18-complete-sanitize-046/test_display",
+            "build/U18-complete-sanitize-046/test_page_switch",
+            "build/U18-complete-sanitize-046/test_display_pages",
+            "build/U18-complete-sanitize-046/test_display_hunet",
+            "build/U18-complete-sanitize-046/test_display_native",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 42.301425929006655,
+          "log": "build/U18-complete-sanitize-046/command-000.log",
+          "sha256": "58d1ffd90b6f135bb3c17ee70f2bb5c96f625ec370d565e49ae26f9cf9fd2311"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-sanitize-046",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=address,undefined",
+            "build/U18-complete-sanitize-046/test_service",
+            "build/U18-complete-sanitize-046/test_service_alloc",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 27.20845619199099,
+          "log": "build/U18-complete-sanitize-046/command-001.log",
+          "sha256": "e801a7941cfc6f8ba81cc4b91db59c79a80b5f02d016231434f7ff1c898248ae"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.demo",
+            "OUT=build/U18-complete-sanitize-046",
+            "PYTHON=python3",
+            "DEMO_JSON_PREFIX=/home/z2euss/workspace/mosaic_hunet_dp_20261018/deps/json-c-0.18-vxl1",
+            "CC=gcc -fsanitize=address,undefined -fno-omit-frame-pointer",
+            "build/U18-complete-sanitize-046/demo/test_native_restore",
+            "build/U18-complete-sanitize-046/demo/test_kms",
+            "build/U18-complete-sanitize-046/demo/test_present",
+            "build/U18-complete-sanitize-046/demo/test_viewer_hunet_frame",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 3.5391166859772056,
+          "log": "build/U18-complete-sanitize-046/command-002.log",
+          "sha256": "3da2eb302ff9ce196ddbd20e6943483b67df8c50759bf72b3e854366e312a124"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-sanitize-046",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=address,undefined",
+            "test-unified-display",
+            "test-unified-page-switch",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.08073589304694906,
+          "log": "build/U18-complete-sanitize-046/command-003.log",
+          "sha256": "f265d52eba8ca201d05708e30b8b6d262105165e81d53daf3ebd379ffbe6d8d2"
+        },
+        {
+          "argv": [
+            "build/U18-complete-sanitize-046/test_display",
+            "reject"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.03232730599120259,
+          "log": "build/U18-complete-sanitize-046/command-004.log",
+          "sha256": "43f1c176f005daa21679e9727faf513bd629100af8206be2fd20ca5897f046fb"
+        },
+        {
+          "argv": [
+            "build/U18-complete-sanitize-046/test_display",
+            "evidence"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.03137571597471833,
+          "log": "build/U18-complete-sanitize-046/command-005.log",
+          "sha256": "5660ea97896bd2427b2711998d7311fac7aef35cb9cd290a3e867e715db40b82"
+        },
+        {
+          "argv": [
+            "build/U18-complete-sanitize-046/test_display",
+            "allocation"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.025203813042026013,
+          "log": "build/U18-complete-sanitize-046/command-006.log",
+          "sha256": "e1fcdb62a7d9a47ddddf9e3bbe7e87be58cc23dddddc84fc77aaffbae600e81b"
+        },
+        {
+          "argv": [
+            "build/U18-complete-sanitize-046/test_display",
+            "scope"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.031824193021748215,
+          "log": "build/U18-complete-sanitize-046/command-007.log",
+          "sha256": "4d5c2a380d0dcbae5543d02f571a90f08354db1a1ae82c30886c19eb91ec53d9"
+        },
+        {
+          "argv": [
+            "build/U18-complete-sanitize-046/test_display_pages"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.6496297979610972,
+          "log": "build/U18-complete-sanitize-046/command-008.log",
+          "sha256": "a2a49c900b40cdeab60efdb6c746cbb51906c1e7146f43fe4ea4e94ec37b179a"
+        },
+        {
+          "argv": [
+            "build/U18-complete-sanitize-046/test_display_hunet"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 1.0012400490231812,
+          "log": "build/U18-complete-sanitize-046/command-009.log",
+          "sha256": "96c9dd8f394c057cd94a1ebc58acf1f716ba5df21b075c47618929dc2e371ed2"
+        },
+        {
+          "argv": [
+            "build/U18-complete-sanitize-046/test_display_native",
+            "caps"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.027417858014814556,
+          "log": "build/U18-complete-sanitize-046/command-010.log",
+          "sha256": "94a307178e531f506862c72f2f84ded9f47680e2d5702b05ff5fd127383b1e73"
+        },
+        {
+          "argv": [
+            "build/U18-complete-sanitize-046/test_display_native",
+            "lifetime"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.025737940974067897,
+          "log": "build/U18-complete-sanitize-046/command-011.log",
+          "sha256": "194437b0100d75654b07ebe51821d0c624042fc5bfc04f95add6ab7b9f0e5b7b"
+        },
+        {
+          "argv": [
+            "build/U18-complete-sanitize-046/test_display_native",
+            "lifetime-failure"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.02985161100514233,
+          "log": "build/U18-complete-sanitize-046/command-012.log",
+          "sha256": "5b90ebcc25a3992caf00972910106019b7fe40fe3bf2f9f3514c7013fb4c4ff8"
+        },
+        {
+          "argv": [
+            "build/U18-complete-sanitize-046/test_display_native",
+            "path"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.03022160695400089,
+          "log": "build/U18-complete-sanitize-046/command-013.log",
+          "sha256": "e89e8f924869388427ada822b5dcad0f4999c0de8bbb5f42544fa936070ebc6a"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-sanitize-046",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=address,undefined",
+            "test-unified-service",
+            "test-unified-service-alloc",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.140039969002828,
+          "log": "build/U18-complete-sanitize-046/command-014.log",
+          "sha256": "cef334003d06839cfb77bf869e1af1b116894c0aaf66e923d44fc51633d86224"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.demo",
+            "OUT=build/U18-complete-sanitize-046",
+            "PYTHON=python3",
+            "DEMO_JSON_PREFIX=/home/z2euss/workspace/mosaic_hunet_dp_20261018/deps/json-c-0.18-vxl1",
+            "CC=gcc -fsanitize=address,undefined -fno-omit-frame-pointer",
+            "test-demo-native-restore",
+            "test-demo-kms",
+            "test-demo-present",
+            "test-demo-hunet-frame",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.1917649540118873,
+          "log": "build/U18-complete-sanitize-046/command-015.log",
+          "sha256": "fa8c7508fd80eb065fe1975a909df79484f3ba4ff1eac755d085abbd80147358"
+        }
+      ],
+      "elfs": [
+        {
+          "path": "build/U18-complete-sanitize-046/test_display_native",
+          "bytes": 10835120,
+          "sha256": "61493292b49cc992d89c20c29a3cbd2903a8a0d631bb166912b42eb2f1d8733f"
+        },
+        {
+          "path": "build/U18-complete-sanitize-046/test_display_pages",
+          "bytes": 10946768,
+          "sha256": "e651090ed09a4a921f661dcda11b15a5061d458bd88491c0bebc58f0c691fc63"
+        },
+        {
+          "path": "build/U18-complete-sanitize-046/test_display",
+          "bytes": 12023656,
+          "sha256": "5ae6254286955cad966ac0ecebe32491ebda718e06df03dd114def06b6d9844f"
+        },
+        {
+          "path": "build/U18-complete-sanitize-046/test_service",
+          "bytes": 7101632,
+          "sha256": "ea776127967981b5541c58b82485e406f3b84d1d2bde40a45ebdde73f6bdb51c"
+        },
+        {
+          "path": "build/U18-complete-sanitize-046/test_display_hunet",
+          "bytes": 10900184,
+          "sha256": "d35b12cee1e06b6ba47d3e1560027fbef8e7a29a74d1d12ac265d0fa2cea427c"
+        },
+        {
+          "path": "build/U18-complete-sanitize-046/test_service_alloc",
+          "bytes": 4785896,
+          "sha256": "28f8de10182d470df44807f19d8a9ba90f0a1122482495444b57d64a5dabe231"
+        },
+        {
+          "path": "build/U18-complete-sanitize-046/test_page_switch",
+          "bytes": 11193912,
+          "sha256": "0889cb85a2147154e42e691d3b2759634a17868453c5ad59981e20b1abcfa677"
+        },
+        {
+          "path": "build/U18-complete-sanitize-046/demo/test_viewer_hunet_frame",
+          "bytes": 618376,
+          "sha256": "3025f988476b86acde5c55a894f5283e25bd6f3b151585bd127dc0eac2a1722a"
+        },
+        {
+          "path": "build/U18-complete-sanitize-046/demo/test_kms",
+          "bytes": 633048,
+          "sha256": "ada12ed75b9580aa97d65d658b31681f70884c48dc935c00329c99d42089ce87"
+        },
+        {
+          "path": "build/U18-complete-sanitize-046/demo/test_native_restore",
+          "bytes": 350072,
+          "sha256": "d4122e998f4195e256ac3fd1394ebaf62891e22b893dc35dded085bb9a32538e"
+        },
+        {
+          "path": "build/U18-complete-sanitize-046/demo/test_present",
+          "bytes": 636984,
+          "sha256": "5ea59705ca5253170ebf1a2e284460dca9afab03815d207028a244ab5181bf23"
+        }
+      ],
+      "target_runtime": null,
+      "drm_dependency": null,
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    {
+      "name": "U18-complete-thread-051",
+      "mode": "thread",
+      "natural_exit": 0,
+      "receipt_sha256": "596ad9cb67d859c1ab8e2f99c14451351d201f14906e5821acba77678d329b66",
+      "commands": [
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-thread-051",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=thread",
+            "build/U18-complete-thread-051/test_display",
+            "build/U18-complete-thread-051/test_page_switch",
+            "build/U18-complete-thread-051/test_display_pages",
+            "build/U18-complete-thread-051/test_display_hunet",
+            "build/U18-complete-thread-051/test_display_native",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 14.62387679098174,
+          "log": "build/U18-complete-thread-051/command-000.log",
+          "sha256": "d6bc6ab21fc9b7d4a74c08a8593441e16fa4ed9e2c189ab79c5871e01c9fb43b"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-thread-051",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=thread",
+            "build/U18-complete-thread-051/test_service",
+            "build/U18-complete-thread-051/test_service_alloc",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 7.966069649031851,
+          "log": "build/U18-complete-thread-051/command-001.log",
+          "sha256": "2dc20f743758bebc37178a4fd3659699af8a48a33728520770a683e840dfa593"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.demo",
+            "OUT=build/U18-complete-thread-051",
+            "PYTHON=python3",
+            "DEMO_JSON_PREFIX=/home/z2euss/workspace/mosaic_hunet_dp_20261018/deps/json-c-0.18-vxl1",
+            "CC=gcc -fsanitize=thread -fno-omit-frame-pointer",
+            "build/U18-complete-thread-051/demo/test_native_restore",
+            "build/U18-complete-thread-051/demo/test_kms",
+            "build/U18-complete-thread-051/demo/test_present",
+            "build/U18-complete-thread-051/demo/test_viewer_hunet_frame",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 1.6113371619721875,
+          "log": "build/U18-complete-thread-051/command-002.log",
+          "sha256": "b58305bacd2d850ca3f9c544181511ab19a5f1f9e7a7ec286ad03ce68428960a"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-thread-051",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=thread",
+            "test-unified-display",
+            "test-unified-page-switch",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.08463179803220555,
+          "log": "build/U18-complete-thread-051/command-003.log",
+          "sha256": "f98796d9108da99bcb401dc7d6048aa619a0bea0527db83db4603e9d7e29f3c0"
+        },
+        {
+          "argv": [
+            "build/U18-complete-thread-051/test_display",
+            "reject"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.015515251958277076,
+          "log": "build/U18-complete-thread-051/command-004.log",
+          "sha256": "43f1c176f005daa21679e9727faf513bd629100af8206be2fd20ca5897f046fb"
+        },
+        {
+          "argv": [
+            "build/U18-complete-thread-051/test_display",
+            "evidence"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.01727535098325461,
+          "log": "build/U18-complete-thread-051/command-005.log",
+          "sha256": "5660ea97896bd2427b2711998d7311fac7aef35cb9cd290a3e867e715db40b82"
+        },
+        {
+          "argv": [
+            "build/U18-complete-thread-051/test_display",
+            "allocation"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.01864780898904428,
+          "log": "build/U18-complete-thread-051/command-006.log",
+          "sha256": "e1fcdb62a7d9a47ddddf9e3bbe7e87be58cc23dddddc84fc77aaffbae600e81b"
+        },
+        {
+          "argv": [
+            "build/U18-complete-thread-051/test_display",
+            "scope"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.023681265010964125,
+          "log": "build/U18-complete-thread-051/command-007.log",
+          "sha256": "4d5c2a380d0dcbae5543d02f571a90f08354db1a1ae82c30886c19eb91ec53d9"
+        },
+        {
+          "argv": [
+            "build/U18-complete-thread-051/test_display_pages"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 1.917316700972151,
+          "log": "build/U18-complete-thread-051/command-008.log",
+          "sha256": "a2a49c900b40cdeab60efdb6c746cbb51906c1e7146f43fe4ea4e94ec37b179a"
+        },
+        {
+          "argv": [
+            "build/U18-complete-thread-051/test_display_hunet"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 2.7291060220450163,
+          "log": "build/U18-complete-thread-051/command-009.log",
+          "sha256": "96c9dd8f394c057cd94a1ebc58acf1f716ba5df21b075c47618929dc2e371ed2"
+        },
+        {
+          "argv": [
+            "build/U18-complete-thread-051/test_display_native",
+            "caps"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.01767131796805188,
+          "log": "build/U18-complete-thread-051/command-010.log",
+          "sha256": "94a307178e531f506862c72f2f84ded9f47680e2d5702b05ff5fd127383b1e73"
+        },
+        {
+          "argv": [
+            "build/U18-complete-thread-051/test_display_native",
+            "lifetime"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.015145935001783073,
+          "log": "build/U18-complete-thread-051/command-011.log",
+          "sha256": "194437b0100d75654b07ebe51821d0c624042fc5bfc04f95add6ab7b9f0e5b7b"
+        },
+        {
+          "argv": [
+            "build/U18-complete-thread-051/test_display_native",
+            "lifetime-failure"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.016176022996660322,
+          "log": "build/U18-complete-thread-051/command-012.log",
+          "sha256": "5b90ebcc25a3992caf00972910106019b7fe40fe3bf2f9f3514c7013fb4c4ff8"
+        },
+        {
+          "argv": [
+            "build/U18-complete-thread-051/test_display_native",
+            "path"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.016470468952320516,
+          "log": "build/U18-complete-thread-051/command-013.log",
+          "sha256": "e89e8f924869388427ada822b5dcad0f4999c0de8bbb5f42544fa936070ebc6a"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-thread-051",
+            "DEBUG_FLAGS=-g1",
+            "SANITIZE=thread",
+            "test-unified-service",
+            "test-unified-service-alloc",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.11936199496267363,
+          "log": "build/U18-complete-thread-051/command-014.log",
+          "sha256": "1d94b4c48aea37ec5459c3292e8d61d98bbdc59b705b3f08f65cc60cf83270bf"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.demo",
+            "OUT=build/U18-complete-thread-051",
+            "PYTHON=python3",
+            "DEMO_JSON_PREFIX=/home/z2euss/workspace/mosaic_hunet_dp_20261018/deps/json-c-0.18-vxl1",
+            "CC=gcc -fsanitize=thread -fno-omit-frame-pointer",
+            "test-demo-native-restore",
+            "test-demo-kms",
+            "test-demo-present",
+            "test-demo-hunet-frame",
+            "-j1"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.5158323509967886,
+          "log": "build/U18-complete-thread-051/command-015.log",
+          "sha256": "ff7119d7a51430c1136fcb3e3ff831e9159baaf10b0053c3fb81a3da6327b70b"
+        }
+      ],
+      "elfs": [
+        {
+          "path": "build/U18-complete-thread-051/test_display_native",
+          "bytes": 1763432,
+          "sha256": "b91bab83e9b3bea5a4c16e319ba8e27d18b1528b6be33cb8a72b4015b577b196"
+        },
+        {
+          "path": "build/U18-complete-thread-051/test_display_pages",
+          "bytes": 1727560,
+          "sha256": "502ef906c8bd948bf2beb45b62de431d279f9bf3f874460daa45c08745762479"
+        },
+        {
+          "path": "build/U18-complete-thread-051/test_display",
+          "bytes": 1858512,
+          "sha256": "e63e49af98f55390b18fc8a2cf4ae2eac04f37124703c158158e549dbb435b31"
+        },
+        {
+          "path": "build/U18-complete-thread-051/test_service",
+          "bytes": 949832,
+          "sha256": "cadc64d955817d2c8bf388f8f4d22106a9a5378588c8f45c1d9719116a0208b7"
+        },
+        {
+          "path": "build/U18-complete-thread-051/test_display_hunet",
+          "bytes": 1717576,
+          "sha256": "656bd9a5d695c1a4f8d703dfb50fd3fd31eae675f6b562e9645cf2162c9c229d"
+        },
+        {
+          "path": "build/U18-complete-thread-051/test_service_alloc",
+          "bytes": 675600,
+          "sha256": "0e83948fa2ab8cdda1435660ade89416eb7ef89c474423b3f438fdcefb9d984d"
+        },
+        {
+          "path": "build/U18-complete-thread-051/test_page_switch",
+          "bytes": 1759048,
+          "sha256": "66941accfa330b882cd9d417f9b271bb0373df49a0cc21c4d12e0a846a8c6e1f"
+        },
+        {
+          "path": "build/U18-complete-thread-051/demo/test_viewer_hunet_frame",
+          "bytes": 261040,
+          "sha256": "03f41c2f2430ed6bea98786b530485a1d4ec8821ac1e4f824d4ee5866c9b0e8b"
+        },
+        {
+          "path": "build/U18-complete-thread-051/demo/test_kms",
+          "bytes": 255592,
+          "sha256": "e19fa6237025a19d3a123f3b651d788f9d70aa630fd7a31d8f848605e234ae7b"
+        },
+        {
+          "path": "build/U18-complete-thread-051/demo/test_native_restore",
+          "bytes": 110704,
+          "sha256": "4cfe5b4152917863f4d408d362fadbd4e5a4ef811421ae5b935a81e091a2e4bc"
+        },
+        {
+          "path": "build/U18-complete-thread-051/demo/test_present",
+          "bytes": 257792,
+          "sha256": "4bc67eff379d6126564539aa655249036e348ae2cae0c71ca6deff04a68b211d"
+        }
+      ],
+      "target_runtime": null,
+      "drm_dependency": null,
+      "executed_target_elfs": null,
+      "gpu_raw_cycles": null
+    },
+    {
+      "name": "U18-complete-cross-054",
+      "mode": "cross",
+      "natural_exit": 0,
+      "receipt_sha256": "313b64f0ec3bcb61b8bc30a84af1e33d6de52ebd6f280a3653e0c689edfa62b5",
+      "commands": [
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-g++",
+            "--version"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.007109142956323922,
+          "log": "build/U18-complete-cross-054/command-000.log",
+          "sha256": "eb592c0c26adf30a942c441f32156a4ba030254782b1cc21f12893358cb6be27"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-gcc",
+            "-dumpmachine"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.00573183799860999,
+          "log": "build/U18-complete-cross-054/command-001.log",
+          "sha256": "8711caaed6fee45adb1c0471a448ca8e9739a16f54dbc23fbb391eec5955069c"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-cross-054",
+            "DEBUG_FLAGS=-g1",
+            "CC=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-gcc",
+            "CXX=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-g++",
+            "NN_JSON_PREFIX=/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/json-install",
+            "U18_DRM_PREFIX=/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target",
+            "build/U18-complete-cross-054/test_display",
+            "build/U18-complete-cross-054/test_page_switch",
+            "build/U18-complete-cross-054/test_display_pages",
+            "build/U18-complete-cross-054/test_display_hunet",
+            "build/U18-complete-cross-054/test_display_native",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 16.00427698000567,
+          "log": "build/U18-complete-cross-054/command-002.log",
+          "sha256": "9dfa36fa00a14678c9378fd4d7680d9657d506d4836e512d2af158c9c47f12fb"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.unified",
+            "OUT=build/U18-complete-cross-054",
+            "DEBUG_FLAGS=-g1",
+            "CC=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-gcc",
+            "CXX=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-g++",
+            "NN_JSON_PREFIX=/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/json-install",
+            "U18_DRM_PREFIX=/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target",
+            "build/U18-complete-cross-054/test_service",
+            "build/U18-complete-cross-054/test_service_alloc",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 8.54749147995608,
+          "log": "build/U18-complete-cross-054/command-003.log",
+          "sha256": "af3a71b68a7cf0d022d2b5cc9400efb643b3cc10a8bf9a090a81443ad0baed52"
+        },
+        {
+          "argv": [
+            "make",
+            "-f",
+            "Makefile.demo",
+            "OUT=build/U18-complete-cross-054",
+            "PYTHON=python3",
+            "DEMO_JSON_PREFIX=/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/json-install",
+            "CC=/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-gcc",
+            "DEMO_JSON_PREFIX=/home/z2euss/workspace/unified_gpu_runtime_20261021/source/build/U07-aarch64-012/json-install",
+            "DEMO_DRM_PREFIX=/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target",
+            "build/U18-complete-cross-054/demo/test_kms",
+            "build/U18-complete-cross-054/demo/test_present",
+            "build/U18-complete-cross-054/demo/test_viewer_hunet_frame",
+            "-j2"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 1.488959377980791,
+          "log": "build/U18-complete-cross-054/command-004.log",
+          "sha256": "40619487a502276de65d8fa5f65dad9a01cfc5c7bc382af9dfae728c00ccbe68"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-complete-cross-054/test_display"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.00469967897515744,
+          "log": "build/U18-complete-cross-054/command-005.log",
+          "sha256": "64fe70dc396fd9c44e82f241eaaff6c4489071e75ef8f09f9bc883c6801e3715"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-complete-cross-054/test_page_switch"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.004296281025744975,
+          "log": "build/U18-complete-cross-054/command-006.log",
+          "sha256": "0624cc86a621923d6545e3671812c0040bfceca05343821c018e98f3a4adff8d"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-complete-cross-054/test_display_pages"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0038776540313847363,
+          "log": "build/U18-complete-cross-054/command-007.log",
+          "sha256": "c4223b597d8ebe3861b9970f8b36460af6c16cb5549dfa85f9c38bca23ff27b9"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-complete-cross-054/test_display_hunet"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.0038386699743568897,
+          "log": "build/U18-complete-cross-054/command-008.log",
+          "sha256": "ed20927bbbcb18a1b7e018d9cfd3766b33b8278232dfd90e20e18c516154dc73"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-complete-cross-054/test_display_native"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.005247392982710153,
+          "log": "build/U18-complete-cross-054/command-009.log",
+          "sha256": "f70f6e117573026f15fea16e7396b5ed8ce2b5abf5ebdc75a276c4f065c0f6dd"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-complete-cross-054/test_service"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.00443902297411114,
+          "log": "build/U18-complete-cross-054/command-010.log",
+          "sha256": "944e9adc3b57dbd5c36194d054e04af228824397e2d1b48ca2ce97a2c8ba560d"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-complete-cross-054/test_service_alloc"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.005256560049019754,
+          "log": "build/U18-complete-cross-054/command-011.log",
+          "sha256": "ad7ce2fd906c6d5cdfa64b7fb9fa03e0ff8620c5521ff64c354df036fe14c80f"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-complete-cross-054/demo/test_kms"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.004841639020014554,
+          "log": "build/U18-complete-cross-054/command-012.log",
+          "sha256": "eea99f5d36733d05d3aef285a38a5a71c4ec8071631cbed9f6d27d921fcccb80"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-complete-cross-054/demo/test_present"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.004555692954454571,
+          "log": "build/U18-complete-cross-054/command-013.log",
+          "sha256": "2f8b436965d945790141413d694fe75fc81e153fa268d49639bdb4f8a9595db8"
+        },
+        {
+          "argv": [
+            "/home/z2euss/codex_hunet_fullopt_20261016/tools/aarch64/bin/aarch64-xilinx-linux-readelf",
+            "-hW",
+            "-dW",
+            "-VW",
+            "build/U18-complete-cross-054/demo/test_viewer_hunet_frame"
+          ],
+          "natural_exit": 0,
+          "elapsed_s": 0.004919864994008094,
+          "log": "build/U18-complete-cross-054/command-014.log",
+          "sha256": "423526d69835c6e276ff48ab80e721ad6909cc3faca1e9432368d7277b9e1103"
+        }
+      ],
+      "elfs": [
+        {
+          "path": "build/U18-complete-cross-054/test_display_native",
+          "bytes": 1534384,
+          "sha256": "6d8341eb5349570400eab8cd3951c3b0fc9ff9b077e9ab6a1668573ee4669f96"
+        },
+        {
+          "path": "build/U18-complete-cross-054/test_display_pages",
+          "bytes": 1222864,
+          "sha256": "6a857f885bf5b7543d281e9bc64aaee96626405c211b5a5fa65759196f1c3cbe"
+        },
+        {
+          "path": "build/U18-complete-cross-054/test_display",
+          "bytes": 1334776,
+          "sha256": "dfb68fd8d1cc917fdef13db8aac348bb3aecd5be8013853ed0aab845eb52b37f"
+        },
+        {
+          "path": "build/U18-complete-cross-054/test_service",
+          "bytes": 716768,
+          "sha256": "1d6ed62dff56b4b6518686b5971dea6bb2d3dfa09bbfe3ee4d205dca674cc1e2"
+        },
+        {
+          "path": "build/U18-complete-cross-054/test_display_hunet",
+          "bytes": 1206040,
+          "sha256": "3581b6f6b74d6a0ea20e64b4559ac2d5b1a29bd174ea2bdea6e38fdbde7e0ddf"
+        },
+        {
+          "path": "build/U18-complete-cross-054/test_service_alloc",
+          "bytes": 491120,
+          "sha256": "db37d913a19a49fdaf50d3a459d73c6f20ec05c087306a4d938ca29a647c8857"
+        },
+        {
+          "path": "build/U18-complete-cross-054/test_page_switch",
+          "bytes": 1250328,
+          "sha256": "b7f160250b5c395081b4b47039d78da3dabcf566c3107515e426c1a999d5a9a1"
+        },
+        {
+          "path": "build/U18-complete-cross-054/demo/test_viewer_hunet_frame",
+          "bytes": 270600,
+          "sha256": "e8c39fc43b8effff11380b014b6b1fbf313e78cdc38c1fc3f5114f2daa5d8ffb"
+        },
+        {
+          "path": "build/U18-complete-cross-054/demo/test_kms",
+          "bytes": 257992,
+          "sha256": "432f7c298f054d5f61fdbc0720782cac15ccd6ca4d4c7802e6a0caf5af3e7c36"
+        },
+        {
+          "path": "build/U18-complete-cross-054/demo/test_present",
+          "bytes": 268768,
+          "sha256": "e5d0c43ae1254dfdcfe14a3aa6ad98dfc61574aab05499500888d428c6563339"
+        }
+      ],
+      "target_runtime": {
+        "rootfs_sha256": "d5163fa50ae6b3b945a280c96b6273e0eff9af312a992407bdf8b9abee3eb647",
+        "files": {
+          "ld-linux-aarch64.so.1": {
+            "path": "lib/ld-linux-aarch64.so.1",
+            "sha256": "2c307a67d7673dcb99e0e78bb6c3ae6ca468e21e5a0f7cbc6ad82846ad7afd4c"
+          },
+          "libm.so.6": {
+            "path": "lib/libm.so.6",
+            "sha256": "f5379ab0ba0797b5d66619425d8175263ac813ae7d7127376db2663be78a0a4b"
+          },
+          "libc.so.6": {
+            "path": "lib/libc.so.6",
+            "sha256": "aeebc1b6491583b277e08ad1ca2509f4e28d628cb3df78073b71d676dea2bbe0"
+          },
+          "libpthread.so.0": {
+            "path": "lib/libpthread.so.0",
+            "sha256": "edcd56cc1d6e01b0a2dec0258318b965835aacc9ae6ded0d1fbba5f1084caadb"
+          },
+          "libstdc++.so.6": {
+            "path": "usr/lib/libstdc++.so.6",
+            "sha256": "48f2c5788373d1987b8c21920838a109e945b5054a239a18a2115d105331e3a0"
+          },
+          "libgcc_s.so.1": {
+            "path": "lib/libgcc_s.so.1",
+            "sha256": "46ecda5c0995aaf773c409100398418361cbebdadffa768a24c950a84ae7cf76"
+          }
+        },
+        "required_versions": [
+          "CXXABI_1.3",
+          "CXXABI_1.3.9",
+          "GCC_3.0",
+          "GLIBCXX_3.4",
+          "GLIBCXX_3.4.11",
+          "GLIBCXX_3.4.14",
+          "GLIBCXX_3.4.20",
+          "GLIBCXX_3.4.21",
+          "GLIBCXX_3.4.22",
+          "GLIBC_2.17",
+          "GLIBC_2.25",
+          "GLIBC_2.29"
+        ]
+      },
+      "drm_dependency": {
+        "receipt": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/build-receipt.json",
+        "receipt_sha256": "4aff06bdf86e9e5a704a0e6da65d4991eabccbb60c7d7d49f20eb38b0bffa69a",
+        "library": {
+          "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/lib/libdrm.a",
+          "bytes": 506568,
+          "mode": 420,
+          "kind": "file",
+          "sha256": "84574e411546f2d30bf449a634c7aba642e4bf10dc10c72c52e4f6165f256b90"
+        },
+        "headers": [
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/amdgpu_drm.h",
+            "bytes": 31894,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "d59ab9e1d6ec4e4df8a1d29f87433bfffd01d1d38e216bafc881c0e8a9d43f98"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/drm.h",
+            "bytes": 32129,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "65fbe48730853dc40543f0e83a5e1c112544df0356ac9579f308147e5cb4989a"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/drm_fourcc.h",
+            "bytes": 32818,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "313c854f55be6db8c1d803acb09bb969c80f06db053478f79077fad9200a8218"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/drm_mode.h",
+            "bytes": 24920,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "d7a85786c8b1faeadb3dd6854fbb624390c7ef4e29034c2d50136789a19161e5"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/drm_sarea.h",
+            "bytes": 2782,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "fd1a9f523738de090ab5018fc6776b83d18e43ad84f2a0825f6a72d6278c542a"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/i915_drm.h",
+            "bytes": 62951,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "c249fa60d95be44050665e314bc9437d2d80e43a0011064bc66fb8c87816a00d"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/mach64_drm.h",
+            "bytes": 7895,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "26cc4affc11d34748724a2b619fd166f162c6215837d0660271c56f4b50e44e5"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/mga_drm.h",
+            "bytes": 13010,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "20be6c1c32101d66c08a5741dfd7ea834221199a5921ac0e4b4698c432dafc0f"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/msm_drm.h",
+            "bytes": 12105,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "90305a6fae34d7d5f7f74d043523aaf5d84c94e4691219166060ad36debb53c0"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/nouveau_drm.h",
+            "bytes": 5699,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "857d26c965b5a5f26627caa6208d950adcbe4d445e09bd0a7fd032bbe86d80e1"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/qxl_drm.h",
+            "bytes": 4131,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "548e963e52309e741c413a2d1918e6f8e31399a350f98b5fd46c38155546ba6e"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/r128_drm.h",
+            "bytes": 10000,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "5ee8a4d8dc2f8529bc3082ae99e19b836b9241d3ec8380d6e544165c2468ce2c"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/radeon_drm.h",
+            "bytes": 38317,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "1dfa3a4185a75b3963eba9e4ba757cdf7aca503bea7708cf301197366faa5b8d"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/savage_drm.h",
+            "bytes": 7170,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "09f5f47769f6365b2e321ece9e83ce1e4d6aef6ae727dacd33d02d2fd64cb26e"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/sis_drm.h",
+            "bytes": 2633,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "981da0746aedd980fc2c3bb4357a400ff2b35df2e214a582b58488ffd469fa7c"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/tegra_drm.h",
+            "bytes": 14877,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "e62146a41c5dc860b7c170a43ada8b020dfb78d5918f1c5082f748f99ad88fff"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/vc4_drm.h",
+            "bytes": 14457,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "f1ffa366621a643e4f81d4b0c15db46a8405a94a45cc08708cc8a702abdb3053"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/via_drm.h",
+            "bytes": 8372,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "ace3ddd33488b86f8171b8622762be2816598236777b6a88afd053a89a7e22d7"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libdrm/virtgpu_drm.h",
+            "bytes": 5010,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "d80818cfe1ee862dfa9fb23d46f37a10ae80a2901037421742c40cff3a889772"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/libsync.h",
+            "bytes": 3466,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "9dba22c1b43ba2fdcc1c53367f826a6cc45015122e75ad81985711186e9b8b48"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/xf86drm.h",
+            "bytes": 34181,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "16d49af39895ca767aaaa622c007fce8a1578bb347b4415b0fc7b0e7d8bcc447"
+          },
+          {
+            "path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/T19-active-encoder-cross-20261019/cross/drm-target/include/xf86drmMode.h",
+            "bytes": 17428,
+            "mode": 420,
+            "kind": "file",
+            "sha256": "0c7a73744a31ede952e870d523473337082f8e12c639b9326a4de3377dc0b2ce"
+          }
+        ],
+        "scope": "EXISTING_MATCHED_TARGET_LIBRARY_NOT_UPSTREAM_TARBALL_HASH"
+      },
+      "executed_target_elfs": false,
+      "gpu_raw_cycles": null,
+      "runtime_elfs": [
+        {
+          "path": "build/U18-complete-cross-054/runtime/ld-linux-aarch64.so.1",
+          "bytes": 136840,
+          "sha256": "2c307a67d7673dcb99e0e78bb6c3ae6ca468e21e5a0f7cbc6ad82846ad7afd4c"
+        },
+        {
+          "path": "build/U18-complete-cross-054/runtime/libgcc_s.so.1",
+          "bytes": 83792,
+          "sha256": "46ecda5c0995aaf773c409100398418361cbebdadffa768a24c950a84ae7cf76"
+        },
+        {
+          "path": "build/U18-complete-cross-054/runtime/libpthread.so.0",
+          "bytes": 113184,
+          "sha256": "edcd56cc1d6e01b0a2dec0258318b965835aacc9ae6ded0d1fbba5f1084caadb"
+        },
+        {
+          "path": "build/U18-complete-cross-054/runtime/libc.so.6",
+          "bytes": 1413168,
+          "sha256": "aeebc1b6491583b277e08ad1ca2509f4e28d628cb3df78073b71d676dea2bbe0"
+        },
+        {
+          "path": "build/U18-complete-cross-054/runtime/libstdc++.so.6",
+          "bytes": 1882600,
+          "sha256": "48f2c5788373d1987b8c21920838a109e945b5054a239a18a2115d105331e3a0"
+        },
+        {
+          "path": "build/U18-complete-cross-054/runtime/libm.so.6",
+          "bytes": 628696,
+          "sha256": "f5379ab0ba0797b5d66619425d8175263ac813ae7d7127376db2663be78a0a4b"
+        }
+      ]
+    }
+  ],
+  "archives": [
+    {
+      "members": 158,
+      "logical_bytes": 116146461,
+      "archive_bytes": 23114747,
+      "sha256": "16b285761a654f0ee5c519b40480f39446960a5c5033a48b3fca2c264737a9fe",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U18-final-matrix-part1-049-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2102136832,
+      "verified_members": 158,
+      "members_sha256": "fcdc617e8679e6dafea66bf44416b38c247b763391977127a1d259bf68fc9018",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U18-final-matrix-part1-049\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 137,
+      "logical_bytes": 32311403,
+      "archive_bytes": 8502341,
+      "sha256": "5261d2b14a748644b2b9a74be88490766d551d15bd59691ec638b7873b7a8db6",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U18-static-drm-regression-error-053-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2176831488,
+      "verified_members": 137,
+      "members_sha256": "16f1839dcdf7c6d2146f82e9061fb4d8548bca56807bb8465db288431d1aada6",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U18-static-drm-regression-error-053\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 83,
+      "logical_bytes": 18417097,
+      "archive_bytes": 5723857,
+      "sha256": "fcc4d22c099147d03ab0b135eb66ffedbd0f708b900366627b391d36dda478e2",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U18-matched-cross-final-055-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2127994880,
+      "verified_members": 83,
+      "members_sha256": "83c05ccf6b7d22a9686e1ac752fb7b5a2d56e249a0d572055faa0da3acdf6b5e",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U18-matched-cross-final-055\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    }
+  ],
+  "gpu_raw_cycles": null,
+  "image": "NOT_BUILT",
+  "board": "NOT_ACCESSED",
+  "sd": "NOT_TOUCHED",
+  "numeric": "HISTORICAL_UI_FIXTURE_ONLY_NO_NEW_INFERENCE",
+  "performance": "NO_PHYSICAL_MEASUREMENT",
+  "remaining": [
+    "U20 actual production factories, one global service/display wiring and two original UDP protocols",
+    "U19-U25 full plan closure and image/resource gates"
+  ]
+}

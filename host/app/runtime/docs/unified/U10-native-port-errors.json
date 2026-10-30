@@ -1,0 +1,105 @@
+{
+  "base": "ff6c2b1ea07dda56943af8d7717b74b76fcfa235",
+  "scope": "U10_NATIVE_COMPUTE_HOST_C_DECODER_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "failures": [
+    {
+      "run": "U10-error-evidence-red-034",
+      "kind": "FUNCTIONAL_RED",
+      "natural_exit": 2,
+      "symptoms": [
+        "execution error lacks durable partial receipt",
+        "failed error evidence has no retry-only delivery"
+      ],
+      "verified_by": "U10-error-evidence-green-035",
+      "source_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-error-evidence-red-034\\manifest.json",
+      "source_files": 1400
+    },
+    {
+      "run": "U10-compute-port-red-036",
+      "kind": "BUILD_FAILURE",
+      "natural_exit": 2,
+      "symptoms": [
+        "test else misleading-indentation under GCC7 Werror"
+      ],
+      "verified_by": "U10-compute-port-functional-red-038",
+      "source_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-compute-port-red-036\\manifest.json",
+      "source_files": 1402
+    },
+    {
+      "run": "U10-compute-port-functional-red-038",
+      "kind": "FUNCTIONAL_RED",
+      "natural_exit": 2,
+      "symptoms": [
+        "native read-only CAPS probe not connected"
+      ],
+      "verified_by": "U10-compute-port-green-041",
+      "source_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-compute-port-functional-red-038\\manifest.json",
+      "source_files": 1402
+    },
+    {
+      "run": "U10-compute-port-green-039",
+      "kind": "BUILD_FAILURE",
+      "natural_exit": 2,
+      "symptoms": [
+        "GCC7 maybe-uninitialized on optional temporary completion; replaced by in-place emplace without suppressing warning"
+      ],
+      "verified_by": "U10-compute-port-green-041",
+      "source_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-compute-port-green-039\\manifest.json",
+      "source_files": 1402
+    },
+    {
+      "run": "U10-native-boundary-red-042",
+      "kind": "FUNCTIONAL_RED",
+      "natural_exit": 2,
+      "symptoms": [
+        "WAIT timeout loses submitted cookie/sequence/time",
+        "post-ACK output identity not revalidated",
+        "executor exception loses original error/snapshot"
+      ],
+      "verified_by": "U10-native-boundary-green-043",
+      "source_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-native-boundary-red-042\\manifest.json",
+      "source_files": 1402
+    },
+    {
+      "run": "U10-post-ack-exception-red-045",
+      "kind": "FUNCTIONAL_RED",
+      "natural_exit": 2,
+      "symptoms": [
+        "post-ACK finish adapter exception misclassified as evidence retry"
+      ],
+      "verified_by": "U10-native-final-normal-047",
+      "source_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-post-ack-exception-red-045\\manifest.json",
+      "source_files": 1402
+    }
+  ],
+  "full_u10_complete": false,
+  "first_error_archive": {
+    "archive": "D:/codex-unified-gpu-20261021/evidence/U10-native-mid/raw-and-artifacts.tar.gz",
+    "sha256": "8488300611cc3c83fe9d8fdb7ffd9b810daf20715ec120f365fdb2ca7f905583",
+    "verified_members": 395
+  },
+  "remaining": [
+    "production durable journal binding full request/program/source identities",
+    "legacy aggregate execution/retirement without invented v2 sequences",
+    "native vxgpud and registered application factories",
+    "allocation-safe scheduler to Runtime handoff review"
+  ],
+  "final_verified_runs": [
+    "U10-native-final-normal-047",
+    "U10-native-final-sanitize-048",
+    "U10-native-final-tsan-050",
+    "U10-native-aarch64-051"
+  ],
+  "evidence_archive": {
+    "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U10-native-final\\raw-and-artifacts.tar.gz",
+    "sha256": "33c371f715b2db1a9b993bf3a1139a9c0d05542ecdc82e365ce95960664cc789",
+    "verified_members": 260
+  },
+  "code_manifest_checks": {
+    "U10-native-final-normal-047": 868,
+    "U10-native-final-sanitize-048": 868,
+    "U10-native-final-tsan-050": 868,
+    "U10-native-aarch64-051": 868
+  }
+}

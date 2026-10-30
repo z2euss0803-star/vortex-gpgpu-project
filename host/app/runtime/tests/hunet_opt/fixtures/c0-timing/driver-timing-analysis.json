@@ -1,0 +1,1585 @@
+{
+  "scope": "DIAGNOSTIC_KERNEL_TIMING_NOT_APPLICATION_PASS",
+  "jobs": 103,
+  "total_kernel_span_ns": 7684686196,
+  "timeline_ns": {
+    "guard_init": 41416043,
+    "handoff_before_start": 260908108,
+    "gpu_active_observed": 7181328683,
+    "guard_check": 195405483,
+    "handoff_after_done": 5627879
+  },
+  "nested_ns": {
+    "guard_cdma": 198362829,
+    "guard_cdma_sleep": 317434,
+    "all_cdma": 213847762,
+    "all_cdma_sleep": 317434,
+    "state_poll": 16053535,
+    "wait_sleep": 7174892679,
+    "worker_poll": 24297311,
+    "prepare": 259658897,
+    "mutex_wait": 11013142,
+    "cdma_fast_poll": 2904025
+  },
+  "counts": {
+    "cdma_fast_poll_calls": 44615
+  },
+  "raw_gpu_cycles": 686600903,
+  "configured_clock_hz": 96969696,
+  "physical_measured_hz": null,
+  "gpu_active_conditional_ns": 7080571882.993218,
+  "non_hardware_conditional_ns": 604114313.0067816,
+  "notes": [
+    "state_poll is contained in observed GPU-active interval",
+    "CDMA and sleep counters are nested; worker may overlap WAIT sleep",
+    "observed active interval contains hardware, polling, and detection latency",
+    "clock conversion requires unchanged rate and accurate reference oscillator"
+  ],
+  "per_job": [
+    {
+      "generation": 15,
+      "job_id": 105,
+      "sequence": 1,
+      "stage": 0,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 404734,
+        "handoff_before_start": 2544115,
+        "gpu_active_observed": 68780608,
+        "guard_check": 1895059,
+        "handoff_after_done": 191342
+      },
+      "raw_cycles": 6638711
+    },
+    {
+      "generation": 15,
+      "job_id": 106,
+      "sequence": 97,
+      "stage": 1,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 403684,
+        "handoff_before_start": 2537125,
+        "gpu_active_observed": 241105841,
+        "guard_check": 1897849,
+        "handoff_after_done": 4530
+      },
+      "raw_cycles": 23354622
+    },
+    {
+      "generation": 15,
+      "job_id": 107,
+      "sequence": 98,
+      "stage": 1,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 401824,
+        "handoff_before_start": 2512255,
+        "gpu_active_observed": 8050820,
+        "guard_check": 1898149,
+        "handoff_after_done": 4470
+      },
+      "raw_cycles": 622131
+    },
+    {
+      "generation": 15,
+      "job_id": 108,
+      "sequence": 99,
+      "stage": 2,
+      "op": 12,
+      "timeline_ns": {
+        "guard_init": 400864,
+        "handoff_before_start": 2514656,
+        "gpu_active_observed": 2017970,
+        "guard_check": 1888369,
+        "handoff_after_done": 4200
+      },
+      "raw_cycles": 139352
+    },
+    {
+      "generation": 15,
+      "job_id": 109,
+      "sequence": 100,
+      "stage": 3,
+      "op": 12,
+      "timeline_ns": {
+        "guard_init": 400894,
+        "handoff_before_start": 2538715,
+        "gpu_active_observed": 4029731,
+        "guard_check": 1899139,
+        "handoff_after_done": 5160
+      },
+      "raw_cycles": 332566
+    },
+    {
+      "generation": 15,
+      "job_id": 110,
+      "sequence": 101,
+      "stage": 4,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 400204,
+        "handoff_before_start": 2539225,
+        "gpu_active_observed": 132681307,
+        "guard_check": 1893019,
+        "handoff_after_done": 66781
+      },
+      "raw_cycles": 12840515
+    },
+    {
+      "generation": 15,
+      "job_id": 111,
+      "sequence": 197,
+      "stage": 5,
+      "op": 13,
+      "timeline_ns": {
+        "guard_init": 402094,
+        "handoff_before_start": 2512885,
+        "gpu_active_observed": 6038100,
+        "guard_check": 1900279,
+        "handoff_after_done": 4380
+      },
+      "raw_cycles": 431983
+    },
+    {
+      "generation": 15,
+      "job_id": 112,
+      "sequence": 198,
+      "stage": 6,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 407734,
+        "handoff_before_start": 2516096,
+        "gpu_active_observed": 209929619,
+        "guard_check": 1892479,
+        "handoff_after_done": 748927
+      },
+      "raw_cycles": 20333984
+    },
+    {
+      "generation": 15,
+      "job_id": 113,
+      "sequence": 294,
+      "stage": 7,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 401014,
+        "handoff_before_start": 2511865,
+        "gpu_active_observed": 962578765,
+        "guard_check": 1897879,
+        "handoff_after_done": 5130
+      },
+      "raw_cycles": 93317593
+    },
+    {
+      "generation": 15,
+      "job_id": 114,
+      "sequence": 295,
+      "stage": 7,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 401014,
+        "handoff_before_start": 2509585,
+        "gpu_active_observed": 24131432,
+        "guard_check": 1896768,
+        "handoff_after_done": 4321
+      },
+      "raw_cycles": 2290927
+    },
+    {
+      "generation": 15,
+      "job_id": 115,
+      "sequence": 297,
+      "stage": 9,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 402904,
+        "handoff_before_start": 2539196,
+        "gpu_active_observed": 225927339,
+        "guard_check": 1892689,
+        "handoff_after_done": 191522
+      },
+      "raw_cycles": 21814237
+    },
+    {
+      "generation": 15,
+      "job_id": 116,
+      "sequence": 393,
+      "stage": 10,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 401944,
+        "handoff_before_start": 2541295,
+        "gpu_active_observed": 6039631,
+        "guard_check": 1896919,
+        "handoff_after_done": 4440
+      },
+      "raw_cycles": 570451
+    },
+    {
+      "generation": 15,
+      "job_id": 117,
+      "sequence": 394,
+      "stage": 11,
+      "op": 12,
+      "timeline_ns": {
+        "guard_init": 408544,
+        "handoff_before_start": 2508865,
+        "gpu_active_observed": 2018090,
+        "guard_check": 1898839,
+        "handoff_after_done": 4830
+      },
+      "raw_cycles": 139901
+    },
+    {
+      "generation": 15,
+      "job_id": 118,
+      "sequence": 395,
+      "stage": 12,
+      "op": 12,
+      "timeline_ns": {
+        "guard_init": 402544,
+        "handoff_before_start": 2516545,
+        "gpu_active_observed": 4028710,
+        "guard_check": 1897129,
+        "handoff_after_done": 4350
+      },
+      "raw_cycles": 333480
+    },
+    {
+      "generation": 15,
+      "job_id": 119,
+      "sequence": 396,
+      "stage": 13,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 407644,
+        "handoff_before_start": 2542286,
+        "gpu_active_observed": 134097861,
+        "guard_check": 1896679,
+        "handoff_after_done": 66810
+      },
+      "raw_cycles": 12862237
+    },
+    {
+      "generation": 15,
+      "job_id": 120,
+      "sequence": 492,
+      "stage": 14,
+      "op": 13,
+      "timeline_ns": {
+        "guard_init": 400084,
+        "handoff_before_start": 2510936,
+        "gpu_active_observed": 6039750,
+        "guard_check": 1896139,
+        "handoff_after_done": 4260
+      },
+      "raw_cycles": 430610
+    },
+    {
+      "generation": 15,
+      "job_id": 121,
+      "sequence": 493,
+      "stage": 15,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 404554,
+        "handoff_before_start": 2525066,
+        "gpu_active_observed": 206283052,
+        "guard_check": 1892599,
+        "handoff_after_done": 740498
+      },
+      "raw_cycles": 19937858
+    },
+    {
+      "generation": 15,
+      "job_id": 122,
+      "sequence": 589,
+      "stage": 16,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 399664,
+        "handoff_before_start": 2552755,
+        "gpu_active_observed": 962618066,
+        "guard_check": 1889089,
+        "handoff_after_done": 4410
+      },
+      "raw_cycles": 93315594
+    },
+    {
+      "generation": 15,
+      "job_id": 123,
+      "sequence": 590,
+      "stage": 16,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 400354,
+        "handoff_before_start": 2518285,
+        "gpu_active_observed": 24129902,
+        "guard_check": 1894729,
+        "handoff_after_done": 4260
+      },
+      "raw_cycles": 2282159
+    },
+    {
+      "generation": 15,
+      "job_id": 124,
+      "sequence": 592,
+      "stage": 18,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 403834,
+        "handoff_before_start": 2524405,
+        "gpu_active_observed": 227172802,
+        "guard_check": 1892359,
+        "handoff_after_done": 197582
+      },
+      "raw_cycles": 21977548
+    },
+    {
+      "generation": 15,
+      "job_id": 125,
+      "sequence": 688,
+      "stage": 19,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 400774,
+        "handoff_before_start": 2508205,
+        "gpu_active_observed": 6038610,
+        "guard_check": 1890439,
+        "handoff_after_done": 4680
+      },
+      "raw_cycles": 562460
+    },
+    {
+      "generation": 15,
+      "job_id": 126,
+      "sequence": 689,
+      "stage": 20,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 400864,
+        "handoff_before_start": 2551706,
+        "gpu_active_observed": 74360603,
+        "guard_check": 1893139,
+        "handoff_after_done": 98401
+      },
+      "raw_cycles": 7179146
+    },
+    {
+      "generation": 15,
+      "job_id": 127,
+      "sequence": 713,
+      "stage": 21,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 402334,
+        "handoff_before_start": 2541415,
+        "gpu_active_observed": 120619956,
+        "guard_check": 1891729,
+        "handoff_after_done": 4350
+      },
+      "raw_cycles": 11694919
+    },
+    {
+      "generation": 15,
+      "job_id": 128,
+      "sequence": 714,
+      "stage": 21,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 400744,
+        "handoff_before_start": 2522215,
+        "gpu_active_observed": 4028711,
+        "guard_check": 1898059,
+        "handoff_after_done": 4410
+      },
+      "raw_cycles": 338110
+    },
+    {
+      "generation": 15,
+      "job_id": 129,
+      "sequence": 715,
+      "stage": 22,
+      "op": 12,
+      "timeline_ns": {
+        "guard_init": 401164,
+        "handoff_before_start": 2530015,
+        "gpu_active_observed": 2019470,
+        "guard_check": 1890049,
+        "handoff_after_done": 4290
+      },
+      "raw_cycles": 90704
+    },
+    {
+      "generation": 15,
+      "job_id": 130,
+      "sequence": 716,
+      "stage": 23,
+      "op": 12,
+      "timeline_ns": {
+        "guard_init": 402244,
+        "handoff_before_start": 2539645,
+        "gpu_active_observed": 2025920,
+        "guard_check": 1889119,
+        "handoff_after_done": 4200
+      },
+      "raw_cycles": 186969
+    },
+    {
+      "generation": 15,
+      "job_id": 131,
+      "sequence": 717,
+      "stage": 24,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 401854,
+        "handoff_before_start": 2550146,
+        "gpu_active_observed": 64337833,
+        "guard_check": 1894549,
+        "handoff_after_done": 36271
+      },
+      "raw_cycles": 6102009
+    },
+    {
+      "generation": 15,
+      "job_id": 132,
+      "sequence": 741,
+      "stage": 25,
+      "op": 13,
+      "timeline_ns": {
+        "guard_init": 400834,
+        "handoff_before_start": 2540875,
+        "gpu_active_observed": 4029130,
+        "guard_check": 1897339,
+        "handoff_after_done": 4800
+      },
+      "raw_cycles": 237500
+    },
+    {
+      "generation": 15,
+      "job_id": 133,
+      "sequence": 742,
+      "stage": 26,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 400624,
+        "handoff_before_start": 2521375,
+        "gpu_active_observed": 96506465,
+        "guard_check": 1893949,
+        "handoff_after_done": 373264
+      },
+      "raw_cycles": 9237968
+    },
+    {
+      "generation": 15,
+      "job_id": 134,
+      "sequence": 766,
+      "stage": 27,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 403804,
+        "handoff_before_start": 2520865,
+        "gpu_active_observed": 482794348,
+        "guard_check": 1891999,
+        "handoff_after_done": 5280
+      },
+      "raw_cycles": 46675767
+    },
+    {
+      "generation": 15,
+      "job_id": 135,
+      "sequence": 767,
+      "stage": 27,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 402124,
+        "handoff_before_start": 2517055,
+        "gpu_active_observed": 14081481,
+        "guard_check": 1897339,
+        "handoff_after_done": 4350
+      },
+      "raw_cycles": 1184995
+    },
+    {
+      "generation": 15,
+      "job_id": 136,
+      "sequence": 769,
+      "stage": 29,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 401974,
+        "handoff_before_start": 2517445,
+        "gpu_active_observed": 118428225,
+        "guard_check": 1898209,
+        "handoff_after_done": 102571
+      },
+      "raw_cycles": 11440015
+    },
+    {
+      "generation": 15,
+      "job_id": 137,
+      "sequence": 793,
+      "stage": 30,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 400474,
+        "handoff_before_start": 2517415,
+        "gpu_active_observed": 4030420,
+        "guard_check": 1899349,
+        "handoff_after_done": 4470
+      },
+      "raw_cycles": 307723
+    },
+    {
+      "generation": 15,
+      "job_id": 138,
+      "sequence": 794,
+      "stage": 31,
+      "op": 12,
+      "timeline_ns": {
+        "guard_init": 400504,
+        "handoff_before_start": 2544235,
+        "gpu_active_observed": 2019740,
+        "guard_check": 1887229,
+        "handoff_after_done": 4140
+      },
+      "raw_cycles": 90679
+    },
+    {
+      "generation": 15,
+      "job_id": 139,
+      "sequence": 795,
+      "stage": 32,
+      "op": 12,
+      "timeline_ns": {
+        "guard_init": 401644,
+        "handoff_before_start": 2551466,
+        "gpu_active_observed": 2018570,
+        "guard_check": 1889599,
+        "handoff_after_done": 4140
+      },
+      "raw_cycles": 187157
+    },
+    {
+      "generation": 15,
+      "job_id": 140,
+      "sequence": 796,
+      "stage": 33,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 400924,
+        "handoff_before_start": 2531666,
+        "gpu_active_observed": 64338403,
+        "guard_check": 1893919,
+        "handoff_after_done": 36390
+      },
+      "raw_cycles": 6139818
+    },
+    {
+      "generation": 15,
+      "job_id": 141,
+      "sequence": 820,
+      "stage": 34,
+      "op": 13,
+      "timeline_ns": {
+        "guard_init": 402334,
+        "handoff_before_start": 2508865,
+        "gpu_active_observed": 4034830,
+        "guard_check": 1902229,
+        "handoff_after_done": 4410
+      },
+      "raw_cycles": 237455
+    },
+    {
+      "generation": 15,
+      "job_id": 142,
+      "sequence": 821,
+      "stage": 35,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 403804,
+        "handoff_before_start": 2512075,
+        "gpu_active_observed": 96218433,
+        "guard_check": 1893798,
+        "handoff_after_done": 375904
+      },
+      "raw_cycles": 9205650
+    },
+    {
+      "generation": 15,
+      "job_id": 143,
+      "sequence": 845,
+      "stage": 36,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 399574,
+        "handoff_before_start": 2529956,
+        "gpu_active_observed": 483214022,
+        "guard_check": 1892029,
+        "handoff_after_done": 4380
+      },
+      "raw_cycles": 46675300
+    },
+    {
+      "generation": 15,
+      "job_id": 144,
+      "sequence": 846,
+      "stage": 36,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 400294,
+        "handoff_before_start": 2544685,
+        "gpu_active_observed": 14084601,
+        "guard_check": 1900429,
+        "handoff_after_done": 4260
+      },
+      "raw_cycles": 1186945
+    },
+    {
+      "generation": 15,
+      "job_id": 145,
+      "sequence": 848,
+      "stage": 38,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 412564,
+        "handoff_before_start": 2532385,
+        "gpu_active_observed": 119074821,
+        "guard_check": 1897219,
+        "handoff_after_done": 100711
+      },
+      "raw_cycles": 11471457
+    },
+    {
+      "generation": 15,
+      "job_id": 146,
+      "sequence": 872,
+      "stage": 39,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 405844,
+        "handoff_before_start": 2524496,
+        "gpu_active_observed": 3662886,
+        "guard_check": 1891099,
+        "handoff_after_done": 5580
+      },
+      "raw_cycles": 312015
+    },
+    {
+      "generation": 15,
+      "job_id": 147,
+      "sequence": 873,
+      "stage": 40,
+      "op": 9,
+      "timeline_ns": {
+        "guard_init": 399544,
+        "handoff_before_start": 2542646,
+        "gpu_active_observed": 4030300,
+        "guard_check": 1892719,
+        "handoff_after_done": 4350
+      },
+      "raw_cycles": 235264
+    },
+    {
+      "generation": 15,
+      "job_id": 148,
+      "sequence": 874,
+      "stage": 41,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 403954,
+        "handoff_before_start": 2542976,
+        "gpu_active_observed": 2023190,
+        "guard_check": 1897639,
+        "handoff_after_done": 13050
+      },
+      "raw_cycles": 77170
+    },
+    {
+      "generation": 15,
+      "job_id": 149,
+      "sequence": 877,
+      "stage": 42,
+      "op": 10,
+      "timeline_ns": {
+        "guard_init": 401584,
+        "handoff_before_start": 2533346,
+        "gpu_active_observed": 2026850,
+        "guard_check": 1897459,
+        "handoff_after_done": 5010
+      },
+      "raw_cycles": 180222
+    },
+    {
+      "generation": 15,
+      "job_id": 150,
+      "sequence": 878,
+      "stage": 43,
+      "op": 11,
+      "timeline_ns": {
+        "guard_init": 405004,
+        "handoff_before_start": 2532925,
+        "gpu_active_observed": 4027841,
+        "guard_check": 1898359,
+        "handoff_after_done": 4410
+      },
+      "raw_cycles": 272614
+    },
+    {
+      "generation": 15,
+      "job_id": 151,
+      "sequence": 879,
+      "stage": 44,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 408934,
+        "handoff_before_start": 2508085,
+        "gpu_active_observed": 46249603,
+        "guard_check": 1897219,
+        "handoff_after_done": 53400
+      },
+      "raw_cycles": 4354700
+    },
+    {
+      "generation": 15,
+      "job_id": 152,
+      "sequence": 885,
+      "stage": 45,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 402424,
+        "handoff_before_start": 2515045,
+        "gpu_active_observed": 60538596,
+        "guard_check": 1892239,
+        "handoff_after_done": 4590
+      },
+      "raw_cycles": 5865517
+    },
+    {
+      "generation": 15,
+      "job_id": 153,
+      "sequence": 886,
+      "stage": 45,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 400114,
+        "handoff_before_start": 2521855,
+        "gpu_active_observed": 2018480,
+        "guard_check": 1895149,
+        "handoff_after_done": 4860
+      },
+      "raw_cycles": 189607
+    },
+    {
+      "generation": 15,
+      "job_id": 154,
+      "sequence": 887,
+      "stage": 46,
+      "op": 7,
+      "timeline_ns": {
+        "guard_init": 401734,
+        "handoff_before_start": 2519455,
+        "gpu_active_observed": 6041520,
+        "guard_check": 1889899,
+        "handoff_after_done": 4170
+      },
+      "raw_cycles": 434264
+    },
+    {
+      "generation": 15,
+      "job_id": 155,
+      "sequence": 888,
+      "stage": 47,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 401824,
+        "handoff_before_start": 2557286,
+        "gpu_active_observed": 62266943,
+        "guard_check": 1893049,
+        "handoff_after_done": 4290
+      },
+      "raw_cycles": 5865066
+    },
+    {
+      "generation": 15,
+      "job_id": 156,
+      "sequence": 889,
+      "stage": 47,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 401674,
+        "handoff_before_start": 2541025,
+        "gpu_active_observed": 2024540,
+        "guard_check": 1894669,
+        "handoff_after_done": 4920
+      },
+      "raw_cycles": 190308
+    },
+    {
+      "generation": 15,
+      "job_id": 157,
+      "sequence": 890,
+      "stage": 48,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 402334,
+        "handoff_before_start": 2528425,
+        "gpu_active_observed": 62322533,
+        "guard_check": 1897879,
+        "handoff_after_done": 190802
+      },
+      "raw_cycles": 6030381
+    },
+    {
+      "generation": 15,
+      "job_id": 158,
+      "sequence": 897,
+      "stage": 50,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 401855,
+        "handoff_before_start": 2553655,
+        "gpu_active_observed": 76042630,
+        "guard_check": 2007290,
+        "handoff_after_done": 59131
+      },
+      "raw_cycles": 7219198
+    },
+    {
+      "generation": 15,
+      "job_id": 159,
+      "sequence": 903,
+      "stage": 51,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 401824,
+        "handoff_before_start": 2531185,
+        "gpu_active_observed": 4029131,
+        "guard_check": 1897609,
+        "handoff_after_done": 4380
+      },
+      "raw_cycles": 200298
+    },
+    {
+      "generation": 15,
+      "job_id": 160,
+      "sequence": 904,
+      "stage": 52,
+      "op": 7,
+      "timeline_ns": {
+        "guard_init": 405574,
+        "handoff_before_start": 2533405,
+        "gpu_active_observed": 6045481,
+        "guard_check": 1896079,
+        "handoff_after_done": 4560
+      },
+      "raw_cycles": 427398
+    },
+    {
+      "generation": 15,
+      "job_id": 161,
+      "sequence": 905,
+      "stage": 53,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 400864,
+        "handoff_before_start": 2535325,
+        "gpu_active_observed": 60778838,
+        "guard_check": 1891489,
+        "handoff_after_done": 5070
+      },
+      "raw_cycles": 5865172
+    },
+    {
+      "generation": 15,
+      "job_id": 162,
+      "sequence": 906,
+      "stage": 53,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 401104,
+        "handoff_before_start": 2534545,
+        "gpu_active_observed": 2018421,
+        "guard_check": 1895389,
+        "handoff_after_done": 4380
+      },
+      "raw_cycles": 191234
+    },
+    {
+      "generation": 15,
+      "job_id": 163,
+      "sequence": 907,
+      "stage": 54,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 403204,
+        "handoff_before_start": 2518435,
+        "gpu_active_observed": 62329013,
+        "guard_check": 1891039,
+        "handoff_after_done": 198092
+      },
+      "raw_cycles": 5994154
+    },
+    {
+      "generation": 15,
+      "job_id": 164,
+      "sequence": 914,
+      "stage": 56,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 403384,
+        "handoff_before_start": 2557226,
+        "gpu_active_observed": 76408334,
+        "guard_check": 1893289,
+        "handoff_after_done": 55530
+      },
+      "raw_cycles": 7273182
+    },
+    {
+      "generation": 15,
+      "job_id": 165,
+      "sequence": 920,
+      "stage": 57,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 400204,
+        "handoff_before_start": 2545136,
+        "gpu_active_observed": 4035370,
+        "guard_check": 1897849,
+        "handoff_after_done": 4320
+      },
+      "raw_cycles": 199009
+    },
+    {
+      "generation": 15,
+      "job_id": 166,
+      "sequence": 921,
+      "stage": 58,
+      "op": 7,
+      "timeline_ns": {
+        "guard_init": 399544,
+        "handoff_before_start": 2546726,
+        "gpu_active_observed": 6039240,
+        "guard_check": 1888879,
+        "handoff_after_done": 4380
+      },
+      "raw_cycles": 435222
+    },
+    {
+      "generation": 15,
+      "job_id": 167,
+      "sequence": 922,
+      "stage": 59,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 402184,
+        "handoff_before_start": 2558246,
+        "gpu_active_observed": 61384994,
+        "guard_check": 1891669,
+        "handoff_after_done": 5070
+      },
+      "raw_cycles": 5865416
+    },
+    {
+      "generation": 15,
+      "job_id": 168,
+      "sequence": 923,
+      "stage": 59,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 401404,
+        "handoff_before_start": 2543965,
+        "gpu_active_observed": 2018331,
+        "guard_check": 1897609,
+        "handoff_after_done": 4320
+      },
+      "raw_cycles": 189779
+    },
+    {
+      "generation": 15,
+      "job_id": 169,
+      "sequence": 924,
+      "stage": 60,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 400324,
+        "handoff_before_start": 2541955,
+        "gpu_active_observed": 64338314,
+        "guard_check": 1892629,
+        "handoff_after_done": 190082
+      },
+      "raw_cycles": 6103217
+    },
+    {
+      "generation": 15,
+      "job_id": 170,
+      "sequence": 931,
+      "stage": 62,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 402994,
+        "handoff_before_start": 2517505,
+        "gpu_active_observed": 76468425,
+        "guard_check": 1893769,
+        "handoff_after_done": 55410
+      },
+      "raw_cycles": 7234926
+    },
+    {
+      "generation": 15,
+      "job_id": 171,
+      "sequence": 937,
+      "stage": 63,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 401134,
+        "handoff_before_start": 2557165,
+        "gpu_active_observed": 4034321,
+        "guard_check": 1889178,
+        "handoff_after_done": 4350
+      },
+      "raw_cycles": 196352
+    },
+    {
+      "generation": 15,
+      "job_id": 172,
+      "sequence": 938,
+      "stage": 64,
+      "op": 7,
+      "timeline_ns": {
+        "guard_init": 402364,
+        "handoff_before_start": 2527765,
+        "gpu_active_observed": 6039270,
+        "guard_check": 1899889,
+        "handoff_after_done": 4680
+      },
+      "raw_cycles": 436350
+    },
+    {
+      "generation": 15,
+      "job_id": 173,
+      "sequence": 939,
+      "stage": 65,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 399484,
+        "handoff_before_start": 2523985,
+        "gpu_active_observed": 62336153,
+        "guard_check": 2007710,
+        "handoff_after_done": 5760
+      },
+      "raw_cycles": 5864937
+    },
+    {
+      "generation": 15,
+      "job_id": 174,
+      "sequence": 940,
+      "stage": 65,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 409144,
+        "handoff_before_start": 2548225,
+        "gpu_active_observed": 2018390,
+        "guard_check": 1898599,
+        "handoff_after_done": 4290
+      },
+      "raw_cycles": 189234
+    },
+    {
+      "generation": 15,
+      "job_id": 175,
+      "sequence": 941,
+      "stage": 66,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 400174,
+        "handoff_before_start": 2531095,
+        "gpu_active_observed": 60977050,
+        "guard_check": 1891969,
+        "handoff_after_done": 193262
+      },
+      "raw_cycles": 5906607
+    },
+    {
+      "generation": 15,
+      "job_id": 176,
+      "sequence": 948,
+      "stage": 68,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 403174,
+        "handoff_before_start": 2523625,
+        "gpu_active_observed": 76401554,
+        "guard_check": 1891489,
+        "handoff_after_done": 57571
+      },
+      "raw_cycles": 7260110
+    },
+    {
+      "generation": 15,
+      "job_id": 177,
+      "sequence": 954,
+      "stage": 69,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 400864,
+        "handoff_before_start": 2534965,
+        "gpu_active_observed": 4033421,
+        "guard_check": 1888879,
+        "handoff_after_done": 4260
+      },
+      "raw_cycles": 201134
+    },
+    {
+      "generation": 15,
+      "job_id": 178,
+      "sequence": 955,
+      "stage": 70,
+      "op": 7,
+      "timeline_ns": {
+        "guard_init": 400684,
+        "handoff_before_start": 2533915,
+        "gpu_active_observed": 6039510,
+        "guard_check": 1888878,
+        "handoff_after_done": 4231
+      },
+      "raw_cycles": 429470
+    },
+    {
+      "generation": 15,
+      "job_id": 179,
+      "sequence": 956,
+      "stage": 71,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 400054,
+        "handoff_before_start": 2552335,
+        "gpu_active_observed": 62335223,
+        "guard_check": 2008730,
+        "handoff_after_done": 5911
+      },
+      "raw_cycles": 5865539
+    },
+    {
+      "generation": 15,
+      "job_id": 180,
+      "sequence": 957,
+      "stage": 71,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 407674,
+        "handoff_before_start": 2516875,
+        "gpu_active_observed": 2018120,
+        "guard_check": 1894009,
+        "handoff_after_done": 4200
+      },
+      "raw_cycles": 188876
+    },
+    {
+      "generation": 15,
+      "job_id": 181,
+      "sequence": 958,
+      "stage": 72,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 401794,
+        "handoff_before_start": 2521076,
+        "gpu_active_observed": 62326193,
+        "guard_check": 1890949,
+        "handoff_after_done": 193022
+      },
+      "raw_cycles": 5948462
+    },
+    {
+      "generation": 15,
+      "job_id": 182,
+      "sequence": 965,
+      "stage": 74,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 402364,
+        "handoff_before_start": 2529205,
+        "gpu_active_observed": 76406654,
+        "guard_check": 1885609,
+        "handoff_after_done": 57901
+      },
+      "raw_cycles": 7217241
+    },
+    {
+      "generation": 15,
+      "job_id": 183,
+      "sequence": 971,
+      "stage": 75,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 402124,
+        "handoff_before_start": 2527315,
+        "gpu_active_observed": 4035731,
+        "guard_check": 1901119,
+        "handoff_after_done": 4200
+      },
+      "raw_cycles": 200578
+    },
+    {
+      "generation": 15,
+      "job_id": 184,
+      "sequence": 972,
+      "stage": 76,
+      "op": 7,
+      "timeline_ns": {
+        "guard_init": 400564,
+        "handoff_before_start": 2519545,
+        "gpu_active_observed": 6040351,
+        "guard_check": 1889058,
+        "handoff_after_done": 4230
+      },
+      "raw_cycles": 434932
+    },
+    {
+      "generation": 15,
+      "job_id": 185,
+      "sequence": 973,
+      "stage": 77,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 399604,
+        "handoff_before_start": 2548165,
+        "gpu_active_observed": 61426784,
+        "guard_check": 1891309,
+        "handoff_after_done": 5040
+      },
+      "raw_cycles": 5865145
+    },
+    {
+      "generation": 15,
+      "job_id": 186,
+      "sequence": 974,
+      "stage": 77,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 400114,
+        "handoff_before_start": 2531455,
+        "gpu_active_observed": 2018570,
+        "guard_check": 1896529,
+        "handoff_after_done": 4320
+      },
+      "raw_cycles": 189496
+    },
+    {
+      "generation": 15,
+      "job_id": 187,
+      "sequence": 975,
+      "stage": 78,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 399664,
+        "handoff_before_start": 2525276,
+        "gpu_active_observed": 62330453,
+        "guard_check": 1889989,
+        "handoff_after_done": 199742
+      },
+      "raw_cycles": 5952377
+    },
+    {
+      "generation": 15,
+      "job_id": 188,
+      "sequence": 982,
+      "stage": 80,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 401824,
+        "handoff_before_start": 2537216,
+        "gpu_active_observed": 74345093,
+        "guard_check": 1893769,
+        "handoff_after_done": 55831
+      },
+      "raw_cycles": 7182828
+    },
+    {
+      "generation": 15,
+      "job_id": 189,
+      "sequence": 988,
+      "stage": 81,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 399574,
+        "handoff_before_start": 2543095,
+        "gpu_active_observed": 4034111,
+        "guard_check": 1890439,
+        "handoff_after_done": 4590
+      },
+      "raw_cycles": 203388
+    },
+    {
+      "generation": 15,
+      "job_id": 190,
+      "sequence": 989,
+      "stage": 82,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 400594,
+        "handoff_before_start": 2543305,
+        "gpu_active_observed": 33931030,
+        "guard_check": 1889658,
+        "handoff_after_done": 35491
+      },
+      "raw_cycles": 3167586
+    },
+    {
+      "generation": 15,
+      "job_id": 191,
+      "sequence": 992,
+      "stage": 83,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 402784,
+        "handoff_before_start": 2536585,
+        "gpu_active_observed": 32179012,
+        "guard_check": 1891519,
+        "handoff_after_done": 4410
+      },
+      "raw_cycles": 2950179
+    },
+    {
+      "generation": 15,
+      "job_id": 192,
+      "sequence": 993,
+      "stage": 83,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 400834,
+        "handoff_before_start": 2537576,
+        "gpu_active_observed": 2024600,
+        "guard_check": 1888579,
+        "handoff_after_done": 4260
+      },
+      "raw_cycles": 119612
+    },
+    {
+      "generation": 15,
+      "job_id": 193,
+      "sequence": 994,
+      "stage": 84,
+      "op": 7,
+      "timeline_ns": {
+        "guard_init": 400204,
+        "handoff_before_start": 2555186,
+        "gpu_active_observed": 3052770,
+        "guard_check": 1889599,
+        "handoff_after_done": 5040
+      },
+      "raw_cycles": 270072
+    },
+    {
+      "generation": 15,
+      "job_id": 194,
+      "sequence": 995,
+      "stage": 85,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 401314,
+        "handoff_before_start": 2554676,
+        "gpu_active_observed": 31126511,
+        "guard_check": 1891879,
+        "handoff_after_done": 5070
+      },
+      "raw_cycles": 2950413
+    },
+    {
+      "generation": 15,
+      "job_id": 195,
+      "sequence": 996,
+      "stage": 85,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 400834,
+        "handoff_before_start": 2526326,
+        "gpu_active_observed": 2018810,
+        "guard_check": 1896529,
+        "handoff_after_done": 4500
+      },
+      "raw_cycles": 119129
+    },
+    {
+      "generation": 15,
+      "job_id": 196,
+      "sequence": 997,
+      "stage": 86,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 400414,
+        "handoff_before_start": 2510275,
+        "gpu_active_observed": 50266253,
+        "guard_check": 1890709,
+        "handoff_after_done": 101311
+      },
+      "raw_cycles": 4765079
+    },
+    {
+      "generation": 15,
+      "job_id": 197,
+      "sequence": 1001,
+      "stage": 88,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 401884,
+        "handoff_before_start": 2536556,
+        "gpu_active_observed": 60315213,
+        "guard_check": 1889179,
+        "handoff_after_done": 38340
+      },
+      "raw_cycles": 5658123
+    },
+    {
+      "generation": 15,
+      "job_id": 198,
+      "sequence": 1004,
+      "stage": 89,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 399994,
+        "handoff_before_start": 2542976,
+        "gpu_active_observed": 1546275,
+        "guard_check": 1895899,
+        "handoff_after_done": 15900
+      },
+      "raw_cycles": 125168
+    },
+    {
+      "generation": 15,
+      "job_id": 199,
+      "sequence": 1005,
+      "stage": 90,
+      "op": 7,
+      "timeline_ns": {
+        "guard_init": 403354,
+        "handoff_before_start": 2536615,
+        "gpu_active_observed": 4030960,
+        "guard_check": 1889089,
+        "handoff_after_done": 4290
+      },
+      "raw_cycles": 274298
+    },
+    {
+      "generation": 15,
+      "job_id": 200,
+      "sequence": 1006,
+      "stage": 91,
+      "op": 4,
+      "timeline_ns": {
+        "guard_init": 401674,
+        "handoff_before_start": 2544056,
+        "gpu_active_observed": 32188102,
+        "guard_check": 1889869,
+        "handoff_after_done": 4260
+      },
+      "raw_cycles": 2950141
+    },
+    {
+      "generation": 15,
+      "job_id": 201,
+      "sequence": 1007,
+      "stage": 91,
+      "op": 5,
+      "timeline_ns": {
+        "guard_init": 401734,
+        "handoff_before_start": 2528575,
+        "gpu_active_observed": 2030991,
+        "guard_check": 1894128,
+        "handoff_after_done": 4291
+      },
+      "raw_cycles": 119374
+    },
+    {
+      "generation": 15,
+      "job_id": 202,
+      "sequence": 1008,
+      "stage": 92,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 400174,
+        "handoff_before_start": 2527855,
+        "gpu_active_observed": 50257703,
+        "guard_check": 1899229,
+        "handoff_after_done": 99271
+      },
+      "raw_cycles": 4810604
+    },
+    {
+      "generation": 15,
+      "job_id": 203,
+      "sequence": 1012,
+      "stage": 94,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 402124,
+        "handoff_before_start": 2552246,
+        "gpu_active_observed": 58300693,
+        "guard_check": 1889209,
+        "handoff_after_done": 37200
+      },
+      "raw_cycles": 5608861
+    },
+    {
+      "generation": 15,
+      "job_id": 204,
+      "sequence": 1015,
+      "stage": 95,
+      "op": 8,
+      "timeline_ns": {
+        "guard_init": 401584,
+        "handoff_before_start": 2555876,
+        "gpu_active_observed": 2019680,
+        "guard_check": 1888849,
+        "handoff_after_done": 4290
+      },
+      "raw_cycles": 127098
+    },
+    {
+      "generation": 15,
+      "job_id": 205,
+      "sequence": 1016,
+      "stage": 96,
+      "op": 9,
+      "timeline_ns": {
+        "guard_init": 399664,
+        "handoff_before_start": 2561096,
+        "gpu_active_observed": 2029190,
+        "guard_check": 1899649,
+        "handoff_after_done": 4350
+      },
+      "raw_cycles": 83075
+    },
+    {
+      "generation": 15,
+      "job_id": 206,
+      "sequence": 1017,
+      "stage": 97,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 405484,
+        "handoff_before_start": 2533825,
+        "gpu_active_observed": 7950559,
+        "guard_check": 1891129,
+        "handoff_after_done": 20521
+      },
+      "raw_cycles": 701273
+    },
+    {
+      "generation": 15,
+      "job_id": 207,
+      "sequence": 1021,
+      "stage": 99,
+      "op": 15,
+      "timeline_ns": {
+        "guard_init": 402004,
+        "handoff_before_start": 2557465,
+        "gpu_active_observed": 171689587,
+        "guard_check": 1892839,
+        "handoff_after_done": 75661
+      },
+      "raw_cycles": 16463224
+    }
+  ]
+}

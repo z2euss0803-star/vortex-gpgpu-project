@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-16T13:21:19.364671+00:00",
+  "scope": "Independent read-only subagent evidence audit",
+  "reviewer": "/root/w4_physical_receipt_review",
+  "method": "Actual filesystem report/source readback; no EDA/mutations/remote/process control",
+  "status": "BOUNDED_CLAIMS_SUPPORTED_FULL_SIGNOFF_OPEN",
+  "confirmed": {
+    "source_files_hash_matched": 621,
+    "generated_inputs_hash_matched": 472,
+    "manifest_products_hash_matched": 27,
+    "sealed_files_hash_matched": 29,
+    "routed_nets": 432384,
+    "routing_errors": 0,
+    "wns_ns": 0.404,
+    "whs_ns": 0.01,
+    "wpws_ns": 0.039,
+    "s8_arrays": 4,
+    "dsp_each": 64,
+    "native_exit0": true,
+    "observed_descendant_exit0_count": 4
+  },
+  "findings": [
+    {
+      "priority": "P1",
+      "id": "AVAL318",
+      "source": "evidence/implementation_20261016T112140Z/reports/drc.rpt:31,43",
+      "detail": "64 dynamic OPMODE/PCIN tieoff warnings at non-bottom DSP sites in original FP32 TCU paths; retain OPEN; no functional waiver"
+    },
+    {
+      "priority": "P1",
+      "id": "CLOCK",
+      "source": "candidate/scripts/build_bd.tcl:3; generated ps_bd_ps_0.xci:1680; clocks.rpt:27; timing_summary.rpt:157",
+      "detail": "request100MHz, generatedACT96.968727MHz, STA10.312ns/96.974MHz; not runtime measured or100MHz acceptance"
+    },
+    {
+      "priority": "P1",
+      "id": "EXCEPTIONS",
+      "source": "timing_summary.rpt:85; exceptions.rpt:19,47,57",
+      "detail": "DDR reset no output delay1 and zero/partial exception coverage unresolved; not proof of intended safety or definite RTLerror"
+    },
+    {
+      "priority": "P2",
+      "id": "CDC",
+      "source": "cdc.rpt:17; route_structure.txt:5",
+      "detail": "1213 CDC15Warning rows all memory_fabric; calibration chain separately supported, not blanket CDCacceptance"
+    },
+    {
+      "priority": "P2",
+      "id": "LEGACY_AUDITOR",
+      "source": "candidate/scripts/audit_implementation.py:19",
+      "detail": "Inherited oldbit filename/20.625ns/log assumptions; not run or accepted for current candidate"
+    }
+  ],
+  "disposition": "Accept natural tool completion, all-net routing and reported timing under current constraints only; preserve implementation_admission REFUSED and independent OPEN receipt; no functionality/performance/board inheritance"
+}

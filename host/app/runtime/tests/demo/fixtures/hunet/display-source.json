@@ -1,0 +1,28 @@
+{
+  "scope": "HISTORICAL_OFFSCREEN_FIXTURE_NOT_INFERENCE",
+  "source": {
+    "path": "F:\\obsidian-codex\\codex\\20-原始资料\\IC设计\\神经网络\\HUNet上板验证输入-2026-10-08\\测试图01-多字拓片.webp",
+    "bytes": 27726,
+    "sha256": "af15de374f85c1d83f1e0abbf776bb316e7931cbe9bd6ad02a85be801123f0be"
+  },
+  "original_size": [
+    474,
+    345
+  ],
+  "width": 474,
+  "height": 345,
+  "stride": 1422,
+  "bytes": 490590,
+  "sha256": "6daf55f02b1bbae91b26b197b374f4e102765a53b733c1c30cc47b4439d4124a",
+  "bbox": [
+    40,
+    12,
+    87,
+    105
+  ],
+  "roi_id": "p1_001",
+  "font_sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a",
+  "ascii_header_sha256": "4398cfb73bfdf2cd19d067eb01ea94889c9f8ddf88b2d020f076d63aa3b058ed",
+  "source_result_sha256": "9311f7071cf3b34e44d77f7bf68f597453e8ff68ce7484a84f4dcc7504fad9e5",
+  "font_weight": 400
+}

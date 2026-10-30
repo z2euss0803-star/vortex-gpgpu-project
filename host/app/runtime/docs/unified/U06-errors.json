@@ -1,0 +1,154 @@
+[
+  {
+    "id": "U06-BOUNCE-001",
+    "run": "U06-bounce-reservation-red-003",
+    "exit": 2,
+    "cause": "v2 private stack occupies old legacy bounce; the new native bounce region was not excluded by the public allocator",
+    "fix": "dedicated v2 bounce at PS+0xfe000; private stack stays PS+0xff000; allocator skips bounce, native mapping rejects overlap; legacy adapter unchanged",
+    "verified_run": "U06-components-regression-018"
+  },
+  {
+    "id": "U06-COMPILE-001",
+    "run": "U06-control-functional-006",
+    "exit": 2,
+    "cause": "GCC7 Werror misleading indentation in program info branch",
+    "fix": "split guard and assignment; keep Werror",
+    "verified_run": "U06-control-sanitize-007"
+  },
+  {
+    "id": "U06-PROGREF-001",
+    "run": "U06-backend-lifetime-red-010",
+    "exit": 2,
+    "cause": "user backend erased program mapping after releasing only one duplicate load reference",
+    "fix": "track load users matching core, remove metadata only after last successful release",
+    "verified_run": "U06-components-regression-018"
+  },
+  {
+    "id": "U06-ACK-001",
+    "run": "U06-backend-ack-red-011",
+    "exit": 2,
+    "cause": "after kernel ACK retired but envelope copy faulted, user staging could not be explicitly recovered",
+    "fix": "retain first EFAULT; a later explicit ACK resolves known ESTALE and kernel-checked unpinned buffer release; no SUBMIT retry",
+    "verified_run": "U06-components-regression-018"
+  },
+  {
+    "id": "U06-CAPS-001",
+    "run": "U06-caps-admission-red-013",
+    "exit": 2,
+    "cause": "draft CAPS producer zero feature placeholder could not feed provider admission",
+    "fix": "advertise native INT16 or P8 graphics in new v2 feature_mask; same envelope/layout/old ABI; provider remains exclusive",
+    "verified_run": "U06-components-fresh-015"
+  },
+  {
+    "id": "U06-SLICE-001",
+    "run": "U06-backend-slice-release-red-014",
+    "exit": 2,
+    "cause": "user adapter accepted a subview release and requested whole kernel object release",
+    "fix": "require offset0 and full base length before release ioctl",
+    "verified_run": "U06-components-regression-018"
+  },
+  {
+    "id": "U06-KERNEL-001",
+    "run": "U06-components-cross-016",
+    "exit": 2,
+    "cause": "private callback member barrier expanded Linux barrier() macro",
+    "fix": "rename private callback memory_barrier; keep real barrier hook and Werror",
+    "verified_run": "U06-components-cross-017"
+  },
+  {
+    "id": "U06-GUARD-002",
+    "run": "U06-execution-guard-red-019",
+    "exit": 2,
+    "cause": "native public buffer had no head or tail reservation",
+    "fix": "reserve private head/tail padding with GPU payload offset and real native checks",
+    "verified_run": "U06-execution-guard-green-020"
+  },
+  {
+    "id": "U06-SNAPSHOT-001",
+    "run": "U06-snapshot-error-red-025",
+    "exit": 2,
+    "cause": "post-DONE IO error discarded raw status and elapsed registers",
+    "fix": "capture partial snapshot before fail/quarantine and retain all job pins",
+    "verified_run": "U06-snapshot-error-green-026"
+  },
+  {
+    "id": "U06-COMPILE-002",
+    "run": "U06-execution-lifecycle-green-023",
+    "exit": 2,
+    "cause": "GCC7 Werror misleading indentation in native execution",
+    "fix": "split independent guards; keep Werror",
+    "verified_run": "U06-execution-lifecycle-green-024"
+  },
+  {
+    "id": "U06-KERNEL-002",
+    "run": "U06-startup-cross-029",
+    "exit": 2,
+    "cause": "linux member expanded GCC predefined linux macro",
+    "fix": "rename private startup member adapter without changing UAPI",
+    "verified_run": "U06-accepted-cross-043"
+  },
+  {
+    "id": "U06-PRIVATE-GUARD-001",
+    "run": "U06-private-guard-red-030",
+    "exit": 2,
+    "cause": "fixed private stack boundary corruption not detected",
+    "fix": "bind trusted private CRT/stack guard rules and reject overlap with retirement words",
+    "verified_run": "U06-private-guard-green-031"
+  },
+  {
+    "id": "U06-BYTE-GUARD-001",
+    "run": "U06-byte-guard-red-033",
+    "exit": 2,
+    "cause": "alignment padding after logical payload was outside tail guard checks",
+    "fix": "cover exact logical end through alignment padding and allocated tail",
+    "verified_run": "U06-final-regression-039"
+  },
+  {
+    "id": "U06-DONE-IDLE-001",
+    "run": "U06-done-idle-red-034",
+    "exit": 2,
+    "cause": "idle primitive admitted sticky DONE without preceding retirement ACK",
+    "fix": "require exact zero status before prepare/START and after ACK",
+    "verified_run": "U06-final-regression-039"
+  },
+  {
+    "id": "U06-ORACLE-001",
+    "run": "U06-full-regression-035",
+    "exit": 2,
+    "cause": "cold DONE rejection moved earlier to exact idle gate; test still expected ENODEV",
+    "fix": "expect EBUSY at the earlier busy gate, still refuse startup",
+    "verified_run": "U06-final-regression-039"
+  },
+  {
+    "id": "U06-ACK-SNAPSHOT-001",
+    "run": "U06-ack-fault-snapshot-red-037",
+    "exit": 2,
+    "cause": "ACK failure retained the preceding DONE snapshot instead of the new hardware error",
+    "fix": "snapshot after ACK failure before quarantine; preserve raw fault registers and pins",
+    "verified_run": "U06-final-regression-039"
+  },
+  {
+    "id": "U06-ACK-TIMING-001",
+    "run": "U06-ack-timing-red-038",
+    "exit": 2,
+    "cause": "delivered completion omitted ACK verification timing and IO",
+    "fix": "copy provider timing totals after successful ACK without replacing the saved DONE registers",
+    "verified_run": "U06-final-regression-039"
+  },
+  {
+    "id": "U06-HART-GUARD-001",
+    "run": "U06-per-hart-guard-red-041",
+    "exit": 2,
+    "cause": "single private guard span could not retain the legacy per-hart strided checks",
+    "fix": "bounded count<=64/stride guard groups, check every repeated span and every overlap",
+    "verified_run": "U06-accepted-regression-042"
+  },
+  {
+    "id": "U06-LOCAL-TRANSPORT-001",
+    "run": "LOCAL_COLLECTOR_PREPARATION",
+    "exit": 1,
+    "cause": "PowerShell rejected nested quoted python command before Python execution",
+    "fix": "write a local preparation script with literal strings; no remote/data mutation occurred",
+    "verified_run": "LOCAL_PREPARE_COLLECT_FINAL_EXIT0"
+  }
+]

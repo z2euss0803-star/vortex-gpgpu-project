@@ -1,0 +1,12 @@
+#pragma once
+// Actual R13 RV32 static build. GPU execution and performance unverified.
+namespace vxnn {
+inline constexpr const char*mosaic_reuse_v8_code_sha256="618632402b615385dd165f7fa25a4526843cb7e975517a3c7fb16d27435fa34c";
+inline constexpr const char*mosaic_reuse_v8_validator_sha256="6745a8a351506d093686a1308afe65d47344aefcfe7fbddf1fc4ae1108101dc2";
+inline constexpr const char*mosaic_reuse_v8_entry_sha256="0cb4a8fe58ef483a4a2db8ace7db8105d7ea15007acf60386a62500942f02693";
+inline constexpr const char*mosaic_reuse_v8_schedule_sha256="d40fcbf6926999f7203facd9c5c3da533b769fbb64ed83db23ea1989b318e424";
+inline constexpr const char*mosaic_reuse_v8_work_layout_sha256="a92fbd5aee3fc72aac04b475bfedf13b3d764d8d613839700a4f761a83a5ed41";
+inline constexpr const char*mosaic_reuse_v8_schema_sha256="9a03920a64917e13254a20e235bfb01bee937a0d199594def5f578daa6d21dd4";
+inline constexpr const char*mosaic_reuse_v8_variant="reuse-v8";
+inline constexpr const char*mosaic_reuse_v8_directory="mosaic-int16-v8";
+}

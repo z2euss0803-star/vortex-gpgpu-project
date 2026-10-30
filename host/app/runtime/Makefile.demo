@@ -1,0 +1,162 @@
+.PHONY: test-demo-identity
+DEMO_JSON_PREFIX ?=
+DEMO_JSON_CFLAGS ?= $(if $(DEMO_JSON_PREFIX),-I$(DEMO_JSON_PREFIX)/include,$(shell pkg-config --cflags json-c))
+DEMO_JSON_LIBS ?= $(if $(DEMO_JSON_PREFIX),$(DEMO_JSON_PREFIX)/lib/libjson-c.a -lm,$(shell pkg-config --libs json-c))
+DEMO_DRM_PREFIX ?=
+DEMO_DRM_CFLAGS ?= $(if $(DEMO_DRM_PREFIX),-I$(DEMO_DRM_PREFIX)/include -I$(DEMO_DRM_PREFIX)/include/libdrm,$(shell pkg-config --cflags libdrm))
+DEMO_DRM_LIBS ?= $(if $(DEMO_DRM_PREFIX),$(DEMO_DRM_PREFIX)/lib/libdrm.a,$(shell pkg-config --libs libdrm))
+test-demo-identity:
+	$(PYTHON) -m unittest tests.demo.test_identity -v
+	@echo DEMO_IDENTITY_HOST_PASS_NOT_BOARD
+
+.PHONY: test-demo-contracts
+$(OUT)/demo/test_result_codec: demo/json.c tests/demo/test_result_codec.c include/vxl/demo_result.h
+	mkdir -p $(OUT)/demo
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) demo/json.c tests/demo/test_result_codec.c $(DEMO_JSON_LIBS) -o $@
+
+test-demo-contracts: $(OUT)/demo/test_result_codec
+	$(PYTHON) -m unittest tests.demo.test_contracts -v
+	$(OUT)/demo/test_result_codec tests/demo/fixtures/run-v1.json $(OUT)/demo/codec-roundtrip.json
+	$(PYTHON) -m tests.demo.verify_codec tests/demo/fixtures/run-v1.json $(OUT)/demo/codec-roundtrip.json
+
+DEMO_C_SOURCES = demo/json.c demo/store.c demo/owner.c demo/runner.c core/hunet_sha256.c
+DEMO_C_OBJECTS = $(patsubst %.c,$(OUT)/demo/%.o,$(DEMO_C_SOURCES))
+DEMO_VIEWER_OBJECTS = $(patsubst %.c,$(OUT)/demo/%.o,viewer/frame.c viewer/scale.c viewer/compose.c viewer/glyph.c viewer/hunet_frame.c)
+$(OUT)/demo/%.o: %.c include/vxl/demo_result.h include/vxl/demo_runner.h include/vxl/demo_hunet.h include/vxl/demo_frame.h
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) -c $< -o $@
+$(OUT)/demo/test_runner: tests/demo/test_runner.c $(DEMO_C_OBJECTS)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+$(OUT)/demo/test_store: tests/demo/test_store.c $(DEMO_C_OBJECTS)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+DEMO_RELEASE_SOURCE ?= demo/release_unbound.c
+$(OUT)/demo/vxl_demo: tools/vxl_demo.cpp $(DEMO_RELEASE_SOURCE) $(OUT)/demo/demo/dispatch.o $(OUT)/demo/demo/switch.o $(DEMO_C_OBJECTS)
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< $(DEMO_RELEASE_SOURCE) $(OUT)/demo/demo/dispatch.o $(OUT)/demo/demo/switch.o $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -pthread -o $@
+.PHONY: test-demo-runner
+test-demo-runner: $(OUT)/demo/test_runner $(OUT)/demo/test_store $(OUT)/demo/vxl_demo
+	$(OUT)/demo/test_runner tests/demo/fixtures/run-v1.json
+	$(OUT)/demo/test_store tests/demo/fixtures/run-v1.json
+	DEMO_RUNNER_BINARY=$(abspath $(OUT)/demo/vxl_demo) $(PYTHON) -m unittest tests.demo.test_local_runner -v
+
+$(OUT)/demo/test_hunet_%: tests/demo/test_hunet_%.cpp adapters/hunet_result.cpp adapters/hunet_glyph.cpp include/vxl/demo_hunet.h $(DEMO_C_OBJECTS)
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -Iinclude $< adapters/hunet_result.cpp adapters/hunet_glyph.cpp $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+.PHONY: test-demo-hunet-result test-demo-hunet-glyph
+test-demo-hunet-result: $(OUT)/demo/test_hunet_result
+	$< data/demo/hunet-labels.bin data/demo/hunet-glyphs-u8.bin tests/demo/fixtures/hunet/logits.f32
+test-demo-hunet-glyph: $(OUT)/demo/test_hunet_glyph
+	$<
+$(OUT)/demo/test_viewer_%: tests/viewer/test_%.c viewer/frame.c viewer/scale.c viewer/compose.c viewer/glyph.c viewer/hunet_frame.c generated/demo/ascii.h $(DEMO_C_OBJECTS)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $< viewer/frame.c viewer/scale.c viewer/compose.c viewer/glyph.c viewer/hunet_frame.c $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+.PHONY: test-demo-frame test-demo-compose test-demo-scale
+test-demo-frame: $(OUT)/demo/test_viewer_frame
+	$<
+test-demo-compose: $(OUT)/demo/test_viewer_compose
+	$<
+test-demo-scale: $(OUT)/demo/test_viewer_scale
+	$<
+test-demo-hunet-frame: $(OUT)/demo/test_viewer_hunet_frame
+	$<
+$(OUT)/demo/test_frame_publish: tests/viewer/test_publish.c viewer/publish.c viewer/ipc.c $(DEMO_VIEWER_OBJECTS) $(DEMO_C_OBJECTS)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< viewer/publish.c viewer/ipc.c $(DEMO_VIEWER_OBJECTS) $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+test-demo-frame-publish: $(OUT)/demo/test_frame_publish
+	$< tests/demo/fixtures/run-v1.json
+$(OUT)/demo/viewer/glyph.o: generated/demo/ascii.h
+$(OUT)/demo/test_kms: tests/viewer/test_kms.c viewer/viewer.c viewer/kms.h $(DEMO_C_OBJECTS) $(OUT)/demo/viewer/frame.o
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $< viewer/viewer.c $(OUT)/demo/viewer/frame.o $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+test-demo-kms: $(OUT)/demo/test_kms
+	$<
+$(OUT)/demo/test_native_restore: tests/viewer/test_native_restore.c viewer/kms.c viewer/viewer.c viewer/kms.h
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_DRM_CFLAGS) $< $(DEMO_DRM_LIBS) -o $@
+test-demo-native-restore: $(OUT)/demo/test_native_restore
+	$<
+$(OUT)/demo/test_viewer_ipc: tests/viewer/test_ipc.c viewer/ipc.c $(OUT)/demo/viewer/frame.o $(DEMO_C_OBJECTS)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< viewer/ipc.c $(OUT)/demo/viewer/frame.o $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+test-demo-ipc: test-demo-frame-publish $(OUT)/demo/test_viewer_ipc
+	$(OUT)/demo/test_viewer_ipc
+$(OUT)/demo/viewer/kms.o: viewer/kms.c viewer/kms.h
+	mkdir -p $(dir $@)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_DRM_CFLAGS) -c $< -o $@
+demo-native-kms-object: $(OUT)/demo/viewer/kms.o
+$(OUT)/demo/vxl_dp_viewer: tools/vxl_dp_viewer.c viewer/ipc.c viewer/viewer.c viewer/present.c $(OUT)/demo/viewer/kms.o $(OUT)/demo/viewer/frame.o $(DEMO_C_OBJECTS)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $(DEMO_DRM_CFLAGS) $< viewer/ipc.c viewer/viewer.c viewer/present.c $(OUT)/demo/viewer/kms.o $(OUT)/demo/viewer/frame.o $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) $(DEMO_DRM_LIBS) -o $@
+demo-viewer: $(OUT)/demo/vxl_dp_viewer
+$(OUT)/demo/test_timing: tests/demo/test_timing.c demo/timing.c $(DEMO_C_OBJECTS)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< demo/timing.c $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+test-demo-timing: $(OUT)/demo/test_timing
+	$<
+$(OUT)/demo/test_evidence: tests/demo/test_evidence.c demo/evidence.c $(DEMO_C_OBJECTS)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< demo/evidence.c $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+test-demo-evidence: $(OUT)/demo/test_evidence
+	$<
+.PHONY: test-demo-offline test-demo-sanitize
+test-demo-offline: test-demo-native-restore test-demo-present test-demo-identity test-demo-contracts test-demo-runner test-demo-hunet-result test-demo-hunet-glyph test-demo-frame test-demo-compose test-demo-scale test-demo-hunet-frame test-demo-kms test-demo-ipc test-demo-timing test-demo-evidence
+	$(PYTHON) -m unittest tests.demo.test_control tests.demo.test_resources tests.demo.test_timing tests.demo.test_cross_audit tests.demo.test_release tests.demo.test_prepare_field -v
+	@echo DEMO_IMPLEMENTED_COMPONENTS_PASS_NOT_MOSAIC_GRAPH_NOT_SYSTEM_NOT_BOARD
+test-demo-sanitize:
+	$(MAKE) -f Makefile.demo -j1 OUT=$(OUT)/sanitize PYTHON=$(PYTHON) DEMO_JSON_PREFIX=$(DEMO_JSON_PREFIX) CC='$(CC) -fsanitize=address,undefined -fno-omit-frame-pointer' CXX='$(CXX) -fsanitize=address,undefined -fno-omit-frame-pointer' test-demo-offline
+$(OUT)/demo/historical_preview: tests/viewer/historical_preview.cpp adapters/hunet_result.cpp adapters/hunet_glyph.cpp $(DEMO_VIEWER_OBJECTS) $(DEMO_C_OBJECTS)
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< adapters/hunet_result.cpp adapters/hunet_glyph.cpp $(DEMO_VIEWER_OBJECTS) $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+
+$(OUT)/demo/test_present: tests/viewer/test_present.c viewer/present.c viewer/viewer.c viewer/kms.h $(DEMO_C_OBJECTS) $(OUT)/demo/viewer/frame.o
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< viewer/present.c viewer/viewer.c $(OUT)/demo/viewer/frame.o $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+test-demo-present: $(OUT)/demo/test_present
+	$<
+
+test-demo-profile-switch: $(GEN)
+	mkdir -p $(OUT)/demo
+	$(CC) $(CPPFLAGS) $(CFLAGS) tests/demo/test_profile_switch.c $(CORE) -o $(OUT)/demo/test_profile_switch
+	$(OUT)/demo/test_profile_switch
+
+test-demo-profile-driver: $(GEN)
+	mkdir -p $(OUT)/demo
+	$(CC) $(CPPFLAGS) $(CFLAGS) tests/demo/test_profile_driver.c $(CORE) -o $(OUT)/demo/test_profile_driver
+	$(OUT)/demo/test_profile_driver
+
+test-demo-hunet-release: $(GEN)
+	mkdir -p $(OUT)/demo
+	$(CC) $(CPPFLAGS) $(CFLAGS) tests/demo/test_hunet_release.c $(CORE) -o $(OUT)/demo/test_hunet_release
+	$(OUT)/demo/test_hunet_release
+
+test-demo-hunet-borrowed: $(GEN)
+	mkdir -p $(OUT)/demo
+	$(CC) $(CPPFLAGS) $(CFLAGS) -D_GNU_SOURCE tests/demo/test_hunet_borrowed.c userspace/hunet_client.c userspace/hunet_fused_client.c $(CORE) -Wl,--wrap=ioctl -Wl,--wrap=open -Wl,--wrap=close -o $(OUT)/demo/test_hunet_borrowed
+	$(OUT)/demo/test_hunet_borrowed
+
+$(OUT)/demo/test_dispatch: tests/demo/test_dispatch.c demo/dispatch.c demo/switch.c $(DEMO_C_OBJECTS)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< demo/dispatch.c demo/switch.c $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+test-demo-dispatch: $(OUT)/demo/test_dispatch
+	$< tests/demo/fixtures/run-v1.json
+test-demo-switch: $(OUT)/demo/test_dispatch
+	$< tests/demo/fixtures/run-v1.json --switch
+
+$(OUT)/demo/test_hunet_observer: tests/demo/test_hunet_observer.cpp $(FUSED_TOOLS) $(FUSED_CLIENT) $(patsubst %.c,$(OUT)/%.o,$(CORE)) $(OUT)/tests/hunet_fused/runtime_fixture.o
+	mkdir -p $(OUT)/demo
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -fno-fast-math -ffp-contract=off $< $(FUSED_TOOLS) $(sort $(FUSED_CLIENT) $(patsubst %.c,$(OUT)/%.o,$(CORE))) $(OUT)/tests/hunet_fused/runtime_fixture.o -pthread -lm -Wl,--wrap=open -Wl,--wrap=close -Wl,--wrap=ioctl -Wl,--wrap=hunet_cpu_gelu4 -o $@
+test-demo-hunet-observer: $(OUT)/demo/test_hunet_observer
+	$< $(abspath data/demo/hunet-input-roi0.f32) $(OUT)/demo/hunet-observer-run
+
+$(OUT)/tests/demo/hunet_runtime_fixture.o: tests/hunet_fused/runtime_fixture.c $(HUNET_HEADERS)
+	mkdir -p $(dir $@)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -DVXL_DEMO_SOFTWARE_FIXTURE -c $< -o $@
+$(OUT)/demo/test_hunet_runner: tests/demo/test_hunet_runner.cpp adapters/hunet_runner.cpp adapters/hunet_result.cpp adapters/hunet_glyph.cpp $(FUSED_TOOLS) $(FUSED_CLIENT) $(patsubst %.c,$(OUT)/%.o,$(CORE)) $(OUT)/tests/demo/hunet_runtime_fixture.o $(DEMO_C_OBJECTS) $(DEMO_VIEWER_OBJECTS)
+	mkdir -p $(OUT)/demo
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(DEMO_JSON_CFLAGS) -DDEMO_SOFTWARE_MODEL_TEST -fno-fast-math -ffp-contract=off $< adapters/hunet_runner.cpp adapters/hunet_result.cpp adapters/hunet_glyph.cpp $(FUSED_TOOLS) $(sort $(FUSED_CLIENT) $(patsubst %.c,$(OUT)/%.o,$(CORE)) $(filter-out $(OUT)/demo/core/hunet_sha256.o,$(DEMO_C_OBJECTS)) $(DEMO_VIEWER_OBJECTS)) $(OUT)/tests/demo/hunet_runtime_fixture.o $(DEMO_JSON_LIBS) -pthread -lm -ldl -Wl,--wrap=open -Wl,--wrap=close -Wl,--wrap=ioctl -Wl,--wrap=hunet_cpu_gelu4 -o $@
+test-demo-hunet-runner: $(OUT)/demo/test_hunet_runner
+	$< $(abspath data/demo/hunet-input-roi0.f32) data/demo/hunet-labels.bin data/demo/hunet-glyphs-u8.bin
+
+$(OUT)/demo/test_prepare_display: tests/viewer/test_prepare.c viewer/prepare.c viewer/publish.c viewer/send.c $(DEMO_VIEWER_OBJECTS) $(DEMO_C_OBJECTS)
+	$(CC) -std=c11 -O2 -g -Wall -Wextra -Werror -Iinclude $(DEMO_JSON_CFLAGS) $< viewer/prepare.c viewer/publish.c viewer/send.c $(DEMO_VIEWER_OBJECTS) $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -o $@
+test-demo-prepare-display: $(OUT)/demo/test_prepare_display
+	$< tests/demo/fixtures/run-v1.json
+
+$(OUT)/demo/vxl_demo_async_model: tools/vxl_demo.cpp tests/demo/release_fixture.cpp $(OUT)/demo/demo/dispatch.o $(OUT)/demo/demo/switch.o $(DEMO_C_OBJECTS)
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -DDEMO_SOFTWARE_MODEL_TEST -Iinclude $(DEMO_JSON_CFLAGS) $< tests/demo/release_fixture.cpp $(OUT)/demo/demo/dispatch.o $(OUT)/demo/demo/switch.o $(DEMO_C_OBJECTS) $(DEMO_JSON_LIBS) -pthread -o $@
+test-demo-async: $(OUT)/demo/vxl_demo_async_model
+	DEMO_RUNNER_BINARY=$(abspath $<) $(PYTHON) -m unittest tests.demo.test_async_runner -v
+
+$(OUT)/demo/test_dual_wiring: tests/demo/test_dual_wiring.cpp adapters/dual_runtime.cpp adapters/hunet_runner.cpp adapters/mosaic_runner.cpp $(FUSED_TOOLS) $(FUSED_CLIENT) $(patsubst %.c,$(OUT)/%.o,$(CORE)) $(OUT)/mosaic/session/shim.o $(OUT)/mosaic/session/userspace/mosaic_client.o $(OUT)/mosaic/session/mosaic/assets.o $(OUT)/demo/demo/dispatch.o $(OUT)/demo/demo/switch.o $(DEMO_C_OBJECTS) $(DEMO_VIEWER_OBJECTS) $(OUT)/demo/viewer/send.o $(OUT)/demo/viewer/prepare.o $(OUT)/demo/viewer/publish.o
+	mkdir -p $(OUT)/demo
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(DEMO_JSON_CFLAGS) -DDEMO_SOFTWARE_MODEL_TEST $< adapters/dual_runtime.cpp adapters/hunet_runner.cpp adapters/mosaic_runner.cpp adapters/hunet_result.cpp adapters/hunet_glyph.cpp $(FUSED_TOOLS) $(sort $(FUSED_CLIENT) $(patsubst %.c,$(OUT)/%.o,$(CORE)) $(filter-out $(OUT)/demo/core/hunet_sha256.o,$(DEMO_C_OBJECTS)) $(DEMO_VIEWER_OBJECTS)) $(OUT)/mosaic/session/shim.o $(OUT)/mosaic/session/userspace/mosaic_client.o $(OUT)/mosaic/session/mosaic/assets.o $(OUT)/demo/demo/dispatch.o $(OUT)/demo/demo/switch.o $(OUT)/demo/viewer/send.o $(OUT)/demo/viewer/prepare.o $(OUT)/demo/viewer/publish.o $(DEMO_JSON_LIBS) -pthread -lm -ldl -Wl,--wrap=ioctl -o $@
+test-demo-dual-wiring: $(OUT)/demo/test_dual_wiring
+	$< $(MOSAIC_REAL_FIXTURE)/weights.ms8 data/demo/hunet-labels.bin data/demo/hunet-glyphs-u8.bin

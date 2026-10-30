@@ -1,0 +1,31 @@
+{
+  "scope": "COPIED_HISTORICAL_ONLY_NOT_NEW_GPU",
+  "run_id": "39fb432d2a3549a5abdf8644ca6c2d6e",
+  "source": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_hunet_cpu_roi_fastwait_20261015\\evidence\\w4-nodiag\\39fb432d2a3549a5abdf8644ca6c2d6e",
+  "files": {
+    "raw/run.json": {
+      "bytes": 1622,
+      "sha256": "9aed45cd1e677b9e31871fe965d997f0f8f1fb52203b914cdc14f7d976e548c0"
+    },
+    "raw/timing.json": {
+      "bytes": 18277,
+      "sha256": "44d3e991d7287755ba99f4aa3133feda42f4b17ff05eceed7022c093b9e4c7c4"
+    },
+    "raw/gpu-records.bin": {
+      "bytes": 46144,
+      "sha256": "757179d5e61a744f73598688124a6c1f968f70e987fb93ed1fb55b414c42dd8d"
+    },
+    "raw/cpu-records.bin": {
+      "bytes": 9256,
+      "sha256": "67b77710052ee2a6f24f41000ce5fd7f531a60f83ef0707fb3daf60583809d23"
+    },
+    "timing-detailed.json": {
+      "bytes": 5045,
+      "sha256": "4cd1f114048811c53b01285a270faefcd3b3bdee68ad35fc39210882881d26dc"
+    },
+    "driver-timing-analysis.json": {
+      "bytes": 39279,
+      "sha256": "a3fb97715479e20b96a461353c7f033fcfa42d43e8dd4b97080afbeadd3e5375"
+    }
+  }
+}

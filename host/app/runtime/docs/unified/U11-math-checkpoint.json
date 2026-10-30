@@ -1,0 +1,25 @@
+{
+  "members": 15,
+  "logical_bytes": 319794,
+  "archive_bytes": 106053,
+  "sha256": "0ed29f941e806bd50a0372f1dc14e12e55efef49aa0d19f4d712dee619d00051",
+  "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U11-math-evidence.tar.gz",
+  "gpu_raw_cycles": null,
+  "host": "z2euss-virtual-machine",
+  "uid": 1000,
+  "free_disk": 2231668736,
+  "verified_members": 15,
+  "members_sha256": "ea10612e009291074e4c71046675a4fd18ea79dcd86c9d7ce5968836e4734110",
+  "hardlink_members": 0,
+  "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U11-math\\raw-and-artifacts.tar.gz",
+  "scope": "U11_ACTUAL_MATH_SOURCE_HOST_PE_PROTOCOL_MODEL_NOT_RTL_GPU_BOARD",
+  "source_manifest_checks": {
+    "U11-int16-math-green-002": 1443,
+    "U11-int16-math-sanitize-003": 1443
+  },
+  "first_functional_red": "U11-int16-math-red-001",
+  "first_child_exit": 61,
+  "normal": "U11-int16-math-green-002",
+  "sanitizer": "U11-int16-math-sanitize-003",
+  "full_u11_complete": false
+}

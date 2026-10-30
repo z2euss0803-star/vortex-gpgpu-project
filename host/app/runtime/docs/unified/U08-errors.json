@@ -1,0 +1,43 @@
+[
+  {
+    "id": "U08-RED-001",
+    "run": "U08-red-001",
+    "cause": "Expected functional RED: CPU pool/GELU valid case rejected by scaffolds",
+    "fix": "Implement resident pool, exact ranges and original erf staging",
+    "expected_red": true
+  },
+  {
+    "id": "U08-WORKER-001",
+    "run": "U08-process-worker-red-003",
+    "cause": "A second CPU pool could create another4 resident workers in the same service process",
+    "fix": "Global four-worker admission, release only after successful joins; unknown join retains slots/state",
+    "expected_red": true
+  },
+  {
+    "id": "U08-INPUT-001",
+    "run": "U08-input-import-006",
+    "cause": "Import helper used runtime-source/env.json instead of parent coordination env.json",
+    "fix": "Correct only retry helper, preserve failed006 and successful007; no source/input changes"
+  },
+  {
+    "id": "U08-NUMERIC-001",
+    "run": "U08-real13-normal-008",
+    "cause": "Host pool equals same-library scalar on1869056 values but differs from historical A53 erf outputs",
+    "fix": "Do not weaken frozen reference or claimA53 PASS; preserve raw outputs and differences; inspect exact AArch64 runtime offline",
+    "status": "MATCHED_AARCH64_EMULATION_EQUALS_FROZEN_A53_ALL13_NOT_BOARD",
+    "resolution_run": "U08-aarch64-emulation-012",
+    "resolution": "All1869056 elements bitwise equal frozen A53 erf reference with matched AArch64 ELF/rootfs libm; x86 host differences retained; no threshold/formula change"
+  },
+  {
+    "id": "U08-QEMU-DIAGNOSTIC-001",
+    "run": "U08-qemu-dependency-011",
+    "cause": "qemu2.11 CPU help intentionally exits1 while printing valid supported CPUs; helper treated it as dependency failure",
+    "fix": "Preserve011; verify exact signed package SHA and binary bytes, allow only help exit1 plus required CPU markers in012"
+  },
+  {
+    "id": "U08-EVIDENCE-001",
+    "run": "U08-final-evidence",
+    "cause": "Archive helper assumed standalone import/dependency helpers use standard runs/name directory",
+    "fix": "Preserve failed helper; retry archives actual test runs plus B import receipt/tools, hashes all standalone A helper logs separately; no tests rerun"
+  }
+]

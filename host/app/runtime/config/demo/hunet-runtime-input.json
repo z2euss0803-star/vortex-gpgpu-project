@@ -1,0 +1,7 @@
+{
+  "scope": "FROZEN_REAL_ROI_INPUT_FOR_OFFLINE_SOFTWARE_PROTOCOL_TEST_NOT_BOARD",
+  "source": "F:\\obsidian-codex\\codex\\work\\hunet_original_tcu_20261008_v1\\data\\board_inputs\\p1_001.f32",
+  "bytes": 196608,
+  "sha256": "de5513346d7922032e415b2d5eb40a5862b084a2ed264b73602ab8f00769f0de",
+  "path": "data/demo/hunet-input-roi0.f32"
+}

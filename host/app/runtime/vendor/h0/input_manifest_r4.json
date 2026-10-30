@@ -1,0 +1,14 @@
+{
+  "RecordedAt": "2026-10-07T08:40:55.2235968Z",
+  "Purpose": "Isolated environment verification using H0 r4 diagnostic baseline from 2026-10-05 implementation plan",
+  "SourceXSA": "F:\\obsidian-codex\\codex\\work\\vortex_v23_dual_ddr_functional_r4_20261003\\delivery\\gpgpu_with_bit.xsa",
+  "CopyXSA": "F:\\obsidian-codex\\codex\\work\\ab_petalinux_verification_20261007\\20261007-151536\\inputs\\r4_diag\\gpgpu_with_bit.xsa",
+  "Bytes": 8041180,
+  "SHA256": "01BC96AD997FB0D18967D196649697D2C443E5AD86A27FADDD1A59CF278BF2D6",
+  "VivadoVersion": "2020.1",
+  "Part": "xczu11eg-ffvc1156-2-i",
+  "EmbeddedAndExternalBitSHA256": "70C72D344D0E67FCEA13695FDCDD2A54FECA76A2889008B99D1DB578250739FF",
+  "GuestInputDirectory": "/home/z2euss/workspace/petalinux/codex_env_verify_20261007T082700Z/inputs/r4_diag",
+  "GuestProject": "/home/z2euss/workspace/petalinux/codex_env_verify_20261007T082700Z/env_smoke",
+  "NoBoardConnected": true
+}

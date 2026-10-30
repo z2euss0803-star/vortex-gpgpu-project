@@ -1,0 +1,30 @@
+#define _POSIX_C_SOURCE 200809L
+#include "hunet_owner_bridge.h"
+#include "../v2/port_fixture.h"
+#include <vxl/v2/control.h>
+#include <time.h>
+#include <vxl/hunet.h>
+/* HOST protocol fixture only. Native loader/relocation/pinning/ACK execute,
+ * but GPU output is an explicit ZERO MARKER, never GPU math/reference data. */
+struct native_bridge {struct os os;struct vxl_v2_controls controls;struct vxl_v2_file_ops files;unsigned char code[65537];int corrupt;unsigned input_expected,input_checked;unsigned char input_sha[32];};
+static int native_file_read(void*p,const char*path,vxl_u32 max,struct vxl_v2_file_blob*b){struct native_bridge*n=p;char expected[128],hex[]="0123456789abcdef";struct vxl_v2_catalog_entry e;unsigned i;assert(max==8388608);memcpy(&e,n->os.f.raw+64,512);strcpy(expected,"/lib/firmware/vxl/programs/");for(i=0;i<32;i++){expected[27+2*i]=hex[e.entry_id[i]>>4];expected[28+2*i]=hex[e.entry_id[i]&15];}memcpy(expected+27+64,".bin",5);assert(!strcmp(path,expected));b->bytes=malloc(65536);assert(b->bytes);memcpy(b->bytes,n->code,65536);b->length=65536;b->mode=0444;b->regular=b->no_follow=1;return 0;}
+static void native_file_release(void*p,struct vxl_v2_file_blob*b){(void)p;free(b->bytes);}
+static int native_prepare(void*p,const struct vxl_v2_program*program,const struct vxl_v2_job*j,const void*args,vxl_u32 bytes){struct os*o=p;struct native_bridge*n=(struct native_bridge*)o;struct vxl_v2_object*y;const vxl_u32*a=args;(void)program;assert(bytes==128&&a[0]==1&&a[1]==128&&a[2]!=6&&j->num_refs==8);if(n->input_expected&&!n->input_checked){struct vxl_v2_object*input;unsigned char actual[32];assert(!vxl_v2_ref_resolve(&o->f.c,1,&j->refs[0],1,&input));vxl_hunet_hash((unsigned char*)input->storage+j->refs[0].offset,j->refs[0].length,actual);assert(!memcmp(actual,n->input_sha,32));n->input_checked=1;}
+ assert(!vxl_v2_ref_resolve(&o->f.c,1,&j->refs[6],2,&y));assert(j->refs[6].offset+j->refs[6].length<y->length);memset((unsigned char*)y->storage+j->refs[6].offset,0,(size_t)j->refs[6].length);if(n->corrupt){((unsigned char*)y->storage)[j->refs[6].offset+j->refs[6].length]^=255;n->corrupt=0;}return 0;}
+static int native_start(void*p,const struct vxl_v2_program*program,const struct vxl_v2_job*j,struct vxl_v2_start_proof*s){struct os*o=p;return start(&o->f.hw,program,j,s);}
+static int native_ack(void*p,vxl_u32*idle,vxl_u32*ready){struct os*o=p;return ack(&o->f.hw,idle,ready);}
+static vxl_u64 native_now(void*p){return ((struct os*)p)->f.hw.now;}
+static const struct vxl_v2_execution_ops native_execution={native_prepare,native_start,native_ack,native_now};
+void*hunet_owner_bridge_create(const char*catalog_path,const char*code_path,const unsigned char compatible[32]){
+ struct native_bridge*n=calloc(1,sizeof(*n));struct fixture*f;struct vxl_v2_provider provider;struct vxl_v2_catalog_entry e;struct vxl_v2_caps*c;struct timespec ts;size_t size;assert(n);f=&n->os.f;size=read_fixture(catalog_path,f->raw,sizeof(f->raw));memcpy(&e,f->raw+64,512);provider.flags=1;memcpy(provider.hardware_contract,e.hardware_contract,32);memcpy(provider.bit,e.bit,32);memcpy(provider.xsa,e.xsa,32);assert(!vxl_v2_catalog_open(&f->cat,f->raw,(vxl_u32)size,&provider));size=read_fixture(code_path,n->code,sizeof(n->code));assert(size==65536);
+ vxl_v2_init(&f->c,&program_ops,&f->memory);assert(!vxl_v2_table_bind(&f->c,&f->table,&f->cat));assert(!vxl_v2_owner_enter(&f->c,1,1));f->q=calloc(1,sizeof(*f->q));assert(f->q);clock_gettime(CLOCK_MONOTONIC,&ts);f->hw.now=(vxl_u64)ts.tv_sec*1000000000ULL+ts.tv_nsec;f->hw.jobs=7;assert(!vxl_v2_queue_bind(&f->c,f->q,&native_execution,&n->os));assert(!pthread_mutex_init(&n->os.mutex,0));n->os.finish=1;n->os.port=(struct vxl_v2_port){.ctx=&f->c,.ops=&port_ops,.os=&n->os,.control=vxl_v2_control,.control_context=&n->controls};n->files=(struct vxl_v2_file_ops){n,native_file_read,native_file_release};n->controls.files=&n->files;c=&n->controls.caps;c->version=2;c->bytes=256;c->max_objects=64;c->max_pending=32;c->max_completions=64;c->max_refs=8;c->max_args=4096;c->max_programs=16;c->cycle_bits=32;c->contexts=1;c->feature_mask=1;c->identity_source=1;c->ps_base=VXL_PS_BASE;c->ps_bytes=VXL_PS_SIZE;c->pl_base=VXL_PL_BASE;c->pl_bytes=VXL_PL_SIZE;memcpy(c->hardware_contract,e.hardware_contract,32);memcpy(c->bit,e.bit,32);memcpy(c->xsa,e.xsa,32);memcpy(c->compatible,compatible,32);return n;
+}
+int hunet_owner_bridge_call(void*p,unsigned long cmd,void*r){struct native_bridge*n=p;int rc=dispatch(&n->os,(unsigned)cmd,r);if(n->os.f.q->pending&&!n->os.f.c.active){lock_os(&n->os);assert(!vxl_v2_worker_locked(&n->os.port));unlock_os(&n->os);}if(!rc&&(cmd==VXL_V2_WAIT||(cmd==VXL_V2_COMPLETE_REAP&&((struct vxl_compute_v2_request*)r)->flags==VXL_V2_READ))){struct vxl_v2_completion*c=(void*)(uintptr_t)((struct vxl_compute_v2_request*)r)->user_ptr;c->cycles_valid=0;c->elapsed_raw=0;}return rc;}
+unsigned hunet_owner_bridge_starts(void*p){return ((struct native_bridge*)p)->os.f.hw.starts;}
+unsigned hunet_owner_bridge_acks(void*p){return ((struct native_bridge*)p)->os.f.hw.acks;}
+unsigned hunet_owner_bridge_live(void*p){return ((struct native_bridge*)p)->os.f.c.live;}
+void hunet_owner_bridge_corrupt_guard(void*p){((struct native_bridge*)p)->corrupt=1;}
+void hunet_owner_bridge_destroy(void*p){struct native_bridge*n=p;lock_os(&n->os);assert(!vxl_v2_close_locked(&n->os.port,1));unlock_os(&n->os);teardown_host_storage(&n->os.f);pthread_mutex_destroy(&n->os.mutex);free(n);}
+
+void hunet_owner_bridge_expect_input(void*p,const unsigned char hash[32]){struct native_bridge*n=p;memcpy(n->input_sha,hash,32);n->input_expected=1;n->input_checked=0;}
+unsigned hunet_owner_bridge_checked_input(void*p){return ((struct native_bridge*)p)->input_checked;}

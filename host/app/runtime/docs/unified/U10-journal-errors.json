@@ -1,0 +1,103 @@
+{
+  "base": "3d82002e009e2fed607c35a5f4da6954a5b74460",
+  "scope": "FULL_BINDING_AND_REAL_FILESYSTEM_JOURNAL_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "failures": [
+    {
+      "run": "U10-journal-binding-red-053",
+      "kind": "FUNCTIONAL_RED",
+      "detail": "work evidence lacks full admitted binding",
+      "original_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-journal-binding-red-053\\manifest.json"
+    },
+    {
+      "run": "U10-result-binding-red-055",
+      "kind": "FUNCTIONAL_RED",
+      "detail": "published result lacks source/input/platform binding",
+      "original_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-result-binding-red-055\\manifest.json"
+    },
+    {
+      "run": "U10-journal-red-and-result-green-056",
+      "kind": "FUNCTIONAL_RED",
+      "detail": "journal stub cannot open private directory",
+      "original_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-journal-red-and-result-green-056\\manifest.json"
+    },
+    {
+      "run": "U10-journal-green-058",
+      "kind": "BUILD_FAILURE",
+      "detail": "GCC7 misleading indentation with Werror",
+      "original_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-journal-green-058\\manifest.json"
+    },
+    {
+      "run": "U10-journal-runtime-red-060",
+      "kind": "BUILD_FAILURE",
+      "detail": "test CPU timing return type differs from Result<void>",
+      "original_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-journal-runtime-red-060\\manifest.json"
+    },
+    {
+      "run": "U10-journal-binding-errors-red-062",
+      "kind": "FUNCTIONAL_RED",
+      "detail": "provider binding and original ENOSPC evidence missing",
+      "original_manifest": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\U10-journal-binding-errors-red-062\\manifest.json"
+    }
+  ],
+  "final_runs": [
+    "U10-journal-final-normal-065",
+    "U10-journal-final-sanitize-066",
+    "U10-journal-final-tsan-068",
+    "U10-journal-aarch64-069"
+  ],
+  "evidence_archive": "D:\\codex-unified-gpu-20261021\\evidence\\U10-journal-final\\raw-and-artifacts.tar.gz",
+  "archive_sha256": "e8bc4a9348eed2db00b67d39f105816d1fe9562b108008460171d7a100c8bcc2",
+  "verified_members": 346,
+  "code_manifest_checks": {
+    "U10-journal-final-normal-065": 872,
+    "U10-journal-final-sanitize-066": 872,
+    "U10-journal-final-tsan-068": 872,
+    "U10-journal-aarch64-069": 872
+  },
+  "independent_json_audits": {
+    "U10-journal-final-normal-065": {
+      "valid_json": 8,
+      "expected_mutated_negative": 1,
+      "partials": 4,
+      "original_enospc": 2,
+      "exact_u64": 4,
+      "raw_completion": 4,
+      "legacy_exact": 1
+    },
+    "U10-journal-final-sanitize-066": {
+      "valid_json": 8,
+      "expected_mutated_negative": 1,
+      "partials": 4,
+      "original_enospc": 2,
+      "exact_u64": 4,
+      "raw_completion": 4,
+      "legacy_exact": 1
+    },
+    "U10-journal-final-tsan-068": {
+      "valid_json": 8,
+      "expected_mutated_negative": 1,
+      "partials": 4,
+      "original_enospc": 2,
+      "exact_u64": 4,
+      "raw_completion": 4,
+      "legacy_exact": 1
+    },
+    "U10-journal-aarch64-069": {
+      "valid_json": 0,
+      "expected_mutated_negative": 0,
+      "partials": 0,
+      "original_enospc": 0,
+      "exact_u64": 0,
+      "raw_completion": 0,
+      "legacy_exact": 0
+    }
+  },
+  "original_error_archive": "D:/codex-unified-gpu-20261021/evidence/U10-journal-mid/raw-and-artifacts.tar.gz",
+  "original_error_archive_sha256": "8f141d56dd73fcbc13420898c5637f8d565f143d3d09bd30d77c5463490d00b8",
+  "audit_errors": [
+    "mid TAR hardlinks rejected by old verifier; same archive re-audited after safe internal hardlink support",
+    "final result fixture OFFLINE scope incorrectly assumed HOST_PROTOCOL_TEST by audit; first error preserved, expected scope corrected, same bytes re-audited"
+  ],
+  "full_u10_complete": false
+}

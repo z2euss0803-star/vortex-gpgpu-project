@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "zip_sha256": "5d635e6546b3865df63df649f12714e570bc50d81d74cb375625cf7ac48b7639",
+  "source_bundle_sha256": "20945ed189bad393bad2fe56a420e789c82c33cd9b790adccca4a115ba0423e3",
+  "base_commit": "12894074d517b90e40782d270bc603909d718e2e",
+  "production_commit": "0a0b2bba5209101c27cbf5842d3847611d557b32",
+  "baseline_working_files_sha256": "1bc514933a737626ac9a1765ade2edbcd7793637fe7a5a4275f4cab62a98d859",
+  "input_files_lock_sha256": "b9f9d18a5acfc64e20218db230e983777c8560375c0c5031a24deeb53d8dedec",
+  "source_files": 4923,
+  "input_files": 62,
+  "algorithm_inputs_unchanged": true,
+  "gpu_raw_cycles": null,
+  "board": "NOT_RUN"
+}

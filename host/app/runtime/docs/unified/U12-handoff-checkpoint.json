@@ -1,0 +1,90 @@
+{
+  "task": "U12",
+  "state": "MATH_TYPES_GELU_HANDOFF_CHECKPOINT_NOT_TASK_COMPLETE",
+  "base": "edb70daedef355817fd98f3e8e0fc7434e7ff501",
+  "normal_run": "U12-checkout-final-normal-050",
+  "sanitizer_run": "U12-checkout-final-sanitize-053",
+  "target_runs": {
+    "U12-checkout-final-aarch64-056": {
+      "sources": 1501,
+      "commands": 17,
+      "mode": "cross"
+    },
+    "U12-checkout-final-emulation-058": {
+      "sources": 1501,
+      "commands": 3,
+      "mode": "emulation"
+    },
+    "U12-checkout-final-tsan-059": {
+      "sources": 1501,
+      "commands": 2,
+      "mode": "thread"
+    }
+  },
+  "core_driver_uapi_unchanged_files": 153,
+  "scalar_jobs": 68,
+  "scalar_values_including_copy": 2814287,
+  "pack_stages": 35,
+  "descriptors": 314,
+  "packed_values": 3266688,
+  "cpu_layers": 13,
+  "cpu_values": 1869056,
+  "cpu_aarch64_emulated_old_a53_bit_diffs": 0,
+  "cpu_host_old_a53_bit_diffs": 18098,
+  "numeric_scope": "HOST_MATH_AND_PROTOCOL_COPY; AARCH64_USER_EMULATED_HELPER_NOT_FULL_NETWORK_NOT_REAL_DMA",
+  "timing": "download/fullCPUcall/upload/readback/hash/total including temporary array cleanup; nested CPU timings not additive",
+  "int16_family_implementation_sha256": "c240189349679057f569183497844f2e453d4eddfff70e89541687ea826d7fc8",
+  "int16_rv32_elf_sha256": "0e8e046cae2aa2d5cb55f8c65f2d6cc1d20be4c3e3e9718b6477970171ee2da9",
+  "int16_rv32_code_sha256": "2d18b13752e3248aef7ae4c206b1f0bd19972dad5ca1d2776a0f555e0661cafb",
+  "int16_rv32_elf_and_code_unchanged": true,
+  "archives": [
+    {
+      "name": "U12-scalar-component",
+      "sha256": "a437d2e8f6436189e5ed99670fb36d865b7143db8bce2b8f985f877e40f7f4a9"
+    },
+    {
+      "name": "U12-type-handoff-checkpoints",
+      "sha256": "eb9382fd8ca19fc9ae2587620dee15b809802d1b142e58e728be77b54fa68f62"
+    },
+    {
+      "name": "U12-handoff-final-host",
+      "sha256": "8a1101b0a0ca39f6bbbb63b4ac19ff8e1e825b07f7645f5b7374f3b349d5d8c7"
+    },
+    {
+      "name": "U12-checkout-rv32-rebind",
+      "sha256": "1ef43f93afc3c90bfc319985db3f6ea4ed45d9c977e69f470ecb393e73a9a129"
+    },
+    {
+      "name": "U12-checkout-final-host",
+      "sha256": "39ce91102313bee73c1e9d656e9989fd209d6d79be904f657e66cd116a200946"
+    },
+    {
+      "name": "U12-checkout-final-target",
+      "sha256": "2df48b39e746d4325ad728fdba450642eaf059bed6e0749eca0b7f21342e50e5"
+    }
+  ],
+  "cross": "12 MATCHED AARCH64 TEST/APPLICATION ELFS AND ROOTFS_SYMBOLS; new HUNet RV32 library NOT BUILT",
+  "first_errors": [
+    "U12-scalar-functional-red-008",
+    "U12-scalar-boundary-normal-011",
+    "U12-fp16-functional-red-016",
+    "U12-gelu-handoff-functional-red-019",
+    "U12-gelu-handoff-red-020",
+    "U12-handoff-exception-timing-red-023",
+    "U12-handoff-cleanup-timing-red-032",
+    "U12-handoff-cleanup-functional-red-035",
+    "U12-checkout-identity-red-045"
+  ],
+  "gpu_raw_cycles": null,
+  "image": "NOT_BUILT",
+  "board": "NOT_RUN",
+  "application_accuracy": "NO_NEW_FULL_NETWORK_RESULT",
+  "performance": "NO_BOARD_MEASUREMENT",
+  "sd": "NOT_TOUCHED",
+  "pending": [
+    "Actual HUNet controlled RV32 library0x10010 / FCSR / immutable schema and program binding",
+    "Registered HUNet operators and immutable complete103GPU13CPU model/graph/package",
+    "Real U09/U06 source/adapter glue and U20 provider/arena/residency/production factories",
+    "Final scoped U12 acceptance before U13; all25 tasks/image/SD remain incomplete"
+  ]
+}

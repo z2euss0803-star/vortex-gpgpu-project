@@ -1,0 +1,14 @@
+{
+  "scope": "A_CURRENT_PRODUCTION_FILES_MATCH_B_CROSS_MANIFEST_NOT_FULL_IMAGE_ADMISSION",
+  "checked_files": 125,
+  "all_equal": true,
+  "archive": {
+    "scope": "SUPPLEMENTAL_SOFTWARE_DRIVER_LOAD_DUAL_RUNTIME_RAW_ERRORS_NOT_BOARD_NOT_IMAGE",
+    "archive_sha256": "d69c93d7f683312ad700f8493724b5f4a58ee86a277bb8f33314a24def1a43c4",
+    "checked_files": 2987,
+    "materialized_small_files": 479,
+    "large_files_preserved_inside_verified_archive": true,
+    "gpu_raw_cycles": null
+  },
+  "gpu_raw_cycles": null
+}

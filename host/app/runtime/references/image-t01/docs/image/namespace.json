@@ -1,0 +1,65 @@
+{
+  "profile": 256,
+  "compatible": "vortex,hw4-s8-image-studio-v1",
+  "programs": [
+    512,
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520,
+    521
+  ],
+  "ioctl_nrs": [
+    112,
+    113
+  ],
+  "scope": "S8_IMAGE_ONLY",
+  "legacy_profile_ids": [
+    1,
+    4,
+    5,
+    6
+  ],
+  "legacy_nn_programs": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "legacy_p8": {
+    "profile": 5,
+    "compatible": "vortex,w4-graphics-p8-v1",
+    "programs": [
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "generic_runtime_planned_ioctl_nrs": [
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+  ]
+}

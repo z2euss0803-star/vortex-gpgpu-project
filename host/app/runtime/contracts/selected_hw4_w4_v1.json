@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "baseline_id": "HUNET_HW4_AXI_W4_20261015_faeaddb98d5d",
+  "authority": "USER_DIRECT_CURRENT_CHAT_USE_BIT_FROM_HANDOFF_ZIP",
+  "bit_sha256": "faeaddb98d5d39a4e787c6b2aaf559d6a6163191a1cc8eb18331624b896290dc",
+  "xsa_sha256": "08183adeb93ec2ffe3c8c5643813daae12365f61efb95a0d985f04660c340536",
+  "handoff_zip_sha256": "be514f7b904c720b50bfcf32efb543b3dc2e437879371570689897162de4fc4c",
+  "previous_bit_sha256": "deb74c77e7e76e9108f49307371c42c889b21f8e764c545987a7786ce543ebc8",
+  "previous_xsa_sha256": "7fdd711f0229ee01d369188d44852c0f85193aada485ac4b1998e2b4e3e32a91",
+  "previous_profile": "contracts/baselines/hw4-before-w4.json",
+  "boot_policy": "REBUILD_FROM_MATCHING_W4_XSA_FIRMWARE_AND_BIT",
+  "old_baselines": "PRESERVED_ORIGINAL_PATHS",
+  "linux_w4": "NOT_RUN",
+  "baremetal_results": "ROI0_ONLY_R2_PASS_ORT8081_FAIL",
+  "original12": "OPEN",
+  "synthesis_acceptance": false,
+  "full_physical_acceptance": false
+}

@@ -1,0 +1,19 @@
+{
+  "integrity": "PASS",
+  "raw_files_verified": 9,
+  "gpu_receipts": 103,
+  "cpu_receipts": 13,
+  "trace_rows_total": 207,
+  "trace_rows_selected": 103,
+  "driver_analyzer_exit": 0,
+  "raw_cycles": 686600903,
+  "top_sum_ns": 9270748114,
+  "resident_ns": 9270748114,
+  "source_commit": "d6ea455deb108b3d397365cc8d3162b19454e11a",
+  "source_modified": false,
+  "known_output_byte_equal": true,
+  "new_runtime_or_hardware_error": false,
+  "C_coordination": "COMPLETE_RELEASED",
+  "board_owner": "RELEASED",
+  "H1": "NOT_RUN"
+}

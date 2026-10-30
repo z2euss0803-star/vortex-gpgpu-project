@@ -1,0 +1,92 @@
+{
+  "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "base": "11a5e18e5d12254c222d503747a7f91d949163c9",
+  "failures": [
+    {
+      "id": "U10-COMPILE-001",
+      "run": "U10-owner-result-red-001",
+      "natural_exit": 2,
+      "source_archive_sha256": "263fe40d26eceb2f353ddced053113e7b3eb7bfb113239f8c8dba93a5208c7cb",
+      "cause": "GCC7 Werror misleading-indentation in newly written concurrent test",
+      "classification": "BUILD_FAILURE_NOT_FUNCTIONAL_RED",
+      "fix": "braces and separate control statements; warnings remain errors",
+      "verified_by": "U10-owner-result-red-002 compiled then reached intended assertions"
+    },
+    {
+      "id": "U10-FUNCTIONAL-002",
+      "run": "U10-owner-result-red-002",
+      "natural_exit": 2,
+      "source_archive_sha256": "b891a6891741254bcffb5e3c040db977ff3cf851c799bb0f3fdcbef530b2a2a4",
+      "cause": "compilable ENOSYS scaffolds fail owner acquisition and durable publication failure assertions",
+      "classification": "EXPECTED_FUNCTIONAL_RED",
+      "verified_by": "U10-owner-result-green-004 natural exit0, owner/leases/concurrent markers"
+    },
+    {
+      "id": "U10-COMPILE-003",
+      "run": "U10-owner-result-green-003",
+      "natural_exit": 2,
+      "source_archive_sha256": "8bb34292bc2502f34a0b37c746134e2d265e795afbf5a1697a09da24a2b5f3fb",
+      "cause": "GCC7 Werror misleading-indentation in result retain and presentation methods",
+      "classification": "BUILD_FAILURE",
+      "fix": "explicit braces and statement boundaries; no warning suppression",
+      "verified_by": "U10-owner-result-green-004"
+    }
+  ],
+  "additional_failures": [
+    {
+      "id": "U10-RPC-START-005",
+      "run": "U10-rpc-red-005",
+      "natural_exit": 2,
+      "source_archive_sha256": "b401fe35bb58bccc774b843258af5739573940837407e60a719eefb4cd3a15d0",
+      "classification": "EXPECTED_FUNCTIONAL_STARTUP_ASSERTION",
+      "cause": "compilable RPC scaffold returns ENOSYS; startup assertion fails before six protocol tests run",
+      "verified_by": "U10-rpc-green-007 actual six socket tests"
+    },
+    {
+      "id": "U10-RPC-COMPILE-006",
+      "run": "U10-rpc-green-006",
+      "natural_exit": 2,
+      "source_archive_sha256": "de2748a3f77620334a5491c35e7a16701dfa6ed3aaf320e827110a3e035d2c77",
+      "classification": "BUILD_FAILURE",
+      "cause": "Werror misleading-indentation at socket lstat/state assignment",
+      "fix": "explicit braces; warning gate unchanged",
+      "verified_by": "U10-rpc-green-007"
+    },
+    {
+      "id": "U10-CLI-RED-009",
+      "run": "U10-cli-red-009",
+      "natural_exit": 2,
+      "source_archive_sha256": "290cf2bda5c06d9a9f64c6e14efa6f70716b2bfe346aaca3935d61224c74eeb1",
+      "classification": "EXPECTED_FUNCTIONAL_RED",
+      "cause": "actual control CLI discovery exits2 instead of0 from missing implementation; prior six protocol cases remain green",
+      "verified_by": "U10-final-normal-010 and later final runs"
+    },
+    {
+      "id": "U10-LEASE-ALLOCATION-012",
+      "run": "U10-allocation-red-012",
+      "natural_exit": 2,
+      "source_archive_sha256": "f1b747a0edddc9d59f85724e8960de686a381d1ff3ccc061874f270f9de3f868",
+      "classification": "NEW_SOFTWARE_BUG_REPRODUCED",
+      "cause": "optional NRVO was hiding a copy of const Result after the consumer lease committed; failed return copy could leave an unreachable live token",
+      "fix": "construct returned Result directly from moved lease; C++17 prvalue elision and nonallocating string moves after commit",
+      "verified_by": "U10-final-normal-014 includes48 allocation fault positions with optional elision disabled"
+    }
+  ],
+  "original_evidence_archive": "D:/codex-unified-gpu-20261021/evidence/U10-mid/raw-and-artifacts.tar.gz",
+  "original_archive_sha256": "857618558cabe3cdbe23f99b929a89e35aea46cac8a3c46c0a251c2874996186",
+  "original_archive_verified_members": 184,
+  "remaining": [
+    "Runtime with shared budget/input64MiB/service1GiB/model2 and CPU/GPU executor integration",
+    "native vxgpud explicit-mode CAPS/startup/legacy borrowing integration",
+    "pending raw outcome persistence retry without re-execution",
+    "actual adapters and app/display acceptance in later plan tasks"
+  ],
+  "final_component_runs": [
+    "U10-final-normal-014",
+    "U10-final-sanitize-015",
+    "U10-final-tsan-016",
+    "U10-aarch64-017"
+  ],
+  "final_component_archive_sha256": "392decce69ac2b9c0b8dc08cf8ed37263695e2b8377a4955f719ed5915194d33"
+}

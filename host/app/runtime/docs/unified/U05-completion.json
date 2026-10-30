@@ -1,0 +1,75 @@
+{
+  "files": [
+    "Makefile.unified",
+    "docs/unified/U05-adapter-contract.md",
+    "driver/Makefile",
+    "driver/shared_v2_batch.c",
+    "driver/shared_v2_catalog.c",
+    "driver/shared_v2_completion.c",
+    "driver/shared_v2_jobs.c",
+    "driver/shared_v2_objects.c",
+    "driver/shared_v2_owner.c",
+    "driver/shared_v2_program.c",
+    "driver/shared_v2_relocate.c",
+    "driver/shared_v2_validate.c",
+    "driver/v2/ioctl.c",
+    "driver/v2/linux.c",
+    "driver/v2/linux.h",
+    "driver/v2/poll.c",
+    "driver/v2/program.c",
+    "driver/v2/worker.c",
+    "driver/vxl_drv.c",
+    "driver/vxl_internal.h",
+    "driver/vxl_ioctl.c",
+    "include/vxl/v2/dispatch.h",
+    "scripts/unified/check_kernel_adapter.py",
+    "scripts/unified/check_u05.py",
+    "tests/v2/test_dispatch.c"
+  ],
+  "verified_runs": [
+    "U05-dispatch-green-007",
+    "U05-dispatch-sanitize-008",
+    "U05-linux-adapter-compile-010",
+    "U05-dispatch-thread-011",
+    "U05-final-regression-012"
+  ],
+  "red_runs": [
+    "U05-state-batch-red-001",
+    "U05-dispatch-red-006"
+  ],
+  "errors": [
+    {
+      "id": "U05-KERNEL-001",
+      "run": "U05-linux-adapter-compile-009",
+      "exit": 2,
+      "cause": "Linux 5.4 kvmalloc/kvfree declarations require linux/mm.h in the trusted file reader; previously only host branch was compiled",
+      "fix": "explicit mm.h include; keep Werror, no allocation/copy semantics relaxed",
+      "verified_run": "U05-linux-adapter-compile-010"
+    }
+  ],
+  "cross": "U05_PRE_BINDING_AARCH64_KERNEL_MODULE_ONLY",
+  "message": "feat(unified): U05 单活动GPU、异步完成与批次失败保留",
+  "evidence_archive": {
+    "members": 105,
+    "archive_sha256": "eb8856e6bca3cd0550574f2a74db93173c691c33349b35e4aa34c54bc0ad20c6",
+    "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U01-U05-final-raw-evidence.tar.gz",
+    "gpu_raw_cycles": null,
+    "scope": "ORIGINAL_B_SOFTWARE_LOGS_VERIFIED_ON_A_NOT_BOARD",
+    "verified_members": 105
+  },
+  "rulings": [
+    "Original Task5 BASE remains 72b0020; checkpoint 2e9631 preserves the core implementation. Kernel wrappers/header/build-check helper are scoped additions required for Linux compile/link, not model behavior changes.",
+    "Linux ioctl/worker/poll routing is startup-only and inactive unless U06 binds one exact provider. Legacy 176-byte dispatch and profile4 fastwait branches are unchanged. The pre-binding module is not a U23 release/image.",
+    "Host boundary tests cover timeout/signal, copy faults, repeated readiness and 100 real pthread close/worker races. They do not execute actual kernel device epoll or DMA. Real board/IRQ/performance remain untested.",
+    "WAIT length is 0..60000 milliseconds; READ and ACK are separate exclusive flags. Completion read and submit return-copy faults never retire or reexecute. Unknown stop/close retains pinned objects and quarantine.",
+    "Module build parent config/symbols unchanged; AArch64 ELF and adapter symbols verified, GPU raw cycles=null. All 105 original raw log/receipt members were copied and verified on A; B originals retained.",
+    "U06 must implement bootstrap CAPS without requiring an unknown epoch, typed buffer/catalog operations, matching provider admission, private PS mapping and controlled ARGS adaptation; no weakening of U05 role checks."
+  ],
+  "task": "U05",
+  "base": "72b0020f7645a2ededfd8af66e6a6113884225cf",
+  "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED",
+  "board": "NOT_RUN",
+  "image": "NOT_BUILT"
+}

@@ -1,0 +1,43 @@
+{
+  "members": 111,
+  "logical_bytes": 675759,
+  "archive_bytes": 195909,
+  "sha256": "b73fa416b4397ee8c80b83a7772e59de8fa855ff837d532ec64b815cbf780e5c",
+  "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U11-owned-crt-evidence.tar.gz",
+  "gpu_raw_cycles": null,
+  "host": "z2euss-virtual-machine",
+  "uid": 1000,
+  "free_disk": 2194690048,
+  "verified_members": 111,
+  "members_sha256": "d0f8920812cfca0c95dd821af43d1b819be90ec8f44e4d7fce75cc2270f736c0",
+  "hardlink_members": 0,
+  "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U11-owned-crt\\raw-and-artifacts.tar.gz",
+  "scope": "U11_CURRENT_RV32_CODE_IMMUTABILITY_PRIVATE_CRT_STATIC_OWNERSHIP_NOT_EXECUTED",
+  "source_manifest_checks": 1454,
+  "program_flat": {
+    "bytes": 65536,
+    "sha256": "2d18b13752e3248aef7ae4c206b1f0bd19972dad5ca1d2776a0f555e0661cafb"
+  },
+  "program_elf": {
+    "bytes": 35652,
+    "sha256": "0e8e046cae2aa2d5cb55f8c65f2d6cc1d20be4c3e3e9718b6477970171ee2da9"
+  },
+  "ownership": {
+    "scope": "RV32_STATIC_V2_OBJECT_OWNERSHIP_NOT_EXECUTION",
+    "code_gpu": 2147483648,
+    "code_bytes": 65536,
+    "linked_code_end": 2147497408,
+    "code_sha256": "2d18b13752e3248aef7ae4c206b1f0bd19972dad5ca1d2776a0f555e0661cafb",
+    "crt_gpu": 268443648,
+    "crt_bytes": 4096,
+    "bss_state_first": 268444672,
+    "tls_base": 268444704,
+    "tls_end": 268446752,
+    "tls_stride": 32,
+    "guard_trailer_bytes": 64,
+    "gpu_raw_cycles": null
+  },
+  "static_stack_bytes": 4224,
+  "mutation_tests": 9,
+  "full_u11_complete": false
+}

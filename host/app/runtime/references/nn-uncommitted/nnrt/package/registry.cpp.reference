@@ -1,0 +1,9 @@
+#include <vxnn/package.hpp>
+#include <cerrno>
+#include <tuple>
+namespace vxnn {
+bool OperatorKey::operator<(const OperatorKey &o)const{return std::tie(name,semantic_version,implementation_sha)<std::tie(o.name,o.semantic_version,o.implementation_sha);}
+Result<void> OperatorRegistry::add(const OperatorSpec&){return Result<void>::success();}
+Result<OperatorSpec> OperatorRegistry::resolve(const std::string&,const std::string&,const Digest&)const{return Result<OperatorSpec>::failure({-ENOSYS,"OPERATOR_REJECTED","stub"});}
+Result<void> OperatorRegistry::validate(const OperatorKey&,const std::vector<TensorDesc>&,const ScalarParams&,const DeviceCaps&)const{return Result<void>::success();}
+}

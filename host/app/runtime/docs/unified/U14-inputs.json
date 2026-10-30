@@ -1,0 +1,203 @@
+{
+  "scope": "ORIGINAL_IMAGE_ALGORITHMS_WORDS_AND_ORACLES_NOT_NEW_GPU_RESULTS",
+  "bundle_sha256": "20945ed189bad393bad2fe56a420e789c82c33cd9b790adccca4a115ba0423e3",
+  "manifest_sha256": "96dc7902f3b06d9047d1c6d511ec8ca6ee1a6c96021420dc75ebf825c2f415e3",
+  "files": [
+    {
+      "path": "src/vortex23-image-studio-720p-fast/image_contract.h",
+      "bytes": 1511,
+      "sha256": "5e7927647157880891df13fb96a594fbf05bfc961cb52fa2a45f4003c3598e7e"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/image_gpu.h",
+      "bytes": 384,
+      "sha256": "02d336ade543d89cbe668a787b0fab330d463ad364114b76ff6337c94e6b7528"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/image_gpu.c",
+      "bytes": 3843,
+      "sha256": "c85daa4f9170a357b5b889ed0ab3a89822c3f0d13b9947a7719c39de60d2d9c7"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/image_pipeline.h",
+      "bytes": 935,
+      "sha256": "306a2f029a8a1881f6999df8f850520a8196235fe97399e7d35280eaf2c5ccf9"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/image_pipeline.c",
+      "bytes": 7202,
+      "sha256": "34c56492f8ca38e0b144d945ddb03314d44572108051f2aeac423bb51fba45df"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/image_crc.c",
+      "bytes": 655,
+      "sha256": "6d2de215c3f062477159e832a81eb4cbaf0d40308f6a79349b67fd9b71234c8e"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/generated/tables.h",
+      "bytes": 75010,
+      "sha256": "742dfb7fa8fd2e74b75efa30b957aab9d3cee284cc89731735b5e169ec86aec7"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/generated/image_kernels.h",
+      "bytes": 20562,
+      "sha256": "18935323339515ebb2711456f8a8b0aec3397c58bea43b79f40fd25f39fe457d"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/tests/rv32_image_model.h",
+      "bytes": 4348,
+      "sha256": "f3d108db03365985505abdba6c131bca87324ed6a480f24c90dda69f26bf24b6"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/tests/pipeline_colors.c",
+      "bytes": 4597,
+      "sha256": "fb151c14719f1a75ba4e873e4f1e162083d3f6234ad09eca070de686414e9367"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/tests/replay_pipeline.c",
+      "bytes": 2758,
+      "sha256": "4bfb6de1cf76a3cf98dc058a81eedf26c9f9059e20b3af127f683de8c9aaf665"
+    },
+    {
+      "path": "src/vortex23-image-studio-720p-fast/tests/test_pipeline.c",
+      "bytes": 3169,
+      "sha256": "e0f62dc855f85e1e6dc51073082759562764633d2253ff6c814216ade4947636"
+    },
+    {
+      "path": "src/vortex23-r4-local/sw/host_platform.h",
+      "bytes": 570,
+      "sha256": "5129e923756e4d2597767a2fb660f8302a211275ebb60e75da81d9115a0089d7"
+    },
+    {
+      "path": "gpu_programs/manifest.json",
+      "bytes": 3672,
+      "sha256": "3291001ec8f88edcfd64688a2bb88f8c4ea1592455e0b6a47d6b202a9d254fdd"
+    },
+    {
+      "path": "gpu_programs/tables-64KiB.bin",
+      "bytes": 65536,
+      "sha256": "116e71ef50cc30196546d2f8e53440d60942c8b438872d102e4aed74785aebca"
+    },
+    {
+      "path": "gpu_programs/gray.bin",
+      "bytes": 232,
+      "sha256": "a9a71093ebf293036f732bd472a4b99931e23594433d61836d3a13d9b34c161f"
+    },
+    {
+      "path": "gpu_programs/gray.padded.bin",
+      "bytes": 256,
+      "sha256": "0ce125fa7dd278e42206f714741abffe975ff7ffa4db1307e3e033440b5f4f53"
+    },
+    {
+      "path": "gpu_programs/blur3.bin",
+      "bytes": 1184,
+      "sha256": "b9ed742e47208e8bd5c69b5cb926b87d585120aa5301bcbc02b3040ec6aba03d"
+    },
+    {
+      "path": "gpu_programs/blur3.padded.bin",
+      "bytes": 1216,
+      "sha256": "72cda81b9cd5171dd368e71f81552987b78b9e50449c7938b4696764bbda1093"
+    },
+    {
+      "path": "gpu_programs/sobel_poster.bin",
+      "bytes": 1352,
+      "sha256": "8731e7c80896698697eca07178140ff034ce7a74b6af80be701cb2a85868b826"
+    },
+    {
+      "path": "gpu_programs/sobel_poster.padded.bin",
+      "bytes": 1408,
+      "sha256": "d23a16357b5eea0653f33f8fbdaabd04ffbf367408b70baafa2d2f6538968124"
+    },
+    {
+      "path": "gpu_programs/gaussian_h.bin",
+      "bytes": 316,
+      "sha256": "2f36242fa6b7137c335adda4429024885427e1477fdf6ce15b6b5ad3089bb5d4"
+    },
+    {
+      "path": "gpu_programs/gaussian_h.padded.bin",
+      "bytes": 320,
+      "sha256": "0f70bb513ab30179f165639ab932ed8ee4a3c9ae262679294695987e32e65738"
+    },
+    {
+      "path": "gpu_programs/gaussian_v.bin",
+      "bytes": 316,
+      "sha256": "8040af3721d371fa615e7d26b440e1f7676f2f82a4405c3bbf1eb0e4c8ad610f"
+    },
+    {
+      "path": "gpu_programs/gaussian_v.padded.bin",
+      "bytes": 320,
+      "sha256": "8bbaeefb2eae04d36cafe955189fd10c5c98210bc06915bd98a3e04b572a436a"
+    },
+    {
+      "path": "gpu_programs/xdog_color.bin",
+      "bytes": 324,
+      "sha256": "b30ac8f7571b7026c2fc7b8d7a77d1815892e0575ee5ac60669b9f265f31aa99"
+    },
+    {
+      "path": "gpu_programs/xdog_color.padded.bin",
+      "bytes": 384,
+      "sha256": "b70c369d4fcfaf3f78b77dd06b38a481882cfb72b53d3e65eec528febffb3ea6"
+    },
+    {
+      "path": "gpu_programs/neon_core.bin",
+      "bytes": 1192,
+      "sha256": "66562b7bcba7fc8ba72f836747fe9b96d64f81ca757b0d5b1d0cbeb0e0a08955"
+    },
+    {
+      "path": "gpu_programs/neon_core.padded.bin",
+      "bytes": 1216,
+      "sha256": "ec4e774f1d5b1a3d3f4a51cb0ebf4551a0bfb3d29740bbaa323791622175a928"
+    },
+    {
+      "path": "gpu_programs/neon_combine.bin",
+      "bytes": 692,
+      "sha256": "57020b917d0a821cd9319933bbc9d50f420c0675a8d7e5daeb5e602a073ee4da"
+    },
+    {
+      "path": "gpu_programs/neon_combine.padded.bin",
+      "bytes": 704,
+      "sha256": "a1abee66582b0ecddf6961f136e82ab8c9493bbf32b5013951bbae519eb6113a"
+    },
+    {
+      "path": "gpu_programs/pixel_mean.bin",
+      "bytes": 396,
+      "sha256": "cac7e492453b1ab43043e42553dfde29ee201720507ae413bbca44a9e29a9570"
+    },
+    {
+      "path": "gpu_programs/pixel_mean.padded.bin",
+      "bytes": 448,
+      "sha256": "bb5f071464279eb798ec2665d7aa616a1542df3ae6cbd57d630918e155830e93"
+    },
+    {
+      "path": "gpu_programs/pixel_bayer.bin",
+      "bytes": 380,
+      "sha256": "ca7f83f87a010b46674f2249c9ecbd9488f6a3b64e6ca89af3f8ad11db777d7c"
+    },
+    {
+      "path": "gpu_programs/pixel_bayer.padded.bin",
+      "bytes": 384,
+      "sha256": "afb1610f8f5e96a8f27ad9b3d04f54c1a4a81094b22e0bc2a988b70a10de2813"
+    },
+    {
+      "path": "reports/v23-image-studio-720p-fast-20261016/pipeline-colors/oracle.json",
+      "bytes": 6484,
+      "sha256": "37feacba435dd67e41649bd55467f5b2130603e6745bb10de9bd3b2066f2d8b2"
+    },
+    {
+      "path": "reports/v23-image-studio-720p-fast-20261016/pipeline/oracle.json",
+      "bytes": 739,
+      "sha256": "aaa15580c5aa6532fc5bcf1cec1a280ffd060e4beb77992d12648e7561bbb97d"
+    },
+    {
+      "path": "reports/v23-image-studio-720p-fast-20261016/replay/oracle.json",
+      "bytes": 7797,
+      "sha256": "81e4aad9cdb2f2199fbc4d553c346363e74fd514daeca1be1e79229fa8c1f695"
+    },
+    {
+      "path": "reports/v23-image-studio-720p-fast-20261016/replay/requests.txt",
+      "bytes": 603,
+      "sha256": "8b887881db9fbf009c5d04dd6844c75f502ff41c2365b97c4ffaf40b6d14cabd"
+    }
+  ],
+  "gpu_raw_cycles": null
+}

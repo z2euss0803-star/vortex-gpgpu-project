@@ -1,0 +1,1105 @@
+{
+  "version": 1,
+  "width": 1280,
+  "height": 960,
+  "model_sha256": "54d86ca4accbaf2dafa2c96a224bab4f013304ff0010125eccf3006c31c24931",
+  "sources": {
+    "model": "394b0c957b951a0be728199403d0ff518ea46e53ecada81710d859a11d77c2ec",
+    "selected": "12076d0772cdf4514c728f3e374004629e849c76f041ac29740248043c2177df",
+    "source_old": "8e775b58e1fbdcc617171beb08a5f3df86dded40dca55ff677bd87087a661a89",
+    "checkpoint": "3d6d92cebde0cd068b8ed508f0d2d4c54b2b2b7137ffb4032bea44f2ab87c973"
+  },
+  "layers": [
+    {
+      "index": 0,
+      "name": "conv1",
+      "ci": 3,
+      "co": 32,
+      "k": 9,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": true,
+      "save": false,
+      "residual": false,
+      "input_shape": [
+        3,
+        960,
+        1280
+      ],
+      "output_shape": [
+        32,
+        960,
+        1280
+      ],
+      "K": 243,
+      "Kpad": 256,
+      "input_role": "fp_a",
+      "output_role": "fp_b",
+      "conv_tiles": 614400,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "work_items": [
+        14400,
+        614400,
+        32,
+        153600,
+        153600
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 6400,
+          "bytes": 16384
+        },
+        {
+          "kind": "coeff",
+          "offset": 22784,
+          "bytes": 256
+        },
+        {
+          "kind": "sA",
+          "offset": 23040,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 23104,
+          "bytes": 128
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 23232,
+          "bytes": 128
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "conv2",
+      "ci": 32,
+      "co": 64,
+      "k": 3,
+      "stride": 2,
+      "upsample": 1,
+      "norm": true,
+      "relu": true,
+      "save": false,
+      "residual": false,
+      "input_shape": [
+        32,
+        960,
+        1280
+      ],
+      "output_shape": [
+        64,
+        480,
+        640
+      ],
+      "K": 288,
+      "Kpad": 288,
+      "input_role": "fp_b",
+      "output_role": "fp_a",
+      "conv_tiles": 307200,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "work_items": [
+        153600,
+        307200,
+        64,
+        76800,
+        76800
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 23360,
+          "bytes": 36864
+        },
+        {
+          "kind": "coeff",
+          "offset": 60224,
+          "bytes": 512
+        },
+        {
+          "kind": "sA",
+          "offset": 60736,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 60800,
+          "bytes": 256
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 61056,
+          "bytes": 256
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "conv3",
+      "ci": 64,
+      "co": 128,
+      "k": 3,
+      "stride": 2,
+      "upsample": 1,
+      "norm": true,
+      "relu": true,
+      "save": false,
+      "residual": false,
+      "input_shape": [
+        64,
+        480,
+        640
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 576,
+      "Kpad": 576,
+      "input_role": "fp_a",
+      "output_role": "fp_b",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "work_items": [
+        76800,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 61312,
+          "bytes": 147456
+        },
+        {
+          "kind": "coeff",
+          "offset": 208768,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 209792,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 209856,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 210368,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "res1.conv1",
+      "ci": 128,
+      "co": 128,
+      "k": 3,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": true,
+      "save": true,
+      "residual": false,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_b",
+      "output_role": "fp_a",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "work_items": [
+        38400,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 210880,
+          "bytes": 294912
+        },
+        {
+          "kind": "coeff",
+          "offset": 505792,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 506816,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 506880,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 507392,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "name": "res1.conv2",
+      "ci": 128,
+      "co": 128,
+      "k": 3,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": false,
+      "save": false,
+      "residual": true,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_a",
+      "output_role": "fp_b",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "work_items": [
+        38400,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 507904,
+          "bytes": 294912
+        },
+        {
+          "kind": "coeff",
+          "offset": 802816,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 803840,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 803904,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 804416,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "name": "res2.conv1",
+      "ci": 128,
+      "co": 128,
+      "k": 3,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": true,
+      "save": true,
+      "residual": false,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_b",
+      "output_role": "fp_a",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "work_items": [
+        38400,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 804928,
+          "bytes": 294912
+        },
+        {
+          "kind": "coeff",
+          "offset": 1099840,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 1100864,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 1100928,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 1101440,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "name": "res2.conv2",
+      "ci": 128,
+      "co": 128,
+      "k": 3,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": false,
+      "save": false,
+      "residual": true,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_a",
+      "output_role": "fp_b",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "work_items": [
+        38400,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 1101952,
+          "bytes": 294912
+        },
+        {
+          "kind": "coeff",
+          "offset": 1396864,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 1397888,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 1397952,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 1398464,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "name": "res3.conv1",
+      "ci": 128,
+      "co": 128,
+      "k": 3,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": true,
+      "save": true,
+      "residual": false,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_b",
+      "output_role": "fp_a",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "work_items": [
+        38400,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 1398976,
+          "bytes": 294912
+        },
+        {
+          "kind": "coeff",
+          "offset": 1693888,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 1694912,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 1694976,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 1695488,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "name": "res3.conv2",
+      "ci": 128,
+      "co": 128,
+      "k": 3,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": false,
+      "save": false,
+      "residual": true,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_a",
+      "output_role": "fp_b",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "work_items": [
+        38400,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 1696000,
+          "bytes": 294912
+        },
+        {
+          "kind": "coeff",
+          "offset": 1990912,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 1991936,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 1992000,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 1992512,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "name": "res4.conv1",
+      "ci": 128,
+      "co": 128,
+      "k": 3,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": true,
+      "save": true,
+      "residual": false,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_b",
+      "output_role": "fp_a",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "work_items": [
+        38400,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 1993024,
+          "bytes": 294912
+        },
+        {
+          "kind": "coeff",
+          "offset": 2287936,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 2288960,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 2289024,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 2289536,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "name": "res4.conv2",
+      "ci": 128,
+      "co": 128,
+      "k": 3,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": false,
+      "save": false,
+      "residual": true,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_a",
+      "output_role": "fp_b",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "work_items": [
+        38400,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 2290048,
+          "bytes": 294912
+        },
+        {
+          "kind": "coeff",
+          "offset": 2584960,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 2585984,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 2586048,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 2586560,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "name": "res5.conv1",
+      "ci": 128,
+      "co": 128,
+      "k": 3,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": true,
+      "save": true,
+      "residual": false,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_b",
+      "output_role": "fp_a",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "work_items": [
+        38400,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 2587072,
+          "bytes": 294912
+        },
+        {
+          "kind": "coeff",
+          "offset": 2881984,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 2883008,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 2883072,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 2883584,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "name": "res5.conv2",
+      "ci": 128,
+      "co": 128,
+      "k": 3,
+      "stride": 1,
+      "upsample": 1,
+      "norm": true,
+      "relu": false,
+      "save": false,
+      "residual": true,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        128,
+        240,
+        320
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_a",
+      "output_role": "fp_b",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "work_items": [
+        38400,
+        153600,
+        128,
+        38400,
+        38400
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 2884096,
+          "bytes": 294912
+        },
+        {
+          "kind": "coeff",
+          "offset": 3179008,
+          "bytes": 1024
+        },
+        {
+          "kind": "sA",
+          "offset": 3180032,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 3180096,
+          "bytes": 512
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 3180608,
+          "bytes": 512
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "name": "deconv1",
+      "ci": 128,
+      "co": 64,
+      "k": 3,
+      "stride": 1,
+      "upsample": 2,
+      "norm": true,
+      "relu": true,
+      "save": false,
+      "residual": false,
+      "input_shape": [
+        128,
+        240,
+        320
+      ],
+      "output_shape": [
+        64,
+        480,
+        640
+      ],
+      "K": 1152,
+      "Kpad": 1152,
+      "input_role": "fp_b",
+      "output_role": "fp_a",
+      "conv_tiles": 307200,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "work_items": [
+        38400,
+        307200,
+        64,
+        76800,
+        76800
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 3181120,
+          "bytes": 147456
+        },
+        {
+          "kind": "coeff",
+          "offset": 3328576,
+          "bytes": 512
+        },
+        {
+          "kind": "sA",
+          "offset": 3329088,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 3329152,
+          "bytes": 256
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 3329408,
+          "bytes": 256
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "name": "deconv2",
+      "ci": 64,
+      "co": 32,
+      "k": 3,
+      "stride": 1,
+      "upsample": 2,
+      "norm": true,
+      "relu": true,
+      "save": false,
+      "residual": false,
+      "input_shape": [
+        64,
+        480,
+        640
+      ],
+      "output_shape": [
+        32,
+        960,
+        1280
+      ],
+      "K": 576,
+      "Kpad": 576,
+      "input_role": "fp_a",
+      "output_role": "fp_b",
+      "conv_tiles": 614400,
+      "ops": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "work_items": [
+        76800,
+        614400,
+        32,
+        153600,
+        153600
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 3329664,
+          "bytes": 36864
+        },
+        {
+          "kind": "coeff",
+          "offset": 3366528,
+          "bytes": 256
+        },
+        {
+          "kind": "sA",
+          "offset": 3366784,
+          "bytes": 4
+        },
+        {
+          "kind": "norm_gamma",
+          "offset": 3366848,
+          "bytes": 128
+        },
+        {
+          "kind": "norm_beta",
+          "offset": 3366976,
+          "bytes": 128
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "name": "deconv3",
+      "ci": 32,
+      "co": 3,
+      "k": 9,
+      "stride": 1,
+      "upsample": 1,
+      "norm": false,
+      "relu": false,
+      "save": false,
+      "residual": false,
+      "input_shape": [
+        32,
+        960,
+        1280
+      ],
+      "output_shape": [
+        3,
+        960,
+        1280
+      ],
+      "K": 2592,
+      "Kpad": 2592,
+      "input_role": "fp_b",
+      "output_role": "fp_a",
+      "conv_tiles": 153600,
+      "ops": [
+        1,
+        2
+      ],
+      "work_items": [
+        153600,
+        153600
+      ],
+      "weight_segments": [
+        {
+          "kind": "q16",
+          "offset": 3367104,
+          "bytes": 15552
+        },
+        {
+          "kind": "coeff",
+          "offset": 3382656,
+          "bytes": 24
+        },
+        {
+          "kind": "sA",
+          "offset": 3382720,
+          "bytes": 4
+        }
+      ]
+    }
+  ],
+  "asset_format": "MS8AST1",
+  "asset_bytes": 3382784,
+  "sha256": "fe2e90146c8ce02a7b36329d06728f44f1bbd57520a9ff506e495c60600c32c0"
+}

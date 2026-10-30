@@ -1,0 +1,13 @@
+#include "scheduler_fixture.hpp"
+struct Gated:Source {
+ bool open=false,error=false;mutable unsigned checks=0;
+ Gated():Source(2){}
+ Result<bool>ready(uint64_t index)const override{++checks;require(index<count,"bounded readiness index");return error?Result<bool>::failure({EXDEV,"TEST","stale residency identity"}):Result<bool>::success(open);}
+};
+int main(){
+ auto budget=std::make_shared<PendingBudget>();uint64_t clock=10;Scheduler s(budget,[&]{return clock;});auto a=request("held",2),b=request("unblocked",1);auto gate=std::make_shared<Gated>();a.source=gate;value(s.submit(a),"gated queued request");value(s.submit(b),"unblocked request");require(gate->checks==0,"admission does not acquire or check readiness");auto first=value(s.next_ready(),"skip blocked source");require(first.request.request_id=="unblocked"&&s.stats().active_gpu==1,"unready request must stay queued while other ready source dispatches");ok(s.complete(outcome(first)),"other retires");value(s.take_completion(),"consume other");auto no=s.next_ready();require(!no&&no.error->code==EAGAIN&&s.stats().active_gpu==0&&value(s.status(a.request),"blocked status")==RequestStatus::QUEUED,"normal EAGAIN without activation");gate->open=true;for(unsigned i=0;i<2;i++){auto w=value(s.next_ready(),"owner now ready");require(w.request.request_id=="held","same admitted source resumes");ok(s.complete(outcome(w)),"owner retires");value(s.take_completion(),"consume owner");}require(!budget->used(),"all pending reservations released");
+ auto c=request("cancel-gated",2);auto cg=std::make_shared<Gated>();c.source=cg;value(s.submit(c),"queue cancelled source");ok(s.cancel(c.request),"cancel without loading residency");require(!s.next_ready()&&cg->checks==0&&!budget->used(),"queued cancellation never checks or acquires device backing");
+ auto d=request("expired-gated",2);auto dg=std::make_shared<Gated>();d.source=dg;d.queue_deadline_ns=20;value(s.submit(d),"queue deadline source");clock=21;require(!s.next_ready()&&value(s.status(d.request),"expired state")==RequestStatus::FAILED&&value(s.request_error(d.request),"expiry result")==ETIMEDOUT&&dg->checks==0,"residency cannot bypass queue deadline");
+ auto e=request("bad-identity",2);auto eg=std::make_shared<Gated>();eg->error=true;e.source=eg;value(s.submit(e),"queue changed identity");auto bad=s.next_ready();require(!bad&&bad.error->code==EXDEV&&!s.stats().active_gpu&&!s.stats().reserved_completions,"readiness error never activates or invents retirement");ok(s.cancel(e.request),"explicit unmaterialized cancellation");ok(s.shutdown(),"empty gate shutdown");
+ puts("U12_SOURCE_READINESS_BACKPRESSURE_CANCEL_DEADLINE_PASS_NOT_BOARD");
+}

@@ -1,0 +1,23 @@
+{
+  "v1_bytes": 176,
+  "v2_bytes": 128,
+  "v2_ioctl_first": 128,
+  "v2_ioctl_last": 139,
+  "namespaces": {
+    "NN": 1,
+    "P8": 2,
+    "IMAGE": 3
+  },
+  "private_image_0x70_0x71": "UNPUBLISHED_NOT_ADDED",
+  "program_key": [
+    "namespace",
+    "logical_profile",
+    "logical_program",
+    "code_digest",
+    "schema_digest",
+    "hardware_digest"
+  ],
+  "hardware_isolation": true,
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED"
+}

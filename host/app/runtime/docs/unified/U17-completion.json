@@ -1,0 +1,314 @@
+{
+  "task": "U17",
+  "state": "VERIFIED_OFFLINE_FEATURE_MATRIX_NOT_WHOLE_RUNTIME",
+  "base": "ccf6336142cb15f1b11b56306b018143d756aadd",
+  "gpu_raw_cycles": null,
+  "public_uapi": "UNCHANGED",
+  "old_p8_program_ids": [
+    9,
+    10,
+    11,
+    12
+  ],
+  "source_cut": "U17-texture-full-flow-normal-072",
+  "source_files": 1893,
+  "source_manifest_sha256": "10f17a4b263b80e1ae2e93147e60c3326d8af0817ca5488aa322595cc4ccc1a1",
+  "stages": {
+    "U17-texture-completion-normal-069": {
+      "scope": "U17_TEXTURE_TRUSTED_COMMIT_CPU_INJECTION_NOT_GPU_DP",
+      "mode": "normal",
+      "natural_exit": 0,
+      "commands": 3,
+      "receipt_sha256": "0267b6c4b9094e824afc173761607d75c684b53838fa87245f85015ec468689e",
+      "executed_target_elfs": null,
+      "elfs": [
+        {
+          "path": "build/U17-texture-completion-normal-069/test_texture_completion",
+          "bytes": 6336088,
+          "mode": 509,
+          "kind": "file",
+          "sha256": "1e68062ef22054b0615d1e3f2b0a13056addb7f64082034862dc974a13654f94"
+        }
+      ],
+      "target_runtime": null
+    },
+    "U17-texture-full-flow-normal-072": {
+      "scope": "U17_TEXTURE_TRUSTED_COMMIT_CPU_INJECTION_NOT_GPU_DP",
+      "mode": "normal",
+      "natural_exit": 0,
+      "commands": 15,
+      "receipt_sha256": "343ecaef62aed018d741e4a9487d46eb7a9dd3ed562772ab0b82d44499ad30b5",
+      "executed_target_elfs": null,
+      "elfs": [
+        {
+          "path": "build/U17-texture-full-flow-normal-072/test_texture_completion",
+          "bytes": 6391632,
+          "mode": 509,
+          "kind": "file",
+          "sha256": "f9e343bddf04a475f468a87ba796d28f6cfe2e093ace3aaf9ba5e6c156e14222"
+        }
+      ],
+      "target_runtime": null
+    },
+    "U17-texture-final-sanitize-073": {
+      "scope": "U17_TEXTURE_TRUSTED_COMMIT_CPU_INJECTION_NOT_GPU_DP",
+      "mode": "sanitize",
+      "natural_exit": 0,
+      "commands": 15,
+      "receipt_sha256": "141a61e5a7a2aadd7f7859ee5c178a16cd2bf8aab39b04388074c11f53e81b7b",
+      "executed_target_elfs": null,
+      "elfs": [
+        {
+          "path": "build/U17-texture-final-sanitize-073/test_texture_completion",
+          "bytes": 65159728,
+          "mode": 509,
+          "kind": "file",
+          "sha256": "ca1c590cc5cd4a6455bd27ff62c64eb0883b18e33d50975e810a5b88c4a14b9b"
+        }
+      ],
+      "target_runtime": null
+    },
+    "U17-texture-final-thread-074": {
+      "scope": "U17_TEXTURE_TRUSTED_COMMIT_CPU_INJECTION_NOT_GPU_DP",
+      "mode": "thread",
+      "natural_exit": 0,
+      "commands": 15,
+      "receipt_sha256": "c7b354006265706fcada2532a8fbafb239a931160b30cd15a59c71e619807c13",
+      "executed_target_elfs": null,
+      "elfs": [
+        {
+          "path": "build/U17-texture-final-thread-074/test_texture_completion",
+          "bytes": 8557768,
+          "mode": 509,
+          "kind": "file",
+          "sha256": "1247bd868cb29c1b54015cae663f4feb28e25a0e8bc44f73a00940634381ff3a"
+        }
+      ],
+      "target_runtime": null
+    },
+    "U17-texture-final-cross-075": {
+      "scope": "U17_TEXTURE_TRUSTED_COMMIT_CPU_INJECTION_NOT_GPU_DP",
+      "mode": "cross",
+      "natural_exit": 0,
+      "commands": 4,
+      "receipt_sha256": "405b9207b0a2098e5e8f4dc1ff63300debcdcc8dd84d29a1bf2534722d26ed62",
+      "executed_target_elfs": false,
+      "elfs": [
+        {
+          "path": "build/U17-texture-final-cross-075/test_texture_completion",
+          "bytes": 7367352,
+          "mode": 509,
+          "kind": "file",
+          "sha256": "00bc076f889f9a24531de53a5be56ef7778994938e1d1488897f1355dd4b0ec4"
+        }
+      ],
+      "target_runtime": {
+        "rootfs_sha256": "d5163fa50ae6b3b945a280c96b6273e0eff9af312a992407bdf8b9abee3eb647",
+        "files": {
+          "ld-linux-aarch64.so.1": {
+            "path": "lib/ld-linux-aarch64.so.1",
+            "sha256": "2c307a67d7673dcb99e0e78bb6c3ae6ca468e21e5a0f7cbc6ad82846ad7afd4c"
+          },
+          "libpthread.so.0": {
+            "path": "lib/libpthread.so.0",
+            "sha256": "edcd56cc1d6e01b0a2dec0258318b965835aacc9ae6ded0d1fbba5f1084caadb"
+          },
+          "libc.so.6": {
+            "path": "lib/libc.so.6",
+            "sha256": "aeebc1b6491583b277e08ad1ca2509f4e28d628cb3df78073b71d676dea2bbe0"
+          },
+          "libgcc_s.so.1": {
+            "path": "lib/libgcc_s.so.1",
+            "sha256": "46ecda5c0995aaf773c409100398418361cbebdadffa768a24c950a84ae7cf76"
+          },
+          "libstdc++.so.6": {
+            "path": "usr/lib/libstdc++.so.6",
+            "sha256": "48f2c5788373d1987b8c21920838a109e945b5054a239a18a2115d105331e3a0"
+          },
+          "libm.so.6": {
+            "path": "lib/libm.so.6",
+            "sha256": "f5379ab0ba0797b5d66619425d8175263ac813ae7d7127376db2663be78a0a4b"
+          }
+        },
+        "required_versions": [
+          "CXXABI_1.3",
+          "CXXABI_1.3.9",
+          "GCC_3.0",
+          "GLIBCXX_3.4",
+          "GLIBCXX_3.4.11",
+          "GLIBCXX_3.4.14",
+          "GLIBCXX_3.4.15",
+          "GLIBCXX_3.4.20",
+          "GLIBCXX_3.4.21",
+          "GLIBCXX_3.4.22",
+          "GLIBC_2.17",
+          "GLIBC_2.25"
+        ]
+      }
+    },
+    "U17-texture-final-ingress-076": {
+      "scope": "ORIGINAL_P8_UDP_AND_FILE_INGRESS_NOT_GPU_DP",
+      "mode": "normal",
+      "natural_exit": 0,
+      "commands": 2,
+      "receipt_sha256": "46fb67d0a2cdc22dde740e5b0a7b11e20539043554690f23f099f5eac7b77ee3",
+      "executed_target_elfs": null,
+      "elfs": [],
+      "target_runtime": null
+    }
+  },
+  "final_archive": {
+    "members": 497,
+    "logical_bytes": 318578006,
+    "archive_bytes": 44407073,
+    "sha256": "54966337c9d710987b92a991e0f83c7c06b5ab11d7785c0a2b1f5849dcba2744",
+    "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U17-final-completion-matrix-077-evidence.tar.gz",
+    "gpu_raw_cycles": null,
+    "host": "z2euss-virtual-machine",
+    "uid": 1000,
+    "free_disk": 2227191808,
+    "verified_members": 497,
+    "members_sha256": "1ce423b653ac5b0e97c798d55a08a3523cc984d03715a251ffcae5ceb40ceed7",
+    "hardlink_members": 0,
+    "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U17-final-completion-matrix-077\\raw-and-artifacts.tar.gz",
+    "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+  },
+  "other_archives": [
+    {
+      "members": 199,
+      "logical_bytes": 109872032,
+      "archive_bytes": 6147822,
+      "sha256": "a30831c27095da728191db61366483784031e5b95fb7dc7ea0b208566e0da2c1",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U17-bank-matrix-031-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 3620364288,
+      "verified_members": 199,
+      "members_sha256": "9c6db189ec7723d4497d8477c9d6913488c4910c058a72d5cb28c4fdf5e363d5",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U17-bank-matrix-031\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 429,
+      "logical_bytes": 301115642,
+      "archive_bytes": 39689041,
+      "sha256": "48745e600ea82a2204f8660eb2ce80484a84733215d7e01cba31739011951e30",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U17-p8-texture-matrix-047-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 3028905984,
+      "verified_members": 429,
+      "members_sha256": "8a5bf2bf39a7f5c5a61f1bce38c1ce9651b08f56595b5b99cccf84e01a8b74bd",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U17-p8-texture-matrix-047\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 601,
+      "logical_bytes": 969610801,
+      "archive_bytes": 2017231,
+      "sha256": "4916670ac58405bec265a79b66dd159eaf995634c521f96c15136563e12edf4f",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U17-package-adversarial-052-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2825428992,
+      "verified_members": 601,
+      "members_sha256": "b1eb1890510f42050d00a2be55953b96338afc45d34616f3d7bee2c6dcb76f3e",
+      "hardlink_members": 246,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U17-package-adversarial-052\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 57,
+      "logical_bytes": 45103466,
+      "archive_bytes": 7546910,
+      "sha256": "7e934ebf32fc85ff56d75ca5201b5757a4d91c851baf703a291f23a6cdeb097f",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U17-custom-texture-model-055-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2747899904,
+      "verified_members": 57,
+      "members_sha256": "acdbee45ce0df94ce1fa64b7069c6e99c83cde3a64c0814c5ee41dc6587d7492",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U17-custom-texture-model-055\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    },
+    {
+      "members": 132,
+      "logical_bytes": 89700389,
+      "archive_bytes": 5526878,
+      "sha256": "fb311d626f87bf27d349a7f787654d4ce6cf24a09a8dfa4ee284035904eb47ae",
+      "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U17-texture-ingress-matrix-062-evidence.tar.gz",
+      "gpu_raw_cycles": null,
+      "host": "z2euss-virtual-machine",
+      "uid": 1000,
+      "free_disk": 2583220224,
+      "verified_members": 132,
+      "members_sha256": "2be624db8defb29bdea0f35ada55f157fd33cecf1c8c4521f9b9c448e39a9baa",
+      "hardlink_members": 0,
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U17-texture-ingress-matrix-062\\raw-and-artifacts.tar.gz",
+      "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+    }
+  ],
+  "checks": {
+    "full_flow_cases_per_mode": 14,
+    "adversarial_refusals_per_mode": 26,
+    "package_positive_cases_per_mode": 2,
+    "frozen_preprocessor_tests": 11,
+    "frozen_c_protocol_tests": 8,
+    "custom_gradient_model_meshes": 3,
+    "model_is_not_rtl_or_gpu": true
+  },
+  "scope": {
+    "cpu_injection_and_host_display": true,
+    "actual_c_common_driver_state": true,
+    "target_elfs_executed": false,
+    "socket_binding": "PRODUCTION_PUMP_U20",
+    "native_kms": "U18",
+    "production_factory": "U20",
+    "image": "NOT_BUILT",
+    "board": "NOT_RUN",
+    "sd": "NOT_TOUCHED"
+  },
+  "inputs": {
+    "scope": "UNCHANGED_P8_SOURCE_IMPORT_NOT_GPU_DISPLAY",
+    "files": [
+      {
+        "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\network\\texture_rx.c",
+        "candidate": "vendor/p8/network/texture_rx.c",
+        "bytes": 4975,
+        "sha256": "2d2a08a9edefb06bf6a8390a97128d931dbfa5ec95fe6cbba798dea2a9b29741"
+      },
+      {
+        "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\network\\texture_rx.h",
+        "candidate": "vendor/p8/network/texture_rx.h",
+        "bytes": 1540,
+        "sha256": "be10473f80849e6c3a87128c8e5dbb6a22adee7653cde99c5411a04b9ffee0d0"
+      },
+      {
+        "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\desktop\\texture_sender.py",
+        "candidate": "vendor/p8/desktop/texture_sender.py",
+        "bytes": 11222,
+        "sha256": "7af19f767c61ee49d530917b2204d6aba4031ceb1dcbf82e028a7eb344dfc6cb"
+      },
+      {
+        "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\tests\\texture_rx_protocol.py",
+        "candidate": "vendor/p8/tests/texture_rx_protocol.py",
+        "bytes": 8342,
+        "sha256": "5510db313a55268f5e266bd194285fe48da21b9cc3bfafc5edd1ee8a4012a0a6"
+      },
+      {
+        "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\tests\\test_desktop_texture.py",
+        "candidate": "vendor/p8/tests/test_desktop_texture.py",
+        "bytes": 6422,
+        "sha256": "7c41752c85f40b88cceeedbab65b6fdfa7db71283119b9d17ba0eec62907f51c"
+      }
+    ],
+    "gpu_raw_cycles": null
+  }
+}

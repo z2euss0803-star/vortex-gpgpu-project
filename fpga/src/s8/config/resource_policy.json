@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "physical_comparison": ">=",
+  "physical_min_gib": 4,
+  "commit_min_gib": 8,
+  "other_heavy_required": 0,
+  "max_threads": 4,
+  "physical_alarm_gib": 1,
+  "commit_alarm_gib": 2,
+  "scope": "W4 S8 whole GPU synthesis and implementation; no new simulation"
+}

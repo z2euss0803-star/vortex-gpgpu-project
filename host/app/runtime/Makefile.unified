@@ -1,0 +1,1277 @@
+PYTHON ?= python3
+MOSAIC_WIRE_SOURCE ?= device/vxnn/mosaic_wire_ro64.cpp device/vxnn/mosaic_wire_fused_v1.cpp device/vxnn/mosaic_wire_coop_v3.cpp device/vxnn/mosaic_wire_reuse_v4.cpp
+MOSAIC_PROGRAM_DIR ?= data/nnrt/programs/mosaic-int16-v3
+HUNET_PROGRAM_DIR ?= data/nnrt/programs/hunet-fp16-v2
+NN_JSON_PREFIX ?= /home/z2euss/workspace/mosaic_hunet_dp_20261018/deps/json-c-0.18-vxl1
+NN_JSON_FLAGS = -I$(NN_JSON_PREFIX)/include
+NN_JSON_LIBS = $(NN_JSON_PREFIX)/lib/libjson-c.a -lm
+CC ?= gcc
+CXX ?= g++
+OUT ?= build/unified-host
+DEBUG_FLAGS ?= -g
+UFLAGS = -std=c11 -O2 $(DEBUG_FLAGS) -Wall -Wextra -Werror -Iinclude -I.
+UXFLAGS = -std=c++17 -O2 $(DEBUG_FLAGS) -Wall -Wextra -Werror -Iinclude -I. -pthread
+ifneq ($(SANITIZE),)
+UFLAGS += -fsanitize=$(SANITIZE) -fno-omit-frame-pointer
+UXFLAGS += -fsanitize=$(SANITIZE) -fno-omit-frame-pointer
+endif
+.PHONY: test-unified-freeze
+test-unified-freeze:
+	$(PYTHON) -m unittest discover -s tests/unified -p test_freeze.py -v
+.PHONY: test-unified-wire test-unified-identity
+$(OUT)/test_wire: tests/v2/test_wire.c include/uapi/vx_compute_v2.h include/vxl/v2/types.h
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< -o $@
+$(OUT)/test_identity: tests/unified/test_identity.cpp include/vxunified/types.hpp
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $< -o $@
+test-unified-wire: $(OUT)/test_wire
+	$<
+test-unified-identity: $(OUT)/test_identity
+	$<
+V2_OBJECT_CORE = core/v2/owner.c core/v2/objects.c core/v2/validate.c core/range.c
+V2_OBJECT_HEADERS = include/vxl/v2/objects.h include/vxl/v2/types.h
+.PHONY: test-v2-objects test-v2-owner test-unified-resources
+$(OUT)/test_objects: tests/v2/test_objects.c $(V2_OBJECT_CORE) $(V2_OBJECT_HEADERS)
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_OBJECT_CORE) -o $@
+test-v2-objects test-v2-owner: $(OUT)/test_objects
+	$<
+$(OUT)/v2/%.o: core/v2/%.c $(V2_OBJECT_HEADERS)
+	mkdir -p $(OUT)/v2
+	$(CC) $(UFLAGS) -c $< -o $@
+$(OUT)/v2/range.o: core/range.c
+	mkdir -p $(OUT)/v2
+	$(CC) $(UFLAGS) -c $< -o $@
+$(OUT)/test_leases: tests/unified/test_leases.cpp unified/resources.cpp include/vxunified/resources.hpp $(OUT)/v2/owner.o $(OUT)/v2/objects.o $(OUT)/v2/validate.o $(OUT)/v2/range.o
+	$(CXX) $(UXFLAGS) tests/unified/test_leases.cpp unified/resources.cpp $(filter %.o,$^) -o $@
+test-unified-resources: $(OUT)/test_leases
+	$<
+	$(PYTHON) -m unittest discover -s tests/unified -p test_resources.py -v
+.PHONY: test-v2-buffer-adapter
+$(OUT)/test_buffer_adapter: tests/v2/test_buffer_adapter.c driver/v2/buffers.c $(V2_OBJECT_CORE) $(V2_OBJECT_HEADERS)
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< driver/v2/buffers.c $(V2_OBJECT_CORE) -o $@
+test-v2-buffer-adapter: $(OUT)/test_buffer_adapter
+	$<
+.PHONY: test-unified-catalog test-v2-program test-v2-relocate test-unified-catalog-builder
+test-unified-catalog-builder:
+	$(PYTHON) -m unittest discover -s tests/unified -p test_catalog.py -v
+$(OUT)/catalog-fixture.bin: tests/v2/catalog_fixture.py
+	$(PYTHON) $< $@
+$(OUT)/test_catalog: tests/v2/test_program.c core/v2/catalog.c include/vxl/v2/program.h
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< core/v2/catalog.c core/hunet_sha256.c -o $@
+test-unified-catalog: $(OUT)/test_catalog $(OUT)/catalog-fixture.bin
+	$(OUT)/test_catalog $(OUT)/catalog-fixture.bin
+V2_PROGRAM_CORE = $(V2_OBJECT_CORE) core/v2/catalog.c core/v2/program.c core/v2/relocate.c core/hunet_sha256.c
+$(OUT)/relocate-fixture.bin: tests/v2/relocate_fixture.py
+	$(PYTHON) $< $@
+$(OUT)/test_program_load: tests/v2/test_program_load.c tests/v2/program_fixture.h $(V2_PROGRAM_CORE) include/vxl/v2/program.h
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_PROGRAM_CORE) -o $@
+$(OUT)/test_relocate: tests/v2/test_relocate.c tests/v2/program_fixture.h $(V2_PROGRAM_CORE) include/vxl/v2/program.h
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_PROGRAM_CORE) -o $@
+test-v2-program: $(OUT)/test_program_load $(OUT)/catalog-fixture.bin
+	$(OUT)/test_program_load $(OUT)/catalog-fixture.bin
+test-v2-relocate: $(OUT)/test_relocate $(OUT)/relocate-fixture.bin
+	$(OUT)/test_relocate $(OUT)/relocate-fixture.bin
+.PHONY: test-v2-catalog-driver
+$(OUT)/test_catalog_driver: tests/v2/test_catalog_driver.c tests/v2/program_fixture.h driver/v2/program.c $(V2_PROGRAM_CORE) include/vxl/v2/program.h
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< driver/v2/program.c $(V2_PROGRAM_CORE) -o $@
+test-v2-catalog-driver: $(OUT)/test_catalog_driver $(OUT)/catalog-fixture.bin
+	$(OUT)/test_catalog_driver $(OUT)/catalog-fixture.bin
+.PHONY: test-v2-private-init
+$(OUT)/private-fixture.bin: tests/v2/private_fixture.py tests/v2/catalog_fixture.py
+	$(PYTHON) $< $@
+$(OUT)/test_private_init: tests/v2/test_private_init.c tests/v2/program_fixture.h $(V2_PROGRAM_CORE) include/vxl/v2/program.h
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_PROGRAM_CORE) -o $@
+test-v2-private-init: $(OUT)/test_private_init $(OUT)/private-fixture.bin
+	$(OUT)/test_private_init $(OUT)/private-fixture.bin
+V2_JOB_CORE = $(V2_PROGRAM_CORE) core/v2/jobs.c core/v2/completion.c core/v2/batch.c
+.PHONY: test-v2-jobs test-v2-batch test-v2-close test-v2-poll
+$(OUT)/test_job_%: tests/v2/test_%.c tests/v2/jobs_fixture.h tests/v2/program_fixture.h include/vxl/v2/jobs.h $(V2_JOB_CORE)
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_JOB_CORE) -o $@
+test-v2-jobs: $(OUT)/test_job_jobs $(OUT)/catalog-fixture.bin
+	$(OUT)/test_job_jobs $(OUT)/catalog-fixture.bin
+test-v2-batch: $(OUT)/test_job_batch $(OUT)/catalog-fixture.bin
+	$(OUT)/test_job_batch $(OUT)/catalog-fixture.bin
+test-v2-close: $(OUT)/test_job_close $(OUT)/catalog-fixture.bin
+	$(OUT)/test_job_close $(OUT)/catalog-fixture.bin
+test-v2-poll: $(OUT)/test_job_poll $(OUT)/catalog-fixture.bin
+	$(OUT)/test_job_poll $(OUT)/catalog-fixture.bin
+V2_DISPATCH = driver/v2/ioctl.c driver/v2/worker.c driver/v2/poll.c
+.PHONY: test-v2-dispatch
+$(OUT)/test_dispatch: tests/v2/test_dispatch.c tests/v2/jobs_fixture.h include/vxl/v2/dispatch.h $(V2_JOB_CORE) $(V2_DISPATCH)
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) -pthread $< $(V2_JOB_CORE) $(V2_DISPATCH) -o $@
+test-v2-dispatch: $(OUT)/test_dispatch $(OUT)/catalog-fixture.bin
+	$(OUT)/test_dispatch $(OUT)/catalog-fixture.bin
+V2_PROVIDER = driver/v2/provider_s8.c driver/v2/provider_p8.c driver/v2/hw.c
+.PHONY: test-v2-execution
+$(OUT)/execution-fixture.bin: tests/v2/execution_fixture.py tests/v2/catalog_fixture.py
+	$(PYTHON) $< $@
+$(OUT)/p8-execution-fixture.bin: tests/v2/execution_fixture.py tests/v2/catalog_fixture.py
+	$(PYTHON) $< $@
+$(OUT)/test_execution: tests/v2/test_execution.c tests/v2/test_provider.c $(V2_PROVIDER) $(V2_JOB_CORE) driver/v2/execution.c driver/v2/startup.c core/cdma.c $(V2_ALL_HEADERS)
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_PROVIDER) $(V2_JOB_CORE) driver/v2/execution.c driver/v2/startup.c core/cdma.c -o $@
+test-v2-execution: $(OUT)/test_execution $(OUT)/execution-fixture.bin $(OUT)/p8-execution-fixture.bin
+	$(OUT)/test_execution $(OUT)/execution-fixture.bin $(OUT)/p8-execution-fixture.bin
+.PHONY: test-v2-provider test-unified-sequential-mode
+$(OUT)/test_sequential_mode: tests/unified/test_sequential_mode.cpp unified/service/mode.cpp include/vxunified/mode.hpp
+	mkdir -p $(OUT)
+	$(CXX) -std=c++17 -O2 -g -Wall -Wextra -Werror -Iinclude -I. tests/unified/test_sequential_mode.cpp unified/service/mode.cpp -o $@
+test-unified-sequential-mode: $(OUT)/test_sequential_mode
+	$<
+.PHONY: test-unified-ingress-mux
+$(OUT)/test_ingress_mux: tests/unified/test_ingress_mux.cpp unified/service/ingress_mux.cpp include/vxunified/ingress_mux.hpp
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) tests/unified/test_ingress_mux.cpp unified/service/ingress_mux.cpp -o $@
+test-unified-ingress-mux: $(OUT)/test_ingress_mux
+	$<
+.PHONY: test-v2-joint-catalog
+$(OUT)/test_joint_catalog: tests/v2/test_joint_catalog.c core/v2/catalog.c core/hunet_sha256.c driver/v2/provider_s8.c driver/v2/provider_p8.c
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $^ -o $@
+$(OUT)/joint-firmware/catalog-v1.bin: scripts/unified/joint_firmware.py scripts/unified/bind_kernel.py contracts/unified/providers.json
+	python3 -m scripts.unified.joint_firmware $(OUT)/joint-firmware
+test-v2-joint-catalog: $(OUT)/test_joint_catalog $(OUT)/joint-firmware/catalog-v1.bin
+	$(OUT)/test_joint_catalog $(OUT)/joint-firmware/catalog-v1.bin
+.PHONY: test-unified-joint-bridge
+$(OUT)/test_joint_bridge: tests/unified/test_joint_bridge.cpp unified/service/joint_bridge.cpp unified/service/sealed_assets.cpp $(OUT)/nn/nnrt/package/canonical.o $(OUT)/nn/sha.o
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+test-unified-joint-bridge: $(OUT)/test_joint_bridge
+	$<
+$(OUT)/test_provider: tests/v2/test_provider.c include/vxl/v2/provider.h $(V2_PROVIDER) $(V2_OBJECT_CORE) core/cdma.c
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_PROVIDER) $(V2_OBJECT_CORE) core/cdma.c -o $@
+test-v2-provider: $(OUT)/test_provider
+	$<
+.PHONY: test-v2-control
+$(OUT)/test_control: tests/v2/test_control.c tests/v2/port_fixture.h include/vxl/v2/control.h $(V2_JOB_CORE) $(V2_DISPATCH) driver/v2/control.c driver/v2/program.c
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) -pthread $< $(V2_JOB_CORE) $(V2_DISPATCH) driver/v2/control.c driver/v2/program.c -o $@
+test-v2-control: $(OUT)/test_control $(OUT)/catalog-fixture.bin
+	$(OUT)/test_control $(OUT)/catalog-fixture.bin
+V2_BACKEND_C = $(V2_JOB_CORE) $(V2_DISPATCH) driver/v2/control.c driver/v2/program.c
+$(OUT)/backend/%.o: %.c include/vxl/v2/control.h
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -pthread -c $< -o $@
+.PHONY: test-unified-backend
+$(OUT)/test_backend: tests/unified/test_backend.cpp nnrt/backend/compute_v2.cpp include/vxunified/backend.hpp $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) $(filter %.cpp %.o,$^) -o $@
+test-unified-backend: $(OUT)/test_backend $(OUT)/catalog-fixture.bin
+	$(OUT)/test_backend $(OUT)/catalog-fixture.bin
+# Every v2 consumer rebuilds for any wire/core header change. Final evidence
+# runs also use fresh OUT directories rather than trusting incremental products.
+V2_ALL_HEADERS = $(wildcard include/vxl/v2/*.h include/vxunified/*.hpp include/vxnn/*.hpp) include/uapi/vx_compute_v2.h
+$(addprefix $(OUT)/,test_objects test_leases test_buffer_adapter test_catalog test_program_load test_relocate test_catalog_driver test_private_init test_job_jobs test_job_batch test_job_close test_job_poll test_dispatch test_control test_provider test_backend test_execution): $(V2_ALL_HEADERS)
+$(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o: $(V2_ALL_HEADERS) tests/v2/port_fixture.h tests/v2/jobs_fixture.h tests/v2/program_fixture.h
+
+NN_PLAN_SOURCES = nnrt/package/canonical.cpp nnrt/package/reader.cpp nnrt/package/registry.cpp nnrt/graph/prepare.cpp nnrt/memory/planner.cpp
+NN_PLAN_OBJECTS = $(addprefix $(OUT)/nn/,$(NN_PLAN_SOURCES:.cpp=.o)) $(OUT)/nn/sha.o
+.SECONDARY: $(NN_PLAN_OBJECTS)
+$(OUT)/nn/%.o: %.cpp $(wildcard include/vxnn/*.hpp include/vxunified/*.hpp nnrt/package/*.hpp)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -c $< -o $@
+$(OUT)/nn/sha.o: core/hunet_sha256.c
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -c $< -o $@
+$(OUT)/test_nn_%: tests/nnrt/test_%.cpp tests/nnrt/fixture.hpp $(NN_PLAN_OBJECTS)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $< $(NN_PLAN_OBJECTS) $(NN_JSON_LIBS) -lstdc++fs -o $@
+$(OUT)/package-fixtures/.ready: tests/nnrt/package_fixture.py
+	$(PYTHON) $< $(OUT)/package-fixtures
+	touch $@
+.PHONY: test-unified-package test-unified-registry test-unified-graph test-unified-memory-plan
+test-unified-package: $(OUT)/test_nn_package $(OUT)/package-fixtures/.ready
+	$(OUT)/test_nn_package $(OUT)/package-fixtures
+test-unified-registry: $(OUT)/test_nn_registry
+	$(OUT)/test_nn_registry
+test-unified-graph: $(OUT)/test_nn_graph $(OUT)/package-fixtures/.ready
+	$(OUT)/test_nn_graph $(OUT)/package-fixtures
+test-unified-memory-plan: $(OUT)/test_nn_memory_plan
+	$(OUT)/test_nn_memory_plan
+.PHONY: test-unified-package-legacy
+$(OUT)/test_old_package: references/nn-uncommitted/tests/nnrt/test_package.cpp.reference $(NN_PLAN_OBJECTS)
+	$(CXX) $(UXFLAGS) -x c++ $< -x none $(NN_PLAN_OBJECTS) $(NN_JSON_LIBS) -lstdc++fs -o $@
+$(OUT)/test_old_registry: references/nn-uncommitted/tests/nnrt/test_registry.cpp.reference $(NN_PLAN_OBJECTS)
+	$(CXX) $(UXFLAGS) -x c++ $< -x none $(NN_PLAN_OBJECTS) $(NN_JSON_LIBS) -lstdc++fs -o $@
+test-unified-package-legacy: $(OUT)/test_old_package $(OUT)/test_old_registry $(OUT)/package-fixtures/.ready
+	$(OUT)/test_old_package $(OUT)/package-fixtures
+	$(OUT)/test_old_registry resolve
+	$(OUT)/test_old_registry duplicate
+	$(OUT)/test_old_registry dtype
+.PHONY: test-unified-cpu test-unified-gelu
+CPU_POOL_OBJECTS = $(OUT)/shared/nnrt/cpu/pool.o $(OUT)/shared/nnrt/cpu/gelu.o
+$(OUT)/test_cpu_%: tests/nnrt/test_%_pool.cpp $(CPU_POOL_OBJECTS) include/vxnn/cpu.hpp include/vxnn/types.hpp
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $< $(CPU_POOL_OBJECTS) -lm -o $@
+$(OUT)/test_cpu_cpu: tests/nnrt/test_cpu_pool.cpp $(CPU_POOL_OBJECTS) include/vxnn/cpu.hpp include/vxnn/types.hpp
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $< $(CPU_POOL_OBJECTS) -lm -Wl,--wrap=pthread_create -Wl,--wrap=pthread_join -Wl,--wrap=sysconf -o $@
+test-unified-cpu: $(OUT)/test_cpu_cpu
+	$<
+	$< create
+	$< join
+	$< few
+test-unified-gelu: $(OUT)/test_cpu_gelu
+	$<
+
+# A fresh OUT is bound by the run manifest to compiler/flags/source identity.
+# Compile shared scheduler/CPU objects once, link all three tests from them.
+SCHED_SOURCES = unified/scheduler/queue.cpp unified/scheduler/dispatch.cpp unified/scheduler/cancel.cpp nnrt/cpu/pool.cpp nnrt/cpu/gelu.cpp
+SCHED_OBJECTS = $(addprefix $(OUT)/shared/,$(SCHED_SOURCES:.cpp=.o))
+SCHED_HEADERS = $(wildcard include/vxunified/*.hpp include/vxnn/*.hpp unified/scheduler/*.hpp)
+.PHONY: test-unified-backend-cookie-order
+$(OUT)/test_cookie_history: tests/unified/test_cookie_history.cpp nnrt/backend/logical_cookie_history.hpp
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $< -o $@
+.PHONY: test-unified-cookie-history
+test-unified-cookie-history: $(OUT)/test_cookie_history
+	$<
+$(OUT)/test_backend_cookie_order: tests/unified/test_backend_cookie_order.cpp tests/unified/backend_bridge.h tests/unified/scheduler_fixture.hpp $(OUT)/shared/nnrt/backend/compute_v2.o $(SCHED_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) -lm -o $@
+test-unified-backend-cookie-order: $(OUT)/test_backend_cookie_order $(OUT)/catalog-fixture.bin
+	$(OUT)/test_backend_cookie_order $(OUT)/catalog-fixture.bin
+$(OUT)/shared/%.o: %.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off -c $< -o $@
+$(OUT)/shared/nnrt/backend/compute_v2.o: nnrt/backend/logical_cookie_history.hpp
+$(OUT)/test_sched_%: tests/unified/test_%.cpp tests/unified/scheduler_fixture.hpp $(SCHED_OBJECTS)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $< $(SCHED_OBJECTS) -lm -o $@
+.PHONY: test-unified-scheduler test-unified-cancel test-unified-budget
+test-unified-scheduler: $(OUT)/test_sched_scheduler
+	$<
+test-unified-cancel: $(OUT)/test_sched_cancel
+	$<
+test-unified-budget: $(OUT)/test_sched_budget
+	$<
+.PHONY: test-unified-token-transfer
+test-unified-token-transfer: $(OUT)/test_sched_token_transfer
+	$<
+.PHONY: test-unified-scheduler-faults
+test-unified-scheduler-faults: $(OUT)/test_sched_scheduler_faults
+	$<
+.PHONY: test-unified-scheduler-alloc
+test-unified-scheduler-alloc: $(OUT)/test_sched_scheduler_alloc
+	$<
+.PHONY: test-unified-gelu-token
+test-unified-gelu-token: $(OUT)/test_sched_gelu_token
+	$<
+.SECONDARY: $(SCHED_OBJECTS)
+
+SERVICE_SOURCES = unified/service/owner.cpp unified/service/result.cpp
+SERVICE_OBJECTS = $(addprefix $(OUT)/shared/,$(SERVICE_SOURCES:.cpp=.o))
+$(OUT)/test_service: tests/unified/test_service.cpp $(SERVICE_OBJECTS)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $< $(SERVICE_OBJECTS) -o $@
+.PHONY: test-unified-service-owner test-unified-service-results test-unified-service
+test-unified-service-owner: $(OUT)/test_service
+	$< owner
+test-unified-service-results: $(OUT)/test_service
+	$< leases
+	$< concurrent
+test-unified-service: test-unified-service-owner test-unified-service-results
+.SECONDARY: $(SERVICE_OBJECTS)
+$(OUT)/rpc_fixture: tests/unified/rpc_fixture.cpp tests/unified/scheduler_fixture.hpp $(OUT)/shared/unified/service/rpc.o $(OUT)/nn/nnrt/package/canonical.o $(OUT)/nn/sha.o $(SCHED_OBJECTS)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+$(OUT)/shared/unified/service/rpc.o: unified/service/rpc.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off -c $< -o $@
+.PHONY: test-unified-rpc
+test-unified-rpc: $(OUT)/rpc_fixture
+	U10_RPC_BINARY=$(abspath $<) $(PYTHON) -m unittest discover -s tests/unified -p test_rpc.py -v
+$(OUT)/legacy_json.o: demo/json.c $(wildcard include/vxl/demo*.h)
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) $(NN_JSON_FLAGS) -c $< -o $@
+$(OUT)/test_service_legacy: tests/nnrt/test_legacy_backend.cpp nnrt/backend/legacy.cpp nnrt/evidence.cpp $(OUT)/legacy_json.o $(OUT)/nn/sha.o $(SCHED_HEADERS)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -Wl,--wrap=open -Wl,--wrap=close -o $@
+.PHONY: test-unified-service-legacy
+test-unified-service-legacy: $(OUT)/test_service_legacy
+	$< tests/demo/fixtures/run-v1.json
+$(OUT)/test_service_alloc: tests/unified/test_service_alloc.cpp unified/service/result.cpp $(SCHED_HEADERS)
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) -fno-elide-constructors $(filter %.cpp,$^) -o $@
+.PHONY: test-unified-service-alloc
+test-unified-service-alloc: $(OUT)/test_service_alloc
+	$<
+RUNTIME_OBJECTS = $(SERVICE_OBJECTS) $(OUT)/shared/unified/service/runtime.o $(OUT)/shared/unified/service/mode.o $(SCHED_OBJECTS)
+$(OUT)/test_runtime: tests/unified/test_runtime.cpp tests/unified/scheduler_fixture.hpp $(RUNTIME_OBJECTS)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $< $(RUNTIME_OBJECTS) -lm -o $@
+.PHONY: test-unified-runtime
+test-unified-runtime: $(OUT)/test_runtime
+	$< flow
+	$< limits
+	$< cancel
+.PHONY: test-unified-runtime-joint-mode
+test-unified-runtime-joint-mode: $(OUT)/test_runtime
+	$< joint-mode
+.PHONY: test-unified-runtime-residency
+test-unified-runtime-residency: $(OUT)/test_runtime
+	$< residency
+	$< residency-reentrant
+.PHONY: test-unified-runtime-bad-output test-unified-runtime-late-cancel test-unified-runtime-expiry test-unified-runtime-error
+test-unified-runtime-bad-output: $(OUT)/test_runtime
+	$< bad-output
+test-unified-runtime-late-cancel: $(OUT)/test_runtime
+	$< late-cancel
+test-unified-runtime-expiry: $(OUT)/test_runtime
+	$< expiry
+test-unified-runtime-error: $(OUT)/test_runtime
+	$< error
+.PHONY: test-unified-runtime-quarantine
+test-unified-runtime-quarantine: $(OUT)/test_runtime
+	$< unknown
+	$< offline-cycles
+.PHONY: test-unified-runtime-error-evidence test-unified-runtime-error-log-retry
+test-unified-runtime-error-evidence: $(OUT)/test_runtime
+	$< error-evidence
+test-unified-runtime-error-log-retry: $(OUT)/test_runtime
+	$< error-log-retry
+$(OUT)/test_compute_port: tests/unified/test_compute_port.cpp tests/unified/backend_bridge.h tests/unified/scheduler_fixture.hpp unified/service/compute_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) -lm -o $@
+.PHONY: test-unified-compute-port
+test-unified-compute-port: $(OUT)/test_compute_port $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin flow
+	$< $(OUT)/catalog-fixture.bin ack-log
+	$< $(OUT)/catalog-fixture.bin timeout
+	$< $(OUT)/catalog-fixture.bin ack-fault
+
+.PHONY: test-unified-compute-timeout-evidence test-unified-compute-output-binding test-unified-runtime-exception
+test-unified-compute-timeout-evidence: $(OUT)/test_compute_port $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin timeout-evidence
+test-unified-compute-output-binding: $(OUT)/test_compute_port $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin bad-output
+test-unified-runtime-exception: $(OUT)/test_runtime
+	$< exception
+
+.PHONY: test-unified-compute-finish-exception
+test-unified-compute-finish-exception: $(OUT)/test_compute_port $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin finish-throw
+
+.PHONY: test-unified-runtime-binding
+test-unified-runtime-binding: $(OUT)/test_runtime
+	$< binding
+$(OUT)/shared/unified/service/journal.o: unified/service/journal.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off -c $< -o $@
+$(OUT)/test_journal: tests/unified/test_journal.cpp $(OUT)/shared/unified/service/journal.o $(OUT)/nn/sha.o $(SCHED_HEADERS)
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -Wl,--wrap=write -Wl,--wrap=fdatasync -Wl,--wrap=fsync -o $@
+.PHONY: test-unified-journal
+test-unified-journal: $(OUT)/test_journal
+	$< $(OUT)/journal-fixture work
+	$< $(OUT)/journal-fixture result
+	$< $(OUT)/journal-fixture partial
+	$< $(OUT)/journal-fixture file-sync
+	$< $(OUT)/journal-fixture dir-sync
+	$< $(OUT)/journal-fixture mutation
+	$< $(OUT)/journal-fixture unsafe
+$(OUT)/test_journal_runtime: tests/unified/test_journal_runtime.cpp $(OUT)/shared/unified/service/journal.o $(RUNTIME_OBJECTS) $(OUT)/nn/sha.o $(SCHED_HEADERS)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -Wl,--wrap=write -o $@
+.PHONY: test-unified-journal-runtime
+test-unified-journal-runtime: $(OUT)/test_journal_runtime
+	$< $(OUT)/journal-runtime-fixture
+$(OUT)/test_runtime_alloc: tests/unified/test_runtime_alloc.cpp tests/unified/scheduler_fixture.hpp $(RUNTIME_OBJECTS)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off -fno-elide-constructors $< $(RUNTIME_OBJECTS) -lm -o $@
+.PHONY: test-unified-runtime-alloc
+test-unified-runtime-alloc: $(OUT)/test_runtime_alloc
+	$<
+
+$(OUT)/test_pinned_exit: tests/unified/test_pinned_exit.cpp tests/unified/scheduler_fixture.hpp $(RUNTIME_OBJECTS)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $< $(RUNTIME_OBJECTS) -lm -o $@
+.PHONY: test-unified-pinned-exit
+test-unified-pinned-exit: $(OUT)/test_pinned_exit
+	$< result
+	$< scheduler
+	$< runtime
+	$< result-empty
+	$< scheduler-empty
+	$< runtime-empty
+$(OUT)/test_pool_exit: tests/unified/test_pool_exit.cpp $(CPU_POOL_OBJECTS) $(SCHED_HEADERS)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $< $(CPU_POOL_OBJECTS) -Wl,--wrap=pthread_join -lm -o $@
+.PHONY: test-unified-pool-exit
+test-unified-pool-exit: $(OUT)/test_pool_exit
+	$< unknown
+	$< explicit
+	$< clean
+$(OUT)/error_oom_probe: tests/unified/error_oom_probe.cpp include/vxnn/types.hpp
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) -fno-elide-constructors $< -o $@
+.PHONY: test-unified-error-oom-probe
+test-unified-error-oom-probe: $(OUT)/error_oom_probe
+	$(PYTHON) scripts/unified/check_error_oom_probe.py $<
+.PHONY: test-unified-error-oom
+test-unified-error-oom: $(OUT)/error_oom_probe
+	$< constructed
+	$< result-aggregate
+	$< result-named
+
+$(OUT)/test_int16_ops: tests/nnrt/test_int16_ops.cpp device/vxnn/int16_matmul.cpp device/vxnn/int48_post.cpp device/vxnn/ops.h device/vxnn/ranges.h device/mosaic_s8/tile.cpp device/mosaic_s8/unpack.cpp tests/mosaic_s8/fake_s8.cpp
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) -Idevice/mosaic_s8 $(filter %.cpp,$^) -o $@
+.PHONY: test-unified-int16
+test-unified-int16: $(OUT)/test_int16_ops
+	$<
+$(OUT)/test_int16_entry: tests/nnrt/test_int16_entry.cpp device/vxnn/entry.cpp device/vxnn/ops.h device/vxnn/ranges.h
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $(filter %.cpp,$^) -o $@
+.PHONY: test-unified-int16-entry
+test-unified-int16-entry: $(OUT)/test_int16_entry
+	$<
+$(OUT)/test_int16_registry: tests/nnrt/test_int16_registry.cpp nnrt/ops/int16.cpp include/vxnn/ops_int16.hpp device/vxnn/ops.h $(NN_PLAN_OBJECTS)
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-int16-registry
+test-unified-int16-registry: $(OUT)/test_int16_registry
+	$<
+$(OUT)/test_int16_models: tests/nnrt/test_int16_models.cpp nnrt/ops/int16.cpp device/vxnn/int16_matmul.cpp device/vxnn/int48_post.cpp device/mosaic_s8/tile.cpp device/mosaic_s8/unpack.cpp tests/mosaic_s8/fake_s8.cpp $(NN_PLAN_OBJECTS) $(OUT)/v2/catalog.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -Idevice/mosaic_s8 $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+$(OUT)/int16-packages/.ready: tests/nnrt/int16_package_fixture.py
+	$(PYTHON) $< $(OUT)/int16-packages
+.PHONY: test-unified-extension-plan
+test-unified-extension-plan: $(OUT)/test_int16_models $(OUT)/int16-packages/.ready
+	$(OUT)/test_int16_models $(OUT)/int16-packages data/nnrt/programs/int16-family-v1
+$(OUT)/test_hunet_layout: tests/nnrt/test_hunet_layout.cpp device/vxnn/hunet_ops.cpp device/vxnn/hunet_ops.h device/hunet_fused_ops.h vendor/hunet/v5/include/hunet_ordered_reductions.h
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off -Ivendor/hunet/v5/include $(filter %.cpp,$^) -o $@
+.PHONY: test-unified-hunet-layout test-unified-hunet
+test-unified-hunet-layout: $(OUT)/test_hunet_layout
+	$<
+# U12 component aggregator; full migration/dependency test is required before task acceptance.
+test-unified-hunet: test-unified-hunet-layout
+
+$(OUT)/test_hunet_scalar: tests/nnrt/test_hunet_scalar.cpp device/vxnn/hunet_ops.cpp device/vxnn/hunet_ops.h device/vxnn/hunet_scalar_math.h vendor/hunet/v5/include/hunet_ops_baseline.h
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off -Ivendor/hunet/v5/include $(filter %.cpp,$^) -o $@
+.PHONY: test-unified-hunet-scalar
+test-unified-hunet-scalar: $(OUT)/test_hunet_scalar
+	$(PYTHON) -m scripts.unified.generate_hunet_scalar --check
+	$<
+test-unified-hunet: test-unified-hunet-scalar
+$(OUT)/test_hunet_types: tests/nnrt/test_hunet_types.cpp tests/nnrt/fixture.hpp $(NN_PLAN_OBJECTS)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $< $(NN_PLAN_OBJECTS) $(NN_JSON_LIBS) -lstdc++fs -o $@
+$(OUT)/hunet-type-fixtures/.ready: tests/nnrt/hunet_type_fixture.py
+	$(PYTHON) $< $(OUT)/hunet-type-fixtures
+.PHONY: test-unified-hunet-types
+test-unified-hunet-types: $(OUT)/test_hunet_types $(OUT)/hunet-type-fixtures/.ready
+	$(OUT)/test_hunet_types $(OUT)/hunet-type-fixtures
+test-unified-hunet: test-unified-hunet-types
+$(OUT)/test_hunet_migration: tests/unified/test_hunet_migration.cpp nnrt/ops/hunet.cpp tests/unified/scheduler_fixture.hpp include/vxnn/ops_hunet.hpp $(SCHED_OBJECTS) $(OUT)/nn/sha.o
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) -Wl,--wrap=_ZdlPv -Wl,--wrap=_ZdlPvm -lm -o $@
+.PHONY: test-unified-hunet-dependency
+test-unified-hunet-dependency: $(OUT)/test_hunet_migration
+	$<
+test-unified-hunet: test-unified-hunet-dependency
+
+$(OUT)/test_hunet_wire: tests/nnrt/test_hunet_wire.cpp device/vxnn/hunet_wire.cpp device/vxnn/hunet_wire.h
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp,$^) -o $@
+.PHONY: test-unified-hunet-wire
+test-unified-hunet-wire: $(OUT)/test_hunet_wire
+	$<
+test-unified-hunet: test-unified-hunet-wire
+$(OUT)/hunet-schema-fixture.bin: tests/nnrt/hunet_schema_fixture.py scripts/unified/hunet_schema.py
+	$(PYTHON) -m tests.nnrt.hunet_schema_fixture $@
+$(OUT)/test_hunet_schema: tests/nnrt/test_hunet_schema.c tests/v2/program_fixture.h $(V2_PROGRAM_CORE)
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_PROGRAM_CORE) -o $@
+.PHONY: test-unified-hunet-schema
+test-unified-hunet-schema: $(OUT)/test_hunet_schema $(OUT)/hunet-schema-fixture.bin
+	$(OUT)/test_hunet_schema $(OUT)/hunet-schema-fixture.bin
+test-unified-hunet: test-unified-hunet-schema
+$(OUT)/hunet-registry-cases.json: tests/nnrt/hunet_registry_cases.py
+	$(PYTHON) -m tests.nnrt.hunet_registry_cases $@
+$(OUT)/test_hunet_registry: tests/nnrt/test_hunet_registry.cpp nnrt/ops/hunet_registry.cpp nnrt/ops/int16.cpp device/vxnn/hunet_wire.cpp include/vxnn/hunet_registry.hpp $(NN_PLAN_OBJECTS)
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-hunet-registry
+test-unified-hunet-registry: $(OUT)/test_hunet_registry $(OUT)/hunet-registry-cases.json
+	$(OUT)/test_hunet_registry $(OUT)/hunet-registry-cases.json $(HUNET_PROGRAM_DIR)/code.bin $(HUNET_PROGRAM_DIR)/args-schema.bin
+test-unified-hunet: test-unified-hunet-registry
+
+$(OUT)/test_hunet_model: tests/unified/test_hunet_model.cpp nnrt/models/hunet.cpp nnrt/ops/hunet_registry.cpp device/vxnn/hunet_wire.cpp $(NN_PLAN_OBJECTS)
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+HUNET_TEST_PACKAGE ?= $(OUT)/actual-model
+.PHONY: test-unified-hunet-model
+test-unified-hunet-model: $(OUT)/test_hunet_model
+	$(OUT)/test_hunet_model $(HUNET_TEST_PACKAGE)
+test-unified-hunet: test-unified-hunet-model
+
+$(OUT)/test_arena_plan: tests/nnrt/test_arena_plan.cpp nnrt/memory/arena.cpp include/vxnn/arena.hpp $(NN_PLAN_OBJECTS)
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-arena
+test-unified-arena: $(OUT)/test_arena_plan
+	$<
+$(OUT)/test_hunet_arena: tests/unified/test_hunet_arena.cpp nnrt/models/hunet.cpp nnrt/ops/hunet_registry.cpp nnrt/memory/arena.cpp device/vxnn/hunet_wire.cpp $(NN_PLAN_OBJECTS)
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-hunet-arena
+test-unified-hunet-arena: $(OUT)/test_hunet_arena
+	$< $(HUNET_TEST_PACKAGE)
+$(OUT)/test_arena_schema: tests/nnrt/test_arena_schema.c tests/v2/program_fixture.h $(V2_PROGRAM_CORE)
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_PROGRAM_CORE) -o $@
+.PHONY: test-unified-arena-schema
+test-unified-arena-schema: $(OUT)/test_arena_schema $(OUT)/hunet-schema-fixture.bin
+	$(OUT)/test_arena_schema $(OUT)/hunet-schema-fixture.bin
+
+$(OUT)/test_service_control: tests/unified/test_service_control.cpp tests/unified/scheduler_fixture.hpp unified/service/control.cpp $(OUT)/nn/nnrt/package/canonical.o $(OUT)/nn/sha.o $(RUNTIME_OBJECTS)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+.PHONY: test-unified-control
+test-unified-control: $(OUT)/test_service_control
+	$<
+$(OUT)/test_control_alloc: tests/unified/test_control_alloc.cpp tests/unified/scheduler_fixture.hpp unified/service/control.cpp $(OUT)/nn/nnrt/package/canonical.o $(OUT)/nn/sha.o $(RUNTIME_OBJECTS)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off -fno-elide-constructors $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+.PHONY: test-unified-control-alloc
+test-unified-control-alloc: $(OUT)/test_control_alloc
+	$<
+DAEMON_OBJECTS = $(OUT)/shared/unified/service/daemon.o $(OUT)/shared/unified/service/control.o $(OUT)/shared/unified/service/rpc.o $(OUT)/shared/unified/service/journal.o
+$(OUT)/shared/unified/service/control.o: unified/service/control.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -c $< -o $@
+$(OUT)/test_daemon: tests/unified/test_daemon.cpp $(DAEMON_OBJECTS) unified/service/compute_port.cpp unified/service/legacy_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o $(OUT)/nn/nnrt/package/canonical.o $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+.PHONY: test-unified-daemon
+test-unified-daemon: $(OUT)/test_daemon $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin $(OUT)/daemon-journal
+.PHONY: test-unified-daemon-fault
+test-unified-daemon-fault: $(OUT)/test_daemon $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin $(OUT)/daemon-fault-journal fault
+.PHONY: test-unified-daemon-legacy
+test-unified-daemon-legacy: $(OUT)/test_daemon $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin $(OUT)/daemon-legacy-journal legacy
+.PHONY: test-unified-daemon-deferred
+test-unified-daemon-deferred: $(OUT)/test_daemon $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin $(OUT)/daemon-deferred-journal deferred
+DAEMON_NATIVE = $(DAEMON_OBJECTS) $(OUT)/shared/unified/service/compute_port.o $(OUT)/shared/unified/service/legacy_port.o $(OUT)/shared/nnrt/backend/compute_v2.o $(OUT)/nn/nnrt/package/canonical.o $(OUT)/nn/sha.o $(RUNTIME_OBJECTS)
+$(OUT)/shared/unified/service/startup.o: unified/service/startup.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -c $< -o $@
+.PHONY: test-unified-daemon-cli
+test-unified-daemon-cli: $(OUT)/vxgpud
+	VX_DAEMON_BINARY=$(abspath $(OUT)/vxgpud) $(PYTHON) -m unittest discover -s tests/unified -p test_daemon_cli.py -v
+
+.PHONY: test-unified-compute-program-evidence
+test-unified-compute-program-evidence: $(OUT)/test_compute_port $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin entry-timeout
+$(OUT)/test_legacy_proof: tests/unified/test_legacy_proof.cpp tests/unified/scheduler_fixture.hpp $(SCHED_OBJECTS)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $< $(SCHED_OBJECTS) -lm -o $@
+.PHONY: test-unified-legacy-proof
+test-unified-legacy-proof: $(OUT)/test_legacy_proof
+	$<
+.PHONY: test-unified-legacy-core
+test-unified-legacy-core: $(OUT)/test_legacy_proof $(OUT)/test_sched_scheduler $(OUT)/test_sched_cancel $(OUT)/test_sched_scheduler_alloc
+	$(OUT)/test_legacy_proof
+	$(OUT)/test_sched_scheduler
+	$(OUT)/test_sched_cancel
+	$(OUT)/test_sched_scheduler_alloc
+$(OUT)/test_legacy_port: $(OUT)/shared/unified/service/journal.o tests/unified/test_legacy_port.cpp tests/unified/scheduler_fixture.hpp unified/service/legacy_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o nnrt/backend/legacy.cpp nnrt/evidence.cpp $(OUT)/legacy_json.o $(OUT)/nn/sha.o $(RUNTIME_OBJECTS)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-legacy-port
+test-unified-legacy-port: $(OUT)/test_legacy_port
+	$< tests/demo/fixtures/run-v1.json flow
+	$< tests/demo/fixtures/run-v1.json timeout
+	$< tests/demo/fixtures/run-v1.json pending
+
+.PHONY: test-unified-legacy-journal
+test-unified-legacy-journal: $(OUT)/test_legacy_port
+	$< tests/demo/fixtures/run-v1.json journal $(OUT)/legacy-journal-fixture
+
+.PHONY: test-unified-legacy-error-result
+test-unified-legacy-error-result: $(OUT)/test_legacy_port
+	$< tests/demo/fixtures/run-v1.json epoch-journal $(OUT)/legacy-error-journal-fixture
+.PHONY: test-unified-legacy-offline
+test-unified-legacy-offline: $(OUT)/test_legacy_port $(OUT)/test_legacy_proof $(OUT)/test_sched_scheduler $(OUT)/test_sched_cancel $(OUT)/test_sched_scheduler_alloc
+	$(OUT)/test_legacy_proof
+	$(OUT)/test_sched_scheduler
+	$(OUT)/test_sched_cancel
+	$(OUT)/test_sched_scheduler_alloc
+	$(OUT)/test_legacy_port tests/demo/fixtures/run-v1.json flow
+	$(OUT)/test_legacy_port tests/demo/fixtures/run-v1.json timeout
+	$(OUT)/test_legacy_port tests/demo/fixtures/run-v1.json pending
+	$(OUT)/test_legacy_port tests/demo/fixtures/run-v1.json journal $(OUT)/legacy-journal-fixture
+	$(OUT)/test_legacy_port tests/demo/fixtures/run-v1.json epoch-journal $(OUT)/legacy-error-journal-fixture
+
+$(OUT)/test_arena_guard: tests/unified/test_arena_guard.cpp nnrt/memory/arena_guard.cpp nnrt/memory/arena.cpp nnrt/backend/compute_v2.cpp include/vxnn/arena_guard.hpp $(NN_PLAN_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-arena-guard
+test-unified-arena-guard: $(OUT)/test_arena_guard $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin flow
+	$< $(OUT)/catalog-fixture.bin corrupt-before
+	$< $(OUT)/catalog-fixture.bin corrupt-after
+	$< $(OUT)/catalog-fixture.bin constant
+	$< $(OUT)/catalog-fixture.bin copy-error
+	$< $(OUT)/catalog-fixture.bin copy-throw
+	$< $(OUT)/catalog-fixture.bin order
+	$< $(OUT)/catalog-fixture.bin invalid
+
+$(OUT)/test_hunet_guard: tests/unified/test_hunet_guard.cpp nnrt/models/hunet.cpp nnrt/ops/hunet_registry.cpp device/vxnn/hunet_wire.cpp nnrt/memory/arena_guard.cpp nnrt/memory/arena.cpp nnrt/backend/compute_v2.cpp include/vxnn/arena_guard.hpp $(NN_PLAN_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-hunet-guard
+test-unified-hunet-guard: $(OUT)/test_hunet_guard $(OUT)/catalog-fixture.bin
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/catalog-fixture.bin
+
+$(OUT)/test_arena_storage: tests/unified/test_arena_storage.cpp nnrt/memory/arena_storage.cpp nnrt/memory/arena_guard.cpp nnrt/memory/arena.cpp nnrt/backend/compute_v2.cpp include/vxnn/arena_storage.hpp $(NN_PLAN_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-arena-storage
+test-unified-arena-storage: $(OUT)/test_arena_storage $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin flow
+	$< $(OUT)/catalog-fixture.bin nomem
+	$< $(OUT)/catalog-fixture.bin create-throw
+	$< $(OUT)/catalog-fixture.bin bad-epoch
+	$< $(OUT)/catalog-fixture.bin release-error
+	$< $(OUT)/catalog-fixture.bin invalid
+
+$(OUT)/hunet-native-catalog.bin: tests/nnrt/hunet_native_catalog_fixture.py scripts/unified/build_catalog.py $(HUNET_PROGRAM_DIR)/code.bin $(HUNET_PROGRAM_DIR)/args-schema.bin
+	$(PYTHON) -m tests.nnrt.hunet_native_catalog_fixture $@
+$(OUT)/arena_native_fixture.o: tests/nnrt/arena_native_fixture.c tests/v2/program_fixture.h $(V2_ALL_HEADERS)
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) -c $< -o $@
+$(OUT)/test_arena_native: tests/nnrt/test_arena_native.cpp device/vxnn/hunet_wire.cpp $(OUT)/arena_native_fixture.o $(addprefix $(OUT)/backend/,$(V2_PROGRAM_CORE:.c=.o))
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) -o $@
+.PHONY: test-unified-arena-native
+test-unified-arena-native: $(OUT)/test_arena_native $(OUT)/hunet-native-catalog.bin
+	$< $(OUT)/hunet-native-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin
+$(OUT)/test_hunet_storage: tests/unified/test_hunet_storage.cpp nnrt/models/hunet.cpp nnrt/ops/hunet_registry.cpp device/vxnn/hunet_wire.cpp nnrt/memory/arena_storage.cpp nnrt/memory/arena_guard.cpp nnrt/memory/arena.cpp nnrt/backend/compute_v2.cpp include/vxnn/arena_storage.hpp $(NN_PLAN_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-hunet-storage
+test-unified-hunet-storage: $(OUT)/test_hunet_storage $(OUT)/catalog-fixture.bin
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/catalog-fixture.bin
+
+$(OUT)/test_hunet_lowering: tests/unified/test_hunet_lowering.cpp nnrt/ops/hunet_lowering.cpp nnrt/models/hunet.cpp nnrt/ops/hunet_registry.cpp device/vxnn/hunet_wire.cpp nnrt/memory/arena_storage.cpp nnrt/memory/arena.cpp nnrt/backend/compute_v2.cpp include/vxnn/hunet_lowering.hpp $(NN_PLAN_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-hunet-lowering
+test-unified-hunet-lowering: $(OUT)/test_hunet_lowering $(OUT)/catalog-fixture.bin
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/catalog-fixture.bin
+
+$(OUT)/test_deferred_port: tests/unified/test_deferred_port.cpp tests/unified/backend_bridge.h tests/unified/scheduler_fixture.hpp unified/service/compute_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) -lm -o $@
+.PHONY: test-unified-deferred-port
+test-unified-deferred-port: $(OUT)/test_deferred_port $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin flow
+	$< $(OUT)/catalog-fixture.bin stale
+	$< $(OUT)/catalog-fixture.bin prepare-error
+	$< $(OUT)/catalog-fixture.bin cookie
+	$< $(OUT)/catalog-fixture.bin epoch
+	$< $(OUT)/catalog-fixture.bin prepare-throw
+	$< $(OUT)/catalog-fixture.bin missing-hook
+	$< $(OUT)/catalog-fixture.bin cancel
+
+$(OUT)/catalog-duplicate.bin: tests/unified/catalog_binding_fixture.py $(OUT)/hunet-native-catalog.bin
+	$(PYTHON) -m tests.unified.catalog_binding_fixture $(OUT)/hunet-native-catalog.bin $@
+$(OUT)/test_catalog_bind: tests/unified/test_catalog_bind.cpp unified/catalog.cpp include/vxunified/catalog.hpp $(OUT)/backend/core/v2/catalog.o $(OUT)/backend/core/hunet_sha256.o
+	$(CXX) $(UXFLAGS) $(filter %.cpp %.o,$^) -o $@
+.PHONY: test-unified-catalog-bind
+test-unified-catalog-bind: $(OUT)/test_catalog_bind $(OUT)/hunet-native-catalog.bin $(OUT)/catalog-duplicate.bin
+	$< $(OUT)/hunet-native-catalog.bin $(OUT)/catalog-duplicate.bin
+
+$(OUT)/residency-catalog.bin: tests/unified/residency_fixture.py $(OUT)/hunet-native-catalog.bin
+	$(PYTHON) -m tests.unified.residency_fixture $(OUT)/hunet-native-catalog.bin $@
+$(OUT)/test_residency: tests/unified/test_residency.cpp unified/residency.cpp unified/catalog.cpp include/vxunified/residency.hpp $(OUT)/backend/core/v2/catalog.o $(OUT)/backend/core/hunet_sha256.o
+	$(CXX) $(UXFLAGS) $(filter %.cpp %.o,$^) -o $@
+.PHONY: test-unified-residency
+test-unified-residency: $(OUT)/test_residency $(OUT)/residency-catalog.bin
+	$< $(OUT)/residency-catalog.bin
+
+.PHONY: test-unified-source-readiness
+test-unified-source-readiness: $(OUT)/test_sched_source_readiness
+	$<
+
+.PHONY: test-unified-deferred-readiness
+test-unified-deferred-readiness: $(OUT)/test_deferred_port $(OUT)/catalog-fixture.bin
+	$< $(OUT)/catalog-fixture.bin blocked
+
+$(OUT)/hunet-owner-catalog.bin: tests/unified/hunet_owner_catalog_fixture.py $(OUT)/hunet-native-catalog.bin
+	$(PYTHON) -m tests.unified.hunet_owner_catalog_fixture $(OUT)/hunet-native-catalog.bin $@
+$(OUT)/backend/tests/unified/hunet_owner_bridge.o: tests/unified/hunet_owner_bridge.c tests/unified/hunet_owner_bridge.h $(V2_ALL_HEADERS)
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -c $< -o $@
+$(OUT)/test_hunet_owner: tests/unified/test_hunet_owner.cpp unified/hunet_request.cpp unified/catalog.cpp unified/residency.cpp nnrt/models/hunet.cpp nnrt/ops/hunet_registry.cpp nnrt/ops/hunet_lowering.cpp nnrt/ops/hunet.cpp device/vxnn/hunet_wire.cpp nnrt/memory/arena_storage.cpp nnrt/memory/arena_guard.cpp nnrt/memory/arena.cpp unified/service/compute_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/hunet_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+.PHONY: test-unified-hunet-owner
+test-unified-hunet-owner: $(OUT)/test_hunet_owner $(OUT)/hunet-owner-catalog.bin
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin flow
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin guard
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin trace-error
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin cancel
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin publish-error
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin publish-sha
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin publish-scope
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin publish-numeric
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin publish-live-token
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin publish-binding
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin publish-path
+	$< $(HUNET_TEST_PACKAGE) $(OUT)/hunet-owner-catalog.bin $(HUNET_PROGRAM_DIR)/code.bin publish-many
+
+$(OUT)/mosaic_phase_reference.o: core/mosaic_state.c include/vxl/mosaic_host.h
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) -ffunction-sections -fdata-sections -c $< -o $@
+$(OUT)/test_mosaic_coverage: tests/unified/test_mosaic_coverage.cpp nnrt/models/mosaic.cpp include/vxnn/mosaic_coverage.hpp $(OUT)/mosaic_phase_reference.o
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) -Wl,--gc-sections -o $@
+.PHONY: test-unified-mosaic-coverage
+test-unified-mosaic-coverage: $(OUT)/test_mosaic_coverage
+	$<
+
+MOSAIC_PRIMITIVE_SOURCES = device/mosaic_s8/instance_norm_compat_v2.cpp device/mosaic_s8/instance_norm_compat_v3.cpp device/vxnn/mosaic_ops.cpp device/mosaic_s8/conv.cpp device/mosaic_s8/quant_pack.cpp device/mosaic_s8/tile.cpp device/mosaic_s8/unpack.cpp tests/mosaic_s8/fake_s8.cpp
+$(OUT)/test_mosaic_migration: tests/unified/test_mosaic_migration.cpp $(MOSAIC_PRIMITIVE_SOURCES) device/vxnn/mosaic_ops.h $(OUT)/mosaic_norm_tables.o
+	@mkdir -p $(@D)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off -Idevice/mosaic_s8 $(filter %.cpp %.o,$^) -o $@
+.PHONY: test-unified-mosaic
+test-unified-mosaic: $(OUT)/test_mosaic_migration
+	$(OUT)/test_mosaic_migration
+
+$(OUT)/mosaic_norm_tables.S: scripts/unified/mosaic_norm_tables.py config/mosaic/norm-compat-v3.json
+	@mkdir -p $(@D)
+	$(PYTHON) -m scripts.unified.mosaic_norm_tables $@
+$(OUT)/mosaic_norm_tables.o: $(OUT)/mosaic_norm_tables.S
+	$(CC) -c $< -o $@
+
+$(OUT)/mosaic-generated/mosaic_fixture.h: scripts/unified/mosaic_math_fixture.py
+	$(PYTHON) -m scripts.unified.mosaic_math_fixture $(OUT)/mosaic-generated
+$(OUT)/mosaic-legacy/%.o: %.c
+	@mkdir -p $(@D)
+	$(CC) $(UFLAGS) -c $< -o $@
+MOSAIC_OLD_GRAPH_OBJECTS = $(addprefix $(OUT)/mosaic-legacy/,core/mosaic_validate.o core/mosaic_layout.o core/hunet_sha256.o mosaic/assets.o)
+$(OUT)/test_mosaic_propagation: tests/nnrt/test_mosaic_propagation.cpp $(MOSAIC_PRIMITIVE_SOURCES) device/mosaic_s8/graph.cpp device/mosaic_s8/point_ops_compat_v3.cpp nnrt/models/mosaic.cpp $(MOSAIC_OLD_GRAPH_OBJECTS) $(OUT)/mosaic_norm_tables.o $(OUT)/mosaic-generated/mosaic_fixture.h
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off -Idevice/mosaic_s8 -I$(OUT)/mosaic-generated -I$(OUT)/mosaic-generated/contract $(filter %.cpp %.o,$^) -o $@
+.PHONY: test-unified-mosaic-propagation
+test-unified-mosaic-propagation: $(OUT)/test_mosaic_propagation
+	$(PYTHON) -m scripts.unified.run_mosaic_propagation $(OUT)
+
+$(OUT)/test_mosaic_wire: tests/nnrt/test_mosaic_wire.cpp $(MOSAIC_WIRE_SOURCE) device/vxnn/mosaic_wire.h
+	@mkdir -p $(@D)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp,$^) -o $@
+.PHONY: test-unified-mosaic-wire
+test-unified-mosaic-wire: $(OUT)/test_mosaic_wire
+	$<
+
+# Explicit legacy regression compiles the original validator and original
+# WORK-dummy fixture behavior; current default targets exercise RO64 v2.
+$(OUT)/test_mosaic_wire_legacy_v1: tests/nnrt/test_mosaic_wire.cpp device/vxnn/mosaic_wire.cpp device/vxnn/mosaic_wire.h
+	@mkdir -p $(@D)
+	$(CXX) $(UXFLAGS) -fno-fast-math -ffp-contract=off -DVX_MOSAIC_LEGACY_V1 $(filter %.cpp,$^) -o $@
+.PHONY: test-unified-mosaic-wire-legacy-v1
+test-unified-mosaic-wire-legacy-v1: $(OUT)/test_mosaic_wire_legacy_v1
+	$<
+
+$(OUT)/test_mosaic_schema: tests/unified/test_mosaic_schema.c core/v2/catalog.c core/hunet_sha256.c include/vxl/v2/program.h
+	@mkdir -p $(@D)
+	$(CC) $(UFLAGS) $(filter %.c,$^) -o $@
+$(OUT)/mosaic.schema.bin: scripts/unified/mosaic_schema.py
+	@mkdir -p $(@D)
+	$(PYTHON) -c "from scripts.unified.mosaic_schema import make_schema;from pathlib import Path;Path('$@').write_bytes(make_schema())"
+.PHONY: test-unified-mosaic-schema
+test-unified-mosaic-schema: $(OUT)/test_mosaic_schema $(OUT)/mosaic.schema.bin
+	$(OUT)/test_mosaic_schema $(OUT)/mosaic.schema.bin
+
+$(OUT)/mosaic_native_fixture.o: tests/nnrt/mosaic_native_fixture.c tests/v2/program_fixture.h $(V2_ALL_HEADERS)
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -c $< -o $@
+$(OUT)/test_mosaic_native: tests/nnrt/test_mosaic_native.cpp $(MOSAIC_WIRE_SOURCE) $(OUT)/mosaic_native_fixture.o $(addprefix $(OUT)/backend/,$(V2_PROGRAM_CORE:.c=.o))
+	$(CXX) $(UXFLAGS) $(filter %.cpp %.o,$^) -o $@
+$(OUT)/mosaic-native-catalog.bin: tests/nnrt/mosaic_native_catalog_fixture.py $(MOSAIC_PROGRAM_DIR)/family.json $(MOSAIC_PROGRAM_DIR)/code.bin $(MOSAIC_PROGRAM_DIR)/rodata.bin $(MOSAIC_PROGRAM_DIR)/args-schema.bin
+	$(PYTHON) -m tests.nnrt.mosaic_native_catalog_fixture $@
+.PHONY: test-unified-mosaic-native
+test-unified-mosaic-native: $(OUT)/test_mosaic_native $(OUT)/mosaic-native-catalog.bin
+	$(OUT)/test_mosaic_native $(OUT)/mosaic-native-catalog.bin $(MOSAIC_PROGRAM_DIR)/code.bin $(MOSAIC_PROGRAM_DIR)/rodata.bin
+
+$(OUT)/mosaic_native_fixture_legacy_v1.o: tests/nnrt/mosaic_native_fixture.c tests/v2/program_fixture.h $(V2_ALL_HEADERS)
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -DVX_MOSAIC_LEGACY_V1 -c $< -o $@
+$(OUT)/test_mosaic_native_legacy_v1: tests/nnrt/test_mosaic_native.cpp device/vxnn/mosaic_wire.cpp $(OUT)/mosaic_native_fixture_legacy_v1.o $(addprefix $(OUT)/backend/,$(V2_PROGRAM_CORE:.c=.o))
+	$(CXX) $(UXFLAGS) -DVX_MOSAIC_LEGACY_V1 $(filter %.cpp %.o,$^) -o $@
+$(OUT)/mosaic-native-legacy-v1-catalog.bin: tests/nnrt/mosaic_native_catalog_fixture.py data/nnrt/programs/mosaic-int16-v1/family.json data/nnrt/programs/mosaic-int16-v1/code.bin data/nnrt/programs/mosaic-int16-v1/rodata.bin data/nnrt/programs/mosaic-int16-v1/args-schema.bin
+	$(PYTHON) -m tests.nnrt.mosaic_native_catalog_fixture $@ legacy-v1
+.PHONY: test-unified-mosaic-native-legacy-v1
+test-unified-mosaic-native-legacy-v1: $(OUT)/test_mosaic_native_legacy_v1 $(OUT)/mosaic-native-legacy-v1-catalog.bin
+	$(OUT)/test_mosaic_native_legacy_v1 $(OUT)/mosaic-native-legacy-v1-catalog.bin data/nnrt/programs/mosaic-int16-v1/code.bin data/nnrt/programs/mosaic-int16-v1/rodata.bin
+
+$(OUT)/test_mosaic_registry: tests/nnrt/test_mosaic_registry.cpp nnrt/ops/mosaic.cpp nnrt/models/mosaic.cpp $(MOSAIC_WIRE_SOURCE) $(NN_PLAN_OBJECTS) $(OUT)/v2/catalog.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-mosaic-registry
+test-unified-mosaic-registry: $(OUT)/test_mosaic_registry
+	$(OUT)/test_mosaic_registry
+
+$(OUT)/test_mosaic_model: tests/unified/test_mosaic_model.cpp nnrt/ops/mosaic.cpp nnrt/models/mosaic_plan.cpp nnrt/models/mosaic.cpp nnrt/memory/arena.cpp $(MOSAIC_WIRE_SOURCE) $(NN_PLAN_OBJECTS) $(OUT)/v2/catalog.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+
+.PHONY: test-unified-arena-batches
+test-unified-arena-batches: $(OUT)/test_arena_guard $(OUT)/catalog-fixture.bin
+	$(OUT)/test_arena_guard $(OUT)/catalog-fixture.bin batch-flow
+	$(OUT)/test_arena_guard $(OUT)/catalog-fixture.bin batch-early
+	$(OUT)/test_arena_guard $(OUT)/catalog-fixture.bin batch-extra
+	$(OUT)/test_arena_guard $(OUT)/catalog-fixture.bin batch-corrupt
+
+$(OUT)/test_mosaic_lowering: tests/unified/test_mosaic_lowering.cpp nnrt/ops/mosaic_lowering.cpp nnrt/ops/mosaic.cpp nnrt/models/mosaic_plan.cpp nnrt/models/mosaic.cpp nnrt/memory/arena_storage.cpp nnrt/memory/arena.cpp nnrt/backend/compute_v2.cpp $(MOSAIC_WIRE_SOURCE) $(NN_PLAN_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o $(OUT)/backend/tests/unified/mosaic_alias_probe.o $(OUT)/backend/driver/v2/provider_s8.o $(OUT)/backend/driver/v2/provider_p8.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -o $@
+
+$(OUT)/mosaic-owner-catalog.bin: tests/unified/mosaic_owner_catalog_fixture.py $(OUT)/mosaic-native-catalog.bin
+	$(PYTHON) -m tests.unified.mosaic_owner_catalog_fixture $(OUT)/mosaic-native-catalog.bin $@
+$(OUT)/backend/tests/unified/mosaic_owner_bridge.o: tests/unified/mosaic_owner_bridge.c tests/unified/mosaic_owner_bridge.h $(V2_ALL_HEADERS)
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -c $< -o $@
+$(OUT)/test_mosaic_owner: tests/unified/test_mosaic_owner.cpp unified/mosaic_request.cpp unified/catalog.cpp unified/residency.cpp nnrt/models/mosaic_plan.cpp nnrt/models/mosaic.cpp nnrt/ops/mosaic.cpp nnrt/ops/mosaic_lowering.cpp $(MOSAIC_WIRE_SOURCE) nnrt/memory/arena_storage.cpp nnrt/memory/arena_guard.cpp nnrt/memory/arena.cpp unified/service/compute_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/mosaic_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+
+
+$(OUT)/image/pipeline_linux.o: image/pipeline_linux.c image/pipeline_linux.h vendor/image-studio/src/vortex23-image-studio-720p-fast/image_contract.h
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -c $< -o $@
+$(OUT)/test_image_pipeline: tests/unified/test_image_pipeline.cpp $(OUT)/image/pipeline_linux.o
+	$(CXX) $(UXFLAGS) $^ -o $@
+.PHONY: test-unified-image
+test-unified-image: $(OUT)/test_image_pipeline
+	$(OUT)/test_image_pipeline vendor/image-studio/reports/v23-image-studio-720p-fast-20261016/replay/requests.txt
+
+$(OUT)/image/crc_reference.o: vendor/image-studio/src/vortex23-image-studio-720p-fast/image_crc.c
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -Ivendor/image-studio/src/vortex23-r4-local/sw -c $< -o $@
+$(OUT)/test_image_oracles: tests/unified/image_pixel_bridge.c $(OUT)/image/pipeline_linux.o $(OUT)/image/crc_reference.o
+	$(CC) $(UFLAGS) -Ivendor/image-studio/src/vortex23-image-studio-720p-fast $^ -o $@
+.PHONY: test-unified-image-oracles
+test-unified-image-oracles: $(OUT)/test_image_oracles
+	$(PYTHON) -m scripts.unified.run_image_oracles $(OUT)
+
+$(OUT)/test_image_native: tests/unified/test_image_native.c $(OUT)/image/pipeline_linux.o $(V2_JOB_CORE) $(V2_ALL_HEADERS)
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) $< $(OUT)/image/pipeline_linux.o $(V2_JOB_CORE) -o $@
+$(OUT)/image-programs/catalog.bin: scripts/unified/build_image_programs.py scripts/unified/build_catalog.py contracts/unified/providers.json $(wildcard vendor/image-studio/gpu_programs/*)
+	$(PYTHON) -m scripts.unified.build_image_programs $(OUT)/image-programs
+.PHONY: test-unified-image-native
+test-unified-image-native: $(OUT)/test_image_native $(OUT)/image-programs/catalog.bin
+	$(PYTHON) -m unittest tests.unified.test_image_programs -v
+	$(OUT)/test_image_native $(OUT)/image-programs/catalog.bin $(OUT)/image-programs
+
+$(OUT)/test_residency_switch: tests/unified/test_residency_switch.cpp unified/residency.cpp unified/catalog.cpp include/vxunified/residency.hpp $(OUT)/backend/core/v2/catalog.o $(OUT)/backend/core/hunet_sha256.o
+	$(CXX) $(UXFLAGS) $(filter %.cpp %.o,$^) -o $@
+.PHONY: test-unified-residency-switch
+test-unified-residency-switch: $(OUT)/test_residency_switch $(OUT)/residency-catalog.bin
+	$(OUT)/test_residency_switch $(OUT)/residency-catalog.bin
+
+$(OUT)/test_image_adapter: tests/unified/test_image_adapter.cpp image/platform_unified.cpp image/pipeline_linux.h include/vxunified/image.hpp generated/image/programs.h unified/catalog.cpp nnrt/package/canonical.cpp $(OUT)/image/pipeline_linux.o $(OUT)/backend/core/v2/catalog.o $(OUT)/backend/core/hunet_sha256.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+.PHONY: test-unified-image-adapter
+test-unified-image-adapter: $(OUT)/test_image_adapter
+	$(OUT)/test_image_adapter data/image/programs-v2/catalog.bin
+
+$(OUT)/backend/tests/unified/image_owner_bridge.o: tests/unified/image_owner_bridge.c tests/unified/image_owner_bridge.h vendor/image-studio/src/vortex23-image-studio-720p-fast/tests/rv32_image_model.h vendor/image-studio/src/vortex23-image-studio-720p-fast/image_contract.h $(V2_ALL_HEADERS)
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -Ivendor/image-studio/src/vortex23-image-studio-720p-fast -c $< -o $@
+$(OUT)/test_image_owner: tests/unified/test_image_owner.cpp $(OUT)/image/shared/unified/image_request.o $(OUT)/image/shared/image/platform_unified.o $(OUT)/image/shared/unified/catalog.o $(OUT)/image/shared/unified/residency.o $(OUT)/image/shared/unified/service/compute_port.o $(OUT)/image/pipeline_linux.o $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/image_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+
+$(OUT)/predicate-fixture.bin: tests/v2/predicate_fixture.py
+	$(PYTHON) $< $@
+$(OUT)/test_predicates: tests/v2/test_predicates.c tests/v2/program_fixture.h $(V2_PROGRAM_CORE) include/vxl/v2/program.h
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_PROGRAM_CORE) -o $@
+.PHONY: test-v2-predicates
+test-v2-predicates: $(OUT)/test_predicates $(OUT)/predicate-fixture.bin
+	$(OUT)/test_predicates $(OUT)/predicate-fixture.bin
+
+$(OUT)/test_image_owner_pixels: tests/unified/test_image_owner_pixels.cpp $(OUT)/image/shared/unified/image_request.o $(OUT)/image/shared/image/platform_unified.o $(OUT)/image/shared/unified/catalog.o $(OUT)/image/shared/unified/residency.o $(OUT)/image/shared/unified/service/compute_port.o $(OUT)/image/pipeline_linux.o $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/image_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+
+$(OUT)/image/network/original_protocol.o: vendor/image-studio/src/vortex23-image-studio-720p-fast/network/image_protocol.c
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -Wno-misleading-indentation -Ivendor/image-studio/src/vortex23-image-studio-720p-fast -c $< -o $@
+$(OUT)/test_image_udp: tests/unified/test_image_udp.c image/network/image_rx_linux.c $(OUT)/image/network/original_protocol.o $(OUT)/image/crc_reference.o
+	$(CC) $(UFLAGS) -Ivendor/image-studio/src/vortex23-image-studio-720p-fast -pthread $(filter %.c %.o,$^) -o $@
+.PHONY: test-unified-image-udp
+test-unified-image-udp: $(OUT)/test_image_udp
+	$(OUT)/test_image_udp
+
+$(OUT)/test_image_service: tests/unified/test_image_service.cpp $(OUT)/image/shared/unified/image_request.o $(OUT)/image/shared/unified/adapters/image_service.o $(OUT)/image/shared/image/platform_unified.o $(OUT)/image/shared/unified/catalog.o $(OUT)/image/shared/unified/residency.o $(OUT)/image/shared/unified/service/compute_port.o $(OUT)/image/network/receiver_linux.o $(OUT)/image/network/original_protocol.o $(OUT)/image/pipeline_linux.o $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/image_owner_bridge.o
+	$(CXX) $(UXFLAGS) -Ivendor/image-studio/src/vortex23-image-studio-720p-fast $(NN_JSON_FLAGS) $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+
+$(OUT)/image/network/receiver_linux.o: image/network/image_rx_linux.c image/network/image_rx_linux.h
+	mkdir -p $(@D)
+	$(CC) $(UFLAGS) -Ivendor/image-studio/src/vortex23-image-studio-720p-fast -c $< -o $@
+
+$(OUT)/test_image_socket: tests/unified/test_image_socket.cpp $(OUT)/image/shared/unified/image_request.o $(OUT)/image/shared/unified/adapters/image_service.o $(OUT)/image/shared/image/platform_unified.o $(OUT)/image/shared/unified/catalog.o $(OUT)/image/shared/unified/residency.o $(OUT)/image/shared/unified/service/compute_port.o $(OUT)/image/network/receiver_linux.o $(OUT)/image/network/original_protocol.o $(OUT)/image/pipeline_linux.o $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/image_owner_bridge.o
+	$(CXX) $(UXFLAGS) -Ivendor/image-studio/src/vortex23-image-studio-720p-fast $(NN_JSON_FLAGS) $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+
+# Same flags/source within one fresh OUT: compile shared image libraries once,
+# retaining independent test executables and all sanitizer/checker invocations.
+$(OUT)/image/shared/%.o: %.cpp $(wildcard include/vxunified/*.hpp include/vxnn/*.hpp) generated/image/programs.h image/pipeline_linux.h $(V2_ALL_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -Ivendor/image-studio/src/vortex23-image-studio-720p-fast -c $< -o $@
+
+$(OUT)/test_p8_controls: tests/unified/test_p8_controls.cpp p8/scene.cpp include/vxunified/p8.hpp
+	$(CXX) $(UXFLAGS) $(filter %.cpp,$^) -o $@
+.PHONY: test-unified-p8-controls
+test-unified-p8-controls: $(OUT)/test_p8_controls
+	$(OUT)/test_p8_controls
+
+$(OUT)/test_p8_frame: tests/unified/test_p8_frame.cpp p8/renderer.cpp p8/scene.cpp include/vxunified/p8.hpp $(OUT)/backend/core/hunet_sha256.o
+	$(CXX) $(UXFLAGS) $(filter %.cpp %.o,$^) -o $@
+.PHONY: test-unified-p8-frame
+test-unified-p8-frame: $(OUT)/test_p8_frame
+	$(OUT)/test_p8_frame data/p8
+
+$(OUT)/test_p8_adapter: tests/unified/test_p8_adapter.cpp p8/adapter.cpp p8/renderer.cpp p8/scene.cpp unified/catalog.cpp include/vxunified/p8.hpp $(OUT)/backend/core/hunet_sha256.o $(OUT)/backend/core/v2/catalog.o
+	$(CXX) $(UXFLAGS) $(filter %.cpp %.o,$^) -o $@
+.PHONY: test-unified-p8-adapter
+test-unified-p8-adapter: $(OUT)/test_p8_adapter
+	$(OUT)/test_p8_adapter data/p8
+
+$(OUT)/test_p8_owner: tests/unified/test_p8_owner.cpp unified/results/texture.cpp unified/results/import.cpp $(OUT)/legacy_json.o p8/request.cpp p8/adapter.cpp p8/renderer.cpp p8/scene.cpp unified/catalog.cpp unified/residency.cpp unified/service/compute_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -o $@
+
+$(OUT)/test_p8_execution_policy: tests/unified/test_p8_execution_policy.c $(V2_JOB_CORE) $(V2_PROVIDER) driver/v2/execution.c driver/v2/startup.c core/cdma.c include/vxl/v2/execution.h
+	$(CC) $(UFLAGS) $(filter %.c,$^) -o $@
+
+$(OUT)/test_p8_instructions: tests/unified/test_p8_instructions.cpp p8/renderer.cpp p8/scene.cpp include/vxunified/p8.hpp vendor/p8/rv32_complex_model.h $(OUT)/backend/core/hunet_sha256.o
+	$(CXX) $(UXFLAGS) $(filter %.cpp %.o,$^) -o $@
+
+$(OUT)/test_texture_source: tests/unified/test_texture_source.cpp unified/results/import.cpp $(OUT)/backend/core/hunet_sha256.o $(OUT)/nn/nnrt/package/canonical.o $(OUT)/legacy_json.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+.PHONY: test-unified-texture
+test-unified-texture: $(OUT)/test_texture_source
+	$(OUT)/test_texture_source
+
+$(OUT)/test_texture_package: tests/unified/test_texture_package.cpp unified/results/texture.cpp unified/results/import.cpp $(OUT)/backend/core/hunet_sha256.o $(OUT)/nn/nnrt/package/canonical.o $(OUT)/legacy_json.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+
+$(OUT)/test_native_export_bridge: tests/unified/test_native_export_bridge.cpp unified/results/texture.cpp unified/results/import.cpp $(OUT)/backend/core/hunet_sha256.o $(OUT)/nn/nnrt/package/canonical.o $(OUT)/legacy_json.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+
+$(OUT)/test_p8_texture: tests/unified/test_p8_texture.cpp p8/renderer.cpp p8/scene.cpp p8/adapter.cpp unified/catalog.cpp unified/results/texture.cpp unified/results/import.cpp $(OUT)/backend/core/hunet_sha256.o $(OUT)/backend/core/v2/catalog.o $(OUT)/nn/nnrt/package/canonical.o $(OUT)/legacy_json.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+
+$(OUT)/test_texture_admission: tests/unified/test_texture_admission.cpp unified/results/texture.cpp unified/results/import.cpp $(OUT)/backend/core/hunet_sha256.o $(OUT)/nn/nnrt/package/canonical.o $(OUT)/legacy_json.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+
+$(OUT)/test_p8_texture_instructions: tests/unified/test_p8_texture_instructions.cpp p8/renderer.cpp p8/scene.cpp unified/results/texture.cpp unified/results/import.cpp $(OUT)/backend/core/hunet_sha256.o $(OUT)/nn/nnrt/package/canonical.o $(OUT)/legacy_json.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+
+$(OUT)/test_p8_udp: tests/unified/test_p8_udp.cpp p8/texture_service.cpp $(OUT)/p8/texture_receiver.o unified/results/texture.cpp unified/results/import.cpp $(OUT)/legacy_json.o p8/request.cpp p8/adapter.cpp p8/renderer.cpp p8/scene.cpp unified/catalog.cpp unified/residency.cpp unified/service/compute_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-p8-udp
+test-unified-p8-udp: $(OUT)/test_p8_udp
+	$(OUT)/test_p8_udp $(TEXTURE_PACKAGE) $(TEXTURE_ID)
+
+$(OUT)/p8/texture_receiver.o: p8/texture_receiver.c vendor/p8/network/texture_rx.c vendor/p8/network/texture_rx.h
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -c $< -o $@
+
+$(OUT)/test_texture_completion: tests/unified/test_texture_completion.cpp p8/texture_service.cpp $(OUT)/p8/texture_receiver.o unified/results/texture.cpp unified/results/import.cpp $(OUT)/legacy_json.o p8/request.cpp p8/adapter.cpp p8/renderer.cpp p8/scene.cpp unified/catalog.cpp unified/residency.cpp unified/service/compute_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -o $@
+
+# Fresh OUT object reuse: independent C++ translation units compile in parallel.
+U18_CPP = unified/display/owner.cpp unified/display/result_lease.cpp unified/display/compose.cpp unified/service/result.cpp adapters/hunet_result.cpp adapters/hunet_glyph.cpp
+U18_C = viewer/viewer.c viewer/frame.c viewer/hunet_frame.c viewer/glyph.c viewer/scale.c demo/json.c demo/store.c core/hunet_sha256.c
+U18_OBJ = $(addprefix $(OUT)/display/,$(U18_CPP:.cpp=.o) $(U18_C:.c=.o))
+$(OUT)/display/%.o: %.cpp $(wildcard include/vxunified/*.hpp include/vxnn/*.hpp) viewer/kms.h unified/display/internal.hpp tests/unified/display_fixture.hpp
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -c $< -o $@
+$(OUT)/display/%.o: %.c viewer/kms.h include/vxl/demo_frame.h
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) $(NN_JSON_FLAGS) -c $< -o $@
+$(OUT)/test_display: $(OUT)/display/tests/unified/test_display.o $(U18_OBJ)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) -o $@
+$(OUT)/test_page_switch: $(OUT)/display/tests/unified/test_page_switch.o $(U18_OBJ)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) -o $@
+$(OUT)/test_display_pages: $(OUT)/display/tests/unified/test_display_pages.o $(U18_OBJ)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) -o $@
+$(OUT)/test_display_hunet: $(OUT)/display/tests/unified/test_display_hunet.o $(U18_OBJ)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) -o $@
+U18_DRM_FLAGS = $(if $(U18_DRM_PREFIX),-I$(U18_DRM_PREFIX)/include -I$(U18_DRM_PREFIX)/include/libdrm,$(shell pkg-config --cflags libdrm))
+U18_DRM_LIBS = $(if $(U18_DRM_PREFIX),$(U18_DRM_PREFIX)/lib/libdrm.a,$(shell pkg-config --libs libdrm))
+$(OUT)/display/viewer/kms.o: viewer/kms.c viewer/kms.h
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) $(U18_DRM_FLAGS) -c $< -o $@
+$(OUT)/test_display_native: $(OUT)/display/tests/unified/test_display_native.o $(U18_OBJ) $(OUT)/display/unified/display/native.o $(OUT)/display/viewer/kms.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -o $@
+.PHONY: test-unified-display test-unified-page-switch
+test-unified-display: $(OUT)/test_display
+	$<
+test-unified-page-switch: $(OUT)/test_page_switch
+	$<
+
+$(OUT)/test_unified_timing: tests/unified/test_timing.cpp tests/unified/timing_fixture.hpp unified/evidence.cpp nnrt/evidence.cpp include/vxunified/evidence.hpp
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp,$^) $(NN_JSON_LIBS) -o $@
+$(OUT)/test_optimization: tests/unified/test_optimization.cpp tests/unified/timing_fixture.hpp unified/optimization/policy.cpp unified/optimization/constants.cpp include/vxunified/optimization.hpp
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(filter %.cpp,$^) -o $@
+.PHONY: test-unified-evidence test-unified-optimization
+test-unified-evidence: $(OUT)/test_unified_timing
+	$<
+test-unified-optimization: $(OUT)/test_optimization
+	$<
+$(OUT)/test_evidence_adversarial: tests/unified/test_evidence_adversarial.cpp tests/unified/timing_fixture.hpp unified/evidence.cpp nnrt/evidence.cpp unified/optimization/policy.cpp unified/optimization/constants.cpp include/vxunified/evidence.hpp include/vxunified/optimization.hpp
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp,$^) $(NN_JSON_LIBS) -o $@
+$(OUT)/test_original_event_timing: tests/nnrt/test_event_timing.cpp nnrt/evidence.cpp include/vxnn/evidence.hpp
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp,$^) $(NN_JSON_LIBS) -o $@
+
+$(OUT)/test_result_stage: tests/unified/test_result_stage.cpp tests/unified/display_fixture.hpp $(SERVICE_OBJECTS) $(OUT)/nn/sha.o
+	$(CXX) $(UXFLAGS) $< $(SERVICE_OBJECTS) $(OUT)/nn/sha.o -o $@
+.PHONY: test-unified-result-stage
+test-unified-result-stage: $(OUT)/test_result_stage
+	$<
+
+$(OUT)/test_stage_display: $(OUT)/display/tests/unified/test_stage_display.o $(U18_OBJ)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) -o $@
+.PHONY: test-unified-stage-display
+test-unified-stage-display: $(OUT)/test_stage_display
+	$<
+	$< cookie
+
+.PHONY: test-unified-runtime-stage
+test-unified-runtime-stage: $(OUT)/test_runtime
+	$< stage
+$(OUT)/test_native_router: tests/unified/test_native_router.cpp $(OUT)/nn-native/unified/service/native.o $(OUT)/nn-native/unified/service/compute_port.o $(OUT)/shared/unified/service/journal.o $(OUT)/shared/nnrt/backend/compute_v2.o $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o $(SCHED_HEADERS)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+.PHONY: test-unified-native-router
+test-unified-native-router: $(OUT)/test_native_router $(OUT)/catalog-fixture.bin
+	timeout -k 2s 30s $< $(OUT)/catalog-fixture.bin normal
+	timeout -k 2s 30s $< $(OUT)/catalog-fixture.bin fault
+	timeout -k 2s 30s $< $(OUT)/catalog-fixture.bin allocation
+	timeout -k 2s 30s $< $(OUT)/catalog-fixture.bin concurrency
+
+NN_NATIVE_CPP = unified/hunet_request.cpp unified/mosaic_request.cpp unified/int16_request.cpp unified/catalog.cpp unified/residency.cpp nnrt/models/hunet.cpp nnrt/ops/hunet_registry.cpp nnrt/ops/hunet_lowering.cpp nnrt/ops/hunet.cpp device/vxnn/hunet_wire.cpp nnrt/models/mosaic_plan.cpp nnrt/models/mosaic.cpp nnrt/ops/mosaic.cpp nnrt/ops/mosaic_lowering.cpp $(MOSAIC_WIRE_SOURCE) nnrt/ops/int16.cpp nnrt/ops/int16_lowering.cpp nnrt/memory/arena_storage.cpp nnrt/memory/arena_guard.cpp nnrt/memory/arena.cpp
+NN_NATIVE_ALL_CPP = tests/unified/test_native_nn.cpp unified/service/native_nn.cpp unified/service/native_files.cpp unified/service/native.cpp $(NN_NATIVE_CPP) unified/service/compute_port.cpp
+NN_NATIVE_OBJECTS = $(addprefix $(OUT)/nn-native/,$(NN_NATIVE_ALL_CPP:.cpp=.o))
+$(OUT)/nn-native/%.o: %.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off -c $< -o $@
+$(OUT)/test_native_nn: $(NN_NATIVE_OBJECTS) $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/mosaic_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+$(OUT)/nn-native/tests/unified/test_native_nn_hunet.o: tests/unified/test_native_nn.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off -DVX_TEST_HUNET -c $< -o $@
+$(OUT)/test_native_nn_hunet: $(filter-out $(OUT)/nn-native/tests/unified/test_native_nn.o,$(NN_NATIVE_OBJECTS)) $(OUT)/nn-native/tests/unified/test_native_nn_hunet.o $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/hunet_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(filter-out $(OUT)/backend/core/hunet_sha256.o,$(filter %.o,$^)) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+
+NATIVE_NN_LIBRARY_OBJECTS = $(filter-out $(OUT)/nn-native/tests/unified/test_native_nn.o $(OUT)/nn-native/unified/service/compute_port.o,$(NN_NATIVE_OBJECTS)) $(OUT)/nn-native/unified/service/installation.o $(OUT)/nn-native/unified/service/sealed_assets.o $(OUT)/nn-native/unified/service/native_result_view.o $(OUT)/nn-native/unified/service/native_result_export.o
+NATIVE_NN_DAEMON_OBJECTS = $(NATIVE_NN_LIBRARY_OBJECTS) $(DAEMON_OBJECTS) $(OUT)/shared/unified/service/compute_port.o $(OUT)/shared/unified/service/legacy_port.o $(OUT)/shared/nnrt/backend/compute_v2.o $(NN_PLAN_OBJECTS) $(RUNTIME_OBJECTS)
+$(OUT)/nn-native/tests/unified/test_native_daemon_hunet.o: tests/unified/test_native_daemon.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off -DVX_TEST_HUNET -c $< -o $@
+$(OUT)/test_preparation: tests/unified/test_preparation.cpp $(RUNTIME_OBJECTS) $(OUT)/nn/sha.o
+	$(CXX) $(UXFLAGS) $< $(RUNTIME_OBJECTS) $(OUT)/nn/sha.o -o $@
+
+NATIVE_DISPLAY_OBJECTS = $(OUT)/display/unified/service/presentation.o $(U18_OBJ) $(OUT)/display/unified/display/native.o $(OUT)/display/viewer/kms.o $(filter-out $(OUT)/shared/unified/service/result.o,$(RUNTIME_OBJECTS))
+$(OUT)/test_native_display: $(OUT)/display/tests/unified/test_native_display.o $(NATIVE_DISPLAY_OBJECTS)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -o $@
+.PHONY: test-unified-native-display
+test-unified-native-display: $(OUT)/test_native_display
+	$< flow
+	$< roots
+	$< error
+
+$(OUT)/test_port_result_alloc: tests/unified/test_port_result_alloc.cpp unified/service/compute_port.cpp $(OUT)/shared/nnrt/backend/compute_v2.o $(RUNTIME_OBJECTS) $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o)) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) -fno-elide-constructors $(filter %.cpp %.o,$^) -lm -o $@
+
+$(OUT)/test_host_memory: tests/unified/test_host_memory.cpp $(RUNTIME_OBJECTS)
+	$(CXX) $(UXFLAGS) $< $(RUNTIME_OBJECTS) -lm -o $@
+.PHONY: test-unified-host-memory
+test-unified-host-memory: $(OUT)/test_host_memory
+	$<
+
+$(OUT)/test_image_fill: tests/unified/test_image_fill.cpp include/vxunified/detail/image_fill.hpp
+	mkdir -p $(OUT)
+	$(CXX) $(UXFLAGS) $< -o $@
+.PHONY: test-unified-image-fill
+test-unified-image-fill: $(OUT)/test_image_fill
+	$<
+
+$(OUT)/nn-native/unified/image_request.o: include/vxunified/detail/image_fill.hpp
+
+# Native application libraries share one set of identically compiled objects
+# per OUT. Sanitizer/target OUT directories remain separate and immutable.
+MEDIA_CPP = unified/service/native_media.cpp unified/service/native_image_adapter.cpp unified/service/native_p8_adapter.cpp unified/service/sealed_assets.cpp unified/image_request.cpp image/platform_unified.cpp p8/request.cpp p8/adapter.cpp p8/renderer.cpp p8/scene.cpp unified/results/texture.cpp unified/results/import.cpp unified/catalog.cpp unified/residency.cpp
+MEDIA_OBJECTS = $(addprefix $(OUT)/nn-native/,$(MEDIA_CPP:.cpp=.o))
+MEDIA_LINK = $(filter-out $(OUT)/backend/core/hunet_sha256.o $(OUT)/display/core/hunet_sha256.o,$(sort $(MEDIA_OBJECTS) $(NATIVE_DISPLAY_OBJECTS) $(OUT)/nn-native/unified/service/native.o $(OUT)/nn-native/unified/service/native_files.o $(OUT)/nn-native/unified/service/compute_port.o $(OUT)/shared/nnrt/backend/compute_v2.o $(OUT)/shared/unified/service/journal.o $(NN_PLAN_OBJECTS) $(OUT)/image/pipeline_linux.o $(addprefix $(OUT)/backend/,$(V2_BACKEND_C:.c=.o))))
+$(OUT)/nn-native/tests/unified/test_native_media_p8.o: tests/unified/test_native_media.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off -DVX_NATIVE_P8 -c $< -o $@
+$(OUT)/test_native_image_media: $(OUT)/nn-native/tests/unified/test_native_media.o $(MEDIA_LINK) $(OUT)/backend/tests/unified/image_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+$(OUT)/test_native_p8_media: $(OUT)/nn-native/tests/unified/test_native_media_p8.o $(MEDIA_LINK) $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+$(addprefix $(OUT)/,test_image_owner test_image_owner_pixels test_image_service test_image_socket): $(OUT)/nn-native/unified/service/native_image_adapter.o
+$(addprefix $(OUT)/,test_p8_owner test_p8_udp test_texture_completion): $(OUT)/nn-native/unified/service/native_p8_adapter.o
+
+$(OUT)/test_native_files: tests/unified/test_native_files.cpp $(OUT)/nn-native/unified/service/native_files.o $(RUNTIME_OBJECTS) $(NN_PLAN_OBJECTS)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+.PHONY: test-unified-native-files
+test-unified-native-files: $(OUT)/test_native_files
+	$<
+
+$(OUT)/test_native_image_ingress: tests/unified/test_native_ingress.cpp tests/unified/test_native_media.cpp $(MEDIA_LINK) $(OUT)/image/shared/unified/adapters/image_service.o $(OUT)/image/network/receiver_linux.o $(OUT)/image/network/original_protocol.o $(OUT)/backend/tests/unified/image_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -Ivendor/image-studio/src/vortex23-image-studio-720p-fast $(filter-out tests/unified/test_native_media.cpp,$(filter %.cpp %.o,$^)) $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+$(OUT)/nn-native/tests/unified/test_native_daemon_image.o: UXFLAGS += -Ivendor/image-studio/src/vortex23-image-studio-720p-fast
+$(OUT)/nn-native/unified/service/native_image_service.o: UXFLAGS += -Ivendor/image-studio/src/vortex23-image-studio-720p-fast
+$(OUT)/test_native_image_daemon: $(OUT)/nn-native/tests/unified/test_native_daemon_image.o $(filter-out $(OUT)/shared/unified/service/result.o $(OUT)/shared/unified/service/compute_port.o,$(sort $(MEDIA_LINK) $(DAEMON_NATIVE))) $(OUT)/nn-native/unified/service/native_image_service.o $(OUT)/image/shared/unified/adapters/image_service.o $(OUT)/image/network/receiver_linux.o $(OUT)/image/network/original_protocol.o $(OUT)/backend/tests/unified/image_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+$(OUT)/test_media_daemon: $(OUT)/nn-native/tests/unified/test_daemon.o $(filter-out $(OUT)/shared/unified/service/result.o $(OUT)/shared/unified/service/compute_port.o,$(sort $(MEDIA_LINK) $(DAEMON_NATIVE))) $(OUT)/backend/tests/unified/backend_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+$(OUT)/nn-native/tests/unified/test_image_service.o: UXFLAGS += -Ivendor/image-studio/src/vortex23-image-studio-720p-fast
+$(OUT)/test_media_image_service: $(OUT)/nn-native/tests/unified/test_image_service.o $(MEDIA_LINK) $(OUT)/image/shared/unified/adapters/image_service.o $(OUT)/image/network/receiver_linux.o $(OUT)/image/network/original_protocol.o $(OUT)/backend/tests/unified/image_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+# Original admission/lifecycle tests use the exact same strict media objects.
+# Separate OUT still isolates ordinary/sanitizer/target builds and no result is reused.
+$(OUT)/test_media_image_adapter: $(OUT)/nn-native/tests/unified/test_image_adapter.o $(MEDIA_LINK)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+$(OUT)/test_media_p8_adapter: $(OUT)/nn-native/tests/unified/test_p8_adapter.o $(MEDIA_LINK)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+$(OUT)/test_media_image_owner: $(OUT)/nn-native/tests/unified/test_image_owner.o $(MEDIA_LINK) $(OUT)/backend/tests/unified/image_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+$(OUT)/test_media_p8_owner: $(OUT)/nn-native/tests/unified/test_p8_owner.o $(MEDIA_LINK) $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+# Independent next-stage probe; not part of the frozen555 service acceptance.
+$(OUT)/test_native_p8_texture_ingress: $(OUT)/nn-native/tests/unified/test_native_texture_ingress.o $(MEDIA_LINK) $(OUT)/nn-native/p8/texture_service.o $(OUT)/p8/texture_receiver.o $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+# Independent P8 scene-service functional probe, excluded from frozen610.
+$(OUT)/test_native_p8_service: $(OUT)/nn-native/tests/unified/test_native_p8_service.o $(MEDIA_LINK) $(OUT)/nn-native/unified/service/native_p8_service.o $(OUT)/nn-native/p8/texture_service.o $(OUT)/p8/texture_receiver.o $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+$(OUT)/test_native_p8_daemon: $(OUT)/nn-native/tests/unified/test_native_daemon_p8.o $(filter-out $(OUT)/shared/unified/service/result.o $(OUT)/shared/unified/service/compute_port.o,$(sort $(MEDIA_LINK) $(DAEMON_NATIVE))) $(OUT)/nn-native/unified/service/native_p8_service.o $(OUT)/nn-native/p8/texture_service.o $(OUT)/p8/texture_receiver.o $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+# Independent next installation boundary; excluded from frozen scene687.
+# Compile the actual installation translation unit. Link-time dead stripping
+# keeps this metadata-only test independent of the later native service build;
+# complete native installation is tested separately, never inferred here.
+$(OUT)/install-decode/%.o: %.cpp $(SCHED_HEADERS)
+	mkdir -p $(dir $@)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -ffunction-sections -fdata-sections -fno-fast-math -ffp-contract=off -c $< -o $@
+$(OUT)/test_installed_media: $(OUT)/install-decode/tests/unified/test_installed_media.o $(OUT)/install-decode/unified/service/installation.o $(OUT)/nn/nnrt/package/canonical.o $(OUT)/nn/sha.o
+	$(CXX) $(UXFLAGS) -Wl,--gc-sections $^ $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+
+# Complete installed service linkage; this is deliberately distinct from the
+# decoder-only test above and includes every production application provider.
+INSTALLED_RUNTIME_LINK = $(filter-out $(OUT)/shared/unified/service/result.o $(OUT)/shared/unified/service/compute_port.o,$(sort $(MEDIA_LINK) $(NATIVE_NN_DAEMON_OBJECTS) $(OUT)/shared/unified/service/ingress_mux.o $(OUT)/nn-native/unified/service/joint_bridge.o $(OUT)/nn-native/unified/service/native_image_service.o $(OUT)/nn-native/unified/service/native_p8_service.o $(OUT)/nn-native/p8/texture_service.o $(OUT)/p8/texture_receiver.o $(OUT)/image/shared/unified/adapters/image_service.o $(OUT)/image/network/receiver_linux.o $(OUT)/image/network/original_protocol.o))
+$(OUT)/nn-native/tests/unified/test_installed_image.o: UXFLAGS += -Ivendor/image-studio/src/vortex23-image-studio-720p-fast
+$(OUT)/test_installed_image: $(OUT)/nn-native/tests/unified/test_installed_image.o $(INSTALLED_RUNTIME_LINK) $(OUT)/backend/tests/unified/image_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+$(OUT)/test_installed_p8: $(OUT)/nn-native/tests/unified/test_installed_p8.o $(INSTALLED_RUNTIME_LINK) $(OUT)/backend/tests/unified/p8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+# Definitions must precede immediate prerequisite expansion in GNU make.
+$(OUT)/test_native_daemon: $(OUT)/nn-native/tests/unified/test_native_daemon.o $(INSTALLED_RUNTIME_LINK) $(OUT)/backend/tests/unified/mosaic_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(filter %.o,$^) $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+$(OUT)/test_native_daemon_hunet: $(OUT)/nn-native/tests/unified/test_native_daemon_hunet.o $(INSTALLED_RUNTIME_LINK) $(OUT)/backend/tests/unified/hunet_owner_bridge.o
+	$(CXX) $(UXFLAGS) $(filter %.o,$^) $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+$(OUT)/vxgpud: tools/vxgpud.cpp $(OUT)/shared/unified/service/startup.o $(INSTALLED_RUNTIME_LINK)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+# Independent next NN-result-view boundary, excluded from source790 matrix.
+$(OUT)/test_native_result_view: $(OUT)/nn-native/tests/unified/test_native_result_view.o $(OUT)/nn-native/unified/service/native_result_view.o $(OUT)/nn-native/unified/service/sealed_assets.o $(MEDIA_LINK)
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+$(OUT)/test_native_result_export: $(OUT)/nn-native/tests/unified/test_native_result_export.o $(OUT)/nn-native/unified/service/native_result_export.o $(OUT)/nn-native/unified/service/native_files.o $(RUNTIME_OBJECTS) $(OUT)/nn/nnrt/package/canonical.o $(OUT)/nn/sha.o $(OUT)/legacy_json.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) -lstdc++fs -lm -o $@
+
+
+# U20 real native S8 adapters share one C protocol fixture and common owner.
+$(OUT)/backend/tests/unified/s8_owner_bridge.o: tests/unified/s8_owner_bridge.c tests/unified/s8_owner_bridge.h vendor/image-studio/src/vortex23-image-studio-720p-fast/tests/rv32_image_model.h vendor/image-studio/src/vortex23-image-studio-720p-fast/image_contract.h $(V2_ALL_HEADERS)
+	mkdir -p $(dir $@)
+	$(CC) $(UFLAGS) -Ivendor/image-studio/src/vortex23-image-studio-720p-fast -c $< -o $@
+$(OUT)/nn-native/tests/unified/test_end_to_end.o: UXFLAGS += -Ivendor/image-studio/src/vortex23-image-studio-720p-fast
+$(OUT)/test_end_to_end: $(OUT)/nn-native/tests/unified/test_end_to_end.o $(INSTALLED_RUNTIME_LINK) $(OUT)/backend/tests/unified/s8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+# Existing integer operators, package-only network extension through common owner.
+INT16_HOST_MODEL_CPP = device/vxnn/entry.cpp device/vxnn/int16_matmul.cpp device/vxnn/int48_post.cpp device/mosaic_s8/tile.cpp device/mosaic_s8/unpack.cpp tests/mosaic_s8/fake_s8.cpp
+$(OUT)/nn-native/tests/unified/test_native_int16_extension.o $(OUT)/nn-native/tests/mosaic_s8/fake_s8.o: UXFLAGS += -Idevice/mosaic_s8
+$(OUT)/test_native_int16_extension: $(OUT)/nn-native/tests/unified/test_native_int16_extension.o $(addprefix $(OUT)/nn-native/,$(INT16_HOST_MODEL_CPP:.cpp=.o)) $(INSTALLED_RUNTIME_LINK) $(OUT)/backend/tests/unified/s8_owner_bridge.o
+	$(CXX) $(UXFLAGS) $^ $(NN_JSON_LIBS) $(U18_DRM_LIBS) -lstdc++fs -lm -o $@
+
+.PHONY: test-unified-all test-unified-concurrency
+test-unified-all:
+	$(PYTHON) -m scripts.unified.run_software $(notdir $(OUT)) normal
+test-unified-concurrency:
+	$(PYTHON) -m scripts.unified.run_software $(notdir $(OUT)) thread
+
+# U22 actual frozen ELF/source/asset audit; no target execution or device access.
+.PHONY: test-unified-cross-audit
+test-unified-cross-audit:
+	$(PYTHON) -m unittest tests.unified.test_cross_audit tests.unified.test_cross_identity tests.unified.test_cross_assets -v
+	$(PYTHON) -c "from scripts.unified.build_rv32 import verify_original_shaders; from scripts.unified.cross_assets import verify_original_assets; import json; a=verify_original_assets('.'); print(json.dumps(dict(scope='STATIC_BYTE_CLOSURE_NOT_TARGET_BUILD_OR_RENDER',original_shaders=len(verify_original_shaders('.')),original_p8_assets=len(a['asset_files']),old_oracles=len(a['oracle_files']),gpu_raw_cycles=None)))"
+
+
+# U23 actual firmware files through the existing C binder, HOST registers only.
+$(OUT)/test_kernel_firmware_bind: tests/unified/test_kernel_firmware_bind.c tests/v2/test_provider.c $(V2_PROVIDER) $(V2_JOB_CORE) driver/v2/execution.c driver/v2/startup.c core/cdma.c $(V2_ALL_HEADERS)
+	mkdir -p $(OUT)
+	$(CC) $(UFLAGS) $< $(V2_PROVIDER) $(V2_JOB_CORE) driver/v2/execution.c driver/v2/startup.c core/cdma.c -o $@
+.PHONY: test-unified-kernel-audit
+test-unified-kernel-audit: $(OUT)/test_kernel_firmware_bind
+	$(PYTHON) -m unittest tests.unified.test_kernel_audit tests.unified.test_kernel_dt tests.unified.test_kernel_firmware tests.unified.test_kernel_builtin -v
+	$(PYTHON) -m scripts.unified.check_kernel_firmware $(OUT)/test_kernel_firmware_bind $(OUT)/production-firmware-bind
+
+# U24 packaging probe: genuine package/registry/planner, declared caps only.
+# This host utility is never installed as an application or a GPU fallback.
+$(OUT)/image_package_metadata: tests/unified/image_package_metadata.cpp nnrt/models/hunet.cpp nnrt/ops/hunet_registry.cpp device/vxnn/hunet_wire.cpp nnrt/ops/mosaic.cpp nnrt/models/mosaic_plan.cpp nnrt/models/mosaic.cpp nnrt/memory/arena.cpp $(MOSAIC_WIRE_SOURCE) $(NN_PLAN_OBJECTS) $(OUT)/v2/catalog.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) -fno-fast-math -ffp-contract=off $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-image-audit
+test-unified-image-audit:
+	$(PYTHON) -m unittest tests.unified.test_image_payload tests.unified.test_image_boot tests.unified.test_image_startup tests.unified.test_image_runtime_closure -v
+
+.PHONY: test-unified-release-policy
+test-unified-release-policy:
+	$(PYTHON) -m unittest tests.unified.test_release_policy -v
+
+.PHONY: test-unified-joint-queued test-unified-joint-cancel-drain test-unified-joint-closed-reservation test-unified-journal-joint
+test-unified-joint-queued: $(OUT)/test_runtime
+	$< joint-queued
+test-unified-joint-cancel-drain: $(OUT)/test_runtime
+	$< joint-cancel-drain
+test-unified-joint-closed-reservation: $(OUT)/test_runtime
+	$< joint-closed-reservation
+test-unified-journal-joint: $(OUT)/test_journal
+	$< $(OUT)/journal-joint-fixture joint
+
+.PHONY: test-unified-joint-cancel-queued test-unified-joint-typed-reservation
+test-unified-joint-cancel-queued: $(OUT)/test_runtime
+	$< joint-cancel-queued
+test-unified-joint-typed-reservation: $(OUT)/test_runtime
+	$< joint-typed-reservation
+
+.PHONY: test-unified-joint-daemon
+$(OUT)/test_joint_daemon: tests/unified/test_joint_daemon.cpp $(DAEMON_NATIVE)
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -o $@
+test-unified-joint-daemon: $(OUT)/test_joint_daemon
+	$<
+
+$(OUT)/test_mosaic_coop_host: tests/nnrt/test_mosaic_coop_host.cpp nnrt/ops/mosaic.cpp $(MOSAIC_WIRE_SOURCE) $(NN_PLAN_OBJECTS) $(OUT)/v2/catalog.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+$(OUT)/test_mosaic_coop_model: tests/nnrt/test_mosaic_coop_model.cpp nnrt/ops/mosaic.cpp nnrt/ops/mosaic_lowering.cpp nnrt/models/mosaic_plan.cpp nnrt/memory/arena_storage.cpp nnrt/memory/arena.cpp $(MOSAIC_WIRE_SOURCE) $(NN_PLAN_OBJECTS) $(OUT)/v2/catalog.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-mosaic-coop-host
+test-unified-mosaic-coop-host: $(OUT)/test_mosaic_coop_host
+	$(OUT)/test_mosaic_coop_host
+	$(PYTHON) -m unittest tests.nnrt.test_mosaic_coop_package -v
+
+# ABI4 HOST-only fixtures, no program_load/transport/device execution.
+$(OUT)/test_mosaic_reuse_host: tests/nnrt/test_mosaic_reuse_host.cpp nnrt/ops/mosaic.cpp $(MOSAIC_WIRE_SOURCE) $(NN_PLAN_OBJECTS) $(OUT)/v2/catalog.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+$(OUT)/test_mosaic_reuse_model: tests/nnrt/test_mosaic_reuse_model.cpp nnrt/ops/mosaic.cpp nnrt/ops/mosaic_lowering.cpp nnrt/models/mosaic_plan.cpp nnrt/memory/arena_storage.cpp nnrt/memory/arena.cpp $(MOSAIC_WIRE_SOURCE) $(NN_PLAN_OBJECTS) $(OUT)/v2/catalog.o
+	$(CXX) $(UXFLAGS) $(NN_JSON_FLAGS) $(filter %.cpp %.o,$^) $(NN_JSON_LIBS) -lstdc++fs -o $@
+.PHONY: test-unified-mosaic-reuse-host
+test-unified-mosaic-reuse-host: $(OUT)/test_mosaic_reuse_host
+	$(OUT)/test_mosaic_reuse_host
+	$(PYTHON) -m unittest tests.nnrt.test_mosaic_variant tests.nnrt.test_mosaic_variant_firmware -v
+
+# Private page headers are real compilation dependencies for incremental builds.
+$(OUT)/nn-native/unified/service/native_nn.o: unified/service/hunet_page_native.hpp include/vxunified/hunet_page_identity.hpp
+$(OUT)/nn-native/unified/service/native_result_view.o: unified/service/hunet_page_view.hpp unified/service/hunet_page_json.hpp include/vxunified/hunet_page_identity.hpp
+$(OUT)/nn-native/unified/hunet_request.o: include/vxunified/hunet_page_identity.hpp include/vxnn/arena_storage.hpp

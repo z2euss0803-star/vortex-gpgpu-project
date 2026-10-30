@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "roots": {
+    "fix1": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_s8_20261017",
+    "mosaic": "F:\\obsidian-codex\\codex\\work\\mosaic_original_tcu_w16a16_20261008_v1",
+    "native": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_native16_30s_20261008_v1",
+    "hardware": "F:\\obsidian-codex\\codex\\work\\mosaic_tcu_s8_w4_gpu_physical_20261015_v1\\delivery\\S8_W4_HW4_INT16_20261018"
+  },
+  "programs": [
+    {
+      "id": 12,
+      "app": "mosaic"
+    }
+  ],
+  "files": [
+    {
+      "root": "fix1",
+      "path": "build/s8/freeze-submit-enter-fix1/source-manifest.json",
+      "role": "build-input",
+      "bytes": 146367,
+      "sha256": "9c24ac93de23347ba3c9ec971ebaa0393c9b18cc6e7687aaf461c3b153324bc4"
+    },
+    {
+      "root": "fix1",
+      "path": "build/s8/freeze-submit-enter-fix1/source.tar.gz",
+      "role": "build-input",
+      "bytes": 9722842,
+      "sha256": "15db0405f58bc5459a9c5dae5b28810517a2519026be2e3c3e5b9aa06231ffd7"
+    },
+    {
+      "root": "fix1",
+      "path": "evidence/s8/board-firstboot-20261018/case1-stop-summary.json",
+      "role": "evidence",
+      "bytes": 10961,
+      "sha256": "d7c6087ee185dc1c0fcc09f04281a28ba0d4110263229eb0e6bf07ce4f9391ae"
+    },
+    {
+      "root": "mosaic",
+      "path": "config/selected_candidate.json",
+      "role": "production",
+      "bytes": 51053,
+      "sha256": "12076d0772cdf4514c728f3e374004629e849c76f041ac29740248043c2177df"
+    },
+    {
+      "root": "mosaic",
+      "path": "config/quant_contract.json",
+      "role": "production",
+      "bytes": 927,
+      "sha256": "bfe13c8eaf51f7cef996db74263ab6f0d21d793a22aecb7b68407f767460e90c"
+    },
+    {
+      "root": "mosaic",
+      "path": "config/quality_contract.json",
+      "role": "production",
+      "bytes": 1514,
+      "sha256": "b05d906df07c29b8a72c79f30d4099a3fe1e37597842f595887f9a1807fe48a6"
+    },
+    {
+      "root": "mosaic",
+      "path": "config/memory_contract.json",
+      "role": "production",
+      "bytes": 9143,
+      "sha256": "7ff9d923b0951217d578ad18a67ee2697961deb86ab14ecb85c8476caa2f0799"
+    },
+    {
+      "root": "mosaic",
+      "path": "config/dataset.json",
+      "role": "production",
+      "bytes": 43843,
+      "sha256": "3ae56eeefae9c793d2a22c03b4eb825563c03433e0f9f1fd7449a32e9cd6fa34"
+    },
+    {
+      "root": "mosaic",
+      "path": "config/execution_contract.json",
+      "role": "production",
+      "bytes": 356,
+      "sha256": "bdcfe2c1a8fa1383488aa2d5bebe071c1a980a3140d6edd16b9974e1d834bbc6"
+    },
+    {
+      "root": "mosaic",
+      "path": "inputs/mosaic.pth",
+      "role": "production",
+      "bytes": 6740703,
+      "sha256": "3d6d92cebde0cd068b8ed508f0d2d4c54b2b2b7137ffb4032bea44f2ab87c973"
+    },
+    {
+      "root": "mosaic",
+      "path": "inputs/model.json",
+      "role": "production",
+      "bytes": 19236,
+      "sha256": "394b0c957b951a0be728199403d0ff518ea46e53ecada81710d859a11d77c2ec"
+    },
+    {
+      "root": "mosaic",
+      "path": "inputs/transformer_net.py",
+      "role": "production",
+      "bytes": 5673,
+      "sha256": "4dca546296af271e7e75d7547ceab05297bc5e8298769cf039d39325b1f361b0"
+    },
+    {
+      "root": "mosaic",
+      "path": "inputs/unnamed.webp",
+      "role": "production",
+      "bytes": 273314,
+      "sha256": "62d9acf8ed515646de92636f174a613b5768f3f5d0879c6004fb4a74ae9301bc"
+    },
+    {
+      "root": "mosaic",
+      "path": "artifacts/selected_weights_device.bin",
+      "role": "production",
+      "bytes": 5068556,
+      "sha256": "8e775b58e1fbdcc617171beb08a5f3df86dded40dca55ff677bd87087a661a89"
+    },
+    {
+      "root": "native",
+      "path": "evidence/G1_bridge_failure_observed_20261008.json",
+      "role": "evidence",
+      "bytes": 1228,
+      "sha256": "ce975795357572aa03afbdec22fe94bd83f432e858ace49f60c3e8354d9d23a8"
+    },
+    {
+      "root": "native",
+      "path": "runs/20261008T142950933035Z_export_native_3d9d3e2f/native_weights.bin",
+      "role": "build-input",
+      "bytes": 3442176,
+      "sha256": "3e5abcb78863d2cff7f005246988439f066c1cef6be7f57d6ffe59c413b4da61"
+    },
+    {
+      "root": "hardware",
+      "path": "S8_W4_HW4_INT16_20261018.bit",
+      "role": "build-input",
+      "bytes": 23581017,
+      "sha256": "94ae9d3e6eb73ba55a8eec8c802e3818cd6b3a9be7e60542da5ae9459e3579e1"
+    },
+    {
+      "root": "hardware",
+      "path": "S8_W4_HW4_INT16_20261018.xsa",
+      "role": "build-input",
+      "bytes": 8345876,
+      "sha256": "02e68160e21b01621fde1eac6e472810e0fe50cd1842acb3ab63469314355e94"
+    }
+  ]
+}

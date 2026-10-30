@@ -1,0 +1,222 @@
+{
+  "schema": 1,
+  "logical_program": 65568,
+  "namespace_id": 1,
+  "logical_profile": 1,
+  "scope": "R9_REUSE_SPATIAL2_WEIGHT2_BULK24_PROFILE2_ACTUAL_RV32_STATIC_NOT_EXECUTED",
+  "code_sha256": "ff0446e45cb013772c772442cd22f3bb98ff216ee217c8c5606acb1fb9593a59",
+  "rodata_sha256": "30e0e46cb30629f4a7de447405225e208b37f15aaf2be23603bbe4cb975b5643",
+  "schema_sha256": "9a03920a64917e13254a20e235bfb01bee937a0d199594def5f578daa6d21dd4",
+  "gpu_raw_cycles": null,
+  "program_receipt_sha256": "4693aaa9248efe309ea1bc672e090409ab1244e3f5683c1a8e10174c8e7f856f",
+  "variant": "reuse-v7",
+  "sources": [
+    {
+      "path": "device/mosaic_s8/conv.cpp",
+      "sha256": "2499630da4358496587ca8b6c5efe7ae0c4ff9d7399c07ee0f573c7d574dba9c"
+    },
+    {
+      "path": "device/mosaic_s8/crt/vx_start.S",
+      "sha256": "592496e4492d57e0e28f7b67be0dbbf4ee56893cbd02136b242c40184df90fd6"
+    },
+    {
+      "path": "device/mosaic_s8/graph.h",
+      "sha256": "58c0a8bb95989836badc207a844e86a3dd7721812997c5c1e455e547dc4b4056"
+    },
+    {
+      "path": "device/mosaic_s8/graph_internal.h",
+      "sha256": "8cb5d88e64b5c01c11b8b59bc68c469f0209f23bf9d567eab7d649abe62be66f"
+    },
+    {
+      "path": "device/mosaic_s8/instance_norm_compat_v2.cpp",
+      "sha256": "2bbdce3ca700ffc7ddb9ac6f2fd17335b35b1702d3b055170d7fdba580b99b15"
+    },
+    {
+      "path": "device/mosaic_s8/instance_norm_compat_v3.cpp",
+      "sha256": "a3c1851e1ff0cd5b00cb41f00777906045dff2fc00937a53225221053ac54c9d"
+    },
+    {
+      "path": "device/mosaic_s8/isa_adapter.cpp",
+      "sha256": "c915a008c326f4d382755d32551ad8ba9e4db48fb5e6aed8c6e3840e7d5c47f9"
+    },
+    {
+      "path": "device/mosaic_s8/norm_compat.h",
+      "sha256": "f76bf5da2b4edbe57e78feab23cbef07b73c9df43459a8280f53129e6ec67b2d"
+    },
+    {
+      "path": "device/mosaic_s8/norm_compat_lut_v2.h",
+      "sha256": "02fc8fb1c155d92877f0b0090a7c4f11dc2803cabbc8dde6a28ea25faa110899"
+    },
+    {
+      "path": "device/mosaic_s8/norm_explicit_fma_prefix.h",
+      "sha256": "0584120b2dfa78124f29c27ae8c754830731561778bd7cd6d4b3955c5749ebb7"
+    },
+    {
+      "path": "device/mosaic_s8/profile.h",
+      "sha256": "315af90fb8d6a6f4d8bfbf3bb2e03cf71970e088c99d9be8a52a89dd0f1ba1fd"
+    },
+    {
+      "path": "device/mosaic_s8/quant_pack.cpp",
+      "sha256": "1847529f8e56bea151271fcfa9ffffa321a8a321864c23c2ff19389fccc4e9a2"
+    },
+    {
+      "path": "device/mosaic_s8/reuse_schedule_v2.h",
+      "sha256": "d40fcbf6926999f7203facd9c5c3da533b769fbb64ed83db23ea1989b318e424"
+    },
+    {
+      "path": "device/mosaic_s8/tile.cpp",
+      "sha256": "4e01a3d5a12841cfd1cb6010734f7cf3ac6eecdab21d7df65b66e8b5a8370f79"
+    },
+    {
+      "path": "device/mosaic_s8/tile.h",
+      "sha256": "2dd9c1f82c11eb9dbc9a5a9431d0685c3b25be9b246efbb1e8a3c044eaa9347d"
+    },
+    {
+      "path": "device/mosaic_s8/unpack.cpp",
+      "sha256": "c53c9dae8d5564c633346aed7ced7752df57bd128b9c3b8fa49d2d3cc0915131"
+    },
+    {
+      "path": "device/s8/crt/perf_stub.c",
+      "sha256": "3205bca15d9cb00a8d73a3b085ca2d3a1b1b2b93c5799331b043cd56f85a9928"
+    },
+    {
+      "path": "device/s8/isa.h",
+      "sha256": "ff6fde7e063a6b775d2ccb4868708983e9d1c84028f89658adbd8c0d2850d189"
+    },
+    {
+      "path": "device/vxnn/mosaic_coop.cpp",
+      "sha256": "cb38797ce28a3400d4c69a56be6beb7d54e5b438d28a63eaa808bf5973c4ba48"
+    },
+    {
+      "path": "device/vxnn/mosaic_coop.h",
+      "sha256": "0605621fd42b120606c918cdb74cd7a8daaab47736b1d8dcafe53c7da1af7f35"
+    },
+    {
+      "path": "device/vxnn/mosaic_link32.ld",
+      "sha256": "5468daac0a417409113880ad33f1f9a4019baa296cc360415a7e526d65359ef7"
+    },
+    {
+      "path": "device/vxnn/mosaic_ops.cpp",
+      "sha256": "c704f938023ca28e54af0d90fbaf23c874f9913b955d3d9c3584c85f363348d5"
+    },
+    {
+      "path": "device/vxnn/mosaic_ops.h",
+      "sha256": "cf0054cecb7170b46ebda3892bb5b30818bd5d5f43016b5ff69952239fe828b6"
+    },
+    {
+      "path": "device/vxnn/mosaic_point_lane.cpp",
+      "sha256": "2aa6127a890dd5046fa67f611dca88ce1490c1d62f0235fdf8bc5a63b16184a9"
+    },
+    {
+      "path": "device/vxnn/mosaic_point_lane.h",
+      "sha256": "77ee0e9d5dfded3aab9361cdb14d6395941e8cc6514362f2b5e7d3b887e4acf5"
+    },
+    {
+      "path": "device/vxnn/mosaic_profile_ops.h",
+      "sha256": "ce180edec7cd9e45ebf949468cbc7ce749dc286b8e701203d7e20f10d37857bd"
+    },
+    {
+      "path": "device/vxnn/mosaic_reuse_entry.cpp",
+      "sha256": "0cb4a8fe58ef483a4a2db8ace7db8105d7ea15007acf60386a62500942f02693"
+    },
+    {
+      "path": "device/vxnn/mosaic_wire.h",
+      "sha256": "c3faf01ee3ad7db16b08a7c0463118ea052274b0c44684aee1de0c463a37e7c1"
+    },
+    {
+      "path": "device/vxnn/mosaic_wire_coop_v3.cpp",
+      "sha256": "a3c165d6a2087ae9037325be1b4cc24773c5a975826aae779f1c4bf2b2c17c2f"
+    },
+    {
+      "path": "device/vxnn/mosaic_wire_coop_v3.h",
+      "sha256": "a7795f09710fbb5b7307c041a1419d97adc740b0635df6c2a9b79cb39f7e7e15"
+    },
+    {
+      "path": "device/vxnn/mosaic_wire_fused_v1.cpp",
+      "sha256": "5eb2c41ceee256a3ba4f228e6b5de316ba3a907985640dda8929e5f93c359ac6"
+    },
+    {
+      "path": "device/vxnn/mosaic_wire_reuse_v4.cpp",
+      "sha256": "6745a8a351506d093686a1308afe65d47344aefcfe7fbddf1fc4ae1108101dc2"
+    },
+    {
+      "path": "device/vxnn/mosaic_wire_reuse_v4.h",
+      "sha256": "c357ef93cc1b1a5791da1666f49d590bb8d933d5883533374fbbf96617bdab44"
+    },
+    {
+      "path": "device/vxnn/mosaic_wire_ro64.cpp",
+      "sha256": "05ae4c4fe554df85545a132772c10eebc5f573d977a96d634b98699dd3da3d7c"
+    },
+    {
+      "path": "device/vxnn/mosaic_work_layout_v1.h",
+      "sha256": "bbdc97c53fcc22596bcd3d6885901f8cc5710e4bb3bd9fb18c9903744ade8fbb"
+    },
+    {
+      "path": "device/vxnn/ranges.h",
+      "sha256": "c84d56a441ebff2845407658c7da9f5b6b137810ddd4548fe1106273d95ddb9a"
+    },
+    {
+      "path": "include/vxl/mosaic.h",
+      "sha256": "94886f4f1c7d6b71c6dfd2031b294ccc9ce60c5d0a3f7ee180ef5fea9d681050"
+    },
+    {
+      "path": "include/vxl/mosaic_layout.h",
+      "sha256": "4e913c7ffb2c87101324cef7f4f274d8d687cba9088c965a2ac11d5861f0b101"
+    },
+    {
+      "path": "include/vxl/mosaic_types.h",
+      "sha256": "9de51a373c2341cafe9bb3a7b57d000449fd622ab228f7061a343c6fe2aa286d"
+    },
+    {
+      "path": "include/vxl/mosaic_wire.h",
+      "sha256": "73df5d2c1401f5039bb12f0a86174c7e303d79c653340ca2d866a4d88847ea64"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/hw/VX_config.h",
+      "sha256": "a3d1e54df467df86cb4ebc0165095eabc7ad9cfcdb416ba2c8351d5ffe3ceb88"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/hw/VX_types.h",
+      "sha256": "9379844b0eb8755b039edb62721f7393cde772d20f93899122ea02d23799600f"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/include/vx_intrinsics.h",
+      "sha256": "fff5772074b0551928272c7751c506ca5673c59cb46ad558d5350d5c8087f8cc"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/include/vx_print.h",
+      "sha256": "ad363c358f8b24ebc5d4c173128aebbaad5694cdc2c079f57445fde14adbda85"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/include/vx_spawn.h",
+      "sha256": "7881314ea59c97abae37b6454ba5ce2deda3ac01830b6a062d0358b8ada0b411"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/src/common.h",
+      "sha256": "fa17ad6e3831a31f19d2156de1819e126407e95a90d053659b3a2314c78652f0"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/src/vx_spawn.c",
+      "sha256": "07fd17e46bf993669b05bc8a07c007fbc4e82a7796443d0edb30df740dabeecd"
+    },
+    {
+      "path": "vendor/hunet/sdk-linux-crt/kernel/src/vx_syscalls.c",
+      "sha256": "b7fba26c84aa431ddc597fa5cdf5cb1309fa81afe9a47ae9544af2f0023a7b2c"
+    }
+  ],
+  "legacy": {
+    "directory": "data/nnrt/programs/mosaic-int16-v6",
+    "family_sha256": "0fa8d43451d4e80196a68afc76bf116b9044e615c41fcd228f003c4fa8428c1a",
+    "code_sha256": "f5b5321b11a238c01db69bc5cee0da34fcd0031ef8382099826e9a307ac8adb4"
+  },
+  "implementation": "spatial2-prepacked-weight2-cooperative-bulk24-lane4-profile2-r9",
+  "private_abi": 4,
+  "schedule_version": 2,
+  "weight_layout_version": 2,
+  "work_layout_version": 1,
+  "profile_wire_version": 2,
+  "schema_source": {
+    "path": "scripts/unified/mosaic_schema_reuse_v4.py",
+    "sha256": "ad59d6610e7781e43ad90daa80e076a87da987e3190176a8520b640bd61affa9"
+  }
+}

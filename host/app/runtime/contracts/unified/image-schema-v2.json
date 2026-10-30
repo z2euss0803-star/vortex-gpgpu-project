@@ -1,0 +1,48 @@
+{
+  "schema": 2,
+  "namespace": 3,
+  "profile": 256,
+  "logical_programs": [
+    512,
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520,
+    521
+  ],
+  "args_bytes": 64,
+  "job_refs": 5,
+  "program_code_bytes": 2048,
+  "entry_pc": "0x10000000",
+  "args_gpu": "0x10010000",
+  "token_slot_base": "0x20000000",
+  "token_is_address": false,
+  "slot_count": 33,
+  "slot_bytes": 4194304,
+  "bytes_reserved": 138412032,
+  "read_table_bytes": 65536,
+  "table_object": "OWNER_IMMUTABLE_DATA_GPU_READ_ONLY_VIEWS_NOT_KERNEL_SEALED_PUBLIC_OBJECT",
+  "relative_offsets": {
+    "param2_byte52": "table suboffset",
+    "param3_byte56": "Bayer suboffset"
+  },
+  "old_programs_unchanged": true,
+  "source_manifest_sha256": "3291001ec8f88edcfd64688a2bb88f8c4ea1592455e0b6a47d6b202a9d254fdd",
+  "catalog_sha256": "899024b44c627c45908b974fe0ce560b2d44eaf80eedd7f31ab4d6d05fc55389",
+  "scope": "PRIVATE_SCHEMA2_RELATIONS_NOT_GPU_EXECUTION_PASS",
+  "gpu_raw_cycles": null,
+  "original_schema1_retained": "contracts/unified/image-schema-v1.json",
+  "relations": [
+    "exact width-height pair",
+    "rect origin+extent within dimension with64bit sum",
+    "used source/destination refs disjoint",
+    "gaussian radius-length-table pair",
+    "block in2,4,8",
+    "theme table stride",
+    "fixed unused suboffsets"
+  ]
+}

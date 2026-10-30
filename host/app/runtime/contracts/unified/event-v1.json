@@ -1,0 +1,23 @@
+{
+  "format": "vxgpu-common-event-v1",
+  "role": "INTERNAL_TYPED_EVENT_CONTRACT_NOT_NEW_KERNEL_ABI",
+  "required": ["format", "run_id", "boot_id", "client_id", "request_id", "operator_id", "job_id", "host", "phase", "clock_domain", "scope", "counter_kind", "app", "provider_flags", "device_generation", "buffer_generation", "event_id", "bytes", "namespace_id", "profile_id", "program_id", "raw_counter_bits", "parent_event", "start_ns", "end_ns", "gpu_raw_cycles", "cycles_valid", "hardware_sha", "bit_sha", "xsa_sha", "compatible_sha", "program_code_sha", "program_schema_sha", "model_sha", "plan_sha", "source_sha", "input_sha", "status", "execution_error", "hardware_identity_source"],
+  "additional_fields": false,
+  "phase_names": ["queue", "cpu_prepare", "cpu_gelu", "cpu_bin", "program_load", "weight_load", "texture_load", "input_load", "h2d", "d2h", "guard", "hash", "submit", "lock_wait", "active_poll", "sleep", "ack", "reap", "convert", "kms_copy", "kms_flip", "kms_retire", "end_to_end"],
+  "clock_domains": ["LINUX_MONOTONIC", "HOST_MONOTONIC", "B_MONOTONIC"],
+  "evidence_scopes": ["HOST_PROTOCOL_TEST", "OFFLINE", "CROSS_COMPILE", "IMAGE", "REAL_BOARD"],
+  "counter_kinds": ["NONE", "GPU_JOB", "ZERO_JOB_CACHE"],
+  "counter_rules": {
+    "bits": 32,
+    "raw_sign_bit": "ZERO_EXTEND_NOT_SIGN_EXTEND",
+    "aggregate": "U64_ONLY_DISTINCT_LOGICAL_GPU_JOBS; INCOMPLETE_TOTAL_IS_NULL",
+    "offline": "GPU_RAW_CYCLES_NULL; NO_SOFTWARE_TIME_CONVERSION_TO_OBSERVED_CYCLES",
+    "real_zero_job_cache": "VALID_ZERO; NEVER_CONFUSE_WITH_MISSING_COUNTER",
+    "frequency_conversion": "CONFIGURATION_CONDITIONAL_ESTIMATE_NOT_PHYSICAL_MEASUREMENT"
+  },
+  "limits": {"max_events": 65536, "max_record_bytes": 1048576, "max_file_bytes": 67108864},
+  "phase_accounting": "CHILD_INTERVAL_UNION_SUBTRACTED; CONCURRENT_WORK_TOTAL_CAN_EXCEED_WALL; NO_CROSS_HOST_CLOCK_SUBTRACTION",
+  "error_rule": "KEEP_ORIGINAL_STATUS_CODE_CATEGORY_DETAIL; EVIDENCE_RETRY_NEVER_REEXECUTES",
+  "hardware_identity_source": "BOOT_MANIFEST_DECLARED",
+  "gpu_raw_cycles": null
+}

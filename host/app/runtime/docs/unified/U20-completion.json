@@ -1,0 +1,246 @@
+{
+  "task": "U20",
+  "scope": "COMPLETE_MATCHED_HOST_SOFTWARE_GATES_NOT_TARGET_KERNEL_IMAGE_OR_BOARD",
+  "base": "45e3aaca4b9dc6d5b76da11d80e39c498a4dde30",
+  "last_partial_commit": "62aa5b8d6329fdca94e9de64ceff427cd441d652",
+  "source": {
+    "parent": "U20-fill-clear-fix-joint-thread-1159",
+    "root": "D:\\codex_files\\codex-unified-gpu-20261021\\frozen-source\\U20-fill-clear-fix-joint-thread-1159",
+    "manifest_sha256": "b0850e0b751d1b9ec331e71aa77da114244d4bd3c7a0c3eba627ff565589ae36",
+    "source_archive_sha256": "1187a2589a1416c7523f3c9c2dec6c5d9ab0f51be0b20098588ad63f8c8b11dc"
+  },
+  "gates": [
+    {
+      "run": "U20-final-thread-1183",
+      "mode": "thread",
+      "groups": [
+        "foundation",
+        "stage",
+        "native-media",
+        "installed",
+        "p8-public",
+        "s8-joint",
+        "integer-extension",
+        "display",
+        "events"
+      ],
+      "source_manifest_sha256": "b0850e0b751d1b9ec331e71aa77da114244d4bd3c7a0c3eba627ff565589ae36",
+      "source_tree": {
+        "files": 2043,
+        "bytes": 68332109,
+        "sha256": "8be709079b005fa1ba8445d219bebc9d47a253fefc57cfd92cd9e00b4ca38a07"
+      },
+      "archive": {
+        "members": 17877,
+        "logical_bytes": 1504204750,
+        "archive_bytes": 350376945,
+        "sha256": "23da38bebf0ade180a11122a0d40b7d035e445397f0ecc91176d4cad5383ebf7",
+        "remote": null,
+        "streamed": true,
+        "gpu_raw_cycles": null,
+        "host": "z2euss-virtual-machine",
+        "uid": 1000,
+        "free_disk": 8459083776,
+        "verified_members": 17877,
+        "members_sha256": "1840668136ec223a4d61a99311b509a40142bc17f9a151db4d6935827b04b790",
+        "hardlink_members": 2,
+        "archive": "D:\\codex_files\\codex-unified-gpu-20261021\\evidence\\U20-final-thread-1184\\raw-and-artifacts.tar.gz",
+        "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+      },
+      "commands": 186,
+      "gpu_raw_cycles": null,
+      "scope": "COMPLETE_REAL_HOST_GATE_SAME_FROZEN_SOURCE_NOT_BOARD"
+    },
+    {
+      "run": "U20-final-normal-1186",
+      "mode": "normal",
+      "groups": [
+        "foundation",
+        "stage",
+        "native-media",
+        "installed",
+        "p8-public",
+        "s8-joint",
+        "integer-extension",
+        "hunet-math",
+        "mosaic-math",
+        "image-pixels",
+        "p8-math",
+        "texture-negative",
+        "display",
+        "events"
+      ],
+      "source_manifest_sha256": "b0850e0b751d1b9ec331e71aa77da114244d4bd3c7a0c3eba627ff565589ae36",
+      "source_tree": {
+        "files": 2043,
+        "bytes": 68332109,
+        "sha256": "8be709079b005fa1ba8445d219bebc9d47a253fefc57cfd92cd9e00b4ca38a07"
+      },
+      "archive": {
+        "members": 18526,
+        "logical_bytes": 1831484936,
+        "archive_bytes": 343656413,
+        "sha256": "185a9d41865cfa13f2f5a2bc391e59d158b1583af8bd61772050b90d97f13565",
+        "remote": null,
+        "streamed": true,
+        "gpu_raw_cycles": null,
+        "host": "z2euss-virtual-machine",
+        "uid": 1000,
+        "free_disk": 8291328000,
+        "verified_members": 18526,
+        "members_sha256": "947cc3c27df90482bad287c2ff168abf921bf6eb379030c80619b7202bab3098",
+        "hardlink_members": 125,
+        "archive": "D:\\codex_files\\codex-unified-gpu-20261021\\evidence\\U20-final-normal-1187\\raw-and-artifacts.tar.gz",
+        "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+      },
+      "commands": 234,
+      "gpu_raw_cycles": null,
+      "scope": "COMPLETE_REAL_HOST_GATE_SAME_FROZEN_SOURCE_NOT_BOARD"
+    },
+    {
+      "run": "U20-final-sanitize-private-1231",
+      "mode": "sanitize",
+      "groups": [
+        "foundation",
+        "stage",
+        "native-media",
+        "installed",
+        "p8-public",
+        "s8-joint",
+        "integer-extension",
+        "hunet-math",
+        "mosaic-math",
+        "image-pixels",
+        "p8-math",
+        "texture-negative",
+        "display",
+        "events"
+      ],
+      "source_manifest_sha256": "b0850e0b751d1b9ec331e71aa77da114244d4bd3c7a0c3eba627ff565589ae36",
+      "source_tree": {
+        "files": 2043,
+        "bytes": 68332109,
+        "sha256": "8be709079b005fa1ba8445d219bebc9d47a253fefc57cfd92cd9e00b4ca38a07"
+      },
+      "archive": {
+        "members": 18563,
+        "logical_bytes": 6993615320,
+        "archive_bytes": 1199445244,
+        "sha256": "d24a0410edfa8aee988e27a8985f4b78d3408474f7740d046bb8fbf5d3baa9e3",
+        "remote": null,
+        "streamed": true,
+        "gpu_raw_cycles": null,
+        "host": "z2euss-virtual-machine",
+        "uid": 1000,
+        "free_disk": 3934113792,
+        "verified_members": 18563,
+        "members_sha256": "64cc07ee8376db0b5c7fb71ac286d4cc2032c36de2d74295054879019369b6c7",
+        "hardlink_members": 125,
+        "archive": "D:\\codex_files\\codex-unified-gpu-20261021\\evidence\\U20-final-sanitize-private-1234\\raw-and-artifacts.tar.gz",
+        "scope": "UNIFIED_STAGE_RAW_AND_ARTIFACTS_NOT_BOARD"
+      },
+      "commands": 234,
+      "gpu_raw_cycles": null,
+      "scope": "COMPLETE_REAL_HOST_GATE_SAME_FROZEN_SOURCE_NOT_BOARD"
+    }
+  ],
+  "scoped_source_proof": [
+    {
+      "path": "Makefile.unified",
+      "validated_worktree_sha256": "3b4eed675e0664da3b6343c3efa96bbee6991c3f295622fa796bc61a5494d00e",
+      "bytes": 84417
+    },
+    {
+      "path": "scripts/unified/check_u12_math_components.py",
+      "validated_worktree_sha256": "8e8ad1c5f0ca41a688d1e940a6ae4d256967921ac07978c302c6f2e30637e9d4",
+      "bytes": 4082
+    },
+    {
+      "path": "scripts/unified/check_u20_integer_native.py",
+      "validated_worktree_sha256": "07579689de7dc12815cfafe1c3661053b5a1e056f46580c637da7d5d6a6b9fe7",
+      "bytes": 5581
+    },
+    {
+      "path": "scripts/unified/check_u20_s8_joint.py",
+      "validated_worktree_sha256": "b8510265e2d9965c8555e74af283223d7d779b1f50734a5421d4cda5df2de865",
+      "bytes": 5439
+    },
+    {
+      "path": "unified/image_request.cpp",
+      "validated_worktree_sha256": "b4d5c14d6209b37b9e0d8a89ee6f4e1fc262f6512138473e30e5c7ac92779aee",
+      "bytes": 26219
+    },
+    {
+      "path": "include/vxunified/detail/image_fill.hpp",
+      "validated_worktree_sha256": "3d61d2175b839b7cf877b2960834aeaa3c1b2f4622ddcefae6f249ea2ea371d0",
+      "bytes": 810
+    },
+    {
+      "path": "tests/unified/test_image_fill.cpp",
+      "validated_worktree_sha256": "aa2775bec23fe66548b29baa639b364cd07b2e27b6e2fa540fbb4e48b913cf39",
+      "bytes": 1346
+    },
+    {
+      "path": "docs/unified/regression-matrix.json",
+      "validated_worktree_sha256": "cb95648be788150a7baf1ca66260cec3f114099cbafde9417bf222bab85baf2d",
+      "bytes": 3871
+    },
+    {
+      "path": "scripts/unified/check_u20_host_memory.py",
+      "validated_worktree_sha256": "1c50a00e5ec95573330acaa8d2c7af59b5391222b6798534a3af67c1eba9fb30",
+      "bytes": 6220
+    },
+    {
+      "path": "scripts/unified/run_software.py",
+      "validated_worktree_sha256": "dc3efa56ba358b5623300c02d1f74407154e60a6e84ae1f1247aa1ebfc9dbeca",
+      "bytes": 6793
+    },
+    {
+      "path": "tests/unified/test_software_matrix.py",
+      "validated_worktree_sha256": "805e8934de6da09512eedfae8d29ea9e3d6c36157e9b713a4e1a1badda955d9c",
+      "bytes": 1064
+    }
+  ],
+  "review": "AUTHOR_SCOPE_REVIEW_FINAL_FRESH_ASTRA_REVIEW_ONLY_AFTER_ALL25",
+  "gpu_raw_cycles": null,
+  "cross": "U22_NEW_FULL_CROSS_PENDING",
+  "image": "NOT_BUILT_NEW",
+  "board": "NOT_RUN",
+  "application_accuracy": "HOST_REFERENCES_ONLY_HISTORICAL_BOARD_FAILURES_PRESERVED",
+  "sd": "NOT_TOUCHED",
+  "new_u23_preparation": "EXCLUDED_FROM_THIS_COMMIT",
+  "location_update": {
+    "scope": "PHYSICAL_LOCATION_METADATA_ONLY_ORIGINAL_HOST_GATE_IDENTITIES_UNCHANGED",
+    "original_completion": {
+      "path": "G:\\CodexArchives\\unified-gpu-runtime-20261026\\U20-original-completion-before-location-update-1618.json",
+      "bytes": 7755,
+      "sha256": "ef42c8f46b1b1aaf7780c722caf05b40c12e5d2bb447898bda3ab8a9a32b664d"
+    },
+    "source_relocation_proof": "F:\\obsidian-codex\\codex\\work\\unified_gpu_runtime_20261021\\execution\\A-frozen-source-physical-relocation-1616\\receipt.json",
+    "changed_fields": [
+      {
+        "field": "source.root",
+        "original": "D:\\codex-unified-gpu-20261021\\frozen-source\\U20-fill-clear-fix-joint-thread-1159",
+        "current": "D:\\codex_files\\codex-unified-gpu-20261021\\frozen-source\\U20-fill-clear-fix-joint-thread-1159"
+      },
+      {
+        "field": "gates/U20-final-thread-1183/archive/archive",
+        "original": "D:\\codex-unified-gpu-20261021\\evidence\\U20-final-thread-1184\\raw-and-artifacts.tar.gz",
+        "current": "D:\\codex_files\\codex-unified-gpu-20261021\\evidence\\U20-final-thread-1184\\raw-and-artifacts.tar.gz"
+      },
+      {
+        "field": "gates/U20-final-normal-1186/archive/archive",
+        "original": "D:\\codex-unified-gpu-20261021\\evidence\\U20-final-normal-1187\\raw-and-artifacts.tar.gz",
+        "current": "D:\\codex_files\\codex-unified-gpu-20261021\\evidence\\U20-final-normal-1187\\raw-and-artifacts.tar.gz"
+      },
+      {
+        "field": "gates/U20-final-sanitize-private-1231/archive/archive",
+        "original": "D:\\codex-unified-gpu-20261021\\evidence\\U20-final-sanitize-private-1234\\raw-and-artifacts.tar.gz",
+        "current": "D:\\codex_files\\codex-unified-gpu-20261021\\evidence\\U20-final-sanitize-private-1234\\raw-and-artifacts.tar.gz"
+      }
+    ],
+    "software_rerun": false,
+    "target_executed": false,
+    "gpu_raw_cycles": null
+  }
+}

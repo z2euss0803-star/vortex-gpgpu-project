@@ -1,0 +1,166 @@
+{
+  "scope": "EXACT_LE_ARRAY_EXTRACTION_NOT_RENDER_GPU_PASS",
+  "sources": [
+    {
+      "source": "generated/complex_assets.h",
+      "source_sha256": "f02efbd0044e8d4e20ec7acac0ef9e012dc325d96f0eebb0a08bd348b0edd619",
+      "source_bytes": 72535723,
+      "arrays": [
+        {
+          "symbol": "cm_background",
+          "words": 65536,
+          "bytes": 262144,
+          "sha256": "3b7b9a25c37c2d181d4fc66ae8d4fb8fd4d219c8c67d97e0a59ba8022e497078",
+          "path": "data\\p8\\cm_background.bin"
+        },
+        {
+          "symbol": "cm_qinghua_texture",
+          "words": 262144,
+          "bytes": 1048576,
+          "sha256": "0a67d7124a083480aae5300379a888735f725fcbb43638ee8e465740be783de6",
+          "path": "data\\p8\\cm_qinghua_texture.bin"
+        },
+        {
+          "symbol": "cm_background_high",
+          "words": 262144,
+          "bytes": 1048576,
+          "sha256": "fe2498522fd0354b642945150fb00a6b6727eab71e3f2685afe1d15b20f108f9",
+          "path": "data\\p8\\cm_background_high.bin"
+        },
+        {
+          "symbol": "cm_qinghua_high_texture",
+          "words": 4194304,
+          "bytes": 16777216,
+          "sha256": "12642d24e209cf89eb99797b5f1f884ee0e3d70ff3bc3e1c6c937734a85bf0f7",
+          "path": "data\\p8\\cm_qinghua_high_texture.bin"
+        },
+        {
+          "symbol": "cm_porcelain_raw",
+          "words": 128512,
+          "bytes": 514048,
+          "sha256": "1e80bdaeb40428c8f2972a6d593124cf237945ae5b0354d839c5600fdc49cdf4",
+          "path": "data\\p8\\cm_porcelain_raw.bin"
+        },
+        {
+          "symbol": "cm_porcelain_indices",
+          "words": 98304,
+          "bytes": 393216,
+          "sha256": "a59abe515a1e67a4e7d34f3d48190f281f0239a07f2b647f6a5c72c85391c7ad",
+          "path": "data\\p8\\cm_porcelain_indices.bin"
+        },
+        {
+          "symbol": "cm_paperbag_raw",
+          "words": 128512,
+          "bytes": 514048,
+          "sha256": "739687c851afcece04dadc596b5f113d332a284e81424dd94679c3072ac93d96",
+          "path": "data\\p8\\cm_paperbag_raw.bin"
+        },
+        {
+          "symbol": "cm_paperbag_indices",
+          "words": 98304,
+          "bytes": 393216,
+          "sha256": "74cd49e68b88756ba8d356c1642466a607fec00265192e513e5b108e8d6993ea",
+          "path": "data\\p8\\cm_paperbag_indices.bin"
+        },
+        {
+          "symbol": "cm_warrior_material_rgb",
+          "words": 30926,
+          "bytes": 123704,
+          "sha256": "1b3e111557870129a9e15e9443d52af9e7fb778d3b3954a91829bd3c260e6ffe",
+          "path": "data\\p8\\cm_warrior_material_rgb.bin"
+        },
+        {
+          "symbol": "cm_warrior_material_mix",
+          "words": 30926,
+          "bytes": 123704,
+          "sha256": "9a04fa6f5d213533ff9346fad8f903619b60a7cfc75737407b139bc9e7b67ad0",
+          "path": "data\\p8\\cm_warrior_material_mix.bin"
+        },
+        {
+          "symbol": "cm_terracotta_scan_raw",
+          "words": 128512,
+          "bytes": 514048,
+          "sha256": "be8b7780a97741df1efdc36d6b325e68164a469c284427aa98e96116c3136090",
+          "path": "data\\p8\\cm_terracotta_scan_raw.bin"
+        },
+        {
+          "symbol": "cm_terracotta_scan_indices",
+          "words": 98304,
+          "bytes": 393216,
+          "sha256": "6ec4c81cb32d2f493bb553776a33c5663a3b9992502b5a02d94e435ddc7cc137",
+          "path": "data\\p8\\cm_terracotta_scan_indices.bin"
+        }
+      ]
+    },
+    {
+      "source": "generated/complex_kernel.h",
+      "source_sha256": "c5189f7df67fad3ede635c1214b2cba9b622b74d8dd080f40e1439a924ade3cd",
+      "source_bytes": 32373,
+      "arrays": [
+        {
+          "symbol": "cm_transform_kernel",
+          "words": 194,
+          "bytes": 776,
+          "sha256": "d177e3fbb5c489dc9699224511e6d3efe746b35179f63b23b67476b8966320a8",
+          "path": "data\\p8\\cm_transform_kernel.bin"
+        },
+        {
+          "symbol": "cm_raster_kernel",
+          "words": 373,
+          "bytes": 1492,
+          "sha256": "e8c862565c29604a44ec0dc9a464320841bb790385fd337208ff526513d96b8e",
+          "path": "data\\p8\\cm_raster_kernel.bin"
+        },
+        {
+          "symbol": "cm_transform_high_kernel",
+          "words": 194,
+          "bytes": 776,
+          "sha256": "f7444827893eda8abfad9e1d807c317123d04f6047ae1261b320fdc213d999d7",
+          "path": "data\\p8\\cm_transform_high_kernel.bin"
+        },
+        {
+          "symbol": "cm_raster_high_kernel",
+          "words": 398,
+          "bytes": 1592,
+          "sha256": "6d00b9235f68303962ab30d8793f2dc743dab6545058e5d2393dc3fe76a66908",
+          "path": "data\\p8\\cm_raster_high_kernel.bin"
+        },
+        {
+          "symbol": "cm_matrices",
+          "words": 1248,
+          "bytes": 4992,
+          "sha256": "45f4d098687f3e4dd42835f618abb7016fbd00daf381024235b3bd021a4e5469",
+          "path": "data\\p8\\cm_matrices.bin"
+        },
+        {
+          "symbol": "cm_warrior_poses",
+          "words": 8,
+          "bytes": 32,
+          "sha256": "3375a1485226aab36457dbb099cce54dd70aabf5c8b07e355f41101250f6be95",
+          "path": "data\\p8\\cm_warrior_poses.bin"
+        }
+      ]
+    }
+  ],
+  "math": {
+    "source_sha256": "a104cc6d368b19903528e711b3aa7885a6945eab188e15bf5e4680c48d1c5006",
+    "extracted_sha256": "a8fb8ce50bd9ecf47c92320c8c9b8f5dcfba28baf469a4788cf5ab0ba37d16c3",
+    "member_include_sha256": "5cda687462fcee913a32d3162499e9d4249ba2f6bdee09866ea4dff13f25dbc3",
+    "edits": [
+      "remove static method qualifiers for private per-instance state",
+      "counts is per-call16384word array, no shared mutable global"
+    ]
+  },
+  "gpu_raw_cycles": null,
+  "instruction_model": {
+    "source": "D:\\codex-graphics-w4-p8-20261021\\handoff\\workspace\\src\\vortex23-warrior-w4\\tests\\rv32_complex_model.h",
+    "sha256": "5df3980d1e51b0f6f3b26eba96469c0cbebd0a1dedac011adf14d80282647d27",
+    "bytes": 4320,
+    "scope": "FROZEN_INSTRUCTION_MODEL_NOT_RTL_GPU_OR_CYCLES"
+  },
+  "theme_reentrant": {
+    "original_sha256": "55af910663c9ac7fb7fc69f5ebf8e3f0321fb9d1b200ec9ee0aced54d290b6d2",
+    "private_sha256": "a5374f33e1034391e9361b8a9e01dc8ae1be9499fcd104b93185d4a7bb661df2",
+    "edit": "static512-entry histogram to per-call stack storage only"
+  }
+}

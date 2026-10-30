@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "scope": "INDEPENDENT_IN_COMPAT_ONLY_NOT_DEFAULT_NOT_DEPLOYED",
+  "identity": "MEASURED_4096_SINGLE_READ_AND_NCHW_WEIGHTED_WELFORD_FP32_V3",
+  "explicit_fma": "INSTANCE_NORM_ONLY",
+  "weights_scales_and_integer_dot": "UNCHANGED",
+  "full_numeric": "FROZEN21_ALL16_LAYER_OUTPUTS_BITEXACT_HOST_PASS",
+  "tables": {
+    "rcp.f32": {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_mosaic_dp_20261018\\evidence\\demo\\T05\\investigation-20261020\\rtx-driver-scalar-rcp-v3\\rcp-count1-4096.f32",
+      "sha256": "672e6b8767c976a003406e4bdd1a903a7c2299da60341645d61969f37d5e21bf",
+      "bytes": 16384,
+      "remote_path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/norm-v2-672e6b8767c976a003406e4bdd1a903a7c2299da60341645d61969f37d5e21bf-rcp.f32",
+      "transfer_exit": 0
+    },
+    "rsqrt.bin": {
+      "path": "F:\\obsidian-codex\\codex\\work\\vortex_linux_backend_mosaic_dp_20261018\\evidence\\demo\\T05\\investigation-20261020\\rtx-rsqrt-function-map\\rsqrt-normalized-delta3.bin",
+      "sha256": "98903561f8a8fdcb6132fe34cf3dfbe644ea9c7cd963615de69a3f387b03697e",
+      "bytes": 6291456,
+      "remote_path": "/home/z2euss/workspace/mosaic_hunet_dp_20261018/norm-v2-98903561f8a8fdcb6132fe34cf3dfbe644ea9c7cd963615de69a3f387b03697e-rsqrt.bin",
+      "transfer_exit": 0
+    }
+  },
+  "table_semantics": "MODEL_INDEPENDENT_PRIMITIVE_FUNCTION_NO_GOLDEN_STATISTICS",
+  "packed_rodata_bytes": 6307840,
+  "target_placement": "PENDING_FINAL_LINKER_AND_BINDING_AUDIT",
+  "gpu_raw_cycles": null,
+  "failure_receipt": "docs/mosaic/NORM_COMPAT_CANDIDATES_20261020.json",
+  "dispatch_scope": "4096 measured single-read; other frozen shapes use V2; not general cuDNN heuristic",
+  "private_apply_contract": "explicit full channel_spatial distinct from chunk_count",
+  "implementation": "device/mosaic_s8/instance_norm_compat_v3.cpp",
+  "point_range_alternative": "device/mosaic_s8/point_ops_compat_v3.cpp",
+  "formal_quality_record": "docs/mosaic/FORMAL_COMPAT_V3_20261020.json",
+  "ordinary_sanitize_audit": "PASS_FIVE_CHANNELS_ALL4_CORES_SPATIAL4096_16384_513_AND8_AUDIT_TESTS",
+  "rv32_object_status": "SIX_CODE_OBJECTS_AND_PRIMITIVE_RODATA_OBJECT_PASS_NOT_FULL_LINK",
+  "target_fcsr": "OPEN_FULL_ENTRY_REQUIRED",
+  "default_changed": false
+}

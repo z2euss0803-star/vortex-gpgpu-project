@@ -1,0 +1,1 @@
+Private probe exit 1 at isolated capacity wrapper call: AttributeError: types.SimpleNamespace has no attribute PIPE. The mock omitted subprocess.PIPE; no release script was executed or changed. Original static_probes_674.py and initial fixtures preserved.

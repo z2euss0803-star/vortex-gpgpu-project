@@ -1,0 +1,68 @@
+[
+  {
+    "date": "2026-10-24",
+    "run": "U19-contract-red-001",
+    "classification": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "error": "bound event serialization and default allfalse policy missing",
+    "preserved_archive": "U19-contract-functional-red-002",
+    "archive_sha256": "da794b8c4dce313aacef53ea267a8bc12b1df61faa69b0169a764ff2aefe72ff",
+    "repair": "typed identity/scope/raw32/error events, nested timing, exact evidence retry and bounded constant/copy/batch policies",
+    "retest": "005 actual normal natural0; whole U19 still open",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U19-contract-normal-003",
+    "classification": "COMPILER_WERROR_NOT_FUNCTIONAL_RED",
+    "error": "policy early return followed by success return on same line triggers misleading-indentation",
+    "preserved_archive": "U19-policy-build-error-004",
+    "archive_sha256": "db74faaa965e6875b2199c4b419af182f1e31dfffe9e409a668761cc674ab518",
+    "repair": "explicit braces and separate success return; all warnings remain errors",
+    "retest": "005 natural0",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U19-adversarial-red-007",
+    "classification": "TEST_COMPILE_ERROR_NOT_FUNCTIONAL_RED",
+    "error": "new test attempted assignment to Result with const optional members",
+    "preserved_archive": "U19-firstcheckpoint-test-build-error-008",
+    "archive_sha256": "31aee832446fce86a3e68d43b601bb63ef931019c3d779a07f43079d18f68ab6",
+    "repair": "construct independent baseline result variable",
+    "retest": "009 all3 compiled expected assertions witnessed",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U19-adversarial-red-009",
+    "classification": "EXPECTED_COMPILED_FUNCTIONAL_RED",
+    "error": "same-job raw counter double-counted; pending event lost on consumer destruction; weighted logical policy missing",
+    "preserved_archive": "U19-adversarial-functional-red-010",
+    "archive_sha256": "fc2aad6a2f8317cd3c1d9b7ed819419ff029bac49dcd6870f3c35f52fd06f412",
+    "repair": "unique per-job counter attribution; preallocated ExitRetention for exact pending bytes/writer; provider-isolated FIFO/quota logical plan with no execution",
+    "retest": "020 normal/021 ASanUBSan/022 TSan/023 matched cross natural0; all same1925-file source; synthetic counters only",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U19-audit-red-013",
+    "classification": "EXPECTED_FUNCTIONAL_RED_USING_ACTUAL_CPP_EVENT_FIXTURE",
+    "error": "offline auditor has no validated clock-domain groups",
+    "preserved_archive": "U19-adversarial-and-audit-red-014",
+    "archive_sha256": "b6110972ebdae1fbf2f7e842fe4c293b881ec8bd262dd2e0b8927927046518e9",
+    "repair": "strict exact-field/identity/scope/raw32/parent audit, separate clock groups, configured-only estimate, original errors and single-variable comparison",
+    "retest": "020 normal/021 ASanUBSan/022 TSan/023 matched cross natural0; all same1925-file source; synthetic counters only",
+    "gpu_raw_cycles": null
+  },
+  {
+    "date": "2026-10-24",
+    "run": "U19-boundary-red-018",
+    "classification": "EXPECTED_COMPILED_AND_PYTHON_FUNCTIONAL_RED",
+    "error": "same immutable BufferRef accepted two contradictory content digests; C++ serialized parent0; conditional estimate overflowed u64 domain",
+    "preserved_archive": "U19-boundary-functional-red-019",
+    "archive_sha256": "6a1c0e9c08f9ee15070190eb6d2e2c856e1fa9041a81dcaf332070afc484547b",
+    "repair": "reject identical reference/extent with conflicting content SHA; require nonzero optional parent; bound configured estimate before output. Positive multi-model fixture uses distinct actual handle identities.",
+    "retest": "020 normal/021 ASanUBSan/022 TSan/023 matched cross natural0; all same1925-file source; synthetic counters only",
+    "gpu_raw_cycles": null
+  }
+]

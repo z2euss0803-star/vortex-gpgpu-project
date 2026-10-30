@@ -1,0 +1,96 @@
+{
+  "scope": "SEALED_MOSAIC_SCHEMA_NATIVE_C_PARSER_NOT_RV32_OR_DEVICE_LOAD",
+  "runs": [
+    "U13-mosaic-schema-clean-normal-063",
+    "U13-mosaic-schema-clean-sanitize-066",
+    "U13-mosaic-schema-clean-aarch64-067",
+    "U13-mosaic-math-clean-normal-068"
+  ],
+  "source_rows": 1610,
+  "source_exact_canonical_sha256": "242516c5214cd938e6a69bb255f794ba281de22a6e5ed52f7b053ec3f35f10a5",
+  "schema_bytes": 1536,
+  "schema_fields": 23,
+  "schema_sha256": "c6564333cf23245cedd82391cdf5054fdcf3fa677388e7ba6d05ca3d795df43d",
+  "code_gpu": 2147483648,
+  "readonly_gpu": 2148597760,
+  "readonly_bytes": 6307840,
+  "provider_flags": 1,
+  "logical_program": 65568,
+  "archive": {
+    "members": 73,
+    "logical_bytes": 21149507,
+    "archive_bytes": 5737774,
+    "sha256": "0961594f5f9d7b96853c49175d493f244b5a6f64732135dd9b9579d480bbcf93",
+    "remote": "/home/z2euss/workspace/unified_gpu_runtime_20261021/U13-mosaic-schema-final-evidence.tar.gz",
+    "gpu_raw_cycles": null,
+    "host": "z2euss-virtual-machine",
+    "uid": 1000,
+    "free_disk": 2162790400,
+    "verified_members": 73,
+    "members_sha256": "857d1715c881edf7c936424a618fef58037cd4a3d8adfdbafc281f0c1c93dfee",
+    "hardlink_members": 0,
+    "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U13-mosaic-schema-final\\raw-and-artifacts.tar.gz",
+    "scope": "U10_INTERMEDIATE_INCLUDING_ORIGINAL_FAILURES_NOT_BOARD"
+  },
+  "source_reuse": [
+    {
+      "scope": "SOURCE_REUSE_ONLY_NOT_RESULT_REUSE",
+      "parent": "U13-mosaic-schema-normal-056",
+      "name": "U13-mosaic-schema-clean-normal-063",
+      "natural_exit": 0,
+      "elapsed_seconds": 4.672000000020489,
+      "source_archive_transfer_bytes": 0,
+      "helper_bytes": 230742,
+      "verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+      "gpu_raw_cycles": null
+    },
+    {
+      "scope": "SOURCE_REUSE_ONLY_NOT_RESULT_REUSE",
+      "parent": "U13-mosaic-schema-normal-056",
+      "name": "U13-mosaic-schema-clean-sanitize-066",
+      "natural_exit": 0,
+      "elapsed_seconds": 4.359000000054948,
+      "source_archive_transfer_bytes": 0,
+      "helper_bytes": 230752,
+      "verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+      "gpu_raw_cycles": null
+    },
+    {
+      "scope": "SOURCE_REUSE_ONLY_NOT_RESULT_REUSE",
+      "parent": "U13-mosaic-schema-normal-056",
+      "name": "U13-mosaic-schema-clean-aarch64-067",
+      "natural_exit": 0,
+      "elapsed_seconds": 6.703000000095926,
+      "source_archive_transfer_bytes": 0,
+      "helper_bytes": 230744,
+      "verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+      "gpu_raw_cycles": null
+    },
+    {
+      "scope": "SOURCE_REUSE_ONLY_NOT_RESULT_REUSE",
+      "parent": "U13-mosaic-schema-normal-056",
+      "name": "U13-mosaic-math-clean-normal-068",
+      "natural_exit": 0,
+      "elapsed_seconds": 13.156000000075437,
+      "source_archive_transfer_bytes": 0,
+      "helper_bytes": 230736,
+      "verifier_sha256": "db6cab2e1ead9f576214aa99762fdad1ae0b54b7246a57661e66e989cee5cadf",
+      "gpu_raw_cycles": null
+    }
+  ],
+  "source_anomaly": {
+    "rejected_run": "U13-mosaic-schema-reuse-sanitize-059",
+    "file": "tests/unified/test_control.cpp",
+    "historical_source": "U10-control-red-097",
+    "archive_sha256": "85de5bf79b9bca13f170fc7ac0cf5fec40f1bae400ca834244aad98180ce3b33",
+    "quarantine": "U13-source-quarantine-062",
+    "current_manifest_files_changed": false,
+    "build_reference_audit": "NO_CURRENT_MAKE_RULE_OR_CPP_WILDCARD_REFERENCES_STALE_TEST"
+  },
+  "gpu_raw_cycles": null,
+  "remaining": [
+    "RV32 entry/link/read-only table ownership",
+    "actual C loader/relocation and program catalog",
+    "operator registry/model/native owner/service"
+  ]
+}

@@ -1,0 +1,13 @@
+import pathlib,json,subprocess,hashlib,os
+P=pathlib.Path;g=P('/mnt/g/s8_software_r5_20261028');s=g/'software-r13-performance-633/source';o=g/'software-r13-performance-633/installation-decoder-r13-670';e=o/'evidence';e.mkdir();out=o/'out';out.mkdir();os.environ['TMPDIR']=str(e);sha=lambda p:hashlib.sha256(P(p).read_bytes()).hexdigest();rec=dict(scope='BUILD_REAL_INSTALLATION_DECODER_AND_REPRODUCE_R10_GAP_HOST_ONLY',natural_exit=1,commands=[],device_opened=False)
+def run(tag,args,expected=0):
+ q=subprocess.run(list(map(str,args)),cwd=s,stdout=subprocess.PIPE,stderr=subprocess.PIPE);(e/(tag+'.stdout')).write_bytes(q.stdout);(e/(tag+'.stderr')).write_bytes(q.stderr);rec['commands'].append(dict(tag=tag,argv=list(map(str,args)),natural_exit=q.returncode,expected=expected));(o/'receipt.json').write_text(json.dumps(rec,indent=2)+'\n');print(tag,q.returncode,flush=True)
+ if q.returncode!=expected:raise RuntimeError(q.stderr.decode(errors='replace')[-3500:])
+ return q.stdout
+try:
+ jp=g/'offline-rebuild-inputs-541/host-json-c/usr';flags=['g++','-std=c++17','-O2','-g1','-Wall','-Wextra','-Werror','-Wno-dangling-reference','-I.','-Iinclude','-I'+str(jp/'include'),'-ffunction-sections','-fdata-sections','-pthread'];common=[g/'software-r13-performance-633/host-final-r13-668/out/nn/nnrt/package/canonical.o',g/'software-r13-performance-633/host-final-r13-668/out/nn/sha.o'];libs=[jp/'lib/x86_64-linux-gnu/libjson-c.a','-lstdc++fs','-lm','-pthread'];run('compile-probe',flags+['-c',o/'probe.cpp','-o',out/'probe.o'])
+ for label,source in [('r10',g/'software-final-r10-506/source/unified/service/installation.cpp'),('r13',s/'unified/service/installation.cpp')]:
+  run('compile-'+label,flags+['-c',source,'-o',out/(label+'.o')]);run('link-'+label,['g++','-Wl,--gc-sections',out/'probe.o',out/(label+'.o')]+common+libs+['-o',out/('decoder-'+label)])
+ manifest=g/'image-stage-r10-538d/stage/etc/vxgpud/installation.json';run('r10-rejects-real-nine',[out/'decoder-r10',manifest],86);report=json.loads(run('r13-admits-real-nine',[out/'decoder-r13',manifest]));assert report['nn_count']==9 and report['device_opened'] is False and report['input_sha256']==sha(manifest)
+ lock=s/'build/source-lock-r13-668.json';snap=json.loads(lock.read_bytes())['snapshot'];rec.update(natural_exit=0,source_snapshot_id=snap['source_snapshot_id'],runtime_source_id=snap['runtime_source_id'],source_lock_sha256=sha(lock),decoder=dict(path=str(out/'decoder-r13'),sha256=sha(out/'decoder-r13')),installation_source_sha256=sha(s/'unified/service/installation.cpp'),gap_reproduced=True,probe_report=report);(o/'receipt.json').write_text(json.dumps(rec,indent=2)+'\n')
+except BaseException as ex:rec['error']=repr(ex);(o/'receipt.json').write_text(json.dumps(rec,indent=2)+'\n');raise

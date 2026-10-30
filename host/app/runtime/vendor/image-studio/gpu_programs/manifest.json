@@ -1,0 +1,111 @@
+{
+  "scope": "unchanged old R4 RV32 image kernels; not a Linux/AArch64 executable",
+  "byte_order": "little",
+  "start_PC": "0x10000000",
+  "warp_spawn_target": "0x10000010 hard-coded in START",
+  "hart_stride": 64,
+  "mscratch": "CSR0x340 points to 64-byte image_job",
+  "kernels": [
+    {
+      "op": 0,
+      "name": "gray",
+      "words": 58,
+      "bytes": 232,
+      "sha256": "a9a71093ebf293036f732bd472a4b99931e23594433d61836d3a13d9b34c161f",
+      "padded_bytes": 256,
+      "padded_sha256": "0ce125fa7dd278e42206f714741abffe975ff7ffa4db1307e3e033440b5f4f53"
+    },
+    {
+      "op": 1,
+      "name": "blur3",
+      "words": 296,
+      "bytes": 1184,
+      "sha256": "b9ed742e47208e8bd5c69b5cb926b87d585120aa5301bcbc02b3040ec6aba03d",
+      "padded_bytes": 1216,
+      "padded_sha256": "72cda81b9cd5171dd368e71f81552987b78b9e50449c7938b4696764bbda1093"
+    },
+    {
+      "op": 2,
+      "name": "sobel_poster",
+      "words": 338,
+      "bytes": 1352,
+      "sha256": "8731e7c80896698697eca07178140ff034ce7a74b6af80be701cb2a85868b826",
+      "padded_bytes": 1408,
+      "padded_sha256": "d23a16357b5eea0653f33f8fbdaabd04ffbf367408b70baafa2d2f6538968124"
+    },
+    {
+      "op": 3,
+      "name": "gaussian_h",
+      "words": 79,
+      "bytes": 316,
+      "sha256": "2f36242fa6b7137c335adda4429024885427e1477fdf6ce15b6b5ad3089bb5d4",
+      "padded_bytes": 320,
+      "padded_sha256": "0f70bb513ab30179f165639ab932ed8ee4a3c9ae262679294695987e32e65738"
+    },
+    {
+      "op": 4,
+      "name": "gaussian_v",
+      "words": 79,
+      "bytes": 316,
+      "sha256": "8040af3721d371fa615e7d26b440e1f7676f2f82a4405c3bbf1eb0e4c8ad610f",
+      "padded_bytes": 320,
+      "padded_sha256": "8bbaeefb2eae04d36cafe955189fd10c5c98210bc06915bd98a3e04b572a436a"
+    },
+    {
+      "op": 5,
+      "name": "xdog_color",
+      "words": 81,
+      "bytes": 324,
+      "sha256": "b30ac8f7571b7026c2fc7b8d7a77d1815892e0575ee5ac60669b9f265f31aa99",
+      "padded_bytes": 384,
+      "padded_sha256": "b70c369d4fcfaf3f78b77dd06b38a481882cfb72b53d3e65eec528febffb3ea6"
+    },
+    {
+      "op": 6,
+      "name": "neon_core",
+      "words": 298,
+      "bytes": 1192,
+      "sha256": "66562b7bcba7fc8ba72f836747fe9b96d64f81ca757b0d5b1d0cbeb0e0a08955",
+      "padded_bytes": 1216,
+      "padded_sha256": "ec4e774f1d5b1a3d3f4a51cb0ebf4551a0bfb3d29740bbaa323791622175a928"
+    },
+    {
+      "op": 7,
+      "name": "neon_combine",
+      "words": 173,
+      "bytes": 692,
+      "sha256": "57020b917d0a821cd9319933bbc9d50f420c0675a8d7e5daeb5e602a073ee4da",
+      "padded_bytes": 704,
+      "padded_sha256": "a1abee66582b0ecddf6961f136e82ab8c9493bbf32b5013951bbae519eb6113a"
+    },
+    {
+      "op": 8,
+      "name": "pixel_mean",
+      "words": 99,
+      "bytes": 396,
+      "sha256": "cac7e492453b1ab43043e42553dfde29ee201720507ae413bbca44a9e29a9570",
+      "padded_bytes": 448,
+      "padded_sha256": "bb5f071464279eb798ec2665d7aa616a1542df3ae6cbd57d630918e155830e93"
+    },
+    {
+      "op": 9,
+      "name": "pixel_bayer",
+      "words": 95,
+      "bytes": 380,
+      "sha256": "ca7f83f87a010b46674f2249c9ecbd9488f6a3b64e6ca89af3f8ad11db777d7c",
+      "padded_bytes": 384,
+      "padded_sha256": "afb1610f8f5e96a8f27ad9b3d04f54c1a4a81094b22e0bc2a988b70a10de2813"
+    }
+  ],
+  "table_payload_sha256": "116e71ef50cc30196546d2f8e53440d60942c8b438872d102e4aed74785aebca",
+  "table_bytes": 65536,
+  "table_offsets": {
+    "img_palette_y": 0,
+    "img_palette8": 7168,
+    "img_bayer": 7424,
+    "img_gauss7": 7488,
+    "img_gauss9": 7552,
+    "img_themes": 7680,
+    "img_xdog": 8192
+  }
+}

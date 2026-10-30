@@ -1,0 +1,356 @@
+{
+  "scope": "HOST_FROZEN_W16A16_COMPAT_NOT_GPU_NOT_BOARD",
+  "complete": true,
+  "verified_cases": 21,
+  "verified_layer_outputs": 336,
+  "missing_cases": [],
+  "records": [
+    {
+      "row": 0,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "86263295bf765c188e20521e5b7225955c0e17d58699034533b5e37a67357a4d"
+    },
+    {
+      "row": 1,
+      "shape": [
+        1,
+        3,
+        960,
+        1280
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "c5ec29d33e814020280099ef8f59e2fe92025d4ac3628d1f6656e4c79f647be1"
+    },
+    {
+      "row": 2,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "8d340fb0009f7102852fc723f0669bc477c9179089842a725ceb62664870cc5d"
+    },
+    {
+      "row": 3,
+      "shape": [
+        1,
+        3,
+        960,
+        1280
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "75c4aa153733395162b5ec85858a4d76dc8305333ab03b57f999aea4d497f371"
+    },
+    {
+      "row": 4,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "da7d7684c61b2eceee00f7a5325babd0b26b8612f84717466bd3507483fc3ced"
+    },
+    {
+      "row": 5,
+      "shape": [
+        1,
+        3,
+        960,
+        1280
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "dd7fa4dc539f1c1949d8c3d7b961ce1b96a72bb6cced0337707ee87c47494255"
+    },
+    {
+      "row": 6,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "d6998edb97a67394ec1701945754aa9bd572aae32db4476f6d81829d716851e9"
+    },
+    {
+      "row": 7,
+      "shape": [
+        1,
+        3,
+        960,
+        1280
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "0cdc1fdc2caa90cf659f57840ceed3571f70c052438710b5bb360040f910c0d1"
+    },
+    {
+      "row": 8,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "c3f65a26980a884566e3b5645dc746c3033994eddba7d9a98734d0437cc8b733"
+    },
+    {
+      "row": 9,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "3fd4d10f4604cd402b73b9ddb222a9431b1756f2fc082fea84a0aaa87342aa42"
+    },
+    {
+      "row": 10,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "4f345ddb3aca4b4801cda60ecb02a14076863b2d44974dab0340356a8f2af2e9"
+    },
+    {
+      "row": 11,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "2ddac80808f0576a752ff8ccd703ec0d726d3ae655fb899562e8c9a2245fb558"
+    },
+    {
+      "row": 12,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "def4c1ffe7c4999d126c30813cab3f3802937499910f135ed406f2ce5b3c9ca7"
+    },
+    {
+      "row": 13,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "387411e3b81ee26c89a246d89cbeb56bbe4bf02865e611382858b67c44b3eca5"
+    },
+    {
+      "row": 14,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "906050619608a85c17c04ea82afb7dfeb84edb81afd1d8ca12e38e8f240a31aa"
+    },
+    {
+      "row": 15,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "6eeb266cdc2b83ce640b0b8f854a77d346484adb6b0a24e8a0f5e0b340621aef"
+    },
+    {
+      "row": 16,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "0075613ea2e15ac9eb67f72558d932c6a6b7d0219aab6fb6e9898a485728a224"
+    },
+    {
+      "row": 17,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "70506e48d208cba13311985ccaea7eb14bcb53864efdffc320ff98484877e301"
+    },
+    {
+      "row": 18,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "2ee3b296f721a3569cb8c358d1182978ba54e23ec55d447d7c5762224398a9e6"
+    },
+    {
+      "row": 19,
+      "shape": [
+        1,
+        3,
+        256,
+        256
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "b85a151b428029186db53aaa7abe9d14938b82cfd3e3e0f4acbdc966eee779c1"
+    },
+    {
+      "row": 20,
+      "shape": [
+        1,
+        3,
+        960,
+        1280
+      ],
+      "verified_layer_outputs": 16,
+      "final_sha256": "d988e7c59e9131d7aa877a8ada679a97e38635400065c6e51bebdaa5f7ab348d"
+    }
+  ],
+  "gpu_raw_cycles": null,
+  "utc": "2026-10-20T11:43:04.555015+00:00",
+  "binding_sha256": "afe1de2a9edfdb9acbcd5f71de0da22c4105925748e6142adf9f7419185ea0da",
+  "precision": "NATIVE_SIGNED_INT16_EXACT48_FP32_POST",
+  "thresholds_changed": false,
+  "default_changed": false,
+  "source_receipts": [
+    {
+      "row": 0,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-full-compat-v3",
+      "helper_sha256": "0a036ad75f83f27c3848f355b8fa17db0eab5962bb172f8b0ed3acf97b04590e"
+    },
+    {
+      "row": 1,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case01",
+      "helper_sha256": "b1608c97b0ed5298e19d6641a1a7a2d60cba445b896c3577768c25164de6f42a"
+    },
+    {
+      "row": 2,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case02",
+      "helper_sha256": "d22d48216a5ce6f2fab6b65cc0b7dd4d4219972d58561e4fb81dd545682a0b71"
+    },
+    {
+      "row": 3,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case03-o3",
+      "helper_sha256": "316458630130ad908dc4bd4d8e3edc8e650f9162f4156fae2c86a077644c732d"
+    },
+    {
+      "row": 4,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case04",
+      "helper_sha256": "c8eea70547771edbe296fd5c20a32e5cbc42deb93a35f61d60c41579cff99389"
+    },
+    {
+      "row": 5,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case05-o3",
+      "helper_sha256": "dc51afe265ea9d4d955fef5531cc56a38eecfad4a9e0cfe099116160460e9833"
+    },
+    {
+      "row": 6,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case06",
+      "helper_sha256": "81b82d3941d55a9e4f0409b4b3dde2ac0584953c50233f59aa61c3c453032640"
+    },
+    {
+      "row": 7,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case07-o3",
+      "helper_sha256": "b127653a43ab2621cd8b48cb58d328e0f082543148852a4987efbf47dbd0d398"
+    },
+    {
+      "row": 8,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case08",
+      "helper_sha256": "085f2256b8d4e4d45588a40348d0d5ce499d1a5a89330529cd14e836b384cfa7"
+    },
+    {
+      "row": 9,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case09",
+      "helper_sha256": "bddafe42460a7b36e4f1cd333a05de68133f436bc6648f51e2a57a103f1aa9ce"
+    },
+    {
+      "row": 10,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case10",
+      "helper_sha256": "eb270839ff5109db9dd22449f10fa6f1c6aa6e639b9e16b6b5e104f11325f37b"
+    },
+    {
+      "row": 11,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case11",
+      "helper_sha256": "c0eec747f258bd464732976da4fddf50f696ef01693844949a62fad2053e0dcf"
+    },
+    {
+      "row": 12,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case12",
+      "helper_sha256": "da3e8a49e82473de1ce19405897ac81ed2e8c60e06b2f92a440085473cea2ff7"
+    },
+    {
+      "row": 13,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case13",
+      "helper_sha256": "582e2139af439e92094a78c8615d78567ab6d0dc10735fe3367e6764b60ff919"
+    },
+    {
+      "row": 14,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case14",
+      "helper_sha256": "4f5a1f0b4c8e2d91e2364373f440783efeedebc6aa6e0404943a3328cddbb064"
+    },
+    {
+      "row": 15,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case15",
+      "helper_sha256": "6236873000c45419004d7aa00ec418147907226adbd3b8255364860a368c46d1"
+    },
+    {
+      "row": 16,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case16",
+      "helper_sha256": "7d136e473ae406a846116d9f3d09eb263e1bab3b1d36aa880d40d3794dacd473"
+    },
+    {
+      "row": 17,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case17",
+      "helper_sha256": "035cda4507760148314995092d140454911dd4ca6013673494ac86d2626e3fd0"
+    },
+    {
+      "row": 18,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case18",
+      "helper_sha256": "95262fa68444af1c46119150930cb99b095a7fdb975ac45164de27ac028cce95"
+    },
+    {
+      "row": 19,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case19",
+      "helper_sha256": "6a18827411ed597d642a647b7a7aec64bf4517fb601e7861266ed634e663c884"
+    },
+    {
+      "row": 20,
+      "receipt_directory": "evidence\\demo\\T05\\investigation-20261020\\b-formal-v3-case20-o3",
+      "helper_sha256": "533f2dab48a1f1cefe249460f63324a4ee4f1abd4759b24660358d25f6d923ba"
+    }
+  ],
+  "frozen_binding_pin_source": "evidence\\demo\\T05\\last-layer-reproduction\\source-before.json",
+  "native_package_sha256": "3e5abcb78863d2cff7f005246988439f066c1cef6be7f57d6ffe59c413b4da61",
+  "protected_old_s8_failure_sha256": "d7c6087ee185dc1c0fcc09f04281a28ba0d4110263229eb0e6bf07ce4f9391ae"
+}

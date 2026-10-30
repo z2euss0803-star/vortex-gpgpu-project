@@ -1,0 +1,194 @@
+{
+  "scope": "ONE_W4_SINGLE_CHARACTER_NO_EXTRA_DIAGNOSTIC_TIMING_SAMPLE",
+  "execution_protocol": "PASS",
+  "coverage": "103_GPU_13_CPU_1023_LOGICAL",
+  "numeric_classification": "KNOWN_PRECISION_DEVIATION_NOT_NEW_SEVERE_FAULT",
+  "R2": {
+    "status": "PASS",
+    "mismatch_count": 0,
+    "max_abs": 0.004428863525390625,
+    "rmse": 0.001490818989144763,
+    "nrmse": 2.3665470144312307e-05,
+    "atol": 0.001,
+    "rtol": 0.001,
+    "nrmse_limit": 0.0005
+  },
+  "ORT": {
+    "status": "FAIL",
+    "mismatch_count": 8105,
+    "max_abs": 0.040439605712890625,
+    "rmse": 0.029087823759703847,
+    "nrmse": 0.0004619469572385816,
+    "atol": 0.0001,
+    "rtol": 0.0001,
+    "nrmse_limit": 0.0001
+  },
+  "final_byte_equal_previous": true,
+  "logits_sha256": "58a75990aad6711810065fa7a3c83e81a3eaaba13769f0395eac95dd7fa48654",
+  "T_load_ns": 4031236701,
+  "T_resident_ns": 9270748114,
+  "T_load_plus_resident_ns": 13301984815,
+  "GPU_raw_cycles": 686600903,
+  "configured_clock_hz": 96969696,
+  "GPU_seconds_conditional": 7.080571882993219,
+  "clock_scope": "BEFORE_AFTER_FRAMEWORK_RATE_EQUAL_ASSUMES_CONSTANT_NOT_INDEPENDENT_PHYSICAL_MEASUREMENT",
+  "top_exclusive_ns": {
+    "GPU_submit_wait": 7685166501,
+    "GPU_evidence_reap": 818704,
+    "CPU_handler_excluding_checkpoint": 1468704887,
+    "checkpoint": 7465875,
+    "diagnostic_capture": 0,
+    "final_read": 7976060,
+    "ROI_BEGIN": 84291453,
+    "ROI_END": 9645666,
+    "unclassified": 6678968
+  },
+  "GPU_submit_wait_exclusive_ns": {
+    "guard_init": 41416043,
+    "handoff_before_start": 260908108,
+    "gpu_active_observed": 7181328683,
+    "guard_check": 195405483,
+    "handoff_after_done": 5627879,
+    "user_kernel_boundary": 480305
+  },
+  "driver_nested_ns": {
+    "guard_cdma": 198362829,
+    "guard_cdma_sleep": 317434,
+    "all_cdma": 213847762,
+    "all_cdma_sleep": 317434,
+    "state_poll": 16053535,
+    "wait_sleep": 7174892679,
+    "worker_poll": 24297311,
+    "prepare": 259658897,
+    "mutex_wait": 11013142,
+    "cdma_fast_poll": 2904025
+  },
+  "driver_counts": {
+    "cdma_calls": 37511,
+    "cdma_bytes": 8857024,
+    "guard_cdma_calls": 35535,
+    "guard_cdma_bytes": 2274240,
+    "cdma_fast_poll_calls": 44615
+  },
+  "CPU_explicit_ns": {
+    "T_begin_call_ns": 277480576,
+    "T_compute_ns": 48666243,
+    "T_commit_call_ns": 743453606,
+    "T_evidence_call_ns": 142621,
+    "T_writeback_capture_ns": 0,
+    "T_cpu_reference_ns": 0,
+    "read_ns": 313139833,
+    "write_ns": 265349447,
+    "guard_ns": 54318780,
+    "total_ns": 1460846760
+  },
+  "CPU_handler_extra_ns": {
+    "T_CPU_input_sha_ns": 179320463,
+    "T_CPU_output_sha_ns": 179778960,
+    "T_CPU_gelu_exterior_ns": 32416316,
+    "T_CPU_handler_other_ns": 7446102
+  },
+  "GPU_by_operator": [
+    {
+      "op": 4,
+      "name": "GN_STATS",
+      "jobs": 16,
+      "raw_cycles": 364941320,
+      "submit_wait_ns": 3857185941
+    },
+    {
+      "op": 15,
+      "name": "FUSED_PACK_GEMM_UNPACK",
+      "jobs": 35,
+      "raw_cycles": 302110456,
+      "submit_wait_ns": 3324437648
+    },
+    {
+      "op": 5,
+      "name": "GN_AFFINE",
+      "jobs": 16,
+      "raw_cycles": 9591916,
+      "submit_wait_ns": 186075060
+    },
+    {
+      "op": 8,
+      "name": "GAP",
+      "jobs": 12,
+      "raw_cycles": 3205674,
+      "submit_wait_ns": 105629588
+    },
+    {
+      "op": 7,
+      "name": "ADD",
+      "jobs": 8,
+      "raw_cycles": 3142006,
+      "submit_wait_ns": 82013107
+    },
+    {
+      "op": 12,
+      "name": "PARTIAL_SHIFT",
+      "jobs": 8,
+      "raw_cycles": 1500808,
+      "submit_wait_ns": 58851317
+    },
+    {
+      "op": 13,
+      "name": "DOWNSAMPLE",
+      "jobs": 4,
+      "raw_cycles": 1337548,
+      "submit_wait_ns": 39462514
+    },
+    {
+      "op": 9,
+      "name": "ECA",
+      "jobs": 2,
+      "raw_cycles": 318339,
+      "submit_wait_ns": 15771008
+    },
+    {
+      "op": 11,
+      "name": "SCALE",
+      "jobs": 1,
+      "raw_cycles": 272614,
+      "submit_wait_ns": 8872289
+    },
+    {
+      "op": 10,
+      "name": "SIGMOID",
+      "jobs": 1,
+      "raw_cycles": 180222,
+      "submit_wait_ns": 6868029
+    }
+  ],
+  "trace": {
+    "capacity": 2048,
+    "used": 207,
+    "selected": 103,
+    "flags": 0,
+    "active": 0
+  },
+  "runtime_exit": 0,
+  "stderr_empty": true,
+  "dmesg_unchanged": true,
+  "driver_ready": true,
+  "jobs_before": 104,
+  "jobs_after": 207,
+  "formal_eligible": false,
+  "formal_checker_retained": "FAIL_FORMAL_DIAGNOSTIC_GATE",
+  "H1": "NOT_RUN",
+  "process_end_to_end": false,
+  "comparison": {
+    "scope": "SAME_BOOT_HARDWARE_PROGRAM_ONE_SAMPLE_EACH_DIAGNOSTIC_VS_NO_EXTRA_DIAGNOSTIC_NO_STATISTICAL_CLAIM",
+    "diagnostic_run": "044a878bfe4e423d8b8a409b2ca577de",
+    "nodiag_run": "39fb432d2a3549a5abdf8644ca6c2d6e",
+    "diagnostic_resident_ns": 12303727442,
+    "nodiag_resident_ns": 9270748114,
+    "difference_ns": 3032979328,
+    "difference_percent": 24.650898211924158,
+    "diagnostic_raw_cycles": 686845038,
+    "nodiag_raw_cycles": 686600903,
+    "bitwise_final_equal": true
+  },
+  "compute_dispatches": 1,
+  "compute_retries": 0
+}

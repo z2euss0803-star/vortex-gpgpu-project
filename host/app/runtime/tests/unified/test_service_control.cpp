@@ -1,0 +1,47 @@
+#include <vxunified/control.hpp>
+#include "scheduler_fixture.hpp"
+#include "nnrt/package/json.hpp"
+#include <fcntl.h>
+#include <unistd.h>
+namespace {
+BackendIdentity identity(){BackendIdentity i;i.hardware_contract=digest(11);i.bit=digest(12);i.xsa=digest(13);i.compatible=digest(14);i.provider_flags=1;i.device_generation=1;return i;}
+struct Port:ExecutionPort {
+ int calls=0,retires=0;
+ Result<BackendIdentity>probe(int,BackendMode)override{return Result<BackendIdentity>::success(identity());}
+ Result<void>execute(int,const WorkItem&w,vxnn::CpuPool*,ExecutionReceipt&r)override{
+  ++calls;r.outcome=outcome(w);PublishedResult p;p.execution_complete=true;p.lease.scope=vxnn::EvidenceScope::HOST_PROTOCOL_TEST;p.lease.producer=w.request;p.lease.app=w.app;p.lease.hardware=identity().hardware_contract;p.lease.model=digest(1);p.lease.plan=digest(2);p.numeric=vxnn::NumericClass::KNOWN_NUMERIC_DEVIATION;p.raw_legacy_json="{\"historical\":9007199254740993}";ResultArtifact a;a.path="final.bin";a.layout="NCHW";a.bytes=4;a.shape={1};a.sha=digest(4);p.lease.artifacts={a};r.output=p;return Result<void>::success();
+ }
+ Result<void>retire_request(int,RequestKey)override{++retires;return Result<void>::success();}
+};
+}
+int main(){
+ char dir[]="/tmp/vx-control-XXXXXX";require(mkdtemp(dir),"private controller directory");ServiceConfig config;config.private_dir=dir;int opens=0;
+ auto owner=value(DeviceOwner::acquire(config,[&](const std::string&){++opens;return Result<int>::success(open("/dev/null",O_RDWR|O_CLOEXEC));}),"owner");auto port=std::make_shared<Port>();
+ auto rt=value(Runtime::start(owner,identity(),vxnn::EvidenceScope::HOST_PROTOCOL_TEST,port,[](const ExecutionReceipt&,DeliveryStage){return Result<void>::success();},[](const PublishedResult&){return Result<void>::success();}),"runtime");
+ int preparations=0;TrustedApplication entry;entry.id="registered-nn";entry.hardware=identity().hardware_contract;entry.model=digest(1);entry.plan=digest(2);entry.inputs={{"input-a",digest(3),4}};
+ entry.prepare=[&](const RpcRequest&q){++preparations;auto r=request(q.request.request_id.c_str(),1,WorkKind::TRANSFER);r.request=q.request;r.cpu_bytes=4096;if(q.parameters.find("wrong")!=std::string::npos)r.model=digest(9);return Result<WorkRequest>::success(r);};
+ auto control=value(ServiceControl::start(rt,identity(),"boot",{entry}),"trusted control");RpcRequest q;q.command="models";
+ auto listing=value(control->handle(q),"registry inventory must work");require(listing.find("registered-nn")!=std::string::npos&&port->calls==0&&opens==1,"startup/inventory never executes or reopens");
+ q.command="inputs";q.request.boot_id="boot";q.entry_id=entry.id;auto inputs=value(control->handle(q),"registered input inventory");require(inputs.find("input-a")!=std::string::npos&&port->calls==0,"input selection must list actual registered identities without execution");
+ q.command="submit";q.request={"boot","client","r1"};q.entry_id=entry.id;q.input_id="missing";q.parameters="{\"b\":2,\"a\":1}";require(!control->handle(q)&&preparations==0,"unknown input rejected before factory");q.input_id="input-a";
+ value(control->handle(q),"admit");q.parameters="{\"a\":1,\"b\":2}";value(control->handle(q),"idempotent canonical replay");require(preparations==1&&port->calls==0,"replay never prepares or executes twice");q.parameters="{\"a\":2}";auto changed=control->handle(q);require(!changed&&changed.error->code==EEXIST,"same key changed payload");
+ q.command="status";auto status=value(control->handle(q),"queued status");require(status.find("QUEUED")!=std::string::npos,"separate queued state");ok(rt->run_one(),"single software work");
+ q.command="result";auto raw=value(control->handle(q),"completed result");auto json=vxnn::json::parse(raw);require(vxnn::json::str(vxnn::json::member(json.get(),"raw_legacy_json"))=="{\"historical\":9007199254740993}","original old JSON exact");require(!vxnn::json::boolean(vxnn::json::member(json.get(),"displayed")),"execution is not presentation");require(json_object_get_type(vxnn::json::member(json.get(),"gpu_raw_cycles"))==json_type_null,"offline cycles remain null");require(vxnn::json::str(vxnn::json::member(json.get(),"numeric_class"))=="KNOWN_NUMERIC_DEVIATION","historical precision classification retained");
+ q.command="results";auto retained=value(control->handle(q),"completed result selection");require(retained.find("r1")!=std::string::npos&&port->calls==1,"existing completed result discovery never reruns work");
+ auto dp=value(rt->retain_result(q.request,Consumer::DP),"display hold");q.command="display";auto display=control->handle(q);require(!display&&display.error->code==EOPNOTSUPP,"no display hook cannot invent success");q.command="reap";value(control->handle(q),"client reap");require(port->retires==0,"DP hold survives client reap");q.command="submit";q.parameters="{\"a\":1,\"b\":2}";auto reaped=control->handle(q);require(!reaped&&reaped.error->code==EALREADY&&preparations==1,"reaped request tombstone cannot rerun");ok(rt->release_result(dp,true),"retired display hold");require(port->retires==1,"backing retires once");
+ q.request.request_id="bad-factory";q.parameters="{\"wrong\":true}";require(!control->handle(q)&&rt->stats().scheduler.pending==0,"factory cannot replace bound model");
+ std::vector<RegisteredInput> inventory=entry.inputs;for(unsigned n=1;n<137;n++)inventory.push_back({std::string(120,'a')+std::to_string(n),digest(44),64ULL<<20,digest(2)});
+ auto many=entry;many.id="reviewed-pages";many.list_inputs=[&](){return Result<std::vector<RegisteredInput>>::success(inventory);};many.resolve_input=[&](const std::string&id){auto i=std::find_if(inventory.begin(),inventory.end(),[&](const RegisteredInput&x){return x.id==id;});return i==inventory.end()?Result<RegisteredInput>::failure({ENOENT,"TEST","absent"}):Result<RegisteredInput>::success(*i);};
+ auto cc=value(ServiceControl::start(rt,identity(),"boot",{many}),"reviewed inventory control");RpcRequest iq;iq.command="inputs";iq.request.boot_id="boot";iq.entry_id=many.id;auto reply=value(cc->handle(iq),"137 input identities through actual control");auto parsed=vxnn::json::parse(reply);require(vxnn::json::count(vxnn::json::member(parsed.get(),"inputs"),137)==137&&reply.size()<60000&&port->calls==1,"137 long identifiers fit64KiB without execution");inventory.push_back({"overflow",digest(45),4,digest(2)});auto overflow=cc->handle(iq);require(!overflow&&overflow.error->code==EOVERFLOW,"138th row refused");
+ bool registered=false;TrustedApplication uploaded=entry;uploaded.id="uploaded-nn";
+ RegisteredInput image{"uploaded-image",digest(7),4,digest(8)};
+ uploaded.resolve_input=[&](const std::string&id){return registered&&id==image.id?Result<RegisteredInput>::success(image):Result<RegisteredInput>::failure({ENOENT,"INPUT_TEST","not registered"});};
+ uploaded.list_inputs=[&](){return Result<std::vector<RegisteredInput>>::success(registered?std::vector<RegisteredInput>{image}:std::vector<RegisteredInput>{});};
+ uploaded.register_input=[&](const RpcRequest&r){require(r.command=="input-register"&&r.input_id==image.id,"only selected registered input");registered=true;return Result<RegisteredInput>::success(image);};
+ uploaded.prepare=[&](const RpcRequest&r){auto work=request(r.request.request_id.c_str(),1,WorkKind::TRANSFER);work.request=r.request;work.plan=r.parameters.find("stale")!=std::string::npos?entry.plan:image.plan;work.input_sha=image.sha;work.input_bytes=image.bytes;work.cpu_bytes=4096;return Result<WorkRequest>::success(work);};
+ auto dynamic=value(ServiceControl::start(rt,identity(),"boot",{uploaded}),"dynamic input control");RpcRequest fresh;fresh.command="input-register";fresh.request={"boot","client","upload-registration"};fresh.entry_id=uploaded.id;fresh.input_id=image.id;fresh.parameters="{}";value(dynamic->handle(fresh),"register once without compute");require(port->calls==1,"registration never executes");fresh.command="submit";fresh.request.request_id="uploaded-sync";value(dynamic->handle(fresh),"per-input plan admitted synchronously");fresh.command="cancel";value(dynamic->handle(fresh),"cancel metadata-only queued request");
+ fresh.command="submit";fresh.request.request_id="uploaded-stale";fresh.parameters="{\"stale\":true}";auto stale_input=dynamic->handle(fresh);require(!stale_input&&stale_input.error->code==EPROTO,"factory cannot inherit frozen plan for a new input");
+ auto asynchronous=value(ServiceControl::start(rt,identity(),"boot",{uploaded},{},{},true),"asynchronous input control");fresh.request.request_id="uploaded-async";fresh.parameters="{}";value(asynchronous->handle(fresh),"queue new input");require(value(asynchronous->prepare_one(),"prepare exact input snapshot"),"one asynchronous preparation");fresh.command="cancel";value(asynchronous->handle(fresh),"cancel prepared queued input");
+ auto foreign=entry;foreign.hardware=digest(99);require(!ServiceControl::start(rt,identity(),"boot",{foreign}),"reject foreign provider binding");auto wrong_bit=identity();wrong_bit.bit=digest(98);require(!ServiceControl::start(rt,wrong_bit,"boot",{entry}),"controller startup binding must equal actual Runtime probe");q.request.boot_id="old";q.command="status";auto stale=control->handle(q);require(!stale&&stale.error->code==ESTALE,"reject old boot key");
+ ok(rt->shutdown(),"clean shutdown");control.reset();rt.reset();owner.reset();unlink((std::string(dir)+"/owner.lock").c_str());rmdir(dir);puts("U10_TRUSTED_CONTROL_REAL_RUNTIME_IDEMPOTENCE_LEASES_PASS_NOT_BOARD");
+}

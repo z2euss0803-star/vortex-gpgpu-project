@@ -1,0 +1,76 @@
+{
+  "files": [
+    "Makefile.unified",
+    "include/vxnn/cpu.hpp",
+    "include/vxunified/work.hpp",
+    "include/vxunified/scheduler.hpp",
+    "nnrt/cpu/pool.cpp",
+    "nnrt/cpu/gelu.cpp",
+    "unified/scheduler/state.hpp",
+    "unified/scheduler/queue.cpp",
+    "unified/scheduler/dispatch.cpp",
+    "unified/scheduler/cancel.cpp",
+    "tests/unified/scheduler_fixture.hpp",
+    "tests/unified/test_scheduler.cpp",
+    "tests/unified/test_cancel.cpp",
+    "tests/unified/test_budget.cpp",
+    "tests/unified/test_token_transfer.cpp",
+    "tests/unified/test_scheduler_faults.cpp",
+    "tests/unified/test_scheduler_alloc.cpp",
+    "tests/unified/test_gelu_token.cpp",
+    "scripts/unified/check_u09.py",
+    "scripts/unified/check_u09_emulation.py",
+    "docs/unified/U09-errors.json"
+  ],
+  "message": "feat(unified): U09 共同请求队列、公平轮转和legacy屏障",
+  "verified_runs": [
+    "U09-final-normal-012",
+    "U09-final-sanitizers-014",
+    "U09-final-tsan-017",
+    "U09-aarch64-018",
+    "U09-aarch64-emulation-019"
+  ],
+  "cross": "NINE_MATCHED_AARCH64_ELFS_ROOTFS_SYMBOLS_AND_PRIVATE_USER_EMULATION_NOT_BOARD",
+  "evidence_archives": [
+    {
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U09-stage1\\raw-and-artifacts.tar.gz",
+      "sha256": "874049758bf9d733b2bb179c77f4f3f79b7c058a633d83e140f2ee51ea5a6b8c",
+      "members": 143,
+      "members_sha256": "9cbd3d07846c55d113f680b4503146fd525999a9f0b165c73f19bd2aa75bdb60"
+    },
+    {
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U09-stage2\\raw-and-artifacts.tar.gz",
+      "sha256": "678da2023216c8e0c1f09c629de33f5e17d830539eb40fc2cafde3a5614a866a",
+      "members": 100,
+      "members_sha256": "6915db8b4813637329919506a9d45cbe5d04f03337b4ece06eaf40924e24c4b8"
+    },
+    {
+      "archive": "D:\\codex-unified-gpu-20261021\\evidence\\U09-stage3\\raw-and-artifacts.tar.gz",
+      "sha256": "d0550a5c7f4b5860d5bdefab18ddae365e53a81b82bced4af1ff14157fefe075",
+      "members": 127,
+      "members_sha256": "ef793f8800c3ee517aa609ebcb1f2664c5799ba09490bed68979e050c6f6c3c1"
+    }
+  ],
+  "numeric": {
+    "scope": "MATCHED_AARCH64_USER_EMULATION_NOT_BOARD",
+    "layers": 13,
+    "elements": 1869056,
+    "old_a53_bit_differences": 0,
+    "gpu_reference_bit_differences": 18889
+  },
+  "rulings": [
+    "Only internal C++ descriptors were extended; old176B/new128B wire ABI and program identities remain unchanged. Trusted pure WorkSource lowers admitted plans lazily; one head and one active item per request, no eager million-job expansion.",
+    "Live requests8, process pending32, retained completions64 and explicit-forget idempotency index256. GPU active1. Completed/ACKed/retired GPU boundary is required before rotation; queue deadline never preempts active hardware.",
+    "CPU has one4-range borrowed reservation. Claim forbids double execution/early release. Pool drains on cancellation and returns claim, scheduler alone retires its token; shared original GELU expression and RNE/flags retained.",
+    "Cancelled late CPU/GPU completion cannot revive a request. Failed lowering/deadline/runtime reason remains queryable. Failed completion allocation retains original active state and can deliver the same completion once.",
+    "Legacy keeps the full transaction barrier; actual legacy job/quiescent/retirement evidence integration remains U10. Source admission, real resource leases, daemon/socket and actual backend dispatch are not claimed by scheduler fixture tests.",
+    "Five shared implementation objects linked to9 tests per configuration. Validation only uses -g1; default-g and O2/no-fast-math/fp-contract-off retained. Matching OUT dry-run performs zero recompiles, no unmeasured speedup claim."
+  ],
+  "task": "U09",
+  "base": "63201a049b5790c7ce3d06d7aee3be23cd29b2ea",
+  "scope": "UBUNTU_SOFTWARE_NOT_BOARD",
+  "gpu_raw_cycles": null,
+  "sd": "NOT_TOUCHED",
+  "board": "NOT_RUN",
+  "image": "NOT_BUILT"
+}

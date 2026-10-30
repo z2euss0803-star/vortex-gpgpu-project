@@ -1,0 +1,78 @@
+{
+  "task": "U12",
+  "state": "REGISTERED_OPERATOR_CHECKPOINT_NOT_FULL_TASK",
+  "verified": [
+    {
+      "run": "U12-hunet-registry-views-normal-091",
+      "natural_exit": 0,
+      "current_input_rows_checked": 1526,
+      "manifest_sha256": "e4bf6200312b0df72216eca26093a285e70d0edd89142792f32ef5c0eb8d0632"
+    },
+    {
+      "run": "U12-hunet-registry-final-sanitize-093",
+      "natural_exit": 0,
+      "current_input_rows_checked": 1526,
+      "manifest_sha256": "e4bf6200312b0df72216eca26093a285e70d0edd89142792f32ef5c0eb8d0632"
+    },
+    {
+      "run": "U12-hunet-registry-final-aarch64-096",
+      "natural_exit": 0,
+      "current_input_rows_checked": 1526,
+      "manifest_sha256": "e4bf6200312b0df72216eca26093a285e70d0edd89142792f32ef5c0eb8d0632"
+    }
+  ],
+  "logical_cases": 116,
+  "gpu_cases": 103,
+  "cpu_cases": 13,
+  "new_registered_operators": 12,
+  "new_gpu_execution": false,
+  "real_weights_in_registry_fixture": false,
+  "old_int16_registry_coexistence": true,
+  "cpu_gpu_fallback": false,
+  "cpu_nonzero_completion_rejected": true,
+  "permitted_channel_views": [
+    {
+      "first_sequence": 874,
+      "role": "X",
+      "produced": [
+        48,
+        1,
+        1
+      ],
+      "consumed": [
+        1,
+        1,
+        48
+      ]
+    },
+    {
+      "first_sequence": 878,
+      "role": "W",
+      "produced": [
+        48,
+        1,
+        1
+      ],
+      "consumed": [
+        48
+      ]
+    }
+  ],
+  "gpu_raw_cycles": null,
+  "host_archive": {
+    "path": "D:/codex-unified-gpu-20261021/evidence/U12-registry-final-host/raw-and-artifacts.tar.gz",
+    "sha256": "c7d5c7b2186adf563d17cc2de7c49d8ae07805bd3c7801ee0df1ace37275e99c",
+    "members": 40
+  },
+  "target_archive": {
+    "path": "D:/codex-unified-gpu-20261021/evidence/U12-registry-final-target/raw-and-artifacts.tar.gz",
+    "sha256": "05f2199912287e6ac46626719a108a002df98572ea9f46093232fc2fead567ed",
+    "members": 28
+  },
+  "pending": [
+    "full model package and actual frozen weights binding",
+    "complete graph migration and CPU/GPU dependency integration",
+    "native service/factories U20",
+    "image and field gates"
+  ]
+}
