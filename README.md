@@ -22,7 +22,7 @@ host/model/           R13九入口模型包、程序、固定输入及MODEL.md
 host/app/             R13运行栈、设备程序、PC图片工具与构建入口
 host/deploy/          镜像下载、依赖说明、启动与手动验收
 metrics/              指标汇总、原始离线日志、验证脚本和证据
-skill/                可复用交付工作流
+skill/                可移植Agent Skills、只读工具和跨工程测试
 report/               当前版本设计报告
 ```
 

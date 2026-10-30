@@ -13,8 +13,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3797,
-      "sha256": "b0447ec4b552deb9867f1f14fd4f042170107ad49f9f947d0326c41b867a769d"
+      "bytes": 3827,
+      "sha256": "c0736f9ba8b1c62f6cfafef6bcf2053412db4a39f02b515ce0be1418487ed3d2"
     },
     {
       "path": "THIRD_PARTY.md",
@@ -18653,8 +18653,118 @@
     },
     {
       "path": "skill/README.md",
-      "bytes": 1020,
-      "sha256": "04a1b84fa85bef2e96a9904fd0412580954301c73a538b12da843740cc241d25"
+      "bytes": 3445,
+      "sha256": "93374c40ac2fb8c2fb1de7989bc1e04efe487e7e5d40e5d9213ae9317e59e59b"
+    },
+    {
+      "path": "skill/accelerator-trace-attribution/SKILL.md",
+      "bytes": 2479,
+      "sha256": "49a1110aa3c879ba2f9634caa13e9fd4ccfa9a468f9fb521c1408e5debddf593"
+    },
+    {
+      "path": "skill/accelerator-trace-attribution/scripts/summarize_trace.py",
+      "bytes": 3987,
+      "sha256": "379f476b8a39b7b659de07f84f71fb2f3b6ce3fde5ffb086ccd95889f795c196"
+    },
+    {
+      "path": "skill/accelerator-trace-attribution/tests/test_trace.py",
+      "bytes": 2278,
+      "sha256": "ef269fe510d526c0a74d4590daa3d24036e86e397256291f796a3ace9ceb9caa"
+    },
+    {
+      "path": "skill/engineering-build-preflight/SKILL.md",
+      "bytes": 3231,
+      "sha256": "fc89f7930d5809cff3888dc7168c7d8037b05bb2832e5dc38130c16d47db0426"
+    },
+    {
+      "path": "skill/engineering-build-preflight/scripts/check_preflight.py",
+      "bytes": 3526,
+      "sha256": "e71b2cb3eeb02e313a448d0f5799d24b48a00fa3b22790bcce8cf24ac1c2cbb4"
+    },
+    {
+      "path": "skill/engineering-build-preflight/tests/test_preflight.py",
+      "bytes": 2138,
+      "sha256": "5fbd8a379df0b4ae111a22b95107bfb0d813467d519775cd9f731705e1872f6a"
+    },
+    {
+      "path": "skill/engineering-evidence-report/SKILL.md",
+      "bytes": 2330,
+      "sha256": "24d12e96980e9364aa89a089fb0daf764fe165159e5f30788851461e8e132bf7"
+    },
+    {
+      "path": "skill/engineering-evidence-report/scripts/summarize_evidence.py",
+      "bytes": 2342,
+      "sha256": "8d08ccc51685c14711326afe778765c5bb4c90cb3274fc66b4a266bdc844e3f3"
+    },
+    {
+      "path": "skill/engineering-evidence-report/tests/test_evidence.py",
+      "bytes": 2067,
+      "sha256": "fe546d53b3c19ffce21cf2075201815de1b9e0bbeece7e47551e56a1185b4490"
+    },
+    {
+      "path": "skill/fpga-artifact-audit/SKILL.md",
+      "bytes": 2162,
+      "sha256": "23792ce2fd4ef9ed965cfdcec2000b4c6e08bec28e5de9f07573e3ad9e8e4fe7"
+    },
+    {
+      "path": "skill/fpga-artifact-audit/references/project-origin.md",
+      "bytes": 628,
+      "sha256": "e6088b585e758ea8c3e4ca8e583e5aa3126040e4d73e8f04f4d8e54aac05d628"
+    },
+    {
+      "path": "skill/fpga-artifact-audit/scripts/audit_artifacts.py",
+      "bytes": 3254,
+      "sha256": "14f6b356f1575d6235cbeaf6349194f9d43997e78cd9eac1f91648ec4e01b1fd"
+    },
+    {
+      "path": "skill/fpga-artifact-audit/tests/test_artifact_audit.py",
+      "bytes": 2577,
+      "sha256": "a2e2fa64ba71133150ad6f3221bf2513d8b9f63096c8b640b8b1b78b9d112763"
+    },
+    {
+      "path": "skill/install_skills.py",
+      "bytes": 1763,
+      "sha256": "2b9320691230417680d9c7e86c45a2e390c4c32ade5c999b6e3a6565671a7d46"
+    },
+    {
+      "path": "skill/optimization-notes.md",
+      "bytes": 2249,
+      "sha256": "e28818521097b8b45d757410e3526e25783384fef6536e54bfbc433d67a26d5b"
+    },
+    {
+      "path": "skill/run_tests.py",
+      "bytes": 696,
+      "sha256": "495629d3a5f93df3ee60051b8a1ffc3234050dbbccb2228b3a002d87b1ab6fe3"
+    },
+    {
+      "path": "skill/single-owner-runtime-handoff/SKILL.md",
+      "bytes": 2537,
+      "sha256": "02d672292101bf6924549ac81fca78ff480a6ea6282241aca4c30f6374410577"
+    },
+    {
+      "path": "skill/single-owner-runtime-handoff/scripts/check_handoff.py",
+      "bytes": 2748,
+      "sha256": "fa37a24eeafeb3a118fda07584509541e319a3f4ae932ab88d07dc282f3ba66b"
+    },
+    {
+      "path": "skill/single-owner-runtime-handoff/tests/test_handoff.py",
+      "bytes": 1874,
+      "sha256": "6a647958b03dce08e456e97b83519802e44e6d110583395cc29c1c6275627ac6"
+    },
+    {
+      "path": "skill/single-owner-runtime-handoff/tests/test_zero_epoch.py",
+      "bytes": 735,
+      "sha256": "f70ed4b0d3e9dec32764aaa795243284674e61cb806436f57bb934f9f3b4e449"
+    },
+    {
+      "path": "skill/tests/test_install.py",
+      "bytes": 1635,
+      "sha256": "82a9b93aa542c860e9a8cf3ab637e7636a1f806940ae8b917cf25738a8831840"
+    },
+    {
+      "path": "skill/validation.md",
+      "bytes": 1221,
+      "sha256": "97c5a84c44e938dbb67058bfdd9fdb0977a6f407ff1cca7cc1c559c4e410f261"
     }
   ]
 }
